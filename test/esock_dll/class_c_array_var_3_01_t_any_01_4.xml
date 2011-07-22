@@ -1,0 +1,258 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_c_array_var_3_01_t_any_01_4">
+	<apiName>CArrayVar&lt; TAny &gt;</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassDerivations>
+				<cxxClassDerivation>
+					<cxxClassDerivationAccessSpecifier value="public"/>
+					<cxxClassBaseClass href="class_c_array_var_base.xml#class_c_array_var_base">CArrayVarBase</cxxClassBaseClass>
+				</cxxClassDerivation>
+			</cxxClassDerivations>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="811"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="795"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="818"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>A template specialisation base class for variable length arrays.</p>
+			<p>The array buffer organisation is defined at construction.</p>
+			<p>The class is useful for constructing an array of variable length buffers, where the length is decided at run time.</p>
+			<p>This class is also useful as a data member of a base class in a thin template class/base class pair, where the type of the array element is not known until the owning thin template class is instantiated. </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_c_array_var_3_01_t_any_01_4_1a9549b92308b210b7c5588a39c015383e">
+		<apiName>CArrayVar</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>CArrayVar&lt; TAny &gt;</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline CArrayVar(TBufRep aRep, TInt aGranularity)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CArrayVar&lt; TAny &gt;::CArrayVar(TBufRep,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32base_8h.xml#_1a477fbe9a94ebbd833fc678e7551300c1">TBufRep</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aRep</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A pointer to a function used to expand the array buffer. The organisation of the array buffer is implied by the choice of this function. For a flat array buffer, pass (TBufRep)CBufFlat::NewL. For a segmented array buffer, pass (TBufRep)CBufSeg::NewL. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aGranularity</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The granularity of the array.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="813"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1710"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1727"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Constructs a variable array with the specified granularity and buffer organization.</p>
+				<p>Note that no memory is allocated to the array buffer by this constructor.</p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>E32USER-CBase 19, if aGranularity is not positive. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_array_var_3_01_t_any_01_4_1a3c13fab58d0d2045e72eef20829fb490">
+		<apiName>At</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>const <apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CArrayVar&lt; TAny &gt;</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline const TAny * At(TInt anIndex) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CArrayVar&lt; TAny &gt;::At(TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_c_array_var_base.xml#class_c_array_var_base_1a61015740adaac2867675bab5920fb75d">CArrayVarBase::At(TInt)const</cxxFunctionReimplemented>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The position of the element within the array, relative to zero; i.e. zero implies the first element.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="814"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1688"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1705"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Returns a pointer to the untyped element located at the specified position within the array.</p>
+				<p>The compiler uses this variant of the function if the returned pointer is used in an expression where it cannot be modified.</p>
+				<p>A pointer to the const element located at position anIndex within the array.</p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>E32USER-CBase 21, if anIndex is negative or greater than or equal to the number of objects currently within the array. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_array_var_3_01_t_any_01_4_1a4fbdcdb3996c6fdcd7b1262ef2fe03ce">
+		<apiName>At</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CArrayVar&lt; TAny &gt;</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TAny * At(TInt anIndex)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CArrayVar&lt; TAny &gt;::At(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The position of the element within the array, relative to zero; i.e. zero implies the first element.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="815"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1732"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1749"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Returns a pointer to the untyped element located at the specified position within the array.</p>
+				<p>The compiler uses this variant of the function if the returned pointer is used in an expression where it can be modified.</p>
+				<p>A pointer to the non-const element located at position anIndex within the array.</p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>E32USER-CBase 21, if anIndex is negative or greater than or equal to the number of objects currently within the array. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_array_var_3_01_t_any_01_4_1abf975dde8345b90b6fc94daa0282bbeb">
+		<apiName>AppendL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CArrayVar&lt; TAny &gt;</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void AppendL(const TAny *aPtr, TInt aLength)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CArrayVar&lt; TAny &gt;::AppendL(const TAny *,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPtr</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A pointer to an untyped element to be appended. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The length of the untyped element. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="816"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1754"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1761"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Appends an untyped element of specified length onto the end of the array.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_array_var_3_01_t_any_01_4_1ac1c8a19607d17c2f8629a74232d5e4f9">
+		<apiName>ExtendL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CArrayVar&lt; TAny &gt;</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TAny * ExtendL(TInt aLength)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CArrayVar&lt; TAny &gt;::ExtendL(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The length of the new element.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="817"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1766"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1786"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Extends the array by one element of specified length at the end of the array, i.e. at position <xref href="class_c_array_var_base.xml#class_c_array_var_base_1af56230d7653e6784e23c493495ec0a5f">CArrayVarBase::Count()</xref>, and returns a pointer to the new element location.</p>
+				<p>As elements are untyped, no construction is possible and the content of the new location remains undefined.</p>
+				<p>Note that the function always attempts to allocate a cell to contain the new element and may also attempt to expand the array buffer. If there is insufficient memory available, the function leaves. The leave code is one of the system wide error codes. If the function leaves, the array is left in the state it was in before the call.</p>
+				<p>A pointer to the new element location at the end of the array. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxClassInherits>
+		<cxxClassInheritsDetail>
+			<cxxClassFunctionInherited href="class_c_array_var_3_01_t_any_01_4.xml#class_c_array_var_base_1ae07f7130e2b305a9f09e2d3fca2d9654">CArrayVarBase::AtR(const CBase *,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_var_3_01_t_any_01_4.xml#class_c_array_var_base_1a52fdb1c89be71fcdd9502080967a3961">CArrayVarBase::CArrayVarBase(TBufRep,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_var_3_01_t_any_01_4.xml#class_c_array_var_base_1a78ba5bfdc44112c44c518da23492bfd4">CArrayVarBase::Compress()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_var_3_01_t_any_01_4.xml#class_c_array_var_base_1af56230d7653e6784e23c493495ec0a5f">CArrayVarBase::Count()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_var_3_01_t_any_01_4.xml#class_c_array_var_base_1a9a1b913b29cb096c96878849c377be83">CArrayVarBase::CountR(const CBase *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_var_3_01_t_any_01_4.xml#class_c_array_var_base_1a1fffc2ca617bf985a9eb06a65959eee2">CArrayVarBase::Delete(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_var_3_01_t_any_01_4.xml#class_c_array_var_base_1a24c19a87adf8a05840d81829a98b0abb">CArrayVarBase::Delete(TInt,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_var_3_01_t_any_01_4.xml#class_c_array_var_base_1a7f5aed90e2e28f606df61aee4a916b31">CArrayVarBase::ExpandL(TInt,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_var_3_01_t_any_01_4.xml#class_c_array_var_base_1aea70ba1b25ee0bc6535c26f1a57bf64f">CArrayVarBase::Find(const TAny *,TKeyArrayVar &amp;,TInt &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_var_3_01_t_any_01_4.xml#class_c_array_var_base_1a48205701261c1f396301ace109757480">CArrayVarBase::FindIsq(const TAny *,TKeyArrayVar &amp;,TInt &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_var_3_01_t_any_01_4.xml#class_c_array_var_base_1a1d09e54c3e421854ccbed09d2a700c33">CArrayVarBase::InsertIsqAllowDuplicatesL(const TAny *,TInt,TKeyArrayVar &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_var_3_01_t_any_01_4.xml#class_c_array_var_base_1ae17d605a2a8d9878288bba39a67b4e2f">CArrayVarBase::InsertIsqL(const TAny *,TInt,TKeyArrayVar &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_var_3_01_t_any_01_4.xml#class_c_array_var_base_1a9f0edefe9154852b1dd8f875084ac2b1">CArrayVarBase::InsertL(TInt,const TAny *,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_var_3_01_t_any_01_4.xml#class_c_array_var_base_1a6ac8ff1b1244c8ac931f4075b7b8db31">CArrayVarBase::Length(TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_var_3_01_t_any_01_4.xml#class_c_array_var_base_1aa9fecbd5db7a03b57f142d3619691ae1">CArrayVarBase::Reset()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_var_3_01_t_any_01_4.xml#class_c_array_var_base_1ab66d6e1ed4e79ade948e1bb0ecb40a6d">CArrayVarBase::SetKey(TKeyArrayVar &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_var_3_01_t_any_01_4.xml#class_c_array_var_base_1a72fa537ed6e7985b25218e4c9e3ae1d9">CArrayVarBase::Sort(TKeyArrayVar &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_var_3_01_t_any_01_4.xml#class_c_array_var_base_1ae0c9f25f79df144b82ec0ac351a610ff">CArrayVarBase::~CArrayVarBase()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_var_3_01_t_any_01_4.xml#class_c_base_1a240de7932690a4e987d75690b0b6f82b">CBase::CBase()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_var_3_01_t_any_01_4.xml#class_c_base_1ac0a06aeab68b3e01be81f9dd79e011c6">CBase::Delete(CBase *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_var_3_01_t_any_01_4.xml#class_c_base_1aae681a54d9c9b10c7d42e7e32ff109d5">CBase::Extension_(TUint,TAny *&amp;,TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_var_3_01_t_any_01_4.xml#class_c_base_1af4c4965092a763b0856ccbfa3cf99eaf">CBase::operator new(TUint)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_var_3_01_t_any_01_4.xml#class_c_base_1ab9e5f557dea4db22886189926687ddc1">CBase::operator new(TUint,TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_var_3_01_t_any_01_4.xml#class_c_base_1aa464dd21494443ac109084ed03b81f28">CBase::operator new(TUint,TLeave)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_var_3_01_t_any_01_4.xml#class_c_base_1af8429815362d4df6fecd47179e0c5dfe">CBase::operator new(TUint,TLeave,TUint)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_var_3_01_t_any_01_4.xml#class_c_base_1a80505bdf8b1b20a2ed102307a78eeeeb">CBase::operator new(TUint,TUint)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_var_3_01_t_any_01_4.xml#class_c_base_1a1390361b94424be22bb2b1020eb400ea">CBase::~CBase()</cxxClassFunctionInherited>
+		</cxxClassInheritsDetail>
+	</cxxClassInherits>
+</cxxClass>

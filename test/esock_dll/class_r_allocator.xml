@@ -1,0 +1,1180 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_r_allocator">
+	<apiName>RAllocator</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassDerivations>
+				<cxxClassDerivation>
+					<cxxClassDerivationAccessSpecifier value="public"/>
+					<cxxClassBaseClass href="class_m_allocator.xml#class_m_allocator">MAllocator</cxxClassBaseClass>
+				</cxxClassDerivation>
+			</cxxClassDerivations>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="2631"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="2630"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="2803"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>Base class for heaps. </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxClassNested>
+		<cxxClassNestedDetail>
+			<cxxClassNestedStruct href="struct_r_allocator_1_1_s_check_info.xml#struct_r_allocator_1_1_s_check_info">RAllocator::SCheckInfo</cxxClassNestedStruct>
+		</cxxClassNestedDetail>
+	</cxxClassNested>
+	<cxxEnumeration id="class_r_allocator_1a7ffe84bf79cb94d968a46b1969bfebb8">
+		<apiName>TAllocFail</apiName>
+		<cxxEnumerationDetail>
+			<cxxEnumerationDefinition>
+				<cxxEnumerationAccessSpecifier value="public"/>
+				<cxxEnumerationScopedName>RAllocator</cxxEnumerationScopedName>
+				<cxxEnumerationPrototype>TAllocFail</cxxEnumerationPrototype>
+				<cxxEnumerationNameLookup>RAllocator:TAllocFail</cxxEnumerationNameLookup>
+				<cxxEnumerators>
+					<cxxEnumerator id="class_r_allocator_1a7ffe84bf79cb94d968a46b1969bfebb8a60af9b1bdd5c6ce52cfb6bf8d72adc50">
+						<apiName>ERandom</apiName>
+						<cxxEnumeratorScopedName>RAllocator</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ERandom</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RAllocator::ERandom</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="2648"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Attempts to allocate from this heap fail at a random rate; however, the interval pattern between failures is the same every time simulation is started. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_r_allocator_1a7ffe84bf79cb94d968a46b1969bfebb8ad7d41e24aab338891d0cac579b72eb04">
+						<apiName>ETrueRandom</apiName>
+						<cxxEnumeratorScopedName>RAllocator</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ETrueRandom</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RAllocator::ETrueRandom</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="2656"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Attempts to allocate from this heap fail at a random rate. The interval pattern between failures may be different every time the simulation is started. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_r_allocator_1a7ffe84bf79cb94d968a46b1969bfebb8a37a1160dda41083843ce8da888a5f9e7">
+						<apiName>EDeterministic</apiName>
+						<cxxEnumeratorScopedName>RAllocator</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EDeterministic</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RAllocator::EDeterministic</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="2664"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Attempts to allocate from this heap fail at a rate aRate; for example, if aRate is 3, allocation fails at every third attempt. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_r_allocator_1a7ffe84bf79cb94d968a46b1969bfebb8a5915f5de1fe7275c905416e249ebe977">
+						<apiName>ENone</apiName>
+						<cxxEnumeratorScopedName>RAllocator</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ENone</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RAllocator::ENone</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="2670"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Cancels simulated heap allocation failure. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_r_allocator_1a7ffe84bf79cb94d968a46b1969bfebb8a7e0c26644fc0002b4dd9ff8563222680">
+						<apiName>EFailNext</apiName>
+						<cxxEnumeratorScopedName>RAllocator</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EFailNext</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RAllocator::EFailNext</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="2678"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>An allocation from this heap will fail after the next aRate - 1 allocation attempts. For example, if aRate = 1 then the next attempt to allocate from this heap will fail. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_r_allocator_1a7ffe84bf79cb94d968a46b1969bfebb8a58d897e5dd49f38d997587fad520159a">
+						<apiName>EReset</apiName>
+						<cxxEnumeratorScopedName>RAllocator</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EReset</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RAllocator::EReset</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="2684"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Cancels simulated heap allocation failure, and sets the nesting level for all allocated cells to zero. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_r_allocator_1a7ffe84bf79cb94d968a46b1969bfebb8a3c9d286c9b9f383e985d38c84945d75c">
+						<apiName>EBurstRandom</apiName>
+						<cxxEnumeratorScopedName>RAllocator</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EBurstRandom</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RAllocator::EBurstRandom</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="2691"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>aBurst allocations from this heap fail at a random rate; however, the interval pattern between failures is the same every time the simulation is started. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_r_allocator_1a7ffe84bf79cb94d968a46b1969bfebb8a1012e4b379ef50dd48506bbde2a55ea5">
+						<apiName>EBurstTrueRandom</apiName>
+						<cxxEnumeratorScopedName>RAllocator</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EBurstTrueRandom</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RAllocator::EBurstTrueRandom</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="2699"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>aBurst allocations from this heap fail at a random rate. The interval pattern between failures may be different every time the simulation is started. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_r_allocator_1a7ffe84bf79cb94d968a46b1969bfebb8a97ea9d5641f23ff19e46fec777719dcb">
+						<apiName>EBurstDeterministic</apiName>
+						<cxxEnumeratorScopedName>RAllocator</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EBurstDeterministic</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RAllocator::EBurstDeterministic</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="2707"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>aBurst allocations from this heap fail at a rate aRate. For example, if aRate is 10 and aBurst is 2, then 2 allocations will fail at every tenth attempt. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_r_allocator_1a7ffe84bf79cb94d968a46b1969bfebb8a9d5224cf5ffb6ddabd27cc2f92583fea">
+						<apiName>EBurstFailNext</apiName>
+						<cxxEnumeratorScopedName>RAllocator</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EBurstFailNext</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RAllocator::EBurstFailNext</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="2714"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>aBurst allocations from this heap will fail after the next aRate - 1 allocation attempts have occurred. For example, if aRate = 1 and aBurst = 3 then the next 3 attempts to allocate from this heap will fail. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_r_allocator_1a7ffe84bf79cb94d968a46b1969bfebb8ae43d3db6715a8b9197d2fda813093e3e">
+						<apiName>ECheckFailure</apiName>
+						<cxxEnumeratorScopedName>RAllocator</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ECheckFailure</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RAllocator::ECheckFailure</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="2721"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Use this to determine how many times the current debug failure mode has failed so far. <xref href="class_r_allocator.xml#class_r_allocator_1a002d0f16382e85ca3d3086c74da2b4f2">RAllocator::__DbgCheckFailure()</xref> </p>
+						</apiDesc>
+					</cxxEnumerator>
+				</cxxEnumerators>
+				<cxxEnumerationAPIItemLocation>
+					<cxxEnumerationDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxEnumerationDeclarationFileLine name="lineNumber" value="2642"/>
+					<cxxEnumerationDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxEnumerationDefinitionFileLineStart name="lineNumber" value="2642"/>
+					<cxxEnumerationDefinitionFileLineEnd name="lineNumber" value="2722"/>
+				</cxxEnumerationAPIItemLocation>
+			</cxxEnumerationDefinition>
+			<apiDesc>
+				<p>A set of heap allocation failure flags.</p>
+				<p>This enumeration indicates how to simulate heap allocation failure.</p>
+				<p>
+					<xref href="class_r_allocator.xml#class_r_allocator_1a28a89657e15544a14a2ff7b25298c932">RAllocator::__DbgSetAllocFail()</xref> </p>
+			</apiDesc>
+		</cxxEnumerationDetail>
+	</cxxEnumeration>
+	<cxxEnumeration id="class_r_allocator_1ac6669f926036f6e1b617829a379a188e">
+		<apiName>TDbgHeapType</apiName>
+		<cxxEnumerationDetail>
+			<cxxEnumerationDefinition>
+				<cxxEnumerationAccessSpecifier value="public"/>
+				<cxxEnumerationScopedName>RAllocator</cxxEnumerationScopedName>
+				<cxxEnumerationPrototype>TDbgHeapType</cxxEnumerationPrototype>
+				<cxxEnumerationNameLookup>RAllocator:TDbgHeapType</cxxEnumerationNameLookup>
+				<cxxEnumerators>
+					<cxxEnumerator id="class_r_allocator_1ac6669f926036f6e1b617829a379a188ea6672646d6397d2e487aa19b03f1d097e">
+						<apiName>EUser</apiName>
+						<cxxEnumeratorScopedName>RAllocator</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EUser</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RAllocator::EUser</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="2732"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>The heap is a user heap. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_r_allocator_1ac6669f926036f6e1b617829a379a188ea9b32463b67ba13a4f929ccf0e6d71dd2">
+						<apiName>EKernel</apiName>
+						<cxxEnumeratorScopedName>RAllocator</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EKernel</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RAllocator::EKernel</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="2738"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>The heap is the Kernel heap. </p>
+						</apiDesc>
+					</cxxEnumerator>
+				</cxxEnumerators>
+				<cxxEnumerationAPIItemLocation>
+					<cxxEnumerationDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxEnumerationDeclarationFileLine name="lineNumber" value="2728"/>
+					<cxxEnumerationDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxEnumerationDefinitionFileLineStart name="lineNumber" value="2728"/>
+					<cxxEnumerationDefinitionFileLineEnd name="lineNumber" value="2738"/>
+				</cxxEnumerationAPIItemLocation>
+			</cxxEnumerationDefinition>
+			<apiDesc>
+				<p>Heap debug checking type flag. </p>
+			</apiDesc>
+		</cxxEnumerationDetail>
+	</cxxEnumeration>
+	<cxxEnumeration id="class_r_allocator_1acdcc0132b52bb6b9aa34aa251a5a5106">
+		<apiName>TAllocDebugOp</apiName>
+		<cxxEnumerationDetail>
+			<cxxEnumerationDefinition>
+				<cxxEnumerationAccessSpecifier value="public"/>
+				<cxxEnumerationScopedName>RAllocator</cxxEnumerationScopedName>
+				<cxxEnumerationPrototype>TAllocDebugOp</cxxEnumerationPrototype>
+				<cxxEnumerationNameLookup>RAllocator:TAllocDebugOp</cxxEnumerationNameLookup>
+				<cxxEnumerators>
+					<cxxEnumerator id="class_r_allocator_1acdcc0132b52bb6b9aa34aa251a5a5106a7c7879b515c54014cac1b8b5e42413d5">
+						<apiName>ECount</apiName>
+						<cxxEnumeratorScopedName>RAllocator</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ECount</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RAllocator::ECount</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="2741"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc/>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_r_allocator_1acdcc0132b52bb6b9aa34aa251a5a5106a758d3066b6d6758ac94c1f4221199844">
+						<apiName>EMarkStart</apiName>
+						<cxxEnumeratorScopedName>RAllocator</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EMarkStart</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RAllocator::EMarkStart</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="2741"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc/>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_r_allocator_1acdcc0132b52bb6b9aa34aa251a5a5106af06ed89c83359190e5e5928acd8a14f3">
+						<apiName>EMarkEnd</apiName>
+						<cxxEnumeratorScopedName>RAllocator</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EMarkEnd</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RAllocator::EMarkEnd</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="2741"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc/>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_r_allocator_1acdcc0132b52bb6b9aa34aa251a5a5106a916ec478e686603f92fbda9c668586ec">
+						<apiName>ECheck</apiName>
+						<cxxEnumeratorScopedName>RAllocator</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ECheck</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RAllocator::ECheck</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="2741"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc/>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_r_allocator_1acdcc0132b52bb6b9aa34aa251a5a5106a427ca11994a27210f042aa1d50ad0850">
+						<apiName>ESetFail</apiName>
+						<cxxEnumeratorScopedName>RAllocator</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ESetFail</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RAllocator::ESetFail</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="2741"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc/>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_r_allocator_1acdcc0132b52bb6b9aa34aa251a5a5106a6a3c07820566d8c41487f1606be92bc8">
+						<apiName>ECopyDebugInfo</apiName>
+						<cxxEnumeratorScopedName>RAllocator</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ECopyDebugInfo</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RAllocator::ECopyDebugInfo</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="2741"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc/>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_r_allocator_1acdcc0132b52bb6b9aa34aa251a5a5106aa83d1d8f3065681d9a3a5044d2e9757f">
+						<apiName>ESetBurstFail</apiName>
+						<cxxEnumeratorScopedName>RAllocator</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ESetBurstFail</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RAllocator::ESetBurstFail</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="2741"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc/>
+					</cxxEnumerator>
+				</cxxEnumerators>
+				<cxxEnumerationAPIItemLocation>
+					<cxxEnumerationDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxEnumerationDeclarationFileLine name="lineNumber" value="2741"/>
+					<cxxEnumerationDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxEnumerationDefinitionFileLineStart name="lineNumber" value="2741"/>
+					<cxxEnumerationDefinitionFileLineEnd name="lineNumber" value="2741"/>
+				</cxxEnumerationAPIItemLocation>
+			</cxxEnumerationDefinition>
+			<apiDesc/>
+		</cxxEnumerationDetail>
+	</cxxEnumeration>
+	<cxxEnumeration id="class_r_allocator_1a651c7bc93f44cec484126164230d1d37">
+		<apiName>TReAllocMode</apiName>
+		<cxxEnumerationDetail>
+			<cxxEnumerationDefinition>
+				<cxxEnumerationAccessSpecifier value="public"/>
+				<cxxEnumerationScopedName>RAllocator</cxxEnumerationScopedName>
+				<cxxEnumerationPrototype>TReAllocMode</cxxEnumerationPrototype>
+				<cxxEnumerationNameLookup>RAllocator:TReAllocMode</cxxEnumerationNameLookup>
+				<cxxEnumerators>
+					<cxxEnumerator id="class_r_allocator_1a651c7bc93f44cec484126164230d1d37a368068a23643145d58b210602b7c823e">
+						<apiName>ENeverMove</apiName>
+						<cxxEnumeratorScopedName>RAllocator</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ENeverMove = 1</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RAllocator::ENeverMove</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="1"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="2752"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>A reallocation of a cell must not change the start address of the cell. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_r_allocator_1a651c7bc93f44cec484126164230d1d37a3d2dd0471de07814896f88fb0f6efd57">
+						<apiName>EAllowMoveOnShrink</apiName>
+						<cxxEnumeratorScopedName>RAllocator</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EAllowMoveOnShrink = 2</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RAllocator::EAllowMoveOnShrink</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="2"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="2759"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Allows the start address of the cell to change if the cell shrinks in size. </p>
+						</apiDesc>
+					</cxxEnumerator>
+				</cxxEnumerators>
+				<cxxEnumerationAPIItemLocation>
+					<cxxEnumerationDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxEnumerationDeclarationFileLine name="lineNumber" value="2747"/>
+					<cxxEnumerationDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxEnumerationDefinitionFileLineStart name="lineNumber" value="2747"/>
+					<cxxEnumerationDefinitionFileLineEnd name="lineNumber" value="2759"/>
+				</cxxEnumerationAPIItemLocation>
+			</cxxEnumerationDefinition>
+			<apiDesc>
+				<p>Flags controlling reallocation. </p>
+			</apiDesc>
+		</cxxEnumerationDetail>
+	</cxxEnumeration>
+	<cxxEnumeration id="class_r_allocator_1a5f5374147f840686066434243b4a361b">
+		<apiName>TFlags</apiName>
+		<cxxEnumerationDetail>
+			<cxxEnumerationDefinition>
+				<cxxEnumerationAccessSpecifier value="public"/>
+				<cxxEnumerationScopedName>RAllocator</cxxEnumerationScopedName>
+				<cxxEnumerationPrototype>TFlags</cxxEnumerationPrototype>
+				<cxxEnumerationNameLookup>RAllocator:TFlags</cxxEnumerationNameLookup>
+				<cxxEnumerators>
+					<cxxEnumerator id="class_r_allocator_1a5f5374147f840686066434243b4a361ba1c6ab2c5824e8cebba7b39a97bdec487">
+						<apiName>ESingleThreaded</apiName>
+						<cxxEnumeratorScopedName>RAllocator</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ESingleThreaded = 1</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RAllocator::ESingleThreaded</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="1"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="2762"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc/>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_r_allocator_1a5f5374147f840686066434243b4a361bab16e7d1b581e03d1917d345c5ddaf72c">
+						<apiName>EFixedSize</apiName>
+						<cxxEnumeratorScopedName>RAllocator</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EFixedSize = 2</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RAllocator::EFixedSize</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="2"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="2762"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc/>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_r_allocator_1a5f5374147f840686066434243b4a361ba42192b362de2a41ef34ba88be766b3aa">
+						<apiName>ETraceAllocs</apiName>
+						<cxxEnumeratorScopedName>RAllocator</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ETraceAllocs = 4</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RAllocator::ETraceAllocs</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="4"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="2762"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc/>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_r_allocator_1a5f5374147f840686066434243b4a361ba8129f7875842af8bee16694f28e0581e">
+						<apiName>EMonitorMemory</apiName>
+						<cxxEnumeratorScopedName>RAllocator</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EMonitorMemory = 8</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RAllocator::EMonitorMemory</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="8"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="2762"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc/>
+					</cxxEnumerator>
+				</cxxEnumerators>
+				<cxxEnumerationAPIItemLocation>
+					<cxxEnumerationDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxEnumerationDeclarationFileLine name="lineNumber" value="2762"/>
+					<cxxEnumerationDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxEnumerationDefinitionFileLineStart name="lineNumber" value="2762"/>
+					<cxxEnumerationDefinitionFileLineEnd name="lineNumber" value="2762"/>
+				</cxxEnumerationAPIItemLocation>
+			</cxxEnumerationDefinition>
+			<apiDesc/>
+		</cxxEnumerationDetail>
+	</cxxEnumeration>
+	<cxxFunction id="class_r_allocator_1a4716255e91f911533613d50ff3aba4d5">
+		<apiName>RAllocator</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>RAllocator</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline RAllocator()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RAllocator::RAllocator()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2770"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="43"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="51"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_allocator_1a4e7d913bbfa88c33db3d8e9dc2cc809c">
+		<apiName>Open</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RAllocator</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Open()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RAllocator::Open()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2772"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_allocator_1a0d414f765e1641c78fc77b04ceb7074f">
+		<apiName>Close</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RAllocator</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Close()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RAllocator::Close()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2773"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_allocator_1ada44602ebc89208957ed062d0f2e8c6a">
+		<apiName>AllocZ</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RAllocator</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TAny * AllocZ(TInt aSize)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RAllocator::AllocZ(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSize</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2774"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_allocator_1a4bc327155fcd5858e84f36ef256b7bda">
+		<apiName>AllocZL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RAllocator</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TAny * AllocZL(TInt aSize)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RAllocator::AllocZL(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSize</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2775"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_allocator_1a9da5d98c127bbc08a4ddaeb0991fe344">
+		<apiName>AllocL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RAllocator</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TAny * AllocL(TInt aSize)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RAllocator::AllocL(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSize</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2776"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_allocator_1a53da6ec15b13c5e8309f92268fdd84fa">
+		<apiName>AllocLC</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RAllocator</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TAny * AllocLC(TInt aSize)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RAllocator::AllocLC(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSize</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2777"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_allocator_1aca4c9a624d51b281750912b419d5ca96">
+		<apiName>FreeZ</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RAllocator</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void FreeZ(TAny *&amp;aCell)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RAllocator::FreeZ(TAny *&amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *&amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCell</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2778"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_allocator_1a6baca12f76cf01694e6a4b1bd3cc73cb">
+		<apiName>ReAllocL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RAllocator</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TAny * ReAllocL(TAny *aCell, TInt aSize, TInt aMode=0)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RAllocator::ReAllocL(TAny *,TInt,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCell</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSize</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMode</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>0</cxxFunctionParameterDefaultValue>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2779"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_allocator_1a270591680f3c28ae8daac2b2f0390bc7">
+		<apiName>Count</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RAllocator</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Count() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RAllocator::Count()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2780"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_allocator_1a679648f3d4d91c6223cd03c0e24e8306">
+		<apiName>Count</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RAllocator</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Count(TInt &amp;aFreeCount) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RAllocator::Count(TInt &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFreeCount</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2781"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_allocator_1a71a6fd3c7f2bd1f51d31ea57c7ade496">
+		<apiName>Check</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>UIMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RAllocator</cxxFunctionScopedName>
+				<cxxFunctionPrototype>UIMPORT_C void Check() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RAllocator::Check()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2783"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_allocator_1a36030cac3dc3373a93d8a177482d5b09">
+		<apiName>__DbgMarkStart</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>UIMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RAllocator</cxxFunctionScopedName>
+				<cxxFunctionPrototype>UIMPORT_C void __DbgMarkStart()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RAllocator::__DbgMarkStart()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2784"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_allocator_1a24e13d57e38e1d00e8263fd42ab1a847">
+		<apiName>__DbgMarkEnd</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>UIMPORT_C <apiRelation href="e32def_8h.xml#_1a8240e11f17c80b6b222fc2af50234da4">TUint32</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RAllocator</cxxFunctionScopedName>
+				<cxxFunctionPrototype>UIMPORT_C TUint32 __DbgMarkEnd(TInt aCount)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RAllocator::__DbgMarkEnd(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCount</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2785"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_allocator_1a14905dbf8b8e38647d1debc9102044a0">
+		<apiName>__DbgMarkCheck</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>UIMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RAllocator</cxxFunctionScopedName>
+				<cxxFunctionPrototype>UIMPORT_C TInt __DbgMarkCheck(TBool aCountAll, TInt aCount, const TDesC8 &amp;aFileName, TInt aLineNum)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RAllocator::__DbgMarkCheck(TBool,TInt,const TDesC8 &amp;,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCountAll</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCount</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFileName</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLineNum</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2786"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_allocator_1a12888d130b7d12e5c34e8f42ceb105ad">
+		<apiName>__DbgMarkCheck</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RAllocator</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void __DbgMarkCheck(TBool aCountAll, TInt aCount, const TUint8 *aFileName, TInt aLineNum)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RAllocator::__DbgMarkCheck(TBool,TInt,const TUint8 *,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCountAll</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCount</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="e32def_8h.xml#_1aae4399ce3f10d6c2b5ec96a13bbb5881">TUint8</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFileName</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLineNum</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2787"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="52"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="53"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_allocator_1a28a89657e15544a14a2ff7b25298c932">
+		<apiName>__DbgSetAllocFail</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>UIMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RAllocator</cxxFunctionScopedName>
+				<cxxFunctionPrototype>UIMPORT_C void __DbgSetAllocFail(TAllocFail aType, TInt aRate)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RAllocator::__DbgSetAllocFail(TAllocFail,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_allocator.xml#_1a7ffe84bf79cb94d968a46b1969bfebb8">TAllocFail</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aType</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aRate</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2788"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_allocator_1a45bea34b38703a5e6b6a797533783ca1">
+		<apiName>__DbgSetBurstAllocFail</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>UIMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RAllocator</cxxFunctionScopedName>
+				<cxxFunctionPrototype>UIMPORT_C void __DbgSetBurstAllocFail(TAllocFail aType, TUint aRate, TUint aBurst)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RAllocator::__DbgSetBurstAllocFail(TAllocFail,TUint,TUint)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_allocator.xml#_1a7ffe84bf79cb94d968a46b1969bfebb8">TAllocFail</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aType</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aRate</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aBurst</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2789"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_allocator_1a002d0f16382e85ca3d3086c74da2b4f2">
+		<apiName>__DbgCheckFailure</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>UIMPORT_C <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RAllocator</cxxFunctionScopedName>
+				<cxxFunctionPrototype>UIMPORT_C TUint __DbgCheckFailure()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RAllocator::__DbgCheckFailure()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2790"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_allocator_1a9ea6bf94a199c1e08cbd9679e3cfaf62">
+		<apiName>Extension_</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionVirtual/>
+				<cxxFunctionDeclaredType>UIMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RAllocator</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual UIMPORT_C TInt Extension_(TUint aExtensionId, TAny *&amp;a0, TAny *a1)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RAllocator::Extension_(TUint,TAny *&amp;,TAny *)</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_m_allocator.xml#class_m_allocator_1a3f1853bf2608122183622b26dad2d052">MAllocator::Extension_(TUint,TAny *&amp;,TAny *)</cxxFunctionReimplemented>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aExtensionId</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *&amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>a0</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>a1</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2792"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_allocator_1ac4d89ba6570d625ab8052f8e7c714efb">
+		<apiName>DoClose</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionVirtual/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RAllocator</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual IMPORT_C void DoClose()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RAllocator::DoClose()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2794"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxVariable id="class_r_allocator_1a26157475671d5ebc9be363f5cf2e0fec">
+		<apiName>iAccessCount</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="protected"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>RAllocator</cxxVariableScopedName>
+				<cxxVariablePrototype>TInt iAccessCount</cxxVariablePrototype>
+				<cxxVariableNameLookup>RAllocator::iAccessCount</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="2797"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_r_allocator_1ac4379e7dd6d89dd82381bb09007d7be0">
+		<apiName>iHandleCount</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="protected"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>RAllocator</cxxVariableScopedName>
+				<cxxVariablePrototype>TInt iHandleCount</cxxVariablePrototype>
+				<cxxVariableNameLookup>RAllocator::iHandleCount</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="2798"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_r_allocator_1ade9906ecb4c4a177649568e163013250">
+		<apiName>iHandles</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="protected"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation> *</cxxVariableDeclaredType>
+				<cxxVariableScopedName>RAllocator</cxxVariableScopedName>
+				<cxxVariablePrototype>TInt * iHandles</cxxVariablePrototype>
+				<cxxVariableNameLookup>RAllocator::iHandles</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="2799"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_r_allocator_1adb68405c77a89bea5419a8dcd0b9492f">
+		<apiName>iFlags</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="protected"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a8240e11f17c80b6b222fc2af50234da4">TUint32</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>RAllocator</cxxVariableScopedName>
+				<cxxVariablePrototype>TUint32 iFlags</cxxVariablePrototype>
+				<cxxVariableNameLookup>RAllocator::iFlags</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="2800"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_r_allocator_1abe64005cddf367a264ae9b7d034d511e">
+		<apiName>iCellCount</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="protected"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>RAllocator</cxxVariableScopedName>
+				<cxxVariablePrototype>TInt iCellCount</cxxVariablePrototype>
+				<cxxVariableNameLookup>RAllocator::iCellCount</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="2801"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_r_allocator_1a52cb3bd05a82b55488d5a150ffbfa576">
+		<apiName>iTotalAllocSize</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="protected"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>RAllocator</cxxVariableScopedName>
+				<cxxVariablePrototype>TInt iTotalAllocSize</cxxVariablePrototype>
+				<cxxVariableNameLookup>RAllocator::iTotalAllocSize</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="2802"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxClassInherits>
+		<cxxClassInheritsDetail>
+			<cxxClassFunctionInherited href="class_r_allocator.xml#class_m_allocator_1a87641d01a035b08201878f342218f8bd">MAllocator::Alloc(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_allocator.xml#class_m_allocator_1affd9d8ae299d27a68c186820537cb5db">MAllocator::AllocLen(const TAny *)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_allocator.xml#class_m_allocator_1a6fd6c4658721f2550454a8e724ee0f68">MAllocator::AllocSize(TInt &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_allocator.xml#class_m_allocator_1a8be53bbfd97cc562280d6b002f46b3d0">MAllocator::Available(TInt &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_allocator.xml#class_m_allocator_1a786bc0f2e04cd6d6df979ca3ece2fafc">MAllocator::Compress()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_allocator.xml#class_m_allocator_1adea662e76cf6c952d3690c38adda516d">MAllocator::DebugFunction(TInt,TAny *,TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_allocator.xml#class_m_allocator_1adf77c0c40b107cbbb73115deb0f90f97">MAllocator::Free(TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_allocator.xml#class_m_allocator_1a803e0083c0419676297c83c9be19d508">MAllocator::ReAlloc(TAny *,TInt,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_allocator.xml#class_m_allocator_1a39340b478c598195f03afb95da8e0df9">MAllocator::Reset()</cxxClassFunctionInherited>
+		</cxxClassInheritsDetail>
+	</cxxClassInherits>
+</cxxClass>

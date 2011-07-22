@@ -1,0 +1,643 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_c_object_ix">
+	<apiName>CObjectIx</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassDerivations>
+				<cxxClassDerivation>
+					<cxxClassDerivationAccessSpecifier value="public"/>
+					<cxxClassBaseClass href="class_c_base.xml#class_c_base">CBase</cxxClassBaseClass>
+				</cxxClassDerivation>
+			</cxxClassDerivations>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="1117"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="1101"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="1161"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>Generates handle numbers for reference counting objects.</p>
+			<p>This is referred to as an object index.</p>
+			<p>Adding a reference counting object to an object index is the way in which a unique handle number can be generated for that object. A handle number is the way in which an object, which is owned or managed by another thread or process can be identified.</p>
+			<p>
+				<xref href="class_c_object.xml#class_c_object">CObject</xref> </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxEnumeration id="class_c_object_ix_1a4a068a5ed9936cdb36800e198c65b6be">
+		<apiName>@22</apiName>
+		<cxxEnumerationDetail>
+			<cxxEnumerationDefinition>
+				<cxxEnumerationAccessSpecifier value="public"/>
+				<cxxEnumerationScopedName>CObjectIx</cxxEnumerationScopedName>
+				<cxxEnumerationPrototype>@22</cxxEnumerationPrototype>
+				<cxxEnumerationNameLookup>CObjectIx:@22</cxxEnumerationNameLookup>
+				<cxxEnumerators>
+					<cxxEnumerator id="class_c_object_ix_1a4a068a5ed9936cdb36800e198c65b6bea828530bb9cdd66f839dfcd855df8dc06">
+						<apiName>ENoClose</apiName>
+						<cxxEnumeratorScopedName>CObjectIx</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ENoClose = KHandleNoClose</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>CObjectIx::ENoClose</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="KHandleNoClose"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="1124"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>When ORd into the handle number, indicates that the reference counting object cannot be closed. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_c_object_ix_1a4a068a5ed9936cdb36800e198c65b6beabf4cdec36ab190adb4c7123476a83427">
+						<apiName>ELocalHandle</apiName>
+						<cxxEnumeratorScopedName>CObjectIx</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ELocalHandle = KHandleFlagLocal</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>CObjectIx::ELocalHandle</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="KHandleFlagLocal"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="1132"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>When ORed into the handle number, indicates that the handle is a local handle. </p>
+						</apiDesc>
+					</cxxEnumerator>
+				</cxxEnumerators>
+				<cxxEnumerationAPIItemLocation>
+					<cxxEnumerationDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxEnumerationDeclarationFileLine name="lineNumber" value="1119"/>
+					<cxxEnumerationDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxEnumerationDefinitionFileLineStart name="lineNumber" value="1119"/>
+					<cxxEnumerationDefinitionFileLineEnd name="lineNumber" value="1132"/>
+				</cxxEnumerationAPIItemLocation>
+			</cxxEnumerationDefinition>
+			<apiDesc/>
+		</cxxEnumerationDetail>
+	</cxxEnumeration>
+	<cxxFunction id="class_c_object_ix_1ae46af32532cbb1b0f3c4759652dec923">
+		<apiName>NewL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_c_object_ix.xml#class_c_object_ix">CObjectIx</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CObjectIx</cxxFunctionScopedName>
+				<cxxFunctionPrototype>static IMPORT_C CObjectIx * NewL()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CObjectIx::NewL()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1134"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_object_ix_1af42cca6c9c37ff7050aa7948e1015e9d">
+		<apiName>~CObjectIx</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDestructor/>
+				<cxxFunctionDeclaredType>IMPORT_C</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CObjectIx</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C ~CObjectIx()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CObjectIx::~CObjectIx()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1135"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_object_ix_1a893d784ac86c36728e43017ce60a62d9">
+		<apiName>AddL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CObjectIx</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt AddL(CObject *anObj)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CObjectIx::AddL(CObject *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_c_object.xml#class_c_object">CObject</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anObj</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1136"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_object_ix_1a6f30416457d8bfca3d385f0cb62e770c">
+		<apiName>Remove</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CObjectIx</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Remove(TInt aHandle)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CObjectIx::Remove(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aHandle</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1137"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_object_ix_1a390295d20756c9a6e2df93ed3a33f5df">
+		<apiName>At</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_c_object.xml#class_c_object">CObject</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CObjectIx</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C CObject * At(TInt aHandle, TInt aUniqueID)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CObjectIx::At(TInt,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aHandle</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aUniqueID</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1138"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_object_ix_1a9ab67c3018865bd30ea678478f659fc1">
+		<apiName>At</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_c_object.xml#class_c_object">CObject</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CObjectIx</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C CObject * At(TInt aHandle)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CObjectIx::At(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aHandle</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1139"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_object_ix_1a9b28fd16d7bd78a5aeaffcd4fb86b91d">
+		<apiName>AtL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_c_object.xml#class_c_object">CObject</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CObjectIx</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C CObject * AtL(TInt aHandle, TInt aUniqueID)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CObjectIx::AtL(TInt,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aHandle</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aUniqueID</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1140"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_object_ix_1a740e2af26bfa151571b78924bfb9ddf8">
+		<apiName>AtL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_c_object.xml#class_c_object">CObject</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CObjectIx</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C CObject * AtL(TInt aHandle)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CObjectIx::AtL(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aHandle</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1141"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_object_ix_1aa95b2533d58ee060c556364391965a1c">
+		<apiName>At</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CObjectIx</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt At(const CObject *anObject) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CObjectIx::At(const CObject *)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_c_object.xml#class_c_object">CObject</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anObject</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1142"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_object_ix_1a00b463c409e198993ca6f1df92ac8dd4">
+		<apiName>Count</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CObjectIx</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Count(CObject *anObject) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CObjectIx::Count(CObject *)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_c_object.xml#class_c_object">CObject</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anObject</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1143"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_object_ix_1a473174722b290de63b8fb535921bd815">
+		<apiName>operator[]</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_c_object.xml#class_c_object">CObject</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CObjectIx</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C CObject * operator[](TInt anIndex)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CObjectIx::operator[](TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1144"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_object_ix_1a8ec264b2baceb4501a02ef30353bc9cb">
+		<apiName>Count</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CObjectIx</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt Count() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CObjectIx::Count()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1145"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="2412"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="2422"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets the number greater then the last slot number used to hold valid <xref href="class_c_object.xml#class_c_object">CObject</xref> pointer. The input argument of CObject* <xref href="class_c_object_ix.xml#class_c_object_ix_1a473174722b290de63b8fb535921bd815">CObjectIx::operator[]()</xref> must be less then the number returned by this method.</p>
+				<p>The number greater then the last used slot.</p>
+				<p>
+					<xref href="class_c_object_ix.xml#class_c_object_ix_1acddd0e4030e8c1f5b6f15d1c77231ae0">CObjectIx::ActiveCount</xref> </p>
+				<p>
+					<xref href="class_c_object_ix.xml#class_c_object_ix_1a473174722b290de63b8fb535921bd815">CObjectIx::operator[]</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_object_ix_1acddd0e4030e8c1f5b6f15d1c77231ae0">
+		<apiName>ActiveCount</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CObjectIx</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt ActiveCount() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CObjectIx::ActiveCount()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1146"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="2427"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="2434"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets the current number of reference counting objects held by this object index.</p>
+				<p>The current number. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_object_ix_1adb736c308130cabe3c6b916c68ebc0ba">
+		<apiName>CObjectIx</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType>IMPORT_C</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CObjectIx</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C CObjectIx()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CObjectIx::CObjectIx()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1148"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_object_ix_1a8b1e6c3c6ef62e94d846641371d7d7ca">
+		<apiName>UpdateState</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CObjectIx</cxxFunctionScopedName>
+				<cxxFunctionPrototype>void UpdateState()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CObjectIx::UpdateState()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1150"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxVariable id="class_c_object_ix_1a631e0ec4506323e22004d0c06ccc285a">
+		<apiName>iNumEntries</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>CObjectIx</cxxVariableScopedName>
+				<cxxVariablePrototype>TInt iNumEntries</cxxVariablePrototype>
+				<cxxVariableNameLookup>CObjectIx::iNumEntries</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1152"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_c_object_ix_1a0376c05b520541cf37e8fbe7d67bd73b">
+		<apiName>iHighWaterMark</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>CObjectIx</cxxVariableScopedName>
+				<cxxVariablePrototype>TInt iHighWaterMark</cxxVariablePrototype>
+				<cxxVariableNameLookup>CObjectIx::iHighWaterMark</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1153"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_c_object_ix_1ab2770149d581ab31b1e0092f6a2d4e6d">
+		<apiName>iAllocated</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>CObjectIx</cxxVariableScopedName>
+				<cxxVariablePrototype>TInt iAllocated</cxxVariablePrototype>
+				<cxxVariableNameLookup>CObjectIx::iAllocated</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1154"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_c_object_ix_1a96d00516c361ffc7c0189f6dc6bfad58">
+		<apiName>iNextInstance</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>CObjectIx</cxxVariableScopedName>
+				<cxxVariablePrototype>TInt iNextInstance</cxxVariablePrototype>
+				<cxxVariableNameLookup>CObjectIx::iNextInstance</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1155"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_c_object_ix_1a40bb7af1c9e302a41e906053844fd801">
+		<apiName>iObjects</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>SObjectIxRec *</cxxVariableDeclaredType>
+				<cxxVariableScopedName>CObjectIx</cxxVariableScopedName>
+				<cxxVariablePrototype>SObjectIxRec * iObjects</cxxVariablePrototype>
+				<cxxVariableNameLookup>CObjectIx::iObjects</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1156"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_c_object_ix_1ae13042098ecd0e0db6d0e95f63696a2a">
+		<apiName>iFree</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>CObjectIx</cxxVariableScopedName>
+				<cxxVariablePrototype>TInt iFree</cxxVariablePrototype>
+				<cxxVariableNameLookup>CObjectIx::iFree</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1157"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_c_object_ix_1a442684a4fb85779f17948a4e770302a2">
+		<apiName>iUpdateDisabled</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>CObjectIx</cxxVariableScopedName>
+				<cxxVariablePrototype>TInt iUpdateDisabled</cxxVariablePrototype>
+				<cxxVariableNameLookup>CObjectIx::iUpdateDisabled</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1158"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_c_object_ix_1a743302249cb6f39b10401afc85f9353a">
+		<apiName>iSpare1</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxVariableDeclaredType>
+				<cxxVariableScopedName>CObjectIx</cxxVariableScopedName>
+				<cxxVariablePrototype>TAny * iSpare1</cxxVariablePrototype>
+				<cxxVariableNameLookup>CObjectIx::iSpare1</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1159"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_c_object_ix_1ae7c7081cfdb8038a334edf528bdc2f83">
+		<apiName>iSpare2</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxVariableDeclaredType>
+				<cxxVariableScopedName>CObjectIx</cxxVariableScopedName>
+				<cxxVariablePrototype>TAny * iSpare2</cxxVariablePrototype>
+				<cxxVariableNameLookup>CObjectIx::iSpare2</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1160"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxClassInherits>
+		<cxxClassInheritsDetail>
+			<cxxClassFunctionInherited href="class_c_object_ix.xml#class_c_base_1a240de7932690a4e987d75690b0b6f82b">CBase::CBase()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_object_ix.xml#class_c_base_1ac0a06aeab68b3e01be81f9dd79e011c6">CBase::Delete(CBase *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_object_ix.xml#class_c_base_1aae681a54d9c9b10c7d42e7e32ff109d5">CBase::Extension_(TUint,TAny *&amp;,TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_object_ix.xml#class_c_base_1af4c4965092a763b0856ccbfa3cf99eaf">CBase::operator new(TUint)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_object_ix.xml#class_c_base_1ab9e5f557dea4db22886189926687ddc1">CBase::operator new(TUint,TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_object_ix.xml#class_c_base_1aa464dd21494443ac109084ed03b81f28">CBase::operator new(TUint,TLeave)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_object_ix.xml#class_c_base_1af8429815362d4df6fecd47179e0c5dfe">CBase::operator new(TUint,TLeave,TUint)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_object_ix.xml#class_c_base_1a80505bdf8b1b20a2ed102307a78eeeeb">CBase::operator new(TUint,TUint)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_object_ix.xml#class_c_base_1a1390361b94424be22bb2b1020eb400ea">CBase::~CBase()</cxxClassFunctionInherited>
+		</cxxClassInheritsDetail>
+	</cxxClassInherits>
+</cxxClass>

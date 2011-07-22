@@ -1,0 +1,755 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_r_host_resolver">
+	<apiName>RHostResolver</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassDerivations>
+				<cxxClassDerivation>
+					<cxxClassDerivationAccessSpecifier value="public"/>
+					<cxxClassBaseClass href="class_r_sub_session_base.xml#class_r_sub_session_base">RSubSessionBase</cxxClassBaseClass>
+				</cxxClassDerivation>
+			</cxxClassDerivations>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="895"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="868"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="918"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>Provides an interface to host name resolution services, such as DNS, that may be provided by particular protocol modules.</p>
+			<p>The interface provides functions to access the following facilities:</p>
+			<p>Obtaining names from addresses.</p>
+			<p>Obtaining addresses from names.</p>
+			<p>Getting and setting local host name.</p>
+			<p>Not all actual services provide all these facilities. You should also consult the documentation on the protocol you are intending to use. Functions return KErrNotSupported if the protocol does not support a given operation. Note that a description of the protocol family name resolution capabilities is available at run-time from <xref href="struct_t_protocol_desc.xml#struct_t_protocol_desc_1aac87b02d2aab5362a48c2ee3d214dfb0">TProtocolDesc::iNamingServices</xref>.</p>
+			<p>Before using any service, a connection to a socket server session must be made.</p>
+			<p>Each function is available in both synchronous and asynchronous versions.</p>
+			<p>A single <xref href="class_r_host_resolver.xml#class_r_host_resolver">RHostResolver</xref> can only perform one request of any type at once. A client is panicked if it makes two requests.   </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_r_host_resolver_1a598b91feb80dad605ab6aaef4a7b06c5">
+		<apiName>Open</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RHostResolver</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Open(RSocketServ &amp;aSocketServer, TUint anAddrFamily, TUint aProtocol)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RHostResolver::Open(RSocketServ &amp;,TUint,TUint)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_socket_serv.xml#class_r_socket_serv">RSocketServ</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSocketServer</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The socket server session </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anAddrFamily</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A constant identifying the protocol family </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aProtocol</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A constant that identifies the protocol that provides the name resolution service </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="897"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_RSLV.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="21"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="38"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Initialises a name resolution service provided by a particular protocol.</p>
+				<p>This must be called before other object functions are used.</p>
+				<p>KErrNone if successful otherwise another of the system-wide error codes. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_host_resolver_1acb7b60552e9f309d822ceb33b9dc73f1">
+		<apiName>Open</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RHostResolver</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Open(RSocketServ &amp;aSocketServer, TUint anAddrFamily, TUint aProtocol, RConnection &amp;aConnection)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RHostResolver::Open(RSocketServ &amp;,TUint,TUint,RConnection &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_socket_serv.xml#class_r_socket_serv">RSocketServ</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSocketServer</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anAddrFamily</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A constant identifying the protocol family. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aProtocol</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A constant that identifies the protocol that provides the name resolution service. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_connection.xml#class_r_connection">RConnection</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aConnection</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Existing RConnection whose interface this Host Resolver will be associated with. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="898"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_RSLV.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="40"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="64"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Initialises a name resolution service provided by a particular protocol, and associates the service with the same interface as an existing <xref href="class_r_connection.xml#class_r_connection">RConnection</xref> instance.</p>
+				<p>This must be called before other object functions are used.</p>
+				<p>Note that the association is instantaneous, in that the Host Resolver is associated with the interface that the <xref href="class_r_connection.xml#class_r_connection">RConnection</xref> is associated with at the present time. This association terminates when the underlying interface goes down.</p>
+				<p>KErrNone if successful otherwise another of the system-wide error codes. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_host_resolver_1a9d20ad9549294be7db47c410516a466c">
+		<apiName>GetByName</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RHostResolver</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void GetByName(const TDesC &amp;aName, TNameEntry &amp;aResult, TRequestStatus &amp;aStatus)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RHostResolver::GetByName(const TDesC &amp;,TNameEntry &amp;,TRequestStatus &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aName</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The name to resolve. The format of the name and any wild-cards supported, along with any separators in hierarchical name systems, are protocol specific </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_pckg_buf.xml#class_t_pckg_buf">TNameEntry</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aResult</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On return, the result of the name resolution. If more than one result is allowed by the protocol, the client can call Next() to find any further results. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Indicates asynchronous operation and, on completion, contains an error code: see the system-wide error codes. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="899"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_RSLV.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="66"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="93"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Resolves a machine name to a TSockAddress asynchronously.</p>
+				<p>The server will fill in the supplied TNameEntry.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_host_resolver_1a203935f099eeb14b87a2a2f37ef888ea">
+		<apiName>GetByName</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RHostResolver</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt GetByName(const TDesC &amp;aName, TNameEntry &amp;aResult)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RHostResolver::GetByName(const TDesC &amp;,TNameEntry &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aName</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The name to resolve. The format of the name and any wild-cards supported, along with any separators in hierarchical name systems, are protocol specific </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_pckg_buf.xml#class_t_pckg_buf">TNameEntry</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aResult</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On return, the result of the name resolution. If more than one result is allowed by the protocol, the client can call Next() to find any further results. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="900"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_RSLV.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="95"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="117"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Resolves a machine name to a TSockAddress.</p>
+				<p>The server will fill in the supplied TNameEntry.</p>
+				<p>KErrNone if successful otherwise another of the system-wide error codes. </p>
+				<p>
+					<b>capability</b>
+				</p>
+				<p>Dependent on the type of connection so deferred to PRT </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_host_resolver_1a657e09b209fc33ca74f0b60188a8e535">
+		<apiName>Next</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RHostResolver</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Next(TNameEntry &amp;aResult, TRequestStatus &amp;aStatus)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RHostResolver::Next(TNameEntry &amp;,TRequestStatus &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_pckg_buf.xml#class_t_pckg_buf">TNameEntry</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aResult</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Returns the next result of the name resolution. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Indicates asynchronous operation and on completion contains an error code: see the system-wide error codes. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="901"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_RSLV.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="119"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="134"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Get the next response if there is more than one response for a given host name (alias list)</p>
+				<p>Returns the next answer asynchronously, where there is more than one response for a given host name.</p>
+				<p>For some protocols, <xref href="class_r_host_resolver.xml#class_r_host_resolver_1a9d20ad9549294be7db47c410516a466c">GetByName()</xref> and <xref href="class_r_host_resolver.xml#class_r_host_resolver_1aebae8481851f9837b1e51d8ea7b5ceaf">GetByAddress()</xref> may find more than one answer, for example if aliases are allowed.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_host_resolver_1aebaae502a22f5848297967689d644c98">
+		<apiName>Next</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RHostResolver</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Next(TNameEntry &amp;aResult)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RHostResolver::Next(TNameEntry &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_pckg_buf.xml#class_t_pckg_buf">TNameEntry</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aResult</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Returns the next result of the name resolution. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="902"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_RSLV.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="136"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="155"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Get the next response if there is more than one response for a given host name (alias list)</p>
+				<p>Returns the next answer where there is more than one response for a given host name.</p>
+				<p>For some protocols, <xref href="class_r_host_resolver.xml#class_r_host_resolver_1a9d20ad9549294be7db47c410516a466c">GetByName()</xref> and <xref href="class_r_host_resolver.xml#class_r_host_resolver_1aebae8481851f9837b1e51d8ea7b5ceaf">GetByAddress()</xref> may find more than one answer, for example if aliases are allowed.</p>
+				<p>KErrNone if successful otherwise another of the system-wide error codes. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_host_resolver_1aebae8481851f9837b1e51d8ea7b5ceaf">
+		<apiName>GetByAddress</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RHostResolver</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void GetByAddress(const TSockAddr &amp;anAddr, TNameEntry &amp;aResult, TRequestStatus &amp;aStatus)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RHostResolver::GetByAddress(const TSockAddr &amp;,TNameEntry &amp;,TRequestStatus &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_sock_addr.xml#class_t_sock_addr">TSockAddr</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anAddr</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The address to use </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_pckg_buf.xml#class_t_pckg_buf">TNameEntry</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aResult</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On return, the result of the query. If more than one result is allowed by the protocol, the client can call Next() to find any further results. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Indicates asynchronous operation and on completion contains an error code: see the system-wide error codes. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="903"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_RSLV.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="157"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="173"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Get host by address (as get by name)</p>
+				<p>Gets the name of a host from its address asynchronously</p>
+				<p>
+					<b>capability</b>
+				</p>
+				<p>Dependent on the type of connection so deferred to PRT </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_host_resolver_1ac96920c1b84620619b1711b9426ff262">
+		<apiName>GetByAddress</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RHostResolver</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt GetByAddress(const TSockAddr &amp;anAddr, TNameEntry &amp;aResult)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RHostResolver::GetByAddress(const TSockAddr &amp;,TNameEntry &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_sock_addr.xml#class_t_sock_addr">TSockAddr</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anAddr</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The address to use </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_pckg_buf.xml#class_t_pckg_buf">TNameEntry</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aResult</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Returns the result of the query. If more than one result is allowed by the protocol, the client can call Next() to find any further results.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="904"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_RSLV.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="175"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="193"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Get host by address (as get by name)</p>
+				<p>Gets the name of a host from its address</p>
+				<p>KErrNone if successful otherwise another of the system-wide error codes. </p>
+				<p>
+					<b>capability</b>
+				</p>
+				<p>Dependent on the type of connection so deferred to PRT </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_host_resolver_1a372a3d739c344f3b317ffaf94c852b7e">
+		<apiName>GetHostName</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RHostResolver</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt GetHostName(TDes &amp;aName)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RHostResolver::GetHostName(TDes &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des16.xml#class_t_des16">TDes</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aName</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Returns the result of the query. The buffer passed in should have a minimum length of 256 characters, otherwise a panic may occur: you can use a parameter of the THostName type. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="905"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_RSLV.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="195"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="212"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets the name of the local host.</p>
+				<p>Note that with some protocols the name of the local host is not necessarily known at all times. In some cases, a preceding call to <xref href="class_r_host_resolver.xml#class_r_host_resolver_1a05e4ccac834bb12236aab26d042f524b">SetHostName()</xref> must have been made.</p>
+				<p>KErrNone if successful otherwise another of the system-wide error codes. </p>
+				<p>
+					<b>capability</b>
+				</p>
+				<p>Dependent on the type of connection so deferred to PRT </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_host_resolver_1a1ae6bb589f9c5a81f0f275156cbffa58">
+		<apiName>GetHostName</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RHostResolver</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void GetHostName(TDes &amp;aName, TRequestStatus &amp;aStatus)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RHostResolver::GetHostName(TDes &amp;,TRequestStatus &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des16.xml#class_t_des16">TDes</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aName</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Returns the result of the query. The buffer passed in should have a minimum length of 256 characters, otherwise a panic may occur: you can use a parameter of the THostName type. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Indicates asynchronous operation and on completion contains an error code: see the system-wide error codes. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="906"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_RSLV.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="214"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="229"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets the name of the local host asynchronously.</p>
+				<p>Note that with some protocols the name of the local host is not necessarily known at all times. In some cases, a preceding call to <xref href="class_r_host_resolver.xml#class_r_host_resolver_1a05e4ccac834bb12236aab26d042f524b">SetHostName()</xref> must have been made.</p>
+				<p>
+					<b>capability</b>
+				</p>
+				<p>Dependent on the type of connection so deferred to PRT </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_host_resolver_1a05e4ccac834bb12236aab26d042f524b">
+		<apiName>SetHostName</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RHostResolver</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt SetHostName(const TDesC &amp;aName)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RHostResolver::SetHostName(const TDesC &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aName</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The local host name. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="907"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_RSLV.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="231"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="240"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Sets the name of the local host. KErrNone if successful, otherwise another of the system-wide error codes. </p>
+				<p>
+					<b>capability</b>
+				</p>
+				<p>NetworkControl Service restricting and stored at protocol level </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_host_resolver_1a04e3fe655f9fbad305a905e5b4177417">
+		<apiName>Close</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RHostResolver</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Close()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RHostResolver::Close()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="908"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_RSLV.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="257"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="268"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Closes a name resolution service. If a service has been opened using <xref href="class_r_host_resolver.xml#class_r_host_resolver_1a598b91feb80dad605ab6aaef4a7b06c5">Open()</xref>, then it should be closed using <xref href="class_r_host_resolver.xml#class_r_host_resolver_1a04e3fe655f9fbad305a905e5b4177417">Close()</xref>. This will ensure all associated resources are released. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_host_resolver_1a3e37916d7cb88c75591756a25def5642">
+		<apiName>Cancel</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RHostResolver</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Cancel()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RHostResolver::Cancel()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="909"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_RSLV.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="250"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="255"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Cancels any outstanding asynchronous calls, which will return with error code KErrCancel. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_host_resolver_1a05f837e797051482dfca656c92420073">
+		<apiName>Query</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RHostResolver</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Query(const TDesC8 &amp;aQuery, TDes8 &amp;aResult, TRequestStatus &amp;aStatus)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RHostResolver::Query(const TDesC8 &amp;,TDes8 &amp;,TRequestStatus &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aQuery</cxxFunctionParameterDeclarationName>
+						<apiDefNote>contains query data. The concrete type of the data depends on protocol. e.g. for tcpip it will imply DNS query. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aResult</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Descriptor that will receive data. The concrete meaning of this data depends on protocol. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote>indicates asynchronous operation, on completion contains a system-wide error code </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="911"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_RSLV.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="272"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="286"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Protocol - independent query. Asynchronous version.</p>
+				<p>
+					<b>capability</b>
+				</p>
+				<p>Dependent on the type of connection so deferred to PRT </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_host_resolver_1a580bd36f1e992769f5c5bfe8c427b0a3">
+		<apiName>Query</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RHostResolver</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Query(const TDesC8 &amp;aQuery, TDes8 &amp;aResult)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RHostResolver::Query(const TDesC8 &amp;,TDes8 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aQuery</cxxFunctionParameterDeclarationName>
+						<apiDefNote>contains query data. The concrete type of the data depends on protocol. e.g. for tcpip it will imply DNS query. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aResult</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Descriptor that will receive data. The concrete meaning of this data depends on protocol. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="912"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_RSLV.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="288"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="305"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Protocol - independent query. Synchronous version.</p>
+				<p>system-wide error code. </p>
+				<p>
+					<b>capability</b>
+				</p>
+				<p>Dependent on the type of connection so deferred to PRT </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_host_resolver_1ad0a6e9ff89bc9b1b19955fec7b6d0361">
+		<apiName>QueryGetNext</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RHostResolver</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void QueryGetNext(TDes8 &amp;aResult, TRequestStatus &amp;aStatus)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RHostResolver::QueryGetNext(TDes8 &amp;,TRequestStatus &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aResult</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Descriptor that will receive data. The concrete meaning of this data depends on protocol. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote>indicates asynchronous operation, on completion contains a system-wide error code. In particular KErrNotFound means that there is no more information from resolver. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="913"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_RSLV.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="307"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="321"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Get the next query result. For some queries there can be more than one results. Asynchronous version.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_host_resolver_1a1be82872ba3a6e874dad417be4c5540e">
+		<apiName>QueryGetNext</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RHostResolver</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt QueryGetNext(TDes8 &amp;aResult)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RHostResolver::QueryGetNext(TDes8 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aResult</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Descriptor that will receive data. The concrete meaning of this data depends on protocol. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="914"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_RSLV.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="323"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="337"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Get the next query result. For some queries there can be more than one results. Synchronous version.</p>
+				<p>system-wide error code. In particular KErrNotFound means that there is no more information from resolver. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_host_resolver_1a3d137d243701205cb433cd8e4ab9066b">
+		<apiName>SetOpt</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RHostResolver</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt SetOpt(TUint anOptionName, TUint anOptionLevel, const TDesC8 &amp;anOption=TPtrC8(NULL, 0))</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RHostResolver::SetOpt(TUint,TUint,const TDesC8 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anOptionName</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anOptionLevel</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anOption</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>
+							<apiRelation href="class_t_ptr_c8.xml#class_t_ptr_c8">TPtrC8</apiRelation>(NULL, 0)</cxxFunctionParameterDefaultValue>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="915"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_RSLV.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="243"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="247"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxClassInherits>
+		<cxxClassInheritsDetail>
+			<cxxClassFunctionInherited href="class_r_host_resolver.xml#class_r_sub_session_base_1af9a75bd9f7400c9439e2f76f8d059d00">RSubSessionBase::CloseSubSession(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_host_resolver.xml#class_r_sub_session_base_1ae2da2f53114e1af7938db52291b0fecf">RSubSessionBase::CreateAutoCloseSubSession(RSessionBase &amp;,TInt,const TIpcArgs &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_host_resolver.xml#class_r_sub_session_base_1a50e62f82ea5de8fd858e7a75c21c0930">RSubSessionBase::CreateSubSession(const RSessionBase &amp;,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_host_resolver.xml#class_r_sub_session_base_1ac1adf58e7adde023baf0525baeb2a0ca">RSubSessionBase::CreateSubSession(const RSessionBase &amp;,TInt,const TIpcArgs &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_host_resolver.xml#class_r_sub_session_base_1a6ecd5459966453b3a99ac3f99d97e1bc">RSubSessionBase::RSubSessionBase()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_host_resolver.xml#class_r_sub_session_base_1ae855884063702416b6aa73c30263706b">RSubSessionBase::Send(TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_host_resolver.xml#class_r_sub_session_base_1a1877065a894f19c8e75f076995e2b136">RSubSessionBase::Send(TInt,const TIpcArgs &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_host_resolver.xml#class_r_sub_session_base_1a79a9c918d3d693edae2b91069339a6e4">RSubSessionBase::SendReceive(TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_host_resolver.xml#class_r_sub_session_base_1a31d1b25a10b3cf364677f050ea1b3a10">RSubSessionBase::SendReceive(TInt,TRequestStatus &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_host_resolver.xml#class_r_sub_session_base_1abfee930312ede77f6ee1a850be3e7ea5">RSubSessionBase::SendReceive(TInt,const TIpcArgs &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_host_resolver.xml#class_r_sub_session_base_1aa2f319884f3ea300a0a61c9788bb5d93">RSubSessionBase::SendReceive(TInt,const TIpcArgs &amp;,TRequestStatus &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_host_resolver.xml#class_r_sub_session_base_1a1239f2d6b3c11eed6965602c114886fd">RSubSessionBase::Session()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_host_resolver.xml#class_r_sub_session_base_1aabe5abe9803cadf198a0c429e2aa5f2e">RSubSessionBase::SubSessionHandle()const</cxxClassFunctionInherited>
+		</cxxClassInheritsDetail>
+	</cxxClassInherits>
+</cxxClass>

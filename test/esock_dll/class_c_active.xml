@@ -1,0 +1,544 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_c_active">
+	<apiName>CActive</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassAbstract/>
+			<cxxClassDerivations>
+				<cxxClassDerivation>
+					<cxxClassDerivationAccessSpecifier value="public"/>
+					<cxxClassBaseClass href="class_c_base.xml#class_c_base">CBase</cxxClassBaseClass>
+				</cxxClassDerivation>
+			</cxxClassDerivations>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="1547"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="1536"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="1671"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>The core class of the active object abstraction.</p>
+			<p>It encapsulates both the issuing of a request to an asynchronous service provider and the handling of completed requests. An application can have one or more active objects whose processing is controlled by an active scheduler. </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxEnumeration id="class_c_active_1a378cd39842666e0a9b5f2fc089375f35">
+		<apiName>TPriority</apiName>
+		<cxxEnumerationDetail>
+			<cxxEnumerationDefinition>
+				<cxxEnumerationAccessSpecifier value="public"/>
+				<cxxEnumerationScopedName>CActive</cxxEnumerationScopedName>
+				<cxxEnumerationPrototype>TPriority</cxxEnumerationPrototype>
+				<cxxEnumerationNameLookup>CActive:TPriority</cxxEnumerationNameLookup>
+				<cxxEnumerators>
+					<cxxEnumerator id="class_c_active_1a378cd39842666e0a9b5f2fc089375f35a5faa05021b83e97f1a5b00917aa34733">
+						<apiName>EPriorityIdle</apiName>
+						<cxxEnumeratorScopedName>CActive</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EPriorityIdle = -100</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>CActive::EPriorityIdle</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="-100"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="1559"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>A low priority, useful for active objects representing background processing. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_c_active_1a378cd39842666e0a9b5f2fc089375f35ac074efb2a15cd04c06d354fb1fd13f27">
+						<apiName>EPriorityLow</apiName>
+						<cxxEnumeratorScopedName>CActive</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EPriorityLow = -20</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>CActive::EPriorityLow</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="-20"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="1565"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>A priority higher than EPriorityIdle but lower than EPriorityStandard. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_c_active_1a378cd39842666e0a9b5f2fc089375f35ad19560103adbae4fa3eeca42c703e00b">
+						<apiName>EPriorityStandard</apiName>
+						<cxxEnumeratorScopedName>CActive</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EPriorityStandard = 0</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>CActive::EPriorityStandard</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="0"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="1571"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Most active objects will have this priority. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_c_active_1a378cd39842666e0a9b5f2fc089375f35ac4fc6edcb2aea0b20ab823f1017d788a">
+						<apiName>EPriorityUserInput</apiName>
+						<cxxEnumeratorScopedName>CActive</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EPriorityUserInput = 10</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>CActive::EPriorityUserInput</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="10"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="1578"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>A priority higher than EPriorityStandard; useful for active objects handling user input. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_c_active_1a378cd39842666e0a9b5f2fc089375f35ac59ba0db48385ddf49262e21f2a599b3">
+						<apiName>EPriorityHigh</apiName>
+						<cxxEnumeratorScopedName>CActive</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EPriorityHigh = 20</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>CActive::EPriorityHigh</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="20"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="1584"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>A priority higher than EPriorityUserInput. </p>
+						</apiDesc>
+					</cxxEnumerator>
+				</cxxEnumerators>
+				<cxxEnumerationAPIItemLocation>
+					<cxxEnumerationDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxEnumerationDeclarationFileLine name="lineNumber" value="1554"/>
+					<cxxEnumerationDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxEnumerationDefinitionFileLineStart name="lineNumber" value="1553"/>
+					<cxxEnumerationDefinitionFileLineEnd name="lineNumber" value="1585"/>
+				</cxxEnumerationAPIItemLocation>
+			</cxxEnumerationDefinition>
+			<apiDesc>
+				<p>Defines standard priorities for active objects. </p>
+			</apiDesc>
+		</cxxEnumerationDetail>
+	</cxxEnumeration>
+	<cxxFunction id="class_c_active_1a81e8cc3a48d5d6f56c502690f9969ef8">
+		<apiName>~CActive</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDestructor/>
+				<cxxFunctionDeclaredType>IMPORT_C</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CActive</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C ~CActive()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CActive::~CActive()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1587"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_active_1a97781da8872ba6e86b5b83ad7170eb90">
+		<apiName>Cancel</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CActive</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Cancel()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CActive::Cancel()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1588"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_active_1a44f0f5a2867d153feab11ee669d33b8d">
+		<apiName>Deque</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CActive</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Deque()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CActive::Deque()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1589"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_active_1a0d7c2ce1a5364daadef07b1020c9714f">
+		<apiName>SetPriority</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CActive</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void SetPriority(TInt aPriority)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CActive::SetPriority(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPriority</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1590"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_active_1a6d1d16020878d00c3af277ad2b0866f5">
+		<apiName>IsActive</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CActive</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool IsActive() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CActive::IsActive()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1591"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="2604"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="2618"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Determines whether the active object has a request outstanding.</p>
+				<p>A request is outstanding when:</p>
+				<p>1. it has been issued</p>
+				<p>2. it has not been cancelled</p>
+				<p>3. it servicing has not yet begun.</p>
+				<p>True, if a request is outstanding; false, otherwise. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_active_1a97d8e693eb6f85ca883dbb385650ca28">
+		<apiName>IsAdded</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CActive</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool IsAdded() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CActive::IsAdded()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1592"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="2623"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="2641"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Determines whether the active object has been added to the active scheduler&apos;s list of active objects.</p>
+				<p>If the active object has not been added to a scheduler, it cannot handle the completion of any request. No request should be issued until the active object has been added to a scheduler because completion of that request generates what appears to be a stray signal.</p>
+				<p>Use the active object function <xref href="class_c_active.xml#class_c_active_1a44f0f5a2867d153feab11ee669d33b8d">Deque()</xref> to remove the active object from the scheduler.</p>
+				<p>True, if the active object has been added to an active scheduler; false, otherwise.</p>
+				<p>
+					<xref href="class_c_active.xml#class_c_active_1a44f0f5a2867d153feab11ee669d33b8d">CActive::Deque</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_active_1acb9ff1d90fbcb96058e2947c3f05c8e8">
+		<apiName>Priority</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CActive</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt Priority() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CActive::Priority()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1593"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="2646"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="2652"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets the priority of the active object.</p>
+				<p>The active object&apos;s priority value. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_active_1acfaa5bb1a4cda9d586f0ffaf2b0a0eb7">
+		<apiName>CActive</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType>IMPORT_C</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CActive</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C CActive(TInt aPriority)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CActive::CActive(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPriority</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1595"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_active_1a511d5a8dc1d43eca953eb5c69b0e022d">
+		<apiName>SetActive</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CActive</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void SetActive()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CActive::SetActive()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1596"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_active_1abca693565d1f15ef883f32d534fba261">
+		<apiName>DoCancel</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionPureVirtual/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CActive</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual void DoCancel()=0</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CActive::DoCancel()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1612"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Implements cancellation of an outstanding request.</p>
+				<p>This function is called as part of the active object&apos;s <xref href="class_c_active.xml#class_c_active_1a97781da8872ba6e86b5b83ad7170eb90">Cancel()</xref>.</p>
+				<p>It must call the appropriate cancel function offered by the active object&apos;s asynchronous service provider. The asynchronous service provider&apos;s cancel is expected to act immediately.</p>
+				<p>
+					<xref href="class_c_active.xml#class_c_active_1abca693565d1f15ef883f32d534fba261">DoCancel()</xref> must not wait for event completion; this is handled by <xref href="class_c_active.xml#class_c_active_1a97781da8872ba6e86b5b83ad7170eb90">Cancel()</xref>.</p>
+				<p>
+					<xref href="class_c_active.xml#class_c_active_1a97781da8872ba6e86b5b83ad7170eb90">CActive::Cancel</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_active_1a1562734d9d119b6ff24bc3aec793ce3d">
+		<apiName>RunL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionPureVirtual/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CActive</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual void RunL()=0</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CActive::RunL()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1646"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Handles an active object&apos;s request completion event.</p>
+				<p>A derived class must provide an implementation to handle the completed request. If appropriate, it may issue another request.</p>
+				<p>The function is called by the active scheduler when a request completion event occurs, i.e. after the active scheduler&apos;s WaitForAnyRequest() function completes.</p>
+				<p>Before calling this active object&apos;s <xref href="class_c_active.xml#class_c_active_1a1562734d9d119b6ff24bc3aec793ce3d">RunL()</xref> function, the active scheduler has:</p>
+				<p>1. decided that this is the highest priority active object with a completed request</p>
+				<p>2. marked this active object&apos;s request as complete (i.e. the request is no longer outstanding)</p>
+				<p>
+					<xref href="class_c_active.xml#class_c_active_1a1562734d9d119b6ff24bc3aec793ce3d">RunL()</xref> runs under a trap harness in the active scheduler. If it leaves, then the active scheduler calls <xref href="class_c_active.xml#class_c_active_1af7a68e3e7ac05c01a9e22dd81393f834">RunError()</xref> to handle the leave.</p>
+				<p>Note that once the active scheduler&apos;s Start() function has been called, all user code is run under one of the program&apos;s active object&apos;s <xref href="class_c_active.xml#class_c_active_1a1562734d9d119b6ff24bc3aec793ce3d">RunL()</xref> or <xref href="class_c_active.xml#class_c_active_1af7a68e3e7ac05c01a9e22dd81393f834">RunError()</xref> functions.</p>
+				<p>
+					<xref href="class_c_active_scheduler.xml#class_c_active_scheduler_1a71f4452eae5e178915987c6d1a428972">CActiveScheduler::Start</xref> </p>
+				<p>
+					<xref href="class_c_active_scheduler.xml#class_c_active_scheduler_1a6d3f55a0772c98d0cd2845a7c074b941">CActiveScheduler::Error</xref> </p>
+				<p>
+					<xref href="class_c_active_scheduler.xml#class_c_active_scheduler_1af43f6899a3a1a6b6cb040a4f2bbb40f9">CActiveScheduler::WaitForAnyRequest</xref> </p>
+				<p>TRAPD </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_active_1af7a68e3e7ac05c01a9e22dd81393f834">
+		<apiName>RunError</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionVirtual/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CActive</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual IMPORT_C TInt RunError(TInt aError)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CActive::RunError(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aError</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1647"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_active_1a098237f668ebdf6e5125a2deac03323d">
+		<apiName>Extension_</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionVirtual/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CActive</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual IMPORT_C TInt Extension_(TUint aExtensionId, TAny *&amp;a0, TAny *a1)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CActive::Extension_(TUint,TAny *&amp;,TAny *)</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_c_base.xml#class_c_base_1aae681a54d9c9b10c7d42e7e32ff109d5">CBase::Extension_(TUint,TAny *&amp;,TAny *)</cxxFunctionReimplemented>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aExtensionId</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *&amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>a0</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>a1</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1649"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxVariable id="class_c_active_1a38314f150856c0f369555b0ef17c3140">
+		<apiName>iStatus</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>CActive</cxxVariableScopedName>
+				<cxxVariablePrototype>TRequestStatus iStatus</cxxVariablePrototype>
+				<cxxVariableNameLookup>CActive::iStatus</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1663"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>The request status associated with an asynchronous request.</p>
+				<p>This is passed as a parameter to all asynchronous service providers.</p>
+				<p>The active scheduler uses this to check whether the active object&apos;s request has completed.</p>
+				<p>The function can use the completion code to judge the success or otherwise of the request. </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_c_active_1a02625454964677f68539a3274961ee93">
+		<apiName>iLink</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="class_t_pri_que_link.xml#class_t_pri_que_link">TPriQueLink</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>CActive</cxxVariableScopedName>
+				<cxxVariablePrototype>TPriQueLink iLink</cxxVariablePrototype>
+				<cxxVariableNameLookup>CActive::iLink</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1666"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_c_active_1a4bb76130b67b5430b3b736194df7edeb">
+		<apiName>iSpare</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxVariableDeclaredType>
+				<cxxVariableScopedName>CActive</cxxVariableScopedName>
+				<cxxVariablePrototype>TAny * iSpare</cxxVariablePrototype>
+				<cxxVariableNameLookup>CActive::iSpare</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1667"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxClassInherits>
+		<cxxClassInheritsDetail>
+			<cxxClassFunctionInherited href="class_c_active.xml#class_c_base_1a240de7932690a4e987d75690b0b6f82b">CBase::CBase()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_active.xml#class_c_base_1ac0a06aeab68b3e01be81f9dd79e011c6">CBase::Delete(CBase *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_active.xml#class_c_base_1af4c4965092a763b0856ccbfa3cf99eaf">CBase::operator new(TUint)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_active.xml#class_c_base_1ab9e5f557dea4db22886189926687ddc1">CBase::operator new(TUint,TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_active.xml#class_c_base_1aa464dd21494443ac109084ed03b81f28">CBase::operator new(TUint,TLeave)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_active.xml#class_c_base_1af8429815362d4df6fecd47179e0c5dfe">CBase::operator new(TUint,TLeave,TUint)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_active.xml#class_c_base_1a80505bdf8b1b20a2ed102307a78eeeeb">CBase::operator new(TUint,TUint)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_active.xml#class_c_base_1a1390361b94424be22bb2b1020eb400ea">CBase::~CBase()</cxxClassFunctionInherited>
+		</cxxClassInheritsDetail>
+	</cxxClassInherits>
+</cxxClass>

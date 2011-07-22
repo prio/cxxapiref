@@ -1,0 +1,332 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_t_sgl_que">
+	<apiName>TSglQue</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassDerivations>
+				<cxxClassDerivation>
+					<cxxClassDerivationAccessSpecifier value="public"/>
+					<cxxClassBaseClass href="class_t_sgl_que_base.xml#class_t_sgl_que_base">TSglQueBase</cxxClassBaseClass>
+				</cxxClassDerivation>
+			</cxxClassDerivations>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="389"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="388"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="400"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>A templated class that provides the behaviour for managing a singly linked list.</p>
+			<p>It also acts as the head of the list, maintaining the pointers into the list.</p>
+			<p>The template parameter defines the type of element that forms the singly linked list and is the class that acts as host to the link object.</p>
+			<p>
+				<xref href="class_t_sgl_que_link.xml#class_t_sgl_que_link">TSglQueLink</xref> </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_t_sgl_que_1acfb11aed072ca44e52ff4011bae60f70">
+		<apiName>TSglQue</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TSglQue</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TSglQue()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSglQue::TSglQue()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="391"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="334"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="348"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Constructs an empty list header and sets the offset value of the link object to zero.</p>
+				<p>In practice, never assume that the offset of the link object from the start of a list element is zero, even if the link object is declared as the first data member in the list element class.</p>
+				<p>If this default constructor is used, then call the <xref href="class_t_sgl_que_base.xml#class_t_sgl_que_base_1ab6839a9b84c9bb83799036888c300e47">SetOffset()</xref> function of the base class to ensure that the offset value is set correctly.</p>
+				<p>
+					<xref href="class_t_sgl_que_base.xml#class_t_sgl_que_base_1ab6839a9b84c9bb83799036888c300e47">TSglQueBase::SetOffset</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_sgl_que_1ac68e8b1fcece29dfd5f0d253a405a52d">
+		<apiName>TSglQue</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionExplicit/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TSglQue</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TSglQue(TInt aOffset)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSglQue::TSglQue(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aOffset</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The offset of the link object from the start of a list element. The macro _FOFF can be used to calculate this value.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="392"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="354"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="367"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Constructs an empty list header and sets the offset of the link object to the specified value.</p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>USER 75, if aOffset is not divisible by four.</p>
+				<p>_FOFF </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_sgl_que_1aa1eacdf28796a5d8528e6a5b5d86d485">
+		<apiName>AddFirst</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TSglQue</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void AddFirst(T &amp;aRef)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSglQue::AddFirst(T &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>T &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aRef</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The list element to be inserted at the front of the singly linked list. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="393"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="373"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="383"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Inserts the specified list element at the front of the singly linked list.</p>
+				<p>If the list is not empty, the specified element becomes the first in the list. What was previously the first element becomes the second in the list.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_sgl_que_1a866a2a5de6c66d178db47589b65b0409">
+		<apiName>AddLast</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TSglQue</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void AddLast(T &amp;aRef)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSglQue::AddLast(T &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>T &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aRef</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The list element to be inserted at the back of the singly linked list. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="394"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="389"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="400"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Inserts the specified list element at the back of the singly linked list.</p>
+				<p>If the list is not empty, the specified element becomes the last in the list. What was previously the last element becomes the next to last element in the list.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_sgl_que_1a7d23aae949979c544ab702ebcf6b948e">
+		<apiName>IsFirst</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TSglQue</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool IsFirst(const T *aPtr) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSglQue::IsFirst(const T *)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const T *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPtr</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A pointer to the element whose position in the list is to be checked.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="395"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="406"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="415"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Tests whether the specified element is the first in the singly linked list.</p>
+				<p>True, if the element is the first in the list; false, otherwise. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_sgl_que_1a0cc403fb59131a21f6a5ebfc252fcf84">
+		<apiName>IsLast</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TSglQue</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool IsLast(const T *aPtr) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSglQue::IsLast(const T *)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const T *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPtr</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A pointer to the element whose position in the list is to be checked.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="396"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="421"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="430"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Tests whether the specified element is the last in the singly linked list.</p>
+				<p>True, if the element is the last in the list; false, otherwise. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_sgl_que_1a0c7ab74d7c7aa4caf92f3e7258ba478e">
+		<apiName>First</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>T *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TSglQue</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline T * First() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSglQue::First()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="397"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="436"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="444"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets a pointer to the first list element in the singly linked list.</p>
+				<p>A pointer to the first list element in the singly linked list. If the list is empty, this pointer is not necessarily NULL and must not be assumed to point to a valid object. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_sgl_que_1aa8fc40fd717571edb43a56b8e08cc3ef">
+		<apiName>Last</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>T *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TSglQue</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline T * Last() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSglQue::Last()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="398"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="450"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="458"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets a pointer to the last list element in the singly linked list.</p>
+				<p>A pointer to the last list element in the singly linked list. If the list is empty, this pointer is not necessarily NULL and must not be assumed to point to a valid object. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_sgl_que_1ad732be3307179d723091931461c446a5">
+		<apiName>Remove</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TSglQue</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void Remove(T &amp;aRef)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSglQue::Remove(T &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>T &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aRef</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A list element to be removed from the singly linked list.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="399"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="464"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="474"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Removes the specified element from the singly linked list.</p>
+				<p>The singly linked list must not be empty.</p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>USER 76, if the element to be removed is not in the list </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxClassInherits>
+		<cxxClassInheritsDetail>
+			<cxxClassFunctionInherited href="class_t_sgl_que.xml#class_t_sgl_que_base_1a5f2c4ae2cf018b9e55ed1cca454f44b3">TSglQueBase::DoAddFirst(TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_sgl_que.xml#class_t_sgl_que_base_1acf0735bddf441fd46e0496bfdec2ea11">TSglQueBase::DoAddLast(TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_sgl_que.xml#class_t_sgl_que_base_1ae7e6fdc144f089aadec9d3342e916ab5">TSglQueBase::DoRemove(TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_sgl_que.xml#class_t_sgl_que_base_1a9b83fe017a8516cac751cf3dd6d6b222">TSglQueBase::IsEmpty()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_sgl_que.xml#class_t_sgl_que_base_1a49131131fad24c42fc8f3bc73b9ad830">TSglQueBase::Reset()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_sgl_que.xml#class_t_sgl_que_base_1ab6839a9b84c9bb83799036888c300e47">TSglQueBase::SetOffset(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_sgl_que.xml#class_t_sgl_que_base_1ab4a9c8857811ea81952e1e5cd751ab35">TSglQueBase::TSglQueBase()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_sgl_que.xml#class_t_sgl_que_base_1a8408b820db3ceeb67f0953e2f32edcce">TSglQueBase::TSglQueBase(TInt)</cxxClassFunctionInherited>
+			<cxxClassVariableInherited href="class_t_sgl_que.xml#class_t_sgl_que_base_1a176705669e32441bca257fbdf309bc05">TSglQueBase::iHead</cxxClassVariableInherited>
+			<cxxClassVariableInherited href="class_t_sgl_que.xml#class_t_sgl_que_base_1a136c816b5c0036778d09795ec95f8721">TSglQueBase::iLast</cxxClassVariableInherited>
+			<cxxClassVariableInherited href="class_t_sgl_que.xml#class_t_sgl_que_base_1a258875a65fbc89314b9ba01e3b699658">TSglQueBase::iOffset</cxxClassVariableInherited>
+		</cxxClassInheritsDetail>
+	</cxxClassInherits>
+</cxxClass>

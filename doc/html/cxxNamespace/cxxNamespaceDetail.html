@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="cxxNamespaceDetail"/>
+<meta name="abstract" content="Contains child elements specifying the file or files where a C++ namespace is used."/>
+<meta name="description" content="Contains child elements specifying the file or files where a C++ namespace is used."/>
+<meta name="DC.Relation" scheme="URI" content="../cxxNamespace/cxxNamespace_module.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="cxxNamespaceDetail"/>
+<meta name="DC.Language" content="en-us"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>cxxNamespaceDetail</title>
+<link rel="stylesheet" type="text/css" href="../nokiacxxref.css"/></head>
+<body class="element" id="cxxNamespaceDetail"><a name="cxxNamespaceDetail"><!-- --></a>
+
+
+<h1 class="topictitle1">cxxNamespaceDetail</h1>
+
+
+<div><p>Contains child elements specifying the file or files where
+a C++ namespace is used.</p>
+
+<div class="section"><h2 class="sectiontitle">Description</h2>                          <p>A
+C++ namespace can be used to qualify the names of classes, functions
+and variables. Use of a namespace can span multiple source files.
+The &lt;cxxNamespaceDetail&gt; element contains child elements providing
+this detailed information about the use of a C++ namespace.</p>
+         </div>
+
+<div class="example"><h2 class="sectiontitle">Example</h2>                          <pre class="codeblock">&lt;cxxNamespaceDetail&gt;
+		&lt;cxxNamespaceDefinition&gt;
+			&lt;cxxNamespaceAPIItemLocation&gt;
+				&lt;cxxNamespaceDeclarationFile name="filePath" value="t:/epoc32/include/feature/file_14749.h" /&gt;
+				&lt;cxxNamespaceDeclarationFile name="filePath" value="t:/epoc32/include/feature/file_14749_func.h" /&gt;
+				&lt;cxxNamespaceDeclarationFile name="filePath" value="t:/sf/feature/14749/src/file_14749.cpp" /&gt;
+				&lt;cxxNamespaceDeclarationFile name="filePath" value="t:/sf/feature/14749/src/file_14749_func.cpp" /&gt;
+			&lt;/cxxNamespaceAPIItemLocation&gt;
+		&lt;/cxxNamespaceDefinition&gt;
+		&lt;apiDesc&gt;
+			&lt;p otherprops="linkagainst"&gt;14749.lib&lt;/p&gt;&lt;p&gt;Example adapted from ISO/IEC 14882:2003(E) 7.3.1 Namespace definition [namespace.def]&lt;/p&gt;
+			&lt;p&gt;Even more documentation for namespace Outer from &lt;xref format="html" href="file:"&gt;file:&lt;/xref&gt; &lt;xref href="file__14749_8h.xml#file__14749_8h_1a80752018587ae8dc67f2b250db6e7eb8"&gt;file_14749_func.h&lt;/xref&gt;&lt;/p&gt;
+			&lt;p&gt;More documentation for namespace Outer from &lt;xref format="html" href="file:"&gt;file:&lt;/xref&gt; &lt;xref href="file__14749_8h.xml#file__14749_8h_1a80752018587ae8dc67f2b250db6e7eb8"&gt;file_14749_class.h&lt;/xref&gt; &lt;/p&gt;
+		&lt;/apiDesc&gt;
+	&lt;/cxxNamespaceDetail&gt;
+	&lt;cxxNamespaceMembers&gt;
+            </pre>
+         </div>
+
+<div class="elementContainedBy"><h2 class="sectiontitle">Contained by</h2>
+
+<p id="cxxNamespaceDetail__d10390e11492"><a name="cxxNamespaceDetail__d10390e11492"><!-- --></a>
+<a href="cxxNamespace.html" title="cxxNamespace is a topic type that contains all the elements to describe a c++ namespace">cxxNamespace</a> 
+</p>
+
+</div>
+
+<div class="elementContains"><h2 class="sectiontitle">Contains</h2>
+
+<p id="cxxNamespaceDetail__d10390e11504"><a name="cxxNamespaceDetail__d10390e11504"><!-- --></a>
+<span class="keyword">apiDesc</span>, 
+<span class="keyword">apiImpl</span>, 
+<a href="cxxNamespaceDefinition.html" title="Has child elements providing further information about a C++ namespace.">cxxNamespaceDefinition</a> 
+<span class="keyword">example</span>, 
+<span class="keyword">section</span>, 
+</p>
+
+</div>
+
+<div class="elementContentModel"><h2 class="sectiontitle">Content Model</h2>
+
+<p id="cxxNamespaceDetail__d10390e11528"><a name="cxxNamespaceDetail__d10390e11528"><!-- --></a>
+(<a href="cxxNamespaceDefinition.html" title="Has child elements providing further information about a C++ namespace.">cxxNamespaceDefinition</a> 
+(<em>optional</em>)
+  then  
+<span class="keyword">apiDesc</span>, 
+  then  
+(<span class="keyword">example</span>, 
+  or  
+<span class="keyword">section</span>, 
+  or  
+<span class="keyword">apiImpl</span>, 
+<em>(any number)</em>
+))</p>
+
+</div>
+
+<div class="elementAttList"/>
+
+<div class="elementClassValue"><h2 class="sectiontitle">Inheritance</h2>
+
+<p id="cxxNamespaceDetail__d10390e11561"><a name="cxxNamespaceDetail__d10390e11561"><!-- --></a>
+ topic/<span class="keyword">body</span> reference/<span class="keyword">refbody</span> apiRef/<span class="keyword">apiDetail</span> apiClassifier/<span class="keyword">apiClassifierDetail</span> cxxNamespace/<span class="keyword">cxxNamespaceDetail</span></p>
+
+</div>
+
+</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../cxxNamespace/cxxNamespace_module.html" title="Defines a top-level container for all the elements necessary to describe a C++ namespace.">cxxNamespace module</a></div>
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,490 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxStruct PUBLIC "-//NOKIA//DTD DITA C++ API Struct Reference Type v0.5.0//EN" "dtd/cxxStruct.dtd" >
+<cxxStruct id="struct_e_sock_1_1_t_availability_subscription_options">
+	<apiName>ESock::TAvailabilitySubscriptionOptions</apiName>
+	<cxxStructDetail>
+		<cxxStructDefinition>
+			<cxxStructAccessSpecifier value="public"/>
+			<cxxStructAPIItemLocation>
+				<cxxStructDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_availability.h"/>
+				<cxxStructDeclarationFileLine name="lineNumber" value="96"/>
+				<cxxStructDefinitionFile name="filePath" value="K:/epoc32/include/comms-infras/es_availability.h"/>
+				<cxxStructDefinitionFileLineStart name="lineNumber" value="95"/>
+				<cxxStructDefinitionFileLineEnd name="lineNumber" value="200"/>
+			</cxxStructAPIItemLocation>
+		</cxxStructDefinition>
+		<apiDesc>
+			<p>Collection of options used to register to availability notifications </p>
+		</apiDesc>
+	</cxxStructDetail>
+	<cxxEnumeration id="struct_e_sock_1_1_t_availability_subscription_options_1a08c129dada7a35305318daf7730b52eb">
+		<apiName>TChangeScopeFlags</apiName>
+		<cxxEnumerationDetail>
+			<cxxEnumerationDefinition>
+				<cxxEnumerationAccessSpecifier value="public"/>
+				<cxxEnumerationScopedName>ESock::TAvailabilitySubscriptionOptions</cxxEnumerationScopedName>
+				<cxxEnumerationPrototype>TChangeScopeFlags</cxxEnumerationPrototype>
+				<cxxEnumerationNameLookup>ESock::TAvailabilitySubscriptionOptions:TChangeScopeFlags</cxxEnumerationNameLookup>
+				<cxxEnumerators>
+					<cxxEnumerator id="struct_e_sock_1_1_t_availability_subscription_options_1a08c129dada7a35305318daf7730b52eba688d1c414f85fbde67c5f41c7bf99f3f">
+						<apiName>ENotAnyChange</apiName>
+						<cxxEnumeratorScopedName>ESock::TAvailabilitySubscriptionOptions</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ENotAnyChange = 0</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>ESock::TAvailabilitySubscriptionOptions::ENotAnyChange</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="0"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_availability.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="107"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc/>
+					</cxxEnumerator>
+					<cxxEnumerator id="struct_e_sock_1_1_t_availability_subscription_options_1a08c129dada7a35305318daf7730b52eba091b21b5562bb4772b456e1cc1f3eadf">
+						<apiName>EAnyChange</apiName>
+						<cxxEnumeratorScopedName>ESock::TAvailabilitySubscriptionOptions</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EAnyChange</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>ESock::TAvailabilitySubscriptionOptions::EAnyChange</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_availability.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="108"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc/>
+					</cxxEnumerator>
+					<cxxEnumerator id="struct_e_sock_1_1_t_availability_subscription_options_1a08c129dada7a35305318daf7730b52ebaf44f1b9bcfda772372587144a17c69f3">
+						<apiName>EAnyNestedChange</apiName>
+						<cxxEnumeratorScopedName>ESock::TAvailabilitySubscriptionOptions</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EAnyNestedChange</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>ESock::TAvailabilitySubscriptionOptions::EAnyNestedChange</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_availability.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="109"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc/>
+					</cxxEnumerator>
+				</cxxEnumerators>
+				<cxxEnumerationAPIItemLocation>
+					<cxxEnumerationDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_availability.h"/>
+					<cxxEnumerationDeclarationFileLine name="lineNumber" value="106"/>
+					<cxxEnumerationDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxEnumerationDefinitionFileLineStart name="lineNumber" value="105"/>
+					<cxxEnumerationDefinitionFileLineEnd name="lineNumber" value="110"/>
+				</cxxEnumerationAPIItemLocation>
+			</cxxEnumerationDefinition>
+			<apiDesc>
+				<p>Subscription option flags: ENotAnyChange - the client is specifying availability score thresholds he wishes to be notified on crossing; EAnyChange - the client is interestes in any change in the availability. Only change in calculated score will be reported. EAnyNestedChamge - the client is interested in any change in the availability even if it does not affect the calculated score e.g.: one of many available access points ceases to be available (and doesn&apos;t affect the score calculated against the remaning access points) </p>
+			</apiDesc>
+		</cxxEnumerationDetail>
+	</cxxEnumeration>
+	<cxxFunction id="struct_e_sock_1_1_t_availability_subscription_options_1a74c120152dade76cc5b23f84d00740ac">
+		<apiName>TAvailabilitySubscriptionOptions</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>ESock::TAvailabilitySubscriptionOptions</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TAvailabilitySubscriptionOptions(TBool aAnyChange=ETrue, TUint aScoreExceeds=0, TUint aScoreDropsBelow=0, TUint aScoreIncreasesByMoreThan=0, TUint aScoreDecreasesByMoreThan=0)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>ESock::TAvailabilitySubscriptionOptions::TAvailabilitySubscriptionOptions(TBool,TUint,TUint,TUint,TUint)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aAnyChange</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>ETrue</cxxFunctionParameterDefaultValue>
+						<apiDefNote>If ETrue, notify on all changes in the calculated availability. If EFalse, use following parameters to decide what to notify on. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aScoreExceeds</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>0</cxxFunctionParameterDefaultValue>
+						<apiDefNote>Notify if availability score exceeds this </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aScoreDropsBelow</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>0</cxxFunctionParameterDefaultValue>
+						<apiDefNote>Notify if availability score drops below this </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aScoreIncreasesByMoreThan</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>0</cxxFunctionParameterDefaultValue>
+						<apiDefNote>Notify if availability score increased by more than this </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aScoreDecreasesByMoreThan</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>0</cxxFunctionParameterDefaultValue>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_availability.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="129"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="119"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="134"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="struct_e_sock_1_1_t_availability_subscription_options_1aacdd0d34770b675d4ad8a471619c42c9">
+		<apiName>TAvailabilitySubscriptionOptions</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>ESock::TAvailabilitySubscriptionOptions</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TAvailabilitySubscriptionOptions(TChangeScopeFlags aFlags)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>ESock::TAvailabilitySubscriptionOptions::TAvailabilitySubscriptionOptions(TChangeScopeFlags)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="struct_e_sock_1_1_t_availability_subscription_options.xml#_1a08c129dada7a35305318daf7730b52eb">TChangeScopeFlags</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFlags</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_availability.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="148"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="142"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="150"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>
+					<xref href="struct_e_sock_1_1_t_availability_subscription_options.xml#struct_e_sock_1_1_t_availability_subscription_options_1a08c129dada7a35305318daf7730b52eb">TChangeScopeFlags</xref>. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="struct_e_sock_1_1_t_availability_subscription_options_1a927ceeaab3e567bd28c997287a8a452f">
+		<apiName>IsChangeSignificant</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>ESock::TAvailabilitySubscriptionOptions</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool IsChangeSignificant(const TAvailabilityStatus &amp;aReported, const TAvailabilityStatus &amp;aNew) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>ESock::TAvailabilitySubscriptionOptions::IsChangeSignificant(const TAvailabilityStatus &amp;,const TAvailabilityStatus &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_e_sock_1_1_t_availability_status.xml#class_e_sock_1_1_t_availability_status">TAvailabilityStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aReported</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Currently reported availability </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_e_sock_1_1_t_availability_status.xml#class_e_sock_1_1_t_availability_status">TAvailabilityStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aNew</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Newly reported availability </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_availability.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="158"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="157"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="165"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>ETrue if the change is one which should be reported </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="struct_e_sock_1_1_t_availability_subscription_options_1af7d4a3c5a6463dfef41417dde0d76014">
+		<apiName>ShouldNotifyAnyChange</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>ESock::TAvailabilitySubscriptionOptions</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool ShouldNotifyAnyChange(const TAvailabilityStatus &amp;aReported, const TAvailabilityStatus &amp;aNew) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>ESock::TAvailabilitySubscriptionOptions::ShouldNotifyAnyChange(const TAvailabilityStatus &amp;,const TAvailabilityStatus &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_e_sock_1_1_t_availability_status.xml#class_e_sock_1_1_t_availability_status">TAvailabilityStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aReported</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_e_sock_1_1_t_availability_status.xml#class_e_sock_1_1_t_availability_status">TAvailabilityStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aNew</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_availability.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="169"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="168"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="172"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="struct_e_sock_1_1_t_availability_subscription_options_1a964f9b99ed706e8dac4c0e8cb03ca7d0">
+		<apiName>ShouldNotifyScoreExceeds</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>ESock::TAvailabilitySubscriptionOptions</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool ShouldNotifyScoreExceeds(const TAvailabilityStatus &amp;aReported, const TAvailabilityStatus &amp;aNew) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>ESock::TAvailabilitySubscriptionOptions::ShouldNotifyScoreExceeds(const TAvailabilityStatus &amp;,const TAvailabilityStatus &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_e_sock_1_1_t_availability_status.xml#class_e_sock_1_1_t_availability_status">TAvailabilityStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aReported</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_e_sock_1_1_t_availability_status.xml#class_e_sock_1_1_t_availability_status">TAvailabilityStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aNew</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_availability.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="175"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="174"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="177"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="struct_e_sock_1_1_t_availability_subscription_options_1a7f1d65799e081c66d408fb173523e276">
+		<apiName>ShouldNotifyScoreDropsBelow</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>ESock::TAvailabilitySubscriptionOptions</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool ShouldNotifyScoreDropsBelow(const TAvailabilityStatus &amp;aReported, const TAvailabilityStatus &amp;aNew) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>ESock::TAvailabilitySubscriptionOptions::ShouldNotifyScoreDropsBelow(const TAvailabilityStatus &amp;,const TAvailabilityStatus &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_e_sock_1_1_t_availability_status.xml#class_e_sock_1_1_t_availability_status">TAvailabilityStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aReported</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_e_sock_1_1_t_availability_status.xml#class_e_sock_1_1_t_availability_status">TAvailabilityStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aNew</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_availability.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="180"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="179"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="182"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="struct_e_sock_1_1_t_availability_subscription_options_1a0d421224011b52b730bd0ebe483c71f1">
+		<apiName>ShouldNotifyScoreIncreasesByMoreThan</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>ESock::TAvailabilitySubscriptionOptions</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool ShouldNotifyScoreIncreasesByMoreThan(const TAvailabilityStatus &amp;aReported, const TAvailabilityStatus &amp;aNew) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>ESock::TAvailabilitySubscriptionOptions::ShouldNotifyScoreIncreasesByMoreThan(const TAvailabilityStatus &amp;,const TAvailabilityStatus &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_e_sock_1_1_t_availability_status.xml#class_e_sock_1_1_t_availability_status">TAvailabilityStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aReported</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_e_sock_1_1_t_availability_status.xml#class_e_sock_1_1_t_availability_status">TAvailabilityStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aNew</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_availability.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="185"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="184"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="187"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="struct_e_sock_1_1_t_availability_subscription_options_1aaa14deeef93a0b3adb0a777904d95113">
+		<apiName>ShouldNotifyScoreDecreasesByMoreThan</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>ESock::TAvailabilitySubscriptionOptions</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool ShouldNotifyScoreDecreasesByMoreThan(const TAvailabilityStatus &amp;aReported, const TAvailabilityStatus &amp;aNew) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>ESock::TAvailabilitySubscriptionOptions::ShouldNotifyScoreDecreasesByMoreThan(const TAvailabilityStatus &amp;,const TAvailabilityStatus &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_e_sock_1_1_t_availability_status.xml#class_e_sock_1_1_t_availability_status">TAvailabilityStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aReported</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_e_sock_1_1_t_availability_status.xml#class_e_sock_1_1_t_availability_status">TAvailabilityStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aNew</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_availability.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="190"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="189"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="192"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxVariable id="struct_e_sock_1_1_t_availability_subscription_options_1a472065049f3a098bbb592424286bf6db">
+		<apiName>iScoreExceeds</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>ESock::TAvailabilitySubscriptionOptions</cxxVariableScopedName>
+				<cxxVariablePrototype>TUint iScoreExceeds</cxxVariablePrototype>
+				<cxxVariableNameLookup>ESock::TAvailabilitySubscriptionOptions::iScoreExceeds</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_availability.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="195"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="struct_e_sock_1_1_t_availability_subscription_options_1a360662e7490c5829f6f758bea7bd67b5">
+		<apiName>iScoreDropsBelow</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>ESock::TAvailabilitySubscriptionOptions</cxxVariableScopedName>
+				<cxxVariablePrototype>TUint iScoreDropsBelow</cxxVariablePrototype>
+				<cxxVariableNameLookup>ESock::TAvailabilitySubscriptionOptions::iScoreDropsBelow</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_availability.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="196"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="struct_e_sock_1_1_t_availability_subscription_options_1aef08c408e3899099f8e727b72bec4db8">
+		<apiName>iScoreIncreasesByMoreThan</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>ESock::TAvailabilitySubscriptionOptions</cxxVariableScopedName>
+				<cxxVariablePrototype>TUint iScoreIncreasesByMoreThan</cxxVariablePrototype>
+				<cxxVariableNameLookup>ESock::TAvailabilitySubscriptionOptions::iScoreIncreasesByMoreThan</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_availability.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="197"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="struct_e_sock_1_1_t_availability_subscription_options_1a60eda9c051b328a7a633e88adc50da4d">
+		<apiName>iScoreDecreasesByMoreThan</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>ESock::TAvailabilitySubscriptionOptions</cxxVariableScopedName>
+				<cxxVariablePrototype>TUint iScoreDecreasesByMoreThan</cxxVariablePrototype>
+				<cxxVariableNameLookup>ESock::TAvailabilitySubscriptionOptions::iScoreDecreasesByMoreThan</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_availability.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="198"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="struct_e_sock_1_1_t_availability_subscription_options_1a18fc61e642d1ae317e482c57af7db072">
+		<apiName>iFlags</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>ESock::TAvailabilitySubscriptionOptions</cxxVariableScopedName>
+				<cxxVariablePrototype>TUint iFlags</cxxVariablePrototype>
+				<cxxVariableNameLookup>ESock::TAvailabilitySubscriptionOptions::iFlags</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_availability.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="199"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+</cxxStruct>

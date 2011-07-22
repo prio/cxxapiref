@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_meta_1_1_m_meta_type">
+	<apiName>Meta::MMetaType</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassAbstract/>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/elements/metatype.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="44"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/elements/metatype.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="35"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="50"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>Abstract interface of a helper meta type. A meta type is responsible for handling a particular type. A meta type knows how to copy an object of the type, store it in a descriptor, load, etc, etc.</p>
+			<p>since v9.0 </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_meta_1_1_m_meta_type_1ab2200f8b5cb6ba279a2ca803d12772e1">
+		<apiName>Load</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionPureVirtual/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Meta::MMetaType</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual TInt Load(TPtrC8 &amp;aBuffer)=0</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Meta::MMetaType::Load(TPtrC8 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_ptr_c8.xml#class_t_ptr_c8">TPtrC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aBuffer</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/metatype.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="46"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_meta_1_1_m_meta_type_1acdb4180f73da9e9aa2e6d62bfadc2f1d">
+		<apiName>Store</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionPureVirtual/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Meta::MMetaType</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual TInt Store(TDes8 &amp;aBuffer) const =0</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Meta::MMetaType::Store(TDes8 &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aBuffer</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/metatype.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="47"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_meta_1_1_m_meta_type_1aca11e735c606971089dc0967a2a01ea3">
+		<apiName>Copy</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionPureVirtual/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Meta::MMetaType</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual void Copy(const TAny *aData)=0</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Meta::MMetaType::Copy(const TAny *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aData</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/metatype.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="48"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_meta_1_1_m_meta_type_1a0c9f1d6255621824df482f4b3e0f83fa">
+		<apiName>Length</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionPureVirtual/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Meta::MMetaType</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual TInt Length() const =0</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Meta::MMetaType::Length()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/metatype.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="49"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+</cxxClass>

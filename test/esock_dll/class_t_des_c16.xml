@@ -1,0 +1,1579 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_t_des_c16">
+	<apiName>TDesC16</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/e32des16.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="57"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/e32des16.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="35"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="150"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>Abstract base class for 16-bit descriptors.</p>
+			<p>The class encapsulates the data member containing the length of data represented by a 16-bit descriptor. It also provides member functions through which the data can be accessed, but not modified.</p>
+			<p>Data represented by this class is treated as a contiguous set of 16-bit (i.e. double byte) values or data items.</p>
+			<p>This class cannot be instantiated as it is intended to form part of a class hierarchy; it provides a well defined part of descriptor behaviour. It can, however, be passed as an argument type for functions which want access to descriptor data but do not need to modify that data.</p>
+			<p>
+				<xref href="e32cmn_8h.xml#e32cmn_8h_1a7ca0e7fb5561af67434cd24ea92fa4d8">TDesC</xref> </p>
+			<p>
+				<xref href="class_t_ptr_c16.xml#class_t_ptr_c16">TPtrC16</xref> </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxEnumeration id="class_t_des_c16_1ab5f5b198753aeaa17ed6498bc62ad1e5">
+		<apiName>TPrefix</apiName>
+		<cxxEnumerationDetail>
+			<cxxEnumerationDefinition>
+				<cxxEnumerationAccessSpecifier value="public"/>
+				<cxxEnumerationScopedName>TDesC16</cxxEnumerationScopedName>
+				<cxxEnumerationPrototype>TPrefix</cxxEnumerationPrototype>
+				<cxxEnumerationNameLookup>TDesC16:TPrefix</cxxEnumerationNameLookup>
+				<cxxEnumerators>
+					<cxxEnumerator id="class_t_des_c16_1ab5f5b198753aeaa17ed6498bc62ad1e5afb2c93c3aeecff1d6eb57ed01e4bd610">
+						<apiName>EIsPrefix</apiName>
+						<cxxEnumeratorScopedName>TDesC16</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EIsPrefix = 0</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TDesC16::EIsPrefix</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="0"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32des16.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="69"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Indicates that a supplied prefix can be extended to be equivalent to the text at the start of a descriptor. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_des_c16_1ab5f5b198753aeaa17ed6498bc62ad1e5acd647587c266629cbee5e8a399e3902f">
+						<apiName>EMightBePrefix</apiName>
+						<cxxEnumeratorScopedName>TDesC16</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EMightBePrefix = 1</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TDesC16::EMightBePrefix</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="1"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32des16.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="75"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Indicates that a supplied prefix does not seem to be a prefix, but it is possible that it could be extended to become equivalent to text at the start of this descriptor. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_des_c16_1ab5f5b198753aeaa17ed6498bc62ad1e5a0a55e2ec901c6a876c3ddf14080bfcd2">
+						<apiName>EIsNotPrefix</apiName>
+						<cxxEnumeratorScopedName>TDesC16</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EIsNotPrefix = 2</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TDesC16::EIsNotPrefix</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="2"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32des16.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="81"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Indicates that a supplied prefix cannot be extended to be equivalent to the text at the start of a descriptor. </p>
+						</apiDesc>
+					</cxxEnumerator>
+				</cxxEnumerators>
+				<cxxEnumerationAPIItemLocation>
+					<cxxEnumerationDeclarationFile name="filePath" value="K:/epoc32/include/e32des16.h"/>
+					<cxxEnumerationDeclarationFileLine name="lineNumber" value="64"/>
+					<cxxEnumerationDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxEnumerationDefinitionFileLineStart name="lineNumber" value="64"/>
+					<cxxEnumerationDefinitionFileLineEnd name="lineNumber" value="81"/>
+				</cxxEnumerationAPIItemLocation>
+			</cxxEnumerationDefinition>
+			<apiDesc>
+				<p>A value returned by a call to <xref href="class_t_des_c16.xml#class_t_des_c16_1a3bb227d65325e51b7aef09a9544ec39b">HasPrefixC()</xref>.</p>
+				<p>
+					<xref href="class_t_des_c16.xml#class_t_des_c16_1a3bb227d65325e51b7aef09a9544ec39b">TDesC16::HasPrefixC</xref> </p>
+			</apiDesc>
+		</cxxEnumerationDetail>
+	</cxxEnumeration>
+	<cxxFunction id="class_t_des_c16_1a1bbb36cf760e98e8b0cbf5d9799db9d0">
+		<apiName>operator&lt;</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDesC16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool operator&lt;(const TDesC16 &amp;aDes) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDesC16::operator&lt;(const TDesC16 &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC16</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The 16-bit non-modifable descriptor whose data is to be compared with this descriptor&apos;s data.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des16.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="83"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1382"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1396"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Determines whether this descriptor&apos;s data is less than the specified descriptor&apos;s data.</p>
+				<p>The comparison is implemented using the <xref href="class_t_des_c16.xml#class_t_des_c16_1ad1e8125fd943f4a1a7dcf9a4249ba102">Compare()</xref> member function.</p>
+				<p>True if less than, false otherwise.</p>
+				<p>
+					<xref href="class_t_des_c16.xml#class_t_des_c16_1ad1e8125fd943f4a1a7dcf9a4249ba102">TDesC16::Compare</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des_c16_1a95af6a9f194107771ba71f9ff745f573">
+		<apiName>operator&lt;=</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDesC16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool operator&lt;=(const TDesC16 &amp;aDes) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDesC16::operator&lt;=(const TDesC16 &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC16</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The 16-bit non- modifiable descriptor whose data is to be compared with this descriptor&apos;s data.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des16.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="84"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1401"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1415"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Determines whether this descriptor&apos;s data is less than or equal to the specified descriptor&apos;s data.</p>
+				<p>The comparison is implemented using the <xref href="class_t_des_c16.xml#class_t_des_c16_1ad1e8125fd943f4a1a7dcf9a4249ba102">Compare()</xref> member function.</p>
+				<p>True if less than or equal, false otherwise.</p>
+				<p>
+					<xref href="class_t_des_c16.xml#class_t_des_c16_1ad1e8125fd943f4a1a7dcf9a4249ba102">TDesC16::Compare</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des_c16_1a858db94612fe57cb6ab03e29987d2e07">
+		<apiName>operator&gt;</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDesC16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool operator&gt;(const TDesC16 &amp;aDes) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDesC16::operator&gt;(const TDesC16 &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC16</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The 16-bit non-modifiable descriptor whose data is to be compared with this descriptor&apos;s data.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des16.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="85"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1420"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1434"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Determines whether this descriptor&apos;s data is greater than the specified descriptor&apos;s data.</p>
+				<p>The comparison is implemented using the <xref href="class_t_des_c16.xml#class_t_des_c16_1ad1e8125fd943f4a1a7dcf9a4249ba102">Compare()</xref> member function.</p>
+				<p>True if greater than, false otherwise.</p>
+				<p>
+					<xref href="class_t_des_c16.xml#class_t_des_c16_1ad1e8125fd943f4a1a7dcf9a4249ba102">TDesC16::Compare</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des_c16_1acfc646db1851c1aa58e2bcffed1eb6d0">
+		<apiName>operator&gt;=</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDesC16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool operator&gt;=(const TDesC16 &amp;aDes) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDesC16::operator&gt;=(const TDesC16 &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC16</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The 16-bit non-modifiable descriptor whose data is to be compared with this descriptor&apos;s data.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des16.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="86"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1439"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1453"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Determines whether this descriptor&apos;s data is greater than or equal to the specified descriptor&apos;s data.</p>
+				<p>The comparison is implemented using the <xref href="class_t_des_c16.xml#class_t_des_c16_1ad1e8125fd943f4a1a7dcf9a4249ba102">Compare()</xref> member function.</p>
+				<p>True if greater than or equal, false otherwise.</p>
+				<p>
+					<xref href="class_t_des_c16.xml#class_t_des_c16_1ad1e8125fd943f4a1a7dcf9a4249ba102">TDesC16::Compare</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des_c16_1a893f6b6c501f109f8edbd2ddf5114b59">
+		<apiName>operator==</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDesC16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool operator==(const TDesC16 &amp;aDes) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDesC16::operator==(const TDesC16 &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC16</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The 16-bit non-modifiable descriptor whose data is to be compared with this descriptor&apos;s data.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des16.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="87"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1458"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1472"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Determines whether this descriptor&apos;s data is equal to the specified descriptor&apos;s data.</p>
+				<p>The comparison is implemented using the <xref href="class_t_des_c16.xml#class_t_des_c16_1ad1e8125fd943f4a1a7dcf9a4249ba102">Compare()</xref> member function.</p>
+				<p>True if equal, false otherwise.</p>
+				<p>
+					<xref href="class_t_des_c16.xml#class_t_des_c16_1ad1e8125fd943f4a1a7dcf9a4249ba102">TDesC16::Compare</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des_c16_1a0391ff2c8868e0747d614871fc323cc9">
+		<apiName>operator!=</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDesC16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool operator!=(const TDesC16 &amp;aDes) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDesC16::operator!=(const TDesC16 &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC16</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The 16-bit non-modifiable descriptor whose data is to be compared with this descriptor&apos;s data.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des16.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="88"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1477"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1491"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Determines whether this descriptor&apos;s data is not equal to the specified descriptor&apos;s data.</p>
+				<p>The comparison is implemented using the <xref href="class_t_des_c16.xml#class_t_des_c16_1ad1e8125fd943f4a1a7dcf9a4249ba102">Compare()</xref> member function.</p>
+				<p>True if not equal, false otherwise.</p>
+				<p>
+					<xref href="class_t_des_c16.xml#class_t_des_c16_1ad1e8125fd943f4a1a7dcf9a4249ba102">TDesC16::Compare</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des_c16_1ad6d1dcbb0c2e1dbb3c4907bec939441b">
+		<apiName>operator[]</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>const <apiRelation href="e32def_8h.xml#_1a7c545c7b28f2e5d128d132d2ea1cdb2b">TUint16</apiRelation> &amp;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDesC16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline const TUint16 &amp; operator[](TInt anIndex) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDesC16::operator[](TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The position of the individual data item within the descriptor&apos;s data. This is an offset value; a zero value refers to the leftmost data position.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des16.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="89"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1496"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1509"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets a reference to a single data item within this descriptor&apos;s data.</p>
+				<p>A reference to the data item.</p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>USER 9, if anIndex is negative or greater than or equal to the current length of the descriptor. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des_c16_1a2ef7023bd86fa9ea71ab80a0197382ef">
+		<apiName>Length</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDesC16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt Length() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDesC16::Length()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des16.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="90"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1514"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1522"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets the length of the data.</p>
+				<p>This is the number of 16-bit values or data items represented by the descriptor.</p>
+				<p>The length of the data represented by the descriptor. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des_c16_1a4db51a97960783f7246a42e0efb89f54">
+		<apiName>Size</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDesC16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt Size() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDesC16::Size()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des16.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="91"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1527"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1536"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets the size of the data.</p>
+				<p>This is the number of bytes occupied by the data represented by the descriptor.</p>
+				<p>The size of the data represented by the descriptor. This is always twice the length. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des_c16_1aecaa198401e07d7d5d8e22566c25bf13">
+		<apiName>Ptr</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C const <apiRelation href="e32def_8h.xml#_1a7c545c7b28f2e5d128d132d2ea1cdb2b">TUint16</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDesC16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C const TUint16 * Ptr() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDesC16::Ptr()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des16.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="92"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des_c16_1ad1e8125fd943f4a1a7dcf9a4249ba102">
+		<apiName>Compare</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDesC16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Compare(const TDesC16 &amp;aDes) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDesC16::Compare(const TDesC16 &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC16</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des16.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="93"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des_c16_1a678c1206c75c6f2dc947227bc8c3319c">
+		<apiName>CompareF</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDesC16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt CompareF(const TDesC16 &amp;aDes) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDesC16::CompareF(const TDesC16 &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC16</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des16.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="94"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des_c16_1af669d15948ca001b487ad0021ef2d0d7">
+		<apiName>CompareC</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDesC16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt CompareC(const TDesC16 &amp;aDes) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDesC16::CompareC(const TDesC16 &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC16</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des16.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="95"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des_c16_1a52933d119f00dd3e33ed94b599c0c788">
+		<apiName>CompareC</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDesC16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt CompareC(const TDesC16 &amp;aDes, TInt aMaxLevel, const TCollationMethod *aCollationMethod) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDesC16::CompareC(const TDesC16 &amp;,TInt,const TCollationMethod *)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC16</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMaxLevel</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const TCollationMethod *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCollationMethod</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des16.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="96"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des_c16_1af05a1ee2ecbe7dd9ece2289e885f2641">
+		<apiName>GetNormalizedDecomposedFormL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_h_buf_c16.xml#class_h_buf_c16">HBufC16</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDesC16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C HBufC16 * GetNormalizedDecomposedFormL() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDesC16::GetNormalizedDecomposedFormL()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des16.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="100"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des_c16_1a24077584f5e6f3398573c2ae4a25fee6">
+		<apiName>GetFoldedDecomposedFormL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_h_buf_c16.xml#class_h_buf_c16">HBufC16</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDesC16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C HBufC16 * GetFoldedDecomposedFormL() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDesC16::GetFoldedDecomposedFormL()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des16.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="104"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des_c16_1ab88d73cf9fec96c48bb53aa6046f8fa3">
+		<apiName>GetCollationKeysL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_h_buf_c8.xml#class_h_buf_c8">HBufC8</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDesC16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C HBufC8 * GetCollationKeysL(TInt aMaxLevel, const TCollationMethod *aCollationMethod) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDesC16::GetCollationKeysL(TInt,const TCollationMethod *)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMaxLevel</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const TCollationMethod *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCollationMethod</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des16.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="108"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des_c16_1a87a8ffbf366c1be67ec40150f19f47e0">
+		<apiName>Match</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDesC16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Match(const TDesC16 &amp;aDes) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDesC16::Match(const TDesC16 &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC16</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des16.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="109"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des_c16_1ae7e5042e0837c21d1f6a2fc2fdfd52de">
+		<apiName>MatchF</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDesC16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt MatchF(const TDesC16 &amp;aDes) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDesC16::MatchF(const TDesC16 &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC16</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des16.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="110"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des_c16_1a823bbd943319ee98ae6ad91717e5bb54">
+		<apiName>MatchC</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDesC16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt MatchC(const TDesC16 &amp;aDes) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDesC16::MatchC(const TDesC16 &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC16</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des16.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="111"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des_c16_1a4b734820e866102f32328f67fdffdfa7">
+		<apiName>MatchC</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDesC16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt MatchC(const TDesC16 &amp;aPattern, TInt aWildChar, TInt aWildSequenceChar, TInt aEscapeChar, TInt aMaxLevel=3, const TCollationMethod *aCollationMethod=NULL) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDesC16::MatchC(const TDesC16 &amp;,TInt,TInt,TInt,TInt,const TCollationMethod *)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC16</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPattern</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aWildChar</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aWildSequenceChar</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aEscapeChar</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMaxLevel</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>3</cxxFunctionParameterDefaultValue>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const TCollationMethod *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCollationMethod</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>NULL</cxxFunctionParameterDefaultValue>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des16.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="113"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des_c16_1a710ab2599a3635bb5d18ed225a687d51">
+		<apiName>MatchC</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDesC16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt MatchC(const TDesC16 &amp;aPattern, const TCollationMethod *aCollationMethod, TInt aMaxLevel=3, TInt aWildChar= &apos;?&apos;, TInt aWildSequenceChar= &apos;*&apos;, TInt aEscapeChar=0) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDesC16::MatchC(const TDesC16 &amp;,const TCollationMethod *,TInt,TInt,TInt,TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC16</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPattern</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const TCollationMethod *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCollationMethod</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMaxLevel</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>3</cxxFunctionParameterDefaultValue>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aWildChar</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>&apos;?&apos;</cxxFunctionParameterDefaultValue>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aWildSequenceChar</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>&apos;*&apos;</cxxFunctionParameterDefaultValue>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aEscapeChar</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>0</cxxFunctionParameterDefaultValue>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des16.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="115"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des_c16_1a978312e2ac39af3b6e50c5514b660e5d">
+		<apiName>Locate</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDesC16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Locate(TChar aChar) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDesC16::Locate(TChar)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_char.xml#class_t_char">TChar</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aChar</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des16.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="116"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des_c16_1aebc12e1ded64c2ab7e2537ebf830c946">
+		<apiName>LocateReverse</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDesC16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt LocateReverse(TChar aChar) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDesC16::LocateReverse(TChar)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_char.xml#class_t_char">TChar</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aChar</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des16.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="117"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des_c16_1ab66f80feedaf344bc75852d3233d5c2a">
+		<apiName>Find</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDesC16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Find(const TDesC16 &amp;aDes) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDesC16::Find(const TDesC16 &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC16</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des16.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="118"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des_c16_1a33cb546d6f12409ee6c803d9db0b95ea">
+		<apiName>Find</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDesC16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Find(const TUint16 *aBuf, TInt aLen) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDesC16::Find(const TUint16 *,TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="e32def_8h.xml#_1a7c545c7b28f2e5d128d132d2ea1cdb2b">TUint16</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aBuf</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLen</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des16.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="119"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des_c16_1a3bb227d65325e51b7aef09a9544ec39b">
+		<apiName>HasPrefixC</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_des_c16.xml#_1ab5f5b198753aeaa17ed6498bc62ad1e5">TPrefix</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDesC16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TPrefix HasPrefixC(const TDesC16 &amp;aPossiblePrefix, TInt aLevel, const TCollationMethod *aCollationMethod) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDesC16::HasPrefixC(const TDesC16 &amp;,TInt,const TCollationMethod *)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC16</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPossiblePrefix</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLevel</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const TCollationMethod *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCollationMethod</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des16.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="120"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des_c16_1aa8825b4fc0c9010e83e57687cab87a15">
+		<apiName>Left</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_ptr_c16.xml#class_t_ptr_c16">TPtrC16</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDesC16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TPtrC16 Left(TInt aLength) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDesC16::Left(TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des16.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="121"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des_c16_1a75b210be1333cda0796e7d3275b04f36">
+		<apiName>Right</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_ptr_c16.xml#class_t_ptr_c16">TPtrC16</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDesC16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TPtrC16 Right(TInt aLength) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDesC16::Right(TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des16.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="122"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des_c16_1a29b286e99e0ad6602180c4263be9e08c">
+		<apiName>Mid</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_ptr_c16.xml#class_t_ptr_c16">TPtrC16</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDesC16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TPtrC16 Mid(TInt aPos) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDesC16::Mid(TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPos</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des16.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="123"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des_c16_1ab8ea8cf7727d0f082cd71b194a42594a">
+		<apiName>Mid</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_ptr_c16.xml#class_t_ptr_c16">TPtrC16</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDesC16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TPtrC16 Mid(TInt aPos, TInt aLength) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDesC16::Mid(TInt,TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPos</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des16.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="124"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des_c16_1a4f9ffded9ecd4113807d261a55e2ab95">
+		<apiName>LocateF</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDesC16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt LocateF(TChar aChar) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDesC16::LocateF(TChar)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_char.xml#class_t_char">TChar</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aChar</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des16.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="125"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des_c16_1a9430071a7f9acd274c9d7964e1ba007f">
+		<apiName>LocateReverseF</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDesC16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt LocateReverseF(TChar aChar) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDesC16::LocateReverseF(TChar)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_char.xml#class_t_char">TChar</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aChar</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des16.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="126"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des_c16_1a85191c6595a4798a3926710dcc514c4b">
+		<apiName>FindF</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDesC16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt FindF(const TDesC16 &amp;aDes) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDesC16::FindF(const TDesC16 &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC16</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des16.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="127"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des_c16_1a342f4a61207f9d4141bb8847e6337053">
+		<apiName>FindF</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDesC16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt FindF(const TUint16 *aBuf, TInt aLen) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDesC16::FindF(const TUint16 *,TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="e32def_8h.xml#_1a7c545c7b28f2e5d128d132d2ea1cdb2b">TUint16</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aBuf</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLen</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des16.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="128"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des_c16_1a8e9e0a82da14d719e79c5d291ca21067">
+		<apiName>FindC</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDesC16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt FindC(const TDesC16 &amp;aDes) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDesC16::FindC(const TDesC16 &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC16</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des16.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="129"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des_c16_1af0f5abee26c53e785c77c55c5c081568">
+		<apiName>FindC</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDesC16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt FindC(const TUint16 *aBuf, TInt aLen) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDesC16::FindC(const TUint16 *,TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="e32def_8h.xml#_1a7c545c7b28f2e5d128d132d2ea1cdb2b">TUint16</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aBuf</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLen</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des16.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="130"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des_c16_1a7aeb7e4ba90a8606e0c23f7838b340a0">
+		<apiName>FindC</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDesC16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt FindC(const TUint16 *aText, TInt aLength, TInt aMaxLevel) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDesC16::FindC(const TUint16 *,TInt,TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="e32def_8h.xml#_1a7c545c7b28f2e5d128d132d2ea1cdb2b">TUint16</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aText</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMaxLevel</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des16.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="131"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des_c16_1ac589c8c33a6fb033721a4994ab03425c">
+		<apiName>FindC</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDesC16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt FindC(const TDesC16 &amp;aDes, TInt &amp;aLengthFound, const TCollationMethod &amp;aMethod, TInt aMaxLevel) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDesC16::FindC(const TDesC16 &amp;,TInt &amp;,const TCollationMethod &amp;,TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC16</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLengthFound</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const TCollationMethod &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMethod</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMaxLevel</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des16.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="132"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des_c16_1a507892b663ca7de7f7c6a6528cd31ac7">
+		<apiName>Alloc</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_h_buf_c16.xml#class_h_buf_c16">HBufC16</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDesC16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C HBufC16 * Alloc() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDesC16::Alloc()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des16.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="133"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des_c16_1a0df1d14b4641b3327db5704bc62ad1c7">
+		<apiName>AllocL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_h_buf_c16.xml#class_h_buf_c16">HBufC16</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDesC16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C HBufC16 * AllocL() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDesC16::AllocL()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des16.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="134"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des_c16_1a4acd6d6e48c568c5bf2ec3848592b360">
+		<apiName>AllocLC</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_h_buf_c16.xml#class_h_buf_c16">HBufC16</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDesC16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C HBufC16 * AllocLC() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDesC16::AllocLC()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des16.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="135"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des_c16_1a4b1d29fd4cf322d1c56764e7fd4415cf">
+		<apiName>TDesC16</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TDesC16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TDesC16()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDesC16::TDesC16()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des16.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="137"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="137"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="137"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des_c16_1a85024415ac901bd6f6803e83fa2840d8">
+		<apiName>TDesC16</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TDesC16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TDesC16(TInt aType, TInt aLength)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDesC16::TDesC16(TInt,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aType</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des16.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="138"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des_c16_1a725908a60ae3a8bb36e8a458bb7eea5e">
+		<apiName>Type</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDesC16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt Type() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDesC16::Type()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des16.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="144"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des_c16_1ad39a4a29ddf358a738c74ce9596ba4c9">
+		<apiName>DoSetLength</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDesC16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void DoSetLength(TInt aLength)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDesC16::DoSetLength(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des16.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="145"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1541"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1542"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des_c16_1a3be336c958a65eeaac630fd7fa655d4a">
+		<apiName>AtC</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C const <apiRelation href="e32def_8h.xml#_1a7c545c7b28f2e5d128d132d2ea1cdb2b">TUint16</apiRelation> &amp;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDesC16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C const TUint16 &amp; AtC(TInt anIndex) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDesC16::AtC(TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des16.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="146"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxVariable id="class_t_des_c16_1aa3fc927ce8f71d7631937cc7c2c9453e">
+		<apiName>iLength</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TDesC16</cxxVariableScopedName>
+				<cxxVariablePrototype>TUint iLength</cxxVariablePrototype>
+				<cxxVariableNameLookup>TDesC16::iLength</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32des16.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="148"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_t_des_c16_1af0a2e68330bc21a4e9682fda2d85e835">
+		<apiName>__DECLARE_TEST</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType/>
+				<cxxVariableScopedName>TDesC16</cxxVariableScopedName>
+				<cxxVariablePrototype>__DECLARE_TEST</cxxVariablePrototype>
+				<cxxVariableNameLookup>TDesC16::__DECLARE_TEST</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32des16.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="149"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+</cxxClass>

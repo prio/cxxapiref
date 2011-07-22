@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (c) 2011 Nokia Corporation and/or its subsidiary(-ies).
+All rights reserved.		
+		-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference xml:lang="en-us" outputclass="element" id="cxxStructDeclarationFileLineEnd">
+    <title>cxxStructDeclarationFileLineEnd</title>
+    <shortdesc>The &lt;cxxStructDeclarationFileLineEnd&gt; element specifies the end of the struct declaration.</shortdesc>
+    <refbody>
+        <section>
+            <title>Description</title><p>The &lt;cxxStructDeclarationFileLineEnd&gt; element is defined within &lt;cxxStructAPIItemLocation&gt;. 
+            It contains the line number that the struct declaration ends on. The element is empty but for the required attributes <i>name</i> 
+            and <i>value</i>. The attribute <i>name</i> must be set to "lineNumber". The attribute <i>value</i> is set to the line number 
+            the struct declaration ends on.</p>
+        </section>
+        <example>
+            <title>Example</title>
+            <codeblock>&lt;cxxStructDefinition&gt;
+    &lt;cxxStructAccessSpecifier value=&quot;public&quot; /&gt;
+    &lt;cxxStructAPIItemLocation&gt;
+         &lt;cxxStructDeclarationFile name=&quot;filePath&quot; value=&quot;s:/sf/os/commsfw/commsconfig/commsdatabaseshim/commdbshim/SCDB/CDBTABLE.CPP&quot; /&gt;
+        &lt;cxxStructDeclarationFileLineStart name=&quot;lineNumber&quot; value=&quot;36&quot; /&gt;
+        &lt;cxxStructDeclarationFileLineEnd name=&quot;lineNumber&quot; value=&quot;41&quot; /&gt;
+    &lt;/cxxStructAPIItemLocation&gt;
+&lt;/cxxStructDefinition&gt;</codeblock>
+        </example>          
+        <section conref="../packagedef.dita#cxxStructDeclarationFileLineEnd-reference/cxxStructDeclarationFileLineEnd-containedBy-section"/>
+        <section conref="../packagedef.dita#cxxStructDeclarationFileLineEnd-reference/cxxStructDeclarationFileLineEnd-contains-section"/>
+        <section conref="../packagedef.dita#cxxStructDeclarationFileLineEnd-reference/cxxStructDeclarationFileLineEnd-contentModel-section"/>
+        <section conref="../packagedef.dita#cxxStructDeclarationFileLineEnd-reference/cxxStructDeclarationFileLineEnd-attList-section"/>
+        <section conref="../packagedef.dita#cxxStructDeclarationFileLineEnd-reference/cxxStructDeclarationFileLineEnd-classValue-section"/>
+    </refbody>
+</reference>

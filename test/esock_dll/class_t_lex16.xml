@@ -1,0 +1,1864 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_t_lex16">
+	<apiName>TLex16</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="1266"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="1265"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="1345"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>Provides general string-parsing functions suitable for numeric format conversions and syntactical-element parsing.</p>
+			<p>The class is the 16-bit variant for Unicode strings and 16-bit wide characters.</p>
+			<p>An instance of this class stores a string, maintaining an extraction mark to indicate the current lexical element being analysed and a pointer to the next character to be examined.</p>
+			<p>Objects of this type are normally accessed through the build independent type TLex.</p>
+			<p>
+				<xref href="e32std_8h.xml#e32std_8h_1ab7ed783298450ccfb63e7a39cc458753">TLex</xref> </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_t_lex16_1ae917eec47c9114edc02e5d112be4df6f">
+		<apiName>TLex16</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType>IMPORT_C</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TLex16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TLex16()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TLex16::TLex16()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1268"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_lex16_1ac3b7071e01f47a884a35347c76a41fed">
+		<apiName>TLex16</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TLex16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TLex16(const TUint16 *aString)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TLex16::TLex16(const TUint16 *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="e32def_8h.xml#_1a7c545c7b28f2e5d128d132d2ea1cdb2b">TUint16</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aString</cxxFunctionParameterDeclarationName>
+						<apiDefNote>String to be assigned. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1269"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="2197"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="2206"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Constructs the object with a pointer to a string.</p>
+				<p>The extraction mark and next character members are initialised to point to the start of the string.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_lex16_1a12ec662525b0aab78b402da534eb41c7">
+		<apiName>TLex16</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TLex16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TLex16(const TDesC16 &amp;aDes)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TLex16::TLex16(const TDesC16 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC16</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Descriptor to be assigned by reference. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1270"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="2211"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="2220"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Constructs the object with a descriptor.</p>
+				<p>The extraction mark and next character members are initialised to point to the start of the string.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_lex16_1aacf60bcc4587a737222db048abf92a5d">
+		<apiName>operator=</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="class_t_lex16.xml#class_t_lex16">TLex16</apiRelation> &amp;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TLex16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TLex16 &amp; operator=(const TUint16 *aString)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TLex16::operator=(const TUint16 *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="e32def_8h.xml#_1a7c545c7b28f2e5d128d132d2ea1cdb2b">TUint16</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aString</cxxFunctionParameterDeclarationName>
+						<apiDefNote>String to be assigned to the TLex16.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1271"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="2224"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="2232"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Allows strings to be assigned to a <xref href="class_t_lex16.xml#class_t_lex16">TLex16</xref>.</p>
+				<p>
+					<xref href="class_t_lex16.xml#class_t_lex16">TLex16</xref> descriptor. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_lex16_1a9fbbfb854705ee3d298e47978fd695a6">
+		<apiName>operator=</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="class_t_lex16.xml#class_t_lex16">TLex16</apiRelation> &amp;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TLex16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TLex16 &amp; operator=(const TDesC16 &amp;aDes)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TLex16::operator=(const TDesC16 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC16</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefinitionName>aBuf</cxxFunctionParameterDefinitionName>
+						<apiDefNote>Descriptor to be assigned to the TLex16.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1272"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="2237"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="2245"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Allows descriptors to be assigned to a <xref href="class_t_lex16.xml#class_t_lex16">TLex16</xref>.</p>
+				<p>
+					<xref href="class_t_lex8.xml#class_t_lex8">TLex8</xref> descriptor. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_lex16_1ab03a71dabca87fb2c33741a4e3a32cd2">
+		<apiName>Eos</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TLex16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool Eos() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TLex16::Eos()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1273"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="2250"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="2256"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Tests whether the next character position is at the end of the string.</p>
+				<p>True if at end of string, false otherwise. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_lex16_1a86294fa399ce6cf6f33fd6f65abd49af">
+		<apiName>Mark</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TLex16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void Mark()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TLex16::Mark()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1274"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="2272"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="2276"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Sets the TLex16&apos;s next character position to its extraction mark. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_lex16_1a2d29fd2a11aefa0a0986f6f436fa7fea">
+		<apiName>Mark</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TLex16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void Mark(TLexMark16 &amp;aMark) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TLex16::Mark(TLexMark16 &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_lex_mark16.xml#class_t_lex_mark16">TLexMark16</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMark</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On return, set to the next character position. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1275"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="2261"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="2267"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Sets the supplied extraction mark to the TLex16&apos;s next character position.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_lex16_1a6b8b5dc0637222e54f97c92d4ce40e4a">
+		<apiName>Inc</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TLex16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Inc()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TLex16::Inc()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1276"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_lex16_1a699ff750379a0e642bf464f0883af33c">
+		<apiName>Inc</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TLex16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Inc(TInt aNumber)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TLex16::Inc(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aNumber</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1277"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_lex16_1afca193e168ad30b64a3b9c6062a73f65">
+		<apiName>Get</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_char.xml#class_t_char">TChar</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TLex16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TChar Get()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TLex16::Get()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1278"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_lex16_1a6baca17885d93c4c578172743d8a23c8">
+		<apiName>Peek</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_char.xml#class_t_char">TChar</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TLex16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TChar Peek() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TLex16::Peek()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1279"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_lex16_1a7932a0840f212c42bb53f654841a16ae">
+		<apiName>UnGet</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TLex16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void UnGet()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TLex16::UnGet()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1280"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_lex16_1aa3ede9484774cffe10bf6705648f54b9">
+		<apiName>UnGetToMark</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TLex16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void UnGetToMark()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TLex16::UnGetToMark()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1281"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="2281"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="2288"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Sets the next character position to the current extraction mark position.</p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>USER 68, if the specified mark is before the start or beyond the end of the string. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_lex16_1a2a2e374d7892677a4a39ae6ab884506c">
+		<apiName>UnGetToMark</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TLex16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void UnGetToMark(const TLexMark16 aMark)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TLex16::UnGetToMark(const TLexMark16)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_lex_mark16.xml#class_t_lex_mark16">TLexMark16</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMark</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1282"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_lex16_1acd3455a3bc645b05ef4ecb90bc12af98">
+		<apiName>SkipSpace</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TLex16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void SkipSpace()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TLex16::SkipSpace()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1283"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_lex16_1a2775e20d87a06addce07e43db8ac5398">
+		<apiName>SkipAndMark</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TLex16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void SkipAndMark(TInt aNumber)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TLex16::SkipAndMark(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aNumber</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Number of characters to skip.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1284"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="2293"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="2302"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Moves the next character position a specified number of characters.</p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>USER 68, if the skip moves the next character position either to before the start or beyond the end of the string. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_lex16_1ac80ea1a470dc8ac1b7fce0871f3d6c86">
+		<apiName>SkipAndMark</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TLex16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void SkipAndMark(TInt aNumber, TLexMark16 &amp;aMark)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TLex16::SkipAndMark(TInt,TLexMark16 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aNumber</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_lex_mark16.xml#class_t_lex_mark16">TLexMark16</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMark</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1285"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_lex16_1a557f7f581aa3810f745d04c8ab9af93b">
+		<apiName>SkipSpaceAndMark</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TLex16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void SkipSpaceAndMark(TLexMark16 &amp;aMark)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TLex16::SkipSpaceAndMark(TLexMark16 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_lex_mark16.xml#class_t_lex_mark16">TLexMark16</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMark</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1286"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_lex16_1a67541f1079e0a3d47f45deac6e33793f">
+		<apiName>SkipSpaceAndMark</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TLex16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void SkipSpaceAndMark()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TLex16::SkipSpaceAndMark()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1287"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="2307"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="2314"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Moves the next character position past any white space and copies it to the TLex16&apos;s extraction mark.</p>
+				<p>Stops if at the end of the string. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_lex16_1ac217c1309319b8677c1885568af28c9a">
+		<apiName>SkipCharacters</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TLex16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void SkipCharacters()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TLex16::SkipCharacters()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1288"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_lex16_1ab37c6bbc9d6d122191c50e25a127eeef">
+		<apiName>TokenLength</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TLex16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt TokenLength() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TLex16::TokenLength()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1289"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="2319"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="2328"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets the length of the token.</p>
+				<p>This is the difference between the next character position and the extraction mark.</p>
+				<p>Length of the token. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_lex16_1a19b321da674ddd5ebd0138c064ef39f1">
+		<apiName>TokenLength</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TLex16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt TokenLength(const TLexMark16 aMark) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TLex16::TokenLength(const TLexMark16)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_lex_mark16.xml#class_t_lex_mark16">TLexMark16</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMark</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1290"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_lex16_1a2b17a38091b5cf73f15cfaeff9476ba7">
+		<apiName>MarkedToken</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_ptr_c16.xml#class_t_ptr_c16">TPtrC16</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TLex16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TPtrC16 MarkedToken() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TLex16::MarkedToken()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1291"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_lex16_1ad49cb7a7e789d300258585e0384c1db8">
+		<apiName>MarkedToken</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_ptr_c16.xml#class_t_ptr_c16">TPtrC16</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TLex16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TPtrC16 MarkedToken(const TLexMark16 aMark) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TLex16::MarkedToken(const TLexMark16)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_lex_mark16.xml#class_t_lex_mark16">TLexMark16</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMark</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1292"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_lex16_1a7e30c18a293026f4604b88c7b7195524">
+		<apiName>NextToken</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_ptr_c16.xml#class_t_ptr_c16">TPtrC16</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TLex16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TPtrC16 NextToken()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TLex16::NextToken()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1293"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_lex16_1a5242debd384f2b3a5b5bb9bb5e39120e">
+		<apiName>Remainder</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_ptr_c16.xml#class_t_ptr_c16">TPtrC16</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TLex16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TPtrC16 Remainder() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TLex16::Remainder()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1294"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_lex16_1a55e9290a1012c8ff52cb0c1ee3c67f17">
+		<apiName>RemainderFromMark</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_ptr_c16.xml#class_t_ptr_c16">TPtrC16</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TLex16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TPtrC16 RemainderFromMark() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TLex16::RemainderFromMark()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1295"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_lex16_1a42ab0ee68a47f69b2e3345f0b168aa90">
+		<apiName>RemainderFromMark</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_ptr_c16.xml#class_t_ptr_c16">TPtrC16</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TLex16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TPtrC16 RemainderFromMark(const TLexMark16 aMark) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TLex16::RemainderFromMark(const TLexMark16)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_lex_mark16.xml#class_t_lex_mark16">TLexMark16</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMark</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1296"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_lex16_1a3df158a974ed839e262f078bf3410b05">
+		<apiName>Offset</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TLex16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Offset() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TLex16::Offset()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1297"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_lex16_1a5b284d832121f64c592f040da70cb7ed">
+		<apiName>MarkedOffset</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TLex16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt MarkedOffset() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TLex16::MarkedOffset()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1298"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="2333"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="2339"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets the offset of the extraction mark from the start of the string.</p>
+				<p>The offset of the extraction mark. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_lex16_1a0ed24d008d4653108ba31d9f3a5ed81b">
+		<apiName>MarkedOffset</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TLex16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt MarkedOffset(const TLexMark16 aMark) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TLex16::MarkedOffset(const TLexMark16)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_lex_mark16.xml#class_t_lex_mark16">TLexMark16</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMark</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1299"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_lex16_1ad8ec103c2c41541c244e1971b8142de6">
+		<apiName>Val</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TLex16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Val(TInt8 &amp;aVal)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TLex16::Val(TInt8 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a9357a8e9552b6131a89fb3de94bff80a">TInt8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aVal</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1300"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_lex16_1a0b1291b6e7e2f50d315488c982f57d50">
+		<apiName>Val</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TLex16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Val(TInt16 &amp;aVal)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TLex16::Val(TInt16 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a2ec3eb91f35fbe76b844587a3d73bd94">TInt16</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aVal</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1301"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_lex16_1acf493045ae3d326bfe4e80f3e12c04a3">
+		<apiName>Val</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TLex16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Val(TInt32 &amp;aVal)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TLex16::Val(TInt32 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a08ea5ecd72297daaa3a4f3c41ce9e103">TInt32</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aVal</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1302"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_lex16_1ab2fdca7f55bcb7292fdc9e0cfdf034de">
+		<apiName>Val</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TLex16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Val(TInt64 &amp;aVal)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TLex16::Val(TInt64 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a05bf37b696038fef93385278ebf8ee16">TInt64</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aVal</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1303"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_lex16_1a66b32c9fa6e504f8616a847788ef0951">
+		<apiName>Val</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TLex16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt Val(TInt &amp;aVal)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TLex16::Val(TInt &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aVal</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On return, contains the extracted integer.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1304"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="2344"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="2357"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Parses the string to extract a signed integer.</p>
+				<p>KErrNone if successful. KErrGeneral if the next character position is initially at the end of the string or no valid characters found initially. KErrOverflow if there is sign overflow, i.e. converted value greater than limit. If error codes KErrGeneral or KErrOverflow are returned, the object&apos;s members are left unaltered. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_lex16_1a0eb4e6a01b867cf980d4e4e66e34ca91">
+		<apiName>Val</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TLex16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Val(TUint8 &amp;aVal, TRadix aRadix)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TLex16::Val(TUint8 &amp;,TRadix)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1aae4399ce3f10d6c2b5ec96a13bbb5881">TUint8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aVal</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1a3c5aafcc61c225e207223c289446de1e">TRadix</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aRadix</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1305"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_lex16_1a78c6965001449bd39c2c59592937d841">
+		<apiName>Val</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TLex16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Val(TUint16 &amp;aVal, TRadix aRadix)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TLex16::Val(TUint16 &amp;,TRadix)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a7c545c7b28f2e5d128d132d2ea1cdb2b">TUint16</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aVal</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1a3c5aafcc61c225e207223c289446de1e">TRadix</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aRadix</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1306"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_lex16_1a44d71df142f69932bb341d327a1226a2">
+		<apiName>Val</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TLex16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Val(TUint32 &amp;aVal, TRadix aRadix)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TLex16::Val(TUint32 &amp;,TRadix)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a8240e11f17c80b6b222fc2af50234da4">TUint32</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aVal</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1a3c5aafcc61c225e207223c289446de1e">TRadix</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aRadix</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1307"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_lex16_1a8e032f789a5c9571c73a23d93457616f">
+		<apiName>Val</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TLex16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Val(TInt64 &amp;aVal, TRadix aRadix)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TLex16::Val(TInt64 &amp;,TRadix)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a05bf37b696038fef93385278ebf8ee16">TInt64</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aVal</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1a3c5aafcc61c225e207223c289446de1e">TRadix</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aRadix</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1308"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_lex16_1a7afe42f6cba7b5c64c51fd7955d45a23">
+		<apiName>Val</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TLex16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt Val(TUint &amp;aVal, TRadix aRadix=EDecimal)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TLex16::Val(TUint &amp;,TRadix)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aVal</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On return, contains the extracted integer. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1a3c5aafcc61c225e207223c289446de1e">TRadix</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aRadix</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>EDecimal</cxxFunctionParameterDefaultValue>
+						<apiDefNote>The radix to use when converting the number. The default radix for this function overload is decimal.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1310"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="2362"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="2377"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Parses the string to extract an unsigned integer, using the specified radix.</p>
+				<p>KErrNone if successful. KErrGeneral if the next character position is initially at the end of the string or no valid characters found initially. KErrOverflow if there is sign overflow, i.e. converted value greater than limit. If error codes KErrGeneral or KErrOverflow are returned, the object&apos;s members are left unaltered. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_lex16_1ab39c79f146a72cd7d9e3323a3961a154">
+		<apiName>BoundedVal</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TLex16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt BoundedVal(TInt32 &amp;aVal, TInt aLimit)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TLex16::BoundedVal(TInt32 &amp;,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a08ea5ecd72297daaa3a4f3c41ce9e103">TInt32</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aVal</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLimit</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1311"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_lex16_1a085db41b694712ed5d8160050766c658">
+		<apiName>BoundedVal</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TLex16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt BoundedVal(TInt64 &amp;aVal, const TInt64 &amp;aLimit)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TLex16::BoundedVal(TInt64 &amp;,const TInt64 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a05bf37b696038fef93385278ebf8ee16">TInt64</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aVal</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="e32def_8h.xml#_1a05bf37b696038fef93385278ebf8ee16">TInt64</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLimit</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1312"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_lex16_1ad6095722f0844e93951c6f46096670a0">
+		<apiName>BoundedVal</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TLex16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt BoundedVal(TUint32 &amp;aVal, TRadix aRadix, TUint aLimit)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TLex16::BoundedVal(TUint32 &amp;,TRadix,TUint)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a8240e11f17c80b6b222fc2af50234da4">TUint32</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aVal</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1a3c5aafcc61c225e207223c289446de1e">TRadix</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aRadix</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLimit</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1313"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_lex16_1aca45efdc6d2f4269e7a78c23427b4b4a">
+		<apiName>BoundedVal</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TLex16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt BoundedVal(TInt64 &amp;aVal, TRadix aRadix, const TInt64 &amp;aLimit)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TLex16::BoundedVal(TInt64 &amp;,TRadix,const TInt64 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a05bf37b696038fef93385278ebf8ee16">TInt64</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aVal</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1a3c5aafcc61c225e207223c289446de1e">TRadix</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aRadix</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="e32def_8h.xml#_1a05bf37b696038fef93385278ebf8ee16">TInt64</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLimit</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1314"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_lex16_1a2637e00411b20d18d06d3f45dfa84bd3">
+		<apiName>Val</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TLex16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Val(TReal32 &amp;aVal)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TLex16::Val(TReal32 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1af7354620815769d75ede254ea3a508c1">TReal32</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aVal</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1315"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_lex16_1ab992dfb0b04bcba25f54b856747119f4">
+		<apiName>Val</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TLex16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Val(TReal32 &amp;aVal, TChar aPoint)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TLex16::Val(TReal32 &amp;,TChar)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1af7354620815769d75ede254ea3a508c1">TReal32</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aVal</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_char.xml#class_t_char">TChar</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPoint</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1316"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_lex16_1a9545f25ced1f81efd82dc3cd45eddda2">
+		<apiName>Val</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TLex16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Val(TReal64 &amp;aVal)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TLex16::Val(TReal64 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1ae83f8db5e4663238872dc26f9e75618c">TReal64</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aVal</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1317"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_lex16_1adf3aa43810d9c1249d1480cfa8bb2731">
+		<apiName>Val</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TLex16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Val(TReal64 &amp;aVal, TChar aPoint)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TLex16::Val(TReal64 &amp;,TChar)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1ae83f8db5e4663238872dc26f9e75618c">TReal64</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aVal</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_char.xml#class_t_char">TChar</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPoint</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1318"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_lex16_1a189d9d6e47dbd9f7becde1709dfbd5a1">
+		<apiName>Assign</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TLex16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void Assign(const TLex16 &amp;aLex)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TLex16::Assign(const TLex16 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_lex16.xml#class_t_lex16">TLex16</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLex</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The object to be assigned. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1319"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="2382"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="2388"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Assigns a string to this object from another <xref href="class_t_lex16.xml#class_t_lex16">TLex16</xref> object.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_lex16_1acc3a94427587fbca56911140690f7030">
+		<apiName>Assign</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TLex16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Assign(const TUint16 *aString)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TLex16::Assign(const TUint16 *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="e32def_8h.xml#_1a7c545c7b28f2e5d128d132d2ea1cdb2b">TUint16</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aString</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1320"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_lex16_1a54da251a44ebec4dbaa005131c400852">
+		<apiName>Assign</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TLex16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Assign(const TDesC16 &amp;aDes)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TLex16::Assign(const TDesC16 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC16</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1321"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_lex16_1a81b6f415a89ec4291556546892afb838">
+		<apiName>Val</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TLex16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>TInt Val(TRealX &amp;aVal)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TLex16::Val(TRealX &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>TRealX &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aVal</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1322"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_lex16_1a4d39778a6082c2466a94c2a7e7adc0d6">
+		<apiName>Val</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TLex16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>TInt Val(TRealX &amp;aVal, TChar aPoint)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TLex16::Val(TRealX &amp;,TChar)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>TRealX &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aVal</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_char.xml#class_t_char">TChar</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPoint</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1323"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_lex16_1a559de089f3c6853939743e7dde947357">
+		<apiName>Val</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TLex16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt Val(TInt32 &amp;aVal, TInt aLimit)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TLex16::Val(TInt32 &amp;,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a08ea5ecd72297daaa3a4f3c41ce9e103">TInt32</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aVal</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLimit</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1326"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1326"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1326"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Use <xref href="class_t_lex16.xml#class_t_lex16_1ab39c79f146a72cd7d9e3323a3961a154">BoundedVal(TInt32&amp; aVal,TInt aLimit)</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_lex16_1a269cec25ec791820bb4cd941e261f5dc">
+		<apiName>Val</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TLex16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt Val(TInt64 &amp;aVal, const TInt64 &amp;aLimit)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TLex16::Val(TInt64 &amp;,const TInt64 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a05bf37b696038fef93385278ebf8ee16">TInt64</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aVal</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="e32def_8h.xml#_1a05bf37b696038fef93385278ebf8ee16">TInt64</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLimit</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1329"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1329"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1329"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Use <xref href="class_t_lex16.xml#class_t_lex16_1a085db41b694712ed5d8160050766c658">BoundedVal(TInt64&amp; aVal,const TInt64&amp; aLimit)</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_lex16_1ae0bcafd2cf122668d85b50a8c5dc1adc">
+		<apiName>Val</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TLex16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt Val(TUint32 &amp;aVal, TRadix aRadix, TUint aLimit)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TLex16::Val(TUint32 &amp;,TRadix,TUint)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a8240e11f17c80b6b222fc2af50234da4">TUint32</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aVal</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1a3c5aafcc61c225e207223c289446de1e">TRadix</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aRadix</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLimit</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1332"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1332"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1332"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Use <xref href="class_t_lex16.xml#class_t_lex16_1ad6095722f0844e93951c6f46096670a0">BoundedVal(TUint32&amp; aVal,TRadix aRadix,TUint aLimit)</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_lex16_1a86218ed3fddf347c7406bd9512b84297">
+		<apiName>Val</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TLex16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt Val(TInt64 &amp;aVal, TRadix aRadix, const TInt64 &amp;aLimit)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TLex16::Val(TInt64 &amp;,TRadix,const TInt64 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a05bf37b696038fef93385278ebf8ee16">TInt64</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aVal</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1a3c5aafcc61c225e207223c289446de1e">TRadix</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aRadix</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="e32def_8h.xml#_1a05bf37b696038fef93385278ebf8ee16">TInt64</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLimit</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1335"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1335"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1335"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Use <xref href="class_t_lex16.xml#class_t_lex16_1aca45efdc6d2f4269e7a78c23427b4b4a">BoundedVal(TInt64&amp; aVal,TRadix aRadix,const TInt64&amp; aLimit)</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_lex16_1a403972b7180df777d39db9847bfb992b">
+		<apiName>Scndig</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TLex16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>void Scndig(TInt &amp;aSig, TInt &amp;aExp, TUint64 &amp;aDl)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TLex16::Scndig(TInt &amp;,TInt &amp;,TUint64 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSig</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aExp</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1ab392502765df1d3a9263b05a43f882da">TUint64</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDl</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1337"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_lex16_1afc9fda93541cf97af4096abc2d44ee41">
+		<apiName>ValidateMark</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TLex16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>void ValidateMark(const TLexMark16 aMark) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TLex16::ValidateMark(const TLexMark16)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_lex_mark16.xml#class_t_lex_mark16">TLexMark16</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMark</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1338"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxVariable id="class_t_lex16_1a0795ca160a13ac68017d519ad3b2b8c5">
+		<apiName>iNext</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1a7c545c7b28f2e5d128d132d2ea1cdb2b">TUint16</apiRelation> *</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TLex16</cxxVariableScopedName>
+				<cxxVariablePrototype>const TUint16 * iNext</cxxVariablePrototype>
+				<cxxVariableNameLookup>TLex16::iNext</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1340"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_t_lex16_1aab2cab3b3a0b413cc90bb60b50a58874">
+		<apiName>iBuf</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1a7c545c7b28f2e5d128d132d2ea1cdb2b">TUint16</apiRelation> *</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TLex16</cxxVariableScopedName>
+				<cxxVariablePrototype>const TUint16 * iBuf</cxxVariablePrototype>
+				<cxxVariableNameLookup>TLex16::iBuf</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1341"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_t_lex16_1ac9c41ed27636c43f50a0a4358a85aa61">
+		<apiName>iEnd</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1a7c545c7b28f2e5d128d132d2ea1cdb2b">TUint16</apiRelation> *</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TLex16</cxxVariableScopedName>
+				<cxxVariablePrototype>const TUint16 * iEnd</cxxVariablePrototype>
+				<cxxVariableNameLookup>TLex16::iEnd</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1342"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_t_lex16_1a413c96b7f28c3ad4aef3e01d8bdbced1">
+		<apiName>iMark</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="class_t_lex_mark16.xml#class_t_lex_mark16">TLexMark16</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TLex16</cxxVariableScopedName>
+				<cxxVariablePrototype>TLexMark16 iMark</cxxVariablePrototype>
+				<cxxVariableNameLookup>TLex16::iMark</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1343"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_t_lex16_1a2d93d861f368a1221d97ed2c3369f401">
+		<apiName>__DECLARE_TEST</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType/>
+				<cxxVariableScopedName>TLex16</cxxVariableScopedName>
+				<cxxVariablePrototype>__DECLARE_TEST</cxxVariablePrototype>
+				<cxxVariableNameLookup>TLex16::__DECLARE_TEST</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1344"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+</cxxClass>

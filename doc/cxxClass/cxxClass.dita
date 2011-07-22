@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (c) 2011 Nokia Corporation and/or its subsidiary(-ies).
+All rights reserved.        
+        -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<reference id="cxxClass" outputclass="element" xml:lang="en-us">
+<title>cxxClass</title>
+<shortdesc>P<?Pub Caret?>rovides the name of a C++ class, all the
+elements necessary to describe the members of the class, and the members
+inherited from the immediate base class.</shortdesc>
+<refbody>
+<section>             <title>Description</title>             <p>&lt;cxxClass> requires an ID attribute.
+</p><p>&lt;cxxClass> requires the child elements &lt;apiName>
+and &lt;cxxClassDetail>.</p></section>
+<example><title>Example</title>         <codeblock>&lt;cxxClass id="class_c_array_fix_flat_3_01_t_uid_01_4">
+	&lt;apiName>CArrayFixFlat&amp;lt; TUid &amp;gt;&lt;/apiName>
+	&lt;cxxClassDetail>
+		&lt;cxxClassDefinition>
+			&lt;cxxClassAccessSpecifier value="public"/>
+			&lt;cxxClassDerivations>
+				&lt;cxxClassDerivation>
+					&lt;cxxClassDerivationAccessSpecifier value="public"/>
+					&lt;cxxClassBaseClass href="class_c_array_fix.xml#class_c_array_fix">CArrayFix&amp;lt; TUid &amp;gt;&lt;/cxxClassBaseClass>
+				&lt;/cxxClassDerivation>
+			&lt;/cxxClassDerivations>
+			&lt;cxxClassAPIItemLocation>
+				&lt;cxxClassDeclarationFile name="filePath" value="C:/src/include/e32base.h"/>
+				&lt;cxxClassDeclarationFileLine name="lineNumber" value="531"/>
+				&lt;cxxClassDefinitionFile name="filePath" value="C:/src/include/e32base.h"/>
+				&lt;cxxClassDefinitionFileLineStart name="lineNumber" value="521"/>
+				&lt;cxxClassDefinitionFileLineEnd name="lineNumber" value="536"/>
+			&lt;/cxxClassAPIItemLocation>
+		&lt;/cxxClassDefinition>
+		&lt;apiDesc>
+			&lt;p>Template specialisation base class for arrays of &lt;xref href="class_t_uid.xml#class_t_uid">TUid&lt;/xref> types implemented in a flat dynamic buffer.&lt;/p>
+			&lt;p>
+				&lt;xref href="class_t_uid.xml#class_t_uid">TUid&lt;/xref> &lt;/p>
+		&lt;/apiDesc>
+	&lt;/cxxClassDetail>
+	&lt;cxxFunction id="class_c_array_fix_flat_3_01_t_uid_01_4_1afd277b81e961b25f35b92dbc90f8d97c">
+		&lt;apiName>SetReserveL&lt;/apiName>
+		&lt;cxxFunctionDetail>
+			&lt;cxxFunctionDefinition>
+				&lt;cxxFunctionAccessSpecifier value="public"/>
+				&lt;cxxFunctionInline/>
+				&lt;cxxFunctionDeclaredType>void&lt;/cxxFunctionDeclaredType>
+				&lt;cxxFunctionScopedName>CArrayFixFlat&amp;lt; TUid &amp;gt;&lt;/cxxFunctionScopedName>
+				&lt;cxxFunctionPrototype>inline void SetReserveL(TInt aCount)&lt;/cxxFunctionPrototype>
+				&lt;cxxFunctionNameLookup>CArrayFixFlat&amp;lt; TUid &amp;gt;::SetReserveL(TInt)&lt;/cxxFunctionNameLookup>
+				&lt;cxxFunctionParameters>
+					&lt;cxxFunctionParameter>
+						&lt;cxxFunctionParameterDeclaredType>
+							&lt;apiRelation href="e32def_8h.xml#e32def_8h_1abb88f5378e8305d934297176fe5fa298">TInt&lt;/apiRelation>
+						&lt;/cxxFunctionParameterDeclaredType>
+						&lt;cxxFunctionParameterDeclarationName>aCount&lt;/cxxFunctionParameterDeclarationName>
+						&lt;apiDefNote>The total number of elements for which space is to be reserved.&lt;/apiDefNote>
+					&lt;/cxxFunctionParameter>
+				&lt;/cxxFunctionParameters>
+				&lt;cxxFunctionAPIItemLocation>
+					&lt;cxxFunctionDeclarationFile name="filePath" value="C:/src/include/e32base.h"/>
+					&lt;cxxFunctionDeclarationFileLine name="lineNumber" value="535"/>
+					&lt;cxxFunctionDefinitionFile name="filePath" value="C:/src/master/sf/mw/classicui/animation/src/SpriteAnimationServer.cpp"/>
+					&lt;cxxFunctionDefinitionFileLineStart name="lineNumber" value="1137"/>
+					&lt;cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1157"/>
+				&lt;/cxxFunctionAPIItemLocation>
+			&lt;/cxxFunctionDefinition>
+			&lt;apiDesc>
+				&lt;p>Reserves space in the array buffer.&lt;/p>
+				&lt;p>If necessary, the array buffer is allocated or re-allocated so that it can accommodate the specified number of &lt;xref href="class_t_uid.xml#class_t_uid">TUid&lt;/xref> elements.&lt;/p>
+				&lt;p>After a successful call to this function, elements can be added to the array and the process is guaranteed not to fail for lack of memory - provided the total number of elements does not exceed the specified number.&lt;/p>
+				&lt;p>This function does not increase the number of elements in the array; i.e. the member function &lt;xref href="class_c_array_fix_base.xml#class_c_array_fix_base_1ad5bc874aceea074862134dc8e4937faa">CArrayFixBase::Count()&lt;/xref> returns the same value both before and after a call to this function.&lt;/p>
+				&lt;p>
+					&lt;b>panic&lt;/b>
+				&lt;/p>
+				&lt;p>E32USER-CBase 27, if aCount is less than the current number of elements in the array. &lt;/p>
+			&lt;/apiDesc>
+		&lt;/cxxFunctionDetail>
+	&lt;/cxxFunction>    
+	&lt;cxxFunction id="class_c_array_fix_flat_3_01_t_uid_01_4_1a78b3dd428f88a9f9f693911129e9eb51">
+		...
+	&lt;/cxxFunction>
+	&lt;cxxFunction id="class_c_array_fix_flat_3_01_t_uid_01_4_1a3b0a085b65c307ad4937a6c7c4bb767a">
+		...
+	&lt;/cxxFunction>
+	&lt;cxxClassInherits>
+		&lt;cxxClassInheritsDetail>
+			&lt;cxxClassFunctionInherited href="class_c_array_fix.xml#class_c_array_fix_1ab18347f8849b6dfe174c57bbdccdc3a6">CArrayFix&amp;lt; TUid &amp;gt;::AppendL(const TUid &amp;amp;)&lt;/cxxClassFunctionInherited>
+			&lt;cxxClassFunctionInherited href="class_c_array_fix.xml#class_c_array_fix_1a98b10e4a4f97fd76a722e33afd3b8ee3">CArrayFix&amp;lt; TUid &amp;gt;::AppendL(const TUid &amp;amp;,TInt)&lt;/cxxClassFunctionInherited>
+			...
+		&lt;/cxxClassInheritsDetail>
+	&lt;/cxxClassInherits>
+&lt;/cxxClass></codeblock>         </example>
+<section
+conref="../packagedef.dita#cxxClass-reference/cxxClass-containedBy-section"
+></section>
+<section
+conref="../packagedef.dita#cxxClass-reference/cxxClass-contains-section"
+></section>
+<section
+conref="../packagedef.dita#cxxClass-reference/cxxClass-contentModel-section"
+></section>
+<section
+conref="../packagedef.dita#cxxClass-reference/cxxClass-attList-section"
+></section>
+<section
+conref="../packagedef.dita#cxxClass-reference/cxxClass-classValue-section"
+></section>
+</refbody>
+</reference>
+<?Pub *0000006289?>

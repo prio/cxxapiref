@@ -1,0 +1,168 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_t_identity_relation">
+	<apiName>TIdentityRelation</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="5040"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="5039"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="5049"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>A templated class which packages a function that determines whether two objects of a given class type match. During linear search operations the search term is always passed as the first argument and the second argument is an element of the array being searched.</p>
+			<p>A TIdentityRelation&lt;T&gt; object is constructed and passed as a parameter to member functions of the array classes RArray&lt;T&gt; and RPointerArray&lt;T&gt;.</p>
+			<p>
+				<xref href="class_r_array.xml#class_r_array">RArray</xref> </p>
+			<p>
+				<xref href="class_r_pointer_array.xml#class_r_pointer_array">RPointerArray</xref> </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_t_identity_relation_1aa6b5b2cca77594c01e02b2526a9edbb3">
+		<apiName>TIdentityRelation</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TIdentityRelation</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TIdentityRelation()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TIdentityRelation::TIdentityRelation()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5042"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="3521"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="3526"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Constructs the object to use the equality operator (==) defined for class T to determine whether two class T type objects match. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_identity_relation_1abd0133d6f720032e84de3609e3d3f06f">
+		<apiName>TIdentityRelation</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TIdentityRelation</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TIdentityRelation(TBool(*anIdentity)(const T &amp;, const T &amp;))</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TIdentityRelation::TIdentityRelation(TBool(*)(const T &amp;, const T &amp;))</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>(*)(const T &amp;, const T &amp;)</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anIdentity</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A pointer to a function that takes constant references to two class T objects and returns a TInt value. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5043"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="3532"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="3546"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Constructs the object taking the specified function as an argument.</p>
+				<p>The specified function should implement an algorithm for determining whether two class T type objects match. It should return:</p>
+				<p>1. true, if the two objects match.</p>
+				<p>2. false, if the two objects do not match.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_identity_relation_1a088941a36f2a7f8e9f3c729613dd9b9a">
+		<apiName>operator TGeneralIdentityRelation</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TIdentityRelation</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline operator TGeneralIdentityRelation() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TIdentityRelation::operator TGeneralIdentityRelation()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5044"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="3552"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="3557"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Operator that gets the function that determines whether two objects of a given class type match. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_identity_relation_1afffd39f70c92e07ff568d32b7149e11e">
+		<apiName>EqualityOperatorCompare</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TIdentityRelation</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline static TBool EqualityOperatorCompare(const T &amp;aLeft, const T &amp;aRight)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TIdentityRelation::EqualityOperatorCompare(const T &amp;,const T &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const T &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLeft</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const T &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aRight</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5046"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="3562"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="3566"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Compares two objects of class T using the equality operator defined for class T. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxVariable id="class_t_identity_relation_1a0124bcbbfff3af5d2e0a609f973e3180">
+		<apiName>iIdentity</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32cmn_8h.xml#_1a5062ea5a885ec2f798063c3ecee5dec2">TGeneralIdentityRelation</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TIdentityRelation</cxxVariableScopedName>
+				<cxxVariablePrototype>TGeneralIdentityRelation iIdentity</cxxVariablePrototype>
+				<cxxVariableNameLookup>TIdentityRelation::iIdentity</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="5048"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+</cxxClass>

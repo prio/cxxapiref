@@ -1,0 +1,1895 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_r_file">
+	<apiName>RFile</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassDerivations>
+				<cxxClassDerivation>
+					<cxxClassDerivationAccessSpecifier value="public"/>
+					<cxxClassBaseClass href="class_r_sub_session_base.xml#class_r_sub_session_base">RSubSessionBase</cxxClassBaseClass>
+				</cxxClassDerivation>
+			</cxxClassDerivations>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="2316"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="2315"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="2378"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>Creates and opens a file, and performs all operations on a single open file.</p>
+			<p>These include:</p>
+			<p>
+				<ul>
+					<li>
+						<p>reading from and writing to the file</p>
+					</li>
+				</ul>
+			</p>
+			<p>
+				<ul>
+					<li>
+						<p>seeking to a position within the file</p>
+					</li>
+				</ul>
+			</p>
+			<p>
+				<ul>
+					<li>
+						<p>locking and unlocking within the file</p>
+					</li>
+				</ul>
+			</p>
+			<p>
+				<ul>
+					<li>
+						<p>setting file attributes</p>
+					</li>
+				</ul>
+			</p>
+			<p>Before using any of these services, a connection to a file server session must have been made, and the file must be open.</p>
+			<p>Opening Files:</p>
+			<p>
+				<ul>
+					<li>
+						<p>use <xref href="class_r_file.xml#class_r_file_1a5ea6f42ebdd3cb7085f63c983a2f7011">Open()</xref> to open an existing file for reading or writing; an error is returned if it does not already exist. To open an existing file for reading only, use <xref href="class_r_file.xml#class_r_file_1a5ea6f42ebdd3cb7085f63c983a2f7011">Open()</xref> with an access mode of EFileRead, and a share mode of EFileShareReadersOnly.</p>
+					</li>
+				</ul>
+			</p>
+			<p>
+				<ul>
+					<li>
+						<p>use <xref href="class_r_file.xml#class_r_file_1ad6cbbefad4a24ec2aacee39d3ae5150d">Create()</xref> to create and open a new file for writing; an error is returned if it already exists.</p>
+					</li>
+				</ul>
+			</p>
+			<p>
+				<ul>
+					<li>
+						<p>use <xref href="class_r_file.xml#class_r_file_1ad17f25893b5bbe3d89ba6b45c73d9cea">Replace()</xref> to open a file for writing, replacing any existing file of the same name if one exists, or creating a new file if one does not exist. Note that if a file exists, its length is reset to zero.</p>
+					</li>
+				</ul>
+			</p>
+			<p>
+				<ul>
+					<li>
+						<p>use <xref href="class_r_file.xml#class_r_file_1ac7a014b78a34dc2c2d829df4dd48a312">Temp()</xref> to create and open a temporary file with a unique name, for writing and reading.</p>
+					</li>
+				</ul>
+			</p>
+			<p>When opening a file, you must specify the file server session to use for operations with that file. If you do not close the file explicitly, it is closed when the server session associated with it is closed.</p>
+			<p>Reading and Writing:</p>
+			<p>There are several variants of both <xref href="class_r_file.xml#class_r_file_1ace99f7a653da96db40499d022dda127e">Read()</xref> and <xref href="class_r_file.xml#class_r_file_1ada649c3e4c31f996191aee58043d4397">Write()</xref>. The basic Read(TDes8&amp; aDes) and <xref href="class_r_file.xml#class_r_file_1ada649c3e4c31f996191aee58043d4397">Write(const TDesC8&amp; aDes)</xref> are supplemented by variants allowing the descriptor length to be overridden, or the seek position of the first byte to be specified, or asynchronous completion, or any combination.</p>
+			<p>Reading transfers data from a file to a descriptor, and writing transfers data from a descriptor to a file. In all cases, the file data is treated as binary and byte descriptors are used (<xref href="class_t_des8.xml#class_t_des8">TDes8</xref>, <xref href="class_t_des_c8.xml#class_t_des_c8">TDesC8</xref>).</p>
+			<p>
+				<xref href="class_r_file.xml#class_r_file">RFile</xref> class supports operations on files of size less than or equal to 2GB - 1. If the file size is greater than 2GB - 1 (large file), use of class <xref href="class_r_file64.xml#class_r_file64">RFile64</xref> is recommended for following operations: 1. Opening a large file 2. Creating a file which can grow beyond 2GB - 1 by size 3. Creating a temporary file which can grow beyond 2GB - 1 by size 4. Replacing an existing file after which it can grow beyond 2GB - 1 by size 5. Adopting a large file handle from client 6. Adopting a large file handle from server 7. Adopting a large file handle from another process 8. Read from a position greater than 2GB - 1 9. Writing to a file by which the size can grow beyond 2GB - 1 10. Seek to a position greater than 2GB - 1 11. Setting a size greater than 2GB - 1 12. Querying the file size (greater than 2GB - 1) 13. Locking and unlocking a position and length that is beyond 2GB - 1</p>
+			<p>
+				<xref href="class_t_des8.xml#class_t_des8">TDes8</xref> </p>
+			<p>
+				<xref href="class_t_des_c8.xml#class_t_des_c8">TDesC8</xref>
+			</p>
+			<p>
+				<xref href="class_r_file64.xml#class_r_file64">RFile64</xref> </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_r_file_1a5ea6f42ebdd3cb7085f63c983a2f7011">
+		<apiName>Open</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C TInt Open(RFs &amp;aFs, const TDesC &amp;aName, TUint aFileMode)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile::Open(RFs &amp;,const TDesC &amp;,TUint)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_fs.xml#class_r_fs">RFs</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFs</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aName</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFileMode</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2318"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file_1a06bc10a37760e035809fd80f19afeec2">
+		<apiName>Close</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C void Close()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile::Close()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2319"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file_1ad6cbbefad4a24ec2aacee39d3ae5150d">
+		<apiName>Create</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C TInt Create(RFs &amp;aFs, const TDesC &amp;aName, TUint aFileMode)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile::Create(RFs &amp;,const TDesC &amp;,TUint)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_fs.xml#class_r_fs">RFs</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFs</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aName</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFileMode</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2320"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file_1ad17f25893b5bbe3d89ba6b45c73d9cea">
+		<apiName>Replace</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C TInt Replace(RFs &amp;aFs, const TDesC &amp;aName, TUint aFileMode)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile::Replace(RFs &amp;,const TDesC &amp;,TUint)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_fs.xml#class_r_fs">RFs</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFs</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aName</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFileMode</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2321"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file_1ac7a014b78a34dc2c2d829df4dd48a312">
+		<apiName>Temp</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C TInt Temp(RFs &amp;aFs, const TDesC &amp;aPath, TFileName &amp;aName, TUint aFileMode)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile::Temp(RFs &amp;,const TDesC &amp;,TFileName &amp;,TUint)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_fs.xml#class_r_fs">RFs</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFs</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPath</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_buf.xml#class_t_buf">TFileName</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aName</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFileMode</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2322"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file_1ace99f7a653da96db40499d022dda127e">
+		<apiName>Read</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C TInt Read(TDes8 &amp;aDes) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile::Read(TDes8 &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2323"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file_1a2340bec833c8e11a60ea10fe898b3afe">
+		<apiName>Read</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C void Read(TDes8 &amp;aDes, TRequestStatus &amp;aStatus) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile::Read(TDes8 &amp;,TRequestStatus &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2324"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file_1aa1c8c093d805b9afb3839172709d6eaf">
+		<apiName>Read</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C TInt Read(TDes8 &amp;aDes, TInt aLength) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile::Read(TDes8 &amp;,TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2325"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file_1aca62417b23e02ec48c13e9b28b40d3e7">
+		<apiName>Read</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C void Read(TDes8 &amp;aDes, TInt aLength, TRequestStatus &amp;aStatus) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile::Read(TDes8 &amp;,TInt,TRequestStatus &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2326"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file_1af5e0cb92a94961f049d858ea4a7a61c2">
+		<apiName>Read</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C TInt Read(TInt aPos, TDes8 &amp;aDes) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile::Read(TInt,TDes8 &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPos</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2327"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file_1a3ec527a9cba4c1f2141b3901a81339d4">
+		<apiName>Read</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C void Read(TInt aPos, TDes8 &amp;aDes, TRequestStatus &amp;aStatus) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile::Read(TInt,TDes8 &amp;,TRequestStatus &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPos</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2328"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file_1a8b7f18b44e7a8d31527940ccbffedac7">
+		<apiName>Read</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C TInt Read(TInt aPos, TDes8 &amp;aDes, TInt aLength) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile::Read(TInt,TDes8 &amp;,TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPos</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2329"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file_1ade4144d5b3e6f18b5aca2e18ef4df59c">
+		<apiName>Read</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C void Read(TInt aPos, TDes8 &amp;aDes, TInt aLength, TRequestStatus &amp;aStatus) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile::Read(TInt,TDes8 &amp;,TInt,TRequestStatus &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPos</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2330"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file_1aeff4a25d9f9a444f54beea68e55857c3">
+		<apiName>ReadCancel</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C void ReadCancel(TRequestStatus &amp;aStatus) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile::ReadCancel(TRequestStatus &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2331"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file_1ada99cf901d46bc159b6b4e22b2e9b955">
+		<apiName>ReadCancel</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C void ReadCancel() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile::ReadCancel()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2332"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file_1ada649c3e4c31f996191aee58043d4397">
+		<apiName>Write</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C TInt Write(const TDesC8 &amp;aDes)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile::Write(const TDesC8 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2333"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file_1ac0971d2dc457d03484d2592afe0414d3">
+		<apiName>Write</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C void Write(const TDesC8 &amp;aDes, TRequestStatus &amp;aStatus)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile::Write(const TDesC8 &amp;,TRequestStatus &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2334"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file_1a92e63bfc633b7d16b96aa1bc91ce4951">
+		<apiName>Write</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C TInt Write(const TDesC8 &amp;aDes, TInt aLength)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile::Write(const TDesC8 &amp;,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2335"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file_1acee50ffe9232ce6eb6dc7fc3e4ee1d3c">
+		<apiName>Write</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C void Write(const TDesC8 &amp;aDes, TInt aLength, TRequestStatus &amp;aStatus)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile::Write(const TDesC8 &amp;,TInt,TRequestStatus &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2336"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file_1a99a7062cff9ac40a13103aef51f7d109">
+		<apiName>Write</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C TInt Write(TInt aPos, const TDesC8 &amp;aDes)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile::Write(TInt,const TDesC8 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPos</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2337"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file_1ac9ce0d79487427f888319fa72b6822e6">
+		<apiName>Write</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C void Write(TInt aPos, const TDesC8 &amp;aDes, TRequestStatus &amp;aStatus)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile::Write(TInt,const TDesC8 &amp;,TRequestStatus &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPos</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2338"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file_1a813bee5d817be182d3088c1ed923f271">
+		<apiName>Write</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C TInt Write(TInt aPos, const TDesC8 &amp;aDes, TInt aLength)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile::Write(TInt,const TDesC8 &amp;,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPos</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2339"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file_1a700d8e05853fe5f7345e5709c4930620">
+		<apiName>Write</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C void Write(TInt aPos, const TDesC8 &amp;aDes, TInt aLength, TRequestStatus &amp;aStatus)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile::Write(TInt,const TDesC8 &amp;,TInt,TRequestStatus &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPos</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2340"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file_1aceae1cef0d14853a21f20f436a439a52">
+		<apiName>Lock</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C TInt Lock(TInt aPos, TInt aLength) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile::Lock(TInt,TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPos</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2341"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file_1a57c89e53491f2082fd601dc254ab8164">
+		<apiName>UnLock</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C TInt UnLock(TInt aPos, TInt aLength) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile::UnLock(TInt,TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPos</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2342"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file_1ade6a462548881f5617585ef9caac53b1">
+		<apiName>Seek</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C TInt Seek(TSeek aMode, TInt &amp;aPos) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile::Seek(TSeek,TInt &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="cs__subconn_8cpp.xml#_1ae775b30a51a2885b1d2af0b1ffdb8d78">TSeek</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMode</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPos</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2343"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file_1a2da1504faa014c8e8e70b3313e1c5b8b">
+		<apiName>Flush</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C TInt Flush()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile::Flush()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2344"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file_1a298458d173dbdd88affcce5782732ec5">
+		<apiName>Flush</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C void Flush(TRequestStatus &amp;aStatus)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile::Flush(TRequestStatus &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2345"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file_1a7f42e943dee04257f4ac3f4edd189788">
+		<apiName>Size</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C TInt Size(TInt &amp;aSize) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile::Size(TInt &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSize</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2346"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file_1ad7a00013c06536a8b0b482b9720d2ca8">
+		<apiName>SetSize</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C TInt SetSize(TInt aSize)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile::SetSize(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSize</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2347"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file_1a7e7ebaad659609dac8108cf66c9a0583">
+		<apiName>Att</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C TInt Att(TUint &amp;aAttValue) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile::Att(TUint &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aAttValue</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2348"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file_1a8ced58d134f4d5e642a28bc9c595b8a2">
+		<apiName>SetAtt</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C TInt SetAtt(TUint aSetAttMask, TUint aClearAttMask)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile::SetAtt(TUint,TUint)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSetAttMask</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aClearAttMask</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2349"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file_1a2b8a153d95863b93c595d1ff53fe771a">
+		<apiName>Modified</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C TInt Modified(TTime &amp;aTime) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile::Modified(TTime &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_time.xml#class_t_time">TTime</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aTime</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2350"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file_1a4421a89c243b2bbada26fb1d1c165593">
+		<apiName>SetModified</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C TInt SetModified(const TTime &amp;aTime)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile::SetModified(const TTime &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_time.xml#class_t_time">TTime</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aTime</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2351"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file_1a48be9e7dc0677ab3fa42ecb87af280d9">
+		<apiName>Set</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C TInt Set(const TTime &amp;aTime, TUint aSetAttMask, TUint aClearAttMask)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile::Set(const TTime &amp;,TUint,TUint)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_time.xml#class_t_time">TTime</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aTime</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSetAttMask</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aClearAttMask</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2352"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file_1af2100784766b63f21466fde8fbb885d3">
+		<apiName>ChangeMode</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C TInt ChangeMode(TFileMode aNewMode)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile::ChangeMode(TFileMode)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="cs__subconn_8cpp.xml#_1a5acc4939004a4c70b1ac276137cb10c7">TFileMode</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aNewMode</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2353"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file_1a427e568d0f84b5caeadcaceb2933468e">
+		<apiName>Rename</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C TInt Rename(const TDesC &amp;aNewName)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile::Rename(const TDesC &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aNewName</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2354"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file_1a0578e732354cafd7f259c4e492504634">
+		<apiName>Drive</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C TInt Drive(TInt &amp;aDriveNumber, TDriveInfo &amp;aDriveInfo) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile::Drive(TInt &amp;,TDriveInfo &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDriveNumber</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_drive_info.xml#class_t_drive_info">TDriveInfo</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDriveInfo</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2355"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file_1aff2b596fb08f1e86eae3a6414ef682d2">
+		<apiName>Adopt</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C TInt Adopt(RFs &amp;aFs, TInt aHandle)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile::Adopt(RFs &amp;,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_fs.xml#class_r_fs">RFs</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFs</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aHandle</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2356"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file_1a8f1decf496392036483790d631d5f9ea">
+		<apiName>AdoptFromClient</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C TInt AdoptFromClient(const RMessage2 &amp;aMsg, TInt aFsHandleIndex, TInt aFileHandleIndex)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile::AdoptFromClient(const RMessage2 &amp;,TInt,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_r_message2.xml#class_r_message2">RMessage2</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMsg</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFsHandleIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFileHandleIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2357"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file_1a692ad16dd88c8ae064ab671c05b17c26">
+		<apiName>AdoptFromServer</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C TInt AdoptFromServer(TInt aFsHandle, TInt aFileHandle)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile::AdoptFromServer(TInt,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFsHandle</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFileHandle</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2358"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file_1a49c185c982a54cdda4514bfe274023dd">
+		<apiName>AdoptFromCreator</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C TInt AdoptFromCreator(TInt aFsIndex, TInt aFileHandleIndex)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile::AdoptFromCreator(TInt,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFsIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFileHandleIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2359"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file_1afd0e91c346d6faa10ad78fa46bab418f">
+		<apiName>Name</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C TInt Name(TDes &amp;aName) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile::Name(TDes &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des16.xml#class_t_des16">TDes</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aName</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2360"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file_1a39771371096f488da67f04859a13993c">
+		<apiName>TransferToServer</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C TInt TransferToServer(TIpcArgs &amp;aIpcArgs, TInt aFsHandleIndex, TInt aFileHandleIndex) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile::TransferToServer(TIpcArgs &amp;,TInt,TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_ipc_args.xml#class_t_ipc_args">TIpcArgs</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIpcArgs</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFsHandleIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFileHandleIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2361"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file_1a7b3787f72e499c2308dab93c2e7fd584">
+		<apiName>TransferToClient</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C TInt TransferToClient(const RMessage2 &amp;aMsg, TInt aFileHandleIndex) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile::TransferToClient(const RMessage2 &amp;,TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_r_message2.xml#class_r_message2">RMessage2</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMsg</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFileHandleIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2362"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file_1aab3817335bd802573062d94bc750e218">
+		<apiName>TransferToProcess</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C TInt TransferToProcess(RProcess &amp;aProcess, TInt aFsHandleIndex, TInt aFileHandleIndex) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile::TransferToProcess(RProcess &amp;,TInt,TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_process.xml#class_r_process">RProcess</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aProcess</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFsHandleIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFileHandleIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2363"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file_1ad6d02928bdf388874ca4fefda4c4484f">
+		<apiName>Duplicate</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C TInt Duplicate(const RFile &amp;aFile, TOwnerType aType=EOwnerProcess)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile::Duplicate(const RFile &amp;,TOwnerType)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_r_file.xml#class_r_file">RFile</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFile</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1a68a23fa0195efd67397df339a83a5a86">TOwnerType</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aType</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>EOwnerProcess</cxxFunctionParameterDefaultValue>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2364"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file_1ae9c1037cf0bb7f45ad47cbc9da2ea430">
+		<apiName>FullName</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C TInt FullName(TDes &amp;aName) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile::FullName(TDes &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des16.xml#class_t_des16">TDes</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aName</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2365"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file_1a5a482df2647774e306f910ef9e9235af">
+		<apiName>BlockMap</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C TInt BlockMap(SBlockMapInfo &amp;aInfo, TInt64 &amp;aStartPos, TInt64 aEndPos=-1, TInt aBlockMapusage=EBlockMapUsagePaging) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile::BlockMap(SBlockMapInfo &amp;,TInt64 &amp;,TInt64,TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="struct_s_block_map_info.xml#struct_s_block_map_info">SBlockMapInfo</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aInfo</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a05bf37b696038fef93385278ebf8ee16">TInt64</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStartPos</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a05bf37b696038fef93385278ebf8ee16">TInt64</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aEndPos</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>-1</cxxFunctionParameterDefaultValue>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aBlockMapusage</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>EBlockMapUsagePaging</cxxFunctionParameterDefaultValue>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2366"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file_1a9af3fd41eba9c1946203af983a420415">
+		<apiName>Clamp</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile</cxxFunctionScopedName>
+				<cxxFunctionPrototype>TInt Clamp(RFileClamp &amp;aHandle)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile::Clamp(RFileClamp &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_file_clamp.xml#class_r_file_clamp">RFileClamp</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aHandle</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2367"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file_1abe840a374cc5b97cd53f7aa4d35cf4dd">
+		<apiName>CreateSubSession</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile</cxxFunctionScopedName>
+				<cxxFunctionPrototype>TInt CreateSubSession(const RSessionBase &amp;aSession, TInt aFunction, const TIpcArgs &amp;aArgs)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile::CreateSubSession(const RSessionBase &amp;,TInt,const TIpcArgs &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_r_sub_session_base.xml#class_r_sub_session_base_1ac1adf58e7adde023baf0525baeb2a0ca">RSubSessionBase::CreateSubSession(const RSessionBase &amp;,TInt,const TIpcArgs &amp;)</cxxFunctionReimplemented>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_r_session_base.xml#class_r_session_base">RSessionBase</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSession</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The session to which this sub-session will belong. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFunction</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The opcode specifying the requested service; the server should interpret this as a request to create a sub-session. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_ipc_args.xml#class_t_ipc_args">TIpcArgs</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aArgs</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The message arguments.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2371"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Creates a new sub-session within an existing session.</p>
+				<p>KErrNone if successful, otherwise one of the system-wide error codes. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file_1a7b716b93e32c71eaaf2da09e7715fd68">
+		<apiName>CloseSubSession</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile</cxxFunctionScopedName>
+				<cxxFunctionPrototype>void CloseSubSession(TInt aFunction)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile::CloseSubSession(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_r_sub_session_base.xml#class_r_sub_session_base_1af9a75bd9f7400c9439e2f76f8d059d00">RSubSessionBase::CloseSubSession(TInt)</cxxFunctionReimplemented>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFunction</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2372"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file_1ab2489a0ac5784d68341e0b18f4b269af">
+		<apiName>SendReceive</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile</cxxFunctionScopedName>
+				<cxxFunctionPrototype>TInt SendReceive(TInt aFunction, const TIpcArgs &amp;aArgs) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile::SendReceive(TInt,const TIpcArgs &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_r_sub_session_base.xml#class_r_sub_session_base_1abfee930312ede77f6ee1a850be3e7ea5">RSubSessionBase::SendReceive(TInt,const TIpcArgs &amp;)const</cxxFunctionReimplemented>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFunction</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The opcode specifying the requested service. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_ipc_args.xml#class_t_ipc_args">TIpcArgs</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aArgs</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The message arguments.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2373"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Sends a message to the server and waits synchronously for a reply.</p>
+				<p>An opcode specifies the service required. A set of message arguments is passed that can be used to specify client addresses, which the server can use to read from and write to the client address space.</p>
+				<p>Note that this function will only fail if the server itself fails or environmental errors occur in the server. All requests made using this function are guaranteed to reach the server. This means that all synchronous client requests (typically those that return void) should be routed through this synchronous variant of <xref href="class_r_file.xml#class_r_file_1ab2489a0ac5784d68341e0b18f4b269af">SendReceive()</xref>.</p>
+				<p>KErrNone if successful, otherwise one of the system-wide error codes. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file_1a021ddb5a77481a775b7e2c550cfe14ba">
+		<apiName>DuplicateHandle</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile</cxxFunctionScopedName>
+				<cxxFunctionPrototype>TInt DuplicateHandle(TInt &amp;aSubSessionHandle) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile::DuplicateHandle(TInt &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSubSessionHandle</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2375"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxClassInherits>
+		<cxxClassInheritsDetail>
+			<cxxClassFunctionInherited href="class_r_file.xml#class_r_sub_session_base_1ae2da2f53114e1af7938db52291b0fecf">RSubSessionBase::CreateAutoCloseSubSession(RSessionBase &amp;,TInt,const TIpcArgs &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_file.xml#class_r_sub_session_base_1a50e62f82ea5de8fd858e7a75c21c0930">RSubSessionBase::CreateSubSession(const RSessionBase &amp;,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_file.xml#class_r_sub_session_base_1a6ecd5459966453b3a99ac3f99d97e1bc">RSubSessionBase::RSubSessionBase()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_file.xml#class_r_sub_session_base_1ae855884063702416b6aa73c30263706b">RSubSessionBase::Send(TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_file.xml#class_r_sub_session_base_1a1877065a894f19c8e75f076995e2b136">RSubSessionBase::Send(TInt,const TIpcArgs &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_file.xml#class_r_sub_session_base_1a79a9c918d3d693edae2b91069339a6e4">RSubSessionBase::SendReceive(TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_file.xml#class_r_sub_session_base_1a31d1b25a10b3cf364677f050ea1b3a10">RSubSessionBase::SendReceive(TInt,TRequestStatus &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_file.xml#class_r_sub_session_base_1aa2f319884f3ea300a0a61c9788bb5d93">RSubSessionBase::SendReceive(TInt,const TIpcArgs &amp;,TRequestStatus &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_file.xml#class_r_sub_session_base_1a1239f2d6b3c11eed6965602c114886fd">RSubSessionBase::Session()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_file.xml#class_r_sub_session_base_1aabe5abe9803cadf198a0c429e2aa5f2e">RSubSessionBase::SubSessionHandle()const</cxxClassFunctionInherited>
+		</cxxClassInheritsDetail>
+	</cxxClassInherits>
+</cxxClass>

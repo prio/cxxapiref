@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_messages_1_1_m_transport_sender">
+	<apiName>Messages::MTransportSender</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassAbstract/>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/elements/nm_transport.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="37"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/elements/nm_transport.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="30"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="47"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>Defines the interface used for sending messages to a peer worker thread. Various functions are present, supporting different message sizes and different policies for coping with the inability to send. Behaviours common to all Send...() operations are finding a transport to the peer based upon its cookie and panicking if no transport is available (the sender has corrupted the peer cookie or is using it after termination of the transport service - either case is serious misbehaviour) </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_messages_1_1_m_transport_sender_1af416816578c5c6302f18403da28181bc">
+		<apiName>PostMessage</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionPureVirtual/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Messages::MTransportSender</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual void PostMessage(const TRuntimeCtxId &amp;aPostFrom, const TRuntimeCtxId &amp;aPostTo, const Meta::SMetaData &amp;aMessage)=0</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Messages::MTransportSender::PostMessage(const TRuntimeCtxId &amp;,const TRuntimeCtxId &amp;,const Meta::SMetaData &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_messages_1_1_t_runtime_ctx_id.xml#class_messages_1_1_t_runtime_ctx_id">TRuntimeCtxId</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPostFrom</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_messages_1_1_t_runtime_ctx_id.xml#class_messages_1_1_t_runtime_ctx_id">TRuntimeCtxId</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPostTo</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="struct_meta_1_1_s_meta_data.xml#struct_meta_1_1_s_meta_data">Meta::SMetaData</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMessage</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/nm_transport.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="46"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Blocking send functions. If no outbound queue space is available they block until either space becomes available or a GENEROUS time limit is exceeded, in which case it panics diagnostically. This relieves the caller of the burden of supporting an error case which will only be seen in a grossly malfunctioning system and so will be hard to test and difficult to recover from. To avoid deadlock due to the peer being in the same state the inbound queue is drained while waiting for space. The receipt order is always preserved. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+</cxxClass>

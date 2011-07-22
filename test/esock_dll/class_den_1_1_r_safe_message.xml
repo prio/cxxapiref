@@ -1,0 +1,817 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_den_1_1_r_safe_message">
+	<apiName>Den::RSafeMessage</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassDerivations>
+				<cxxClassDerivation>
+					<cxxClassDerivationAccessSpecifier value="public"/>
+					<cxxClassBaseClass href="class_r_message2.xml#class_r_message2">RMessage2</cxxClassBaseClass>
+				</cxxClassDerivation>
+			</cxxClassDerivations>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_std.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="55"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/elements/sd_std.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="51"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="103"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>Supplementing <xref href="class_r_message2.xml#class_r_message2">RMessage2</xref> with additional methods for transferring handle ownership and completing with logging  </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_den_1_1_r_safe_message_1ab9256f6250f63305dfc63a901b7e1500">
+		<apiName>RSafeMessage</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>Den::RSafeMessage</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline RSafeMessage()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::RSafeMessage::RSafeMessage()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="62"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="61"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="64"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Only a default constructor is supported; safe messages get initialised by adopting their handle from another instance, by downcasting from a received <xref href="class_r_message2.xml#class_r_message2">RMessage2</xref> (ugly but safe since safe messages never add members or virtuals), or (rarely) by duplicating another instance, which diminishes safety. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_r_safe_message_1a572e481534a312c9711de6484c6b01ca">
+		<apiName>~RSafeMessage</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDestructor/>
+				<cxxFunctionDeclaredType>IMPORT_C</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::RSafeMessage</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C ~RSafeMessage()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::RSafeMessage::~RSafeMessage()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="66"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_r_safe_message_1a4d6cd17659bcb254f72d4127b37dca7a">
+		<apiName>Complete</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::RSafeMessage</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Complete(TInt aReason) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::RSafeMessage::Complete(TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_r_message_ptr2.xml#class_r_message_ptr2_1a5c3121292c5b888f5bad28938d43988d">RMessagePtr2::Complete(TInt)const</cxxFunctionReimplemented>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aReason</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="68"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_r_safe_message_1a85eaf3020f0661f510cee53866b5991f">
+		<apiName>PanicClient</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::RSafeMessage</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void PanicClient(const TDesC &amp;aCategory, TInt aReason) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::RSafeMessage::PanicClient(const TDesC &amp;,TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCategory</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aReason</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="70"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_r_safe_message_1ab51e747689cf36e62f638542075ec86f">
+		<apiName>Adopt</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::RSafeMessage</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Adopt(RSafeMessage &amp;aSrc)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::RSafeMessage::Adopt(RSafeMessage &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_den_1_1_r_safe_message.xml#class_den_1_1_r_safe_message">RSafeMessage</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSrc</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="72"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_r_safe_message_1ae506e727ef244786a1459a8f4af56593">
+		<apiName>Duplicate</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::RSafeMessage</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Duplicate(const RSafeMessage &amp;aSrc)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::RSafeMessage::Duplicate(const RSafeMessage &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_den_1_1_r_safe_message.xml#class_den_1_1_r_safe_message">RSafeMessage</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSrc</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="73"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_r_safe_message_1af317ff6ee18df1829fa9bee7a183dab7">
+		<apiName>ResetHandle</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::RSafeMessage</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void ResetHandle()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::RSafeMessage::ResetHandle()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="74"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_r_safe_message_1add9dc8948e35ac7db26016cccf1011af">
+		<apiName>ReadL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::RSafeMessage</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void ReadL(TInt aSrcParamIndex, TDes8 &amp;aDes, TInt anOffset=0) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::RSafeMessage::ReadL(TInt,TDes8 &amp;,TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_r_message_ptr2.xml#class_r_message_ptr2_1adce6610dbe9a3fadb5e17d07b4fb9e43">RMessagePtr2::ReadL(TInt,TDes8 &amp;,TInt)const</cxxFunctionReimplemented>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSrcParamIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anOffset</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>0</cxxFunctionParameterDefaultValue>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="76"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_r_safe_message_1a4f8b78a495dade1a055dad772dc51e19">
+		<apiName>Read</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::RSafeMessage</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Read(TInt aSrcParamIndex, TDes8 &amp;aDes, TInt anOffset=0) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::RSafeMessage::Read(TInt,TDes8 &amp;,TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_r_message_ptr2.xml#class_r_message_ptr2_1a652282a03a757369f7f8b49cb44dd284">RMessagePtr2::Read(TInt,TDes8 &amp;,TInt)const</cxxFunctionReimplemented>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSrcParamIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anOffset</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>0</cxxFunctionParameterDefaultValue>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="77"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_r_safe_message_1a4eddf3872d5055a3c8e17b7fd9b37ae3">
+		<apiName>WriteL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::RSafeMessage</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void WriteL(TInt aDstParamIndex, const TDesC8 &amp;aDes, TInt anOffset=0) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::RSafeMessage::WriteL(TInt,const TDesC8 &amp;,TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_r_message_ptr2.xml#class_r_message_ptr2_1af57768fcdd50875f451cba6f5dcb946d">RMessagePtr2::WriteL(TInt,const TDesC8 &amp;,TInt)const</cxxFunctionReimplemented>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDstParamIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anOffset</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>0</cxxFunctionParameterDefaultValue>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="79"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_r_safe_message_1a7ea9fc8945dcbb9982293c3235afe9ec">
+		<apiName>Write</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::RSafeMessage</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Write(TInt aDstParamIndex, const TDesC8 &amp;aDes, TInt anOffset=0) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::RSafeMessage::Write(TInt,const TDesC8 &amp;,TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_r_message_ptr2.xml#class_r_message_ptr2_1a18489f6a5099fd28343b96e555fa74ef">RMessagePtr2::Write(TInt,const TDesC8 &amp;,TInt)const</cxxFunctionReimplemented>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDstParamIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anOffset</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>0</cxxFunctionParameterDefaultValue>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="80"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_r_safe_message_1a2a4a30ec510554baf27803461105bc03">
+		<apiName>WriteL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::RSafeMessage</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void WriteL(TInt aDstParamIndex, const TPckg&lt; TUint32 &gt; &amp;aDes, TInt anOffset=0) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::RSafeMessage::WriteL(TInt,const TPckg&lt; TUint32 &gt; &amp;,TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDstParamIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_pckg.xml#class_t_pckg">TPckg</apiRelation>&lt; <apiRelation href="e32def_8h.xml#_1a8240e11f17c80b6b222fc2af50234da4">TUint32</apiRelation> &gt; &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anOffset</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>0</cxxFunctionParameterDefaultValue>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="82"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_r_safe_message_1a8769bd60a745aba318e80e88759f23fb">
+		<apiName>Write</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::RSafeMessage</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Write(TInt aDstParamIndex, const TPckg&lt; TUint32 &gt; &amp;aDes, TInt anOffset=0) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::RSafeMessage::Write(TInt,const TPckg&lt; TUint32 &gt; &amp;,TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDstParamIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_pckg.xml#class_t_pckg">TPckg</apiRelation>&lt; <apiRelation href="e32def_8h.xml#_1a8240e11f17c80b6b222fc2af50234da4">TUint32</apiRelation> &gt; &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anOffset</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>0</cxxFunctionParameterDefaultValue>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="83"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_r_safe_message_1a2016055e74b6b2f1aae89d93390542b7">
+		<apiName>ReadL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::RSafeMessage</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void ReadL(TInt aSrcParamIndex, TDes16 &amp;aDes, TInt anOffset=0) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::RSafeMessage::ReadL(TInt,TDes16 &amp;,TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_r_message_ptr2.xml#class_r_message_ptr2_1a509147c402325c6cb817ff1da3d758c1">RMessagePtr2::ReadL(TInt,TDes16 &amp;,TInt)const</cxxFunctionReimplemented>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSrcParamIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des16.xml#class_t_des16">TDes16</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anOffset</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>0</cxxFunctionParameterDefaultValue>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="85"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_r_safe_message_1a3de769a9e445c547ed1ac8f6ab085bca">
+		<apiName>Read</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::RSafeMessage</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Read(TInt aSrcParamIndex, TDes16 &amp;aDes, TInt anOffset=0) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::RSafeMessage::Read(TInt,TDes16 &amp;,TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_r_message_ptr2.xml#class_r_message_ptr2_1a68d8da37c17dab765a245e44293cda14">RMessagePtr2::Read(TInt,TDes16 &amp;,TInt)const</cxxFunctionReimplemented>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSrcParamIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des16.xml#class_t_des16">TDes16</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anOffset</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>0</cxxFunctionParameterDefaultValue>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="86"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_r_safe_message_1a4054a37dd6731976b85bec1d1866b407">
+		<apiName>WriteL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::RSafeMessage</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void WriteL(TInt aDstParamIndex, const TDesC16 &amp;aDes, TInt anOffset=0) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::RSafeMessage::WriteL(TInt,const TDesC16 &amp;,TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_r_message_ptr2.xml#class_r_message_ptr2_1ac351406fa151937b77abe5c73e47a175">RMessagePtr2::WriteL(TInt,const TDesC16 &amp;,TInt)const</cxxFunctionReimplemented>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDstParamIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC16</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anOffset</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>0</cxxFunctionParameterDefaultValue>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="88"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_r_safe_message_1ae74b5c3fc0ab8468f75fafd01fa7268a">
+		<apiName>Write</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::RSafeMessage</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Write(TInt aDstParamIndex, const TDesC16 &amp;aDes, TInt anOffset=0) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::RSafeMessage::Write(TInt,const TDesC16 &amp;,TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_r_message_ptr2.xml#class_r_message_ptr2_1a4321f3d6c0bf3295941daa1cbdd9598d">RMessagePtr2::Write(TInt,const TDesC16 &amp;,TInt)const</cxxFunctionReimplemented>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDstParamIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC16</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anOffset</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>0</cxxFunctionParameterDefaultValue>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="89"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_r_safe_message_1a83f02478a03f73782d087c169cdc9dc9">
+		<apiName>GetDesLengthL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::RSafeMessage</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt GetDesLengthL(TInt aParam) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::RSafeMessage::GetDesLengthL(TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_r_message_ptr2.xml#class_r_message_ptr2_1a1c1b0c02ccc3b401bfefbeeab5c18a37">RMessagePtr2::GetDesLengthL(TInt)const</cxxFunctionReimplemented>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aParam</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="92"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_r_safe_message_1a58fb67a85bc6c97483476db39446583c">
+		<apiName>GetDesMaxLengthL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::RSafeMessage</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt GetDesMaxLengthL(TInt aParam) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::RSafeMessage::GetDesMaxLengthL(TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_r_message_ptr2.xml#class_r_message_ptr2_1a06686f49a2cd3d48f3dc3348afda7f18">RMessagePtr2::GetDesMaxLengthL(TInt)const</cxxFunctionReimplemented>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aParam</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="93"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_r_safe_message_1a9330e3b4f9eb4a745633fe1e4ee3c214">
+		<apiName>RSafeMessage</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>Den::RSafeMessage</cxxFunctionScopedName>
+				<cxxFunctionPrototype>RSafeMessage(const RSafeMessage &amp;)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::RSafeMessage::RSafeMessage(const RSafeMessage &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_den_1_1_r_safe_message.xml#class_den_1_1_r_safe_message">RSafeMessage</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="99"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_r_safe_message_1af26298a221a793c163eeb78487f367d4">
+		<apiName>RSafeMessage</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>Den::RSafeMessage</cxxFunctionScopedName>
+				<cxxFunctionPrototype>RSafeMessage(const RMessage2 &amp;)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::RSafeMessage::RSafeMessage(const RMessage2 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_r_message2.xml#class_r_message2">RMessage2</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="100"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_r_safe_message_1a208a1d47eff9ac53c0fd68c997b77986">
+		<apiName>operator=</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="class_den_1_1_r_safe_message.xml#class_den_1_1_r_safe_message">RSafeMessage</apiRelation> &amp;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::RSafeMessage</cxxFunctionScopedName>
+				<cxxFunctionPrototype>RSafeMessage &amp; operator=(const RSafeMessage &amp;)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::RSafeMessage::operator=(const RSafeMessage &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_den_1_1_r_safe_message.xml#class_den_1_1_r_safe_message">RSafeMessage</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="101"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_r_safe_message_1a6fe25a068767ed97a585346343251ea7">
+		<apiName>operator=</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="class_den_1_1_r_safe_message.xml#class_den_1_1_r_safe_message">RSafeMessage</apiRelation> &amp;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::RSafeMessage</cxxFunctionScopedName>
+				<cxxFunctionPrototype>RSafeMessage &amp; operator=(const RMessage2 &amp;)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::RSafeMessage::operator=(const RMessage2 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_r_message2.xml#class_r_message2">RMessage2</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="102"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxClassInherits>
+		<cxxClassInheritsDetail>
+			<cxxClassFunctionInherited href="class_den_1_1_r_safe_message.xml#class_r_message2_1ac31a12af48ba2d6749a2fcda7188d319">RMessage2::Authorised()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_den_1_1_r_safe_message.xml#class_r_message2_1a15267a83c880ab46bb10fb55c437551e">RMessage2::ClearAuthorised()const</cxxClassFunctionInherited>
+			<cxxClassEnumeratorInherited href="class_den_1_1_r_safe_message.xml#class_r_message2_1a60ce173252456f66e1a8b85140328946a668c6f98bbc2b23f50d7beb64e52888c">RMessage2::EConnect</cxxClassEnumeratorInherited>
+			<cxxClassEnumeratorInherited href="class_den_1_1_r_safe_message.xml#class_r_message2_1a60ce173252456f66e1a8b85140328946aa2a7371ba7e2ba0d4d303f699d9273eb">RMessage2::EDisConnect</cxxClassEnumeratorInherited>
+			<cxxClassFunctionInherited href="class_den_1_1_r_safe_message.xml#class_r_message2_1a34cf11b4dd18f93a331c7ebbf901a5f1">RMessage2::Function()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_den_1_1_r_safe_message.xml#class_r_message2_1acbeab18188e7e7110a3440f6419f611d">RMessage2::Int0()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_den_1_1_r_safe_message.xml#class_r_message2_1a01a9341d396de7c0279af0f19726a80a">RMessage2::Int1()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_den_1_1_r_safe_message.xml#class_r_message2_1a629c32d33cd8e5026aa680155377a453">RMessage2::Int2()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_den_1_1_r_safe_message.xml#class_r_message2_1adc5434a430cbfe92f7a5f60c9ef98368">RMessage2::Int3()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_den_1_1_r_safe_message.xml#class_r_message2_1a3aeac104cbbe7db274b03761dcf7e8f8">RMessage2::Ptr0()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_den_1_1_r_safe_message.xml#class_r_message2_1a7f349433d2d4a0f7808d75e0df5aa215">RMessage2::Ptr1()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_den_1_1_r_safe_message.xml#class_r_message2_1a5653b15b09de1188ca5fb4f9392c57c0">RMessage2::Ptr2()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_den_1_1_r_safe_message.xml#class_r_message2_1a8823ba0b655d9de133e351e425ce52b5">RMessage2::Ptr3()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_den_1_1_r_safe_message.xml#class_r_message2_1adfcde6e98c8c944dc5d184a27383fa21">RMessage2::RMessage2()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_den_1_1_r_safe_message.xml#class_r_message2_1a3e77d6afc3260d30729676194ba11130">RMessage2::RMessage2(const RMessagePtr2 &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_den_1_1_r_safe_message.xml#class_r_message2_1a7b4309820431157237dbf4afe152c198">RMessage2::Session()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_den_1_1_r_safe_message.xml#class_r_message2_1a0427ebbbd6270bd12c3d73ad0997b836">RMessage2::SetAuthorised()const</cxxClassFunctionInherited>
+			<cxxClassVariableInherited href="class_den_1_1_r_safe_message.xml#class_r_message2_1ae41bc27c8d5efc66857b06681a047703">RMessage2::iArgs</cxxClassVariableInherited>
+			<cxxClassVariableInherited href="class_den_1_1_r_safe_message.xml#class_r_message2_1ac32356e6d11ac6c17c7734a7b8d337ea">RMessage2::iFunction</cxxClassVariableInherited>
+			<cxxClassVariableInherited href="class_den_1_1_r_safe_message.xml#class_r_message2_1aeb1f65cc0cf3cdf814e082ef8a7b54f7">RMessage2::iSessionPtr</cxxClassVariableInherited>
+			<cxxClassEnumerationInherited href="class_den_1_1_r_safe_message.xml#class_r_message2_1a60ce173252456f66e1a8b85140328946">RMessage2:TSessionMessages</cxxClassEnumerationInherited>
+			<cxxClassFunctionInherited href="class_den_1_1_r_safe_message.xml#class_r_message_ptr2_1a3ce8a29f9949e9eb17b38accdeeb6c23">RMessagePtr2::Client(RThread &amp;,TOwnerType)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_den_1_1_r_safe_message.xml#class_r_message_ptr2_1ab42813a8b89794cca1992bb9269814f5">RMessagePtr2::ClientIsRealtime()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_den_1_1_r_safe_message.xml#class_r_message_ptr2_1a3620f5652bb1fed6c80215dd0e0e1833">RMessagePtr2::ClientL(RThread &amp;,TOwnerType)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_den_1_1_r_safe_message.xml#class_r_message_ptr2_1a8852e99f8fc64d68d93da324aaeb7739">RMessagePtr2::ClientProcessFlags()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_den_1_1_r_safe_message.xml#class_r_message_ptr2_1a2de1721f0aadcb05b2f9c8516d24c5a5">RMessagePtr2::ClientStatus()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_den_1_1_r_safe_message.xml#class_r_message_ptr2_1a36ed82738249113501d222c07097fd4f">RMessagePtr2::Complete(RHandleBase)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_den_1_1_r_safe_message.xml#class_r_message_ptr2_1ab4ddfadc4d94c0a97fcce6dfc0353024">RMessagePtr2::GetDesLength(TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_den_1_1_r_safe_message.xml#class_r_message_ptr2_1a657b6df493adb7f18ee56f6f39daae2a">RMessagePtr2::GetDesMaxLength(TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_den_1_1_r_safe_message.xml#class_r_message_ptr2_1a822f8b33f71112f671e9bc600ed627ae">RMessagePtr2::Handle()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_den_1_1_r_safe_message.xml#class_r_message_ptr2_1ac9cdb58c9ccf30eaad79a9f5b98822f9">RMessagePtr2::HasCapability(TCapability,TCapability,const char *)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_den_1_1_r_safe_message.xml#class_r_message_ptr2_1af8bda405e01d77d24da719ad358018ee">RMessagePtr2::HasCapability(TCapability,const char *)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_den_1_1_r_safe_message.xml#class_r_message_ptr2_1aad7ec3d149fb9be5cf759728f59d6ad3">RMessagePtr2::HasCapabilityL(TCapability,TCapability,const char *)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_den_1_1_r_safe_message.xml#class_r_message_ptr2_1ace8e737c4209ac8ba2375bafd74631b6">RMessagePtr2::HasCapabilityL(TCapability,const char *)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_den_1_1_r_safe_message.xml#class_r_message_ptr2_1ade03fb1850c217d82ae57c9c3ad639d6">RMessagePtr2::Identity()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_den_1_1_r_safe_message.xml#class_r_message_ptr2_1aef620e3b3ff6c7e930ace417a4d75ad5">RMessagePtr2::IsNull()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_den_1_1_r_safe_message.xml#class_r_message_ptr2_1a8f6e46e27ae3f5f352b1eeb43e63fa39">RMessagePtr2::Kill(TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_den_1_1_r_safe_message.xml#class_r_message_ptr2_1ac435dedf7972d36fe142afc6a6211c2d">RMessagePtr2::Panic(const TDesC &amp;,TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_den_1_1_r_safe_message.xml#class_r_message_ptr2_1a664d4b869d0e0b403fb6fbfab6813fe1">RMessagePtr2::RMessagePtr2()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_den_1_1_r_safe_message.xml#class_r_message_ptr2_1afe0503f090702cb540e20d4da1900ff6">RMessagePtr2::SecureId()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_den_1_1_r_safe_message.xml#class_r_message_ptr2_1aadba3cb14f077a61b17f20f3ca1a211e">RMessagePtr2::SetProcessPriority(TProcessPriority)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_den_1_1_r_safe_message.xml#class_r_message_ptr2_1a0dde865a7998448d50da439b1c097ed6">RMessagePtr2::SetProcessPriorityL(TProcessPriority)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_den_1_1_r_safe_message.xml#class_r_message_ptr2_1a1ff499a2f74478dab42bcdf77e62f20d">RMessagePtr2::Terminate(TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_den_1_1_r_safe_message.xml#class_r_message_ptr2_1ae106e90e6228556c499b012fda1bfdc5">RMessagePtr2::VendorId()const</cxxClassFunctionInherited>
+			<cxxClassVariableInherited href="class_den_1_1_r_safe_message.xml#class_r_message_ptr2_1af0cf445f6f91ef62a02d3be9bd091566">RMessagePtr2::iHandle</cxxClassVariableInherited>
+		</cxxClassInheritsDetail>
+	</cxxClassInherits>
+</cxxClass>

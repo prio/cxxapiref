@@ -1,0 +1,269 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_c_parameter_bundle">
+	<apiName>CParameterBundle</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassDerivations>
+				<cxxClassDerivation>
+					<cxxClassDerivationAccessSpecifier value="public"/>
+					<cxxClassBaseClass href="class_c_parameter_bundle_base.xml#class_c_parameter_bundle_base">CParameterBundleBase</cxxClassBaseClass>
+				</cxxClassDerivation>
+			</cxxClassDerivations>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_parameterbundle.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="307"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/comms-infras/es_parameterbundle.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="299"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="374"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>Container for (bundle of) parameter set containers.</p>
+			<p>This class can&apos;t be used directly, but must be subclassed, as the NewL/LoadL refer to the subclass.</p>
+			<p>May contain and 0..N parameter families of type PARAMSETCONTAINERTYPE. </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_c_parameter_bundle_1ae2415eb3b66674abcbce729273c6247d">
+		<apiName>NewL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>SUBCLASS *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CParameterBundle</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline static SUBCLASS * NewL()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CParameterBundle::NewL()</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_c_parameter_bundle_base.xml#class_c_parameter_bundle_base_1a74e6e56779ab69a82dc5ca5473abd701">CParameterBundleBase::NewL()</cxxFunctionReimplemented>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_parameterbundle.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="316"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="310"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="318"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Creates a new instance of a parameter bundle (heap object).</p>
+				<p>newly created instance of a parameter bundle </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_parameter_bundle_1afaec549f9b521eb8e05cb0fcf769568b">
+		<apiName>LoadL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>SUBCLASS *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CParameterBundle</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline static SUBCLASS * LoadL(TDesC8 &amp;aDes)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CParameterBundle::LoadL(TDesC8 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Buffer containing the serialised object information </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_parameterbundle.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="326"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="320"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="332"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Creates a new parameter set bundle from a buffer containing the serialised object.</p>
+				<p>a pointer to a parameter bundle if successful, otherwise leaves with system error code. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_parameter_bundle_1aedcc3c6ef8c26263a20177b37bb4566a">
+		<apiName>Load</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CParameterBundle</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt Load(const TDesC8 &amp;aDes)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CParameterBundle::Load(const TDesC8 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Buffer containing the serialised bundle object </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_parameterbundle.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="341"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="334"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="353"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Instructs this sub-connection bundle to set its members based on the serialiesd data in the buffer passed.</p>
+				<p>KErrNone if successful, otherwise system wide error </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_parameter_bundle_1a66da4f665fb4a4e08463dc3a2f8222c6">
+		<apiName>GetParamSetContainer</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>PARAMSETCONTAINERTYPE *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CParameterBundle</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline PARAMSETCONTAINERTYPE * GetParamSetContainer(TInt aIndex)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CParameterBundle::GetParamSetContainer(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_c_parameter_bundle_base.xml#class_c_parameter_bundle_base_1ac5661f437fd16f9dea3859653e8d5f5c">CParameterBundleBase::GetParamSetContainer(TInt)</cxxFunctionReimplemented>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote>index of the container to get </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_parameterbundle.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="356"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="355"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="358"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Pick out the parameter set container at the given index in the bundle. Matching container or NULL pointer if index out of range </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_parameter_bundle_1a02ac1e91a37a5cd9c5e2827616ebed8b">
+		<apiName>GetParamSetContainer</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>const PARAMSETCONTAINERTYPE *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CParameterBundle</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline const PARAMSETCONTAINERTYPE * GetParamSetContainer(TInt aIndex) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CParameterBundle::GetParamSetContainer(TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_c_parameter_bundle_base.xml#class_c_parameter_bundle_base_1a89863891886db7e9855a773130955530">CParameterBundleBase::GetParamSetContainer(TInt)const</cxxFunctionReimplemented>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_parameterbundle.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="361"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="360"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="363"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_parameter_bundle_1a00db3fa2c5cc7eb94a2076043fd9b4cf">
+		<apiName>FindParamSetContainer</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>PARAMSETCONTAINERTYPE *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CParameterBundle</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline PARAMSETCONTAINERTYPE * FindParamSetContainer(TUint32 aContainerId)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CParameterBundle::FindParamSetContainer(TUint32)</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_c_parameter_bundle_base.xml#class_c_parameter_bundle_base_1ae16548e68dc4fdb4c64159cfdb286351">CParameterBundleBase::FindParamSetContainer(TUint32)</cxxFunctionReimplemented>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a8240e11f17c80b6b222fc2af50234da4">TUint32</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aContainerId</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Id of the container to match against </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_parameterbundle.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="366"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="365"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="368"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Search the parameter bundle for a parameter set container Matching container or NULL pointer if not found </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_parameter_bundle_1a7f3f2408abcd17631bdea96d4daae0f2">
+		<apiName>CParameterBundle</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>CParameterBundle</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline CParameterBundle()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CParameterBundle::CParameterBundle()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_parameterbundle.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="372"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="371"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="373"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxClassInherits>
+		<cxxClassInheritsDetail>
+			<cxxClassFunctionInherited href="class_c_parameter_bundle.xml#class_c_base_1a240de7932690a4e987d75690b0b6f82b">CBase::CBase()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_parameter_bundle.xml#class_c_base_1ac0a06aeab68b3e01be81f9dd79e011c6">CBase::Delete(CBase *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_parameter_bundle.xml#class_c_base_1aae681a54d9c9b10c7d42e7e32ff109d5">CBase::Extension_(TUint,TAny *&amp;,TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_parameter_bundle.xml#class_c_base_1af4c4965092a763b0856ccbfa3cf99eaf">CBase::operator new(TUint)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_parameter_bundle.xml#class_c_base_1ab9e5f557dea4db22886189926687ddc1">CBase::operator new(TUint,TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_parameter_bundle.xml#class_c_base_1aa464dd21494443ac109084ed03b81f28">CBase::operator new(TUint,TLeave)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_parameter_bundle.xml#class_c_base_1af8429815362d4df6fecd47179e0c5dfe">CBase::operator new(TUint,TLeave,TUint)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_parameter_bundle.xml#class_c_base_1a80505bdf8b1b20a2ed102307a78eeeeb">CBase::operator new(TUint,TUint)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_parameter_bundle.xml#class_c_base_1a1390361b94424be22bb2b1020eb400ea">CBase::~CBase()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_parameter_bundle.xml#class_c_parameter_bundle_base_1a841606198e71883a0835d9e1bf558503">CParameterBundleBase::AddParamSetContainer(CParameterSetContainer &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_parameter_bundle.xml#class_c_parameter_bundle_base_1af4a45162c1fe8c66f58f14912a3bfa6a">CParameterBundleBase::AddParamSetContainerL(CParameterSetContainer &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_parameter_bundle.xml#class_c_parameter_bundle_base_1af10a4e8f1aee714adf59e9b85872cbce">CParameterBundleBase::CParameterBundleBase()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_parameter_bundle.xml#class_c_parameter_bundle_base_1a4b9fe0f2c98b1525504d7f13c4aca587">CParameterBundleBase::CountParamSetContainers()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_parameter_bundle.xml#class_c_parameter_bundle_base_1aa725414ac12dded87f3ee019516ca675">CParameterBundleBase::FindParamSetContainer(TUint32)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_parameter_bundle.xml#class_c_parameter_bundle_base_1ae04b2e5ad5e45df96493ea5f2acf86be">CParameterBundleBase::FindParameterSet(const Meta::STypeId &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_parameter_bundle.xml#class_c_parameter_bundle_base_1abe91e7a717ce450ba2b37cca051f1457">CParameterBundleBase::FindParameterSet(const Meta::STypeId &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_parameter_bundle.xml#class_c_parameter_bundle_base_1a20599a79a1c67946ea74e5a75cbd9232">CParameterBundleBase::Length()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_parameter_bundle.xml#class_c_parameter_bundle_base_1a63696b0021623732503819b0fb36ed05">CParameterBundleBase::RemoveParamSetContainer(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_parameter_bundle.xml#class_c_parameter_bundle_base_1a2a6ae4ccf39ce4c6868f9019ed22b630">CParameterBundleBase::ReplaceParamSetContainer(CParameterSetContainer *,CParameterSetContainer *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_parameter_bundle.xml#class_c_parameter_bundle_base_1a06ae2e249b24c25fa22796562f160d3f">CParameterBundleBase::ReplaceParamSetContainerL(CParameterSetContainer *,CParameterSetContainer *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_parameter_bundle.xml#class_c_parameter_bundle_base_1a43b586d974db0f1a582156475508ff6e">CParameterBundleBase::Store(TDes8 &amp;)const</cxxClassFunctionInherited>
+			<cxxClassVariableInherited href="class_c_parameter_bundle.xml#class_c_parameter_bundle_base_1a39fd18854bdce13a4cfeccd0671c19a4">CParameterBundleBase::iSetContainers</cxxClassVariableInherited>
+			<cxxClassFunctionInherited href="class_c_parameter_bundle.xml#class_c_parameter_bundle_base_1a3064d0667bf8b927f1c94ecd724539d6">CParameterBundleBase::~CParameterBundleBase()</cxxClassFunctionInherited>
+		</cxxClassInheritsDetail>
+	</cxxClassInherits>
+</cxxClass>

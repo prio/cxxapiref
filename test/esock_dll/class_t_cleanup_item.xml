@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_t_cleanup_item">
+	<apiName>TCleanupItem</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="1309"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="1298"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="1317"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>Encapsulates a cleanup operation and an object on which the operation is to be performed.</p>
+			<p>The class allows cleanup to be more sophisticated than simply deleting objects, for example, releasing access to some shared resource. </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_t_cleanup_item_1ae526a9ec4bb85566cc5aa9d4f6f9698f">
+		<apiName>TCleanupItem</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TCleanupItem</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TCleanupItem(TCleanupOperation anOperation)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TCleanupItem::TCleanupItem(TCleanupOperation)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32base_8h.xml#_1a9536ac18f9043f59674c0c44e087fe35">TCleanupOperation</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anOperation</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A cleanup operation which will be invoked by the pop and destroy action resulting from a subsequent call to CleanupStack::PopAndDestroy(). </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1311"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="2974"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="2983"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Constructs the object with a cleanup operation.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_cleanup_item_1a426b805f7a68d5e6aadd7603ae065a14">
+		<apiName>TCleanupItem</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TCleanupItem</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TCleanupItem(TCleanupOperation anOperation, TAny *aPtr)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TCleanupItem::TCleanupItem(TCleanupOperation,TAny *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32base_8h.xml#_1a9536ac18f9043f59674c0c44e087fe35">TCleanupOperation</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anOperation</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A cleanup operation which will be invoked by the pop and destroy action resulting from a subsequent call to CleanupStack::PopAndDestroy().</apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPtr</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A pointer to an object which is the target of the cleanup operation. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1312"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="2988"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="3001"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Constructs the object with a cleanup operation and a pointer to the object to be cleaned up.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxVariable id="class_t_cleanup_item_1ac4d33a580b8901f016659138d308d979">
+		<apiName>iOperation</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32base_8h.xml#_1a9536ac18f9043f59674c0c44e087fe35">TCleanupOperation</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TCleanupItem</cxxVariableScopedName>
+				<cxxVariablePrototype>TCleanupOperation iOperation</cxxVariablePrototype>
+				<cxxVariableNameLookup>TCleanupItem::iOperation</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1314"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_t_cleanup_item_1a00f8ae13b31e2839667d5db254c019b6">
+		<apiName>iPtr</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TCleanupItem</cxxVariableScopedName>
+				<cxxVariablePrototype>TAny * iPtr</cxxVariablePrototype>
+				<cxxVariableNameLookup>TCleanupItem::iPtr</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1315"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+</cxxClass>

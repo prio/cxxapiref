@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (c) 2011 Nokia Corporation and/or its subsidiary(-ies).
+All rights reserved.        
+        -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<reference id="cxxEnumerator" outputclass="element" xml:lang="en-us">
+<title>cxxEnumerator</title>
+<shortdesc>The &lt;cxxEnumerator> element within the &lt;cxxEnumerators>
+element provides the details of an enumerator defined within an enumeration.</shortdesc>
+<refbody>
+<section>             <title>Description</title>             <p>An
+enumerator is a named constant integer value introduced by an enumeration
+type. The &lt;cxxEnumerator> element contains the child elements <?Pub
+Caret?>&lt;cxxEnumeratorScopedName>, &lt;cxxEnumeratorPrototype>,
+&lt;cxxEnumeratorNameLookup>, &lt;cxxEnumeratorInitialiser> and &lt;cxxEnumeratorAPIItemLocation>
+to describe the details of the enumerator.</p>         </section>
+<example><title>Example</title>         <codeblock>&lt;cxxEnumerators>
+    &lt;cxxEnumerator id="eleft">
+        &lt;apiName>ELeft&lt;/apiName>
+		&lt;shortdesc>One of the CGraphicsContext enumerators.&lt;/shortdesc>
+        &lt;cxxEnumeratorScopedName>CGraphicsContext&lt;/cxxEnumeratorScopedName>
+        &lt;cxxEnumeratorPrototype>ELeft&lt;/cxxEnumeratorPrototype>
+        &lt;cxxEnumeratorNameLookup>CGraphicsContext::ELeft&lt;/cxxEnumeratorNameLookup>
+        &lt;cxxEnumeratorAPIItemLocation>
+            &lt;cxxEnumeratorDeclarationFile name="filePath" value="C:/src/include/gdi.h"/>
+            &lt;cxxEnumeratorDeclarationFileLine name="lineNumber" value="1722"/>
+        &lt;/cxxEnumeratorAPIItemLocation>
+        &lt;apiDesc>
+            &lt;p>Text is left-aligned.&lt;/p>
+        &lt;/apiDesc>
+    &lt;/cxxEnumerator>
+    &lt;cxxEnumerator id="enumeratorx">
+        ...
+    &lt;/cxxEnumerator>
+	...
+&lt;/cxxEnumerators></codeblock>         </example>
+<section
+conref="../packagedef.dita#cxxEnumerator-reference/cxxEnumerator-containedBy-section"
+></section>
+<section
+conref="../packagedef.dita#cxxEnumerator-reference/cxxEnumerator-contains-section"
+></section>
+<section
+conref="../packagedef.dita#cxxEnumerator-reference/cxxEnumerator-contentModel-section"
+></section>
+<section
+conref="../packagedef.dita#cxxEnumerator-reference/cxxEnumerator-attList-section"
+></section>
+<section
+conref="../packagedef.dita#cxxEnumerator-reference/cxxEnumerator-classValue-section"
+></section>
+</refbody>
+</reference>
+<?Pub *0000002408?>

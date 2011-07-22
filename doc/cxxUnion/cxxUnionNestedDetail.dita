@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (c) 2011 Nokia Corporation and/or its subsidiary(-ies).
+All rights reserved.        
+        -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<reference id="cxxUnionNestedDetail" outputclass="element"
+xml:lang="en-us">
+<title>cxxUnionNestedDetail</title>
+<shortdesc>The &lt;cxxUnionNestedDetail> element provides details
+about the nested members of a C++ union.</shortdesc>
+<refbody>
+<section>             <title>Description</title>             <p>In
+the &lt;cxxUnionNestedDetail> element, the &lt;cxxUnionNestedClass>,
+&lt;cxxUnionNestedUnion> and  &lt;cxxUnionNestedStruct> elements are
+provided to indicate all members that can be nested inside a C++ union.
+ <?Pub Caret?>&lt;cxxUnionNestedDetail> must have at least one of
+these child elements and each one can occur multiple times.</p>  
+      </section>
+<example><title>Example</title>         <codeblock>&lt;cxxUnionNested>
+    &lt;cxxUnionNestedDetail>
+        &lt;cxxUnionNestedStruct href="struct_comms.xml#struct_comms_package">CommsFW::TCFLegacyMessagePacker::TUnion::TLegacyPackage&lt;/cxxUnionNestedStruct>
+        &lt;cxxUnionNestedStruct href="struct_comms.xml#struct_comms_package">CommsFW::TCFLegacyMessagePacker::TUnion::TPackage&lt;/cxxUnionNestedStruct>
+    &lt;/cxxUnionNestedDetail>
+&lt;/cxxUnionNested></codeblock>         </example>
+<section
+conref="../packagedef.dita#cxxUnionNestedDetail-reference/cxxUnionNestedDetail-containedBy-section"
+></section>
+<section
+conref="../packagedef.dita#cxxUnionNestedDetail-reference/cxxUnionNestedDetail-contains-section"
+></section>
+<section
+conref="../packagedef.dita#cxxUnionNestedDetail-reference/cxxUnionNestedDetail-contentModel-section"
+></section>
+<section
+conref="../packagedef.dita#cxxUnionNestedDetail-reference/cxxUnionNestedDetail-attList-section"
+></section>
+<section
+conref="../packagedef.dita#cxxUnionNestedDetail-reference/cxxUnionNestedDetail-classValue-section"
+></section>
+</refbody>
+</reference>
+<?Pub *0000001969?>

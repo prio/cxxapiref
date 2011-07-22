@@ -1,0 +1,1228 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_mesh_machine_1_1_c_node_activity_base">
+	<apiName>MeshMachine::CNodeActivityBase</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassDerivations>
+				<cxxClassDerivation>
+					<cxxClassDerivationAccessSpecifier value="public"/>
+					<cxxClassBaseClass href="class_c_base.xml#class_c_base">CBase</cxxClassBaseClass>
+				</cxxClassDerivation>
+			</cxxClassDerivations>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="442"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="438"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="814"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>Base class for all node activity objects. Non custom node activities will use this by default. </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_mesh_machine_1_1_c_node_activity_base_1a3acfd706b710cc166bfe145145cbaa08">
+		<apiName>NewL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_mesh_machine_1_1_c_node_activity_base.xml#class_mesh_machine_1_1_c_node_activity_base">CNodeActivityBase</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>MeshMachine::CNodeActivityBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>static IMPORT_C CNodeActivityBase * NewL(const TNodeActivity &amp;aActivitySig, AMMNodeBase &amp;aNode)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MeshMachine::CNodeActivityBase::NewL(const TNodeActivity &amp;,AMMNodeBase &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="struct_mesh_machine_1_1_t_node_activity.xml#struct_mesh_machine_1_1_t_node_activity">TNodeActivity</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aActivitySig</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Context information about how the activity is to be started </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_mesh_machine_1_1_a_m_m_node_base.xml#class_mesh_machine_1_1_a_m_m_node_base">AMMNodeBase</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aNode</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The node to which this activity will belong. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="455"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Create a new activity. This should never be called by user code.</p>
+				<p>A pointer to the new Activity base object. Ownership is transferred. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_mesh_machine_1_1_c_node_activity_base_1aef444f6b9a2b3fe00a679eeec5c5d30d">
+		<apiName>ActivityId</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionVirtual/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a7c545c7b28f2e5d128d132d2ea1cdb2b">TUint16</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>MeshMachine::CNodeActivityBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual IMPORT_C TUint16 ActivityId() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MeshMachine::CNodeActivityBase::ActivityId()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="461"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Get the <tt>id</tt> of the activity. The activity id of the activity </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_mesh_machine_1_1_c_node_activity_base_1a63a468ea915d61ae579e526e4223ea21">
+		<apiName>RemoveOriginator</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>MeshMachine::CNodeActivityBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void RemoveOriginator(TInt aIndex)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MeshMachine::CNodeActivityBase::RemoveOriginator(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Index of originator to remove </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="468"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Remove an originator from the originator list.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_mesh_machine_1_1_c_node_activity_base_1a98366fdd461fbefd9593a2dbe36c28ff">
+		<apiName>IsIdle</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionVirtual/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>MeshMachine::CNodeActivityBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual IMPORT_C TBool IsIdle() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MeshMachine::CNodeActivityBase::IsIdle()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="474"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Check if the activity is running. ETrue if the activity is still running, otherwise EFalse. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_mesh_machine_1_1_c_node_activity_base_1a5a5e6c8f757f8c5a9cc3d7170b5134b9">
+		<apiName>SetIdle</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionVirtual/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>MeshMachine::CNodeActivityBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual IMPORT_C void SetIdle()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MeshMachine::CNodeActivityBase::SetIdle()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="480"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Put the activity into the idle state. This stops the activity running and notifies the mesh machine that it&apos;s ok to delete this activity. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_mesh_machine_1_1_c_node_activity_base_1a585b131390fe9df9682ada795314f8fb">
+		<apiName>ActivitySigId</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>MeshMachine::CNodeActivityBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TUint ActivitySigId() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MeshMachine::CNodeActivityBase::ActivitySigId()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="489"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="488"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="491"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Return the activity signature id of the activity. This may not necessarily be the same as the activity id in the case of parallel activities, where the activity id will be [8 bit unique id|8 bit activity sig]</p>
+				<p>The activity signature id </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_mesh_machine_1_1_c_node_activity_base_1a375df579b7e63d3a8558f5cf2515b01d">
+		<apiName>Error</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>MeshMachine::CNodeActivityBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt Error() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MeshMachine::CNodeActivityBase::Error()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="498"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="497"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="500"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Get the current error state for the activity. The activity&apos;s current error state. <tt>KErrNone</tt> indicates there is no error. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_mesh_machine_1_1_c_node_activity_base_1a1627d8234b4084259d559fa6092343ee">
+		<apiName>SetError</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>MeshMachine::CNodeActivityBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void SetError(TInt aError)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MeshMachine::CNodeActivityBase::SetError(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aError</cxxFunctionParameterDeclarationName>
+						<apiDefNote>error code to set </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="508"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="507"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="513"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Set the error state of the activity.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_mesh_machine_1_1_c_node_activity_base_1ae4777e75ff360641452d317838a59984">
+		<apiName>PostedToId</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>const <apiRelation href="class_messages_1_1_t_node_id.xml#class_messages_1_1_t_node_id">Messages::TNodeId</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>MeshMachine::CNodeActivityBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline const Messages::TNodeId PostedToId() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MeshMachine::CNodeActivityBase::PostedToId()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="520"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="519"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="522"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Get the id of the node that the last request from this activity was sent to. Node id of the last node the activity has posted a request to </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_mesh_machine_1_1_c_node_activity_base_1a1b543514c052b92356fd04adda1f285d">
+		<apiName>KickOffMessageId</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>const <apiRelation href="class_messages_1_1_t_node_signal_1_1_t_message_id.xml#class_messages_1_1_t_node_signal_1_1_t_message_id">Messages::TNodeSignal::TMessageId</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>MeshMachine::CNodeActivityBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline const Messages::TNodeSignal::TMessageId KickOffMessageId() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MeshMachine::CNodeActivityBase::KickOffMessageId()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="529"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="528"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="531"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Get the id of the message that started this activity. Message id of message that kicked off this activity </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_mesh_machine_1_1_c_node_activity_base_1a66d8e082141b4987be7fa31a76d8f43e">
+		<apiName>FirstOriginator</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>const <apiRelation href="class_messages_1_1_t_node_peer_id.xml#class_messages_1_1_t_node_peer_id">Messages::TNodePeerId</apiRelation> &amp;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>MeshMachine::CNodeActivityBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline const Messages::TNodePeerId &amp; FirstOriginator() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MeshMachine::CNodeActivityBase::FirstOriginator()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="538"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="537"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="541"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Get the id of the node that started this activity. Node peer id of the node whose message first kicked off this activity </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_mesh_machine_1_1_c_node_activity_base_1a735be94414c91f6ea170bb5b584ae804">
+		<apiName>SoleOriginator</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>const <apiRelation href="class_messages_1_1_t_node_peer_id.xml#class_messages_1_1_t_node_peer_id">Messages::TNodePeerId</apiRelation> &amp;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>MeshMachine::CNodeActivityBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline const Messages::TNodePeerId &amp; SoleOriginator() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MeshMachine::CNodeActivityBase::SoleOriginator()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="549"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="548"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="552"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>In essence the same as <xref href="class_mesh_machine_1_1_c_node_activity_base.xml#class_mesh_machine_1_1_c_node_activity_base_1a66d8e082141b4987be7fa31a76d8f43e">FirstOriginator()</xref>. This should be used in preference in situations where the activity should be run in parallel, and therefore only ever have one originator. Node peer id of the node whose message first kicked off this activity </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_mesh_machine_1_1_c_node_activity_base_1a7ca4396d3ed4d9bcf8f7808aa7142f7e">
+		<apiName>PostRequestTo</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>MeshMachine::CNodeActivityBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void PostRequestTo(const Messages::RNodeInterface &amp;aRecepient, const Messages::TSignalBase &amp;aMessage, const TBool aRecipientIdCritical=ETrue)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MeshMachine::CNodeActivityBase::PostRequestTo(const Messages::RNodeInterface &amp;,const Messages::TSignalBase &amp;,const TBool)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_messages_1_1_r_node_interface.xml#class_messages_1_1_r_node_interface">Messages::RNodeInterface</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aRecepient</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Endpoint for the message </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_messages_1_1_t_signal_base.xml#class_messages_1_1_t_signal_base">Messages::TSignalBase</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMessage</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Message to send </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aRecipientIdCritical</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>ETrue</cxxFunctionParameterDefaultValue>
+						<apiDefNote>If true, the postedTo id is set to the id of the recipient. If false, the postedTo id is set to null. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="562"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Post a request to a node.</p>
+				<p>
+					<xref href="class_mesh_machine_1_1_c_node_activity_base.xml#class_mesh_machine_1_1_c_node_activity_base_1ae4777e75ff360641452d317838a59984">PostedToId</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_mesh_machine_1_1_c_node_activity_base_1acb84d1b8438958972a3df62d5fc7d729">
+		<apiName>PostRequestTo</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>MeshMachine::CNodeActivityBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void PostRequestTo(const Messages::TNodeId &amp;aRecepient, const Messages::TSignalBase &amp;aMessage, const TBool aRecipientIdCritical=ETrue)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MeshMachine::CNodeActivityBase::PostRequestTo(const Messages::TNodeId &amp;,const Messages::TSignalBase &amp;,const TBool)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_messages_1_1_t_node_id.xml#class_messages_1_1_t_node_id">Messages::TNodeId</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aRecepient</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Endpoint for the message </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_messages_1_1_t_signal_base.xml#class_messages_1_1_t_signal_base">Messages::TSignalBase</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMessage</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Message to send </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aRecipientIdCritical</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>ETrue</cxxFunctionParameterDefaultValue>
+						<apiDefNote>If true, the postedTo id is set to the id of the recipient. If false, the postedTo id is set to null. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="571"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Post a request to a node.</p>
+				<p>
+					<xref href="class_mesh_machine_1_1_c_node_activity_base.xml#class_mesh_machine_1_1_c_node_activity_base_1ae4777e75ff360641452d317838a59984">PostedToId</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_mesh_machine_1_1_c_node_activity_base_1a9dde4b98499b30714edd1aee9784f05b">
+		<apiName>SetPostedTo</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>MeshMachine::CNodeActivityBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void SetPostedTo(const Messages::TNodeId &amp;aNodeId)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MeshMachine::CNodeActivityBase::SetPostedTo(const Messages::TNodeId &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_messages_1_1_t_node_id.xml#class_messages_1_1_t_node_id">Messages::TNodeId</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aNodeId</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Node id to set the postedTo id to </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="578"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Manually set the postedTo id</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_mesh_machine_1_1_c_node_activity_base_1a520f7840a36a013e742c4ac59c9b70bd">
+		<apiName>ClearPostedTo</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>MeshMachine::CNodeActivityBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void ClearPostedTo()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MeshMachine::CNodeActivityBase::ClearPostedTo()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="583"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Clear the postedTo id </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_mesh_machine_1_1_c_node_activity_base_1ad32d53df4cfba6ee3b4dab7497ef3e29">
+		<apiName>Cancel</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionVirtual/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>MeshMachine::CNodeActivityBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual IMPORT_C void Cancel(TNodeContextBase &amp;aContext)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MeshMachine::CNodeActivityBase::Cancel(TNodeContextBase &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_mesh_machine_1_1_t_node_context_base.xml#class_mesh_machine_1_1_t_node_context_base">TNodeContextBase</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aContext</cxxFunctionParameterDeclarationName>
+						<apiDefNote>the context in which the activity is being executed  </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="609"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Cancels the activity. Only to be called by the meshmachine. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_mesh_machine_1_1_c_node_activity_base_1a4a1b14625247ffb1ef1e0ce1d71453ad">
+		<apiName>Next</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionVirtual/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>MeshMachine::CNodeActivityBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual IMPORT_C TBool Next(TNodeContextBase &amp;aContext)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MeshMachine::CNodeActivityBase::Next(TNodeContextBase &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_mesh_machine_1_1_t_node_context_base.xml#class_mesh_machine_1_1_t_node_context_base">TNodeContextBase</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aContext</cxxFunctionParameterDeclarationName>
+						<apiDefNote>the context in which the activity is being executed </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="617"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Attempt to advance the activity one entry. Only to be called by the mesh machine Whether the activity advanced  </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_mesh_machine_1_1_c_node_activity_base_1a5ad9c5110a810ea7c747134121d19fde">
+		<apiName>FindOriginator</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>MeshMachine::CNodeActivityBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt FindOriginator(const Messages::RNodeInterface &amp;aPeerToFind) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MeshMachine::CNodeActivityBase::FindOriginator(const Messages::RNodeInterface &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_messages_1_1_r_node_interface.xml#class_messages_1_1_r_node_interface">Messages::RNodeInterface</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPeerToFind</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Matching criteria </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="625"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Find the originator matching the parameters Index of the matching originator. KErrNotFound if not found.  </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_mesh_machine_1_1_c_node_activity_base_1af25d5d775a2086f87a5c2eded9457bcf">
+		<apiName>FindOriginator</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>MeshMachine::CNodeActivityBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt FindOriginator(const Messages::TRuntimeCtxId &amp;aPeerToFind) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MeshMachine::CNodeActivityBase::FindOriginator(const Messages::TRuntimeCtxId &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_messages_1_1_t_runtime_ctx_id.xml#class_messages_1_1_t_runtime_ctx_id">Messages::TRuntimeCtxId</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPeerToFind</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Matching criteria </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="633"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Find the originator matching the parameters Index of the matching originator. KErrNotFound if not found.  </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_mesh_machine_1_1_c_node_activity_base_1a7d2b59669162f44c61686df1ff6302a1">
+		<apiName>FindOriginator</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>MeshMachine::CNodeActivityBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt FindOriginator(const Messages::TNodePeerId &amp;aOriginator) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MeshMachine::CNodeActivityBase::FindOriginator(const Messages::TNodePeerId &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_messages_1_1_t_node_peer_id.xml#class_messages_1_1_t_node_peer_id">Messages::TNodePeerId</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aOriginator</cxxFunctionParameterDeclarationName>
+						<apiDefNote>xx </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="642"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Find the originator matching the parameters Index of the matching originator. KErrNotFound if not found.</p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_mesh_machine_1_1_c_node_activity_base_1af8ed44f0d3cab824b28fa87898d1468a">
+		<apiName>PostToOriginator</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>MeshMachine::CNodeActivityBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TBool PostToOriginator(const Messages::TNodePeerId &amp;aOriginator, const Messages::TSignalBase &amp;aMessage) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MeshMachine::CNodeActivityBase::PostToOriginator(const Messages::TNodePeerId &amp;,const Messages::TSignalBase &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_messages_1_1_t_node_peer_id.xml#class_messages_1_1_t_node_peer_id">Messages::TNodePeerId</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aOriginator</cxxFunctionParameterDeclarationName>
+						<apiDefNote>originator to post the message to </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_messages_1_1_t_signal_base.xml#class_messages_1_1_t_signal_base">Messages::TSignalBase</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMessage</cxxFunctionParameterDeclarationName>
+						<apiDefNote>message to post </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="651"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Post a message to an originator Whether the posting succeeded  </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_mesh_machine_1_1_c_node_activity_base_1a035b0944aeccf83eeffc500121f8fbf6">
+		<apiName>PostToOriginators</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>MeshMachine::CNodeActivityBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt PostToOriginators(const Messages::TSignalBase &amp;aMessageSig, TUint32 aFlagsToSet=0, TUint32 aFlagsToClear=0)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MeshMachine::CNodeActivityBase::PostToOriginators(const Messages::TSignalBase &amp;,TUint32,TUint32)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_messages_1_1_t_signal_base.xml#class_messages_1_1_t_signal_base">Messages::TSignalBase</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMessageSig</cxxFunctionParameterDeclarationName>
+						<apiDefNote>the message to post </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a8240e11f17c80b6b222fc2af50234da4">TUint32</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFlagsToSet</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>0</cxxFunctionParameterDefaultValue>
+						<apiDefNote>Flags to set on the peer as the message is being sent </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a8240e11f17c80b6b222fc2af50234da4">TUint32</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFlagsToClear</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>0</cxxFunctionParameterDefaultValue>
+						<apiDefNote>Flags to cleared on the peer as the message is being sent </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="661"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Post a message to all originators number of originators the message was posted to  </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_mesh_machine_1_1_c_node_activity_base_1ab304e7de40365149d62ebf2bb2f1fa2c">
+		<apiName>Abort</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>MeshMachine::CNodeActivityBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Abort(TNodeContextBase &amp;aContext, TBool aIsNodeBeingDestroyed=EFalse)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MeshMachine::CNodeActivityBase::Abort(TNodeContextBase &amp;,TBool)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_mesh_machine_1_1_t_node_context_base.xml#class_mesh_machine_1_1_t_node_context_base">TNodeContextBase</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aContext</cxxFunctionParameterDeclarationName>
+						<apiDefNote>the context in which the activity is being executed </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIsNodeBeingDestroyed</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>EFalse</cxxFunctionParameterDefaultValue>
+						<apiDefNote>indicate to the activity as to whether the node is being destroyed  </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="669"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Calls cancel on current state. Sends TError to all originators and sets activity idle </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_mesh_machine_1_1_c_node_activity_base_1ac7e43d3d6d5c4649f7a2dbadab4c498d">
+		<apiName>CNodeActivityBase</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionExplicit/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType>IMPORT_C</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>MeshMachine::CNodeActivityBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C CNodeActivityBase(const TNodeActivity &amp;aActivitySig, AMMNodeBase &amp;aNode)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MeshMachine::CNodeActivityBase::CNodeActivityBase(const TNodeActivity &amp;,AMMNodeBase &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="struct_mesh_machine_1_1_t_node_activity.xml#struct_mesh_machine_1_1_t_node_activity">TNodeActivity</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aActivitySig</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Signature with which to create the activity </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_mesh_machine_1_1_a_m_m_node_base.xml#class_mesh_machine_1_1_a_m_m_node_base">AMMNodeBase</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aNode</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Node which will own the activity </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="678"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Constructor for <xref href="class_mesh_machine_1_1_c_node_activity_base.xml#class_mesh_machine_1_1_c_node_activity_base">CNodeActivityBase</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_mesh_machine_1_1_c_node_activity_base_1a5106da3b2e24cde0ba5f4324f764558a">
+		<apiName>~CNodeActivityBase</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionVirtual/>
+				<cxxFunctionDestructor/>
+				<cxxFunctionDeclaredType>IMPORT_C</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>MeshMachine::CNodeActivityBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual IMPORT_C ~CNodeActivityBase()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MeshMachine::CNodeActivityBase::~CNodeActivityBase()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="682"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Destructor. If the Activity is running in error mode, a message is sent to the originator. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_mesh_machine_1_1_c_node_activity_base_1a5a6b91e306b7637250135c39ed7b8515">
+		<apiName>Destroy</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionInline/>
+				<cxxFunctionVirtual/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>MeshMachine::CNodeActivityBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline virtual void Destroy()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MeshMachine::CNodeActivityBase::Destroy()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="690"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="689"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="692"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Destroy the activity.</p>
+				<p>Used primarily by preallocated activities to return extracted space </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_mesh_machine_1_1_c_node_activity_base_1a625fe1c76e3e9da41823aa11063967e8">
+		<apiName>DoFetchInterfaceControlL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionVirtual/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_net_interfaces_1_1_t_interface_control.xml#class_net_interfaces_1_1_t_interface_control">NetInterfaces::TInterfaceControl</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>MeshMachine::CNodeActivityBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual IMPORT_C NetInterfaces::TInterfaceControl * DoFetchInterfaceControlL(TInt aInterfaceId)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MeshMachine::CNodeActivityBase::DoFetchInterfaceControlL(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aInterfaceId</cxxFunctionParameterDeclarationName>
+						<apiDefNote>id of requested interface </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="700"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Interface control for accessing the extension interfaces of the activity </p>
+				<p>TInterfaceControl </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_mesh_machine_1_1_c_node_activity_base_1a04b83f351aa13775b67783d601a7cc06">
+		<apiName>Signal</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionInline/>
+				<cxxFunctionVirtual/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>MeshMachine::CNodeActivityBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline virtual TBool Signal(TNodeContextBase &amp;)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MeshMachine::CNodeActivityBase::Signal(TNodeContextBase &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_mesh_machine_1_1_t_node_context_base.xml#class_mesh_machine_1_1_t_node_context_base">TNodeContextBase</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<apiDefNote>The context in which the activity is being executed </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="710"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="710"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="710"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Signal the activity that an event has happened in the mesh machine. Used for waking up sleeping activities which use mutexes.</p>
+				<p>ETrue if the activity was awoken </p>
+				<p>
+					<xref href="class_mesh_machine_1_1_a_activity_semaphore.xml#class_mesh_machine_1_1_a_activity_semaphore">AActivitySemaphore</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_mesh_machine_1_1_c_node_activity_base_1a09631aab3b00619a999b02cd120f1b1d">
+		<apiName>Accept</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionDeclaredType>const <apiRelation href="struct_net_state_machine_1_1_t_state_triple.xml#struct_net_state_machine_1_1_t_state_triple">NetStateMachine::TStateTriple</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>MeshMachine::CNodeActivityBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>static const NetStateMachine::TStateTriple * Accept(TNodeContextBase &amp;aContext, const TNodeActivity &amp;aActivitySig, TInt aTransitionTag)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MeshMachine::CNodeActivityBase::Accept(TNodeContextBase &amp;,const TNodeActivity &amp;,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_mesh_machine_1_1_t_node_context_base.xml#class_mesh_machine_1_1_t_node_context_base">TNodeContextBase</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aContext</cxxFunctionParameterDeclarationName>
+						<apiDefNote>the context in which the activity may be executed </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="struct_mesh_machine_1_1_t_node_activity.xml#struct_mesh_machine_1_1_t_node_activity">TNodeActivity</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aActivitySig</cxxFunctionParameterDeclarationName>
+						<apiDefNote>the activity which we are testing for the accept condition </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aTransitionTag</cxxFunctionParameterDeclarationName>
+						<apiDefNote>the condition which must be matched by the first entry for the activity to be accepted. Set to KExecuteAlways to skip this check</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="723"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Test whether a activity can start given the current context. If it can, the first transition will be executed. Note that this is a static method, and as such the activity hasn&apos;t been instanciated when this is called</p>
+				<p>the first entry triple for the activity if it&apos;s accepted. NULL otherwise </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_mesh_machine_1_1_c_node_activity_base_1a78261c2ad762c847f9cb6cdcb0be4238">
+		<apiName>StartL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionVirtual/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>MeshMachine::CNodeActivityBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual IMPORT_C void StartL(TNodeContextBase &amp;aContext, const Messages::XNodePeerId &amp;aOriginator, const NetStateMachine::TStateTriple &amp;aFirst)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MeshMachine::CNodeActivityBase::StartL(TNodeContextBase &amp;,const Messages::XNodePeerId &amp;,const NetStateMachine::TStateTriple &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_mesh_machine_1_1_t_node_context_base.xml#class_mesh_machine_1_1_t_node_context_base">TNodeContextBase</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aContext</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The context to start the activity in </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_messages_1_1_x_node_peer_id.xml#class_messages_1_1_x_node_peer_id">Messages::XNodePeerId</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aOriginator</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The peer that requires this activity to start </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="struct_net_state_machine_1_1_t_state_triple.xml#struct_net_state_machine_1_1_t_state_triple">NetStateMachine::TStateTriple</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFirst</cxxFunctionParameterDeclarationName>
+						<apiDefNote>First entry triple in the activity, as returned by Accept() </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="732"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Start a new activity. The first transition should have been run within the <tt>
+						<xref href="class_mesh_machine_1_1_c_node_activity_base.xml#class_mesh_machine_1_1_c_node_activity_base_1a09631aab3b00619a999b02cd120f1b1d">Accept()</xref>
+					</tt> method before this is called.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_mesh_machine_1_1_c_node_activity_base_1a4f7cef677def48f41b3e7f65ac0a063f">
+		<apiName>AppendActivityL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>MeshMachine::CNodeActivityBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void AppendActivityL()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MeshMachine::CNodeActivityBase::AppendActivityL()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="742"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Append self to the node&apos;s list of running activities.</p>
+				<p>Should only be accessed from <tt>Activity::NewL</tt>. Generally activities can choose to be inserted or appended (if they do not choose they are appended by default). When inserting, extreme caution must be taken, as this behavior is reserved for destroying activities. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_mesh_machine_1_1_c_node_activity_base_1a12f4e8cace34326eade4e733e9a28110">
+		<apiName>AppendPreallocatedActivity</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>MeshMachine::CNodeActivityBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void AppendPreallocatedActivity()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MeshMachine::CNodeActivityBase::AppendPreallocatedActivity()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="748"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Append self to the node&apos;s list of running activities. This should only be called if you are certain that the activity list has space for the append. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_mesh_machine_1_1_c_node_activity_base_1aaedd7c9acbcb6b8af0f01b500028d455">
+		<apiName>InsertPreallocatedDestroyActivity</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>MeshMachine::CNodeActivityBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void InsertPreallocatedDestroyActivity()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MeshMachine::CNodeActivityBase::InsertPreallocatedDestroyActivity()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="753"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Insert an activity at the start of the node&apos;s list of running activities. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_mesh_machine_1_1_c_node_activity_base_1aac576dedae57d702ea4a5222d5251f43">
+		<apiName>BorrowPreallocatedSpace</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>MeshMachine::CNodeActivityBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>static IMPORT_C TAny * BorrowPreallocatedSpace(AMMNodeBase &amp;aNode, TUint aSize)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MeshMachine::CNodeActivityBase::BorrowPreallocatedSpace(AMMNodeBase &amp;,TUint)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_mesh_machine_1_1_a_m_m_node_base.xml#class_mesh_machine_1_1_a_m_m_node_base">AMMNodeBase</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aNode</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The node that owns the preallocated space. This must be the node that the activity runs on. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSize</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Size of buffer to allocate.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="770"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Borrow some preallocated memory from the node. This preallocated memory is used for activities that absolutely cannot fail in any scenario, such as for Destroying the node. For this reason, when the node is created, some memory is allocated so that a destroying activity can&apos;t even fail in an out of memory situation.</p>
+				<p>This method is static as the memory must be borrowed before the activity object is constructed.</p>
+				<p>The memory is returned using <tt>
+						<xref href="class_mesh_machine_1_1_c_node_activity_base.xml#class_mesh_machine_1_1_c_node_activity_base_1a9307a179494793eeca8d825d2be6ad37">ReturnPreallocatedSpace()</xref>
+					</tt>.</p>
+				<p>A pointer to the allocated block of memory </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_mesh_machine_1_1_c_node_activity_base_1a9307a179494793eeca8d825d2be6ad37">
+		<apiName>ReturnPreallocatedSpace</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>MeshMachine::CNodeActivityBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void ReturnPreallocatedSpace(TAny *aSpace)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MeshMachine::CNodeActivityBase::ReturnPreallocatedSpace(TAny *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSpace</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Memory buffer to return. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="778"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Return preallocated space to the node. The node does not have to be passed in as a parameter as it will already be a member of the activity.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_mesh_machine_1_1_c_node_activity_base_1a9d571257c049950fc7e81c4a84f7b474">
+		<apiName>MatchSender</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>MeshMachine::CNodeActivityBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TBool MatchSender(const TNodeContextBase &amp;aContext) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MeshMachine::CNodeActivityBase::MatchSender(const TNodeContextBase &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_mesh_machine_1_1_t_node_context_base.xml#class_mesh_machine_1_1_t_node_context_base">TNodeContextBase</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aContext</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="788"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Test whether aContext carries a message that is to be expected by &apos;this&apos; in its current state. The method is effectivelly a filter that hides the messages flowing throught the node, but not intended for &apos;this&apos;. The method will check:<ul>
+						<li>
+							<p>if aContext carries a message from PostedToId (if set) then the message should be presented to &apos;this&apos;.</p>
+						</li>
+						<li>
+							<p>if aContext carries a message from one of the originators then the message should be presented to &apos;this&apos;. ETrue if the sender of the current message matches PostedToId if it is set. </p>
+						</li>
+					</ul>
+				</p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxVariable id="class_mesh_machine_1_1_c_node_activity_base_1acd7957a5dd8c0c5fd7a9e52d5434eb77">
+		<apiName>iNode</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="protected"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="class_mesh_machine_1_1_a_m_m_node_base.xml#class_mesh_machine_1_1_a_m_m_node_base">AMMNodeBase</apiRelation> &amp;</cxxVariableDeclaredType>
+				<cxxVariableScopedName>MeshMachine::CNodeActivityBase</cxxVariableScopedName>
+				<cxxVariablePrototype>AMMNodeBase &amp; iNode</cxxVariablePrototype>
+				<cxxVariableNameLookup>MeshMachine::CNodeActivityBase::iNode</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="794"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>The node the activity is running on </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_mesh_machine_1_1_c_node_activity_base_1a1ca34ec4802e82c1f90d8809b8745cce">
+		<apiName>iOriginators</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="protected"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="class_r_array.xml#class_r_array">RArray</apiRelation>&lt; <apiRelation href="class_messages_1_1_x_node_peer_id.xml#class_messages_1_1_x_node_peer_id">Messages::XNodePeerId</apiRelation> &gt;</cxxVariableDeclaredType>
+				<cxxVariableScopedName>MeshMachine::CNodeActivityBase</cxxVariableScopedName>
+				<cxxVariablePrototype>RArray&lt; Messages::XNodePeerId &gt; iOriginators</cxxVariablePrototype>
+				<cxxVariableNameLookup>MeshMachine::CNodeActivityBase::iOriginators</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="799"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>All the nodes that have started the same activity </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_mesh_machine_1_1_c_node_activity_base_1a9e4a3cfa604fba5ad023b79f043f406f">
+		<apiName>iError</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>MeshMachine::CNodeActivityBase</cxxVariableScopedName>
+				<cxxVariablePrototype>TInt iError</cxxVariablePrototype>
+				<cxxVariableNameLookup>MeshMachine::CNodeActivityBase::iError</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="802"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_mesh_machine_1_1_c_node_activity_base_1ab40e118d7ef4b294b3b2f1486e783024">
+		<apiName>iActivitySig</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>const <apiRelation href="struct_mesh_machine_1_1_t_node_activity.xml#struct_mesh_machine_1_1_t_node_activity">TNodeActivity</apiRelation> &amp;</cxxVariableDeclaredType>
+				<cxxVariableScopedName>MeshMachine::CNodeActivityBase</cxxVariableScopedName>
+				<cxxVariablePrototype>const TNodeActivity &amp; iActivitySig</cxxVariablePrototype>
+				<cxxVariableNameLookup>MeshMachine::CNodeActivityBase::iActivitySig</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="810"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_mesh_machine_1_1_c_node_activity_base_1acfc98cfcafcade4db97ee5e52c4a70ce">
+		<apiName>iPostedToId</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="class_messages_1_1_t_node_id.xml#class_messages_1_1_t_node_id">Messages::TNodeId</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>MeshMachine::CNodeActivityBase</cxxVariableScopedName>
+				<cxxVariablePrototype>Messages::TNodeId iPostedToId</cxxVariablePrototype>
+				<cxxVariableNameLookup>MeshMachine::CNodeActivityBase::iPostedToId</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="813"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxClassInherits>
+		<cxxClassInheritsDetail>
+			<cxxClassFunctionInherited href="class_mesh_machine_1_1_c_node_activity_base.xml#class_c_base_1a240de7932690a4e987d75690b0b6f82b">CBase::CBase()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_mesh_machine_1_1_c_node_activity_base.xml#class_c_base_1ac0a06aeab68b3e01be81f9dd79e011c6">CBase::Delete(CBase *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_mesh_machine_1_1_c_node_activity_base.xml#class_c_base_1aae681a54d9c9b10c7d42e7e32ff109d5">CBase::Extension_(TUint,TAny *&amp;,TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_mesh_machine_1_1_c_node_activity_base.xml#class_c_base_1af4c4965092a763b0856ccbfa3cf99eaf">CBase::operator new(TUint)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_mesh_machine_1_1_c_node_activity_base.xml#class_c_base_1ab9e5f557dea4db22886189926687ddc1">CBase::operator new(TUint,TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_mesh_machine_1_1_c_node_activity_base.xml#class_c_base_1aa464dd21494443ac109084ed03b81f28">CBase::operator new(TUint,TLeave)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_mesh_machine_1_1_c_node_activity_base.xml#class_c_base_1af8429815362d4df6fecd47179e0c5dfe">CBase::operator new(TUint,TLeave,TUint)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_mesh_machine_1_1_c_node_activity_base.xml#class_c_base_1a80505bdf8b1b20a2ed102307a78eeeeb">CBase::operator new(TUint,TUint)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_mesh_machine_1_1_c_node_activity_base.xml#class_c_base_1a1390361b94424be22bb2b1020eb400ea">CBase::~CBase()</cxxClassFunctionInherited>
+		</cxxClassInheritsDetail>
+	</cxxClassInherits>
+</cxxClass>

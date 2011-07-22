@@ -1,0 +1,1986 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_t_u_trace">
+	<apiName>TUTrace</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/e32utrace.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="163"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/e32utrace.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="162"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="975"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>Class for tracing from user and kernel side.</p>
+			<p>This appends entries to a trace log. Each trace point require classification information to be passed. Classification information, i.e. primary and secondary filter, is meta-data about the trace entry that can be used for filtering, e.g. the trace was inserted by a particular component.</p>
+			<p>In order to append trace points to the trace log they need to be turned on and off at run-time, based on the classification. It is also possible to turn trace points on and off at compile-time using the SYMBIAN_TRACE_ENABLE macro.</p>
+			<p>The class can be used in two ways, either using the static methods without any preparatory work, or by setting up an object which has all necessary information pre-defined which allows each consecutive call to contain a minimum of information. The latter set of methods are more intrusive both at run-time and for foot print.</p>
+			<p>
+				<codeblock>TBool includeContextID = ETrue;
+TBool includePc = EFalse;
+TUint32 traceData = aData;
+TPrimaryFilter filter1 = 253;
+
+TUTrace tracer(filter1, KBinary, includeContextID, includePc);
+tracer.Printf(_L(&quot;My trace point.&quot;));
+tracer.Trace(traceData);
+
+//or
+
+TUTrace::PrintfPrimary(filter1, KBinary, includeContextID, includePc, _L(&quot;My trace point with data %i.&quot;), traceData);
+TUTrace::TracePrimary(filter1, KBinary, includeContextID, includePc, traceData);</codeblock>
+			</p>
+			<p>Note: Trace does not enforce any security. It is the developer&apos;s responsibility to ensure that trace points do not contain any sensitive information that may be used to compromise platform security.</p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxClassNested>
+		<cxxClassNestedDetail>
+			<cxxClassNestedClass href="class_t_u_trace_1_1_t_truncate_overflow16.xml#class_t_u_trace_1_1_t_truncate_overflow16">TUTrace::TTruncateOverflow16</cxxClassNestedClass>
+			<cxxClassNestedClass href="class_t_u_trace_1_1_t_truncate_overflow8.xml#class_t_u_trace_1_1_t_truncate_overflow8">TUTrace::TTruncateOverflow8</cxxClassNestedClass>
+		</cxxClassNestedDetail>
+	</cxxClassNested>
+	<cxxFunction id="class_t_u_trace_1aa784329756abad34e8a861d0a38125ee">
+		<apiName>TUTrace</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TUTrace</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TUTrace(TPrimaryFilter aF1, TTraceSchema aSchema, TBool aIncludeContextID, TBool aIncludePc)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TUTrace::TUTrace(TPrimaryFilter,TTraceSchema,TBool,TBool)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32utrace_8h.xml#_1abdee277fe22c1ab14c69766832f528d8">TPrimaryFilter</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aF1</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Primary filter as classification information </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32utrace_8h.xml#_1a1d76bee0b01dba6dd1e61aabbd0b5d6d">TTraceSchema</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSchema</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The schema used to determine the format of the content </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIncludeContextID</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Include context ID in the trace </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIncludePc</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Include program counter in the trace </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32utrace.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="176"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="175"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="178"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Construct a trace object with classification for primary filter only.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_u_trace_1a89759db5b371e088c2712e725429309a">
+		<apiName>TUTrace</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TUTrace</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TUTrace(TPrimaryFilter aF1, TSecondaryFilter aF2, TTraceSchema aSchema, TBool aIncludeContextID, TBool aIncludePc)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TUTrace::TUTrace(TPrimaryFilter,TSecondaryFilter,TTraceSchema,TBool,TBool)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32utrace_8h.xml#_1abdee277fe22c1ab14c69766832f528d8">TPrimaryFilter</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aF1</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Primary filter as classification information </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32utrace_8h.xml#_1a7209e4747f5df1b0665454dd431f0827">TSecondaryFilter</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aF2</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Secondary filter as classification information </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32utrace_8h.xml#_1a1d76bee0b01dba6dd1e61aabbd0b5d6d">TTraceSchema</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSchema</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The schema used to determine the format of the content </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIncludeContextID</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Include context ID in the trace </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIncludePc</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Include program counter in the trace </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32utrace.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="191"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="190"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="193"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Construct a trace object with classification for both primary and secondary filters.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_u_trace_1a66212f7bdde36cd98ef8a39a7753d07b">
+		<apiName>Set</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TUTrace</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void Set(TPrimaryFilter aF1, TTraceSchema aSchema, TBool aIncludeContextID, TBool aIncludePc)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TUTrace::Set(TPrimaryFilter,TTraceSchema,TBool,TBool)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32utrace_8h.xml#_1abdee277fe22c1ab14c69766832f528d8">TPrimaryFilter</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aF1</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Primary filter as classification information </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32utrace_8h.xml#_1a1d76bee0b01dba6dd1e61aabbd0b5d6d">TTraceSchema</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSchema</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The schema used to determine the format of the content </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIncludeContextID</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Include context ID in the trace </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIncludePc</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Include program counter in the trace </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32utrace.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="205"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="204"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="213"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Set the classification and additional information.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_u_trace_1a7f645954010915a9cfc9be2514cf5583">
+		<apiName>Set</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TUTrace</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void Set(TPrimaryFilter aF1, TSecondaryFilter aF2, TTraceSchema aSchema, TBool aIncludeContextID, TBool aIncludePc)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TUTrace::Set(TPrimaryFilter,TSecondaryFilter,TTraceSchema,TBool,TBool)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32utrace_8h.xml#_1abdee277fe22c1ab14c69766832f528d8">TPrimaryFilter</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aF1</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Primary filter as classification information </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32utrace_8h.xml#_1a7209e4747f5df1b0665454dd431f0827">TSecondaryFilter</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aF2</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Secondary filter as classification information </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32utrace_8h.xml#_1a1d76bee0b01dba6dd1e61aabbd0b5d6d">TTraceSchema</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSchema</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The schema used to determine the format of the content </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIncludeContextID</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Include context ID in the trace </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIncludePc</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Include program counter in the trace </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32utrace.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="226"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="225"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="229"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Set the classification and additional information.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_u_trace_1af0020b7ab004228d1ad3013450b7cc4f">
+		<apiName>Printf</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TUTrace</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool Printf(const char *aFmt,...)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TUTrace::Printf(const char *,...)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const char *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFmt</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The format string. This must not be longer than 256 characters. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>...</cxxFunctionParameterDeclaredType>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32utrace.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="295"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="294"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="308"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Prints a formatted string.</p>
+				<p>The trace was/was not logged.</p>
+				<p>Classification information must be set up </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_u_trace_1aa3adfd294e4141b81c4b7b09e291ece1">
+		<apiName>Printf</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TUTrace</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool Printf(TRefByValue&lt; const TDesC16 &gt; aFmt,...)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TUTrace::Printf(TRefByValue&lt; const TDesC16 &gt;,...)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_ref_by_value.xml#class_t_ref_by_value">TRefByValue</apiRelation>&lt; const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC16</apiRelation> &gt;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFmt</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The format string. This must not be longer than 256 characters. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>...</cxxFunctionParameterDeclaredType>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32utrace.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="322"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="321"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="339"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Prints a formatted string.</p>
+				<p>The trace was/was not logged.</p>
+				<p>Classification information must be set up </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_u_trace_1a4b1515a6f46addbdb3ce9350ed9da761">
+		<apiName>Printf</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TUTrace</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool Printf(const TDesC8 &amp;aDes)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TUTrace::Printf(const TDesC8 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The string. This can be of variable length.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32utrace.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="351"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="350"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="358"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Prints a string.</p>
+				<p>The trace was/was not logged.</p>
+				<p>Classification information must be set up </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_u_trace_1aa660b6ba707ebb5c11c73a3c82a9a14d">
+		<apiName>Printf</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TUTrace</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool Printf(const TDesC16 &amp;aDes)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TUTrace::Printf(const TDesC16 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC16</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The string. This can be of variable length.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32utrace.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="370"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="369"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="377"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Prints a string.</p>
+				<p>The trace was/was not logged.</p>
+				<p>Classification information must be set up </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_u_trace_1adea6488170c149b64f03e4f7fe86f292">
+		<apiName>Trace</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TUTrace</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool Trace()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TUTrace::Trace()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32utrace.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="389"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="388"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="395"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Sends a trace with no payload data.</p>
+				<p>The trace was/was not logged.</p>
+				<p>Classification information must be set up </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_u_trace_1a615c36b3c0573821e7ca3e54141aadeb">
+		<apiName>Trace</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TUTrace</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool Trace(TUint32 aData1)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TUTrace::Trace(TUint32)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a8240e11f17c80b6b222fc2af50234da4">TUint32</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aData1</cxxFunctionParameterDeclarationName>
+						<apiDefNote>4 bytes of data.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32utrace.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="407"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="406"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="413"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Sends a trace containing 4 bytes of data.</p>
+				<p>The trace was/was not logged.</p>
+				<p>Classification information must be set up </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_u_trace_1a1a7e1a2de561a1ca7c4441636e56332a">
+		<apiName>Trace</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TUTrace</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool Trace(TUint32 aData1, TUint32 aData2)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TUTrace::Trace(TUint32,TUint32)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a8240e11f17c80b6b222fc2af50234da4">TUint32</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aData1</cxxFunctionParameterDeclarationName>
+						<apiDefNote>4 bytes of data </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a8240e11f17c80b6b222fc2af50234da4">TUint32</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aData2</cxxFunctionParameterDeclarationName>
+						<apiDefNote>4 bytes of data</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32utrace.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="426"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="425"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="432"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Sends a trace with 8 bytes of data.</p>
+				<p>The trace was/was not logged.</p>
+				<p>Classification information must be set up </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_u_trace_1ae118e2293b3886bb3e06493b2d96cd15">
+		<apiName>Trace</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TUTrace</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool Trace(TUint32 aData1, TUint32 aData2, TUint32 aData3)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TUTrace::Trace(TUint32,TUint32,TUint32)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a8240e11f17c80b6b222fc2af50234da4">TUint32</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aData1</cxxFunctionParameterDeclarationName>
+						<apiDefNote>4 bytes of data </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a8240e11f17c80b6b222fc2af50234da4">TUint32</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aData2</cxxFunctionParameterDeclarationName>
+						<apiDefNote>4 bytes of data </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a8240e11f17c80b6b222fc2af50234da4">TUint32</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aData3</cxxFunctionParameterDeclarationName>
+						<apiDefNote>4 bytes of data</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32utrace.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="447"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="446"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="453"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Sends a trace with 12 bytes of data. Note: This method does not support secondary filtering.</p>
+				<p>The trace was/was not logged.</p>
+				<p>Classification information must be set up </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_u_trace_1ab3f82f87161eddc3db2f484b59a16074">
+		<apiName>Trace</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TUTrace</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool Trace(const TAny *aData, TInt aSize)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TUTrace::Trace(const TAny *,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aData</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Address of addition data to add to trace. Must be word aligned, i.e. a multiple of 4. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSize</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Number of bytes of additional data.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32utrace.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="472"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="471"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="478"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Sends a trace with variable length data.</p>
+				<p>If the specified data is too big to fit into a single trace record a multipart trace is generated.</p>
+				<p>The trace was/was not logged.</p>
+				<p>Classification information must be set up</p>
+				<p>BTrace::TMultipart </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_u_trace_1ad176b72f53e11a747c6e530ffa71d6a9">
+		<apiName>PrintfPrimary</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TUTrace</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline static TBool PrintfPrimary(TPrimaryFilter aF1, TBool aIncludeContextID, TBool aIncludePc, const char *aFmt,...)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TUTrace::PrintfPrimary(TPrimaryFilter,TBool,TBool,const char *,...)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32utrace_8h.xml#_1abdee277fe22c1ab14c69766832f528d8">TPrimaryFilter</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aF1</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Primary filter as classification information </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIncludeContextID</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Include context ID in the trace </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIncludePc</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Include program counter in the trace </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const char *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFmt</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The format string. This must not be longer than 256 characters. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>...</cxxFunctionParameterDeclaredType>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32utrace.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="551"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="550"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="559"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Prints a formatted string. The trace is classified by primary filter only.</p>
+				<p>If the specified string is too long to fit into a single trace record a multipart trace is generated.</p>
+				<p>The trace was/was not logged.</p>
+				<p>BTrace::TMultipart </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_u_trace_1a043486b71212c822b9f1a7e13b59b814">
+		<apiName>PrintfPrimary</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TUTrace</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline static TBool PrintfPrimary(TPrimaryFilter aF1, TBool aIncludeContextID, TBool aIncludePc, TRefByValue&lt; const TDesC16 &gt; aFmt,...)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TUTrace::PrintfPrimary(TPrimaryFilter,TBool,TBool,TRefByValue&lt; const TDesC16 &gt;,...)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32utrace_8h.xml#_1abdee277fe22c1ab14c69766832f528d8">TPrimaryFilter</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aF1</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Primary filter as classification information </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIncludeContextID</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Include context ID in the trace </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIncludePc</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Include program counter in the trace </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_ref_by_value.xml#class_t_ref_by_value">TRefByValue</apiRelation>&lt; const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC16</apiRelation> &gt;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFmt</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The format string. This must not be longer than 256 characters. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>...</cxxFunctionParameterDeclaredType>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32utrace.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="579"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="578"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="591"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Prints a formatted string. The trace is classified by primary filter only.</p>
+				<p>If the specified string is too long to fit into a single trace record a multipart trace is generated.</p>
+				<p>The trace was/was not logged.</p>
+				<p>BTrace::TMultipart </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_u_trace_1a1fc4e7e40051e93bbb35bbedda76c961">
+		<apiName>PrintfPrimary</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TUTrace</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline static TBool PrintfPrimary(TPrimaryFilter aF1, TBool aIncludeContextID, TBool aIncludePc, const TDesC8 &amp;aDes)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TUTrace::PrintfPrimary(TPrimaryFilter,TBool,TBool,const TDesC8 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32utrace_8h.xml#_1abdee277fe22c1ab14c69766832f528d8">TPrimaryFilter</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aF1</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Primary filter as classification information </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIncludeContextID</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Include context ID in the trace </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIncludePc</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Include program counter in the trace </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The string. This can be of variable length.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32utrace.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="609"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="608"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="611"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Prints a string. The trace is classified by primary filter only.</p>
+				<p>If the specified string is too long to fit into a single trace record a multipart trace is generated.</p>
+				<p>The trace was/was not logged.</p>
+				<p>BTrace::TMultipart </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_u_trace_1abd0b4ea568278463884a110251ddd6f3">
+		<apiName>PrintfPrimary</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TUTrace</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline static TBool PrintfPrimary(TPrimaryFilter aF1, TBool aIncludeContextID, TBool aIncludePc, const TDesC16 &amp;aDes)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TUTrace::PrintfPrimary(TPrimaryFilter,TBool,TBool,const TDesC16 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32utrace_8h.xml#_1abdee277fe22c1ab14c69766832f528d8">TPrimaryFilter</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aF1</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Primary filter as classification information </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIncludeContextID</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Include context ID in the trace </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIncludePc</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Include program counter in the trace </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC16</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The string. This can be of variable length.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32utrace.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="630"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="629"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="633"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Prints a string. The trace is classified by primary filter only.</p>
+				<p>If the specified string is too long to fit into a single trace record a multipart trace is generated.</p>
+				<p>The trace was/was not logged.</p>
+				<p>BTrace::TMultipart </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_u_trace_1a5a2b11f0bd6a5c2293338a355603355f">
+		<apiName>Printf</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TUTrace</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline static TBool Printf(TPrimaryFilter aF1, TSecondaryFilter aF2, TBool aIncludeContextID, TBool aIncludePc, const char *aFmt,...)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TUTrace::Printf(TPrimaryFilter,TSecondaryFilter,TBool,TBool,const char *,...)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32utrace_8h.xml#_1abdee277fe22c1ab14c69766832f528d8">TPrimaryFilter</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aF1</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Primary filter as classification information </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32utrace_8h.xml#_1a7209e4747f5df1b0665454dd431f0827">TSecondaryFilter</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aF2</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Secondary filter as classification information </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIncludeContextID</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Include context ID in the trace </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIncludePc</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Include program counter in the trace </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const char *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFmt</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The format string. This must not be longer than 256 characters. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>...</cxxFunctionParameterDeclaredType>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32utrace.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="655"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="654"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="663"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Prints a formatted string. The trace is classified by primary and secondary filter.</p>
+				<p>If the specified string is too long to fit into a single trace record a multipart trace is generated.</p>
+				<p>The trace was/was not logged.</p>
+				<p>BTrace::TMultipart </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_u_trace_1a6bb1b7ac44127aa3ed0f1fc1200864a7">
+		<apiName>Printf</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TUTrace</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline static TBool Printf(TPrimaryFilter aF1, TSecondaryFilter aF2, TBool aIncludeContextID, TBool aIncludePc, TRefByValue&lt; const TDesC16 &gt; aFmt,...)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TUTrace::Printf(TPrimaryFilter,TSecondaryFilter,TBool,TBool,TRefByValue&lt; const TDesC16 &gt;,...)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32utrace_8h.xml#_1abdee277fe22c1ab14c69766832f528d8">TPrimaryFilter</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aF1</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Primary filter as classification information </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32utrace_8h.xml#_1a7209e4747f5df1b0665454dd431f0827">TSecondaryFilter</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aF2</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Secondary filter as classification information </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIncludeContextID</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Include context ID in the trace </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIncludePc</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Include program counter in the trace </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_ref_by_value.xml#class_t_ref_by_value">TRefByValue</apiRelation>&lt; const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC16</apiRelation> &gt;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFmt</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The format string. This must not be longer than 256 characters. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>...</cxxFunctionParameterDeclaredType>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32utrace.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="684"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="683"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="696"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Prints a formatted string. The trace is classified by primary and secondary filter.</p>
+				<p>If the specified string is too long to fit into a single trace record a multipart trace is generated.</p>
+				<p>The trace was/was not logged.</p>
+				<p>BTrace::TMultipart </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_u_trace_1ada5ce9573158b66746f02880cc7e7d1c">
+		<apiName>Printf</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TUTrace</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline static TBool Printf(TPrimaryFilter aF1, TSecondaryFilter aF2, TBool aIncludeContextID, TBool aIncludePc, const TDesC8 &amp;aDes)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TUTrace::Printf(TPrimaryFilter,TSecondaryFilter,TBool,TBool,const TDesC8 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32utrace_8h.xml#_1abdee277fe22c1ab14c69766832f528d8">TPrimaryFilter</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aF1</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Primary filter as classification information </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32utrace_8h.xml#_1a7209e4747f5df1b0665454dd431f0827">TSecondaryFilter</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aF2</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Secondary filter as classification information </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIncludeContextID</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Include context ID in the trace </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIncludePc</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Include program counter in the trace </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The string. This can be of variable length.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32utrace.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="715"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="714"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="717"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Prints a string. The trace is classified by primary and secondary filter.</p>
+				<p>If the specified string is too long to fit into a single trace record a multipart trace is generated.</p>
+				<p>The trace was/was not logged.</p>
+				<p>BTrace::TMultipart </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_u_trace_1a923ad53ea2bbde01152502696163fd16">
+		<apiName>Printf</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TUTrace</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline static TBool Printf(TPrimaryFilter aF1, TSecondaryFilter aF2, TBool aIncludeContextID, TBool aIncludePc, const TDesC16 &amp;aDes)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TUTrace::Printf(TPrimaryFilter,TSecondaryFilter,TBool,TBool,const TDesC16 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32utrace_8h.xml#_1abdee277fe22c1ab14c69766832f528d8">TPrimaryFilter</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aF1</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Primary filter as classification information </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32utrace_8h.xml#_1a7209e4747f5df1b0665454dd431f0827">TSecondaryFilter</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aF2</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Secondary filter as classification information </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIncludeContextID</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Include context ID in the trace </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIncludePc</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Include program counter in the trace </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC16</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The string. This can be of variable length.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32utrace.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="736"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="735"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="739"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Prints a string. The trace is classified by primary and secondary filter.</p>
+				<p>If the specified string is too long to fit into a single trace record a multipart trace is generated.</p>
+				<p>The trace was/was not logged.</p>
+				<p>BTrace::TMultipart </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_u_trace_1a46d22b7f00a17a0a9f6f5707ddea7f2c">
+		<apiName>TracePrimary</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TUTrace</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline static TBool TracePrimary(TPrimaryFilter aF1, TTraceSchema aSchema, TBool aIncludeContextID, TBool aIncludePc)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TUTrace::TracePrimary(TPrimaryFilter,TTraceSchema,TBool,TBool)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32utrace_8h.xml#_1abdee277fe22c1ab14c69766832f528d8">TPrimaryFilter</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aF1</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Primary filter as classification information </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32utrace_8h.xml#_1a1d76bee0b01dba6dd1e61aabbd0b5d6d">TTraceSchema</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSchema</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The schema used to determine the format of the content </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIncludeContextID</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Include context ID in the trace </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIncludePc</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Include program counter in the trace</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32utrace.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="755"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="754"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="757"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Sends a trace with no payload. The trace is classified by primary filter only.</p>
+				<p>The trace was/was not logged. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_u_trace_1a24218acc09714888f6f9fab521b6c544">
+		<apiName>TracePrimary</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TUTrace</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline static TBool TracePrimary(TPrimaryFilter aF1, TTraceSchema aSchema, TBool aIncludeContextID, TBool aIncludePc, TUint32 aData1)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TUTrace::TracePrimary(TPrimaryFilter,TTraceSchema,TBool,TBool,TUint32)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32utrace_8h.xml#_1abdee277fe22c1ab14c69766832f528d8">TPrimaryFilter</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aF1</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Primary filter as classification information </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32utrace_8h.xml#_1a1d76bee0b01dba6dd1e61aabbd0b5d6d">TTraceSchema</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSchema</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The schema used to determine the format of the content </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIncludeContextID</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Include context ID in the trace </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIncludePc</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Include program counter in the trace </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a8240e11f17c80b6b222fc2af50234da4">TUint32</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aData1</cxxFunctionParameterDeclarationName>
+						<apiDefNote>4 bytes of data</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32utrace.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="772"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="771"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="774"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Sends a trace with 4 bytes of data. The trace is classified by primary filter only.</p>
+				<p>The trace was/was not logged. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_u_trace_1a2a3bb86a1775aceff970f1349a89c3c1">
+		<apiName>TracePrimary</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TUTrace</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline static TBool TracePrimary(TPrimaryFilter aF1, TTraceSchema aSchema, TBool aIncludeContextID, TBool aIncludePc, TUint32 aData1, TUint32 aData2)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TUTrace::TracePrimary(TPrimaryFilter,TTraceSchema,TBool,TBool,TUint32,TUint32)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32utrace_8h.xml#_1abdee277fe22c1ab14c69766832f528d8">TPrimaryFilter</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aF1</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Primary filter as classification information </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32utrace_8h.xml#_1a1d76bee0b01dba6dd1e61aabbd0b5d6d">TTraceSchema</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSchema</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The schema used to determine the format of the content </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIncludeContextID</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Include context ID in the trace </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIncludePc</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Include program counter in the trace </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a8240e11f17c80b6b222fc2af50234da4">TUint32</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aData1</cxxFunctionParameterDeclarationName>
+						<apiDefNote>4 bytes of data </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a8240e11f17c80b6b222fc2af50234da4">TUint32</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aData2</cxxFunctionParameterDeclarationName>
+						<apiDefNote>4 bytes of data</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32utrace.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="790"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="789"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="792"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Sends a trace with 8 bytes of data. The trace is classified by primary filter only.</p>
+				<p>The trace was/was not logged. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_u_trace_1a96729844932797dac3baf0967be7ef6d">
+		<apiName>TracePrimary</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TUTrace</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline static TBool TracePrimary(TPrimaryFilter aF1, TTraceSchema aSchema, TBool aIncludeContextID, TBool aIncludePc, TUint32 aData1, TUint32 aData2, TUint aData3)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TUTrace::TracePrimary(TPrimaryFilter,TTraceSchema,TBool,TBool,TUint32,TUint32,TUint)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32utrace_8h.xml#_1abdee277fe22c1ab14c69766832f528d8">TPrimaryFilter</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aF1</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Primary filter as classification information </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32utrace_8h.xml#_1a1d76bee0b01dba6dd1e61aabbd0b5d6d">TTraceSchema</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSchema</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The schema used to determine the format of the content </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIncludeContextID</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Include context ID in the trace </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIncludePc</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Include program counter in the trace </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a8240e11f17c80b6b222fc2af50234da4">TUint32</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aData1</cxxFunctionParameterDeclarationName>
+						<apiDefNote>4 bytes of data </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a8240e11f17c80b6b222fc2af50234da4">TUint32</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aData2</cxxFunctionParameterDeclarationName>
+						<apiDefNote>4 bytes of data </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aData3</cxxFunctionParameterDeclarationName>
+						<apiDefNote>4 bytes of data</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32utrace.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="809"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="808"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="811"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Sends a trace with 12 bytes of data. The trace is classified by primary filter only.</p>
+				<p>The trace was/was not logged. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_u_trace_1a3b1b8a3381900f65622432f0b3db1f31">
+		<apiName>TracePrimary</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TUTrace</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline static TBool TracePrimary(TPrimaryFilter aF1, TTraceSchema aSchema, TBool aIncludeContextID, TBool aIncludePc, const TAny *aData, TInt aSize)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TUTrace::TracePrimary(TPrimaryFilter,TTraceSchema,TBool,TBool,const TAny *,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32utrace_8h.xml#_1abdee277fe22c1ab14c69766832f528d8">TPrimaryFilter</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aF1</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Primary filter as classification information </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32utrace_8h.xml#_1a1d76bee0b01dba6dd1e61aabbd0b5d6d">TTraceSchema</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSchema</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The schema used to determine the format of the content </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIncludeContextID</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Include context ID in the trace </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIncludePc</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Include program counter in the trace </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aData</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Address of addition data to add to trace. Must be word aligned, i.e. a multiple of 4. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSize</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Number of bytes of additional data.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32utrace.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="833"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="832"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="835"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Sends a trace with variable length data. The trace is classified by primary filter only.</p>
+				<p>If the specified data is too big to fit into a single trace record a multipart trace is generated.</p>
+				<p>The trace was/was not logged.</p>
+				<p>BTrace::TMultipart </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_u_trace_1af1ae848b0976bebf63d1b33b7f06667d">
+		<apiName>Trace</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TUTrace</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline static TBool Trace(TPrimaryFilter aF1, TSecondaryFilter aF2, TTraceSchema aSchema, TBool aIncludeContextID, TBool aIncludePc)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TUTrace::Trace(TPrimaryFilter,TSecondaryFilter,TTraceSchema,TBool,TBool)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32utrace_8h.xml#_1abdee277fe22c1ab14c69766832f528d8">TPrimaryFilter</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aF1</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Primary filter as classification information </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32utrace_8h.xml#_1a7209e4747f5df1b0665454dd431f0827">TSecondaryFilter</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aF2</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Secondary filter as classification information </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32utrace_8h.xml#_1a1d76bee0b01dba6dd1e61aabbd0b5d6d">TTraceSchema</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSchema</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The schema used to determine the format of the content </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIncludeContextID</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Include context ID in the trace </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIncludePc</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Include program counter in the trace</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32utrace.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="850"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="849"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="852"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Sends a trace with no payload. The trace is classified by primary and secondary filter.</p>
+				<p>The trace was/was not logged. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_u_trace_1a11d6bc03cdff5bfd0d933a271e332276">
+		<apiName>Trace</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TUTrace</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline static TBool Trace(TPrimaryFilter aF1, TSecondaryFilter aF2, TTraceSchema aSchema, TBool aIncludeContextID, TBool aIncludePc, TUint32 aData1)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TUTrace::Trace(TPrimaryFilter,TSecondaryFilter,TTraceSchema,TBool,TBool,TUint32)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32utrace_8h.xml#_1abdee277fe22c1ab14c69766832f528d8">TPrimaryFilter</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aF1</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Primary filter as classification information </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32utrace_8h.xml#_1a7209e4747f5df1b0665454dd431f0827">TSecondaryFilter</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aF2</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Secondary filter as classification information </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32utrace_8h.xml#_1a1d76bee0b01dba6dd1e61aabbd0b5d6d">TTraceSchema</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSchema</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The schema used to determine the format of the content </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIncludeContextID</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Include context ID in the trace </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIncludePc</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Include program counter in the trace </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a8240e11f17c80b6b222fc2af50234da4">TUint32</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aData1</cxxFunctionParameterDeclarationName>
+						<apiDefNote>4 bytes of data</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32utrace.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="868"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="867"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="870"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Sends a trace with 4 bytes of data. The trace is classified by primary and secondary filter.</p>
+				<p>The trace was/was not logged. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_u_trace_1a1f27b32e2cc808e57e728dc9013005c0">
+		<apiName>Trace</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TUTrace</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline static TBool Trace(TPrimaryFilter aF1, TSecondaryFilter aF2, TTraceSchema aSchema, TBool aIncludeContextID, TBool aIncludePc, TUint32 aData1, TUint32 aData2)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TUTrace::Trace(TPrimaryFilter,TSecondaryFilter,TTraceSchema,TBool,TBool,TUint32,TUint32)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32utrace_8h.xml#_1abdee277fe22c1ab14c69766832f528d8">TPrimaryFilter</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aF1</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Primary filter as classification information </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32utrace_8h.xml#_1a7209e4747f5df1b0665454dd431f0827">TSecondaryFilter</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aF2</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Secondary filter as classification information </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32utrace_8h.xml#_1a1d76bee0b01dba6dd1e61aabbd0b5d6d">TTraceSchema</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSchema</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The schema used to determine the format of the content </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIncludeContextID</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Include context ID in the trace </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIncludePc</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Include program counter in the trace </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a8240e11f17c80b6b222fc2af50234da4">TUint32</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aData1</cxxFunctionParameterDeclarationName>
+						<apiDefNote>4 bytes of data </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a8240e11f17c80b6b222fc2af50234da4">TUint32</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aData2</cxxFunctionParameterDeclarationName>
+						<apiDefNote>4 bytes of data</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32utrace.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="887"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="886"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="889"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Sends a trace with 8 bytes of data. The trace is classified by primary and secondary filter.</p>
+				<p>The trace was/was not logged. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_u_trace_1afc8e6804fecc0d6c4c5821463a501053">
+		<apiName>Trace</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TUTrace</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline static TBool Trace(TPrimaryFilter aF1, TSecondaryFilter aF2, TTraceSchema aSchema, TBool aIncludeContextID, TBool aIncludePc, const TAny *aData, TInt aSize)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TUTrace::Trace(TPrimaryFilter,TSecondaryFilter,TTraceSchema,TBool,TBool,const TAny *,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32utrace_8h.xml#_1abdee277fe22c1ab14c69766832f528d8">TPrimaryFilter</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aF1</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Primary filter as classification information </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32utrace_8h.xml#_1a7209e4747f5df1b0665454dd431f0827">TSecondaryFilter</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aF2</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Secondary filter as classification information </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32utrace_8h.xml#_1a1d76bee0b01dba6dd1e61aabbd0b5d6d">TTraceSchema</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSchema</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The schema used to determine the format of the content </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIncludeContextID</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Include context ID in the trace </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIncludePc</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Include program counter in the trace </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aData</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Address of addition data to add to trace. Must be word aligned, i.e. a multiple of 4. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSize</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Number of bytes of additional data.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32utrace.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="912"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="911"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="914"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Sends a trace with variable length data. The trace is classified by primary and secondary filter.</p>
+				<p>If the specified data is too big to fit into a single trace record a multipart trace is generated.</p>
+				<p>The trace was/was not logged.</p>
+				<p>BTrace::TMultipart </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_u_trace_1aeeea0c1ba9eed96282c9a73afcc5b49f">
+		<apiName>TUTrace</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TUTrace</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TUTrace()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TUTrace::TUTrace()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32utrace.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="919"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="919"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="919"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxEnumeration id="class_t_u_trace_1ada32abdd9dd231c81223cbb9f452068b">
+		<apiName>TTraceInfoPresent</apiName>
+		<cxxEnumerationDetail>
+			<cxxEnumerationDefinition>
+				<cxxEnumerationAccessSpecifier value="private"/>
+				<cxxEnumerationScopedName>TUTrace</cxxEnumerationScopedName>
+				<cxxEnumerationPrototype>TTraceInfoPresent</cxxEnumerationPrototype>
+				<cxxEnumerationNameLookup>TUTrace:TTraceInfoPresent</cxxEnumerationNameLookup>
+				<cxxEnumerators>
+					<cxxEnumerator id="class_t_u_trace_1ada32abdd9dd231c81223cbb9f452068ba196cc4b51dc1786d8049e6c649fcf849">
+						<apiName>EContext</apiName>
+						<cxxEnumeratorScopedName>TUTrace</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EContext = 0</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TUTrace::EContext</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="0"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32utrace.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="926"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc/>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_u_trace_1ada32abdd9dd231c81223cbb9f452068baca08d38f70ab8fd68dc72400bf256557">
+						<apiName>EPc</apiName>
+						<cxxEnumeratorScopedName>TUTrace</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EPc = 1</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TUTrace::EPc</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="1"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32utrace.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="928"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc/>
+					</cxxEnumerator>
+				</cxxEnumerators>
+				<cxxEnumerationAPIItemLocation>
+					<cxxEnumerationDeclarationFile name="filePath" value="K:/epoc32/include/e32utrace.h"/>
+					<cxxEnumerationDeclarationFileLine name="lineNumber" value="925"/>
+					<cxxEnumerationDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxEnumerationDefinitionFileLineStart name="lineNumber" value="924"/>
+					<cxxEnumerationDefinitionFileLineEnd name="lineNumber" value="928"/>
+				</cxxEnumerationAPIItemLocation>
+			</cxxEnumerationDefinition>
+			<apiDesc/>
+		</cxxEnumerationDetail>
+	</cxxEnumeration>
+	<cxxFunction id="class_t_u_trace_1a10367066dd641e141bae61c958cd6476">
+		<apiName>ContextID</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TUTrace</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool ContextID()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TUTrace::ContextID()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32utrace.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="955"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="954"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="957"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_u_trace_1a3a547790f5cb46f9433df00369ba22a9">
+		<apiName>Pc</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TUTrace</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool Pc()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TUTrace::Pc()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32utrace.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="963"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="962"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="965"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxVariable id="class_t_u_trace_1a295165f2828daae4a60953d9eadc0891">
+		<apiName>iF1</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32utrace_8h.xml#_1abdee277fe22c1ab14c69766832f528d8">TPrimaryFilter</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TUTrace</cxxVariableScopedName>
+				<cxxVariablePrototype>TPrimaryFilter iF1</cxxVariablePrototype>
+				<cxxVariableNameLookup>TUTrace::iF1</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32utrace.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="968"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_t_u_trace_1a145aaa1da3844c5032ac1657aad68283">
+		<apiName>iSchema</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32utrace_8h.xml#_1a1d76bee0b01dba6dd1e61aabbd0b5d6d">TTraceSchema</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TUTrace</cxxVariableScopedName>
+				<cxxVariablePrototype>TTraceSchema iSchema</cxxVariablePrototype>
+				<cxxVariableNameLookup>TUTrace::iSchema</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32utrace.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="969"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_t_u_trace_1a9d25ae94ef5ccb7736659f8ca2ab3061">
+		<apiName>iF2</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32utrace_8h.xml#_1a7209e4747f5df1b0665454dd431f0827">TSecondaryFilter</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TUTrace</cxxVariableScopedName>
+				<cxxVariablePrototype>TSecondaryFilter iF2</cxxVariablePrototype>
+				<cxxVariableNameLookup>TUTrace::iF2</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32utrace.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="970"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_t_u_trace_1a0af09f8680f7b278149df6f081351def">
+		<apiName>iPresent</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a9357a8e9552b6131a89fb3de94bff80a">TInt8</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TUTrace</cxxVariableScopedName>
+				<cxxVariablePrototype>TInt8 iPresent</cxxVariablePrototype>
+				<cxxVariableNameLookup>TUTrace::iPresent</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32utrace.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="971"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_t_u_trace_1a27dfd5f4558f0cabe5382212d8801063">
+		<apiName>iReserved1</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a8240e11f17c80b6b222fc2af50234da4">TUint32</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TUTrace</cxxVariableScopedName>
+				<cxxVariablePrototype>TUint32 iReserved1</cxxVariablePrototype>
+				<cxxVariableNameLookup>TUTrace::iReserved1</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32utrace.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="973"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_t_u_trace_1ad7a8a517219b334187ac1d9d7103496a">
+		<apiName>iReserved2</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a8240e11f17c80b6b222fc2af50234da4">TUint32</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TUTrace</cxxVariableScopedName>
+				<cxxVariablePrototype>TUint32 iReserved2</cxxVariablePrototype>
+				<cxxVariableNameLookup>TUTrace::iReserved2</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32utrace.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="974"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+</cxxClass>

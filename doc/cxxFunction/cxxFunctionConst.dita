@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (c) 2011 Nokia Corporation and/or its subsidiary(-ies).
+All rights reserved.        
+        -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<reference id="cxxFunctionConst" outputclass="element" xml:lang="en-us">
+<title>cxxFunctionConst</title>
+<shortdesc>Used to describe a function with a <tt>const</tt> <i>cv-qualifier</i
+>.</shortdesc>
+<refbody>
+<section id="section_2A54A489B6CA4FAE897FD11B25175A01">          
+  <title>Description</title><p>The &lt;cxxFunctionConst> element is
+present when the function has a <tt>const</tt> <i>cv-qualifier</i
+> . The element has two mandatory attributes, <i>name</i> <?Pub Caret?>and <i
+>value</i>. If present, these attributes must be set to the value
+“const”.</p><p>See ISO/IEC 14882:2003(E) 7.1.5.1 The cv-qualifiers
+[dcl.type.cv]</p>         </section>
+<example id="example_115617C5F81B42EABE4CAD6A61E05DC5">          
+  <title>Example</title><p>Given this code:</p>             <codeblock
+>struct X {
+    void g() const;
+};</codeblock><p>Then function <tt>g</tt> would have the <tt>cxxFunctionConst</tt
+> element:</p>             <codeblock>&lt;cxxFunctionConst /></codeblock
+><p>If the mandatory attributes are present they must be set thus:</p
+>             <codeblock>&lt;cxxFunctionConst name="const" value="const" /></codeblock
+>         </example>
+<section
+conref="../packagedef.dita#cxxFunctionConst-reference/cxxFunctionConst-containedBy-section"
+></section>
+<section
+conref="../packagedef.dita#cxxFunctionConst-reference/cxxFunctionConst-contains-section"
+></section>
+<section
+conref="../packagedef.dita#cxxFunctionConst-reference/cxxFunctionConst-contentModel-section"
+></section>
+<section
+conref="../packagedef.dita#cxxFunctionConst-reference/cxxFunctionConst-attList-section"
+></section>
+<section
+conref="../packagedef.dita#cxxFunctionConst-reference/cxxFunctionConst-classValue-section"
+></section>
+</refbody>
+</reference>
+<?Pub *0000001923?>

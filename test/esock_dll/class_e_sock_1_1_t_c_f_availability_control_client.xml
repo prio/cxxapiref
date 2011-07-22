@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_e_sock_1_1_t_c_f_availability_control_client">
+	<apiName>ESock::TCFAvailabilityControlClient</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_nodemessages_availability.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="65"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/comms-infras/ss_nodemessages_availability.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="64"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="88"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>Message interface for availability client nodes. Nodes wishing to implement this interface must implement all message protocols in the interface. </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxEnumeration id="class_e_sock_1_1_t_c_f_availability_control_client_1a179c178292ad5d56c391ce8492a9c2d8">
+		<apiName>@92</apiName>
+		<cxxEnumerationDetail>
+			<cxxEnumerationDefinition>
+				<cxxEnumerationAccessSpecifier value="private"/>
+				<cxxEnumerationScopedName>ESock::TCFAvailabilityControlClient</cxxEnumerationScopedName>
+				<cxxEnumerationPrototype>@92</cxxEnumerationPrototype>
+				<cxxEnumerationNameLookup>ESock::TCFAvailabilityControlClient:@92</cxxEnumerationNameLookup>
+				<cxxEnumerators>
+					<cxxEnumerator id="class_e_sock_1_1_t_c_f_availability_control_client_1a179c178292ad5d56c391ce8492a9c2d8af6c80d998583b37b5abd9b30dcf4b1bb">
+						<apiName>ECFAvailabilityNotification</apiName>
+						<cxxEnumeratorScopedName>ESock::TCFAvailabilityControlClient</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ECFAvailabilityNotification = 1</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>ESock::TCFAvailabilityControlClient::ECFAvailabilityNotification</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="1"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_nodemessages_availability.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="69"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc/>
+					</cxxEnumerator>
+				</cxxEnumerators>
+				<cxxEnumerationAPIItemLocation>
+					<cxxEnumerationDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_nodemessages_availability.h"/>
+					<cxxEnumerationDeclarationFileLine name="lineNumber" value="68"/>
+					<cxxEnumerationDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxEnumerationDefinitionFileLineStart name="lineNumber" value="67"/>
+					<cxxEnumerationDefinitionFileLineEnd name="lineNumber" value="70"/>
+				</cxxEnumerationAPIItemLocation>
+			</cxxEnumerationDefinition>
+			<apiDesc/>
+		</cxxEnumerationDetail>
+	</cxxEnumeration>
+	<cxxTypedef id="class_e_sock_1_1_t_c_f_availability_control_client_1a106a3477ee3c9e9caa2fac90cb7b9214">
+		<apiName>TAvailabilityNotification</apiName>
+		<cxxTypedefDetail>
+			<cxxTypedefDefinition>
+				<cxxTypedefAccessSpecifier value="public"/>
+				<cxxTypedefDeclaredType>TMessageSigAvailabilityStatus&lt; ECFAvailabilityNotification, TCFAvailabilityControlClient::ERealmId &gt;</cxxTypedefDeclaredType>
+				<cxxTypedefScopedName>ESock::TCFAvailabilityControlClient</cxxTypedefScopedName>
+				<cxxTypedefPrototype>TMessageSigAvailabilityStatus&lt; ECFAvailabilityNotification, TCFAvailabilityControlClient::ERealmId &gt; TAvailabilityNotification</cxxTypedefPrototype>
+				<cxxTypedefNameLookup>ESock::TCFAvailabilityControlClient::TAvailabilityNotification</cxxTypedefNameLookup>
+				<cxxTypedefAPIItemLocation>
+					<cxxTypedefDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_nodemessages_availability.h"/>
+					<cxxTypedefDeclarationFileLine name="lineNumber" value="86"/>
+				</cxxTypedefAPIItemLocation>
+			</cxxTypedefDefinition>
+			<apiDesc>
+				<p>Response/Notification sent by an availability provider (usually a meta provider) to its availability subscribers registered for availability notifications. First TAvailabilityNotification message is an expected response. Subsequent TAvailabilityNotification messages are notifications.</p>
+				<p>
+					<ul>
+						<li>
+							<p>Type: Response/Notification for TAvailabilityNotificationRegistration. </p>
+						</li>
+						<li>
+							<p>Fallible: No</p>
+						</li>
+					</ul>
+				</p>
+			</apiDesc>
+		</cxxTypedefDetail>
+	</cxxTypedef>
+</cxxClass>

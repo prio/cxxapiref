@@ -1,0 +1,223 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_r_device">
+	<apiName>RDevice</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassDerivations>
+				<cxxClassDerivation>
+					<cxxClassDerivationAccessSpecifier value="public"/>
+					<cxxClassBaseClass href="class_r_handle_base.xml#class_r_handle_base">RHandleBase</cxxClassBaseClass>
+				</cxxClassDerivation>
+			</cxxClassDerivations>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="3095"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="3094"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="3102"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>
+				<xref href="class_user.xml#class_user">User</xref> side handle to an LDD factory object, an instance of a DLogicalDevice derived class.</p>
+			<p>The LDD factory object is a Kernel side object which is constructed on the Kernel heap when the logical device is opened using <xref href="class_user.xml#class_user_1af0198cbaca3a476038c11ebdae9651cf">User::LoadLogicalDevice()</xref>. The handle allows the <xref href="class_user.xml#class_user">User</xref> side to get information about the logical device.</p>
+			<p>To use the device, a thread must create and use an instance of an <xref href="class_r_bus_logical_channel.xml#class_r_bus_logical_channel">RBusLogicalChannel</xref> derived class. </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_r_device_1ae0c3437a9dd3eef11a7b36dbaf5f0c33">
+		<apiName>Open</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RDevice</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt Open(const TFindLogicalDevice &amp;aFind, TOwnerType aType=EOwnerProcess)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RDevice::Open(const TFindLogicalDevice &amp;,TOwnerType)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_find_logical_device.xml#class_t_find_logical_device">TFindLogicalDevice</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFind</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A reference to the object which is used to find the LDD factory object. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1a68a23fa0195efd67397df339a83a5a86">TOwnerType</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aType</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>EOwnerProcess</cxxFunctionParameterDefaultValue>
+						<apiDefNote>An enumeration whose enumerators define the ownership of this LDD factory object handle. If not explicitly specified, EOwnerProcess is taken as default.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3097"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="3554"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="3555"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Opens a handle to an LDD factory object found using a <xref href="class_t_find_logical_device.xml#class_t_find_logical_device">TFindLogicalDevice</xref> object.</p>
+				<p>A <xref href="class_t_find_logical_device.xml#class_t_find_logical_device">TFindLogicalDevice</xref> object is used to find all LDD factory objects whose full names match a specified pattern.</p>
+				<p>KErrNone if successful, otherwise one of the other system wide error codes. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_device_1aedab50bf79d9976c76eaec84fc485c8f">
+		<apiName>Open</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RDevice</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Open(const TDesC &amp;aName, TOwnerType aType=EOwnerProcess)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RDevice::Open(const TDesC &amp;,TOwnerType)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aName</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1a68a23fa0195efd67397df339a83a5a86">TOwnerType</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aType</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>EOwnerProcess</cxxFunctionParameterDefaultValue>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3098"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_device_1af69c5f9565ee4b8b465fe9c1f3fafe66">
+		<apiName>GetCaps</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RDevice</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void GetCaps(TDes8 &amp;aDes) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RDevice::GetCaps(TDes8 &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3099"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_device_1a2dbe81259de587bb338843638aea783f">
+		<apiName>QueryVersionSupported</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RDevice</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TBool QueryVersionSupported(const TVersion &amp;aVer) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RDevice::QueryVersionSupported(const TVersion &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_version.xml#class_t_version">TVersion</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aVer</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3100"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_device_1ac74f1543973d5b05a5d1b92208a25e65">
+		<apiName>IsAvailable</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RDevice</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TBool IsAvailable(TInt aUnit, const TDesC *aPhysicalDevice, const TDesC8 *anInfo) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RDevice::IsAvailable(TInt,const TDesC *,const TDesC8 *)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aUnit</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPhysicalDevice</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anInfo</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3101"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxClassInherits>
+		<cxxClassInheritsDetail>
+			<cxxClassFunctionInherited href="class_r_device.xml#class_r_handle_base_1a5acffa0d0548854c050e087b53e9036a">RHandleBase::Attributes()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_device.xml#class_r_handle_base_1a728f019e766bb5928a76f834107f28b3">RHandleBase::BTraceId()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_device.xml#class_r_handle_base_1ad79a6f0c004c694d4eecbea1696cbcc8">RHandleBase::Close()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_device.xml#class_r_handle_base_1ad1a439467a218ac000b1b1d6901e5a8a">RHandleBase::DoExtendedClose()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_device.xml#class_r_handle_base_1a8428cab2039187ea1b5206d26c72b4e3">RHandleBase::Duplicate(const RThread &amp;,TOwnerType)</cxxClassFunctionInherited>
+			<cxxClassEnumeratorInherited href="class_r_device.xml#class_r_handle_base_1ae1e84a8b8292c5a91e9f67f5834f84eba4a88c7aaa037ffebbd6d07e96e50deea">RHandleBase::EDirectReadAccess</cxxClassEnumeratorInherited>
+			<cxxClassEnumeratorInherited href="class_r_device.xml#class_r_handle_base_1ae1e84a8b8292c5a91e9f67f5834f84eba16b9c662c1433cd95304b5f94b092342">RHandleBase::EDirectWriteAccess</cxxClassEnumeratorInherited>
+			<cxxClassEnumeratorInherited href="class_r_device.xml#class_r_handle_base_1ae1e84a8b8292c5a91e9f67f5834f84eba7777915ffc30609e5659c341a1c2392c">RHandleBase::EReadAccess</cxxClassEnumeratorInherited>
+			<cxxClassEnumeratorInherited href="class_r_device.xml#class_r_handle_base_1ae1e84a8b8292c5a91e9f67f5834f84ebacf44af0b945bad7aea199fab102472a2">RHandleBase::EWriteAccess</cxxClassEnumeratorInherited>
+			<cxxClassFunctionInherited href="class_r_device.xml#class_r_handle_base_1a73491dd5bd728ba4ce1199b65e2e5f59">RHandleBase::FullName()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_device.xml#class_r_handle_base_1ad8eef16c4499e3fb2a69a4206a4bb48e">RHandleBase::FullName(TDes &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_device.xml#class_r_handle_base_1a10a02b67da6e5350b87729c062331c02">RHandleBase::Handle()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_device.xml#class_r_handle_base_1a2695b04020246384d6af8480101d167a">RHandleBase::HandleInfo(THandleInfo *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_device.xml#class_r_handle_base_1aa937149e5311d8ba4f95b05a1163bd86">RHandleBase::Name()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_device.xml#class_r_handle_base_1a2ba493226719395d33452916cf2c7b5b">RHandleBase::NotifyDestruction(TRequestStatus &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_device.xml#class_r_handle_base_1a0f31804c3362e9c4e878f33688d19fef">RHandleBase::Open(const TFindHandleBase &amp;,TOwnerType)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_device.xml#class_r_handle_base_1a72abaf23694869e23eed8601bac08602">RHandleBase::OpenByName(const TDesC &amp;,TOwnerType,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_device.xml#class_r_handle_base_1aa4706b89afddb4d82a9d0e7b45e3f920">RHandleBase::RHandleBase()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_device.xml#class_r_handle_base_1aa1197a55c876356e33ec6bf5248ee33d">RHandleBase::RHandleBase(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_device.xml#class_r_handle_base_1a03c76caf06fd87df38da54b8b0c39660">RHandleBase::SetHandle(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_device.xml#class_r_handle_base_1aa3ccd98b5c883151329937098d98d3d2">RHandleBase::SetHandleNC(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_device.xml#class_r_handle_base_1a856c39af65967538e388a65fac4c5b0c">RHandleBase::SetReturnedHandle(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_device.xml#class_r_handle_base_1a022806379a6fb6b94bd807286a77c839">RHandleBase::SetReturnedHandle(TInt,RHandleBase &amp;)</cxxClassFunctionInherited>
+			<cxxClassVariableInherited href="class_r_device.xml#class_r_handle_base_1aeab89dcc0c851c282effbbc9edea54f3">RHandleBase::iHandle</cxxClassVariableInherited>
+			<cxxClassEnumerationInherited href="class_r_device.xml#class_r_handle_base_1ae1e84a8b8292c5a91e9f67f5834f84eb">RHandleBase:TAttributes</cxxClassEnumerationInherited>
+		</cxxClassInheritsDetail>
+	</cxxClassInherits>
+</cxxClass>

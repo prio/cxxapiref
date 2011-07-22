@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_net_interfaces_1_1_t_if_static_fetcher_link_base">
+	<apiName>NetInterfaces::TIfStaticFetcherLinkBase</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/elements/interfacetable_internal.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="178"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/elements/interfacetable_internal.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="168"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="200"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>This template works like <xref href="class_net_interfaces_1_1_t_if_static_fetcher.xml#class_net_interfaces_1_1_t_if_static_fetcher">TIfStaticFetcher</xref>, but doesn&apos;t use a TLINK. This means that in the template name TLINK will not be expanded twice. The double expansion was causing linking problems with armlink. By using this class in ITFHIERARCHY_LINK_1, the final expansion will be shortened, and the linker bug will be avoided. This code is only here because of this bug. -IBK </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_net_interfaces_1_1_t_if_static_fetcher_link_base_1a3451fa33b15e6ca925f695d12b8f2743">
+		<apiName>IFEntry</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>const <apiRelation href="struct_net_interfaces_1_1_t_interface_control_1_1_t_f_i_entry.xml#struct_net_interfaces_1_1_t_interface_control_1_1_t_f_i_entry">TInterfaceControl::TFIEntry</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>NetInterfaces::TIfStaticFetcherLinkBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline static const TInterfaceControl::TFIEntry * IFEntry()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>NetInterfaces::TIfStaticFetcherLinkBase::IFEntry()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/interfacetable_internal.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="181"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="180"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="183"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_net_interfaces_1_1_t_if_static_fetcher_link_base_1a88ce99120f30c461118d178377fb212d">
+		<apiName>TIfStaticFetcherLinkBase</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionExplicit/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>NetInterfaces::TIfStaticFetcherLinkBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TIfStaticFetcherLinkBase(TInterfaceControl *aInterfaceControl, const TInterfaceControl::TFIEntry *aHead=NULL)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>NetInterfaces::TIfStaticFetcherLinkBase::TIfStaticFetcherLinkBase(TInterfaceControl *,const TInterfaceControl::TFIEntry *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_net_interfaces_1_1_t_interface_control.xml#class_net_interfaces_1_1_t_interface_control">TInterfaceControl</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aInterfaceControl</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="struct_net_interfaces_1_1_t_interface_control_1_1_t_f_i_entry.xml#struct_net_interfaces_1_1_t_interface_control_1_1_t_f_i_entry">TInterfaceControl::TFIEntry</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aHead</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>NULL</cxxFunctionParameterDefaultValue>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/interfacetable_internal.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="188"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="186"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="189"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_net_interfaces_1_1_t_if_static_fetcher_link_base_1a7b0752d4c7a5c9d0cb8b3f3ea18dff00">
+		<apiName>FetchL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>NetInterfaces::TIfStaticFetcherLinkBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline static TAny * FetchL(TInterfaceControl *aInterfaceControl)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>NetInterfaces::TIfStaticFetcherLinkBase::FetchL(TInterfaceControl *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_net_interfaces_1_1_t_interface_control.xml#class_net_interfaces_1_1_t_interface_control">TInterfaceControl</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aInterfaceControl</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/interfacetable_internal.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="193"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="192"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="198"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxVariable id="class_net_interfaces_1_1_t_if_static_fetcher_link_base_1a88757da001e0e39b8c7edd704f912019">
+		<apiName>iFIEntry</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableStorageClassSpecifierStatic/>
+				<cxxVariableDeclaredType>const <apiRelation href="struct_net_interfaces_1_1_t_interface_control_1_1_t_f_i_entry.xml#struct_net_interfaces_1_1_t_interface_control_1_1_t_f_i_entry">TInterfaceControl::TFIEntry</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>NetInterfaces::TIfStaticFetcherLinkBase</cxxVariableScopedName>
+				<cxxVariablePrototype>static const TInterfaceControl::TFIEntry iFIEntry</cxxVariablePrototype>
+				<cxxVariableNameLookup>NetInterfaces::TIfStaticFetcherLinkBase::iFIEntry</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/elements/interfacetable_internal.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="199"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+</cxxClass>

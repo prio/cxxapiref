@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (c) 2011 Nokia Corporation and/or its subsidiary(-ies).
+All rights reserved.        
+        -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "..\..\..\reference.dtd">
+<reference id="cxxStructDerivationVirtual" outputclass="element"
+xml:lang="en-us">
+<title>cxxStructDerivationVirtual</title>
+<shortdesc>Indicates the struct is using virtual inheritance.</shortdesc>
+<refbody>
+<section> 			<title>Description</title> 			<p>The &lt;cxxStructDerivationVirtual>
+element is contained within a &lt;cxxStructDerivation> element.  The <i
+>name</i> attribute must be set to virtual and the <i><?Pub Caret?>value</i
+> attribute must be set to true.  The base referred to by the &lt;cxxStructDerivationVirtual>
+element is indicated by using either a &lt;cxxStructBaseStruct>, &lt;cxxStructBaseStruct>
+or &lt;cxxStructBaseUnion> element as a sibling of &lt;cxxStructDerivationVirtual>.</p
+> 		</section>
+<example><title>Example</title> 		<codeblock>&lt;cxxStructDerivations>
+	&lt;cxxStructDerivation>
+		&lt;cxxStructDerivationVirtual name="virtual" value="true"/>
+		&lt;cxxStructDerivationAccessSpecifier value="public"/>
+		&lt;cxxStructBaseStruct href="struct_base">Base&lt;/cxxStructBaseStruct>
+	&lt;/cxxStructDerivation>
+	...
+&lt;/cxxStructDerivations></codeblock> 		</example>
+<section
+conref="../packagedef.dita#cxxStructDerivationVirtual-reference/cxxStructDerivationVirtual-containedBy-section"
+></section>
+<section
+conref="../packagedef.dita#cxxStructDerivationVirtual-reference/cxxStructDerivationVirtual-contains-section"
+></section>
+<section
+conref="../packagedef.dita#cxxStructDerivationVirtual-reference/cxxStructDerivationVirtual-contentModel-section"
+></section>
+<section
+conref="../packagedef.dita#cxxStructDerivationVirtual-reference/cxxStructDerivationVirtual-attList-section"
+></section>
+<section
+conref="../packagedef.dita#cxxStructDerivationVirtual-reference/cxxStructDerivationVirtual-classValue-section"
+></section>
+</refbody>
+</reference>
+<?Pub *0000001974?>

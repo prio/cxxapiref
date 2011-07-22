@@ -1,0 +1,206 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_t_dbl_que_iter">
+	<apiName>TDblQueIter</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassDerivations>
+				<cxxClassDerivation>
+					<cxxClassDerivationAccessSpecifier value="public"/>
+					<cxxClassBaseClass href="class_t_dbl_que_iter_base.xml#class_t_dbl_que_iter_base">TDblQueIterBase</cxxClassBaseClass>
+				</cxxClassDerivation>
+			</cxxClassDerivations>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="649"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="648"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="656"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>A templated class that provides the behaviour for iterating through a set of doubly linked list elements.</p>
+			<p>The template parameter defines the type of element that forms the doubly linked list. The class defined in the template parameter contains the link object. </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_t_dbl_que_iter_1a77c5325e1a11e800e025252bb496e1b9">
+		<apiName>TDblQueIter</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TDblQueIter</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TDblQueIter(TDblQueBase &amp;aQue)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDblQueIter::TDblQueIter(TDblQueBase &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_dbl_que_base.xml#class_t_dbl_que_base">TDblQueBase</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aQue</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A reference to a doubly linked list header.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="651"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="939"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="961"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Constructs the iterator for the specified doubly linked list</p>
+				<p>The iterator can be constructed whether or not the list contains any elements.</p>
+				<p>If the list does contain elements, the iterator pointer is set to the first one.</p>
+				<p>If the list has no elements, the iterator pointer is not set and the conversion operator T*(), the post increment <xref href="class_t_dbl_que_iter.xml#class_t_dbl_que_iter_1ac6d6214216c321f9ee2c72e2947534e1">operator++()</xref> and the post decrement operator --() subsequently return NULL. Once elements have been added to the list, use either the <xref href="class_t_dbl_que_iter.xml#class_t_dbl_que_iter_1af40c11c2456fa62c0fdf6aefb578801a">TDblQueIter::Set()</xref> function, the <xref href="class_t_dbl_que_iter_base.xml#class_t_dbl_que_iter_base_1ac880ae14e67c9a9d40424f66b32d5279">TDblQueIterBase::SetToFirst()</xref> function or the <xref href="class_t_dbl_que_iter_base.xml#class_t_dbl_que_iter_base_1acb9127868922043894fa94f46c598dc3">TDblQueIterBase::SetToLast()</xref> function to set the iterator pointer.</p>
+				<p>
+					<xref href="class_t_dbl_que_iter.xml#class_t_dbl_que_iter_1af40c11c2456fa62c0fdf6aefb578801a">TDblQueIter::Set</xref> </p>
+				<p>
+					<xref href="class_t_dbl_que_iter_base.xml#class_t_dbl_que_iter_base_1ac880ae14e67c9a9d40424f66b32d5279">TDblQueIterBase::SetToFirst</xref> </p>
+				<p>
+					<xref href="class_t_dbl_que_iter_base.xml#class_t_dbl_que_iter_base_1acb9127868922043894fa94f46c598dc3">TDblQueIterBase::SetToLast</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_dbl_que_iter_1af40c11c2456fa62c0fdf6aefb578801a">
+		<apiName>Set</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDblQueIter</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void Set(T &amp;aLink)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDblQueIter::Set(T &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>T &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLink</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A reference to the element from where iteration is to continue. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="652"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="967"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="977"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Sets the iterator to point to a specific element in the list.</p>
+				<p>This function can be used to alter the pointer at any time during the iterator&apos;s existence. The referenced element must be in the list, otherwise the result is undefined.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_dbl_que_iter_1aad2ae421c59fbd77d1968ba41d0076e7">
+		<apiName>operator T *</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TDblQueIter</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline operator T *()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDblQueIter::operator T *()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="653"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="983"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="998"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets a pointer to the iterator s current element.</p>
+				<p>The operator is normally used implicitly; e.g. some member functions of the list header class <xref href="class_t_dbl_que.xml#class_t_dbl_que">TDblQue</xref> require a pointer to an element (of type class T) as a parameter but in practice, an iterator is often passed instead. This operator performs the necessary conversion.</p>
+				<p>A pointer to the current element, if the iterator points to an element in the list. NULL, if the iterator does not point to an element; i.e. the iterator pointer has previously reached the end of the list (see operator++) or the start of the list (see operator--) or the list is empty. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_dbl_que_iter_1ac6d6214216c321f9ee2c72e2947534e1">
+		<apiName>operator++</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>T *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDblQueIter</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline T * operator++(TInt)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDblQueIter::operator++(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="654"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1004"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1016"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets a pointer to the iterator&apos;s current element and then sets the iterator to point to the next element.</p>
+				<p>Repeated use of this operator allows successive elements to be accessed in the forwards direction.</p>
+				<p>A pointer to the current list element, if the iterator points to an element. NULL, if the iterator does not point to an element; i.e. the iterator pointer has reached the end of the list. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_dbl_que_iter_1a4c5f1a26a3762cd0a6a6d2c56880343a">
+		<apiName>operator--</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>T *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDblQueIter</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline T * operator--(TInt)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDblQueIter::operator--(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="655"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1022"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1034"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets a pointer to the iterator&apos;s current element and then sets the iterator to point to the previous element.</p>
+				<p>Repeated use of this operator allows successive elements to be accessed in the backwards direction.</p>
+				<p>A pointer to the current element, if the iterator points to an element. NULL, if the iterator does not point to an element; i.e. the iterator pointer has reached the beginning of the list. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxClassInherits>
+		<cxxClassInheritsDetail>
+			<cxxClassFunctionInherited href="class_t_dbl_que_iter.xml#class_t_dbl_que_iter_base_1a98a08b7a4c1e09d0e0fd2459f1a70259">TDblQueIterBase::DoCurrent()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_dbl_que_iter.xml#class_t_dbl_que_iter_base_1a24903b64e399649d097e1b85a4e6c971">TDblQueIterBase::DoPostDec()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_dbl_que_iter.xml#class_t_dbl_que_iter_base_1af03345c7ea41c7d22a32e18490fb5177">TDblQueIterBase::DoPostInc()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_dbl_que_iter.xml#class_t_dbl_que_iter_base_1a7497aa1ec21511192c77940b7b42da5f">TDblQueIterBase::DoSet(TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_dbl_que_iter.xml#class_t_dbl_que_iter_base_1ac880ae14e67c9a9d40424f66b32d5279">TDblQueIterBase::SetToFirst()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_dbl_que_iter.xml#class_t_dbl_que_iter_base_1acb9127868922043894fa94f46c598dc3">TDblQueIterBase::SetToLast()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_dbl_que_iter.xml#class_t_dbl_que_iter_base_1a3628302bb72171e5d6dc9aea798fb55d">TDblQueIterBase::TDblQueIterBase(TDblQueBase &amp;)</cxxClassFunctionInherited>
+			<cxxClassVariableInherited href="class_t_dbl_que_iter.xml#class_t_dbl_que_iter_base_1a631eb84bc07ba790747d9a79bc6dfb9c">TDblQueIterBase::iHead</cxxClassVariableInherited>
+			<cxxClassVariableInherited href="class_t_dbl_que_iter.xml#class_t_dbl_que_iter_base_1a21a6337fd7a43693f63c0fd004270655">TDblQueIterBase::iNext</cxxClassVariableInherited>
+			<cxxClassVariableInherited href="class_t_dbl_que_iter.xml#class_t_dbl_que_iter_base_1a1a697bcbc094bca88c13ba64f0ac9f3b">TDblQueIterBase::iOffset</cxxClassVariableInherited>
+		</cxxClassInheritsDetail>
+	</cxxClassInherits>
+</cxxClass>

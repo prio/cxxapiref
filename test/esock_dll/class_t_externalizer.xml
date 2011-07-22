@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_t_externalizer">
+	<apiName>TExternalizer</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="185"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="184"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="191"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>A family of classes whose instances can be used to perform externalisation on behalf of other objects.</p>
+			<p>
+				<xref href="class_t_stream_ref.xml#class_t_stream_ref">TStreamRef</xref> </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_t_externalizer_1a0c5c5ea4952cebacf11d9112fbfd5f6a">
+		<apiName>operator()</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TExternalizer</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void operator()(const T &amp;anObject, RWriteStream &amp;aStream) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TExternalizer::operator()(const T &amp;,RWriteStream &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const T &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anObject</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_write_stream.xml#class_r_write_stream">RWriteStream</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStream</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="187"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="161"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="162"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_externalizer_1aecd14692f8ed80d11927a78e0503ffe6">
+		<apiName>Function</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="s32strm_8h.xml#_1ad62ef152ab2559a424f1105b8cc8df82">TExternalizeFunction</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TExternalizer</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline static TExternalizeFunction Function()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TExternalizer::Function()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="188"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="164"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="170"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets a pointer to the function to be used to perform externalisation.</p>
+				<p>The implementation is the private, static member of this class, <xref href="class_t_externalizer.xml#class_t_externalizer_1a128197c56ff4b194bbdef73868fe6a01">ExternalizeAsL()</xref>.</p>
+				<p>The externalisation function. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_externalizer_1a128197c56ff4b194bbdef73868fe6a01">
+		<apiName>ExternalizeAsL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TExternalizer</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline static void ExternalizeAsL(const TAny *aPtr, RWriteStream &amp;aStream)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TExternalizer::ExternalizeAsL(const TAny *,RWriteStream &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPtr</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_write_stream.xml#class_r_write_stream">RWriteStream</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStream</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="190"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="172"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="173"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+</cxxClass>

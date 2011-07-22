@@ -1,0 +1,790 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_r_write_stream">
+	<apiName>RWriteStream</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="95"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="94"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="136"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>The write stream interface. The process of externalising to a stream is achieved through a reference to an object of this type.</p>
+			<p>A store aware class defines and implements an <xref href="cs__subconn_8cpp.xml#cs__subconn_8cpp_1a8cc272f79f43ec39bb9e0bd04353e0d1">ExternalizeL()</xref> member function which is used to externalise that object and takes a reference to an <xref href="class_r_write_stream.xml#class_r_write_stream">RWriteStream</xref> as the interface to the write stream. </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_r_write_stream_1a30645ed3e9f4384c9f0b5dcc22c71a7b">
+		<apiName>RWriteStream</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>RWriteStream</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline RWriteStream()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RWriteStream::RWriteStream()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="97"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="89"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="93"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>The stream buffer sink, as returned by <xref href="class_r_write_stream.xml#class_r_write_stream_1abc87e46d9cb7ecf72c3c800829363002">Sink()</xref>, is set to NULL, and the stream has no associated Store map. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_write_stream_1ad283c79474867ead22442622488c968f">
+		<apiName>RWriteStream</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>RWriteStream</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline RWriteStream(const MExternalizer&lt; TStreamRef &gt; &amp;anExter)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RWriteStream::RWriteStream(const MExternalizer&lt; TStreamRef &gt; &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_m_externalizer.xml#class_m_externalizer">MExternalizer</apiRelation>&lt; <apiRelation href="class_t_stream_ref.xml#class_t_stream_ref">TStreamRef</apiRelation> &gt; &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anExter</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Specifies an externaliser. For example, CStoreMap implements MExternalizer&lt;TStreamRef&gt;. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="98"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="94"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="101"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Constructs a write stream with an associated store map. The stream buffer sink is set to NULL.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_write_stream_1ac326d279ce36afe1ad3d22ff7cad0a0b">
+		<apiName>RWriteStream</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>RWriteStream</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline RWriteStream(MStreamBuf *aSink)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RWriteStream::RWriteStream(MStreamBuf *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>MStreamBuf *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSink</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The stream buffer used to write to the write stream. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="99"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="102"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="108"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Constructs a write stream over the supplied stream buffer. The stream has no associated Store map.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_write_stream_1abc87e46d9cb7ecf72c3c800829363002">
+		<apiName>Sink</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>MStreamBuf *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RWriteStream</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline MStreamBuf * Sink()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RWriteStream::Sink()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="100"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="109"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="114"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets the underlying stream buffer for the write stream. This provides access to the stream-buffer implementation used by the write stream.</p>
+				<p>The underlying stream buffer for the write stream. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_write_stream_1abd304f57391611ce75f7749e0598d0bb">
+		<apiName>Close</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RWriteStream</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Close()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RWriteStream::Close()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="101"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_write_stream_1ab9af04a3897f520411090003cfaaa710">
+		<apiName>Release</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RWriteStream</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Release()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RWriteStream::Release()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="102"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_write_stream_1a5c3efffe79dfce6c62794d3cee867482">
+		<apiName>CommitL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RWriteStream</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void CommitL()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RWriteStream::CommitL()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="103"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_write_stream_1a4e16210db65d6b68bf3708c9ac391033">
+		<apiName>PushL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RWriteStream</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void PushL()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RWriteStream::PushL()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="105"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_write_stream_1a3a5520ada108a330273d2c4a3fd99264">
+		<apiName>Pop</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RWriteStream</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void Pop()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RWriteStream::Pop()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="106"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="115"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="117"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Removes the cleanup item for this write stream object from the cleanup stack. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_write_stream_1ad095626ab16f8a1fd0ff2beb196c49b6">
+		<apiName>WriteL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RWriteStream</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void WriteL(const TDesC8 &amp;aDes)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RWriteStream::WriteL(const TDesC8 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="108"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_write_stream_1a42c7649adac9ca8abcfd2d0a18ac918b">
+		<apiName>WriteL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RWriteStream</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void WriteL(const TDesC8 &amp;aDes, TInt aLength)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RWriteStream::WriteL(const TDesC8 &amp;,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="109"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_write_stream_1a8e754e83a62c73e57c0df8f93378eebc">
+		<apiName>WriteL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RWriteStream</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void WriteL(const TUint8 *aPtr, TInt aLength)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RWriteStream::WriteL(const TUint8 *,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="e32def_8h.xml#_1aae4399ce3f10d6c2b5ec96a13bbb5881">TUint8</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPtr</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="110"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_write_stream_1a6e7e6151b6b56e31ec9fc02d9d2c2480">
+		<apiName>WriteL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RWriteStream</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void WriteL(RReadStream &amp;aStream)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RWriteStream::WriteL(RReadStream &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_read_stream.xml#class_r_read_stream">RReadStream</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStream</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="111"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_write_stream_1ab17fbfd6efd7fad26c2a88bd360f14af">
+		<apiName>WriteL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RWriteStream</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void WriteL(RReadStream &amp;aStream, TInt aLength)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RWriteStream::WriteL(RReadStream &amp;,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_read_stream.xml#class_r_read_stream">RReadStream</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStream</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="112"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_write_stream_1a9317d476b2e5f7cc3b2f1d37d0ec391b">
+		<apiName>WriteL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RWriteStream</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void WriteL(const TDesC16 &amp;aDes)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RWriteStream::WriteL(const TDesC16 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC16</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="114"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_write_stream_1a405ed124dee24181f93b81ec4af4ac3e">
+		<apiName>WriteL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RWriteStream</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void WriteL(const TDesC16 &amp;aDes, TInt aLength)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RWriteStream::WriteL(const TDesC16 &amp;,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC16</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="115"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_write_stream_1a58d5afd00db1515f6cfbf2783c31241f">
+		<apiName>WriteL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RWriteStream</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void WriteL(const TUint16 *aPtr, TInt aLength)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RWriteStream::WriteL(const TUint16 *,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="e32def_8h.xml#_1a7c545c7b28f2e5d128d132d2ea1cdb2b">TUint16</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPtr</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="116"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_write_stream_1a4d0b1930ba3d48edd0103b7216d24c74">
+		<apiName>WriteInt8L</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RWriteStream</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void WriteInt8L(TInt aValue)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RWriteStream::WriteInt8L(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aValue</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="118"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_write_stream_1a63d7c1b939ad7edaa19c995cb306f255">
+		<apiName>WriteInt16L</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RWriteStream</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void WriteInt16L(TInt aValue)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RWriteStream::WriteInt16L(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aValue</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="119"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_write_stream_1ae8d47812a16cfab042e2b0abe2c39365">
+		<apiName>WriteInt32L</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RWriteStream</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void WriteInt32L(TInt32 aValue)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RWriteStream::WriteInt32L(TInt32)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a08ea5ecd72297daaa3a4f3c41ce9e103">TInt32</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aValue</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="120"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_write_stream_1a33592cc6ddd7c234d162d1f27c6ef3c7">
+		<apiName>WriteUint8L</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RWriteStream</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void WriteUint8L(TUint aValue)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RWriteStream::WriteUint8L(TUint)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aValue</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="121"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_write_stream_1a96698a6713d802ed4d365e714a678eaa">
+		<apiName>WriteUint16L</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RWriteStream</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void WriteUint16L(TUint aValue)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RWriteStream::WriteUint16L(TUint)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aValue</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="122"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_write_stream_1a38fb2f85daaf89b089ac749241146a06">
+		<apiName>WriteUint32L</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RWriteStream</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void WriteUint32L(TUint32 aValue)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RWriteStream::WriteUint32L(TUint32)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a8240e11f17c80b6b222fc2af50234da4">TUint32</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aValue</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="123"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_write_stream_1ae077001d1a9aae54b243ee19479f9317">
+		<apiName>WriteReal32L</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RWriteStream</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void WriteReal32L(TReal aValue) __SOFTFP</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RWriteStream::WriteReal32L(TReal)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a66e591a730f9c72e5990f3541bbb67bd">TReal</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aValue</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="124"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_write_stream_1ad44bc96898e9c8cae280dd86486c66f7">
+		<apiName>WriteReal64L</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RWriteStream</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void WriteReal64L(TReal64 aValue) __SOFTFP</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RWriteStream::WriteReal64L(TReal64)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1ae83f8db5e4663238872dc26f9e75618c">TReal64</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aValue</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="125"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_write_stream_1a9679f3123d1cd4b291b7376e73a2b767">
+		<apiName>Attach</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RWriteStream</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void Attach(MStreamBuf *aSink)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RWriteStream::Attach(MStreamBuf *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>MStreamBuf *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSink</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The stream buffer sink for this write stream. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="127"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="118"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="130"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Sets the stream buffer sink for this write stream. The existing sink, if there is one, will be discarded.</p>
+				<p>This is useful for derived classes, enabling them to set the sink following construction.</p>
+				<p>Note:</p>
+				<p>
+					<xref href="class_r_write_stream.xml#class_r_write_stream_1ab9af04a3897f520411090003cfaaa710">Release()</xref> is not called for discarded sinks.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_write_stream_1aa0c4880e7c9f8c441d290cfc06ed1159">
+		<apiName>Detach</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RWriteStream</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void Detach()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RWriteStream::Detach()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="128"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="131"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="138"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Sets the stream buffer sink for this write stream to NULL. The existing sink, if there is one, will be discarded.</p>
+				<p>Note:</p>
+				<p>
+					<xref href="class_r_write_stream.xml#class_r_write_stream_1ab9af04a3897f520411090003cfaaa710">Release()</xref> is not called for discarded sinks. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_write_stream_1a3d313bc73b1085c7d44357ea39b5f9e8">
+		<apiName>WriteRefL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RWriteStream</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void WriteRefL(TStreamRef aRef)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RWriteStream::WriteRefL(TStreamRef)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_stream_ref.xml#class_t_stream_ref">TStreamRef</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aRef</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="130"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxVariable id="class_r_write_stream_1a6a8cd0ca61eff7c753d7f1519f834e72">
+		<apiName>iSnk</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>MStreamBuf *</cxxVariableDeclaredType>
+				<cxxVariableScopedName>RWriteStream</cxxVariableScopedName>
+				<cxxVariablePrototype>MStreamBuf * iSnk</cxxVariablePrototype>
+				<cxxVariableNameLookup>RWriteStream::iSnk</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="132"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_r_write_stream_1acb1b58a720cde3417eb6a80a2e86ca08">
+		<apiName>iExterL</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>const <apiRelation href="class_m_externalizer.xml#class_m_externalizer">MExternalizer</apiRelation>&lt; <apiRelation href="class_t_stream_ref.xml#class_t_stream_ref">TStreamRef</apiRelation> &gt; *</cxxVariableDeclaredType>
+				<cxxVariableScopedName>RWriteStream</cxxVariableScopedName>
+				<cxxVariablePrototype>const MExternalizer&lt; TStreamRef &gt; * iExterL</cxxVariablePrototype>
+				<cxxVariableNameLookup>RWriteStream::iExterL</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="133"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+</cxxClass>

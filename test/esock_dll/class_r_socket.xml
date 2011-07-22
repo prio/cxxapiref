@@ -1,0 +1,2283 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_r_socket">
+	<apiName>RSocket</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="758"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="739"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="834"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>Provides a client endpoint to a protocol. It provides functions for socket creation, reading, writing, passive connection, active connection, setting addresses and querying addresses. Use this class as an endpoint for network type communications. It provides the following services:</p>
+			<p>reading from and writing to protocol</p>
+			<p>binding to addresses</p>
+			<p>active connecting</p>
+			<p>passive connection through the listen/accept model</p>
+			<p>Before using any of these services, a connection to a socket server session must have been made and the socket must be open.</p>
+			<p>Since v5.0 </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxEnumeration id="class_r_socket_1aadb03a96ceef8206ae5191554bb95f8e">
+		<apiName>TShutdown</apiName>
+		<cxxEnumerationDetail>
+			<cxxEnumerationDefinition>
+				<cxxEnumerationAccessSpecifier value="public"/>
+				<cxxEnumerationScopedName>RSocket</cxxEnumerationScopedName>
+				<cxxEnumerationPrototype>TShutdown</cxxEnumerationPrototype>
+				<cxxEnumerationNameLookup>RSocket:TShutdown</cxxEnumerationNameLookup>
+				<cxxEnumerators>
+					<cxxEnumerator id="class_r_socket_1aadb03a96ceef8206ae5191554bb95f8ea8b7d682e659bc1e6d23fb0405db6e1be">
+						<apiName>ENormal</apiName>
+						<cxxEnumeratorScopedName>RSocket</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ENormal</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RSocket::ENormal</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="766"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Complete when socket output/input stopped. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_r_socket_1aadb03a96ceef8206ae5191554bb95f8ea0431c8cd6a4e7ecde8116c82e3f664da">
+						<apiName>EStopInput</apiName>
+						<cxxEnumeratorScopedName>RSocket</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EStopInput</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RSocket::EStopInput</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="768"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Stop socket input and complete when output is stopped. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_r_socket_1aadb03a96ceef8206ae5191554bb95f8ead6b723b3c1c4c12490fdcda5b6818982">
+						<apiName>EStopOutput</apiName>
+						<cxxEnumeratorScopedName>RSocket</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EStopOutput</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RSocket::EStopOutput</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="770"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Stop socket output and complete when input is stopped. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_r_socket_1aadb03a96ceef8206ae5191554bb95f8ea0d3388994155b5b90689471139db47ae">
+						<apiName>EImmediate</apiName>
+						<cxxEnumeratorScopedName>RSocket</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EImmediate</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RSocket::EImmediate</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="773"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Stop socket input/output and complete (abortive close). </p>
+						</apiDesc>
+					</cxxEnumerator>
+				</cxxEnumerators>
+				<cxxEnumerationAPIItemLocation>
+					<cxxEnumerationDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxEnumerationDeclarationFileLine name="lineNumber" value="764"/>
+					<cxxEnumerationDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxEnumerationDefinitionFileLineStart name="lineNumber" value="763"/>
+					<cxxEnumerationDefinitionFileLineEnd name="lineNumber" value="773"/>
+				</cxxEnumerationAPIItemLocation>
+			</cxxEnumerationDefinition>
+			<apiDesc>
+				<p>Argument to <xref href="class_r_socket.xml#class_r_socket_1a76c3e3c36c87e6e7b4c4d32fcec7015e">RSocket::Shutdown()</xref> specifying how abruptly the shutdown occurs. </p>
+			</apiDesc>
+		</cxxEnumerationDetail>
+	</cxxEnumeration>
+	<cxxFunction id="class_r_socket_1a2e58d11fd8b416dceab0fee5f658849f">
+		<apiName>RSocket</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType>IMPORT_C</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocket</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C RSocket()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocket::RSocket()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="775"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="642"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="647"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Default Constructor </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_1a49ea8825cc0da2227fdab27e9b4f64ab">
+		<apiName>Open</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocket</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Open(RSocketServ &amp;aServer, TUint addrFamily, TUint sockType, TUint protocol)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocket::Open(RSocketServ &amp;,TUint,TUint,TUint)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_socket_serv.xml#class_r_socket_serv">RSocketServ</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aServer</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The socket server session. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>addrFamily</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefinitionName>anAddrFamily</cxxFunctionParameterDefinitionName>
+						<apiDefNote>A valid address constant for a protocol family. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>sockType</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefinitionName>aSockType</cxxFunctionParameterDefinitionName>
+						<apiDefNote>A valid socket type for the protocol. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>protocol</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefinitionName>aProtocol</cxxFunctionParameterDefinitionName>
+						<apiDefNote>A protocol constant which identifies a specific protocol. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="777"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="649"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="695"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Opens an implicit socket by creating a new subsession to the socket server. Implicit socket is not explicitly associated with any connection. The socket will choose the default connection for sending the packets.</p>
+				<p>Implicit socket accepts packets routed through any connection.</p>
+				<p>Opens a channel to a protocol identified by a tuple of constants. If a socket is the first to be opened for a protocol it will have the additional effect of loading the protocol in the socket server.</p>
+				<p>NOTE: Deprecated default connection scenario. Applications exercising the default connection scenario must (from 9.3 onwards) switch to explicit connection scenario.<ul>
+						<li>
+							<p>The default connection scenario is where an application holding one started <xref href="class_r_connection.xml#class_r_connection">RConnection</xref> opens a socket without explicitly associating it with the <xref href="class_r_connection.xml#class_r_connection">RConnection</xref>. The explicit association can be made by passing the <xref href="class_r_connection.xml#class_r_connection">RConnection</xref> or a derived <xref href="class_r_sub_connection.xml#class_r_sub_connection">RSubConnection</xref> to an appropriate overload of <xref href="class_r_socket.xml#class_r_socket_1a49ea8825cc0da2227fdab27e9b4f64ab">RSocket::Open</xref>(...) (not this method).</p>
+						</li>
+						<li>
+							<p>The implicit connection scenario is where an application holding either none or many started RConnections (to different access points) opens a socket without explicitly associating it an <xref href="class_r_connection.xml#class_r_connection">RConnection</xref>.</p>
+						</li>
+						<li>
+							<p>The explicit connection scenario is where an application holding started RConnections opens a socket explicitly associating it with one of its RConnections.</p>
+						</li>
+					</ul>
+				</p>
+				<p>Applications attempting to exercise the default connection scenario shall (from 9.3 onwards) receive an error from <xref href="class_r_socket.xml#class_r_socket_1a49ea8825cc0da2227fdab27e9b4f64ab">RSocket::Open</xref>(...). The actual error code is yet to be defined.</p>
+				<p>KErrNone if successful, otherwise another of the system-wide error codes</p>
+				<p>
+					<b>capability</b>
+				</p>
+				<p>Dependent Capability required depends on the type of socket so deferred to PRT </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_1a26b39580a75cab0b68c1f490b77f22d7">
+		<apiName>Open</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocket</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Open(RSocketServ &amp;aServer, TUint addrFamily, TUint sockType, TUint protocol, RConnection &amp;aConnection)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocket::Open(RSocketServ &amp;,TUint,TUint,TUint,RConnection &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_socket_serv.xml#class_r_socket_serv">RSocketServ</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aServer</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The socket server session. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>addrFamily</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefinitionName>anAddrFamily</cxxFunctionParameterDefinitionName>
+						<apiDefNote>A valid address constant for a protocol family. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>sockType</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefinitionName>aSockType</cxxFunctionParameterDefinitionName>
+						<apiDefNote>A valid socket type for the protocol. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>protocol</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefinitionName>aProtocol</cxxFunctionParameterDefinitionName>
+						<apiDefNote>A protocol constant which identifies a specific protocol. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_connection.xml#class_r_connection">RConnection</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aConnection</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Existing RConnection whose interface this socket will be associated with. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="778"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="763"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="807"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Opens an explicit socket by creating a new subsession to the socket server. The socket is explicitly associated with the same underlying connection as an existing <xref href="class_r_connection.xml#class_r_connection">RConnection</xref> instance.</p>
+				<p>Socket traffic is directed to and from the specified connection only.</p>
+				<p>
+					<note type="note">
+						<p>The association is instantaneous, in that the socket is associated with the interface that the <xref href="class_r_connection.xml#class_r_connection">RConnection</xref> is associated with at the present time. This association terminates when the underlying interface goes down.</p>
+					</note>since 7.0S</p>
+				<p>KErrNone if successful, otherwise another of the system-wide error codes.</p>
+				<p>
+					<b>capability</b>
+				</p>
+				<p>Dependent Capability required depends on the type of connection so deferred to PRT </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_1acfde5bc523167ad40ae1797062197a5a">
+		<apiName>Open</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocket</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Open(RSocketServ &amp;aServer, TUint addrFamily, TUint sockType, TUint protocol, RSubConnection &amp;aSubConnection)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocket::Open(RSocketServ &amp;,TUint,TUint,TUint,RSubConnection &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_socket_serv.xml#class_r_socket_serv">RSocketServ</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aServer</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The socket server session. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>addrFamily</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefinitionName>anAddrFamily</cxxFunctionParameterDefinitionName>
+						<apiDefNote>A valid address constant for a protocol family. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>sockType</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefinitionName>aSockType</cxxFunctionParameterDefinitionName>
+						<apiDefNote>A valid socket type for the protocol. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>protocol</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefinitionName>aProtocol</cxxFunctionParameterDefinitionName>
+						<apiDefNote>A protocol constant which identifies a specific protocol. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_sub_connection.xml#class_r_sub_connection">RSubConnection</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSubConnection</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Existing RSubConnection this socket will be associated with. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="779"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="809"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="851"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Opens an explicit socket by creating a new subsession to the socket server. The socket is explicitly associated with the same underlying connection as an existing <xref href="class_r_sub_connection.xml#class_r_sub_connection">RSubConnection</xref> instance.</p>
+				<p>Socket traffic is directed to and from the specified connection only.</p>
+				<p>since 7.0S</p>
+				<p>KErrNone if successful, otherwise another of the system-wide error codes.</p>
+				<p>
+					<b>capability</b>
+				</p>
+				<p>Dependent Capability required depends on the type of connection so deferred to PRT </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_1a991e26babc4e3af141c4d63100c708c2">
+		<apiName>Open</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocket</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Open(RSocketServ &amp;aServer, const TDesC &amp;aName)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocket::Open(RSocketServ &amp;,const TDesC &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_socket_serv.xml#class_r_socket_serv">RSocketServ</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aServer</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The socket server session. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aName</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Name of a protocol. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="780"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="697"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="739"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Opens an implicit socket by creating a new subsession to the socket server. Implicit socket is not explicitly associated with any connection. The socket will choose the default connection for sending the packets.</p>
+				<p>Implicit socket accepts packets routed through any connection.</p>
+				<p>Opens a channel to a protocol identified by a name. If a socket is the first to be opened for a protocol it will have the additional effect of loading the protocol in the socket server.</p>
+				<p>NOTE: Deprecated default connection scenario. Applications exercising the default connection scenario must (from 9.3 onwards) switch to explicit connection scenario.<ul>
+						<li>
+							<p>The default connection scenario is where an application holding one started <xref href="class_r_connection.xml#class_r_connection">RConnection</xref> opens a socket without explicitly associating it with the <xref href="class_r_connection.xml#class_r_connection">RConnection</xref>. The explicit association can be made by passing the <xref href="class_r_connection.xml#class_r_connection">RConnection</xref> or a derived <xref href="class_r_sub_connection.xml#class_r_sub_connection">RSubConnection</xref> to an appropriate overload of <xref href="class_r_socket.xml#class_r_socket_1a49ea8825cc0da2227fdab27e9b4f64ab">RSocket::Open</xref>(...) (not this method).</p>
+						</li>
+						<li>
+							<p>The implicit connection scenario is where an application holding either none or many started RConnections (to different access points) opens a socket without explicitly associating it an <xref href="class_r_connection.xml#class_r_connection">RConnection</xref>.</p>
+						</li>
+						<li>
+							<p>The explicit connection scenario is where an application holding started RConnections opens a socket explicitly associating it with one of its RConnections.</p>
+						</li>
+					</ul>
+				</p>
+				<p>Applications attempting to exercise the default connection scenario shall (from 9.3 onwards) receive an error from <xref href="class_r_socket.xml#class_r_socket_1a49ea8825cc0da2227fdab27e9b4f64ab">RSocket::Open</xref>(...). The actual error code is yet to be defined.</p>
+				<p>KErrNone if successful, otherwise another of the system-wide error codes.</p>
+				<p>
+					<b>capability</b>
+				</p>
+				<p>Dependent Capability required depends on the type of socket so deferred to PRT </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_1a793759e2de5f60e594125ba4a97c9b24">
+		<apiName>Open</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocket</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Open(RSocketServ &amp;aServer)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocket::Open(RSocketServ &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_socket_serv.xml#class_r_socket_serv">RSocketServ</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aServer</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The socket server session. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="781"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="741"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="761"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Opens an implicit socket by creating a new subsession to the socket server. Implicit socket is not explicitly associated with any connection. The socket will choose the default connection for sending the packets.</p>
+				<p>Implicit socket accepts packets routed through any connection.</p>
+				<p>Provides a blank channel to the socket server which has no protocol associated. A socket opened in this manner is suitable as an argument to <xref href="class_r_socket.xml#class_r_socket_1a14bf5825702b63ff931df0e5d3adc616">Accept()</xref>, which will marry the blank socket to a protocol when a connection is established to a remote endpoint.</p>
+				<p>KErrNone if successful, otherwise another of the system-wide error codes.</p>
+				<p>
+					<b>capability</b>
+				</p>
+				<p>Dependent Capability required depends on the type of socket so deferred to PRT </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_1a0d1e0fdc665f4ebebd94d29071eebd2c">
+		<apiName>Send</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocket</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Send(const TDesC8 &amp;aDesc, TUint someFlags, TRequestStatus &amp;aStatus)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocket::Send(const TDesC8 &amp;,TUint,TRequestStatus &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDesc</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefinitionName>aBuffer</cxxFunctionParameterDefinitionName>
+						<apiDefNote>The data to be sent. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>someFlags</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Flags which are passed through to protocol </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On return KErrNone if successful, otherwise another of the system-wide error codes. Note that KErrEof indicates that the socket has been shutdown with option EStopOutput.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="782"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="953"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="972"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Sends data to a remote host on a connected socket with options set by protocol specific flags.</p>
+				<p>A socket may only have one send operation in progress at any one time. <xref href="class_r_socket.xml#class_r_socket_1a0d1e0fdc665f4ebebd94d29071eebd2c">Send()</xref> should only be used with connected sockets.</p>
+				<p>If a protocol&apos;s information flag is marked with KSIUrgentData, then KSockWriteUrgent may be provided as a flag to <xref href="class_r_socket.xml#class_r_socket_1a0d1e0fdc665f4ebebd94d29071eebd2c">Send()</xref>. All other flags are protocol specific.</p>
+				<p>
+					<b>capability</b>
+				</p>
+				<p>Dependent on the type of socket so deferred to PRT </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_1a4192efab778ad7d186277e9d413cc299">
+		<apiName>Send</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocket</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Send(const TDesC8 &amp;aDesc, TUint someFlags, TRequestStatus &amp;aStatus, TSockXfrLength &amp;aLen)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocket::Send(const TDesC8 &amp;,TUint,TRequestStatus &amp;,TSockXfrLength &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDesc</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefinitionName>aBuffer</cxxFunctionParameterDefinitionName>
+						<apiDefNote>The data to be sent. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>someFlags</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Flags which are passed through to protocol </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On return KErrNone if successful, otherwise another of the system-wide error codes. Note that KErrEof indicates that the socket has been shutdown with option EStopOutput </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_pckg_buf.xml#class_t_pckg_buf">TSockXfrLength</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLen</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Filled in with amount of data sent before completion</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="784"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="974"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="998"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Sends data to a remote host on a connected socket with options set by protocol specific flags.</p>
+				<p>The length of the descriptor indicates the amount of data to be sent. The TSockXfrLength argument will return the amount of data actually sent.</p>
+				<p>A socket may only have one send operation in progress at any one time.</p>
+				<p>
+					<xref href="class_r_socket.xml#class_r_socket_1a0d1e0fdc665f4ebebd94d29071eebd2c">Send()</xref> should only be used with connected sockets.</p>
+				<p>If a protocol&apos;s information flag is marked with KSIUrgentData, then KSockWriteUrgent may be provided as a flag to <xref href="class_r_socket.xml#class_r_socket_1a0d1e0fdc665f4ebebd94d29071eebd2c">Send()</xref>. All other flags are protocol specific.</p>
+				<p>
+					<b>capability</b>
+				</p>
+				<p>Dependent Capability required depends on the type of socket so deferred to PRT </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_1a36b6160922ccf065deb4369d1afb1bf3">
+		<apiName>CancelSend</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocket</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void CancelSend()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocket::CancelSend()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="785"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1643"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1651"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Cancels an outstanding <xref href="class_r_socket.xml#class_r_socket_1a0d1e0fdc665f4ebebd94d29071eebd2c">Send()</xref> operation.</p>
+				<p>Calling the function will cause any outstanding send operation to complete prematurely. The state of a socket after a send is cancelled is defined by the characteristics of the protocol. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_1a700f8ea4caf66511180f772f24e65156">
+		<apiName>Recv</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocket</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Recv(TDes8 &amp;aDesc, TUint flags, TRequestStatus &amp;aStatus)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocket::Recv(TDes8 &amp;,TUint,TRequestStatus &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDesc</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefinitionName>aBuffer</cxxFunctionParameterDefinitionName>
+						<apiDefNote>A descriptor where data received will be placed. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>flags</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefinitionName>someFlags</cxxFunctionParameterDefinitionName>
+						<apiDefNote>Flags for protocol specific information. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On return, KErrNone if successful, otherwise another of the system-wide error codes. Note that KErrEof indicates either that a remote connection is closed, and that no more data is available for reading, or the socket has been shutdown with option RSocket::EStopInput.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="787"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1001"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1031"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Receives data from a remote host, allowing flags for protocol specific information.</p>
+				<p>For a stream-interfaced socket the function only completes when the full amount of requested data has been received (or the connection breaks). This means when the descriptor has been filled to its maximum length (not its current length).</p>
+				<p>For a datagram-interface socket, the function completes when one datagram arrives - even if it is not sufficient to fill the buffer. If the datagram does not fit in the buffer supplied then the remaining data will be lost.</p>
+				<p>
+					<xref href="class_r_socket.xml#class_r_socket_1a700f8ea4caf66511180f772f24e65156">Recv()</xref> should only be used with connected sockets.</p>
+				<p>A socket may only have one receive operation outstanding at any one time.</p>
+				<p>If a protocol&apos;s information flag is marked with KSIPeekData, then KSockReadPeek may be provided as a flag to <xref href="class_r_socket.xml#class_r_socket_1a700f8ea4caf66511180f772f24e65156">Recv()</xref>. All other flags are protocol specific.</p>
+				<p>
+					<b>capability</b>
+				</p>
+				<p>Dependent on the type of socket so deferred to PRT </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_1a96221bb908c9e43e8a87f30c137e6aef">
+		<apiName>Recv</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocket</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Recv(TDes8 &amp;aDesc, TUint flags, TRequestStatus &amp;aStatus, TSockXfrLength &amp;aLen)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocket::Recv(TDes8 &amp;,TUint,TRequestStatus &amp;,TSockXfrLength &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDesc</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefinitionName>aBuffer</cxxFunctionParameterDefinitionName>
+						<apiDefNote>A descriptor where data received will be placed. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>flags</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefinitionName>someFlags</cxxFunctionParameterDefinitionName>
+						<apiDefNote>Flags for protocol specific information. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Reference to the request status object. On completion, KErrNone if successful, otherwise one of the system wide error codes. Note that KErrEof indicates either that a remote connection is closed, and that no more data is available for reading, or the socket has been shutdown with option RSocket::EStopInput. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_pckg_buf.xml#class_t_pckg_buf">TSockXfrLength</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLen</cxxFunctionParameterDeclarationName>
+						<apiDefNote>For non-datagram sockets, on return, a length which indicates how much data was read. This is the same as length of the returned aDesc. For datagram sockets, this parameter returns the number of remaining unread octets.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="789"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1033"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1073"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Receives data from a remote host, allowing flags for protocol specific information.</p>
+				<p>For a stream-interfaced sockets, the function only completes when the full amount of requested data has been received (or the connection breaks). This means when the descriptor has been filled to its maximum length (not its current length).</p>
+				<p>For a datagram-interface socket, the function completes when one datagram arrives - even if it is not sufficient to fill the buffer. If the datagram does not fit in the buffer supplied, remaining data may be retrieved using the Datagram Continuation feature.</p>
+				<p>This function implements the Datagram Continuation feature for PRTs implementing PRT1.5: the ability to read a datagram in parts. For a client request to read a datagram, using the TSockXfrLength parameter, remaining unread octets of the datagram are returned in the TSockXfrLength parameter. The client can then read the remaining octets by further reads with the &apos;KSockReadContinuation&apos; flag OR&apos;d into the flags field. Remaining octets are discarded upon the next read without the KSockReadContinuation flag set.</p>
+				<p>
+					<xref href="class_r_socket.xml#class_r_socket_1a700f8ea4caf66511180f772f24e65156">Recv()</xref> should only be used with connected sockets.</p>
+				<p>A socket may only have one receive operation outstanding at any one time.</p>
+				<p>If a protocol&apos;s information flag is marked with KSIPeekData, then KSockReadPeek may be provided as a flag to <xref href="class_r_socket.xml#class_r_socket_1a700f8ea4caf66511180f772f24e65156">Recv()</xref>. All other flags are protocol specific.</p>
+				<p>
+					<b>capability</b>
+				</p>
+				<p>Dependent on the type of socket so deferred to PRT </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_1a9443cb2bc9387e4ab8c3bc6adbed1a03">
+		<apiName>RecvOneOrMore</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocket</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void RecvOneOrMore(TDes8 &amp;aDesc, TUint flags, TRequestStatus &amp;aStatus, TSockXfrLength &amp;aLen)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocket::RecvOneOrMore(TDes8 &amp;,TUint,TRequestStatus &amp;,TSockXfrLength &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDesc</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefinitionName>aBuffer</cxxFunctionParameterDefinitionName>
+						<apiDefNote>A descriptor where data read will be placed. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>flags</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefinitionName>someFlags</cxxFunctionParameterDefinitionName>
+						<apiDefNote>Flags which are passed through to protocol. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On completion, KErrNone if successful, otherwise one of the system wide error codes. Note that KErrEof indicates either that a remote connection is closed, and that no more data is available for reading, or the socket has been shutdown with option RSocket::EStopInput. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_pckg_buf.xml#class_t_pckg_buf">TSockXfrLength</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLen</cxxFunctionParameterDeclarationName>
+						<apiDefNote>For non-datagram sockets, on return, a length which indicates how much data was read. This is the same as length of the returned aDesc. For datagram sockets, this parameter is not used.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="791"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1075"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1101"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Receives data from a remote host and completes when data is available.</p>
+				<p>The function reads at least one byte of data, but will complete as soon as any data is available. The amount of data received is returned via the TSockXfrLength argument.</p>
+				<p>
+					<xref href="class_r_socket.xml#class_r_socket_1a9443cb2bc9387e4ab8c3bc6adbed1a03">RecvOneOrMore()</xref> can only be used with stream-interfaced connected sockets; datagram interface sockets will return KErrNotSupported.</p>
+				<p>A socket may only have one receive operation outstanding at any one time.</p>
+				<p>
+					<b>capability</b>
+				</p>
+				<p>Dependent on the type of socket so deferred to PRT </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_1a5e3501149ce6e26560e54cfa61962812">
+		<apiName>RecvOneOrMore</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocket</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void RecvOneOrMore(TDes8 &amp;aDesc, TUint flags, TRequestStatus &amp;aStatus)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocket::RecvOneOrMore(TDes8 &amp;,TUint,TRequestStatus &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDesc</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefinitionName>aBuffer</cxxFunctionParameterDefinitionName>
+						<apiDefNote>A descriptor where data read will be placed. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>flags</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefinitionName>someFlags</cxxFunctionParameterDefinitionName>
+						<apiDefNote>Flags which are passed through to protocol. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On completion, KErrNone if successful, otherwise one of the system wide error codes. Note that KErrEof indicates either that a remote connection is closed, and that no more data is available for reading, or the socket has been shutdown with option RSocket::EStopInput.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="792"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1103"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1125"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Receives data from a remote host and completes when data is available.</p>
+				<p>The function reads at least one byte of data, but will complete as soon as any data is available. The amount of data received is returned via the TSockXfrLength argument.</p>
+				<p>
+					<xref href="class_r_socket.xml#class_r_socket_1a9443cb2bc9387e4ab8c3bc6adbed1a03">RecvOneOrMore()</xref> can only be used with stream-interfaced connected sockets; datagram interface sockets will return KErrNotSupported.</p>
+				<p>A socket may only have one receive operation outstanding at any one time.</p>
+				<p>
+					<b>capability</b>
+				</p>
+				<p>Dependent on the type of socket so deferred to PRT </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_1a52b1169fc09e933f4482ed7e7e869a2b">
+		<apiName>CancelRecv</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocket</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void CancelRecv()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocket::CancelRecv()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="793"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1653"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1661"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Cancels an outstanding <xref href="class_r_socket.xml#class_r_socket_1a700f8ea4caf66511180f772f24e65156">Recv()</xref> operation.</p>
+				<p>Calling this function will cause any outstanding receive operation to complete prematurely. The state of a socket after a receive is cancelled is defined by the characteristics of the protocol. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_1ab6cf0584da1b4ec803eb71e30a634f4a">
+		<apiName>Read</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocket</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Read(TDes8 &amp;aDesc, TRequestStatus &amp;aStatus)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocket::Read(TDes8 &amp;,TRequestStatus &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDesc</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefinitionName>aBuffer</cxxFunctionParameterDefinitionName>
+						<apiDefNote>A descriptor where data read will be placed. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On completion, KErrNone if successful, otherwise one of the system wide error codes. Note that KErrEof indicates either that a remote connection is closed, and that no more data is available for reading, or the socket has been shutdown with option RSocket::EStopInput.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="795"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1127"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1149"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Receives data from a remote host.</p>
+				<p>For a stream-interfaced sockets, the function only completes when the full amount of requested data has been received (or the connection breaks). This means when the descriptor has been filled to its maximum length (not its current length). For a connection-oriented datagram-interface, the function completes when a datagram arrives even if it is not sufficient to fill the buffer.</p>
+				<p>
+					<xref href="class_r_socket.xml#class_r_socket_1ab6cf0584da1b4ec803eb71e30a634f4a">Read()</xref> should only be used with connected sockets.</p>
+				<p>A socket may only have one receive operation outstanding at any one time.</p>
+				<p>
+					<b>capability</b>
+				</p>
+				<p>Dependent on the type of socket so deferred to PRT </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_1a7b098d3acfad238e85197e39cc04a30d">
+		<apiName>CancelRead</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocket</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void CancelRead()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocket::CancelRead()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="796"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1663"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1671"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Cancels an outstanding <xref href="class_r_socket.xml#class_r_socket_1ab6cf0584da1b4ec803eb71e30a634f4a">Read()</xref> operation.</p>
+				<p>Calling this function will cause any outstanding <xref href="class_r_socket.xml#class_r_socket_1ab6cf0584da1b4ec803eb71e30a634f4a">Read()</xref> operation to complete prematurely. The state of a socket after a receive is cancelled is defined by the characteristics of the protocol. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_1a208573a1c4c76771aa060d487499bad7">
+		<apiName>Write</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocket</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Write(const TDesC8 &amp;aDesc, TRequestStatus &amp;aStatus)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocket::Write(const TDesC8 &amp;,TRequestStatus &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDesc</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefinitionName>aBuffer</cxxFunctionParameterDefinitionName>
+						<apiDefNote>The data to be sent. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On completion, KErrNone if successful, otherwise one of the system wide error codes. Note that KErrEof indicates that the socket has been shutdown with option EStopOutput.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="798"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1151"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1164"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Sends data to a remote host.</p>
+				<p>
+					<xref href="class_r_socket.xml#class_r_socket_1a208573a1c4c76771aa060d487499bad7">Write()</xref> should only be used with connected sockets.</p>
+				<p>
+					<b>capability</b>
+				</p>
+				<p>Dependent on the type of socket so deferred to PRT </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_1a5bd26076bf6a15a1bc9ffff8ef15458d">
+		<apiName>CancelWrite</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocket</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void CancelWrite()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocket::CancelWrite()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="799"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1673"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1681"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Cancels an outstanding <xref href="class_r_socket.xml#class_r_socket_1a208573a1c4c76771aa060d487499bad7">Write()</xref> operation.</p>
+				<p>Calling the function will cause any outstanding <xref href="class_r_socket.xml#class_r_socket_1a208573a1c4c76771aa060d487499bad7">Write()</xref> operation to complete prematurely. The state of a socket after a send is cancelled is defined by the characteristics of the protocol. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_1a1f069047b5b851f129c55fc72479e96a">
+		<apiName>SendTo</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocket</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void SendTo(const TDesC8 &amp;aDesc, TSockAddr &amp;anAddr, TUint flags, TRequestStatus &amp;aStatus)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocket::SendTo(const TDesC8 &amp;,TSockAddr &amp;,TUint,TRequestStatus &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDesc</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefinitionName>aBuffer</cxxFunctionParameterDefinitionName>
+						<apiDefNote>The data to be sent. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_sock_addr.xml#class_t_sock_addr">TSockAddr</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anAddr</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A remote destination address for unconnected sends </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>flags</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefinitionName>someFlags</cxxFunctionParameterDefinitionName>
+						<apiDefNote>Flags which are passed through to protocol </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On completion, KErrNone if successful, otherwise one of the system wide error codes. Note that KErrEof indicates that the socket has been shutdown with option EStopOutput.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="800"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1167"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1186"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Sends data to a remote host through a (possibly) unconnected socket to a specified destination address.</p>
+				<p>Flags are provided to add protocol specific information. The length of the descriptor indicates the amount of data to be sent. A socket may only have one send operation in progress at any one time.</p>
+				<p>
+					<b>capability</b>
+				</p>
+				<p>Dependent on the type of socket so deferred to PRT </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_1a9f43a536c01f45151139efd379478a97">
+		<apiName>SendTo</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocket</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void SendTo(const TDesC8 &amp;aDesc, TSockAddr &amp;anAddr, TUint flags, TRequestStatus &amp;aStatus, TSockXfrLength &amp;aLen)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocket::SendTo(const TDesC8 &amp;,TSockAddr &amp;,TUint,TRequestStatus &amp;,TSockXfrLength &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDesc</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefinitionName>aBuffer</cxxFunctionParameterDefinitionName>
+						<apiDefNote>The data to be sent. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_sock_addr.xml#class_t_sock_addr">TSockAddr</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anAddr</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A remote destination address for unconnected sends </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>flags</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefinitionName>someFlags</cxxFunctionParameterDefinitionName>
+						<apiDefNote>Flags which are passed through to protocol </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On completion, KErrNone if successful, otherwise one of the system wide error codes. Note that KErrEof indicates that the socket has been shutdown with option EStopOutput. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_pckg_buf.xml#class_t_pckg_buf">TSockXfrLength</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLen</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Filled in with amount of data sent before completion</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="802"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1210"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1233"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Sends data to a remote host through a (possibly) unconnected socket to a specified destination address.</p>
+				<p>Flags are provided to add protocol specific information. The length of the descriptor indicates the amount of data to be sent. A socket may only have one send operation in progress at any one time. The TSockXfrLength argument will return the amount of data sent.</p>
+				<p>
+					<b>capability</b>
+				</p>
+				<p>Dependent on the type of socket so deferred to PRT </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_1a07226b30f29680cfc9b10d811a1a97bf">
+		<apiName>RecvFrom</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocket</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void RecvFrom(TDes8 &amp;aDesc, TSockAddr &amp;anAddr, TUint flags, TRequestStatus &amp;aStatus)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocket::RecvFrom(TDes8 &amp;,TSockAddr &amp;,TUint,TRequestStatus &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDesc</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefinitionName>aBuffer</cxxFunctionParameterDefinitionName>
+						<apiDefNote>A descriptor where data read will be placed. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_sock_addr.xml#class_t_sock_addr">TSockAddr</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anAddr</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A remote source address for unconnected receives. Returns KAfInet6 in TSockAddr::Family() for IPv4 ICMP packets. Returns KAfInet for IPv4 TCP and UDP sockets. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>flags</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefinitionName>someFlags</cxxFunctionParameterDefinitionName>
+						<apiDefNote>Flags which are passed through to protocol. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On completion, KErrNone if successful, otherwise one of the system wide error codes. Note that KErrEof indicates either that a remote connection is closed, and that no more data is available for reading, or the socket has been shutdown with option RSocket::EStopInput.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="804"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1188"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1208"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Receives data from a remote host through a (possibly) unconnected socket and returns a source address.</p>
+				<p>Flags are provided to add protocol specific information.</p>
+				<p>A socket may only have one receive operation outstanding at any one time.</p>
+				<p>
+					<b>capability</b>
+				</p>
+				<p>Dependent on the type of socket so deferred to PRT </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_1a7a164c479cde95faf17b181d4469c68d">
+		<apiName>RecvFrom</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocket</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void RecvFrom(TDes8 &amp;aDesc, TSockAddr &amp;anAddr, TUint flags, TRequestStatus &amp;aStatus, TSockXfrLength &amp;aLen)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocket::RecvFrom(TDes8 &amp;,TSockAddr &amp;,TUint,TRequestStatus &amp;,TSockXfrLength &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDesc</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefinitionName>aBuffer</cxxFunctionParameterDefinitionName>
+						<apiDefNote>A descriptor where data read will be placed </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_sock_addr.xml#class_t_sock_addr">TSockAddr</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anAddr</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A remote source address for unconnected receives. Returns KAfInet6 in TSockAddr::Family() for IPv4 ICMP packets. Returns KAfInet for IPv4 TCP and UDP sockets. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>flags</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefinitionName>someFlags</cxxFunctionParameterDefinitionName>
+						<apiDefNote>Flags which are passed through to protocol </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On completion, KErrNone if successful, otherwise one of the system wide error codes. Note that KErrEof indicates either that a remote connection is closed, and that no more data is available for reading, or the socket has been shutdown with option RSocket::EStopInput. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_pckg_buf.xml#class_t_pckg_buf">TSockXfrLength</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLen</cxxFunctionParameterDeclarationName>
+						<apiDefNote>For non-datagram sockets, on return, a length which indicates how much data was read. This is the same as length of the returned aDesc. For datagram sockets, this parameter is not used.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="806"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1235"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1261"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Receives data from a remote host through a (possibly) unconnected socket where a source address is returned.</p>
+				<p>Flags are provided to add protocol specific information.</p>
+				<p>A socket may only have one receive operation outstanding at any one time.</p>
+				<p>
+					<b>capability</b>
+				</p>
+				<p>Dependent on the type of socket so deferred to PRT </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_1a93a8795b72271847c2e4357ff311a777">
+		<apiName>Connect</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocket</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Connect(TSockAddr &amp;anAddr, TRequestStatus &amp;aStatus)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocket::Connect(TSockAddr &amp;,TRequestStatus &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_sock_addr.xml#class_t_sock_addr">TSockAddr</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anAddr</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Address of remote host. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On completion, will contain an error code, see the system-wide error codes.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="807"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1263"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1295"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Connects to a remote host asynchronously.</p>
+				<p>The address provided specifies the address of the remote host.</p>
+				<p>A socket may only have one connect operation outstanding at any one time. Once the connect is completed, the socket is ready to send or receive data. If a socket is unbound - i.e. <xref href="class_r_socket.xml#class_r_socket_1ade77ffdea9c462c0efdbf5dcf47de6bf">Bind()</xref> has not been called yet - then it will automatically have a local address allocated.</p>
+				<p>
+					<xref href="class_r_socket.xml#class_r_socket_1a93a8795b72271847c2e4357ff311a777">Connect()</xref> is always required for protocols which do not have the KSIConnectionLess flag in their protocol information. If a protocol has the KSIConnectionLess flag, then <xref href="class_r_socket.xml#class_r_socket_1a93a8795b72271847c2e4357ff311a777">Connect()</xref> may be used to set the address for all data sent from the socket, in which case <xref href="class_r_socket.xml#class_r_socket_1a0d1e0fdc665f4ebebd94d29071eebd2c">Send()</xref>/Write() may be used in addition to <xref href="class_r_socket.xml#class_r_socket_1a1f069047b5b851f129c55fc72479e96a">SendTo()</xref>.</p>
+				<p>To use data in connection a protocol must have the flag KSIConnectData in its protocol information.</p>
+				<p>To cancel a connect use <xref href="class_r_socket.xml#class_r_socket_1a36bef4731bc0fc76e16604e33dfb74d0">CancelConnect()</xref>.</p>
+				<p>
+					<b>capability</b>
+				</p>
+				<p>Dependent on the type of socket so deferred to PRT </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_1a9522e21f7971b40ae000dee71aea32a8">
+		<apiName>Connect</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocket</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Connect(TSockAddr &amp;anAddr, const TDesC8 &amp;aConnectDataOut, TDes8 &amp;aConnectDataIn, TRequestStatus &amp;aStatus)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocket::Connect(TSockAddr &amp;,const TDesC8 &amp;,TDes8 &amp;,TRequestStatus &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_sock_addr.xml#class_t_sock_addr">TSockAddr</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anAddr</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Address of remote host. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aConnectDataOut</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aConnectDataIn</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On completion, will contain an error code. KErrBadHandle if the socket has already been closed by the client; KErrAlreadyExists if the socket is already connected and it isn&apos;t a blocking connection; otherwise one of the system-wide error codes. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="808"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1297"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1334"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Connects to a remote host asynchronously.</p>
+				<p>The address provided specifies the address of the remote host.</p>
+				<p>Some protocols allow data to be sent in connect request packets which may be provided in the data-out descriptor. Some protocols may allow data to be sent in connect responses which may be collected in the data-in descriptor.</p>
+				<p>A socket may only have one connect operation outstanding at any one time. Once the connect is completed, the socket is ready to send or receive data. If a socket is unbound - i.e. <xref href="class_r_socket.xml#class_r_socket_1ade77ffdea9c462c0efdbf5dcf47de6bf">Bind()</xref> has not been called yet - then it will automatically have a local address allocated.</p>
+				<p>
+					<xref href="class_r_socket.xml#class_r_socket_1a93a8795b72271847c2e4357ff311a777">Connect()</xref> is always required for protocols which do not have the KSIConnectionLess flag in their protocol information. If a protocol has the KSIConnectionLess flag, then <xref href="class_r_socket.xml#class_r_socket_1a93a8795b72271847c2e4357ff311a777">Connect()</xref> may be used to set the address for all data sent from the socket, in which case <xref href="class_r_socket.xml#class_r_socket_1a0d1e0fdc665f4ebebd94d29071eebd2c">Send()</xref>/Write() may be used in addition to <xref href="class_r_socket.xml#class_r_socket_1a1f069047b5b851f129c55fc72479e96a">SendTo()</xref>.</p>
+				<p>To use data in connection a protocol must have the flag KSIConnectData in its protocol information.</p>
+				<p>To cancel a connect use <xref href="class_r_socket.xml#class_r_socket_1a36bef4731bc0fc76e16604e33dfb74d0">CancelConnect()</xref>.</p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>EConnectingAlready if the socket is connection-oriented and a blocking connection is already in progress for the socket</p>
+				<p>
+					<b>capability</b>
+				</p>
+				<p>Dependent on the type of socket so deferred to PRT </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_1a36bef4731bc0fc76e16604e33dfb74d0">
+		<apiName>CancelConnect</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocket</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void CancelConnect()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocket::CancelConnect()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="809"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1683"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1692"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Cancels an outstanding connect operation.</p>
+				<p>Will cause any outstanding connect operation to complete prematurely.</p>
+				<p>The state of a socket after a connect is cancelled is defined by the characteristics of the protocol. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_1ade77ffdea9c462c0efdbf5dcf47de6bf">
+		<apiName>Bind</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocket</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Bind(TSockAddr &amp;anAddr)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocket::Bind(TSockAddr &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_sock_addr.xml#class_t_sock_addr">TSockAddr</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anAddr</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Desired local address of socket. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="810"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1336"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1355"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Sets the local address of a socket.</p>
+				<p>When a socket is opened it has no name associated with it, and binding is required so data can be routed to the socket.</p>
+				<p>
+					<xref href="class_r_socket.xml#class_r_socket_1ade77ffdea9c462c0efdbf5dcf47de6bf">Bind()</xref> should be called before <xref href="class_r_socket.xml#class_r_socket_1a17035d8eb43527a5af37f9cbae399613">Listen()</xref> or <xref href="class_r_socket.xml#class_r_socket_1a93a8795b72271847c2e4357ff311a777">Connect()</xref>. The address supplied should be a derived class specific to the particular protocol the socket was opened on.</p>
+				<p>KErrNone if successful, otherwise another of the system-wide error codes. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_1a806ed257e57ae429da2a939ebddc822e">
+		<apiName>SetLocalPort</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocket</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt SetLocalPort(TInt aPort)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocket::SetLocalPort(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPort</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Desired local port of socket. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="811"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1357"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1368"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Sets the local port of a socket. Setting the local port is equivalent to calling <xref href="class_r_socket.xml#class_r_socket_1ade77ffdea9c462c0efdbf5dcf47de6bf">Bind()</xref> with only the port set in the address.</p>
+				<p>KErrNone if successful, otherwise another of the system-wide error codes. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_1a14bf5825702b63ff931df0e5d3adc616">
+		<apiName>Accept</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocket</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Accept(RSocket &amp;aBlankSocket, TRequestStatus &amp;aStatus)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocket::Accept(RSocket &amp;,TRequestStatus &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_socket.xml#class_r_socket">RSocket</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aBlankSocket</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A socket opened as a blank socket. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On completion, will contain an error code: see the system-wide error codes.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="812"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1370"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1392"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Facilitates a client/server connection from a remote socket.</p>
+				<p>Extracts the first pending connection on a queue of sockets, the queue size being previously specified by <xref href="class_r_socket.xml#class_r_socket_1a17035d8eb43527a5af37f9cbae399613">Listen()</xref>. On successful completion the blank socket is given the handle of the new socket and it may then be used to transfer data. After completion the accept socket may be used to make further connections with new blank sockets (see <xref href="class_r_socket.xml#class_r_socket_1a49ea8825cc0da2227fdab27e9b4f64ab">Open()</xref> on how to open a blank socket).</p>
+				<p>
+					<xref href="class_r_socket.xml#class_r_socket_1a14bf5825702b63ff931df0e5d3adc616">Accept()</xref> may be used for protocols which do not have the KSIConnectionLess flag in their protocol information.</p>
+				<p>
+					<b>capability</b>
+				</p>
+				<p>Dependent on the type of socket so deferred to PRT </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_1a3bfc76c8af2371154b169c3be324702a">
+		<apiName>Accept</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocket</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Accept(RSocket &amp;aBlankSocket, TDes8 &amp;aConnectData, TRequestStatus &amp;aStatus)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocket::Accept(RSocket &amp;,TDes8 &amp;,TRequestStatus &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_socket.xml#class_r_socket">RSocket</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aBlankSocket</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A socket opened as a blank socket. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aConnectData</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Data which may have been received in connection. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On completion, will contain an error code: see the system-wide error codes.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="813"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1394"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1426"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Facilitates a client/server connection from a remote socket.</p>
+				<p>Extracts the first pending connection on a queue of sockets, the queue size being previously specified by <xref href="class_r_socket.xml#class_r_socket_1a17035d8eb43527a5af37f9cbae399613">Listen()</xref>. On successful completion the blank socket is given the handle of the new socket and it may then be used to transfer data. After completion the accept socket may be used to make further connections with new blank sockets (see <xref href="class_r_socket.xml#class_r_socket_1a49ea8825cc0da2227fdab27e9b4f64ab">Open()</xref> on how to open a blank socket).</p>
+				<p>This variant provides an additional descriptor argument to receive data which may have been sent in a connect request. If there is a pending connection in the listen queue when <xref href="class_r_socket.xml#class_r_socket_1a14bf5825702b63ff931df0e5d3adc616">Accept()</xref> is called, the call will complete immediately. Otherwise it will wait until a socket becomes available in the queue and complete asynchronously.</p>
+				<p>
+					<xref href="class_r_socket.xml#class_r_socket_1a14bf5825702b63ff931df0e5d3adc616">Accept()</xref> may be used for protocols which do not have the KSIConnectionLess flag in their protocol information.</p>
+				<p>To receive data-in accepting, a protocol must have the flag KSIConnectData in its protocol information.</p>
+				<p>
+					<b>capability</b>
+				</p>
+				<p>Dependent on the type of socket so deferred to PRT </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_1a328eaed60ec4ea3595bcc0ad1bf7ae46">
+		<apiName>CancelAccept</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocket</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void CancelAccept()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocket::CancelAccept()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="814"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1706"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1712"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Cancels an outstanding accept operation.</p>
+				<p>Will cause any outstanding accept operation to complete prematurely. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_1a17035d8eb43527a5af37f9cbae399613">
+		<apiName>Listen</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocket</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Listen(TUint qSize)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocket::Listen(TUint)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>qSize</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefinitionName>aQSize</cxxFunctionParameterDefinitionName>
+						<apiDefNote>Size of listen queue. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="815"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1428"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1450"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Sets up a socket to listen for incoming connections.</p>
+				<p>Before calling this procedure a socket should be opened on a specific protocol using <xref href="class_r_socket.xml#class_r_socket_1a49ea8825cc0da2227fdab27e9b4f64ab">Open()</xref> and the socket should be bound to a local address using <xref href="class_r_socket.xml#class_r_socket_1ade77ffdea9c462c0efdbf5dcf47de6bf">Bind()</xref>.</p>
+				<p>
+					<xref href="class_r_socket.xml#class_r_socket_1a17035d8eb43527a5af37f9cbae399613">Listen()</xref> creates a queue to hold incoming connections which can be married with blank sockets using <xref href="class_r_socket.xml#class_r_socket_1a14bf5825702b63ff931df0e5d3adc616">Accept()</xref>. The call also allows data to be sent back to connecting peers if a protocol allows data to be passed in connect responses. Once a listen queue has been created it will continue to allow peers to connect until it is full, at which point it will reject any incoming connections as specified by protocol behaviour. When a socket is accepted by the client a space is made available in the queue.</p>
+				<p>KErrNone if successful, otherwise another of the system-wide error codes. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_1ac4c4431f6dd2b697b462e68d3d225065">
+		<apiName>Listen</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocket</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Listen(TUint qSize, const TDesC8 &amp;aConnectData)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocket::Listen(TUint,const TDesC8 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>qSize</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefinitionName>aQSize</cxxFunctionParameterDefinitionName>
+						<apiDefNote>Size of listen queue. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aConnectData</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="816"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1452"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1478"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Sets up a socket to listen for incoming connections.</p>
+				<p>Before calling this procedure a socket should be opened on a specific protocol using <xref href="class_r_socket.xml#class_r_socket_1a49ea8825cc0da2227fdab27e9b4f64ab">Open()</xref> and the socket should be bound to a local address using <xref href="class_r_socket.xml#class_r_socket_1ade77ffdea9c462c0efdbf5dcf47de6bf">Bind()</xref>.</p>
+				<p>
+					<xref href="class_r_socket.xml#class_r_socket_1a17035d8eb43527a5af37f9cbae399613">Listen()</xref> creates a queue to hold incoming connections which can be married with blank sockets using <xref href="class_r_socket.xml#class_r_socket_1a14bf5825702b63ff931df0e5d3adc616">Accept()</xref>. The call also allows data to be sent back to connecting peers if a protocol allows data to be passed in connect responses. Once a listen queue has been created it will continue to allow peers to connect until it is full, at which point it will reject any incoming connections as specified by protocol behaviour. When a socket is accepted by the client a space is made available in the queue.</p>
+				<p>To use data-in listening, a protocol must have the flag KSIConnectData in its protocol information.</p>
+				<p>KErrNone if successful, otherwise another of the system-wide error codes. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_1ad224d516434262f2ec5e3a19df9b6552">
+		<apiName>SetOpt</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocket</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt SetOpt(TUint anOptionName, TUint anOptionLevel, const TDesC8 &amp;anOption=TPtrC8(NULL, 0))</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocket::SetOpt(TUint,TUint,const TDesC8 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anOptionName</cxxFunctionParameterDeclarationName>
+						<apiDefNote>An integer constant which identifies an option. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anOptionLevel</cxxFunctionParameterDeclarationName>
+						<apiDefNote>An integer constant which identifies level of an option: i.e. an option level groups related options together. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anOption</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>
+							<apiRelation href="class_t_ptr_c8.xml#class_t_ptr_c8">TPtrC8</apiRelation>(NULL, 0)</cxxFunctionParameterDefaultValue>
+						<apiDefNote>Option value packaged in a descriptor. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="817"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1480"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1500"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Sets a socket option. The socket server has options which are generic to all sockets and protocols may add specific options.</p>
+				<p>Options available for all protocols can be set with anOptionLevel set to KSOLSocket. See individual protocol notes for other socket options.</p>
+				<p>KErrNone if successful, otherwise another of the system-wide error codes.</p>
+				<p>
+					<b>capability</b>
+				</p>
+				<p>Dependent on the type of operation so deferred to PRT. See documentation of constant values used in aOptionName and aOptionLevel for more information </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_1a7b137779671a9e5366786761089264fa">
+		<apiName>SetOpt</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocket</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt SetOpt(TUint anOptionName, TUint anOptionLevel, TInt anOption)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocket::SetOpt(TUint,TUint,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anOptionName</cxxFunctionParameterDeclarationName>
+						<apiDefNote>An integer constant which identifies an option. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anOptionLevel</cxxFunctionParameterDeclarationName>
+						<apiDefNote>An integer constant which identifies level of an option: i.e. an option level groups related options together. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anOption</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Option value as an integer. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="818"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1502"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1522"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Sets a socket option. The socket server has options which are generic to all sockets and protocols may add specific options.</p>
+				<p>Options available for all protocols can be set with anOptionLevel set to KSOLSocket. See individual protocol notes for other socket options.</p>
+				<p>KErrNone if successful, otherwise another of the system-wide error codes.</p>
+				<p>
+					<b>capability</b>
+				</p>
+				<p>Dependent on the type of operation so deferred to PRT. See documentation of constant values used in aOptionName and aOptionLevel for more information </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_1a7dd6976792f21847d61028a8492d2cc5">
+		<apiName>GetOpt</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocket</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt GetOpt(TUint anOptionName, TUint anOptionLevel, TDes8 &amp;anOption)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocket::GetOpt(TUint,TUint,TDes8 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anOptionName</cxxFunctionParameterDeclarationName>
+						<apiDefNote>An integer constant which identifies an option. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anOptionLevel</cxxFunctionParameterDeclarationName>
+						<apiDefNote>An integer constant which identifies level of an option. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anOption</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On return, option value packaged in a descriptor. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="819"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1524"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1542"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets a socket option. The socket server has options which are generic to all sockets and protocols may add specific options.</p>
+				<p>Options available for all protocols can be got with anOptionLevel set to KSOLSocket. See individual protocol notes for other socket options.</p>
+				<p>KErrNone if successful, otherwise another of the system-wide error codes.</p>
+				<p>
+					<b>capability</b>
+				</p>
+				<p>Dependent on the type of operation so deferred to PRT. See documentation of constant values used in aOptionName and aOptionLevel for more information </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_1ad19b78123dc3120d94b0c0001c451fb3">
+		<apiName>GetOpt</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocket</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt GetOpt(TUint anOptionName, TUint anOptionLevel, TInt &amp;anOption)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocket::GetOpt(TUint,TUint,TInt &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anOptionName</cxxFunctionParameterDeclarationName>
+						<apiDefNote>An integer constant which identifies an option. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anOptionLevel</cxxFunctionParameterDeclarationName>
+						<apiDefNote>An integer constant which identifies level of an option. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anOption</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On return, option value as an integer. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="820"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1544"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1562"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets a socket option. The socket server has options which are generic to all sockets and protocols may add specific options.</p>
+				<p>Options available for all protocols can be got with anOptionLevel set to KSOLSocket. See individual protocol notes for other socket options.</p>
+				<p>KErrNone if successful, otherwise another of the system-wide error codes.</p>
+				<p>
+					<b>capability</b>
+				</p>
+				<p>Dependent on the type of operation so deferred to PRT. See documentation of constant values used in aOptionName and aOptionLevel for more information </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_1aa2710325eacac589ec5ae8408a7eded7">
+		<apiName>Ioctl</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocket</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Ioctl(TUint aCommand, TRequestStatus &amp;aStatus, TDes8 *aDesc=NULL, TUint aLevel=KLevelUnspecified)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocket::Ioctl(TUint,TRequestStatus &amp;,TDes8 *,TUint)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCommand</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Ioctl command. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On completion, will contain an error code: see the system-wide error codes. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDesc</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>NULL</cxxFunctionParameterDefaultValue>
+						<apiDefNote>Pointer to a descriptor in which data may be sent and received on completion </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLevel</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>
+							<apiRelation href="es__sock_8h.xml#_1a59e6f55baa1bf0405b13bddffea52897">KLevelUnspecified</apiRelation>
+						</cxxFunctionParameterDefaultValue>
+						<apiDefNote>Control operation level</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="821"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1564"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1583"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Applies an asynchronous I/O control operation on a socket. Data may be passed and received if a descriptor address is provided as an argument. Only one <xref href="class_r_socket.xml#class_r_socket_1aa2710325eacac589ec5ae8408a7eded7">Ioctl()</xref> operation may be outstanding for each socket.</p>
+				<p>Commands available for all protocols can be set withaLevel set to KSOLSocket. See individual protocol notes for other commands.</p>
+				<p>
+					<b>capability</b>
+				</p>
+				<p>Dependent on the type of operation so deferred to PRT. See documentation of constant values used in aOptionName and aOptionLevel for more information </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_1a65c2efc7783815ac9fb66826fafd203d">
+		<apiName>CancelIoctl</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocket</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void CancelIoctl()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocket::CancelIoctl()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="822"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1694"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1703"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Cancels an outstanding <xref href="class_r_socket.xml#class_r_socket_1aa2710325eacac589ec5ae8408a7eded7">Ioctl()</xref> operation.</p>
+				<p>Will cause any outstanding Ioctl operation to complete prematurely.</p>
+				<p>The state of a socket after a connect is cancelled is defined by the characteristics of the protocol. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_1aa1c1f7fe1d18e89cfdd9a5e24ad6d502">
+		<apiName>GetDisconnectData</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocket</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt GetDisconnectData(TDes8 &amp;aDesc)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocket::GetDisconnectData(TDes8 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDesc</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A descriptor to receive data. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="823"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1585"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1599"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets data for use in the disconnection of a socket, namely the remote name of the connected socket.</p>
+				<p>This data has been received in a protocol disconnect message.</p>
+				<p>To use the data in disconnection, a protocol must have the flagKSIConnectData in its protocol information.</p>
+				<p>KErrNone if successful, otherwise another of the system-wide error codes. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_1a53fa8531785f47bb6f3443c9302e6468">
+		<apiName>LocalName</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocket</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void LocalName(TSockAddr &amp;anAddr)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocket::LocalName(TSockAddr &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_sock_addr.xml#class_t_sock_addr">TSockAddr</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anAddr</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Local address which is filled in on return. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="824"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1601"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1616"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets the local address of a bound socket.</p>
+				<p>The local address is set either by calling <xref href="class_r_socket.xml#class_r_socket_1ade77ffdea9c462c0efdbf5dcf47de6bf">Bind()</xref>, or is automatically set when <xref href="class_r_socket.xml#class_r_socket_1a93a8795b72271847c2e4357ff311a777">Connect()</xref> is called.</p>
+				<p>If a socket is created through <xref href="class_r_socket.xml#class_r_socket_1a14bf5825702b63ff931df0e5d3adc616">Accept()</xref> then a socket will inherit the port of its parent unless otherwise specified by a protocol&apos;s behaviour.</p>
+				<p>Depending on a protocol implementation, additional information may be gained through this call.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_1aa21c179d30c6d0f582b2c6ed140ef671">
+		<apiName>LocalPort</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocket</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TUint LocalPort()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocket::LocalPort()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="825"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1618"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1629"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets the local port number of a bound socket.</p>
+				<p>Getting the local port is similar to getting the local name.</p>
+				<p>
+					<xref href="class_r_socket.xml#class_r_socket_1a53fa8531785f47bb6f3443c9302e6468">LocalName()</xref> for a description. </p>
+				<p>The local port of a socket. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_1ac5c78130180138c3e5c36ee2d708585c">
+		<apiName>RemoteName</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocket</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void RemoteName(TSockAddr &amp;anAddr)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocket::RemoteName(TSockAddr &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_sock_addr.xml#class_t_sock_addr">TSockAddr</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anAddr</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Remote address which is filled in on return. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="826"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1631"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1641"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets the remote name of a connected socket.</p>
+				<p>The remote name of a socket is associated with the remote host a socket is connected to. The remote name is only valid for a connected socket. A socket is either connected through calling <xref href="class_r_socket.xml#class_r_socket_1a93a8795b72271847c2e4357ff311a777">Connect()</xref> or <xref href="class_r_socket.xml#class_r_socket_1a14bf5825702b63ff931df0e5d3adc616">Accept()</xref>.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_1a83d3ad5c0d4818a5f8c69f3f7ba8a6e0">
+		<apiName>Close</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocket</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Close()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocket::Close()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="827"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="853"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="888"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Closes a socket.</p>
+				<p>If a socket has been opened using <xref href="class_r_socket.xml#class_r_socket_1a49ea8825cc0da2227fdab27e9b4f64ab">Open()</xref> then it should be closed using <xref href="class_r_socket.xml#class_r_socket_1a83d3ad5c0d4818a5f8c69f3f7ba8a6e0">Close()</xref>. This will ensure all associated resources are released.</p>
+				<p>Closing serves two distinct purposes:</p>
+				<p>To release resources associated with the IPC channel to the socket server.</p>
+				<p>To disconnect a socket if it is connected.</p>
+				<p>If a socket is connected, then calling close is equivalent to calling <xref href="class_r_socket.xml#class_r_socket_1a76c3e3c36c87e6e7b4c4d32fcec7015e">Shutdown()</xref> with an argument of <xref href="class_r_socket.xml#class_r_socket_1aadb03a96ceef8206ae5191554bb95f8ea8b7d682e659bc1e6d23fb0405db6e1be">RSocket::ENormal</xref>, synchronously waiting for the request to complete, and then closing the IPC channel. If asynchronous or alternative methods of disconnecting are required then <xref href="class_r_socket.xml#class_r_socket_1a76c3e3c36c87e6e7b4c4d32fcec7015e">Shutdown()</xref> should be called before <xref href="class_r_socket.xml#class_r_socket_1a83d3ad5c0d4818a5f8c69f3f7ba8a6e0">Close()</xref>.</p>
+				<p>If the <xref href="class_r_socket_serv.xml#class_r_socket_serv">RSocketServ</xref> session on which a protocol was opened is closed, then all sockets associated with that session will be abortively closed and any further requests on the sockets will result in panics.</p>
+				<p>If a protocol has the flag KSIGracefulClose in its protocol information, when <xref href="class_r_socket.xml#class_r_socket_1a83d3ad5c0d4818a5f8c69f3f7ba8a6e0">Close()</xref> is called on a connected socket, the socket will synchronously block until a response to a close request has been received or some other protocol condition causes the call to complete. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_1a76c3e3c36c87e6e7b4c4d32fcec7015e">
+		<apiName>Shutdown</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocket</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Shutdown(TShutdown aHow, TRequestStatus &amp;aStatus)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocket::Shutdown(TShutdown,TRequestStatus &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_socket.xml#_1aadb03a96ceef8206ae5191554bb95f8e">TShutdown</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aHow</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Shutdown option. All variants complete when a socket is disconnected. If the parameter is within the range of TShutdown values, pending read and write operations are cancelled. If the parameter is outside the range of TShutdown values, then the behaviour is as if ENormal were specified except that pending read and write operations are not cancelled. Note that the behaviour of using parameters outside the range of TShutdown values may change in a future release and should not be relied upon.</apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On return KErrNone if successful, otherwise another of the system-wide error codes.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="828"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="890"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="921"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Shuts down a connected socket - asynchronous.</p>
+				<p>This method is asynchronous as non emergency shutdown may take a while.</p>
+				<p>The shut down method allows input and output to be individually stopped for a protocol endpoint. For protocols which support data-in disconnect message, additional arguments are provided.</p>
+				<p>
+					<xref href="class_r_socket.xml#class_r_socket_1a76c3e3c36c87e6e7b4c4d32fcec7015e">Shutdown()</xref> can be used for protocols which do not have the KSIConnectionLess flag in their protocol information.</p>
+				<p>To use data in disconnection a protocol must have the flag KSIDisconnectData in its protocol information.</p>
+				<p>There is no way to cancel a socket shutdown once it has started.</p>
+				<p>
+					<b>capability</b>
+				</p>
+				<p>Dependent Capability required depends on the type of socket so deferred to PRT </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_1a0e9497bb0c937aff966127cd903b3056">
+		<apiName>Shutdown</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocket</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Shutdown(TShutdown aHow, const TDesC8 &amp;aDisconnectDataOut, TDes8 &amp;aDisconnectDataIn, TRequestStatus &amp;aStatus)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocket::Shutdown(TShutdown,const TDesC8 &amp;,TDes8 &amp;,TRequestStatus &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_socket.xml#_1aadb03a96ceef8206ae5191554bb95f8e">TShutdown</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aHow</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Shutdown option. All variants complete when a socket is disconnected. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDisconnectDataOut</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A descriptor containing data to be sent. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDisconnectDataIn</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A descriptor to receive data. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On return KErrNone if successful, otherwise another of the system-wide error codes.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="829"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="923"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="951"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Shuts down a connected socket with disconnect data - asynchronous.</p>
+				<p>This method is asynchronous as non emergency shutdown may take a while.</p>
+				<p>The shut down method allows input and output to be individually stopped for a protocol endpoint. For protocols which support data-in disconnect message, additional arguments are provided.</p>
+				<p>
+					<xref href="class_r_socket.xml#class_r_socket_1a76c3e3c36c87e6e7b4c4d32fcec7015e">Shutdown()</xref> can be used for protocols which do not have the KSIConnectionLess flag in their protocol information.</p>
+				<p>To use data in disconnection a protocol must have the flag KSIConnectData in its protocol information.</p>
+				<p>There is no way to cancel a socket shutdown once it has started.</p>
+				<p>
+					<b>capability</b>
+				</p>
+				<p>Dependent Capability required depends on the type of socket so deferred to PRT </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_1aa074062b8812a9ff1e50dd3aa18071c9">
+		<apiName>CancelAll</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocket</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void CancelAll()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocket::CancelAll()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="830"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1715"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1724"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Cancels all outstanding operations.</p>
+				<p>Will cause all outstanding operations to complete prematurely.</p>
+				<p>Outstanding operations for a socket include: read, write, Ioctl, connect, accept and shutdown. All of these operations will be completed by this call. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_1a5b22fab31ddb175c79420cd52d4338a9">
+		<apiName>Info</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocket</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Info(TProtocolDesc &amp;aProtocol)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocket::Info(TProtocolDesc &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="struct_t_protocol_desc.xml#struct_t_protocol_desc">TProtocolDesc</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aProtocol</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A protocol description type to hold protocol information. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="831"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1726"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1737"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets information in the protocol description for the protocol which a socket is opened on.</p>
+				<p>KErrNone if successful, otherwise another of the system-wide error codes. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_1a12e8937dbb0843df8858cd6901dd114a">
+		<apiName>Name</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocket</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Name(TName &amp;aName)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocket::Name(TName &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_buf.xml#class_t_buf">TName</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aName</cxxFunctionParameterDeclarationName>
+						<apiDefNote>System name for the socket </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="832"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1739"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1748"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets a unique system name for the socket. The purpose of this is to identify the socket in a call to <xref href="class_r_socket.xml#class_r_socket_1ac8da07a8f9737530d3544e6cc782396d">Transfer()</xref>.</p>
+				<p>KErrNone if successful, otherwise another of the system-wide error codes. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_1ac8da07a8f9737530d3544e6cc782396d">
+		<apiName>Transfer</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocket</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Transfer(RSocketServ &amp;aServer, const TDesC &amp;aName)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocket::Transfer(RSocketServ &amp;,const TDesC &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_socket_serv.xml#class_r_socket_serv">RSocketServ</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aServer</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The session into which to transfer the socket. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aName</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The system name, as obtained from a call to Name(), of the socket that you want to transfer. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="833"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1750"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1795"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Transfers a socket from one socket server session to another. It creates the socket in the target session, and removes the socket from the source session. The call is made on an uninitialised <xref href="class_r_socket.xml#class_r_socket">RSocket</xref> object. The socket system name is used to identify the socket to transfer.</p>
+				<p>If the call fails, the socket that is being transferred remains with the original session. Success or failure can be checked on the originating socket by calling <xref href="class_r_socket.xml#class_r_socket_1a5b22fab31ddb175c79420cd52d4338a9">Info()</xref>, which returns KErrNone if the transfer failed, and KErrBadHandle if it succeeded.</p>
+				<p>Platsec considerations require that the source socket must set itself transferable before any attempt to transfer the socket to the destination socket. This is done using a setopt in the following way</p>
+				<p>
+					<codeblock>		_LIT_SECURITY_POLICY_Cn(KProcPolicy, cap1,cap2,...capn);
+		ret = destsock.SetOpt(KSOEnableTransfer, KSOLSocket, KProcPolicy().Package());</codeblock>
+				</p>
+				<p>where cap1,cap2...capn are the capabilities that the destination process MUST have in order to affect the transfer.</p>
+				<p>An example is:</p>
+				<p>
+					<codeblock>		_LIT_SECURITY_POLICY_C2(KProcPolicy, ECapabilityNetworkServices, ECapabilityNetworkControl);
+		ret = destsock.SetOpt(KSOEnableTransfer, KSOLSocket, KProcPolicy().Package());</codeblock>
+				</p>
+				<p>If the setOpt is not set or the destination process does not have sufficient capabilities then the function will return KErrPermissionDenied</p>
+				<p>KErrNone if successful, otherwise another of the system-wide error codes.</p>
+				<p>
+					<b>capability</b>
+				</p>
+				<p>Dependent on the capabilities defined in the setOpt by the source Socket </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+</cxxClass>

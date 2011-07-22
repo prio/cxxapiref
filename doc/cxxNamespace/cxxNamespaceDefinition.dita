@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (c) 2011 Nokia Corporation and/or its subsidiary(-ies).
+All rights reserved.        
+        -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<reference id="cxxNamespaceDefinition" outputclass="element"
+xml:lang="en-us">
+<title>cxxNamespaceDefinition</title>
+<shortdesc>Has child elements providing further information about
+a C++ namespace.</shortdesc>
+<refbody>
+<section>             <title>Description</title><p></p>          
+  <p>The &lt;cxxNamespaceDefinition> element <?Pub Caret?>requires
+the child element &lt;cxxNamespaceAPIItemLocation>.</p>         </section>
+<example><title>Example</title>         <codeblock>&lt;cxxNamespaceDefinition>
+			&lt;cxxNamespaceAccessSpecifier value="public"/>
+			&lt;cxxNamespaceDerivations>
+				&lt;cxxNamespaceDerivation>
+					&lt;cxxNamespaceDerivationAccessSpecifier value="public"/>
+					&lt;cxxNamespaceBaseClass href="namespace.xml#namespace">CBase&lt;/cxxNamespaceBaseClass>
+				&lt;/cxxNamespaceDerivation>
+			&lt;/cxxNamespaceDerivations>
+			&lt;cxxNamespaceAPIItemLocation>
+				&lt;cxxNamespaceDeclarationFile name="filePath" value="C:/src/include/e32base.h"/>
+				&lt;cxxNamespaceDeclarationFileLine name="lineNumber" value="2812"/>
+			&lt;/cxxNamespaceAPIItemLocation>
+		&lt;/cxxNamespaceDefinition></codeblock>         </example>
+<section
+conref="../packagedef.dita#cxxNamespaceDefinition-reference/cxxNamespaceDefinition-containedBy-section"
+></section>
+<section
+conref="../packagedef.dita#cxxNamespaceDefinition-reference/cxxNamespaceDefinition-contains-section"
+></section>
+<section
+conref="../packagedef.dita#cxxNamespaceDefinition-reference/cxxNamespaceDefinition-contentModel-section"
+></section>
+<section
+conref="../packagedef.dita#cxxNamespaceDefinition-reference/cxxNamespaceDefinition-attList-section"
+></section>
+<section
+conref="../packagedef.dita#cxxNamespaceDefinition-reference/cxxNamespaceDefinition-classValue-section"
+></section>
+</refbody>
+</reference>
+<?Pub *0000001968?>

@@ -1,0 +1,773 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_r_read_stream">
+	<apiName>RReadStream</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="40"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="39"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="79"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>The read stream interface. The process of internalising from a stream is achieved through a reference to an object of this type.</p>
+			<p>A store aware class defines an implements an <xref href="cs__subconn_8cpp.xml#cs__subconn_8cpp_1a6798e72508184983b24c8d0d045dd514">InternalizeL()</xref> member function which is used to internalise that object and takes a reference to an <xref href="class_r_read_stream.xml#class_r_read_stream">RReadStream</xref> as the interface to the read stream. </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_r_read_stream_1ac11c95bd5cd523752c29dadce482e2d8">
+		<apiName>RReadStream</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>RReadStream</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline RReadStream()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RReadStream::RReadStream()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="42"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="18"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="23"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Sets the stream buffer source to NULL, which implies that it is safe to close</p>
+				<p>
+					<xref href="class_r_read_stream.xml#class_r_read_stream_1a5d7fc85cee408a791e6418640536e137">RReadStream::Source()</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_read_stream_1a1bce04083e770cbc66278eb7289a0caf">
+		<apiName>RReadStream</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>RReadStream</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline RReadStream(MStreamBuf *aSource)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RReadStream::RReadStream(MStreamBuf *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>MStreamBuf *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSource</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The stream buffer used to read from the read stream. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="43"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="24"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="30"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Constructs a read stream over the supplied stream buffer.</p>
+				<p>
+					<xref href="class_r_read_stream.xml#class_r_read_stream_1a5d7fc85cee408a791e6418640536e137">RReadStream::Source()</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_read_stream_1a5d7fc85cee408a791e6418640536e137">
+		<apiName>Source</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>MStreamBuf *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RReadStream</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline MStreamBuf * Source()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RReadStream::Source()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="44"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="31"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="43"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets the underlying stream buffer for the read stream. This provides access to the stream-buffer implementation used by the read stream.</p>
+				<p>Note:</p>
+				<p>If the stream buffer supports seeking, this allows the <xref href="class_r_read_stream.xml#class_r_read_stream">RReadStream</xref> client to have random access to the stream data.</p>
+				<p>The underlying stream buffer for the read stream. </p>
+				<p>
+					<xref href="class_r_read_stream.xml#class_r_read_stream_1a29e82400d57199f70091678c979541c4">RReadStream::Attach()</xref> </p>
+				<p>
+					<xref href="class_r_read_stream.xml#class_r_read_stream_1a4fa4ae492e044ef08274ea29d1bcfad7">RReadStream::Detach()</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_read_stream_1a5ecda134480796c9cb6002771205e576">
+		<apiName>Close</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RReadStream</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void Close()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RReadStream::Close()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="45"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="44"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="48"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Frees resources used by the stream.</p>
+				<p>
+					<xref href="class_r_read_stream.xml#class_r_read_stream_1a03ed3db17a44e49b44f68e3150e206d3">RReadStream::Release()</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_read_stream_1a03ed3db17a44e49b44f68e3150e206d3">
+		<apiName>Release</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RReadStream</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Release()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RReadStream::Release()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="46"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_read_stream_1a7cdb619567ec648902a1c3d63c14b1c2">
+		<apiName>PushL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RReadStream</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void PushL()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RReadStream::PushL()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="48"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_read_stream_1a32763d46c1664f89b6701b42a71982c8">
+		<apiName>Pop</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RReadStream</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void Pop()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RReadStream::Pop()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="49"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="60"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="62"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Removes the cleanup item for this read stream object from the cleanup stack. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_read_stream_1a2a31ec3bd192d1c9f704fc812804f28c">
+		<apiName>ReadL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RReadStream</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void ReadL(TDes8 &amp;aDes)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RReadStream::ReadL(TDes8 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="51"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_read_stream_1a9f1f45fddd11ba29e580a151860bdada">
+		<apiName>ReadL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RReadStream</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void ReadL(TDes8 &amp;aDes, TInt aLength)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RReadStream::ReadL(TDes8 &amp;,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="52"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_read_stream_1a3e87078f76f876e7d7677a33aae875fb">
+		<apiName>ReadL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RReadStream</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void ReadL(TDes8 &amp;aDes, TChar aDelim)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RReadStream::ReadL(TDes8 &amp;,TChar)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_char.xml#class_t_char">TChar</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDelim</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="53"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_read_stream_1ae510d07977e02322430ce3d369d0affe">
+		<apiName>ReadL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RReadStream</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void ReadL(TUint8 *aPtr, TInt aLength)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RReadStream::ReadL(TUint8 *,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1aae4399ce3f10d6c2b5ec96a13bbb5881">TUint8</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPtr</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="54"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_read_stream_1a70ba0e70f5d1c90d15cf78f57da118e8">
+		<apiName>ReadL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RReadStream</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void ReadL(TInt aLength)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RReadStream::ReadL(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="55"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_read_stream_1a2776d34dea9c563b9990a2a3b6498034">
+		<apiName>ReadL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RReadStream</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void ReadL(RWriteStream &amp;aStream)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RReadStream::ReadL(RWriteStream &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_write_stream.xml#class_r_write_stream">RWriteStream</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStream</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A reference to the write stream to which this stream is to be written. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="56"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="49"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="53"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Writes the content of this stream to the specified write stream.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_read_stream_1a3fae8826c93b7ac96f29f90e909e5ac3">
+		<apiName>ReadL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RReadStream</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void ReadL(RWriteStream &amp;aStream, TInt aLength)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RReadStream::ReadL(RWriteStream &amp;,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_write_stream.xml#class_r_write_stream">RWriteStream</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStream</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A reference to the write stream to which this stream is to be written. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The length of data from this stream to be written to aStream. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="57"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="54"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="59"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Writes the content of this stream to the specified write stream.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_read_stream_1a5520c136f9b67f0fe112bbdbc4642926">
+		<apiName>ReadL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RReadStream</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void ReadL(TDes16 &amp;aDes)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RReadStream::ReadL(TDes16 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des16.xml#class_t_des16">TDes16</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="59"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_read_stream_1a71a69582ebce93eab1308301d15ed204">
+		<apiName>ReadL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RReadStream</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void ReadL(TDes16 &amp;aDes, TInt aLength)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RReadStream::ReadL(TDes16 &amp;,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des16.xml#class_t_des16">TDes16</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="60"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_read_stream_1a6a57238d1596a445bf12be6c954d9559">
+		<apiName>ReadL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RReadStream</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void ReadL(TDes16 &amp;aDes, TChar aDelim)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RReadStream::ReadL(TDes16 &amp;,TChar)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des16.xml#class_t_des16">TDes16</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_char.xml#class_t_char">TChar</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDelim</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="61"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_read_stream_1a3a2eeaf074187f23baa2e53fcbd776fd">
+		<apiName>ReadL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RReadStream</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void ReadL(TUint16 *aPtr, TInt aLength)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RReadStream::ReadL(TUint16 *,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a7c545c7b28f2e5d128d132d2ea1cdb2b">TUint16</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPtr</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="62"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_read_stream_1a547bf87c585bb6c23e605d2790ec3cb3">
+		<apiName>ReadInt8L</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a9357a8e9552b6131a89fb3de94bff80a">TInt8</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RReadStream</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt8 ReadInt8L()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RReadStream::ReadInt8L()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="64"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_read_stream_1ade0ed9c175b0aee7b3fd0222b13fb9ea">
+		<apiName>ReadInt16L</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a2ec3eb91f35fbe76b844587a3d73bd94">TInt16</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RReadStream</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt16 ReadInt16L()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RReadStream::ReadInt16L()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="65"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_read_stream_1a7978694f7d910a1593696ba682cc384a">
+		<apiName>ReadInt32L</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a08ea5ecd72297daaa3a4f3c41ce9e103">TInt32</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RReadStream</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt32 ReadInt32L()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RReadStream::ReadInt32L()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="66"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_read_stream_1a9960e14cdadcdea325b842c06fc99cc9">
+		<apiName>ReadUint8L</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1aae4399ce3f10d6c2b5ec96a13bbb5881">TUint8</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RReadStream</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TUint8 ReadUint8L()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RReadStream::ReadUint8L()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="67"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_read_stream_1a57f215e5daec6c4df3847c6e564a8bd6">
+		<apiName>ReadUint16L</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a7c545c7b28f2e5d128d132d2ea1cdb2b">TUint16</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RReadStream</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TUint16 ReadUint16L()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RReadStream::ReadUint16L()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="68"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_read_stream_1a1abbcd57fa711367680579bb48472c6c">
+		<apiName>ReadUint32L</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a8240e11f17c80b6b222fc2af50234da4">TUint32</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RReadStream</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TUint32 ReadUint32L()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RReadStream::ReadUint32L()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="69"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_read_stream_1a0c9c80e5a0b19de1b8eaed65f06135f4">
+		<apiName>ReadReal32L</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1af7354620815769d75ede254ea3a508c1">TReal32</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RReadStream</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TReal32 ReadReal32L() __SOFTFP</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RReadStream::ReadReal32L()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="70"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_read_stream_1aa64f7c9e9725542213c0d08852b20edf">
+		<apiName>ReadReal64L</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1ae83f8db5e4663238872dc26f9e75618c">TReal64</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RReadStream</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TReal64 ReadReal64L() __SOFTFP</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RReadStream::ReadReal64L()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="71"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_read_stream_1a29e82400d57199f70091678c979541c4">
+		<apiName>Attach</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RReadStream</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void Attach(MStreamBuf *aSource)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RReadStream::Attach(MStreamBuf *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>MStreamBuf *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSource</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The new source stream buffer for this read stream. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="73"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="63"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="77"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Sets the stream buffer source for this read stream. The existing source (if there is one) will be discarded.</p>
+				<p>This is useful for derived classes, enabling them to set the source following construction.</p>
+				<p>Note:</p>
+				<p>
+					<xref href="class_r_read_stream.xml#class_r_read_stream_1a03ed3db17a44e49b44f68e3150e206d3">Release()</xref> is not called on any discarded stream buffer.</p>
+				<p>
+					<xref href="class_r_read_stream.xml#class_r_read_stream_1a5d7fc85cee408a791e6418640536e137">RReadStream::Source()</xref> </p>
+				<p>
+					<xref href="class_r_read_stream.xml#class_r_read_stream_1a4fa4ae492e044ef08274ea29d1bcfad7">RReadStream::Detach()</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_read_stream_1a4fa4ae492e044ef08274ea29d1bcfad7">
+		<apiName>Detach</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RReadStream</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void Detach()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RReadStream::Detach()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="74"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="78"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="86"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Sets the stream buffer source for this read stream to NULL. The existing source, if there is one, will be discarded.</p>
+				<p>Note that <xref href="class_r_read_stream.xml#class_r_read_stream_1a03ed3db17a44e49b44f68e3150e206d3">Release()</xref> is not called on any discarded stream buffer.</p>
+				<p>
+					<xref href="class_r_read_stream.xml#class_r_read_stream_1a5d7fc85cee408a791e6418640536e137">RReadStream::Source()</xref> </p>
+				<p>
+					<xref href="class_r_read_stream.xml#class_r_read_stream_1a29e82400d57199f70091678c979541c4">RReadStream::Attach()</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxVariable id="class_r_read_stream_1ac2e268a575a2deaaea1e2fff9ea60074">
+		<apiName>iSrc</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>MStreamBuf *</cxxVariableDeclaredType>
+				<cxxVariableScopedName>RReadStream</cxxVariableScopedName>
+				<cxxVariablePrototype>MStreamBuf * iSrc</cxxVariablePrototype>
+				<cxxVariableNameLookup>RReadStream::iSrc</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="76"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+</cxxClass>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (c) 2011 Nokia Corporation and/or its subsidiary(-ies).
+All rights reserved.        
+        -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "..\..\..\reference.dtd">
+<reference id="cxxClassDerivations" outputclass="element"
+xml:lang="en-us">
+<title>cxxClassDerivations</title>
+<shortdesc>Specifies the base class or base classes from which the
+class derives. Use a separate child &lt;cxxClassDerivation> element
+to represent each base class.</shortdesc><?Pub Caret?>
+<refbody>
+<section> 			<title>Description</title> 			<p>Use &lt;cxxClassDerivations>
+within a &lt;cxxClassDefinition> element to specify any class derivations
+(i.e. base classes) for a class. In the case of single inheritance
+from a class there will be a single  &lt;cxxClassDerivation> child
+element. In the case of multiple inheritance the list of class derivations
+will have multiple members. &lt;cxxClassDerivations> must contain
+at least one child element. This will be one of the following:<ul>
+<li>&lt;cxxClassDerivation></li>
+<li>&lt;cxxStructDerivation></li>
+<li>&lt;cxxUnionDerivation></li>
+</ul></p> 		</section>
+<example><title>Example</title> 		<codeblock>&lt;cxxClassDefinition>
+	&lt;cxxClassDerivations>
+		&lt;cxxClassDerivation>
+			...
+		&lt;/cxxClassDerivation>
+		...
+	&lt;/cxxClassDerivations>
+	&lt;cxxClassAPIItemLocation>
+		...
+	&lt;/cxxClassAPIItemLocation>
+&lt;cxxClassDefinition></codeblock> 		</example>
+<section
+conref="../packagedef.dita#cxxClassDerivations-reference/cxxClassDerivations-containedBy-section"
+></section>
+<section
+conref="../packagedef.dita#cxxClassDerivations-reference/cxxClassDerivations-contains-section"
+></section>
+<section
+conref="../packagedef.dita#cxxClassDerivations-reference/cxxClassDerivations-contentModel-section"
+></section>
+<section
+conref="../packagedef.dita#cxxClassDerivations-reference/cxxClassDerivations-attList-section"
+></section>
+<section
+conref="../packagedef.dita#cxxClassDerivations-reference/cxxClassDerivations-classValue-section"
+></section>
+</refbody>
+</reference>
+<?Pub *0000002031?>

@@ -1,0 +1,282 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_t_conn_snap_pref">
+	<apiName>TConnSnapPref</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassDerivations>
+				<cxxClassDerivation>
+					<cxxClassDerivationAccessSpecifier value="public"/>
+					<cxxClassBaseClass href="class_t_conn_pref.xml#class_t_conn_pref">TConnPref</cxxClassBaseClass>
+				</cxxClassDerivation>
+			</cxxClassDerivations>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/connpref.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="120"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/connpref.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="93"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="127"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>An instance of the class is passed to <xref href="class_r_connection.xml#class_r_connection_1a8dac7a673ef3a18b247b919563c96053">RConnection::Start</xref> when user wants to start connection using a Service Network Access Point. A Service Network Access Point is an access point in the KAfInet tier.</p>
+			<p>A list of available access points can be retrieved from CommsDat using CCDAccessPointRecord. It is recommended that users only attempt to start access points whose tier is KAfInet. Access points in the KAfInet can use multiple access points on lower tiers to access the internet.</p>
+			<p>
+				<codeblock>RConnection conn;
+User::LeaveIfError(conn.Open(sockSvr));
+CleanupClosePushL(conn);
+
+TCommSnapPref pref(52);
+
+TInt error = conn.Start(pref);</codeblock>
+			</p>
+			<p>CommsDat::CCDAccessPointRecord </p>
+			<p>
+				<xref href="class_r_connection.xml#class_r_connection_1a8dac7a673ef3a18b247b919563c96053">RConnection::Start</xref> </p>
+			<p>TConnAPPref</p>
+			<p>since v9.1 </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_t_conn_snap_pref_1a7af4a38781940302801d1890b109adcd">
+		<apiName>TConnSnapPref</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType>IMPORT_C</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TConnSnapPref</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TConnSnapPref()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TConnSnapPref::TConnSnapPref()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/ConnPref.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="122"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_conn_snap_pref_1a3d2f398c631959928939ef80d682fbc2">
+		<apiName>TConnSnapPref</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType>IMPORT_C</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TConnSnapPref</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TConnSnapPref(TUint32 aSnap)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TConnSnapPref::TConnSnapPref(TUint32)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a8240e11f17c80b6b222fc2af50234da4">TUint32</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSnap</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/ConnPref.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="123"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_conn_snap_pref_1a0682a9a0d0c01625c2cae849084a8e93">
+		<apiName>SetSnap</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TConnSnapPref</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void SetSnap(TUint32 aSnap)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TConnSnapPref::SetSnap(TUint32)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a8240e11f17c80b6b222fc2af50234da4">TUint32</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSnap</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/ConnPref.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="125"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_conn_snap_pref_1ad494462c1b7a3456251a244597a8acff">
+		<apiName>Snap</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a8240e11f17c80b6b222fc2af50234da4">TUint32</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TConnSnapPref</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TUint32 Snap() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TConnSnapPref::Snap()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/ConnPref.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="126"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxClassInherits>
+		<cxxClassInheritsDetail>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_buf8_1ab2f5de0a38aa39c61fefe3a4c8476859">TBuf8&lt; KMaxConnPrefSize &gt;::TBuf8()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_buf8_1af1b8b22b44bf12e14038bb50824771dc">TBuf8&lt; KMaxConnPrefSize &gt;::TBuf8(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_buf8_1ac53bb48d64ed811fdc30c48aab93d41f">TBuf8&lt; KMaxConnPrefSize &gt;::TBuf8(const TDesC8 &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_buf8_1adee3e72fe85af31e966a5519faa29291">TBuf8&lt; KMaxConnPrefSize &gt;::TBuf8(const TUint8 *)</cxxClassFunctionInherited>
+			<cxxClassVariableInherited href="class_t_conn_snap_pref.xml#class_t_buf8_1a3765854ab7ace1f85bdd88287a95e152">TBuf8&lt; KMaxConnPrefSize &gt;::iBuf</cxxClassVariableInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_buf8_1af4f3a66bbd20d139a4e90bc70397c44b">TBuf8&lt; KMaxConnPrefSize &gt;::operator=(const TBuf8&lt; S &gt; &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_buf8_1a0cf062d306abdfca2da917f2a622e1a6">TBuf8&lt; KMaxConnPrefSize &gt;::operator=(const TDesC8 &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_buf8_1a89e4c975e3286c4e96a683636d3b69eb">TBuf8&lt; KMaxConnPrefSize &gt;::operator=(const TUint8 *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_buf_base8_1a8516d07832088fff1d3ef2ea0ceb8cd0">TBufBase8::TBufBase8(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_buf_base8_1a0d764ed0ca9d05b57d78f6c40e6aa2b5">TBufBase8::TBufBase8(TInt,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_buf_base8_1a27c37554aa655866ce7b6ff50d3ee149">TBufBase8::TBufBase8(const TDesC8 &amp;,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_buf_base8_1adf7617b39eaa9de2bc42c1be576c535f">TBufBase8::TBufBase8(const TUint8 *,TInt)</cxxClassFunctionInherited>
+			<cxxClassEnumeratorInherited href="class_t_conn_snap_pref.xml#class_t_conn_pref_1a4141734a9585682d0c037ad72ed83185a0d27c8741b71d3aef1fa948568db763b">TConnPref::EConnPrefCommDb</cxxClassEnumeratorInherited>
+			<cxxClassEnumeratorInherited href="class_t_conn_snap_pref.xml#class_t_conn_pref_1a4141734a9585682d0c037ad72ed83185a0bd9ab36cb12ea0d95cc08d5ddf2d498">TConnPref::EConnPrefCommDbMulti</cxxClassEnumeratorInherited>
+			<cxxClassEnumeratorInherited href="class_t_conn_snap_pref.xml#class_t_conn_pref_1a4141734a9585682d0c037ad72ed83185a01bd9f186561297fe338d4e047d2807c">TConnPref::EConnPrefEComList</cxxClassEnumeratorInherited>
+			<cxxClassEnumeratorInherited href="class_t_conn_snap_pref.xml#class_t_conn_pref_1a4141734a9585682d0c037ad72ed83185ace84d12092bbac64784cbc43f9faee12">TConnPref::EConnPrefIdList</cxxClassEnumeratorInherited>
+			<cxxClassEnumeratorInherited href="class_t_conn_snap_pref.xml#class_t_conn_pref_1a4141734a9585682d0c037ad72ed83185a5c74436793f74a9edc6d1efa692a1b16">TConnPref::EConnPrefProviderInfo</cxxClassEnumeratorInherited>
+			<cxxClassEnumeratorInherited href="class_t_conn_snap_pref.xml#class_t_conn_pref_1a4141734a9585682d0c037ad72ed83185af6a4084081ed8ff87e0fdf9df8ffae62">TConnPref::EConnPrefSip</cxxClassEnumeratorInherited>
+			<cxxClassEnumeratorInherited href="class_t_conn_snap_pref.xml#class_t_conn_pref_1a4141734a9585682d0c037ad72ed83185a4e28accb708e05c46f39e6f9df0383ca">TConnPref::EConnPrefSnap</cxxClassEnumeratorInherited>
+			<cxxClassEnumeratorInherited href="class_t_conn_snap_pref.xml#class_t_conn_pref_1a4141734a9585682d0c037ad72ed83185a310c162d0f3429ccf322c50e1e448360">TConnPref::EConnPrefUnknown</cxxClassEnumeratorInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_conn_pref_1adb44938d5086b909c44fac1a4deb79a0">TConnPref::ExtensionId()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_conn_pref_1ac6733c69323b4e49adb44404fb819435">TConnPref::GetUserLen()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_conn_pref_1ae820c2ad9985710b9f7bff18c7837c0c">TConnPref::SetExtensionId(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_conn_pref_1a90ec04d95671c7d86bbe46b8c7d81d1f">TConnPref::SetUserLen(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_conn_pref_1afa4cb05984ed94239556f865885c85c1">TConnPref::TConnPref()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_conn_pref_1a1fc066ba6b86b0aa6614fed7a896a5b4">TConnPref::TConnPref(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_conn_pref_1ae9de159405d628b1876825cd1367b687">TConnPref::UserPtr()const</cxxClassFunctionInherited>
+			<cxxClassEnumerationInherited href="class_t_conn_snap_pref.xml#class_t_conn_pref_1aaffc4eca5649be2eb34172fd99636037">TConnPref:@27</cxxClassEnumerationInherited>
+			<cxxClassEnumerationInherited href="class_t_conn_snap_pref.xml#class_t_conn_pref_1a4141734a9585682d0c037ad72ed83185">TConnPref:@30</cxxClassEnumerationInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1ab36b3c6363c5e68e876546d2b91bf388">TDes8::Append(TChar)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1abdf1c1ddb790de64de7e7047255bfc34">TDes8::Append(const TDesC16 &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1a9d32a093af2cff81573aca215f97a5e6">TDes8::Append(const TDesC8 &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1a6abdd144796dbedd9037d5aab1ca710c">TDes8::Append(const TUint8 *,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1ae4cd8835fbc2878e35685240f423109c">TDes8::AppendFill(TChar,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1aaa13d5d26670d6a124459867df0018e1">TDes8::AppendFormat(TRefByValue&lt; const TDesC8 &gt;,...)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1a25823b67f3dfd9988e31e8e4f4f082d7">TDes8::AppendFormat(TRefByValue&lt; const TDesC8 &gt;,TDes8Overflow *,...)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1a9fc292ed72c1a8563c02de56919198ef">TDes8::AppendFormatList(const TDesC8 &amp;,VA_LIST,TDes8Overflow *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1a982c2b68d9b4c9380f8f90eed51494ce">TDes8::AppendJustify(const TDesC8 &amp;,TInt,TAlign,TChar)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1acae7807094aa201b4e5e188b6c892c13">TDes8::AppendJustify(const TDesC8 &amp;,TInt,TInt,TAlign,TChar)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1af9d3bdd02eeef1bae8ac01bd701dac83">TDes8::AppendJustify(const TUint8 *,TInt,TAlign,TChar)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1a51daf4688549959f73f010dc12645920">TDes8::AppendJustify(const TUint8 *,TInt,TInt,TAlign,TChar)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1aa15f1b38d56d0538c7e1741728ba9a12">TDes8::AppendNum(TInt64)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1a5d2cd4f5e3dd3fa1e3978ea67fa5e78b">TDes8::AppendNum(TReal,const TRealFormat &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1ae18708a8c0be205c9dbc8eebd4c14efd">TDes8::AppendNum(TUint64,TRadix)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1a95f17ab394a29cbeb2d13ca0e532215a">TDes8::AppendNumFixedWidth(TUint,TRadix,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1a5563b538095beb9079cf83e026b8a114">TDes8::AppendNumFixedWidthUC(TUint,TRadix,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1a81c621e23302b43a76e232a5c5430ebf">TDes8::AppendNumUC(TUint64,TRadix)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1a25c7bbd544b3b458bfd1216ebb52cdab">TDes8::Capitalize()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1aabd33add299e33ad0054aa13b13a18be">TDes8::Collapse()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1afb9fa5d1232377484dd71de6caf64d5b">TDes8::Collate()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1aba423c3404b37bdbabf83a964d8f652a">TDes8::Copy(const TDesC16 &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1ad3db4c4881f00062c7c0472196649e05">TDes8::Copy(const TDesC8 &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1a7a79a0d6e27e493c303894a2adbcb84d">TDes8::Copy(const TUint8 *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1aacad850143033a8d012b777524d4edc2">TDes8::Copy(const TUint8 *,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1a1eff9bd0acae43453dd20bc0de0c8b9e">TDes8::CopyC(const TDesC8 &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1a5b231c483ec6166e8e622c8aa327503e">TDes8::CopyCP(const TDesC8 &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1ac93e39f82c83033bdf35381898ea6bb1">TDes8::CopyF(const TDesC8 &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1aa686c20f307a930f906a01eb5e5ef41e">TDes8::CopyLC(const TDesC8 &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1a58b7927066ee9e0f9d7ba173f0419059">TDes8::CopyUC(const TDesC8 &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1a8acad58b70427c0252e6d798ebcea266">TDes8::Delete(TInt,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1a7f3574c8fe46dd2db67f433819a79382">TDes8::DoAppendNum(TUint64,TRadix,TUint,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1ada9c883c2af1d93f60882ee4d967c0dc">TDes8::DoPadAppendNum(TInt,TInt,const TUint8 *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1a023ecc0355e07935b0ea2536ff3b6161">TDes8::Expand()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1a7f2d0b8c9afd8caec5d2e30a43de6b22">TDes8::Fill(TChar)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1a740e139465b33239bca05cb7c1f013b8">TDes8::Fill(TChar,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1a45bbe72aef5c763ed7590e578827b6a9">TDes8::FillZ()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1a16651a43b72baedceb2000af1c27d3d9">TDes8::FillZ(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1a47fd36fe5742a8035322cd39668d083a">TDes8::Fold()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1abb88f856ffb7dc281aa400cce0e25ca9">TDes8::Format(TRefByValue&lt; const TDesC8 &gt;,...)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1a0005bb67bfbb654d4570e21ff79822f7">TDes8::FormatList(const TDesC8 &amp;,VA_LIST)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1a80722ddb51d12650b09355315951093e">TDes8::Insert(TInt,const TDesC8 &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1a5360799a5849aaa6876969f249153b8e">TDes8::Justify(const TDesC8 &amp;,TInt,TAlign,TChar)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1a1cdda4cade298130cdf5c9de47585bbd">TDes8::LeftTPtr(TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1a66f7877c10554d1688c1b01458ac7b99">TDes8::LowerCase()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1a4885d7588375c1775a26e09c64cb76a0">TDes8::MaxLength()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1ab1609cb4a777d1cf5d2cc33b7a7c0bf6">TDes8::MaxSize()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1a3bbfa636eaa1ecfdc460ea59252303f0">TDes8::MidTPtr(TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1adb6130ad10b6f7e3ce4149372a6d03ac">TDes8::MidTPtr(TInt,TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1a972d517bd14934468cd3813d614d37f4">TDes8::Num(TInt64)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1a1fe405f5e62354fe7735dfe0dc34d505">TDes8::Num(TReal,const TRealFormat &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1a2a674e1a7843b49c2c67d94ac11b4837">TDes8::Num(TUint64,TRadix)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1a7781ce3c7fb0ef9d04ecbe3897e1d647">TDes8::NumFixedWidth(TUint,TRadix,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1a408a8762b95a3d3bf15ad6acf434cb9c">TDes8::NumFixedWidthUC(TUint,TRadix,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1a380df61081ab99cf49ce249a1088a82e">TDes8::NumUC(TUint64,TRadix)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1ac50eaa133f05334702869c1c1c13feb2">TDes8::PtrZ()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1afb6c5c557233378d27362224aa75f378">TDes8::Repeat(const TDesC8 &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1aef88e2da2df5e2ca5723572bb13e4660">TDes8::Repeat(const TUint8 *,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1a281122aa71d1209d5eeb016b9c372198">TDes8::Replace(TInt,TInt,const TDesC8 &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1a80affdf801044b84bde19dbde7cacd45">TDes8::RightTPtr(TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1a604db7875a96d7fef31e52df60043b69">TDes8::SetLength(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1ab07f26737e250615b03e8e31888a6442">TDes8::SetMax()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1a8be3b79eb71dfff295100f01166d4c72">TDes8::Swap(TDes8 &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1a041a61bd81821b144dcb7ed76c934f0f">TDes8::TDes8()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1a92772706d9f38959ee09762621c114ce">TDes8::TDes8(TInt,TInt,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1a1e8dd328e92fe3465c5513682f9f0a53">TDes8::Trim()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1a06b9fd88b9c79fe01559ab341d9f62a3">TDes8::TrimAll()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1a114b4dc1610dbb8a196bd9a27aef6c7f">TDes8::TrimLeft()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1a90e4a36fcc65d6cf45e9c03cd3b4b57d">TDes8::TrimRight()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1a42eb9eacff421abdd2cc7ea2add93cb0">TDes8::UpperCase()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1a0eac23e3a3a1ce118156c7f69e20b784">TDes8::WPtr()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1a3caba3d3661d18e843646737844112fe">TDes8::Zero()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1a608196a08c290197ca9fdff90b3bae9a">TDes8::ZeroTerminate()</cxxClassFunctionInherited>
+			<cxxClassVariableInherited href="class_t_conn_snap_pref.xml#class_t_des8_1a7317b575ff8f4d0e77add42ffafa0464">TDes8::__DECLARE_TEST</cxxClassVariableInherited>
+			<cxxClassVariableInherited href="class_t_conn_snap_pref.xml#class_t_des8_1ade4b347878e57a9c7e6b8d9fb787a2c5">TDes8::iMaxLength</cxxClassVariableInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1a8c622a6d58a81a34ac550c14a4ac7c79">TDes8::operator+=(const TDesC8 &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1a2e767ce5ee054739e9666231791f0bfc">TDes8::operator=(const TDes8 &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1a5463c61ea311741e30fdce694d9068a3">TDes8::operator[](TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des8_1a353d7f76f79a585dda2a819bd985b6b6">TDes8::operator[](TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des_c8_1ae12913a18e1f53ffe32008e363040bb7">TDesC8::Alloc()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des_c8_1acb9377a3daa8007540a971c45226b07d">TDesC8::AllocL()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des_c8_1a30b7f032063db3b4542d46c3841afa78">TDesC8::AllocLC()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des_c8_1acc5086e9e39151f226053c6b2333865a">TDesC8::AtC(TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des_c8_1aa11013768a16980f98da4868fff4b027">TDesC8::Compare(const TDesC8 &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des_c8_1acdb8a024b2e0d38aa7edd513a2061fdd">TDesC8::CompareC(const TDesC8 &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des_c8_1a17a6d8c18c87623e927513db81fbb8e4">TDesC8::CompareF(const TDesC8 &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des_c8_1ab865b94b246b8937af396edb0f11b315">TDesC8::DoSetLength(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des_c8_1a4e45eae201e3631a2717540dfc08e0d4">TDesC8::Find(const TDesC8 &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des_c8_1a86474526c8fa3ae05df159d69a478d70">TDesC8::Find(const TUint8 *,TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des_c8_1aaba87de7a4cd86d300c1d16eac26092a">TDesC8::FindC(const TDesC8 &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des_c8_1ae6c7758bc62eede7e077eb4f888a9d84">TDesC8::FindC(const TUint8 *,TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des_c8_1a2fdef2be0f7f3d5deddfebd38ad57de9">TDesC8::FindF(const TDesC8 &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des_c8_1a8882caf3bcea2faa87ff444fd3258e25">TDesC8::FindF(const TUint8 *,TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des_c8_1a5d6a54a323fcd3530ea507bd1382bf34">TDesC8::Left(TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des_c8_1a9790499cbe5ab4425c744530ef139d0c">TDesC8::Length()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des_c8_1aef3e8cccdb3320822b33c783645302c1">TDesC8::Locate(TChar)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des_c8_1a5d83bc70f8d942f9469a0c548acb4f7d">TDesC8::LocateF(TChar)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des_c8_1a2cda493bafd84cc21d8e57e8df6f529d">TDesC8::LocateReverse(TChar)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des_c8_1a74bbbfbda06aea8aa657e7d54c90a2af">TDesC8::LocateReverseF(TChar)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des_c8_1a4eaea8ec34e303e2d26ea58ac55ef446">TDesC8::Match(const TDesC8 &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des_c8_1adbfe3236b60a49aafee78f335bd37784">TDesC8::MatchC(const TDesC8 &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des_c8_1a7c062d7f65e25939a84092ee1ac85938">TDesC8::MatchF(const TDesC8 &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des_c8_1a20192ee422ae4dd2e219e181cdbb7d04">TDesC8::Mid(TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des_c8_1a04f74ea7ca876212965a6a13b1871ae0">TDesC8::Mid(TInt,TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des_c8_1a58f6fdadc505cc3cc47234d269256ac5">TDesC8::Ptr()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des_c8_1a4762d15e4bda1fb58eb6204f5fbe06a1">TDesC8::Right(TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des_c8_1a5ac9b8da8957c53f5e2c6367d846fb91">TDesC8::Size()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des_c8_1af3c13c6c2540d1f6ef322b72a9b90588">TDesC8::TDesC8()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des_c8_1ab545269513682dd7202c3dbfe699c186">TDesC8::TDesC8(TInt,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des_c8_1a9f3e1ab20d4fb8656c01004da3952006">TDesC8::Type()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des_c8_1a79f00085c845f9859d08287f7ee46817">TDesC8::operator!=(const TDesC8 &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des_c8_1a627d1d8aea5e180c8572e766ae428137">TDesC8::operator&lt;(const TDesC8 &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des_c8_1a9cc68dbf549e0f6363872eaf4f44d60d">TDesC8::operator&lt;=(const TDesC8 &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des_c8_1a330f3b1519445df03b5a47536730056a">TDesC8::operator==(const TDesC8 &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des_c8_1a8adcb79832fab99c383d395377b71e11">TDesC8::operator&gt;(const TDesC8 &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_conn_snap_pref.xml#class_t_des_c8_1a33883a685b25ec649fe4d3c3270b23df">TDesC8::operator&gt;=(const TDesC8 &amp;)const</cxxClassFunctionInherited>
+		</cxxClassInheritsDetail>
+	</cxxClassInherits>
+</cxxClass>

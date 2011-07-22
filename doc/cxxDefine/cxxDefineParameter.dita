@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (c) 2011 Nokia Corporation and/or its subsidiary(-ies).
+All rights reserved.        
+        -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<reference id="cxxDefineParameter" outputclass="element" xml:lang="en-us">
+<title>cxxDefineParameter</title>
+<shortdesc>When a #define is used as preprocessor macro, the &lt;cxxDefineParameter>
+element describes a named macro parameter.</shortdesc>
+<refbody>
+<section>             <title>Description</title>             <p>Macros
+can be created using the preprocessor #define directive. They can
+take arguments in a similar way to C++ functions. However macro arguments
+are untyped. The &lt;cxxDefineParameter> element describes a single
+argument, or parameter, in a marco argument list.<?Pub Caret?></p
+>         </section>
+<example>             <title>Example</title>             <codeblock
+>&lt;cxxDefineDefinition>
+    &lt;cxxDefinePrototype>#define MergeModes(a, b)&lt;/cxxDefinePrototype>
+    &lt;cxxDefineNameLookup>MergeModes&lt;/cxxDefineNameLookup>
+    &lt;cxxDefineParameters>
+        &lt;cxxDefineParameter>
+            &lt;cxxDefineParameterDeclarationName>a&lt;/cxxDefineParameterDeclarationName>
+            &lt;apiDefNote/>
+        &lt;/cxxDefineParameter>
+        &lt;cxxDefineParameter>
+            &lt;cxxDefineParameterDeclarationName>b&lt;/cxxDefineParameterDeclarationName>
+            &lt;apiDefNote/>
+        &lt;/cxxDefineParameter>
+    &lt;/cxxDefineParameters>
+    &lt;cxxDefineAPIItemLocation>
+        &lt;cxxDefineDeclarationFile name="filePath" value="C:/EPOC/master/sf/os/commsfw/serialserver/c32serialserver/SCOMM/CS_PORT.CPP"/>
+        &lt;cxxDefineDeclarationFileLine name="lineNumber" value="126"/>
+    &lt;/cxxDefineAPIItemLocation>
+&lt;/cxxDefineDefinition></codeblock>         </example>
+<section
+conref="../packagedef.dita#cxxDefineParameter-reference/cxxDefineParameter-containedBy-section"
+></section>
+<section
+conref="../packagedef.dita#cxxDefineParameter-reference/cxxDefineParameter-contains-section"
+></section>
+<section
+conref="../packagedef.dita#cxxDefineParameter-reference/cxxDefineParameter-contentModel-section"
+></section>
+<section
+conref="../packagedef.dita#cxxDefineParameter-reference/cxxDefineParameter-attList-section"
+></section>
+<section
+conref="../packagedef.dita#cxxDefineParameter-reference/cxxDefineParameter-classValue-section"
+></section>
+</refbody>
+</reference>
+<?Pub *0000002459?>

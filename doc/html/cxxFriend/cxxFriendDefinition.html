@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="cxxFriendDefinition"/>
+<meta name="abstract" content="Describes all of the details of a C++ friend function."/>
+<meta name="description" content="Describes all of the details of a C++ friend function."/>
+<meta name="DC.Relation" scheme="URI" content="../cxxFriend/cxxFriend_module.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="cxxFriendDefinition"/>
+<meta name="DC.Language" content="en-us"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>cxxFriendDefinition</title>
+<link rel="stylesheet" type="text/css" href="../nokiacxxref.css"/></head>
+<body class="element" id="cxxFriendDefinition"><a name="cxxFriendDefinition"><!-- --></a>
+
+
+<h1 class="topictitle1">cxxFriendDefinition</h1>
+
+
+<div><p>Describes all of the details of a C++ friend function.     </p>
+
+<div class="section" id="cxxFriendDefinition__section_D08C628A44AB4AEBADA1E0CFA39335BE"><a name="cxxFriendDefinition__section_D08C628A44AB4AEBADA1E0CFA39335BE"><!-- --></a><h2 class="sectiontitle">Description</h2>          
+  <p>The <tt>&lt;cxxFriendDefinition&gt;</tt> element contains child elements describing the constituent parts
+of a friend function and any C++ qualifiers applied to the function.</p>
+                     </div>
+
+<div class="example" id="cxxFriendDefinition__example_52643806102441D59C5D94E4FEFEA8B4"><a name="cxxFriendDefinition__example_52643806102441D59C5D94E4FEFEA8B4"><!-- --></a><h2 class="sectiontitle">Example</h2>          
+  <p>Given this code:</p>
+<pre class="codeblock">/** This class allows, by means of friendship,
+the function friend_set(FriendExample*, int) to
+access my private members e.g. member a. */
+class FriendExample
+{
+private:
+	int a;
+public:
+	/** friend reference. */
+	friend void friend_set(FriendExample*, int);
+	void member_set(int);
+};
+
+void friend_set(FriendExample* p, int i);
+</pre>
+<p>The DITA XML could be:</p>
+             <pre class="codeblock">&lt;cxxFriendDefinition&gt;
+    &lt;cxxFriendDeclaredType&gt;void&lt;/cxxFriendDeclaredType&gt;
+    &lt;cxxFriendScopedName&gt;FriendExample&lt;/cxxFriendScopedName&gt;
+    &lt;cxxFriendPrototype&gt;friend void friend_set(FriendExample *, int)&lt;/cxxFriendPrototype&gt;
+    &lt;cxxFriendNameLookup&gt;friend_set(FriendExample *,int)&lt;/cxxFriendNameLookup&gt;
+    &lt;cxxFriendParameters&gt;
+        &lt;cxxFriendParameter&gt;
+            &lt;cxxFriendParameterDeclaredType&gt;
+                &lt;apiRelation href="class_class__13969__00.xml#class_class__13969__00"&gt;FriendExample&lt;/apiRelation&gt; *&lt;/cxxFriendParameterDeclaredType&gt;
+            &lt;cxxFriendParameterDefinitionName&gt;p&lt;/cxxFriendParameterDefinitionName&gt;
+            &lt;apiDefNote /&gt;
+        &lt;/cxxFriendParameter&gt;
+        &lt;cxxFriendParameter&gt;
+            &lt;cxxFriendParameterDeclaredType&gt;int&lt;/cxxFriendParameterDeclaredType&gt;
+            &lt;cxxFriendParameterDefinitionName&gt;i&lt;/cxxFriendParameterDefinitionName&gt;
+            &lt;apiDefNote /&gt;
+        &lt;/cxxFriendParameter&gt;
+    &lt;/cxxFriendParameters&gt;
+    &lt;cxxFriendReturnDesc /&gt;
+    &lt;cxxFriendAPIItemLocation&gt;
+        &lt;cxxFriendDeclarationFile name="filePath" value="T:/epoc32/include/defect/file_13969.h" /&gt;
+        &lt;cxxFriendDeclarationFileLine name="lineNumber" value="14" /&gt;
+        &lt;cxxFriendDefinitionFile name="filePath" value="T:/sf/defect/13969/src/file_13969.cpp" /&gt;
+        &lt;cxxFriendDefinitionFileLineStart name="lineNumber" value="4" /&gt;
+        &lt;cxxFriendDefinitionFileLineEnd name="lineNumber" value="7" /&gt;
+    &lt;/cxxFriendAPIItemLocation&gt;
+&lt;/cxxFriendDefinition&gt;
+</pre>
+         </div>
+
+<div class="elementContainedBy"><h2 class="sectiontitle">Contained by</h2>
+
+<p id="cxxFriendDefinition__d5914e6136"><a name="cxxFriendDefinition__d5914e6136"><!-- --></a>
+<a href="cxxFriendDetail.html" title="Container for child elements providing information about a friend function.">cxxFriendDetail</a> 
+</p>
+
+</div>
+
+<div class="elementContains"><h2 class="sectiontitle">Contains</h2>
+
+<p id="cxxFriendDefinition__d5914e6148"><a name="cxxFriendDefinition__d5914e6148"><!-- --></a>
+<a href="cxxFriendAPIItemLocation.html" title="Describes the location of a friend class or function in the C++ source code.">cxxFriendAPIItemLocation</a> 
+<a href="cxxFriendConstructor.html" title="Identifies a friend function as a constructor.">cxxFriendConstructor</a> 
+<a href="cxxFriendDeclaredType.html" title="Identifies the return type of the friend function.">cxxFriendDeclaredType</a> 
+<a href="cxxFriendDestructor.html" title="Identifies a friend function as a destructor.">cxxFriendDestructor</a> 
+<a href="cxxFriendExceptionSpecification.html" title="Contains the exception specification of a C++ friend function.">cxxFriendExceptionSpecification</a> 
+<a href="cxxFriendExplicit.html" title="Marks a friend function (that must always be a constructor) as qualified with the C++ keyword explicit.">cxxFriendExplicit</a> 
+<a href="cxxFriendInline.html" title="Identifies the friend function as marked with the C++ keyword inline.">cxxFriendInline</a> 
+<a href="cxxFriendNameLookup.html" title="Provides a unique identifier of the friend function.">cxxFriendNameLookup</a> 
+<a href="cxxFriendParameters.html" title="Contains information about the friend function parameter declaration clause.">cxxFriendParameters</a> 
+<a href="cxxFriendPrototype.html" title="Provides a &#34;visual&#34; representation of the friend function declaration.">cxxFriendPrototype</a> 
+<a href="cxxFriendPureVirtual.html" title="Identifies a friend function as pure virtual.">cxxFriendPureVirtual</a> 
+<a href="cxxFriendReturnDesc.html" title="Provides a textual description of the return value of a friend function.">cxxFriendReturnDesc</a> 
+<a href="cxxFriendScopedName.html" title="Identifies the enclosing scope of the friend function. This is the namespace/class/struct/union within which the friend declaration is located.">cxxFriendScopedName</a> 
+<a href="cxxFriendStorageClassSpecifierExtern.html" title="Marks a friend function as having external linkage.">cxxFriendStorageClassSpecifierExtern</a> 
+<a href="cxxFriendStorageClassSpecifierMutable.html" title="Marks a friend functions that have a mutable storage-class-specifier.">cxxFriendStorageClassSpecifierMutable</a> 
+<a href="cxxFriendStorageClassSpecifierStatic.html" title="Marks a friend function as having static linkage.">cxxFriendStorageClassSpecifierStatic</a> 
+<a href="cxxFriendTemplateParameters.html" title="Container for elements to describe each of the template parameters of a function template that is also a friend function.">cxxFriendTemplateParameters</a> 
+<a href="cxxFriendVirtual.html" title="Identifies a friend function as virtual.">cxxFriendVirtual</a> 
+</p>
+
+</div>
+
+<div class="elementContentModel"><h2 class="sectiontitle">Content Model</h2>
+
+<p id="cxxFriendDefinition__d5914e6214"><a name="cxxFriendDefinition__d5914e6214"><!-- --></a>
+(<a href="cxxFriendStorageClassSpecifierExtern.html" title="Marks a friend function as having external linkage.">cxxFriendStorageClassSpecifierExtern</a> 
+(<em>optional</em>)
+  then  
+<a href="cxxFriendStorageClassSpecifierStatic.html" title="Marks a friend function as having static linkage.">cxxFriendStorageClassSpecifierStatic</a> 
+(<em>optional</em>)
+  then  
+<a href="cxxFriendStorageClassSpecifierMutable.html" title="Marks a friend functions that have a mutable storage-class-specifier.">cxxFriendStorageClassSpecifierMutable</a> 
+(<em>optional</em>)
+  then  
+<a href="cxxFriendExplicit.html" title="Marks a friend function (that must always be a constructor) as qualified with the C++ keyword explicit.">cxxFriendExplicit</a> 
+(<em>optional</em>)
+  then  
+<a href="cxxFriendInline.html" title="Identifies the friend function as marked with the C++ keyword inline.">cxxFriendInline</a> 
+(<em>optional</em>)
+  then  
+<a href="cxxFriendVirtual.html" title="Identifies a friend function as virtual.">cxxFriendVirtual</a> 
+(<em>optional</em>)
+  then  
+<a href="cxxFriendPureVirtual.html" title="Identifies a friend function as pure virtual.">cxxFriendPureVirtual</a> 
+(<em>optional</em>)
+  then  
+<a href="cxxFriendConstructor.html" title="Identifies a friend function as a constructor.">cxxFriendConstructor</a> 
+(<em>optional</em>)
+  then  
+<a href="cxxFriendDestructor.html" title="Identifies a friend function as a destructor.">cxxFriendDestructor</a> 
+(<em>optional</em>)
+  then  
+<a href="cxxFriendDeclaredType.html" title="Identifies the return type of the friend function.">cxxFriendDeclaredType</a> 
+(<em>optional</em>)
+  then  
+<a href="cxxFriendScopedName.html" title="Identifies the enclosing scope of the friend function. This is the namespace/class/struct/union within which the friend declaration is located.">cxxFriendScopedName</a> 
+(<em>optional</em>)
+  then  
+<a href="cxxFriendPrototype.html" title="Provides a &#34;visual&#34; representation of the friend function declaration.">cxxFriendPrototype</a> 
+(<em>optional</em>)
+  then  
+<a href="cxxFriendNameLookup.html" title="Provides a unique identifier of the friend function.">cxxFriendNameLookup</a> 
+(<em>optional</em>)
+  then  
+<a href="cxxFriendExceptionSpecification.html" title="Contains the exception specification of a C++ friend function.">cxxFriendExceptionSpecification</a> 
+(<em>optional</em>)
+  then  
+<a href="cxxFriendTemplateParameters.html" title="Container for elements to describe each of the template parameters of a function template that is also a friend function.">cxxFriendTemplateParameters</a> 
+(<em>optional</em>)
+  then  
+<a href="cxxFriendParameters.html" title="Contains information about the friend function parameter declaration clause.">cxxFriendParameters</a> 
+(<em>optional</em>)
+  then  
+<a href="cxxFriendReturnDesc.html" title="Provides a textual description of the return value of a friend function.">cxxFriendReturnDesc</a> 
+(<em>optional</em>)
+  then  
+<a href="cxxFriendAPIItemLocation.html" title="Describes the location of a friend class or function in the C++ source code.">cxxFriendAPIItemLocation</a> 
+(<em>optional</em>)
+)</p>
+
+</div>
+
+<div class="elementAttList"/>
+
+<div class="elementClassValue"><h2 class="sectiontitle">Inheritance</h2>
+
+<p id="cxxFriendDefinition__d5914e6339"><a name="cxxFriendDefinition__d5914e6339"><!-- --></a>
+ topic/<span class="keyword">section</span> reference/<span class="keyword">section</span> apiRef/<span class="keyword">apiDef</span> apiOperation/<span class="keyword">apiOperationDef</span> cxxFriend/<span class="keyword">cxxFriendDefinition</span></p>
+
+</div>
+
+</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../cxxFriend/cxxFriend_module.html" title="Defines a top-level container for all the elements necessary to describe an C++ API friend.">cxxFriend module</a></div>
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_t_auto_close">
+	<apiName>TAutoClose</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="1413"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="1403"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="1425"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>Automatically calls <xref href="class_t_auto_close.xml#class_t_auto_close_1ac90f53a30befca6b75598fd4fbe56363">Close()</xref> on an object when that object goes out of scope.</p>
+			<p>The behaviour takes advantage of the fact that the compiler automatically destroys objects that go out of scope. </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_t_auto_close_1add10f36e8a99fa86a4ca1df64de2ac84">
+		<apiName>~TAutoClose</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDestructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TAutoClose</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline ~TAutoClose()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TAutoClose::~TAutoClose()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1415"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="3012"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="3021"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Destructor.</p>
+				<p>The implementation calls <xref href="class_t_auto_close.xml#class_t_auto_close_1ac90f53a30befca6b75598fd4fbe56363">Close()</xref> on iObj, the instance of the template class. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_auto_close_1af31a55b8ce8bf085d653813e295c662f">
+		<apiName>PushL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TAutoClose</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void PushL()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TAutoClose::PushL()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1416"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="3028"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="3033"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Pushes a cleanup item onto the cleanup stack, so that <xref href="class_t_auto_close.xml#class_t_auto_close_1ac90f53a30befca6b75598fd4fbe56363">Close()</xref> is called on the templated class object, iObj, if a leave occurs. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_auto_close_1a4841f74b4d6bb408b25423f7a3495da4">
+		<apiName>Pop</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TAutoClose</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void Pop()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TAutoClose::Pop()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1417"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="3039"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="3043"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Pops a single cleanup item from the cleanup stack. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_auto_close_1ac90f53a30befca6b75598fd4fbe56363">
+		<apiName>Close</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TAutoClose</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline static void Close(TAny *aObj)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TAutoClose::Close(TAny *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aObj</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1419"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="3049"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="3050"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxVariable id="class_t_auto_close_1a74d3aae5bbd2e76c71c08964490cf787">
+		<apiName>iObj</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>T</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TAutoClose</cxxVariableScopedName>
+				<cxxVariablePrototype>T iObj</cxxVariablePrototype>
+				<cxxVariableNameLookup>TAutoClose::iObj</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1424"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>An instance of the template class. </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+</cxxClass>

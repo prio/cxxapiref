@@ -1,0 +1,1409 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_r_thread">
+	<apiName>RThread</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassDerivations>
+				<cxxClassDerivation>
+					<cxxClassDerivationAccessSpecifier value="public"/>
+					<cxxClassBaseClass href="class_r_handle_base.xml#class_r_handle_base">RHandleBase</cxxClassBaseClass>
+				</cxxClassDerivation>
+			</cxxClassDerivations>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="3788"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="3787"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="3968"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>A handle to a thread.</p>
+			<p>The thread itself is a kernel object. </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_r_thread_1a530933eb8a6da508869819c248f8640f">
+		<apiName>RThread</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>RThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline RThread()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RThread::RThread()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3790"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="3739"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="3750"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Default constructor.</p>
+				<p>The constructor exists to initialise private data within this handle; it does not create the thread object.</p>
+				<p>Specifically, it sets the handle-number to the value KCurrentThreadHandle. In effect, the constructor creates a default thread handle. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_thread_1a45d570657d095795975bd6cd3673f74f">
+		<apiName>Create</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Create(const TDesC &amp;aName, TThreadFunction aFunction, TInt aStackSize, TInt aHeapMinSize, TInt aHeapMaxSize, TAny *aPtr, TOwnerType aType=EOwnerProcess)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RThread::Create(const TDesC &amp;,TThreadFunction,TInt,TInt,TInt,TAny *,TOwnerType)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aName</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32const_8h.xml#_1a34e219fb991035be3dc5356bf197ba1e">TThreadFunction</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFunction</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStackSize</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aHeapMinSize</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aHeapMaxSize</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPtr</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1a68a23fa0195efd67397df339a83a5a86">TOwnerType</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aType</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>EOwnerProcess</cxxFunctionParameterDefaultValue>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3791"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_thread_1a00fc76bfb12790f22c6b5f70c7737727">
+		<apiName>Create</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Create(const TDesC &amp;aName, TThreadFunction aFunction, TInt aStackSize, RAllocator *aHeap, TAny *aPtr, TOwnerType aType=EOwnerProcess)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RThread::Create(const TDesC &amp;,TThreadFunction,TInt,RAllocator *,TAny *,TOwnerType)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aName</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32const_8h.xml#_1a34e219fb991035be3dc5356bf197ba1e">TThreadFunction</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFunction</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStackSize</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_allocator.xml#class_r_allocator">RAllocator</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aHeap</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPtr</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1a68a23fa0195efd67397df339a83a5a86">TOwnerType</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aType</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>EOwnerProcess</cxxFunctionParameterDefaultValue>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3792"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_thread_1a6e1ac0998f59f55282c7b8fe0942229f">
+		<apiName>Create</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Create(const TThreadCreateInfo &amp;aCreateInfo)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RThread::Create(const TThreadCreateInfo &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="struct_t_thread_create_info.xml#struct_t_thread_create_info">TThreadCreateInfo</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCreateInfo</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3793"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_thread_1a9b07b226173ce15b1a0e2bc89f8cddf7">
+		<apiName>Open</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Open(const TDesC &amp;aFullName, TOwnerType aType=EOwnerProcess)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RThread::Open(const TDesC &amp;,TOwnerType)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFullName</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1a68a23fa0195efd67397df339a83a5a86">TOwnerType</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aType</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>EOwnerProcess</cxxFunctionParameterDefaultValue>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3794"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_thread_1aee455fd3acc5a504c2ed79a411c6addb">
+		<apiName>Open</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Open(TThreadId aID, TOwnerType aType=EOwnerProcess)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RThread::Open(TThreadId,TOwnerType)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_thread_id.xml#class_t_thread_id">TThreadId</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aID</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1a68a23fa0195efd67397df339a83a5a86">TOwnerType</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aType</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>EOwnerProcess</cxxFunctionParameterDefaultValue>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3795"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_thread_1a2727d30c386d1b21aace8f3d98cef778">
+		<apiName>Id</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_thread_id.xml#class_t_thread_id">TThreadId</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TThreadId Id() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RThread::Id()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3796"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_thread_1ad9f923c743f53d0a5ea438ec3fcb1334">
+		<apiName>Resume</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Resume() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RThread::Resume()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3797"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_thread_1ace63015d54be08c70d7cea4fc91d859a">
+		<apiName>Suspend</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Suspend() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RThread::Suspend()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3798"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_thread_1a6f4e18ac689260e510d07878c870898f">
+		<apiName>RenameMe</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline static TInt RenameMe(const TDesC &amp;aName)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RThread::RenameMe(const TDesC &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aName</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3803"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="7465"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="7466"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Use <xref href="class_user.xml#class_user_1ab4f7df93630e9f74eaa3775ac3d15c3a">User::RenameThread()</xref> instead </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_thread_1a4793d50e2c7256a9f0e5b903a33db65e">
+		<apiName>Kill</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Kill(TInt aReason)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RThread::Kill(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aReason</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3805"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_thread_1afa5cb15040d5025c51305866ae3976a7">
+		<apiName>Terminate</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Terminate(TInt aReason)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RThread::Terminate(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aReason</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3806"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_thread_1ab655559055690e1c72392e5001810c4b">
+		<apiName>Panic</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Panic(const TDesC &amp;aCategory, TInt aReason)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RThread::Panic(const TDesC &amp;,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCategory</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aReason</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3807"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_thread_1acae686eca55da23a18e65980a5c3a9a3">
+		<apiName>Process</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Process(RProcess &amp;aProcess) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RThread::Process(RProcess &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_process.xml#class_r_process">RProcess</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aProcess</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3808"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_thread_1a63e130d3ebb97630be89f82bade1ef8c">
+		<apiName>Priority</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1a2dc400c438444996449c9d056c0883cf">TThreadPriority</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TThreadPriority Priority() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RThread::Priority()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3809"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_thread_1a6f59d03b38c98705d7a05a760f23e3a6">
+		<apiName>SetPriority</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void SetPriority(TThreadPriority aPriority) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RThread::SetPriority(TThreadPriority)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1a2dc400c438444996449c9d056c0883cf">TThreadPriority</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPriority</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3810"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_thread_1a183a8f2733f6c93033b60bd7fe7ebc41">
+		<apiName>ProcessPriority</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1a674443bf65cfd008f39d20e12d64dee0">TProcessPriority</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TProcessPriority ProcessPriority() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RThread::ProcessPriority()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3811"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_thread_1a0b6761e8a9a567802129b7eda13ae009">
+		<apiName>SetProcessPriority</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void SetProcessPriority(TProcessPriority aPriority) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RThread::SetProcessPriority(TProcessPriority)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1a674443bf65cfd008f39d20e12d64dee0">TProcessPriority</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPriority</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3812"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_thread_1a3c0f1a5ddf478f08760acb1e13843f04">
+		<apiName>RequestCount</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt RequestCount() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RThread::RequestCount()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3813"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_thread_1a8666561fe4d1cb2973a49fda9ec80de5">
+		<apiName>ExitType</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1a387e7aba0d81920ae9ff93e69f79cd03">TExitType</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TExitType ExitType() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RThread::ExitType()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3814"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_thread_1a8a70301a4b5b2b84a65ecbb44734c75a">
+		<apiName>ExitReason</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt ExitReason() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RThread::ExitReason()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3815"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_thread_1afce9f7a7a48274f13fc6e45609b05663">
+		<apiName>ExitCategory</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_buf.xml#class_t_buf">TExitCategoryName</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TExitCategoryName ExitCategory() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RThread::ExitCategory()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3816"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_thread_1aeccc968e8531e2d9cae4794c25902f42">
+		<apiName>RequestComplete</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void RequestComplete(TRequestStatus *&amp;aStatus, TInt aReason) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RThread::RequestComplete(TRequestStatus *&amp;,TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> *&amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aReason</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3817"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_thread_1a9ffbb2e3a2da08bf2aeb93855523b4ae">
+		<apiName>RequestSignal</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void RequestSignal() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RThread::RequestSignal()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3818"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_thread_1a23e2973bf6a69d568a8423df14a301e5">
+		<apiName>Logon</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Logon(TRequestStatus &amp;aStatus) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RThread::Logon(TRequestStatus &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3819"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_thread_1a1344990e2dcd745e5cdbc3c6b05010c3">
+		<apiName>LogonCancel</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt LogonCancel(TRequestStatus &amp;aStatus) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RThread::LogonCancel(TRequestStatus &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3820"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_thread_1acc68da16e2863fcdfa78b069dcc960b1">
+		<apiName>HandleCount</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void HandleCount(TInt &amp;aProcessHandleCount, TInt &amp;aThreadHandleCount) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RThread::HandleCount(TInt &amp;,TInt &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aProcessHandleCount</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aThreadHandleCount</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3821"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_thread_1a4aeb59ca9e11b61482b3b19f823e9225">
+		<apiName>Context</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Context(TDes8 &amp;aDes) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RThread::Context(TDes8 &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3822"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_thread_1a3a3796d8e854ab5d40193f9c7876e294">
+		<apiName>StackInfo</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt StackInfo(TThreadStackInfo &amp;aInfo) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RThread::StackInfo(TThreadStackInfo &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_thread_stack_info.xml#class_t_thread_stack_info">TThreadStackInfo</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aInfo</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3823"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_thread_1af485c89e6855d090249fb63e431b5e52">
+		<apiName>GetCpuTime</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt GetCpuTime(TTimeIntervalMicroSeconds &amp;aCpuTime) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RThread::GetCpuTime(TTimeIntervalMicroSeconds &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_time_interval_micro_seconds.xml#class_t_time_interval_micro_seconds">TTimeIntervalMicroSeconds</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCpuTime</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3824"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_thread_1a4bc91ed1f8b0d192b1e0786b4bc05c75">
+		<apiName>Open</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt Open(const TFindThread &amp;aFind, TOwnerType aType=EOwnerProcess)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RThread::Open(const TFindThread &amp;,TOwnerType)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_find_thread.xml#class_t_find_thread">TFindThread</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFind</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A reference to the TFindThread object used to find the thread. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1a68a23fa0195efd67397df339a83a5a86">TOwnerType</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aType</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>EOwnerProcess</cxxFunctionParameterDefaultValue>
+						<apiDefNote>An enumeration whose enumerators define the ownership of this thread handle. If not explicitly specified, EOwnerProcess is taken as default.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3825"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="3755"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="3773"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Opens a handle to the thread found by pattern matching a name.</p>
+				<p>A <xref href="class_t_find_thread.xml#class_t_find_thread">TFindThread</xref> object is used to find all threads whose full names match a specified pattern.</p>
+				<p>By default, ownership of this thread handle is vested in the current process, but can be vested in the current thread by passing EOwnerThread as the second parameter to this function.</p>
+				<p>KErrNone if successful, otherwise one of the other system-wide error codes. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_thread_1a3b2b8d2c115490202901b4d46e6e55fe">
+		<apiName>Rendezvous</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Rendezvous(TRequestStatus &amp;aStatus) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RThread::Rendezvous(TRequestStatus &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3826"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_thread_1ae4a5a467a26d47ed896d30994546241d">
+		<apiName>RendezvousCancel</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt RendezvousCancel(TRequestStatus &amp;aStatus) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RThread::RendezvousCancel(TRequestStatus &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3827"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_thread_1ade0e0e854e458ab7a90c19383d218ce5">
+		<apiName>Rendezvous</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>static IMPORT_C void Rendezvous(TInt aReason)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RThread::Rendezvous(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aReason</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3828"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_thread_1ae52c9fabf031788bd1e27b8909b32d42">
+		<apiName>SecureId</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_secure_id.xml#class_t_secure_id">TSecureId</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TSecureId SecureId() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RThread::SecureId()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3862"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Return the Secure ID of the process to which the thread belongs.</p>
+				<p>If an intended use of this method is to check that the Secure ID is a given value, then the use of a <xref href="class_t_security_policy.xml#class_t_security_policy">TSecurityPolicy</xref> object should be considered. E.g. Instead of something like:</p>
+				<p>
+					<codeblock>		RThread&amp; thread;
+		TInt error = thread.SecureId()==KRequiredSecureId ? KErrNone : KErrPermissionDenied;</codeblock>
+				</p>
+				<p>this could be used;</p>
+				<p>
+					<codeblock>		RThread&amp; thread;
+		static _LIT_SECURITY_POLICY_S0(mySidPolicy, KRequiredSecureId);
+		TBool pass = mySidPolicy().CheckPolicy(thread);</codeblock>
+				</p>
+				<p>This has the benefit that the <xref href="class_t_security_policy.xml#class_t_security_policy_1a60b5cd584e33306f6a5b07d8f6ff735f">TSecurityPolicy::CheckPolicy</xref> methods are configured by the system wide Platform Security configuration. I.e. are capable of emitting diagnostic messages when a check fails and/or the check can be forced to always pass.</p>
+				<p>
+					<xref href="class_t_security_policy.xml#class_t_security_policy_1a71b0f6fd7f224b99ab981acd7b6fc26e">TSecurityPolicy::CheckPolicy(RThread aThread, const char* aDiagnostic) const</xref> </p>
+				<p>_LIT_SECURITY_POLICY_S0</p>
+				<p>The Secure ID.   </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_thread_1aaf9a8e1de7e6f3249856f0b6b3b83c5c">
+		<apiName>VendorId</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_vendor_id.xml#class_t_vendor_id">TVendorId</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TVendorId VendorId() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RThread::VendorId()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3896"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Return the Vendor ID of the process to which the thread belongs.</p>
+				<p>If an intended use of this method is to check that the Vendor ID is a given value, then the use of a <xref href="class_t_security_policy.xml#class_t_security_policy">TSecurityPolicy</xref> object should be considered. E.g. Instead of something like:</p>
+				<p>
+					<codeblock>		RThread&amp; thread;
+		TInt error = thread.VendorId()==KRequiredVendorId ? KErrNone : KErrPermissionDenied;</codeblock>
+				</p>
+				<p>this could be used;</p>
+				<p>
+					<codeblock>		RThread&amp; thread;
+		static _LIT_SECURITY_POLICY_V0(myVidPolicy, KRequiredVendorId);
+		TBool pass = myVidPolicy().CheckPolicy(thread);</codeblock>
+				</p>
+				<p>This has the benefit that the <xref href="class_t_security_policy.xml#class_t_security_policy_1a60b5cd584e33306f6a5b07d8f6ff735f">TSecurityPolicy::CheckPolicy</xref> methods are configured by the system wide Platform Security configuration. I.e. are capable of emitting diagnostic messages when a check fails and/or the check can be forced to always pass.</p>
+				<p>
+					<xref href="class_t_security_policy.xml#class_t_security_policy_1a71b0f6fd7f224b99ab981acd7b6fc26e">TSecurityPolicy::CheckPolicy(RThread aThread, const char* aDiagnostic) const</xref> </p>
+				<p>_LIT_SECURITY_POLICY_V0</p>
+				<p>The Vendor ID.   </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_thread_1af138dce88a6ee3828885cf7c2b62f4a6">
+		<apiName>HasCapability</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool HasCapability(TCapability aCapability, const char *aDiagnostic=0) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RThread::HasCapability(TCapability,const char *)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1acc669c503e01bb03c69557bd0003bd81">TCapability</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCapability</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The capability to test. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const char *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDiagnostic</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>0</cxxFunctionParameterDefaultValue>
+						<apiDefNote>A string that will be emitted along with any diagnostic message that may be issued if the test finds the capability is not present. This string must be enclosed in the __PLATSEC_DIAGNOSTIC_STRING macro which enables it to be easily removed from the system. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3916"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="3780"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="3783"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Check if the process to which the thread belongs has a given capability</p>
+				<p>When a check fails the action taken is determined by the system wide Platform Security configuration. If PlatSecDiagnostics is ON, then a diagnostic message is emitted. If PlatSecEnforcement is OFF, then this function will return ETrue even though the check failed.</p>
+				<p>ETrue if the process to which the thread belongs has the capability, EFalse otherwise.   </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_thread_1a83c47be8848f8cfaa6170f5ae3320f9e">
+		<apiName>HasCapability</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool HasCapability(TCapability aCapability1, TCapability aCapability2, const char *aDiagnostic=0) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RThread::HasCapability(TCapability,TCapability,const char *)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1acc669c503e01bb03c69557bd0003bd81">TCapability</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCapability1</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The first capability to test. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1acc669c503e01bb03c69557bd0003bd81">TCapability</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCapability2</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The second capability to test. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const char *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDiagnostic</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>0</cxxFunctionParameterDefaultValue>
+						<apiDefNote>A string that will be emitted along with any diagnostic message that may be issued if the test finds a capability is not present. This string must be enclosed in the __PLATSEC_DIAGNOSTIC_STRING macro which enables it to be easily removed from the system. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3945"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="3785"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="3788"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Check if the process to which the thread belongs has both of the given capabilities</p>
+				<p>When a check fails the action taken is determined by the system wide Platform Security configuration. If PlatSecDiagnostics is ON, then a diagnostic message is emitted. If PlatSecEnforcement is OFF, then this function will return ETrue even though the check failed.</p>
+				<p>ETrue if the process to which the thread belongs has both the capabilities, EFalse otherwise.   </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_thread_1aa511c488edf7b09b6dfdf48001f8203b">
+		<apiName>Create</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt Create(const TDesC &amp;aName, TThreadFunction aFunction, TInt aStackSize, TAny *aPtr, RLibrary *aLibrary, RHeap *aHeap, TInt aHeapMinSize, TInt aHeapMaxSize, TOwnerType aType)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RThread::Create(const TDesC &amp;,TThreadFunction,TInt,TAny *,RLibrary *,RHeap *,TInt,TInt,TOwnerType)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aName</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32const_8h.xml#_1a34e219fb991035be3dc5356bf197ba1e">TThreadFunction</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFunction</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStackSize</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPtr</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_library.xml#class_r_library">RLibrary</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLibrary</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_heap.xml#class_r_heap">RHeap</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aHeap</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aHeapMinSize</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aHeapMaxSize</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1a68a23fa0195efd67397df339a83a5a86">TOwnerType</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aType</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3960"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="3974"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="3975"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Function only temporarily supported to aid migration to process emulation...</p>
+				<p>Use process emulation instead </p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_thread_1a0157f98d69f980057a12b2b176036e9b">
+		<apiName>DoHasCapability</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TBool DoHasCapability(TCapability aCapability, const char *aDiagnostic) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RThread::DoHasCapability(TCapability,const char *)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1acc669c503e01bb03c69557bd0003bd81">TCapability</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCapability</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const char *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDiagnostic</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3964"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_thread_1acb691a1f45690a6aec78a65b860f958f">
+		<apiName>DoHasCapability</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TBool DoHasCapability(TCapability aCapability) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RThread::DoHasCapability(TCapability)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1acc669c503e01bb03c69557bd0003bd81">TCapability</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCapability</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3965"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_thread_1a9b6495ef893812bb1c5db79e43c4fcb0">
+		<apiName>DoHasCapability</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TBool DoHasCapability(TCapability aCapability1, TCapability aCapability2, const char *aDiagnostic) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RThread::DoHasCapability(TCapability,TCapability,const char *)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1acc669c503e01bb03c69557bd0003bd81">TCapability</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCapability1</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1acc669c503e01bb03c69557bd0003bd81">TCapability</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCapability2</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const char *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDiagnostic</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3966"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_thread_1ab64290e1b1589de3363340aca74a8437">
+		<apiName>DoHasCapability</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TBool DoHasCapability(TCapability aCapability1, TCapability aCapability2) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RThread::DoHasCapability(TCapability,TCapability)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1acc669c503e01bb03c69557bd0003bd81">TCapability</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCapability1</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1acc669c503e01bb03c69557bd0003bd81">TCapability</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCapability2</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3967"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxClassInherits>
+		<cxxClassInheritsDetail>
+			<cxxClassFunctionInherited href="class_r_thread.xml#class_r_handle_base_1a5acffa0d0548854c050e087b53e9036a">RHandleBase::Attributes()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_thread.xml#class_r_handle_base_1a728f019e766bb5928a76f834107f28b3">RHandleBase::BTraceId()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_thread.xml#class_r_handle_base_1ad79a6f0c004c694d4eecbea1696cbcc8">RHandleBase::Close()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_thread.xml#class_r_handle_base_1ad1a439467a218ac000b1b1d6901e5a8a">RHandleBase::DoExtendedClose()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_thread.xml#class_r_handle_base_1a8428cab2039187ea1b5206d26c72b4e3">RHandleBase::Duplicate(const RThread &amp;,TOwnerType)</cxxClassFunctionInherited>
+			<cxxClassEnumeratorInherited href="class_r_thread.xml#class_r_handle_base_1ae1e84a8b8292c5a91e9f67f5834f84eba4a88c7aaa037ffebbd6d07e96e50deea">RHandleBase::EDirectReadAccess</cxxClassEnumeratorInherited>
+			<cxxClassEnumeratorInherited href="class_r_thread.xml#class_r_handle_base_1ae1e84a8b8292c5a91e9f67f5834f84eba16b9c662c1433cd95304b5f94b092342">RHandleBase::EDirectWriteAccess</cxxClassEnumeratorInherited>
+			<cxxClassEnumeratorInherited href="class_r_thread.xml#class_r_handle_base_1ae1e84a8b8292c5a91e9f67f5834f84eba7777915ffc30609e5659c341a1c2392c">RHandleBase::EReadAccess</cxxClassEnumeratorInherited>
+			<cxxClassEnumeratorInherited href="class_r_thread.xml#class_r_handle_base_1ae1e84a8b8292c5a91e9f67f5834f84ebacf44af0b945bad7aea199fab102472a2">RHandleBase::EWriteAccess</cxxClassEnumeratorInherited>
+			<cxxClassFunctionInherited href="class_r_thread.xml#class_r_handle_base_1a73491dd5bd728ba4ce1199b65e2e5f59">RHandleBase::FullName()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_thread.xml#class_r_handle_base_1ad8eef16c4499e3fb2a69a4206a4bb48e">RHandleBase::FullName(TDes &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_thread.xml#class_r_handle_base_1a10a02b67da6e5350b87729c062331c02">RHandleBase::Handle()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_thread.xml#class_r_handle_base_1a2695b04020246384d6af8480101d167a">RHandleBase::HandleInfo(THandleInfo *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_thread.xml#class_r_handle_base_1aa937149e5311d8ba4f95b05a1163bd86">RHandleBase::Name()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_thread.xml#class_r_handle_base_1a2ba493226719395d33452916cf2c7b5b">RHandleBase::NotifyDestruction(TRequestStatus &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_thread.xml#class_r_handle_base_1a0f31804c3362e9c4e878f33688d19fef">RHandleBase::Open(const TFindHandleBase &amp;,TOwnerType)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_thread.xml#class_r_handle_base_1a72abaf23694869e23eed8601bac08602">RHandleBase::OpenByName(const TDesC &amp;,TOwnerType,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_thread.xml#class_r_handle_base_1aa4706b89afddb4d82a9d0e7b45e3f920">RHandleBase::RHandleBase()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_thread.xml#class_r_handle_base_1aa1197a55c876356e33ec6bf5248ee33d">RHandleBase::RHandleBase(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_thread.xml#class_r_handle_base_1a03c76caf06fd87df38da54b8b0c39660">RHandleBase::SetHandle(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_thread.xml#class_r_handle_base_1aa3ccd98b5c883151329937098d98d3d2">RHandleBase::SetHandleNC(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_thread.xml#class_r_handle_base_1a856c39af65967538e388a65fac4c5b0c">RHandleBase::SetReturnedHandle(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_thread.xml#class_r_handle_base_1a022806379a6fb6b94bd807286a77c839">RHandleBase::SetReturnedHandle(TInt,RHandleBase &amp;)</cxxClassFunctionInherited>
+			<cxxClassVariableInherited href="class_r_thread.xml#class_r_handle_base_1aeab89dcc0c851c282effbbc9edea54f3">RHandleBase::iHandle</cxxClassVariableInherited>
+			<cxxClassEnumerationInherited href="class_r_thread.xml#class_r_handle_base_1ae1e84a8b8292c5a91e9f67f5834f84eb">RHandleBase:TAttributes</cxxClassEnumerationInherited>
+		</cxxClassInheritsDetail>
+	</cxxClassInherits>
+</cxxClass>

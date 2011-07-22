@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (c) 2011 Nokia Corporation and/or its subsidiary(-ies).
+All rights reserved.        
+        -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<reference id="cxxEnumeratorInitialiser" outputclass="element"
+xml:lang="en-us">
+<title>cxxEnumeratorInitialiser</title>
+<shortdesc>Specifies the initial value of the enumerator.</shortdesc>
+<refbody>
+<section>             <title>Description</title>             <p>The
+only content of the &lt;cxxEnumeratorInitialiser> element is two attributes.
+The mandatory <i>value</i> attribute holds the initial value of the
+enumerator. The optional <i>name</i> attribute is always set to "value".</p
+><p>The initial value of an enumerator can also be indicated using
+the &lt;cxxEnumeratorPrototype> element.<?Pub Caret?></p>         </section>
+<example>             <title>Example</title>             <codeblock
+>&lt;cxxEnumerator id="class_comms_f_w_1_1_t_c_f_comms_message_1af63a04e824301ca2a579a22575f11b36a6dc8b8c63fbd0f5f99b6dd3955dd03e2">
+    &lt;apiName>ECodePrivateFlag&lt;/apiName>
+    &lt;cxxEnumeratorScopedName>CommsFW::TCFCommsMessage&lt;/cxxEnumeratorScopedName>
+    &lt;cxxEnumeratorPrototype>ECodePrivateFlag = 128&lt;/cxxEnumeratorPrototype>
+    &lt;cxxEnumeratorNameLookup>CommsFW::TCFCommsMessage::ECodePrivateFlag&lt;/cxxEnumeratorNameLookup>
+    &lt;cxxEnumeratorInitialiser value="128"/>
+    &lt;cxxEnumeratorAPIItemLocation>
+        &lt;cxxEnumeratorDeclarationFile name="filePath" value="C:/src/include/cfmsgs.h"/>
+        &lt;cxxEnumeratorDeclarationFileLine name="lineNumber" value="96"/>
+    &lt;/cxxEnumeratorAPIItemLocation>
+    &lt;apiDesc>
+        &lt;p>Private message flag; CF channel is being used to convey a message specific to the binding end-points. &lt;/p>
+    &lt;/apiDesc>
+&lt;/cxxEnumerator></codeblock>         </example>
+<section
+conref="../packagedef.dita#cxxEnumeratorInitialiser-reference/cxxEnumeratorInitialiser-containedBy-section"
+></section>
+<section
+conref="../packagedef.dita#cxxEnumeratorInitialiser-reference/cxxEnumeratorInitialiser-contains-section"
+></section>
+<section
+conref="../packagedef.dita#cxxEnumeratorInitialiser-reference/cxxEnumeratorInitialiser-contentModel-section"
+></section>
+<section
+conref="../packagedef.dita#cxxEnumeratorInitialiser-reference/cxxEnumeratorInitialiser-attList-section"
+></section>
+<section
+conref="../packagedef.dita#cxxEnumeratorInitialiser-reference/cxxEnumeratorInitialiser-classValue-section"
+></section>
+</refbody>
+</reference>
+<?Pub *0000002498?>

@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_e_sock_1_1_r_conn_pref_list_1_1_t_iter_base">
+	<apiName>ESock::RConnPrefList::TIterBase</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_nodemessages_selector.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="303"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/comms-infras/ss_nodemessages_selector.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="302"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="324"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>Base class for <xref href="class_e_sock_1_1_r_conn_pref_list.xml#class_e_sock_1_1_r_conn_pref_list">RConnPrefList</xref> iterators </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_e_sock_1_1_r_conn_pref_list_1_1_t_iter_base_1adc1218ac035a6f2aca327315ef3ee652">
+		<apiName>TIterBase</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>ESock::RConnPrefList::TIterBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TIterBase(RConnPrefList &amp;aConnPrefList)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>ESock::RConnPrefList::TIterBase::TIterBase(RConnPrefList &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_e_sock_1_1_r_conn_pref_list.xml#class_e_sock_1_1_r_conn_pref_list">RConnPrefList</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aConnPrefList</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Connection preference list to iterate over </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_nodemessages_selector.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="310"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="308"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="312"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_e_sock_1_1_r_conn_pref_list_1_1_t_iter_base_1a910f81e8a0b3d164d7754d3d8d6ca12b">
+		<apiName>AtIndex</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="struct_meta_1_1_s_meta_data.xml#struct_meta_1_1_s_meta_data">Meta::SMetaData</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>ESock::RConnPrefList::TIterBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C Meta::SMetaData * AtIndex(const Meta::STypeId &amp;aType, TInt aIndex)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>ESock::RConnPrefList::TIterBase::AtIndex(const Meta::STypeId &amp;,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="struct_meta_1_1_s_type_id.xml#struct_meta_1_1_s_type_id">Meta::STypeId</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aType</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Only return preferences of this type </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Index of preference requested </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_nodemessages_selector.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="319"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>The requested connection preference, or NULL if no preference of the specified type was found at aIndex </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxVariable id="class_e_sock_1_1_r_conn_pref_list_1_1_t_iter_base_1a9e3750c905514073dee1e39a41083c4d">
+		<apiName>iConnPrefList</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="protected"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="class_e_sock_1_1_r_conn_pref_list.xml#class_e_sock_1_1_r_conn_pref_list">RConnPrefList</apiRelation> &amp;</cxxVariableDeclaredType>
+				<cxxVariableScopedName>ESock::RConnPrefList::TIterBase</cxxVariableScopedName>
+				<cxxVariablePrototype>RConnPrefList &amp; iConnPrefList</cxxVariablePrototype>
+				<cxxVariableNameLookup>ESock::RConnPrefList::TIterBase::iConnPrefList</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_nodemessages_selector.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="322"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_e_sock_1_1_r_conn_pref_list_1_1_t_iter_base_1a29a3b569a5e1637263016369766968cd">
+		<apiName>iMasterIndex</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="protected"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>ESock::RConnPrefList::TIterBase</cxxVariableScopedName>
+				<cxxVariablePrototype>TInt iMasterIndex</cxxVariablePrototype>
+				<cxxVariableNameLookup>ESock::RConnPrefList::TIterBase::iMasterIndex</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_nodemessages_selector.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="323"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+</cxxClass>

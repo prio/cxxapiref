@@ -1,0 +1,340 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_e_sock_1_1_c_ref_count_owner_base">
+	<apiName>ESock::CRefCountOwnerBase</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassAbstract/>
+			<cxxClassDerivations>
+				<cxxClassDerivation>
+					<cxxClassDerivationAccessSpecifier value="public"/>
+					<cxxClassBaseClass href="class_c_base.xml#class_c_base">CBase</cxxClassBaseClass>
+				</cxxClassDerivation>
+			</cxxClassDerivations>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_refcountowner.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="47"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/comms-infras/ss_refcountowner.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="36"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="115"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>Base container class useful for passing reference counted objects around the stack. When a node receives an object based on this, it calls Open to increment the access counter and ensure the object does go away while it&apos;s being used. When the node is finished with the object it calls Close on it. The object will then delete itself if it&apos;s access counter is zero.</p>
+			<p>Objects of this type will delete themselves asynchronously. WARNING: For internal use ONLY. Compatibility is not guaranteed in future releases. </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_e_sock_1_1_c_ref_count_owner_base_1a11099577e15c5be3e60c1e58b3dee640">
+		<apiName>Close</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>ESock::CRefCountOwnerBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Close()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>ESock::CRefCountOwnerBase::Close()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_refcountowner.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="52"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Relinquish access to the object. Decrements and access counter and may trigger deletion of the point and of the object </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_e_sock_1_1_c_ref_count_owner_base_1a49c07e3b967fc2ddc2d1442928e98049">
+		<apiName>Open</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>ESock::CRefCountOwnerBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Open()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>ESock::CRefCountOwnerBase::Open()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_refcountowner.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="56"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gain access to the object. Increments the access counter </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_e_sock_1_1_c_ref_count_owner_base_1a8a2513155db3c8635ead2da4a38a00aa">
+		<apiName>CRefCountOwnerBase</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType>IMPORT_C</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>ESock::CRefCountOwnerBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C CRefCountOwnerBase(const TAny *aPtr)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>ESock::CRefCountOwnerBase::CRefCountOwnerBase(const TAny *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPtr</cxxFunctionParameterDeclarationName>
+						<apiDefNote>pointer to the real object to be contained </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_refcountowner.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="62"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_e_sock_1_1_c_ref_count_owner_base_1a7c4b6e9007dd5a89b23cf4a7e373b9a0">
+		<apiName>~CRefCountOwnerBase</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionDestructor/>
+				<cxxFunctionDeclaredType>IMPORT_C</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>ESock::CRefCountOwnerBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C ~CRefCountOwnerBase()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>ESock::CRefCountOwnerBase::~CRefCountOwnerBase()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_refcountowner.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="64"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_e_sock_1_1_c_ref_count_owner_base_1a244f70a81adbbfe6077901af5cbd591b">
+		<apiName>ReceivedL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionVirtual/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>ESock::CRefCountOwnerBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual IMPORT_C void ReceivedL(const Messages::TRuntimeCtxId &amp;aSender, const Messages::TNodeId &amp;aRecipient, Messages::TSignatureBase &amp;aMessage)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>ESock::CRefCountOwnerBase::ReceivedL(const Messages::TRuntimeCtxId &amp;,const Messages::TNodeId &amp;,Messages::TSignatureBase &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_messages_1_1_t_runtime_ctx_id.xml#class_messages_1_1_t_runtime_ctx_id">Messages::TRuntimeCtxId</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSender</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_messages_1_1_t_node_id.xml#class_messages_1_1_t_node_id">Messages::TNodeId</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aRecipient</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_messages_1_1_t_signature_base.xml#class_messages_1_1_t_signature_base">Messages::TSignatureBase</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMessage</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_refcountowner.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="69"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Receive a message. <xref href="class_e_sock_1_1_c_ref_count_owner_base.xml#class_e_sock_1_1_c_ref_count_owner_base">CRefCountOwnerBase</xref> objects can only receive <xref href="class_e_sock_1_1_t_c_f_data_client.xml#class_e_sock_1_1_t_c_f_data_client_1a36113b0bcefdc855b9cd6ed344f6a7c8">TCFDataClient::TStop</xref>, which will trigger deletion of the ptr and deletion of the object </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_e_sock_1_1_c_ref_count_owner_base_1a6d6553f70b22b3b0a8db271fc4e6d9e1">
+		<apiName>DeletePtr</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionPureVirtual/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>ESock::CRefCountOwnerBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual void DeletePtr()=0</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>ESock::CRefCountOwnerBase::DeletePtr()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_refcountowner.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="74"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Delete the object pointed to by iPtr. Derived classes must implement this. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_e_sock_1_1_c_ref_count_owner_base_1a34cbdd6f0dd9ce4dffbd6a51f48a42ed">
+		<apiName>DeletePtr</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>ESock::CRefCountOwnerBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline static void DeletePtr(CObject *aPtr)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>ESock::CRefCountOwnerBase::DeletePtr(CObject *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_c_object.xml#class_c_object">CObject</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPtr</cxxFunctionParameterDeclarationName>
+						<apiDefNote>CObject to delete </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_refcountowner.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="81"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="80"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="83"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_e_sock_1_1_c_ref_count_owner_base_1a0ee8c92f4e5182c41c0305f5b5bedd2d">
+		<apiName>DeletePtr</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>ESock::CRefCountOwnerBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline static void DeletePtr(const CBase *aPtr)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>ESock::CRefCountOwnerBase::DeletePtr(const CBase *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_c_base.xml#class_c_base">CBase</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPtr</cxxFunctionParameterDeclarationName>
+						<apiDefNote>CBase to delete </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_refcountowner.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="89"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="88"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="91"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_e_sock_1_1_c_ref_count_owner_base_1a80cb2eab8d725878322b84cc81459bd9">
+		<apiName>DeletePtr</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>ESock::CRefCountOwnerBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline static void DeletePtr(const Meta::SMetaData *aPtr)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>ESock::CRefCountOwnerBase::DeletePtr(const Meta::SMetaData *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="struct_meta_1_1_s_meta_data.xml#struct_meta_1_1_s_meta_data">Meta::SMetaData</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPtr</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Pointer to a Meta::SMetaData to delete </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_refcountowner.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="97"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="96"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="99"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxVariable id="class_e_sock_1_1_c_ref_count_owner_base_1a2f56c065e1bbe8a105d9b721f2e3b3aa">
+		<apiName>iPtr</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="protected"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxVariableDeclaredType>
+				<cxxVariableScopedName>ESock::CRefCountOwnerBase</cxxVariableScopedName>
+				<cxxVariablePrototype>TAny * iPtr</cxxVariablePrototype>
+				<cxxVariableNameLookup>ESock::CRefCountOwnerBase::iPtr</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_refcountowner.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="105"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Pointer to the contained object </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_e_sock_1_1_c_ref_count_owner_base_1ae629a73c60dd59b30e1e9b09b79ea206">
+		<apiName>iRefOpened</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="protected"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>ESock::CRefCountOwnerBase</cxxVariableScopedName>
+				<cxxVariablePrototype>TBool iRefOpened</cxxVariablePrototype>
+				<cxxVariableNameLookup>ESock::CRefCountOwnerBase::iRefOpened</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_refcountowner.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="111"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Sanity checking member. Set to true after first open. Prevents dead objects being used. Only used in udeb, but not conditional to avoid any urel/udeb BC issues </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_e_sock_1_1_c_ref_count_owner_base_1a3590668c07ba3dc7cc0cfde47cf7effc">
+		<apiName>iRefCount</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>ESock::CRefCountOwnerBase</cxxVariableScopedName>
+				<cxxVariablePrototype>TInt iRefCount</cxxVariablePrototype>
+				<cxxVariableNameLookup>ESock::CRefCountOwnerBase::iRefCount</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_refcountowner.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="114"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxClassInherits>
+		<cxxClassInheritsDetail>
+			<cxxClassFunctionInherited href="class_e_sock_1_1_c_ref_count_owner_base.xml#class_c_base_1a240de7932690a4e987d75690b0b6f82b">CBase::CBase()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_e_sock_1_1_c_ref_count_owner_base.xml#class_c_base_1ac0a06aeab68b3e01be81f9dd79e011c6">CBase::Delete(CBase *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_e_sock_1_1_c_ref_count_owner_base.xml#class_c_base_1aae681a54d9c9b10c7d42e7e32ff109d5">CBase::Extension_(TUint,TAny *&amp;,TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_e_sock_1_1_c_ref_count_owner_base.xml#class_c_base_1af4c4965092a763b0856ccbfa3cf99eaf">CBase::operator new(TUint)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_e_sock_1_1_c_ref_count_owner_base.xml#class_c_base_1ab9e5f557dea4db22886189926687ddc1">CBase::operator new(TUint,TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_e_sock_1_1_c_ref_count_owner_base.xml#class_c_base_1aa464dd21494443ac109084ed03b81f28">CBase::operator new(TUint,TLeave)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_e_sock_1_1_c_ref_count_owner_base.xml#class_c_base_1af8429815362d4df6fecd47179e0c5dfe">CBase::operator new(TUint,TLeave,TUint)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_e_sock_1_1_c_ref_count_owner_base.xml#class_c_base_1a80505bdf8b1b20a2ed102307a78eeeeb">CBase::operator new(TUint,TUint)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_e_sock_1_1_c_ref_count_owner_base.xml#class_c_base_1a1390361b94424be22bb2b1020eb400ea">CBase::~CBase()</cxxClassFunctionInherited>
+		</cxxClassInheritsDetail>
+	</cxxClassInherits>
+</cxxClass>

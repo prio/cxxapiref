@@ -1,0 +1,648 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_r_handle_base">
+	<apiName>RHandleBase</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="2396"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="2395"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="2438"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>A handle to an object.</p>
+			<p>The class encapsulates the basic behaviour of a handle, hiding the handle-number which identifies the object which the handle represents.</p>
+			<p>The class is abstract in the sense that a <xref href="class_r_handle_base.xml#class_r_handle_base">RHandleBase</xref> object is never explicitly instantiated. It is always a base class to a concrete handle class; for example, <xref href="class_r_semaphore.xml#class_r_semaphore">RSemaphore</xref>, <xref href="class_r_thread.xml#class_r_thread">RThread</xref>, <xref href="class_r_process.xml#class_r_process">RProcess</xref>, <xref href="class_r_critical_section.xml#class_r_critical_section">RCriticalSection</xref> etc. </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxEnumeration id="class_r_handle_base_1ae1e84a8b8292c5a91e9f67f5834f84eb">
+		<apiName>TAttributes</apiName>
+		<cxxEnumerationDetail>
+			<cxxEnumerationDefinition>
+				<cxxEnumerationAccessSpecifier value="public"/>
+				<cxxEnumerationScopedName>RHandleBase</cxxEnumerationScopedName>
+				<cxxEnumerationPrototype>TAttributes</cxxEnumerationPrototype>
+				<cxxEnumerationNameLookup>RHandleBase:TAttributes</cxxEnumerationNameLookup>
+				<cxxEnumerators>
+					<cxxEnumerator id="class_r_handle_base_1ae1e84a8b8292c5a91e9f67f5834f84eba7777915ffc30609e5659c341a1c2392c">
+						<apiName>EReadAccess</apiName>
+						<cxxEnumeratorScopedName>RHandleBase</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EReadAccess = 0x1</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RHandleBase::EReadAccess</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="0x1"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="2406"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc/>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_r_handle_base_1ae1e84a8b8292c5a91e9f67f5834f84ebacf44af0b945bad7aea199fab102472a2">
+						<apiName>EWriteAccess</apiName>
+						<cxxEnumeratorScopedName>RHandleBase</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EWriteAccess = 0x2</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RHandleBase::EWriteAccess</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="0x2"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="2407"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc/>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_r_handle_base_1ae1e84a8b8292c5a91e9f67f5834f84eba4a88c7aaa037ffebbd6d07e96e50deea">
+						<apiName>EDirectReadAccess</apiName>
+						<cxxEnumeratorScopedName>RHandleBase</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EDirectReadAccess = 0x4</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RHandleBase::EDirectReadAccess</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="0x4"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="2408"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc/>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_r_handle_base_1ae1e84a8b8292c5a91e9f67f5834f84eba16b9c662c1433cd95304b5f94b092342">
+						<apiName>EDirectWriteAccess</apiName>
+						<cxxEnumeratorScopedName>RHandleBase</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EDirectWriteAccess = 0x8</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RHandleBase::EDirectWriteAccess</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="0x8"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="2409"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc/>
+					</cxxEnumerator>
+				</cxxEnumerators>
+				<cxxEnumerationAPIItemLocation>
+					<cxxEnumerationDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxEnumerationDeclarationFileLine name="lineNumber" value="2405"/>
+					<cxxEnumerationDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxEnumerationDefinitionFileLineStart name="lineNumber" value="2404"/>
+					<cxxEnumerationDefinitionFileLineEnd name="lineNumber" value="2410"/>
+				</cxxEnumerationAPIItemLocation>
+			</cxxEnumerationDefinition>
+			<apiDesc>
+				<p>Read/Write attributes for the handle. </p>
+			</apiDesc>
+		</cxxEnumerationDetail>
+	</cxxEnumeration>
+	<cxxFunction id="class_r_handle_base_1aa4706b89afddb4d82a9d0e7b45e3f920">
+		<apiName>RHandleBase</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>RHandleBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline RHandleBase()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RHandleBase::RHandleBase()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2412"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="3102"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="3107"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Default constructor. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_handle_base_1a10a02b67da6e5350b87729c062331c02">
+		<apiName>Handle</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RHandleBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt Handle() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RHandleBase::Handle()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2413"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="3141"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="3147"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Retrieves the handle-number of the object associated with this handle.</p>
+				<p>The handle number </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_handle_base_1a03c76caf06fd87df38da54b8b0c39660">
+		<apiName>SetHandle</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RHandleBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void SetHandle(TInt aHandle)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RHandleBase::SetHandle(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aHandle</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The handle-number to be set. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2414"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="3129"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="3136"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Sets the handle-number of this handle to the specified value.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_handle_base_1a856c39af65967538e388a65fac4c5b0c">
+		<apiName>SetReturnedHandle</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RHandleBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt SetReturnedHandle(TInt aHandleOrError)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RHandleBase::SetReturnedHandle(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aHandleOrError</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A handle-number, if zero or positive; an error value, if negative.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2415"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="3152"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="3177"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Sets the handle-number of this handle to the specified value.</p>
+				<p>The function can take a (zero or positive) handle-number, or a (negative) error number.</p>
+				<p>If aHandleOrError represents a handle-number, then the handle-number of this handle is set to that value. If aHandleOrError represents an error number, then the handle-number of this handle is set to zero and the negative value is returned.</p>
+				<p>KErrNone, if aHandle is a handle-number; the value of aHandleOrError, otherwise. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_handle_base_1ad1a439467a218ac000b1b1d6901e5a8a">
+		<apiName>DoExtendedClose</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RHandleBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>static void DoExtendedClose()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RHandleBase::DoExtendedClose()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2416"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_handle_base_1ad79a6f0c004c694d4eecbea1696cbcc8">
+		<apiName>Close</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RHandleBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Close()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RHandleBase::Close()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2418"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_handle_base_1aa937149e5311d8ba4f95b05a1163bd86">
+		<apiName>Name</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_buf.xml#class_t_buf">TName</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RHandleBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TName Name() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RHandleBase::Name()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2419"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_handle_base_1a73491dd5bd728ba4ce1199b65e2e5f59">
+		<apiName>FullName</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_buf.xml#class_t_buf">TFullName</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RHandleBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TFullName FullName() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RHandleBase::FullName()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2420"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_handle_base_1ad8eef16c4499e3fb2a69a4206a4bb48e">
+		<apiName>FullName</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RHandleBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void FullName(TDes &amp;aName) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RHandleBase::FullName(TDes &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des16.xml#class_t_des16">TDes</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aName</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2421"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_handle_base_1aa3ccd98b5c883151329937098d98d3d2">
+		<apiName>SetHandleNC</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RHandleBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void SetHandleNC(TInt aHandle)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RHandleBase::SetHandleNC(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aHandle</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2422"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_handle_base_1a8428cab2039187ea1b5206d26c72b4e3">
+		<apiName>Duplicate</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RHandleBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Duplicate(const RThread &amp;aSrc, TOwnerType aType=EOwnerProcess)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RHandleBase::Duplicate(const RThread &amp;,TOwnerType)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_r_thread.xml#class_r_thread">RThread</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSrc</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1a68a23fa0195efd67397df339a83a5a86">TOwnerType</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aType</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>EOwnerProcess</cxxFunctionParameterDefaultValue>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2423"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_handle_base_1a2695b04020246384d6af8480101d167a">
+		<apiName>HandleInfo</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RHandleBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void HandleInfo(THandleInfo *anInfo)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RHandleBase::HandleInfo(THandleInfo *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_handle_info.xml#class_t_handle_info">THandleInfo</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anInfo</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2424"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_handle_base_1a5acffa0d0548854c050e087b53e9036a">
+		<apiName>Attributes</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RHandleBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TUint Attributes() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RHandleBase::Attributes()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2425"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_handle_base_1a728f019e766bb5928a76f834107f28b3">
+		<apiName>BTraceId</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RHandleBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt BTraceId() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RHandleBase::BTraceId()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2426"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_handle_base_1a2ba493226719395d33452916cf2c7b5b">
+		<apiName>NotifyDestruction</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RHandleBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void NotifyDestruction(TRequestStatus &amp;aStatus)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RHandleBase::NotifyDestruction(TRequestStatus &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2427"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_handle_base_1aa1197a55c876356e33ec6bf5248ee33d">
+		<apiName>RHandleBase</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>RHandleBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline RHandleBase(TInt aHandle)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RHandleBase::RHandleBase(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aHandle</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The existing handle to be copied. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2429"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="3113"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="3123"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Copy constructor.</p>
+				<p>It constructs this handle from an existing one. Specifically, the handle-number encapsulated by the specified handle is copied to this handle.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_handle_base_1a0f31804c3362e9c4e878f33688d19fef">
+		<apiName>Open</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RHandleBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Open(const TFindHandleBase &amp;aHandle, TOwnerType aType)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RHandleBase::Open(const TFindHandleBase &amp;,TOwnerType)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_find_handle_base.xml#class_t_find_handle_base">TFindHandleBase</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aHandle</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1a68a23fa0195efd67397df339a83a5a86">TOwnerType</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aType</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2430"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_handle_base_1a022806379a6fb6b94bd807286a77c839">
+		<apiName>SetReturnedHandle</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RHandleBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>static TInt SetReturnedHandle(TInt aHandleOrError, RHandleBase &amp;aHandle)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RHandleBase::SetReturnedHandle(TInt,RHandleBase &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aHandleOrError</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_handle_base.xml#class_r_handle_base">RHandleBase</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aHandle</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2431"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_handle_base_1a72abaf23694869e23eed8601bac08602">
+		<apiName>OpenByName</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RHandleBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>TInt OpenByName(const TDesC &amp;aName, TOwnerType aOwnerType, TInt aObjectType)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RHandleBase::OpenByName(const TDesC &amp;,TOwnerType,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aName</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1a68a23fa0195efd67397df339a83a5a86">TOwnerType</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aOwnerType</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aObjectType</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2432"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_handle_base_1a9d68e916b6f02c3fedcc627edfdfa9e9">
+		<apiName>DoExtendedCloseL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RHandleBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>static void DoExtendedCloseL()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RHandleBase::DoExtendedCloseL()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2435"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxVariable id="class_r_handle_base_1aeab89dcc0c851c282effbbc9edea54f3">
+		<apiName>iHandle</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="protected"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>RHandleBase</cxxVariableScopedName>
+				<cxxVariablePrototype>TInt iHandle</cxxVariablePrototype>
+				<cxxVariableNameLookup>RHandleBase::iHandle</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="2437"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+</cxxClass>

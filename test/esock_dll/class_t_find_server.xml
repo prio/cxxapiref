@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_t_find_server">
+	<apiName>TFindServer</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassDerivations>
+				<cxxClassDerivation>
+					<cxxClassDerivationAccessSpecifier value="public"/>
+					<cxxClassBaseClass href="class_t_find_handle_base.xml#class_t_find_handle_base">TFindHandleBase</cxxClassBaseClass>
+				</cxxClassDerivation>
+			</cxxClassDerivations>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="3046"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="3045"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="3051"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>Searches for servers by pattern matching against the names of kernel side server objects.</p>
+			<p>The match pattern can be set into this object at construction; it can also be changed at any time after construction by using the <xref href="class_t_find_handle_base.xml#class_t_find_handle_base_1ac2d0a5a9db35b1cc839f75aad9fd25a6">TFindHandleBase::Find()</xref> base class.</p>
+			<p>After construction, call <xref href="class_t_find_server.xml#class_t_find_server_1a12b937a36a647150a89666e5af410801">TFindServer::Next()</xref> repeatedly to find successive servers whose names match the current pattern. A successful call to <xref href="class_t_find_server.xml#class_t_find_server_1a12b937a36a647150a89666e5af410801">TFindServer::Next()</xref> means that a matching server has been found. </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_t_find_server_1a200164fdfb1d64c4371426b161dbb4ca">
+		<apiName>TFindServer</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TFindServer</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TFindServer()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TFindServer::TFindServer()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3048"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="3478"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="3491"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Constructs the object with a default match pattern.</p>
+				<p>The default match pattern, as implemented by the base class, is the single character &quot;*&quot;.</p>
+				<p>A new match pattern can be set after construction by calling the <xref href="class_t_find_handle_base.xml#class_t_find_handle_base_1ac2d0a5a9db35b1cc839f75aad9fd25a6">Find()</xref> member function of the <xref href="class_t_find_handle_base.xml#class_t_find_handle_base">TFindHandleBase</xref> base class.</p>
+				<p>
+					<xref href="class_t_find_handle_base.xml#class_t_find_handle_base_1ac2d0a5a9db35b1cc839f75aad9fd25a6">TFindHandleBase::Find</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_find_server_1a640e2a56cc3a8c72985777ca0cb1d8f2">
+		<apiName>TFindServer</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TFindServer</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TFindServer(const TDesC &amp;aMatch)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TFindServer::TFindServer(const TDesC &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMatch</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The match pattern.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3049"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="3496"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="3508"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Constructs the object with a specified match pattern.</p>
+				<p>A new match pattern can be set after construction by calling <xref href="class_t_find_handle_base.xml#class_t_find_handle_base_1ac2d0a5a9db35b1cc839f75aad9fd25a6">TFindHandleBase::Find()</xref>.</p>
+				<p>
+					<xref href="class_t_find_handle_base.xml#class_t_find_handle_base_1ac2d0a5a9db35b1cc839f75aad9fd25a6">TFindHandleBase::Find</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_find_server_1a12b937a36a647150a89666e5af410801">
+		<apiName>Next</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TFindServer</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Next(TFullName &amp;aResult)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TFindServer::Next(TFullName &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_buf.xml#class_t_buf">TFullName</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aResult</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3050"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxClassInherits>
+		<cxxClassInheritsDetail>
+			<cxxClassFunctionInherited href="class_t_find_server.xml#class_t_find_handle_1a712487e3e5a73408469ec86079ccf596">TFindHandle::Handle()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_find_server.xml#class_t_find_handle_1aa79b063ec40480668224704e5a6c79fe">TFindHandle::Reset()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_find_server.xml#class_t_find_handle_1a59ef1dca1c9305e1ba9f9e858a36d1ac">TFindHandle::TFindHandle()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_find_server.xml#class_t_find_handle_base_1ac2d0a5a9db35b1cc839f75aad9fd25a6">TFindHandleBase::Find(const TDesC &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_find_server.xml#class_t_find_handle_base_1a07e846db745afb10e95d9c24741d52f9">TFindHandleBase::NextObject(TFullName &amp;,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_find_server.xml#class_t_find_handle_base_1aa6982984b9e0d2011ca81df2b541cb5c">TFindHandleBase::TFindHandleBase()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_find_server.xml#class_t_find_handle_base_1a0772421601128af5af77a7e0a0a9c267">TFindHandleBase::TFindHandleBase(const TDesC &amp;)</cxxClassFunctionInherited>
+		</cxxClassInheritsDetail>
+	</cxxClassInherits>
+</cxxClass>

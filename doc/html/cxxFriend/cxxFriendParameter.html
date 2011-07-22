@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="cxxFriendParameter"/>
+<meta name="abstract" content="Describes a friend function parameter."/>
+<meta name="description" content="Describes a friend function parameter."/>
+<meta name="DC.Relation" scheme="URI" content="../cxxFriend/cxxFriend_module.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="cxxFriendParameter"/>
+<meta name="DC.Language" content="en-us"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>cxxFriendParameter</title>
+<link rel="stylesheet" type="text/css" href="../nokiacxxref.css"/></head>
+<body class="element" id="cxxFriendParameter"><a name="cxxFriendParameter"><!-- --></a>
+
+
+<h1 class="topictitle1">cxxFriendParameter</h1>
+
+
+<div><p>Describes a friend function parameter.</p>
+
+<div class="section" id="cxxFriendParameter__section_6C88CF050D7842A79A8DC78019CDFE69"><a name="cxxFriendParameter__section_6C88CF050D7842A79A8DC78019CDFE69"><!-- --></a><h2 class="sectiontitle">Description</h2>          
+  <p>The &lt;cxxFriendParameter&gt; element
+describes a single friend function parameter declaration in a  parameter
+declaration clause.</p>
+<p>See ISO/IEC 14882:2003(E) 8.3.5 Functions
+[dcl.fct] and ISO/IEC 14882:2003(E) 11.4 Friends [class.friend]</p>
+          </div>
+
+<div class="example" id="cxxFriendParameter__example_999D0BE6B0D048EB990F2807BE05B7FE"><a name="cxxFriendParameter__example_999D0BE6B0D048EB990F2807BE05B7FE"><!-- --></a><h2 class="sectiontitle">Example</h2>          
+  <p>Given source code such as:</p>
+        
+    <pre class="codeblock">class Class_13969_00
+{
+private:
+	int a;
+public:
+	/** friend reference. */
+	friend void friend_set(Class_13969_00*, int);
+};
+
+/** This can access Class_13969_00 private members by means of friendship. */
+void friend_set(Class_13969_00* p, int i)
+{
+	p-&gt;a = i;
+}
+
+</pre>
+<p>The DITA for the first parameter could be:</p>
+<pre class="codeblock">&lt;cxxFriendParameter&gt;
+    &lt;cxxFriendParameterDeclaredType&gt;
+        &lt;apiRelation href="class_class__13969__00.xml#class_class__13969__00"&gt;Class_13969_00&lt;/apiRelation&gt; *&lt;/cxxFriendParameterDeclaredType&gt;
+    &lt;cxxFriendParameterDefinitionName&gt;p&lt;/cxxFriendParameterDefinitionName&gt;
+    &lt;apiDefNote /&gt;
+&lt;/cxxFriendParameter&gt;
+</pre>
+         </div>
+
+<div class="elementContainedBy"><h2 class="sectiontitle">Contained by</h2>
+
+<p id="cxxFriendParameter__d6557e6989"><a name="cxxFriendParameter__d6557e6989"><!-- --></a>
+<a href="cxxFriendParameters.html" title="Contains information about the friend function parameter declaration clause.">cxxFriendParameters</a> 
+</p>
+
+</div>
+
+<div class="elementContains"><h2 class="sectiontitle">Contains</h2>
+
+<p id="cxxFriendParameter__d6557e7001"><a name="cxxFriendParameter__d6557e7001"><!-- --></a>
+<span class="keyword">apiDefNote</span>, 
+<a href="cxxFriendParameterDeclarationName.html" title="Describes the name of the parameter used in the declaration of the friend function.">cxxFriendParameterDeclarationName</a> 
+<a href="cxxFriendParameterDeclaredType.html" title="Describes the type of a friend function parameter.">cxxFriendParameterDeclaredType</a> 
+<a href="cxxFriendParameterDefaultValue.html" title="Describes a default value for a parameter to a friend function.">cxxFriendParameterDefaultValue</a> 
+<a href="cxxFriendParameterDefinitionName.html" title="Describes the name of the parameter used in the definition of the friend function.">cxxFriendParameterDefinitionName</a> 
+</p>
+
+</div>
+
+<div class="elementContentModel"><h2 class="sectiontitle">Content Model</h2>
+
+<p id="cxxFriendParameter__d6557e7025"><a name="cxxFriendParameter__d6557e7025"><!-- --></a>
+(<a href="cxxFriendParameterDeclaredType.html" title="Describes the type of a friend function parameter.">cxxFriendParameterDeclaredType</a> 
+  then  
+<a href="cxxFriendParameterDeclarationName.html" title="Describes the name of the parameter used in the declaration of the friend function.">cxxFriendParameterDeclarationName</a> 
+(<em>optional</em>)
+  then  
+<a href="cxxFriendParameterDefinitionName.html" title="Describes the name of the parameter used in the definition of the friend function.">cxxFriendParameterDefinitionName</a> 
+(<em>optional</em>)
+  then  
+<a href="cxxFriendParameterDefaultValue.html" title="Describes a default value for a parameter to a friend function.">cxxFriendParameterDefaultValue</a> 
+(<em>optional</em>)
+  then  
+<span class="keyword">apiDefNote</span>, 
+)</p>
+
+</div>
+
+<div class="elementAttList"/>
+
+<div class="elementClassValue"><h2 class="sectiontitle">Inheritance</h2>
+
+<p id="cxxFriendParameter__d6557e7061"><a name="cxxFriendParameter__d6557e7061"><!-- --></a>
+ topic/<span class="keyword">ph</span> reference/<span class="keyword">ph</span> apiRef/<span class="keyword">apiDefItem</span> apiOperation/<span class="keyword">apiDefItem</span> cxxFriend/<span class="keyword">cxxFriendParameter</span></p>
+
+</div>
+
+</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../cxxFriend/cxxFriend_module.html" title="Defines a top-level container for all the elements necessary to describe an C++ API friend.">cxxFriend module</a></div>
+</div>
+</div>
+
+</body>
+</html>

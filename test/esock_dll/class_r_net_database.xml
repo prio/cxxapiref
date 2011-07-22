@@ -1,0 +1,373 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_r_net_database">
+	<apiName>RNetDatabase</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassDerivations>
+				<cxxClassDerivation>
+					<cxxClassDerivationAccessSpecifier value="public"/>
+					<cxxClassBaseClass href="class_r_sub_session_base.xml#class_r_sub_session_base">RSubSessionBase</cxxClassBaseClass>
+				</cxxClassDerivation>
+			</cxxClassDerivations>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="964"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="948"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="976"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>Provides an interface to network databases, such as LM-IAS with IrDA, that may be provided by particular protocol modules.</p>
+			<p>Before making any queries, a connection to a socket server session must be made.</p>
+			<p>Each function is available in both synchronous and asynchronous versions.</p>
+			<p>A single <xref href="class_r_net_database.xml#class_r_net_database">RNetDatabase</xref> can only perform one request of any type at once. A client is panicked if it makes two requests.</p>
+			<p>Particular database access services will specify the format of queries and of responses.   </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_r_net_database_1a894c083a579092966edd65ea0ca22d0d">
+		<apiName>Open</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RNetDatabase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Open(RSocketServ &amp;aSocketServer, TUint anAddrFamily, TUint aProtocol)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RNetDatabase::Open(RSocketServ &amp;,TUint,TUint)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_socket_serv.xml#class_r_socket_serv">RSocketServ</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSocketServer</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The socket server session </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anAddrFamily</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A constant identifying the protocol family </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aProtocol</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A constant that identifies the protocol that provides the database access service </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="966"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_RSLV.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="481"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="496"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Initialises a database access service provided by a particular protocol. It must be called before other object functions are used.</p>
+				<p>KErrNone if successful otherwise another of the system-wide error codes. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_net_database_1a261c3d6081129006c7bf8e0c5ee0989b">
+		<apiName>Query</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RNetDatabase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Query(const TDesC8 &amp;aQuery, TDes8 &amp;aResult, TRequestStatus &amp;aStat)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RNetDatabase::Query(const TDesC8 &amp;,TDes8 &amp;,TRequestStatus &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aQuery</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The query to perform </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aResult</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The result of the query </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStat</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Indicates asynchronous operation and on completion contains an error code: see the system-wide error codes. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="967"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_RSLV.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="498"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="508"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Makes a query to the database asynchronously.</p>
+				<p>
+					<b>capability</b>
+				</p>
+				<p>Dependent on the type of connection so deferred to PRT </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_net_database_1a47f452c5483049f4b86e2f06bb3bddc4">
+		<apiName>Query</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RNetDatabase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Query(const TDesC8 &amp;aQuery, TDes8 &amp;aResult)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RNetDatabase::Query(const TDesC8 &amp;,TDes8 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aQuery</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The query to perform </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aResult</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The result of the query </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="968"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_RSLV.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="510"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="526"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Makes a query to the database.</p>
+				<p>KErrNone if successful otherwise another of the system-wide error codes. </p>
+				<p>
+					<b>capability</b>
+				</p>
+				<p>Dependent on the type of connection so deferred to PRT </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_net_database_1ac76252da668c5d9245ff4122de657be9">
+		<apiName>Add</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RNetDatabase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Add(const TDesC8 &amp;anItem, TRequestStatus &amp;aStat)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RNetDatabase::Add(const TDesC8 &amp;,TRequestStatus &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anItem</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The record to add </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStat</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Indicates asynchronous operation and on completion contains an error code: see the system-wide error codes. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="969"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_RSLV.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="528"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="537"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Adds a record to the database asynchronously.</p>
+				<p>
+					<b>capability</b>
+				</p>
+				<p>Dependent on the type of connection so deferred to PRT </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_net_database_1a32cd85741d4e5af8c638d9d118f8c23a">
+		<apiName>Add</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RNetDatabase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Add(const TDesC8 &amp;anItem)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RNetDatabase::Add(const TDesC8 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anItem</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The record to add </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="970"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_RSLV.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="539"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="550"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Adds a record to the database.</p>
+				<p>KErrNone if successful otherwise another of the system-wide error codes. </p>
+				<p>
+					<b>capability</b>
+				</p>
+				<p>Dependent on the type of connection so deferred to PRT </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_net_database_1a40b312d02ff0c066875805e7c260d837">
+		<apiName>Remove</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RNetDatabase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Remove(const TDesC8 &amp;anItem, TRequestStatus &amp;aStat)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RNetDatabase::Remove(const TDesC8 &amp;,TRequestStatus &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anItem</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The record to remove </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStat</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Indicates asynchronous operation and on completion contains an error code: see the system-wide error codes. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="971"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_RSLV.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="552"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="561"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Removes a record from the database asynchronously.</p>
+				<p>
+					<b>capability</b>
+				</p>
+				<p>Dependent on the type of connection so deferred to PRT </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_net_database_1a7f3ee177410dca63b68b6b5bd21c9a3b">
+		<apiName>Remove</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RNetDatabase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Remove(const TDesC8 &amp;anItem)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RNetDatabase::Remove(const TDesC8 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anItem</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The record to remove </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="972"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_RSLV.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="563"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="574"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Removes a record from the database.</p>
+				<p>KErrNone if successful otherwise another of the system-wide error codes. </p>
+				<p>
+					<b>capability</b>
+				</p>
+				<p>Dependent on the type of connection so deferred to PRT </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_net_database_1a21ce8a2f3447772412732a6eaf75cc4b">
+		<apiName>Close</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RNetDatabase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Close()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RNetDatabase::Close()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="973"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_RSLV.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="583"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="589"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Closes a database access service. If a service has been opened using <xref href="class_r_net_database.xml#class_r_net_database_1a894c083a579092966edd65ea0ca22d0d">Open()</xref>, then it should be closed using <xref href="class_r_net_database.xml#class_r_net_database_1a21ce8a2f3447772412732a6eaf75cc4b">Close()</xref>. This will ensure all associated resources are released. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_net_database_1a02a48fbe10c6d1fb8fbc45ba4284b2bc">
+		<apiName>Cancel</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RNetDatabase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Cancel()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RNetDatabase::Cancel()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="974"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_RSLV.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="576"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="581"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Cancels any outstanding asynchronous calls, which will return with error code KErrCancel. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxClassInherits>
+		<cxxClassInheritsDetail>
+			<cxxClassFunctionInherited href="class_r_net_database.xml#class_r_sub_session_base_1af9a75bd9f7400c9439e2f76f8d059d00">RSubSessionBase::CloseSubSession(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_net_database.xml#class_r_sub_session_base_1ae2da2f53114e1af7938db52291b0fecf">RSubSessionBase::CreateAutoCloseSubSession(RSessionBase &amp;,TInt,const TIpcArgs &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_net_database.xml#class_r_sub_session_base_1a50e62f82ea5de8fd858e7a75c21c0930">RSubSessionBase::CreateSubSession(const RSessionBase &amp;,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_net_database.xml#class_r_sub_session_base_1ac1adf58e7adde023baf0525baeb2a0ca">RSubSessionBase::CreateSubSession(const RSessionBase &amp;,TInt,const TIpcArgs &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_net_database.xml#class_r_sub_session_base_1a6ecd5459966453b3a99ac3f99d97e1bc">RSubSessionBase::RSubSessionBase()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_net_database.xml#class_r_sub_session_base_1ae855884063702416b6aa73c30263706b">RSubSessionBase::Send(TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_net_database.xml#class_r_sub_session_base_1a1877065a894f19c8e75f076995e2b136">RSubSessionBase::Send(TInt,const TIpcArgs &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_net_database.xml#class_r_sub_session_base_1a79a9c918d3d693edae2b91069339a6e4">RSubSessionBase::SendReceive(TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_net_database.xml#class_r_sub_session_base_1a31d1b25a10b3cf364677f050ea1b3a10">RSubSessionBase::SendReceive(TInt,TRequestStatus &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_net_database.xml#class_r_sub_session_base_1abfee930312ede77f6ee1a850be3e7ea5">RSubSessionBase::SendReceive(TInt,const TIpcArgs &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_net_database.xml#class_r_sub_session_base_1aa2f319884f3ea300a0a61c9788bb5d93">RSubSessionBase::SendReceive(TInt,const TIpcArgs &amp;,TRequestStatus &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_net_database.xml#class_r_sub_session_base_1a1239f2d6b3c11eed6965602c114886fd">RSubSessionBase::Session()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_net_database.xml#class_r_sub_session_base_1aabe5abe9803cadf198a0c429e2aa5f2e">RSubSessionBase::SubSessionHandle()const</cxxClassFunctionInherited>
+		</cxxClassInheritsDetail>
+	</cxxClassInherits>
+</cxxClass>

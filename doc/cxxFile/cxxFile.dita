@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (c) 2011 Nokia Corporation and/or its subsidiary(-ies).
+All rights reserved.        
+        -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<reference id="cxxFile" outputclass="element" xml:lang="en-us">
+    <title>cxxFile</title>
+    <shortdesc>The cxxFile element contains information about items declared in a file in C++ (for example a header file). 
+    </shortdesc>
+    <refbody>
+        <section>
+            <title>Description</title> 
+            <p>The &lt;cxxFile> element contains information about C++ items defined in a header file e.g. enums or typdefs</p> 
+            <p>It can also contain links to other topics for items e.g. classes that have been declared in the header file</p>            
+            <p>The &lt;cxxFile> element requires an <i>id</i> attribute.</p>             
+        <p>The &lt;cxxFile> element must contain the file name within the element &lt;apiname>.
+&lt;cxxFile> can also contain zero or more of the following elements
+to describe the global information:</p>
+<ul>
+    <li>&lt;cxxFunction></li>
+<li>&lt;cxxDefine></li>
+<li>&lt;cxxVariable></li>
+<li>&lt;cxxEnumeration></li>
+<li>&lt;cxxTypedef></li>
+</ul>
+</section>
+<example>
+    <title>Example</title>
+    <codeblock>&lt;cxxFile id="afile">
+	&lt;apiName>afile.h&lt;/apiName>
+	&lt;cxxFileDetail>
+		&lt;cxxFileAPIItemLocation>
+			&lt;cxxFileDeclarationFile name="filePath" value="C:/src/afile.h"/>
+		&lt;/cxxFileAPIItemLocation>
+		&lt;apiDesc>afile.h demonstrates the simple use cxxFile and related elements.&lt;/apiDesc>
+	&lt;/cxxFileDetail>
+	&lt;cxxVariable id="avar">
+		&lt;apiName>AVar&lt;/apiName>
+		&lt;cxxVariableDetail>
+			...
+		&lt;/cxxVariableDetail>
+	&lt;/cxxVariable>
+&lt;/cxxFile></codeblock>
+</example>
+<section
+conref="../packagedef.dita#cxxFile-reference/cxxFile-containedBy-section"
+>
+</section>
+<section
+conref="../packagedef.dita#cxxFile-reference/cxxFile-contains-section"
+>
+</section>
+<section
+conref="../packagedef.dita#cxxFile-reference/cxxFile-contentModel-section"
+>
+</section>
+<section
+conref="../packagedef.dita#cxxFile-reference/cxxFile-attList-section"
+>
+</section>
+<section
+conref="../packagedef.dita#cxxFile-reference/cxxFile-classValue-section"
+>
+</section>
+</refbody>
+</reference>
+<?Pub *0000002021?>

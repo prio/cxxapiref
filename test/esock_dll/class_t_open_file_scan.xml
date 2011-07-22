@@ -1,0 +1,168 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_t_open_file_scan">
+	<apiName>TOpenFileScan</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="3118"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="3105"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="3128"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>Scans open files to get a list of the entries for all files which are currently open in a particular file server session.</p>
+			<p>
+				<xref href="class_t_open_file_scan.xml#class_t_open_file_scan_1ae85d388569b449e5de23bf77fb70d132">NextL()</xref> creates a list of the files opened by the session. The ID of the thread which opened the files listed may be obtained by calling <xref href="class_t_open_file_scan.xml#class_t_open_file_scan_1a735fd9bf8415cce93189f17e8f14448b">ThreadId()</xref>. If multiple sessions are in use, repeatedly calling <xref href="class_t_open_file_scan.xml#class_t_open_file_scan_1ae85d388569b449e5de23bf77fb70d132">NextL()</xref> will return a list of open files in each session. </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_t_open_file_scan_1ab093635541847a3167273d3abda78ca3">
+		<apiName>TOpenFileScan</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType>IMPORT_C</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TOpenFileScan</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TOpenFileScan(RFs &amp;aFs)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TOpenFileScan::TOpenFileScan(RFs &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_fs.xml#class_r_fs">RFs</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFs</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3120"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_open_file_scan_1ae85d388569b449e5de23bf77fb70d132">
+		<apiName>NextL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TOpenFileScan</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void NextL(CFileList *&amp;aFileList)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TOpenFileScan::NextL(CFileList *&amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_c_dir.xml#class_c_dir">CFileList</apiRelation> *&amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFileList</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3121"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_open_file_scan_1a735fd9bf8415cce93189f17e8f14448b">
+		<apiName>ThreadId</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_thread_id.xml#class_t_thread_id">TThreadId</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TOpenFileScan</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TThreadId ThreadId() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TOpenFileScan::ThreadId()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3122"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxVariable id="class_t_open_file_scan_1a44f77e8a9e1f0d3f046fd87a31f25d49">
+		<apiName>iFs</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="class_r_fs.xml#class_r_fs">RFs</apiRelation> *</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TOpenFileScan</cxxVariableScopedName>
+				<cxxVariablePrototype>RFs * iFs</cxxVariablePrototype>
+				<cxxVariableNameLookup>TOpenFileScan::iFs</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="3124"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_t_open_file_scan_1a0d544e3c6fc9847d545afb48ddca1ce8">
+		<apiName>iThreadId</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="class_t_thread_id.xml#class_t_thread_id">TThreadId</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TOpenFileScan</cxxVariableScopedName>
+				<cxxVariablePrototype>TThreadId iThreadId</cxxVariablePrototype>
+				<cxxVariableNameLookup>TOpenFileScan::iThreadId</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="3125"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_t_open_file_scan_1ac8f6c3d5135de7fc581a7bfa5fdd2d3b">
+		<apiName>iScanPos</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TOpenFileScan</cxxVariableScopedName>
+				<cxxVariablePrototype>TInt iScanPos</cxxVariablePrototype>
+				<cxxVariableNameLookup>TOpenFileScan::iScanPos</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="3126"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_t_open_file_scan_1a00505808b1293a6c069a913a506f145f">
+		<apiName>iEntryListPos</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TOpenFileScan</cxxVariableScopedName>
+				<cxxVariablePrototype>TInt iEntryListPos</cxxVariablePrototype>
+				<cxxVariableNameLookup>TOpenFileScan::iEntryListPos</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="3127"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+</cxxClass>

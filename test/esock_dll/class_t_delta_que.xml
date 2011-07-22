@@ -1,0 +1,227 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_t_delta_que">
+	<apiName>TDeltaQue</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassDerivations>
+				<cxxClassDerivation>
+					<cxxClassDerivationAccessSpecifier value="public"/>
+					<cxxClassBaseClass href="class_t_delta_que_base.xml#class_t_delta_que_base">TDeltaQueBase</cxxClassBaseClass>
+				</cxxClassDerivation>
+			</cxxClassDerivations>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="501"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="500"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="508"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>A templated class that provides the behaviour for managing a doubly linked list in which elements represent values which are increments, or deltas, on the value represented by a preceding element.</p>
+			<p>The list is ordered so that the head of the queue represents a nominal zero point.</p>
+			<p>The delta value of a new element represents its &apos;distance&apos; from the nominal zero point. The new element is added into the list, and the delta values of adjacent elements (and of the new element, if necessary) are adjusted, so that the sum of all deltas, up to and including the new element, is the same as the new element&apos;s intended &apos;distance&apos; from the nominal zero point.</p>
+			<p>A common use for a list of this type is as a queue of timed events, where the delta values represent the intervals between the events.</p>
+			<p>The delta value is defined by the value of the <xref href="class_t_delta_que_link.xml#class_t_delta_que_link_1a4cfb908c4ea33ff002c446a6f892bf71">TDeltaQueLink::iDelta</xref> member of the link element.</p>
+			<p>The template parameter defines the type of element that forms the doubly linked list and is the class that acts as host to the link object.</p>
+			<p>
+				<xref href="class_t_delta_que_link.xml#class_t_delta_que_link">TDeltaQueLink</xref> </p>
+			<p>
+				<xref href="class_t_delta_que_link.xml#class_t_delta_que_link_1a4cfb908c4ea33ff002c446a6f892bf71">TDeltaQueLink::iDelta</xref> </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_t_delta_que_1ae6664f867902a4510d3d9a74dc722f66">
+		<apiName>TDeltaQue</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TDeltaQue</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TDeltaQue()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDeltaQue::TDeltaQue()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="503"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="773"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="789"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Constructs an empty list header and sets the offset value of the link object to zero.</p>
+				<p>In practice, never assume that the offset of the link object from the start of a list element is zero, even if the link object is declared as the first data member in the list element class.</p>
+				<p>If this default constructor is used, then call the <xref href="class_t_dbl_que_base.xml#class_t_dbl_que_base_1a6a2030cf5105b8c1acfaed4e1139c70b">TDblQueBase::SetOffset()</xref> function in the base class to ensure that the offset value is set correctly.</p>
+				<p>
+					<xref href="class_t_delta_que_base.xml#class_t_delta_que_base_1af220706872e2ee26e8e3baf52131f4ce">TDeltaQueBase::iFirstDelta</xref> is set to NULL.</p>
+				<p>
+					<xref href="class_t_dbl_que_base.xml#class_t_dbl_que_base_1a6a2030cf5105b8c1acfaed4e1139c70b">TDblQueBase::SetOffset</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_delta_que_1a3eb762fd0f451f2fc8b02705ec3697a6">
+		<apiName>TDeltaQue</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionExplicit/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TDeltaQue</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TDeltaQue(TInt aOffset)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDeltaQue::TDeltaQue(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aOffset</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The offset of the link object from the start of a list element. The macro _FOFF can be used to calculate this value.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="504"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="795"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="810"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Constructs an empty list header and sets the offset of the link object to the specified value.</p>
+				<p>
+					<xref href="class_t_delta_que_base.xml#class_t_delta_que_base_1af220706872e2ee26e8e3baf52131f4ce">TDeltaQueBase::iFirstDelta</xref> is set to NULL.</p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>USER 78, if aOffset is not divisible by four.</p>
+				<p>_FOFF </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_delta_que_1ad92d81b8ea573f1730833760b0b51928">
+		<apiName>Add</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDeltaQue</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void Add(T &amp;aRef, TInt aDelta)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDeltaQue::Add(T &amp;,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>T &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aRef</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The list element to be inserted. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDelta</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The &apos;distance&apos; from the nominal zero point. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="505"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="816"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="828"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Adds the specified list element, having the specified &apos;distance&apos; from the nominal zero point, into the list.</p>
+				<p>The element is added into the list, the adjacent delta values adjusted, and a suitable delta value assigned to the new element, so that the new element is at the specified &apos;distance&apos; from the nominal zero point.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_delta_que_1a584fc1a9cda97f650cf6252d4d918ae6">
+		<apiName>Remove</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDeltaQue</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void Remove(T &amp;aRef)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDeltaQue::Remove(T &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>T &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aRef</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The list element to be removed. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="506"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="834"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="843"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Removes the specified list element from the linked list.</p>
+				<p>The delta value of the element following the removed element is adjusted so that its &apos;distance&apos; from the nominal zero point remains the same.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_delta_que_1a0ac544fab90cd1ad0ee94869939b19a9">
+		<apiName>RemoveFirst</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>T *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDeltaQue</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline T * RemoveFirst()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDeltaQue::RemoveFirst()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="507"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="849"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="857"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Removes the first list element from the linked list if its delta value is zero or negative.</p>
+				<p>A pointer to the element removed from the linked list. This is NULL, if the first element has a positive delta value. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxClassInherits>
+		<cxxClassInheritsDetail>
+			<cxxClassFunctionInherited href="class_t_delta_que.xml#class_t_dbl_que_base_1a4db652b975278b6076ec3d27e5b3d411">TDblQueBase::DoAddFirst(TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_delta_que.xml#class_t_dbl_que_base_1a203ae452b202032c16c85ea3be231868">TDblQueBase::DoAddLast(TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_delta_que.xml#class_t_dbl_que_base_1adca3e228a71ea46eb7ae55d14e5a0792">TDblQueBase::DoAddPriority(TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_delta_que.xml#class_t_dbl_que_base_1a33729057dcec76b79cfdde81771095b2">TDblQueBase::IsEmpty()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_delta_que.xml#class_t_dbl_que_base_1a6a2030cf5105b8c1acfaed4e1139c70b">TDblQueBase::SetOffset(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_delta_que.xml#class_t_dbl_que_base_1afdd5a889b8597e4991377529833bf136">TDblQueBase::TDblQueBase()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_delta_que.xml#class_t_dbl_que_base_1a024af749e9dc0f578df4338d1d6ed16f">TDblQueBase::TDblQueBase(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_delta_que.xml#class_t_dbl_que_base_1a42a2b0c3820b7561b574d907c973fb7b">TDblQueBase::__DbgTestEmpty()const</cxxClassFunctionInherited>
+			<cxxClassVariableInherited href="class_t_delta_que.xml#class_t_dbl_que_base_1aa9710635336a9fc3e250bffee651f701">TDblQueBase::iHead</cxxClassVariableInherited>
+			<cxxClassVariableInherited href="class_t_delta_que.xml#class_t_dbl_que_base_1ab8369fc5cbf06da0cc8f4542f6cbe518">TDblQueBase::iOffset</cxxClassVariableInherited>
+			<cxxClassFunctionInherited href="class_t_delta_que.xml#class_t_delta_que_base_1aef47f5dbc45f1448c15ac08753797725">TDeltaQueBase::CountDown()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_delta_que.xml#class_t_delta_que_base_1a8460695840cb93a0f5f16543f1773d05">TDeltaQueBase::CountDown(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_delta_que.xml#class_t_delta_que_base_1a24282959fca76ce7b309b7442af35a02">TDeltaQueBase::DoAddDelta(TAny *,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_delta_que.xml#class_t_delta_que_base_1acb6751e746e086c56c8b43f7548306f2">TDeltaQueBase::DoRemove(TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_delta_que.xml#class_t_delta_que_base_1ae32b16342d20730a0ab3952fbdf10ceb">TDeltaQueBase::DoRemoveFirst()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_delta_que.xml#class_t_delta_que_base_1a0e14298ad80543b727447fb045500161">TDeltaQueBase::FirstDelta(TInt &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_delta_que.xml#class_t_delta_que_base_1a67374c7c2c4745a70bd1f50bca444ae1">TDeltaQueBase::Reset()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_delta_que.xml#class_t_delta_que_base_1a4504959634f0c414a47d3aec05ffb29a">TDeltaQueBase::TDeltaQueBase()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_delta_que.xml#class_t_delta_que_base_1a8f40a15ffacce22840a8d591f42159cb">TDeltaQueBase::TDeltaQueBase(TInt)</cxxClassFunctionInherited>
+			<cxxClassVariableInherited href="class_t_delta_que.xml#class_t_delta_que_base_1af220706872e2ee26e8e3baf52131f4ce">TDeltaQueBase::iFirstDelta</cxxClassVariableInherited>
+		</cxxClassInheritsDetail>
+	</cxxClassInherits>
+</cxxClass>

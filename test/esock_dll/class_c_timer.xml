@@ -1,0 +1,331 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_c_timer">
+	<apiName>CTimer</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassDerivations>
+				<cxxClassDerivation>
+					<cxxClassDerivationAccessSpecifier value="public"/>
+					<cxxClassBaseClass href="class_c_active.xml#class_c_active">CActive</cxxClassBaseClass>
+				</cxxClassDerivation>
+			</cxxClassDerivations>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="1933"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="1902"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="1948"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>Base class for a timer active object.</p>
+			<p>This is an active object that uses the asynchronous services provided by <xref href="class_r_timer.xml#class_r_timer">RTimer</xref>, to generate events. These events occur either at a specific time specified as a <xref href="class_t_time.xml#class_t_time">TTime</xref>, or after an interval specified in microseconds.</p>
+			<p>The <xref href="class_c_active.xml#class_c_active_1a1562734d9d119b6ff24bc3aec793ce3d">RunL()</xref> virtual member function is called by the active scheduler after this event occurs.</p>
+			<p>To write a class derived from <xref href="class_c_timer.xml#class_c_timer">CTimer</xref>, first define and implement a constructor through which the priority of the <xref href="class_c_timer.xml#class_c_timer">CTimer</xref> active object can be specified. Then define and implement a suitable <xref href="class_c_active.xml#class_c_active_1a1562734d9d119b6ff24bc3aec793ce3d">RunL()</xref> function to handle the completion of a timer request. This function is not defined by <xref href="class_c_timer.xml#class_c_timer">CTimer</xref> itself and must, therefore, be provided by the derived class.</p>
+			<p>This class is ultimately implemented in terms of the nanokernel tick, and therefore the granularity of the generated events is limited to the period of this timer. This is variant specific, but is usually 1 millisecond.</p>
+			<p>Note that the <xref href="class_c_periodic.xml#class_c_periodic">CPeriodic</xref> and <xref href="class_c_heartbeat.xml#class_c_heartbeat">CHeartbeat</xref> classes are derived from <xref href="class_c_timer.xml#class_c_timer">CTimer</xref>, and answer most timing needs.</p>
+			<p>
+				<xref href="class_c_heartbeat.xml#class_c_heartbeat">CHeartbeat</xref> </p>
+			<p>
+				<xref href="class_c_periodic.xml#class_c_periodic">CPeriodic</xref> </p>
+			<p>
+				<xref href="class_c_heartbeat.xml#class_c_heartbeat">CHeartbeat</xref> </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_c_timer_1aba21a9f4b975acbd5bc9e6290e7d0925">
+		<apiName>~CTimer</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDestructor/>
+				<cxxFunctionDeclaredType>IMPORT_C</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CTimer</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C ~CTimer()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CTimer::~CTimer()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1935"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_timer_1a5a4c1a884c0fd0ce451f128584825c40">
+		<apiName>At</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CTimer</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void At(const TTime &amp;aTime)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CTimer::At(const TTime &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_time.xml#class_t_time">TTime</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aTime</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1936"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_timer_1a52674872da9b18b30a728fc7f6b0d2ad">
+		<apiName>AtUTC</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CTimer</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void AtUTC(const TTime &amp;aTimeInUTC)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CTimer::AtUTC(const TTime &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_time.xml#class_t_time">TTime</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aTimeInUTC</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1937"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_timer_1a183ea35d31e1c6e0c1907423d8692ce2">
+		<apiName>After</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CTimer</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void After(TTimeIntervalMicroSeconds32 anInterval)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CTimer::After(TTimeIntervalMicroSeconds32)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_time_interval_micro_seconds32.xml#class_t_time_interval_micro_seconds32">TTimeIntervalMicroSeconds32</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anInterval</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1938"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_timer_1abb77357f6ab909668358dadf022af58a">
+		<apiName>Lock</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CTimer</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Lock(TTimerLockSpec aLock)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CTimer::Lock(TTimerLockSpec)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1aa4d2ca9a47063ef29c53800b9537e82c">TTimerLockSpec</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLock</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1939"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_timer_1a3f524bf66473cc627f102c0990d478a5">
+		<apiName>Inactivity</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CTimer</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Inactivity(TTimeIntervalSeconds aSeconds)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CTimer::Inactivity(TTimeIntervalSeconds)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_time_interval_seconds.xml#class_t_time_interval_seconds">TTimeIntervalSeconds</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSeconds</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1940"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_timer_1a25aec5f810324958bc27f4399a55303e">
+		<apiName>HighRes</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CTimer</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void HighRes(TTimeIntervalMicroSeconds32 aInterval)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CTimer::HighRes(TTimeIntervalMicroSeconds32)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_time_interval_micro_seconds32.xml#class_t_time_interval_micro_seconds32">TTimeIntervalMicroSeconds32</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aInterval</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1941"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_timer_1a8c690d94750a3fbc0b5ed7f1abe32e41">
+		<apiName>CTimer</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType>IMPORT_C</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CTimer</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C CTimer(TInt aPriority)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CTimer::CTimer(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPriority</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1943"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_timer_1ada3caefd57182489e9027e79f7176571">
+		<apiName>ConstructL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CTimer</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void ConstructL()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CTimer::ConstructL()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1944"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_timer_1a10ac3be9d71f49d0f32c104544b0084f">
+		<apiName>DoCancel</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionVirtual/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CTimer</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void DoCancel()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CTimer::DoCancel()</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_c_active.xml#class_c_active_1abca693565d1f15ef883f32d534fba261">CActive::DoCancel()</cxxFunctionReimplemented>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1945"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Implements cancellation of an outstanding request.</p>
+				<p>This function is called as part of the active object&apos;s <xref href="class_c_active.xml#class_c_active_1a97781da8872ba6e86b5b83ad7170eb90">Cancel()</xref>.</p>
+				<p>It must call the appropriate cancel function offered by the active object&apos;s asynchronous service provider. The asynchronous service provider&apos;s cancel is expected to act immediately.</p>
+				<p>
+					<xref href="class_c_timer.xml#class_c_timer_1a10ac3be9d71f49d0f32c104544b0084f">DoCancel()</xref> must not wait for event completion; this is handled by <xref href="class_c_active.xml#class_c_active_1a97781da8872ba6e86b5b83ad7170eb90">Cancel()</xref>.</p>
+				<p>
+					<xref href="class_c_active.xml#class_c_active_1a97781da8872ba6e86b5b83ad7170eb90">CActive::Cancel</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxVariable id="class_c_timer_1aca7cf069e45ec40adcc83f927d473311">
+		<apiName>iTimer</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="class_r_timer.xml#class_r_timer">RTimer</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>CTimer</cxxVariableScopedName>
+				<cxxVariablePrototype>RTimer iTimer</cxxVariablePrototype>
+				<cxxVariableNameLookup>CTimer::iTimer</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1947"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxClassInherits>
+		<cxxClassInheritsDetail>
+			<cxxClassFunctionInherited href="class_c_timer.xml#class_c_active_1acfaa5bb1a4cda9d586f0ffaf2b0a0eb7">CActive::CActive(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_timer.xml#class_c_active_1a97781da8872ba6e86b5b83ad7170eb90">CActive::Cancel()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_timer.xml#class_c_active_1a44f0f5a2867d153feab11ee669d33b8d">CActive::Deque()</cxxClassFunctionInherited>
+			<cxxClassEnumeratorInherited href="class_c_timer.xml#class_c_active_1a378cd39842666e0a9b5f2fc089375f35ac59ba0db48385ddf49262e21f2a599b3">CActive::EPriorityHigh</cxxClassEnumeratorInherited>
+			<cxxClassEnumeratorInherited href="class_c_timer.xml#class_c_active_1a378cd39842666e0a9b5f2fc089375f35a5faa05021b83e97f1a5b00917aa34733">CActive::EPriorityIdle</cxxClassEnumeratorInherited>
+			<cxxClassEnumeratorInherited href="class_c_timer.xml#class_c_active_1a378cd39842666e0a9b5f2fc089375f35ac074efb2a15cd04c06d354fb1fd13f27">CActive::EPriorityLow</cxxClassEnumeratorInherited>
+			<cxxClassEnumeratorInherited href="class_c_timer.xml#class_c_active_1a378cd39842666e0a9b5f2fc089375f35ad19560103adbae4fa3eeca42c703e00b">CActive::EPriorityStandard</cxxClassEnumeratorInherited>
+			<cxxClassEnumeratorInherited href="class_c_timer.xml#class_c_active_1a378cd39842666e0a9b5f2fc089375f35ac4fc6edcb2aea0b20ab823f1017d788a">CActive::EPriorityUserInput</cxxClassEnumeratorInherited>
+			<cxxClassFunctionInherited href="class_c_timer.xml#class_c_active_1a098237f668ebdf6e5125a2deac03323d">CActive::Extension_(TUint,TAny *&amp;,TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_timer.xml#class_c_active_1a6d1d16020878d00c3af277ad2b0866f5">CActive::IsActive()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_timer.xml#class_c_active_1a97d8e693eb6f85ca883dbb385650ca28">CActive::IsAdded()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_timer.xml#class_c_active_1acb9ff1d90fbcb96058e2947c3f05c8e8">CActive::Priority()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_timer.xml#class_c_active_1af7a68e3e7ac05c01a9e22dd81393f834">CActive::RunError(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_timer.xml#class_c_active_1a1562734d9d119b6ff24bc3aec793ce3d">CActive::RunL()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_timer.xml#class_c_active_1a511d5a8dc1d43eca953eb5c69b0e022d">CActive::SetActive()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_timer.xml#class_c_active_1a0d7c2ce1a5364daadef07b1020c9714f">CActive::SetPriority(TInt)</cxxClassFunctionInherited>
+			<cxxClassVariableInherited href="class_c_timer.xml#class_c_active_1a38314f150856c0f369555b0ef17c3140">CActive::iStatus</cxxClassVariableInherited>
+			<cxxClassFunctionInherited href="class_c_timer.xml#class_c_active_1a81e8cc3a48d5d6f56c502690f9969ef8">CActive::~CActive()</cxxClassFunctionInherited>
+			<cxxClassEnumerationInherited href="class_c_timer.xml#class_c_active_1a378cd39842666e0a9b5f2fc089375f35">CActive:TPriority</cxxClassEnumerationInherited>
+			<cxxClassFunctionInherited href="class_c_timer.xml#class_c_base_1a240de7932690a4e987d75690b0b6f82b">CBase::CBase()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_timer.xml#class_c_base_1ac0a06aeab68b3e01be81f9dd79e011c6">CBase::Delete(CBase *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_timer.xml#class_c_base_1af4c4965092a763b0856ccbfa3cf99eaf">CBase::operator new(TUint)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_timer.xml#class_c_base_1ab9e5f557dea4db22886189926687ddc1">CBase::operator new(TUint,TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_timer.xml#class_c_base_1aa464dd21494443ac109084ed03b81f28">CBase::operator new(TUint,TLeave)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_timer.xml#class_c_base_1af8429815362d4df6fecd47179e0c5dfe">CBase::operator new(TUint,TLeave,TUint)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_timer.xml#class_c_base_1a80505bdf8b1b20a2ed102307a78eeeeb">CBase::operator new(TUint,TUint)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_timer.xml#class_c_base_1a1390361b94424be22bb2b1020eb400ea">CBase::~CBase()</cxxClassFunctionInherited>
+		</cxxClassInheritsDetail>
+	</cxxClassInherits>
+</cxxClass>

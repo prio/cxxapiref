@@ -1,0 +1,2057 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_r_file64">
+	<apiName>RFile64</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassDerivations>
+				<cxxClassDerivation>
+					<cxxClassDerivationAccessSpecifier value="public"/>
+					<cxxClassBaseClass href="class_r_file.xml#class_r_file">RFile</cxxClassBaseClass>
+				</cxxClassDerivation>
+			</cxxClassDerivations>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/f32file64.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="85"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/f32file64.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="84"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="162"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>Creates and opens a file, and performs all operations on a single open file.</p>
+			<p>This is equivalent to <xref href="class_r_file.xml#class_r_file">RFile</xref> class. This class is meant for accessing files of size greater than or equal to 2GB also.</p>
+			<p>These include:</p>
+			<p>
+				<ul>
+					<li>
+						<p>reading from and writing to the file</p>
+					</li>
+				</ul>
+			</p>
+			<p>
+				<ul>
+					<li>
+						<p>seeking to a position within the file</p>
+					</li>
+				</ul>
+			</p>
+			<p>
+				<ul>
+					<li>
+						<p>locking and unlocking within the file</p>
+					</li>
+				</ul>
+			</p>
+			<p>
+				<ul>
+					<li>
+						<p>setting file attributes</p>
+					</li>
+				</ul>
+			</p>
+			<p>Before using any of these services, a connection to a file server session must have been made, and the file must be open.</p>
+			<p>Opening Files:</p>
+			<p>
+				<ul>
+					<li>
+						<p>use <xref href="class_r_file64.xml#class_r_file64_1a4b7b8f146fbe11c30cc1b6d64c709b20">Open()</xref> to open an existing file for reading or writing; an error is returned if it does not already exist. To open an existing file for reading only, use <xref href="class_r_file64.xml#class_r_file64_1a4b7b8f146fbe11c30cc1b6d64c709b20">Open()</xref> with an access mode of EFileRead, and a share mode of EFileShareReadersOnly.</p>
+					</li>
+				</ul>
+			</p>
+			<p>
+				<ul>
+					<li>
+						<p>use <xref href="class_r_file64.xml#class_r_file64_1ab7169c7ea557afd19a5c1e860d7dc457">Create()</xref> to create and open a new file for writing; an error is returned if it already exists.</p>
+					</li>
+				</ul>
+			</p>
+			<p>
+				<ul>
+					<li>
+						<p>use <xref href="class_r_file64.xml#class_r_file64_1af04c0d73c447fe1e23940606cb766252">Replace()</xref> to open a file for writing, replacing any existing file of the same name if one exists, or creating a new file if one does not exist. Note that if a file exists, its length is reset to zero.</p>
+					</li>
+				</ul>
+			</p>
+			<p>
+				<ul>
+					<li>
+						<p>use <xref href="class_r_file64.xml#class_r_file64_1a4f9a0e2b4a2f233cd4905ed08948fe7e">Temp()</xref> to create and open a temporary file with a unique name, for writing and reading.</p>
+					</li>
+				</ul>
+			</p>
+			<p>When opening a file, you must specify the file server session to use for operations with that file. If you do not close the file explicitly, it is closed when the server session associated with it is closed.</p>
+			<p>Reading and Writing:</p>
+			<p>There are several variants of both <xref href="class_r_file64.xml#class_r_file64_1af1b7d73c7bff1091c473c1eb7030941a">Read()</xref> and <xref href="class_r_file64.xml#class_r_file64_1a9a25107ef616fcd79e4ebc05ec5b4c30">Write()</xref>. The basic Read(TDes8&amp; aDes) and <xref href="class_r_file64.xml#class_r_file64_1a9a25107ef616fcd79e4ebc05ec5b4c30">Write(const TDesC8&amp; aDes)</xref> are supplemented by variants allowing the descriptor length to be overridden, or the seek position of the first byte to be specified, or asynchronous completion, or any combination.</p>
+			<p>Reading transfers data from a file to a descriptor, and writing transfers data from a descriptor to a file. In all cases, the file data is treated as binary and byte descriptors are used (<xref href="class_t_des8.xml#class_t_des8">TDes8</xref>, <xref href="class_t_des_c8.xml#class_t_des_c8">TDesC8</xref>).</p>
+			<p>
+				<xref href="class_r_file.xml#class_r_file">RFile</xref> </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_r_file64_1a4b7b8f146fbe11c30cc1b6d64c709b20">
+		<apiName>Open</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile64</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C TInt Open(RFs &amp;aFs, const TDesC &amp;aName, TUint aFileMode)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile64::Open(RFs &amp;,const TDesC &amp;,TUint)</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_r_file.xml#class_r_file_1a5ea6f42ebdd3cb7085f63c983a2f7011">RFile::Open(RFs &amp;,const TDesC &amp;,TUint)</cxxFunctionReimplemented>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_fs.xml#class_r_fs">RFs</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFs</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aName</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFileMode</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file64.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="87"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file64_1ab7169c7ea557afd19a5c1e860d7dc457">
+		<apiName>Create</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile64</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C TInt Create(RFs &amp;aFs, const TDesC &amp;aName, TUint aFileMode)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile64::Create(RFs &amp;,const TDesC &amp;,TUint)</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_r_file.xml#class_r_file_1ad6cbbefad4a24ec2aacee39d3ae5150d">RFile::Create(RFs &amp;,const TDesC &amp;,TUint)</cxxFunctionReimplemented>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_fs.xml#class_r_fs">RFs</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFs</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aName</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFileMode</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file64.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="88"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file64_1af04c0d73c447fe1e23940606cb766252">
+		<apiName>Replace</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile64</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C TInt Replace(RFs &amp;aFs, const TDesC &amp;aName, TUint aFileMode)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile64::Replace(RFs &amp;,const TDesC &amp;,TUint)</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_r_file.xml#class_r_file_1ad17f25893b5bbe3d89ba6b45c73d9cea">RFile::Replace(RFs &amp;,const TDesC &amp;,TUint)</cxxFunctionReimplemented>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_fs.xml#class_r_fs">RFs</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFs</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aName</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFileMode</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file64.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="89"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file64_1a4f9a0e2b4a2f233cd4905ed08948fe7e">
+		<apiName>Temp</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile64</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C TInt Temp(RFs &amp;aFs, const TDesC &amp;aPath, TFileName &amp;aName, TUint aFileMode)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile64::Temp(RFs &amp;,const TDesC &amp;,TFileName &amp;,TUint)</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_r_file.xml#class_r_file_1ac7a014b78a34dc2c2d829df4dd48a312">RFile::Temp(RFs &amp;,const TDesC &amp;,TFileName &amp;,TUint)</cxxFunctionReimplemented>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_fs.xml#class_r_fs">RFs</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFs</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPath</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_buf.xml#class_t_buf">TFileName</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aName</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFileMode</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file64.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="90"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file64_1a3704904210f1a3624d57936131f89196">
+		<apiName>AdoptFromClient</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile64</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C TInt AdoptFromClient(const RMessage2 &amp;aMsg, TInt aFsIndex, TInt aFileIndex)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile64::AdoptFromClient(const RMessage2 &amp;,TInt,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_r_file.xml#class_r_file_1a8f1decf496392036483790d631d5f9ea">RFile::AdoptFromClient(const RMessage2 &amp;,TInt,TInt)</cxxFunctionReimplemented>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_r_message2.xml#class_r_message2">RMessage2</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMsg</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFsIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFileIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file64.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="92"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file64_1a1f90c8fbac2b1553ad8c19cbf9445a04">
+		<apiName>AdoptFromServer</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile64</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C TInt AdoptFromServer(TInt aFsHandle, TInt aFileHandle)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile64::AdoptFromServer(TInt,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_r_file.xml#class_r_file_1a692ad16dd88c8ae064ab671c05b17c26">RFile::AdoptFromServer(TInt,TInt)</cxxFunctionReimplemented>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFsHandle</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFileHandle</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file64.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="93"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file64_1a7be5ec46419170c7f71f32f17ba97577">
+		<apiName>AdoptFromCreator</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile64</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C TInt AdoptFromCreator(TInt aFsIndex, TInt aFileHandleIndex)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile64::AdoptFromCreator(TInt,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_r_file.xml#class_r_file_1a49c185c982a54cdda4514bfe274023dd">RFile::AdoptFromCreator(TInt,TInt)</cxxFunctionReimplemented>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFsIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFileHandleIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file64.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="94"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file64_1af1b7d73c7bff1091c473c1eb7030941a">
+		<apiName>Read</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile64</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt Read(TDes8 &amp;aDes) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile64::Read(TDes8 &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_r_file.xml#class_r_file_1ace99f7a653da96db40499d022dda127e">RFile::Read(TDes8 &amp;)const</cxxFunctionReimplemented>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Descriptor into which binary data is read. Any existing contents are overwritten. On return, its length is set to the number of bytes read. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file64.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="96"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="39"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="40"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Reads from the file at the current position.</p>
+				<p>This is a synchronous function.</p>
+				<p>Note that when an attempt is made to read beyond the end of the file, no error is returned. The descriptor&apos;s length is set to the number of bytes read into it. Therefore, when reading through a file,the end of file has been reached when the descriptor length, as returned by <xref href="class_t_des_c8.xml#class_t_des_c8_1a9790499cbe5ab4425c744530ef139d0c">TDesC8::Length()</xref>, is zero.</p>
+				<p>KErrNone if successful, otherwise one of the other system-wide error codes.</p>
+				<p>
+					<xref href="class_t_des_c8.xml#class_t_des_c8_1a9790499cbe5ab4425c744530ef139d0c">TDesC8::Length</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file64_1af5c08eacdc1ab633b20e13a1d23bcb54">
+		<apiName>Read</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile64</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void Read(TDes8 &amp;aDes, TRequestStatus &amp;aStatus) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile64::Read(TDes8 &amp;,TRequestStatus &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_r_file.xml#class_r_file_1a2340bec833c8e11a60ea10fe898b3afe">RFile::Read(TDes8 &amp;,TRequestStatus &amp;)const</cxxFunctionReimplemented>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Descriptor into which binary data is read. Any existing contents are overwritten. On return, its length is set to the number of bytes read. NB: this function is asynchronous and the request that it represents may not complete until some time after the call to the function has returned. It is important, therefore, that this descriptor remain valid, or remain in scope, until you have been notified that the request is complete.</apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Request status. On completion contains: KErrNone, if successful, otherwise one of the other system-wide error codes.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file64.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="97"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="67"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="68"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Reads from the file at the current position.</p>
+				<p>This is an asynchronous function.</p>
+				<p>Note that when an attempt is made to read beyond the end of the file, no error is returned. The descriptor&apos;s length is set to the number of bytes read into it. Therefore, when reading through a file,the end of file has been reached when the descriptor length, as returned by <xref href="class_t_des_c8.xml#class_t_des_c8_1a9790499cbe5ab4425c744530ef139d0c">TDesC8::Length()</xref>, is zero.</p>
+				<p>
+					<xref href="class_t_des_c8.xml#class_t_des_c8_1a9790499cbe5ab4425c744530ef139d0c">TDesC8::Length</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file64_1a55984aeea536397efb71dbbb96d796a3">
+		<apiName>Read</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile64</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt Read(TDes8 &amp;aDes, TInt aLength) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile64::Read(TDes8 &amp;,TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_r_file.xml#class_r_file_1aa1c8c093d805b9afb3839172709d6eaf">RFile::Read(TDes8 &amp;,TInt)const</cxxFunctionReimplemented>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Descriptor into which binary data is read. Any existing contents are overwritten. On return, its length is set to the number of bytes read.</apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The number of bytes to be read from the file into the descriptor. If an attempt is made to read more bytes than the descriptor&apos;s maximum length, the function returns KErrOverflow. This value must not be negative, otherwise the function returns KErrArgument.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file64.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="98"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="97"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="98"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Reads the specified number of bytes of binary data from the file at the current position.</p>
+				<p>This is a synchronous function.</p>
+				<p>Note that when an attempt is made to read beyond the end of the file, no error is returned. The descriptor&apos;s length is set to the number of bytes read into it. Therefore, when reading through a file,the end of file has been reached when the descriptor length, as returned by <xref href="class_t_des_c8.xml#class_t_des_c8_1a9790499cbe5ab4425c744530ef139d0c">TDesC8::Length()</xref>, is zero. Assuming aLength is less than the maximum length of the descriptor, the only circumstance in which <xref href="class_r_file64.xml#class_r_file64_1af1b7d73c7bff1091c473c1eb7030941a">Read()</xref> can return fewer bytes than requested, is when the end of file is reached or if an error occurs.</p>
+				<p>KErrNone if successful, otherwise one of the other system-wide error codes. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file64_1a36528b9be67067d6f99e5b929a633d52">
+		<apiName>Read</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile64</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void Read(TDes8 &amp;aDes, TInt aLength, TRequestStatus &amp;aStatus) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile64::Read(TDes8 &amp;,TInt,TRequestStatus &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_r_file.xml#class_r_file_1aca62417b23e02ec48c13e9b28b40d3e7">RFile::Read(TDes8 &amp;,TInt,TRequestStatus &amp;)const</cxxFunctionReimplemented>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Descriptor into which binary data is read. Any existing contents are overwritten. On return, its length is set to the number of bytes read. NB: this function is asynchronous and the request that it represents may not complete until some time after the call to the function has returned. It is important, therefore, that this descriptor remain valid, or remain in scope, until you have been notified that the request is complete.</apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The number of bytes to be read from the file into the descriptor. If an attempt is made to read more bytes than the descriptor&apos;s maximum length, then the function updates aStatus parameter with KErrOverflow. It must not be negative otherwise the function updates aStatus with KErrArgument.</apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Request status. On completion contains KErrNone if successful, otherwise one of the other system-wide error codes. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file64.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="99"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="131"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="132"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Reads a specified number of bytes of binary data from the file at the current position.</p>
+				<p>This is an asynchronous function.</p>
+				<p>Note that when an attempt is made to read beyond the end of the file, no error is returned. The descriptor&apos;s length is set to the number of bytes read into it. Therefore, when reading through a file, the end of file has been reached when the descriptor length, as returned by <xref href="class_t_des_c8.xml#class_t_des_c8_1a9790499cbe5ab4425c744530ef139d0c">TDesC8::Length()</xref>, is zero. Assuming aLength is less than the maximum length of the descriptor, the only circumstances in which <xref href="class_r_file64.xml#class_r_file64_1af1b7d73c7bff1091c473c1eb7030941a">Read()</xref> can return fewer bytes than requested is when the end of file is reached or if an error has occurred.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file64_1a7502b11c3832c7d66ffcc7a8963c40e9">
+		<apiName>Read</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile64</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C TInt Read(TInt64 aPos, TDes8 &amp;aDes) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile64::Read(TInt64,TDes8 &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a05bf37b696038fef93385278ebf8ee16">TInt64</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPos</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file64.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="101"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file64_1ade15622b5ebf77b2abc50465c241a03c">
+		<apiName>Read</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile64</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C void Read(TInt64 aPos, TDes8 &amp;aDes, TRequestStatus &amp;aStatus) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile64::Read(TInt64,TDes8 &amp;,TRequestStatus &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a05bf37b696038fef93385278ebf8ee16">TInt64</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPos</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file64.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="102"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file64_1aeafbec656d7b12373fccecbbf2700cbc">
+		<apiName>Read</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile64</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C TInt Read(TInt64 aPos, TDes8 &amp;aDes, TInt aLength) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile64::Read(TInt64,TDes8 &amp;,TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a05bf37b696038fef93385278ebf8ee16">TInt64</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPos</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file64.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="103"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file64_1a3e351f98cecb1b5d4934c155b19a9542">
+		<apiName>Read</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile64</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C void Read(TInt64 aPos, TDes8 &amp;aDes, TInt aLength, TRequestStatus &amp;aStatus) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile64::Read(TInt64,TDes8 &amp;,TInt,TRequestStatus &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a05bf37b696038fef93385278ebf8ee16">TInt64</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPos</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file64.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="104"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file64_1a9a25107ef616fcd79e4ebc05ec5b4c30">
+		<apiName>Write</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile64</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt Write(const TDesC8 &amp;aDes)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile64::Write(const TDesC8 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_r_file.xml#class_r_file_1ada649c3e4c31f996191aee58043d4397">RFile::Write(const TDesC8 &amp;)</cxxFunctionReimplemented>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The descriptor from which binary data is written. The function writes the entire contents of aDes to the file.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file64.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="106"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="145"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="146"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Writes to the file at the current offset within the file.</p>
+				<p>This is a synchronous function.</p>
+				<p>KErrNone if successful, otherwise one of the other system-wide error codes. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file64_1a2937d5fc1f885d8d4fb3803f1c0796c3">
+		<apiName>Write</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile64</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void Write(const TDesC8 &amp;aDes, TRequestStatus &amp;aStatus)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile64::Write(const TDesC8 &amp;,TRequestStatus &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_r_file.xml#class_r_file_1ac0971d2dc457d03484d2592afe0414d3">RFile::Write(const TDesC8 &amp;,TRequestStatus &amp;)</cxxFunctionReimplemented>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The descriptor from which binary data is written. The function writes the entire contents of aDes to the file. NB: this function is asynchronous and the request that it represents may not complete until some time after the call to the function has returned. It is important, therefore, that this descriptor remain valid, or remain in scope, until you have been notified that the request is complete.</apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Request status. On completion contains KErrNone if successful, otherwise one of the other system-wide error codes. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file64.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="107"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="165"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="166"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Writes to the file at the current offset within the file.</p>
+				<p>This is an asynchronous function.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file64_1a7ffd6c5b9938a8db6fb5f09897f9b36a">
+		<apiName>Write</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile64</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt Write(const TDesC8 &amp;aDes, TInt aLength)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile64::Write(const TDesC8 &amp;,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_r_file.xml#class_r_file_1a92e63bfc633b7d16b96aa1bc91ce4951">RFile::Write(const TDesC8 &amp;,TInt)</cxxFunctionReimplemented>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The descriptor from which binary data is written. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The number of bytes to be written from the descriptor. This must not be greater than the length of the descriptor. It must not be negative.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file64.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="108"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="186"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="187"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Writes a portion of a descriptor to the file at the current offset within the file.</p>
+				<p>This is a synchronous function.</p>
+				<p>KErrNone if successful; KErrArgument if aLength is negative; otherwise one of the other system-wide error codes.</p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>FSCLIENT 27 in debug mode, if aLength is greater than the length of the descriptor aDes. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file64_1ade6b625788890ccf41ea82b6afa67e1f">
+		<apiName>Write</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile64</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void Write(const TDesC8 &amp;aDes, TInt aLength, TRequestStatus &amp;aStatus)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile64::Write(const TDesC8 &amp;,TInt,TRequestStatus &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_r_file.xml#class_r_file_1acee50ffe9232ce6eb6dc7fc3e4ee1d3c">RFile::Write(const TDesC8 &amp;,TInt,TRequestStatus &amp;)</cxxFunctionReimplemented>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The descriptor from which binary data is written. NB: this function is asynchronous and the request that it represents may not complete until some time after the call to the function has returned. It is important, therefore, that this descriptor remain valid, or remain in scope, until you have been notified that the request is complete.</apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The number of bytes to be written from the descriptor. This must not be greater than the length of the descriptor. It must not be negative.</apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Request status. On completion contains KErrNone if successful; KErrArgument if aLength is negative; otherwise one of the other system-wide error codes. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file64.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="109"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="211"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="212"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Writes a portion of a descriptor to the file at the current offset within the file.</p>
+				<p>This is an asynchronous function.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file64_1a09b47a4e8bd9a6661c0c4094aac29b59">
+		<apiName>Write</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile64</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C TInt Write(TInt64 aPos, const TDesC8 &amp;aDes)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile64::Write(TInt64,const TDesC8 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a05bf37b696038fef93385278ebf8ee16">TInt64</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPos</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file64.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="111"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file64_1aa6a95fcbff495f3418efaae87b9dacc0">
+		<apiName>Write</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile64</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C void Write(TInt64 aPos, const TDesC8 &amp;aDes, TRequestStatus &amp;aStatus)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile64::Write(TInt64,const TDesC8 &amp;,TRequestStatus &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a05bf37b696038fef93385278ebf8ee16">TInt64</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPos</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file64.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="112"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file64_1a09306f6d3532c2d002be2d28719a2642">
+		<apiName>Write</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile64</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C TInt Write(TInt64 aPos, const TDesC8 &amp;aDes, TInt aLength)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile64::Write(TInt64,const TDesC8 &amp;,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a05bf37b696038fef93385278ebf8ee16">TInt64</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPos</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file64.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="113"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file64_1a8dbde2f870fc6bfc9e02fe9715fc75c8">
+		<apiName>Write</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile64</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C void Write(TInt64 aPos, const TDesC8 &amp;aDes, TInt aLength, TRequestStatus &amp;aStatus)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile64::Write(TInt64,const TDesC8 &amp;,TInt,TRequestStatus &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a05bf37b696038fef93385278ebf8ee16">TInt64</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPos</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file64.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="114"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file64_1a3aed5cdabc1dc0664531facb0797b24f">
+		<apiName>Seek</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile64</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C TInt Seek(TSeek aMode, TInt64 &amp;aPos) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile64::Seek(TSeek,TInt64 &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="cs__subconn_8cpp.xml#_1ae775b30a51a2885b1d2af0b1ffdb8d78">TSeek</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMode</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a05bf37b696038fef93385278ebf8ee16">TInt64</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPos</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file64.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="116"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file64_1aaa37b5562b102b3cead11fc3c4dd6fe1">
+		<apiName>Size</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile64</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C TInt Size(TInt64 &amp;aSize) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile64::Size(TInt64 &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a05bf37b696038fef93385278ebf8ee16">TInt64</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSize</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file64.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="117"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file64_1a54e10c7f9cd5be588839a04f9a2d0a8b">
+		<apiName>SetSize</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile64</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C TInt SetSize(TInt64 aSize)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile64::SetSize(TInt64)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a05bf37b696038fef93385278ebf8ee16">TInt64</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSize</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file64.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="118"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file64_1adbd548ec89ddb17d0e70bf622de93a88">
+		<apiName>Lock</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile64</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C TInt Lock(TInt64 aPos, TInt64 aLength) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile64::Lock(TInt64,TInt64)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a05bf37b696038fef93385278ebf8ee16">TInt64</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPos</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a05bf37b696038fef93385278ebf8ee16">TInt64</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file64.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="119"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file64_1a0b6f7d6d1851fa9c80bfcbda5dcc6e4f">
+		<apiName>UnLock</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile64</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C TInt UnLock(TInt64 aPos, TInt64 aLength) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile64::UnLock(TInt64,TInt64)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a05bf37b696038fef93385278ebf8ee16">TInt64</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPos</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a05bf37b696038fef93385278ebf8ee16">TInt64</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file64.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="120"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file64_1ab0718e2d899f0c0a53e8ce07e1a50f02">
+		<apiName>Read</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile64</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C TInt Read(TUint aPos, TDes8 &amp;aDes) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile64::Read(TUint,TDes8 &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPos</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file64.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="130"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file64_1a27d01b371489fbd7a1aab269948c25db">
+		<apiName>Read</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile64</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C void Read(TUint aPos, TDes8 &amp;aDes, TRequestStatus &amp;aStatus) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile64::Read(TUint,TDes8 &amp;,TRequestStatus &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPos</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file64.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="131"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file64_1ae3e6e760cff0657a8683370302cec315">
+		<apiName>Read</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile64</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C TInt Read(TUint aPos, TDes8 &amp;aDes, TInt aLength) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile64::Read(TUint,TDes8 &amp;,TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPos</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file64.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="132"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file64_1a0af6aa3ffa1f50df22ab485948dae098">
+		<apiName>Read</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile64</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C void Read(TUint aPos, TDes8 &amp;aDes, TInt aLength, TRequestStatus &amp;aStatus) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile64::Read(TUint,TDes8 &amp;,TInt,TRequestStatus &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPos</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file64.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="133"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file64_1ab90c7f423ba4427cf846dcdbf7d44703">
+		<apiName>Write</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile64</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C TInt Write(TUint aPos, const TDesC8 &amp;aDes)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile64::Write(TUint,const TDesC8 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPos</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file64.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="135"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file64_1a2e487d438454231d2f5e6f450c317fca">
+		<apiName>Write</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile64</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C void Write(TUint aPos, const TDesC8 &amp;aDes, TRequestStatus &amp;aStatus)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile64::Write(TUint,const TDesC8 &amp;,TRequestStatus &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPos</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file64.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="136"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file64_1a55c118c28a7462664e19b2ca9b887acf">
+		<apiName>Write</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile64</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C TInt Write(TUint aPos, const TDesC8 &amp;aDes, TInt aLength)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile64::Write(TUint,const TDesC8 &amp;,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPos</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file64.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="137"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file64_1a546207bae1b1e20d6f286a3391fa9558">
+		<apiName>Write</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>EFSRV_IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile64</cxxFunctionScopedName>
+				<cxxFunctionPrototype>EFSRV_IMPORT_C void Write(TUint aPos, const TDesC8 &amp;aDes, TInt aLength, TRequestStatus &amp;aStatus)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile64::Write(TUint,const TDesC8 &amp;,TInt,TRequestStatus &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPos</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file64.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="138"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file64_1acffbab28b844d35ca4032f9476af147d">
+		<apiName>Read</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile64</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt Read(TInt aPos, TDes8 &amp;aDes) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile64::Read(TInt,TDes8 &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_r_file.xml#class_r_file_1af5e0cb92a94961f049d858ea4a7a61c2">RFile::Read(TInt,TDes8 &amp;)const</cxxFunctionReimplemented>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPos</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Position of first byte to be read. This is an offset from the start of the file. If no position is specified, reading begins at the current file position. If aPos is beyond the end of the file, the function returns a zero length descriptor.</apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The descriptor into which binary data is read. Any existing content is overwritten. On return, its length is set to the number of bytes read.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file64.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="148"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="254"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="255"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Reads from the file at the specified offset within the file</p>
+				<p>This is a synchronous function.</p>
+				<p>Note that when an attempt is made to read beyond the end of the file, no error is returned. The descriptor&apos;s length is set to the number of bytes read into it. Therefore, when reading through a file, the end of file has been reached when the descriptor length, as returned by <xref href="class_t_des_c8.xml#class_t_des_c8_1a9790499cbe5ab4425c744530ef139d0c">TDesC8::Length()</xref>, is zero.</p>
+				<p>Note: 1. This function over-rides the base class function <xref href="class_r_file.xml#class_r_file_1ace99f7a653da96db40499d022dda127e">RFile::Read</xref> and inlines the base class <xref href="class_r_file.xml#class_r_file_1ace99f7a653da96db40499d022dda127e">RFile::Read</xref>. 2. The difference is that this function can read beyond 2GB - 1 when aPos + length of aDes is beyond 2GB - 1. 3. This function is protected using _F32_STRICT_64_BIT_MIGRATION macro to help migration to 64 bit file addressing. When the macro is defined, this function becomes a private overload and hence use of TInt <xref href="class_r_file64.xml#class_r_file64_1a7502b11c3832c7d66ffcc7a8963c40e9">RFile64::Read(TInt64 aPos,TDes8&amp; aDes) const </xref>is recommended.</p>
+				<p>
+					<xref href="e32def_8h.xml#e32def_8h_1abb88f5378e8305d934297176fe5fa298">TInt</xref> <xref href="class_r_file.xml#class_r_file_1af5e0cb92a94961f049d858ea4a7a61c2">RFile::Read(TInt aPos,TDes8&amp; aDes) const</xref> </p>
+				<p>
+					<xref href="e32def_8h.xml#e32def_8h_1abb88f5378e8305d934297176fe5fa298">TInt</xref> <xref href="class_r_file64.xml#class_r_file64_1a7502b11c3832c7d66ffcc7a8963c40e9">RFile64::Read(TInt64 aPos,TDes8&amp; aDes) const</xref>
+				</p>
+				<p>KErrNone if successful, otherwise one of the other system-wide error codes.</p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>FSCLIENT 19 if aPos is negative. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file64_1a20cf36091278522bf8c90f1297c1e1b8">
+		<apiName>Read</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile64</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void Read(TInt aPos, TDes8 &amp;aDes, TRequestStatus &amp;aStatus) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile64::Read(TInt,TDes8 &amp;,TRequestStatus &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_r_file.xml#class_r_file_1a3ec527a9cba4c1f2141b3901a81339d4">RFile::Read(TInt,TDes8 &amp;,TRequestStatus &amp;)const</cxxFunctionReimplemented>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPos</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Position of first byte to be read. This is an offset from the start of the file. If no position is specified, reading begins at the current file position. If aPos is beyond the end of the file, the function returns a zero length descriptor.</apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The descriptor into which binary data is read. Any existing content is overwritten. On return, its length is set to the number of bytes read. NB: this function is asynchronous and the request that it represents may not complete until some time after the call to the function has returned. It is important, therefore, that this descriptor remain valid, or remain in scope, until you have been notified that the request is complete.</apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The request status. On completion, contains an error code of KErrNone if successful, otherwise one of the other system-wide error codes.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file64.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="149"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="301"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="302"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Reads from the file at the specified offset within the file.</p>
+				<p>This is an asynchronous function.</p>
+				<p>Note that when an attempt is made to read beyond the end of the file, no error is returned. The descriptor&apos;s length is set to the number of bytes read into it. Therefore, when reading through a file, the end of file has been reached when the descriptor length, as returned by <xref href="class_t_des_c8.xml#class_t_des_c8_1a9790499cbe5ab4425c744530ef139d0c">TDesC8::Length()</xref>, is zero.</p>
+				<p>Note: 1. This function over-rides the base class function <xref href="class_r_file.xml#class_r_file_1ace99f7a653da96db40499d022dda127e">RFile::Read</xref> and inlines the base class <xref href="class_r_file.xml#class_r_file_1ace99f7a653da96db40499d022dda127e">RFile::Read</xref>. 2. The difference is that this function can read beyond 2GB - 1 when aPos + length of aDes is beyond 2GB - 1. 3. This function is protected using _F32_STRICT_64_BIT_MIGRATION macro to help migration to 64 bit file addressing. When the macro is defined, this function becomes a private overload and hence use of void <xref href="class_r_file64.xml#class_r_file64_1ade15622b5ebf77b2abc50465c241a03c">RFile64::Read(TInt64 aPos,TDes8&amp; aDes,TRequestStatus&amp; aStatus) const </xref>is recommended.</p>
+				<p>void <xref href="class_r_file.xml#class_r_file_1a3ec527a9cba4c1f2141b3901a81339d4">RFile::Read(TInt aPos,TDes8&amp; aDes,TRequestStatus&amp; aStatus) const</xref> </p>
+				<p>void <xref href="class_r_file64.xml#class_r_file64_1ade15622b5ebf77b2abc50465c241a03c">RFile64::Read(TInt64 aPos,TDes8&amp; aDes,TRequestStatus&amp; aStatus) const</xref>
+				</p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>FSCLIENT 19 if aPos is negative. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file64_1a5ee5f00f8fa83600858dfff1dac69d70">
+		<apiName>Read</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile64</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt Read(TInt aPos, TDes8 &amp;aDes, TInt aLength) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile64::Read(TInt,TDes8 &amp;,TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_r_file.xml#class_r_file_1a8b7f18b44e7a8d31527940ccbffedac7">RFile::Read(TInt,TDes8 &amp;,TInt)const</cxxFunctionReimplemented>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPos</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Position of first byte to be read. This is an offset from the start of the file. If no position is specified, reading begins at the current file position. If aPos is beyond the end of the file, the function returns a zero length descriptor.</apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The descriptor into which binary data is read. Any existing contents are overwritten. On return, its length is set to the number of bytes read. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The number of bytes to read from the file into the descriptor. If an attempt is made to read more bytes than the descriptor&apos;s maximum length, then the function updates aStatus parameter with KErrOverflow. It must not be negative otherwise the function updates aStatus with KErrArgument.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file64.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="150"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="351"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="352"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Reads the specified number of bytes of binary data from the file at a specified offset within the file.</p>
+				<p>This is a synchronous function.</p>
+				<p>Note that when an attempt is made to read beyond the end of the file, no error is returned. The descriptor&apos;s length is set to the number of bytes read into it. Therefore, when reading through a file, the end of file has been reached when the descriptor length, as returned by <xref href="class_t_des_c8.xml#class_t_des_c8_1a9790499cbe5ab4425c744530ef139d0c">TDesC8::Length()</xref>, is zero. Assuming aLength is less than the maximum length of the descriptor, the only circumstances in which <xref href="class_r_file64.xml#class_r_file64_1af1b7d73c7bff1091c473c1eb7030941a">Read()</xref> can return fewer bytes than requested is when the end of file is reached or if an error has occurred.</p>
+				<p>Note: 1. This function over-rides the base class function <xref href="class_r_file.xml#class_r_file_1ace99f7a653da96db40499d022dda127e">RFile::Read</xref> and inlines the base class <xref href="class_r_file.xml#class_r_file_1ace99f7a653da96db40499d022dda127e">RFile::Read</xref>. 2. The difference is that this function can read beyond 2GB - 1 when aPos + aLength is beyond 2GB - 1. 3. This function is protected using _F32_STRICT_64_BIT_MIGRATION macro to help migration to 64 bit file addressing. When the macro is defined, this function becomes a private overload and hence use of TInt <xref href="class_r_file64.xml#class_r_file64_1aeafbec656d7b12373fccecbbf2700cbc">RFile64::Read(TInt64 aPos,TDes8&amp; aDes,TInt aLength) const </xref>is recommended.</p>
+				<p>
+					<xref href="e32def_8h.xml#e32def_8h_1abb88f5378e8305d934297176fe5fa298">TInt</xref> <xref href="class_r_file.xml#class_r_file_1a8b7f18b44e7a8d31527940ccbffedac7">RFile::Read(TInt aPos,TDes8&amp; aDes,TInt aLength) const</xref> </p>
+				<p>
+					<xref href="e32def_8h.xml#e32def_8h_1abb88f5378e8305d934297176fe5fa298">TInt</xref> <xref href="class_r_file64.xml#class_r_file64_1aeafbec656d7b12373fccecbbf2700cbc">RFile64::Read(TInt64 aPos,TDes8&amp; aDes,TInt aLength) const</xref>
+				</p>
+				<p>KErrNone if successful, otherwise one of the other system-wide error codes.</p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>FSCLIENT 19 if aPos is negative. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file64_1a14ab010df8e0a18d8e7cdb437783fbeb">
+		<apiName>Read</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile64</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void Read(TInt aPos, TDes8 &amp;aDes, TInt aLength, TRequestStatus &amp;aStatus) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile64::Read(TInt,TDes8 &amp;,TInt,TRequestStatus &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_r_file.xml#class_r_file_1ade4144d5b3e6f18b5aca2e18ef4df59c">RFile::Read(TInt,TDes8 &amp;,TInt,TRequestStatus &amp;)const</cxxFunctionReimplemented>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPos</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Position of first byte to be read. This is an offset from the start of the file. If no position is specified, reading begins at the current file position. If aPos is beyond the end of the file, the function returns a zero length descriptor.</apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The descriptor into which binary data is read. Any existing contents are overwritten. On return, its length is set to the number of bytes read. NB: this function is asynchronous and the request that it represents may not complete until some time after the call to the function has returned. It is important, therefore, that this descriptor remain valid, or remain in scope, until you have been notified that the request is complete.</apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The number of bytes to read from the file into the descriptor. If an attempt is made to read more bytes than the descriptor&apos;s maximum length, then the function returns KErrOverflow. It must not be negative otherwise the function returns KErrArgument.</apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Request status. On completion contains KErrNone if successful, otherwise one of the other system-wide error codes.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file64.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="151"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="408"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="409"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Reads the specified number of bytes of binary data from the file at a specified offset within the file.</p>
+				<p>This is an asynchronous function.</p>
+				<p>Note that when an attempt is made to read beyond the end of the file, no error is returned. The descriptor&apos;s length is set to the number of bytes read into it. Therefore, when reading through a file, the end of file has been reached when the descriptor length, as returned by <xref href="class_t_des_c8.xml#class_t_des_c8_1a9790499cbe5ab4425c744530ef139d0c">TDesC8::Length()</xref>, is zero. Assuming aLength is less than the maximum length of the descriptor, the only circumstances in which <xref href="class_r_file64.xml#class_r_file64_1af1b7d73c7bff1091c473c1eb7030941a">Read()</xref> can return fewer bytes than requested is when the end of file is reached or if an error has occurred.</p>
+				<p>Note: 1. This function over-rides the base class function <xref href="class_r_file.xml#class_r_file_1ace99f7a653da96db40499d022dda127e">RFile::Read</xref> and inlines the base class <xref href="class_r_file.xml#class_r_file_1ace99f7a653da96db40499d022dda127e">RFile::Read</xref>. 2. The difference is that this function can read beyond 2GB - 1 when aPos + aLength is beyond 2GB - 1. 3. This function is protected using _F32_STRICT_64_BIT_MIGRATION macro to help migration to 64 bit file addressing. When the macro is defined, this function becomes a private overload and hence use of void <xref href="class_r_file64.xml#class_r_file64_1a3e351f98cecb1b5d4934c155b19a9542">RFile64::Read(TInt64 aPos,TDes8&amp; aDes,TInt aLength,TRequestStatus&amp; aStatus) const </xref>is recommended.</p>
+				<p>void <xref href="class_r_file.xml#class_r_file_1ade4144d5b3e6f18b5aca2e18ef4df59c">RFile::Read(TInt aPos,TDes8&amp; aDes,TInt aLength,TRequestStatus&amp; aStatus) const</xref> </p>
+				<p>void <xref href="class_r_file64.xml#class_r_file64_1a3e351f98cecb1b5d4934c155b19a9542">RFile64::Read(TInt64 aPos,TDes8&amp; aDes,TInt aLength,TRequestStatus&amp; aStatus) const</xref>
+				</p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>FSCLIENT 19 if aPos is negative. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file64_1a8c8899ed1cc1f20c0fd3c420bad7b740">
+		<apiName>Write</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile64</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt Write(TInt aPos, const TDesC8 &amp;aDes)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile64::Write(TInt,const TDesC8 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_r_file.xml#class_r_file_1a99a7062cff9ac40a13103aef51f7d109">RFile::Write(TInt,const TDesC8 &amp;)</cxxFunctionReimplemented>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPos</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The offset from the start of the file at which the first byte is written. If a position beyond the end of the file is specified, then the write operation begins at the end of the file. If the position has been locked, then the write fails.</apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The descriptor from which binary data is written. The function writes the entire contents of aDes to the file.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file64.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="153"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="443"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="444"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Writes to the file at the specified offset within the file</p>
+				<p>This is a synchronous function.</p>
+				<p>Note: 1. This function over-rides the base class function <xref href="class_r_file.xml#class_r_file_1ada649c3e4c31f996191aee58043d4397">RFile::Write</xref> and inlines the base class <xref href="class_r_file.xml#class_r_file_1ada649c3e4c31f996191aee58043d4397">RFile::Write</xref>. 2. The difference is that this function can write beyond 2GB - 1 when aPos + length of aDes is beyond 2GB - 1. 3. This function is protected using _F32_STRICT_64_BIT_MIGRATION macro to help migration to 64 bit file addressing. When the macro is defined, this function becomes a private overload and hence use of TInt <xref href="class_r_file64.xml#class_r_file64_1a09b47a4e8bd9a6661c0c4094aac29b59">RFile64::Write(TInt64 aPos,const TDesC8&amp; aDes)</xref> is recommended.</p>
+				<p>
+					<xref href="e32def_8h.xml#e32def_8h_1abb88f5378e8305d934297176fe5fa298">TInt</xref> <xref href="class_r_file.xml#class_r_file_1a99a7062cff9ac40a13103aef51f7d109">RFile::Write(TInt aPos,const TDesC8&amp; aDes)</xref> </p>
+				<p>
+					<xref href="e32def_8h.xml#e32def_8h_1abb88f5378e8305d934297176fe5fa298">TInt</xref> <xref href="class_r_file64.xml#class_r_file64_1a09b47a4e8bd9a6661c0c4094aac29b59">RFile64::Write(TInt64 aPos,const TDesC8&amp; aDes)</xref>
+				</p>
+				<p>KErrNone if successful, otherwise one of the other system-wide error codes.</p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>FSCLIENT 19 if aPos is negative. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file64_1a53f8aa1f56e860df364d38dfc4cf71ac">
+		<apiName>Write</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile64</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void Write(TInt aPos, const TDesC8 &amp;aDes, TRequestStatus &amp;aStatus)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile64::Write(TInt,const TDesC8 &amp;,TRequestStatus &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_r_file.xml#class_r_file_1ac9ce0d79487427f888319fa72b6822e6">RFile::Write(TInt,const TDesC8 &amp;,TRequestStatus &amp;)</cxxFunctionReimplemented>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPos</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The offset from the start of the file at which the first byte is written. If a position beyond the end of the file is specified, then the write operation begins at the end of the file. If the position has been locked, then the write fails.</apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The descriptor from which binary data is written. The function writes the entire contents of aDes to the file. NB: this function is asynchronous and the request that it represents may not complete until some time after the call to the function has returned. It is important, therefore, that this descriptor remain valid, or remain in scope, until you have been notified that the request is complete.</apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Request status. On completion contains KErrNone if successful, otherwise one of the other system-wide error codes.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file64.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="154"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="483"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="484"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Writes to the file at the specified offset within the file</p>
+				<p>This is an asynchronous function.</p>
+				<p>Note: 1. This function over-rides the base class function <xref href="class_r_file.xml#class_r_file_1ada649c3e4c31f996191aee58043d4397">RFile::Write</xref> and inlines the base class <xref href="class_r_file.xml#class_r_file_1ada649c3e4c31f996191aee58043d4397">RFile::Write</xref>. 2. The difference is that this function can write beyond 2GB - 1 when aPos + length of aDes is beyond 2GB - 1. 3. This function is protected using _F32_STRICT_64_BIT_MIGRATION macro to help migration to 64 bit file addressing. When the macro is defined, this function becomes a private overload and hence use of void <xref href="class_r_file64.xml#class_r_file64_1aa6a95fcbff495f3418efaae87b9dacc0">RFile64::Write(TInt64 aPos,const TDesC8&amp; aDes,TRequestStatus&amp; aStatus)</xref> is recommended.</p>
+				<p>void <xref href="class_r_file.xml#class_r_file_1ac9ce0d79487427f888319fa72b6822e6">RFile::Write(TInt aPos,const TDesC8&amp; aDes,TRequestStatus&amp; aStatus)</xref> </p>
+				<p>void <xref href="class_r_file64.xml#class_r_file64_1aa6a95fcbff495f3418efaae87b9dacc0">RFile64::Write(TInt64 aPos,const TDesC8&amp; aDes,TRequestStatus&amp; aStatus)</xref>
+				</p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>FSCLIENT 19 if aPos is negative. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file64_1a0224934fb309cb7ebfcd8f506f389f5f">
+		<apiName>Write</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile64</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt Write(TInt aPos, const TDesC8 &amp;aDes, TInt aLength)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile64::Write(TInt,const TDesC8 &amp;,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_r_file.xml#class_r_file_1a813bee5d817be182d3088c1ed923f271">RFile::Write(TInt,const TDesC8 &amp;,TInt)</cxxFunctionReimplemented>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPos</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The offset from the start of the file at which the first byte is written. If a position beyond the end of the file is specified, then the write operation begins at the end of the file. If the position has been locked, then the write fails.</apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The descriptor from which binary data is written. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The number of bytes to be written from aDes . It must not be negative.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file64.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="155"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="519"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="520"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Writes the specified number of bytes to the file at the specified offset within the file.</p>
+				<p>This is a synchronous function.</p>
+				<p>Note: 1. This function over-rides the base class function <xref href="class_r_file.xml#class_r_file_1ada649c3e4c31f996191aee58043d4397">RFile::Write</xref> and inlines the base class <xref href="class_r_file.xml#class_r_file_1ada649c3e4c31f996191aee58043d4397">RFile::Write</xref>. 2. The difference is that this function can write beyond 2GB - 1 when aPos + aLength is beyond 2GB - 1. 3. This function is protected using _F32_STRICT_64_BIT_MIGRATION macro to help migration to 64 bit file addressing. When the macro is defined, this function becomes a private overload and hence use of TInt <xref href="class_r_file64.xml#class_r_file64_1a09306f6d3532c2d002be2d28719a2642">RFile64::Write(TInt64 aPos,const TDesC8&amp; aDes,TInt aLength)</xref> is recommended.</p>
+				<p>
+					<xref href="e32def_8h.xml#e32def_8h_1abb88f5378e8305d934297176fe5fa298">TInt</xref> <xref href="class_r_file.xml#class_r_file_1a813bee5d817be182d3088c1ed923f271">RFile::Write(TInt aPos,const TDesC8&amp; aDes,TInt aLength)</xref> </p>
+				<p>
+					<xref href="e32def_8h.xml#e32def_8h_1abb88f5378e8305d934297176fe5fa298">TInt</xref> <xref href="class_r_file64.xml#class_r_file64_1a09306f6d3532c2d002be2d28719a2642">RFile64::Write(TInt64 aPos,const TDesC8&amp; aDes,TInt aLength)</xref>
+				</p>
+				<p>KErrNone if successful; KErrArgument if aLength is negative; otherwise one of the other system-wide error codes.</p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>FSCLIENT 19 if aPos is negative. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file64_1a4eefc605075c3a2744a11c1626b3b5ca">
+		<apiName>Write</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile64</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void Write(TInt aPos, const TDesC8 &amp;aDes, TInt aLength, TRequestStatus &amp;aStatus)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile64::Write(TInt,const TDesC8 &amp;,TInt,TRequestStatus &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_r_file.xml#class_r_file_1a700d8e05853fe5f7345e5709c4930620">RFile::Write(TInt,const TDesC8 &amp;,TInt,TRequestStatus &amp;)</cxxFunctionReimplemented>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPos</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The offset from the start of the file at which the first byte is written. If a position beyond the end of the file is specified, then the write operation begins at the end of the file. If the position has been locked, then the write fails.</apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The descriptor from which binary data is written. NB: this function is asynchronous and the request that it represents may not complete until some time after the call to the function has returned. It is important, therefore, that this descriptor remain valid, or remain in scope, until you have been notified that the request is complete.</apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The number of bytes to be written from aDes. It must not be negative.</apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Request status. On completion contains KErrNone if successful; KErrArgument if aLength is negative; otherwise one of the other system-wide error codes.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file64.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="156"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="562"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="563"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Writes the specified number of bytes to the file at the specified offset within the file.</p>
+				<p>This is an asynchronous function.</p>
+				<p>Note: 1. This function over-rides the base class function <xref href="class_r_file.xml#class_r_file_1ada649c3e4c31f996191aee58043d4397">RFile::Write</xref> and inlines the base class <xref href="class_r_file.xml#class_r_file_1ada649c3e4c31f996191aee58043d4397">RFile::Write</xref>. 2. The difference is that this function can write beyond 2GB - 1 when aPos + aLength is beyond 2GB - 1. 3. This function is protected using _F32_STRICT_64_BIT_MIGRATION macro to help migration to 64 bit file addressing. When the macro is defined, this function becomes a private overload and hence use of void <xref href="class_r_file64.xml#class_r_file64_1aa6a95fcbff495f3418efaae87b9dacc0">RFile64::Write(TInt64 aPos,const TDesC8&amp; aDes,TRequestStatus&amp; aStatus)</xref> is recommended.</p>
+				<p>void <xref href="class_r_file.xml#class_r_file_1ac9ce0d79487427f888319fa72b6822e6">RFile::Write(TInt aPos,const TDesC8&amp; aDes,TRequestStatus&amp; aStatus)</xref> </p>
+				<p>void <xref href="class_r_file64.xml#class_r_file64_1aa6a95fcbff495f3418efaae87b9dacc0">RFile64::Write(TInt64 aPos,const TDesC8&amp; aDes,TRequestStatus&amp; aStatus)</xref>
+				</p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>FSCLIENT 19 if aPos is negative. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file64_1ae944c3769494cb0ef9dfccac4c492b92">
+		<apiName>Seek</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile64</cxxFunctionScopedName>
+				<cxxFunctionPrototype>TInt Seek(TSeek aMode, TInt &amp;aPos) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile64::Seek(TSeek,TInt &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_r_file.xml#class_r_file_1ade6a462548881f5617585ef9caac53b1">RFile::Seek(TSeek,TInt &amp;)const</cxxFunctionReimplemented>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="cs__subconn_8cpp.xml#_1ae775b30a51a2885b1d2af0b1ffdb8d78">TSeek</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMode</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPos</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file64.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="159"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_file64_1a6af4b85286bf564e5224c85029bcf163">
+		<apiName>Size</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFile64</cxxFunctionScopedName>
+				<cxxFunctionPrototype>TInt Size(TInt &amp;aSize) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFile64::Size(TInt &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_r_file.xml#class_r_file_1a7f42e943dee04257f4ac3f4edd189788">RFile::Size(TInt &amp;)const</cxxFunctionReimplemented>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSize</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file64.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="160"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxClassInherits>
+		<cxxClassInheritsDetail>
+			<cxxClassFunctionInherited href="class_r_file64.xml#class_r_file_1aff2b596fb08f1e86eae3a6414ef682d2">RFile::Adopt(RFs &amp;,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_file64.xml#class_r_file_1a7e7ebaad659609dac8108cf66c9a0583">RFile::Att(TUint &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_file64.xml#class_r_file_1a5a482df2647774e306f910ef9e9235af">RFile::BlockMap(SBlockMapInfo &amp;,TInt64 &amp;,TInt64,TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_file64.xml#class_r_file_1af2100784766b63f21466fde8fbb885d3">RFile::ChangeMode(TFileMode)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_file64.xml#class_r_file_1a9af3fd41eba9c1946203af983a420415">RFile::Clamp(RFileClamp &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_file64.xml#class_r_file_1a06bc10a37760e035809fd80f19afeec2">RFile::Close()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_file64.xml#class_r_file_1a7b716b93e32c71eaaf2da09e7715fd68">RFile::CloseSubSession(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_file64.xml#class_r_file_1abe840a374cc5b97cd53f7aa4d35cf4dd">RFile::CreateSubSession(const RSessionBase &amp;,TInt,const TIpcArgs &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_file64.xml#class_r_file_1a0578e732354cafd7f259c4e492504634">RFile::Drive(TInt &amp;,TDriveInfo &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_file64.xml#class_r_file_1ad6d02928bdf388874ca4fefda4c4484f">RFile::Duplicate(const RFile &amp;,TOwnerType)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_file64.xml#class_r_file_1a021ddb5a77481a775b7e2c550cfe14ba">RFile::DuplicateHandle(TInt &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_file64.xml#class_r_file_1a2da1504faa014c8e8e70b3313e1c5b8b">RFile::Flush()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_file64.xml#class_r_file_1a298458d173dbdd88affcce5782732ec5">RFile::Flush(TRequestStatus &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_file64.xml#class_r_file_1ae9c1037cf0bb7f45ad47cbc9da2ea430">RFile::FullName(TDes &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_file64.xml#class_r_file_1aceae1cef0d14853a21f20f436a439a52">RFile::Lock(TInt,TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_file64.xml#class_r_file_1a2b8a153d95863b93c595d1ff53fe771a">RFile::Modified(TTime &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_file64.xml#class_r_file_1afd0e91c346d6faa10ad78fa46bab418f">RFile::Name(TDes &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_file64.xml#class_r_file_1ada99cf901d46bc159b6b4e22b2e9b955">RFile::ReadCancel()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_file64.xml#class_r_file_1aeff4a25d9f9a444f54beea68e55857c3">RFile::ReadCancel(TRequestStatus &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_file64.xml#class_r_file_1a427e568d0f84b5caeadcaceb2933468e">RFile::Rename(const TDesC &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_file64.xml#class_r_file_1ab2489a0ac5784d68341e0b18f4b269af">RFile::SendReceive(TInt,const TIpcArgs &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_file64.xml#class_r_file_1a48be9e7dc0677ab3fa42ecb87af280d9">RFile::Set(const TTime &amp;,TUint,TUint)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_file64.xml#class_r_file_1a8ced58d134f4d5e642a28bc9c595b8a2">RFile::SetAtt(TUint,TUint)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_file64.xml#class_r_file_1a4421a89c243b2bbada26fb1d1c165593">RFile::SetModified(const TTime &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_file64.xml#class_r_file_1ad7a00013c06536a8b0b482b9720d2ca8">RFile::SetSize(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_file64.xml#class_r_file_1a7b3787f72e499c2308dab93c2e7fd584">RFile::TransferToClient(const RMessage2 &amp;,TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_file64.xml#class_r_file_1aab3817335bd802573062d94bc750e218">RFile::TransferToProcess(RProcess &amp;,TInt,TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_file64.xml#class_r_file_1a39771371096f488da67f04859a13993c">RFile::TransferToServer(TIpcArgs &amp;,TInt,TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_file64.xml#class_r_file_1a57c89e53491f2082fd601dc254ab8164">RFile::UnLock(TInt,TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_file64.xml#class_r_sub_session_base_1ae2da2f53114e1af7938db52291b0fecf">RSubSessionBase::CreateAutoCloseSubSession(RSessionBase &amp;,TInt,const TIpcArgs &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_file64.xml#class_r_sub_session_base_1a50e62f82ea5de8fd858e7a75c21c0930">RSubSessionBase::CreateSubSession(const RSessionBase &amp;,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_file64.xml#class_r_sub_session_base_1a6ecd5459966453b3a99ac3f99d97e1bc">RSubSessionBase::RSubSessionBase()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_file64.xml#class_r_sub_session_base_1ae855884063702416b6aa73c30263706b">RSubSessionBase::Send(TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_file64.xml#class_r_sub_session_base_1a1877065a894f19c8e75f076995e2b136">RSubSessionBase::Send(TInt,const TIpcArgs &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_file64.xml#class_r_sub_session_base_1a79a9c918d3d693edae2b91069339a6e4">RSubSessionBase::SendReceive(TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_file64.xml#class_r_sub_session_base_1a31d1b25a10b3cf364677f050ea1b3a10">RSubSessionBase::SendReceive(TInt,TRequestStatus &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_file64.xml#class_r_sub_session_base_1aa2f319884f3ea300a0a61c9788bb5d93">RSubSessionBase::SendReceive(TInt,const TIpcArgs &amp;,TRequestStatus &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_file64.xml#class_r_sub_session_base_1a1239f2d6b3c11eed6965602c114886fd">RSubSessionBase::Session()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_file64.xml#class_r_sub_session_base_1aabe5abe9803cadf198a0c429e2aa5f2e">RSubSessionBase::SubSessionHandle()const</cxxClassFunctionInherited>
+		</cxxClassInheritsDetail>
+	</cxxClassInherits>
+</cxxClass>

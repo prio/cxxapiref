@@ -1,0 +1,214 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_r_format">
+	<apiName>RFormat</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassDerivations>
+				<cxxClassDerivation>
+					<cxxClassDerivationAccessSpecifier value="public"/>
+					<cxxClassBaseClass href="class_r_sub_session_base.xml#class_r_sub_session_base">RSubSessionBase</cxxClassBaseClass>
+				</cxxClassDerivation>
+			</cxxClassDerivations>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="2446"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="2432"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="2453"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>Formats a device, one step at a time.</p>
+			<p>
+				<xref href="class_r_format.xml#class_r_format">RFormat</xref> must first be opened on a device before formatting each track using <xref href="class_r_format.xml#class_r_format_1a6ba18e475079d4a8688c3bd693ca43dd">Next()</xref>.</p>
+			<p>There is also an asynchronous version of <xref href="class_r_format.xml#class_r_format_1a6ba18e475079d4a8688c3bd693ca43dd">Next()</xref> which, if encapsulated into a suitable active object, can be used to implement a user-interruptible formatting process. </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_r_format_1ab2b2a52d749b13c1db18a26a756b33e9">
+		<apiName>Open</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFormat</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Open(RFs &amp;aFs, const TDesC &amp;aName, TUint aFormatMode, TInt &amp;aCount)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFormat::Open(RFs &amp;,const TDesC &amp;,TUint,TInt &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_fs.xml#class_r_fs">RFs</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFs</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aName</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFormatMode</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCount</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2448"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_format_1a00719d97d035b4e0dc63bea66ea046d3">
+		<apiName>Open</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFormat</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Open(RFs &amp;aFs, const TDesC &amp;aName, TUint aFormatMode, TInt &amp;aCount, const TDesC8 &amp;anInfo)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFormat::Open(RFs &amp;,const TDesC &amp;,TUint,TInt &amp;,const TDesC8 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_fs.xml#class_r_fs">RFs</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFs</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aName</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFormatMode</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCount</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anInfo</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2449"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_format_1a5a632a8eedc1eef8ad50d080d22bfcff">
+		<apiName>Close</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFormat</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Close()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFormat::Close()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2450"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_format_1a6ba18e475079d4a8688c3bd693ca43dd">
+		<apiName>Next</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFormat</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Next(TInt &amp;aStep)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFormat::Next(TInt &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStep</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2451"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_format_1a91056621098cfbc7ad5c58a5f6f7964f">
+		<apiName>Next</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RFormat</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Next(TPckgBuf&lt; TInt &gt; &amp;aStep, TRequestStatus &amp;aStatus)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RFormat::Next(TPckgBuf&lt; TInt &gt; &amp;,TRequestStatus &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_pckg_buf.xml#class_t_pckg_buf">TPckgBuf</apiRelation>&lt; <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation> &gt; &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStep</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2452"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxClassInherits>
+		<cxxClassInheritsDetail>
+			<cxxClassFunctionInherited href="class_r_format.xml#class_r_sub_session_base_1af9a75bd9f7400c9439e2f76f8d059d00">RSubSessionBase::CloseSubSession(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_format.xml#class_r_sub_session_base_1ae2da2f53114e1af7938db52291b0fecf">RSubSessionBase::CreateAutoCloseSubSession(RSessionBase &amp;,TInt,const TIpcArgs &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_format.xml#class_r_sub_session_base_1a50e62f82ea5de8fd858e7a75c21c0930">RSubSessionBase::CreateSubSession(const RSessionBase &amp;,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_format.xml#class_r_sub_session_base_1ac1adf58e7adde023baf0525baeb2a0ca">RSubSessionBase::CreateSubSession(const RSessionBase &amp;,TInt,const TIpcArgs &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_format.xml#class_r_sub_session_base_1a6ecd5459966453b3a99ac3f99d97e1bc">RSubSessionBase::RSubSessionBase()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_format.xml#class_r_sub_session_base_1ae855884063702416b6aa73c30263706b">RSubSessionBase::Send(TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_format.xml#class_r_sub_session_base_1a1877065a894f19c8e75f076995e2b136">RSubSessionBase::Send(TInt,const TIpcArgs &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_format.xml#class_r_sub_session_base_1a79a9c918d3d693edae2b91069339a6e4">RSubSessionBase::SendReceive(TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_format.xml#class_r_sub_session_base_1a31d1b25a10b3cf364677f050ea1b3a10">RSubSessionBase::SendReceive(TInt,TRequestStatus &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_format.xml#class_r_sub_session_base_1abfee930312ede77f6ee1a850be3e7ea5">RSubSessionBase::SendReceive(TInt,const TIpcArgs &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_format.xml#class_r_sub_session_base_1aa2f319884f3ea300a0a61c9788bb5d93">RSubSessionBase::SendReceive(TInt,const TIpcArgs &amp;,TRequestStatus &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_format.xml#class_r_sub_session_base_1a1239f2d6b3c11eed6965602c114886fd">RSubSessionBase::Session()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_format.xml#class_r_sub_session_base_1aabe5abe9803cadf198a0c429e2aa5f2e">RSubSessionBase::SubSessionHandle()const</cxxClassFunctionInherited>
+		</cxxClassInheritsDetail>
+	</cxxClassInherits>
+</cxxClass>

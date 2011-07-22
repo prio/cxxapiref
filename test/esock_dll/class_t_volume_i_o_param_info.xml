@@ -1,0 +1,160 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_t_volume_i_o_param_info">
+	<apiName>TVolumeIOParamInfo</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="699"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="698"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="767"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>Volume IO parameter information.</p>
+			<p>This class is used to return IO parameter information for a specified volume.</p>
+			<p>The volume parameter information holds recommended buffer sizes for the creation of efficient buffers for reading and writing.</p>
+			<p>
+				<xref href="class_r_fs.xml#class_r_fs_1a849717465a4ba12c2bf2c88361dc3bea">RFs::VolumeIOParam()</xref> </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxVariable id="class_t_volume_i_o_param_info_1a3593ba7f16a04b20f490b3e6f316ac61">
+		<apiName>iBlockSize</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TVolumeIOParamInfo</cxxVariableScopedName>
+				<cxxVariablePrototype>TInt iBlockSize</cxxVariablePrototype>
+				<cxxVariableNameLookup>TVolumeIOParamInfo::iBlockSize</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="712"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>The size of a block in bytes.</p>
+				<p>Reads and writes that are aligned on block boundaries are up to twice as fast as when mis-aligned.</p>
+				<p>Read and write operations on certain underlying media is done in blocks. A write operation that modifies only part of a block is less efficient, in general, than one that modifies an entire block. Data throughput degrades linearly for reads and writes in smaller sized units. </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_t_volume_i_o_param_info_1af0a03cb4b3dfbaffe78a7172c2db7eab">
+		<apiName>iClusterSize</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TVolumeIOParamInfo</cxxVariableScopedName>
+				<cxxVariablePrototype>TInt iClusterSize</cxxVariablePrototype>
+				<cxxVariableNameLookup>TVolumeIOParamInfo::iClusterSize</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="722"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>The size in bytes of a single disk cluster.</p>
+				<p>Read and write operations that are aligned on cluster boundaries are more efficient.</p>
+				<p>The file system organises and allocates the file data on the disk in clusters where each cluster is one or more blocks. Files that are not zero length occupy at least one cluster of the disk, so large numbers of very small files use up more disk space than expected. </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_t_volume_i_o_param_info_1a366a88621324ab38ecde48c68367e073">
+		<apiName>iRecReadBufSize</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TVolumeIOParamInfo</cxxVariableScopedName>
+				<cxxVariablePrototype>TInt iRecReadBufSize</cxxVariablePrototype>
+				<cxxVariableNameLookup>TVolumeIOParamInfo::iRecReadBufSize</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="737"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>The recommended buffer size for optimised reading performance.</p>
+				<p>The given buffer size is based on sensible benchmark testing results produced by the mobile device vendor. The buffer size is then added to the estart.txt file</p>
+				<p>The figure is included in the estart.txt file along with the drive number and the variable name. The example below shows the required format:</p>
+				<p>[DriveC] RecReadBufSize 8192</p>
+				<p>When no value is provided, value KErrNotSupported is returned. </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_t_volume_i_o_param_info_1a958888c1dbc6f0c18b653c5d65cefe61">
+		<apiName>iRecWriteBufSize</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TVolumeIOParamInfo</cxxVariableScopedName>
+				<cxxVariablePrototype>TInt iRecWriteBufSize</cxxVariablePrototype>
+				<cxxVariableNameLookup>TVolumeIOParamInfo::iRecWriteBufSize</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="752"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>The recommended buffer size for optimised writing performance.</p>
+				<p>The given buffer size is based on sensible benchmark testing results produced by the mobile device vendor. The buffer size is then added to the estart.txt file</p>
+				<p>The figure is included in the estart.txt file along with the drive number and the variable name. The example below shows the required format:</p>
+				<p>[DriveC] RecWriteBufSize 16384</p>
+				<p>When no value is provided, value KErrNotSupported is returned. </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_t_volume_i_o_param_info_1aad536a776cae8587e1fed1f69c9c12ec">
+		<apiName>iMaxSupportedFileSize</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1ab392502765df1d3a9263b05a43f882da">TUint64</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TVolumeIOParamInfo</cxxVariableScopedName>
+				<cxxVariablePrototype>TUint64 iMaxSupportedFileSize</cxxVariablePrototype>
+				<cxxVariableNameLookup>TVolumeIOParamInfo::iMaxSupportedFileSize</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="760"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>The maximum file size that is supported by the file system mounted on this volume. Not all file system may provide this parameter; The value KMaxTUint64 (0xffffffffffffffff) means that this particular file system hasn&apos;t provided this information. </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_t_volume_i_o_param_info_1a7deb57e3913c0bfd03ce1cd448bcf9fc">
+		<apiName>iReserved</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TVolumeIOParamInfo</cxxVariableScopedName>
+				<cxxVariablePrototype>TInt iReserved[2]</cxxVariablePrototype>
+				<cxxVariableNameLookup>TVolumeIOParamInfo::iReserved</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="766"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+</cxxClass>

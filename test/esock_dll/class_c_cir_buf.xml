@@ -1,0 +1,258 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_c_cir_buf">
+	<apiName>CCirBuf</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassDerivations>
+				<cxxClassDerivation>
+					<cxxClassDerivationAccessSpecifier value="public"/>
+					<cxxClassBaseClass href="class_c_cir_buf_base.xml#class_c_cir_buf_base">CCirBufBase</cxxClassBaseClass>
+				</cxxClassDerivation>
+			</cxxClassDerivations>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="1501"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="1493"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="1511"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>A circular buffer containing objects of a type defined by the template parameter. </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_c_cir_buf_1ad87edc208ef47cb71ac64ba23191d619">
+		<apiName>CCirBuf</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>CCirBuf</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline CCirBuf()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CCirBuf::CCirBuf()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1503"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="2494"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="2504"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Default C++ constructor.</p>
+				<p>The size of each object in the buffer is fixed and is the length of the class passed as the template parameter.</p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>E32USER-CBase 72, if the length of the template class is zero. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_cir_buf_1a0d9026fa427f89ef2239a3c72f66b222">
+		<apiName>Add</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CCirBuf</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt Add(const T *aPtr)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CCirBuf::Add(const T *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const T *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPtr</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A pointer to the object of type class T to be added to the circular buffer.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1507"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="2510"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="2527"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Adds a single object to the circular buffer.</p>
+				<p>The object is of type class T and is only added if there is space available.</p>
+				<p>1 if the object is successfully added. 0 if the object cannot be added because the circular buffer is full.</p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>E32USER-CBase 74, if a call to <xref href="class_c_cir_buf_base.xml#class_c_cir_buf_base_1aa1b3dddfbe351d2954747739da778b92">CCirBufBase::SetLengthL()</xref> has not been made before calling this function.</p>
+				<p>
+					<xref href="class_c_cir_buf_base.xml#class_c_cir_buf_base_1aa1b3dddfbe351d2954747739da778b92">CCirBufBase::SetLengthL</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_cir_buf_1ad9d0c0005dcbfc37faac7f83914f0bdb">
+		<apiName>Add</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CCirBuf</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt Add(const T *aPtr, TInt aCount)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CCirBuf::Add(const T *,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const T *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPtr</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A pointer to a set of contiguous objects of type class T to be added to the circular buffer.</apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCount</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The number of objects to be added to the circular buffer.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1508"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="2533"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="2554"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Adds multiple objects to the circular buffer.</p>
+				<p>The function attempts to add aCount objects of type class T. The objects are only added if there is space available.</p>
+				<p>The number of objects successfully added to the buffer. This value may be less than the number requested and can range from 0 to aCount.</p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>E32USER-CBase 74, if a call to <xref href="class_c_cir_buf_base.xml#class_c_cir_buf_base_1aa1b3dddfbe351d2954747739da778b92">CCirBufBase::SetLengthL()</xref> has not been made before calling this function. </p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>E32USER-CBase 75, if aCount is not a positive value.</p>
+				<p>
+					<xref href="class_c_cir_buf_base.xml#class_c_cir_buf_base_1aa1b3dddfbe351d2954747739da778b92">CCirBufBase::SetLengthL</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_cir_buf_1a7fe2de5b8ced2343a1ba1a09ac2a5bd3">
+		<apiName>Remove</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CCirBuf</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt Remove(T *aPtr)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CCirBuf::Remove(T *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>T *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPtr</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A pointer to an object of type class T supplied by the caller.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1509"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="2560"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="2573"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Removes a single object from the circular buffer.</p>
+				<p>An object can only be removed if there are objects in the buffer.</p>
+				<p>A binary copy of the object is made to aPtr.</p>
+				<p>1 if an object is successfully removed. 0 if an object cannot be removed because the circular buffer is empty. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_cir_buf_1a4a2d3adeb6b4013757cd2d255d923ac2">
+		<apiName>Remove</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CCirBuf</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt Remove(T *aPtr, TInt aCount)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CCirBuf::Remove(T *,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>T *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPtr</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A pointer to contiguous memory able to hold aCount class T objects, supplied by the caller.</apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCount</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The number of objects to be removed from the circular buffer.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1510"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="2579"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="2598"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Removes multiple objects from the circular buffer.</p>
+				<p>The function attempts to remove aCount objects of type class T. Objects can only be removed if there are objects in the buffer</p>
+				<p>A binary copy of the objects is made to aPtr.</p>
+				<p>The number of objects successfully removed from the buffer. This value may be less than the number requested, and can range from 0 to aCount.</p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>E32USER-CBase 76, if aCount is not a positive value. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxClassInherits>
+		<cxxClassInheritsDetail>
+			<cxxClassFunctionInherited href="class_c_cir_buf.xml#class_c_base_1a240de7932690a4e987d75690b0b6f82b">CBase::CBase()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_cir_buf.xml#class_c_base_1ac0a06aeab68b3e01be81f9dd79e011c6">CBase::Delete(CBase *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_cir_buf.xml#class_c_base_1aae681a54d9c9b10c7d42e7e32ff109d5">CBase::Extension_(TUint,TAny *&amp;,TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_cir_buf.xml#class_c_base_1af4c4965092a763b0856ccbfa3cf99eaf">CBase::operator new(TUint)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_cir_buf.xml#class_c_base_1ab9e5f557dea4db22886189926687ddc1">CBase::operator new(TUint,TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_cir_buf.xml#class_c_base_1aa464dd21494443ac109084ed03b81f28">CBase::operator new(TUint,TLeave)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_cir_buf.xml#class_c_base_1af8429815362d4df6fecd47179e0c5dfe">CBase::operator new(TUint,TLeave,TUint)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_cir_buf.xml#class_c_base_1a80505bdf8b1b20a2ed102307a78eeeeb">CBase::operator new(TUint,TUint)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_cir_buf.xml#class_c_base_1a1390361b94424be22bb2b1020eb400ea">CBase::~CBase()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_cir_buf.xml#class_c_cir_buf_base_1abf039404195ae8f517a27c1dce2fd33a">CCirBufBase::CCirBufBase(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_cir_buf.xml#class_c_cir_buf_base_1abc783542fabe03ec5b0be11755c34669">CCirBufBase::Count()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_cir_buf.xml#class_c_cir_buf_base_1a0ca477b1224ea712eeef31066a8e4436">CCirBufBase::DoAdd(const TUint8 *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_cir_buf.xml#class_c_cir_buf_base_1a502d57255658798ceead3a2842605a9a">CCirBufBase::DoAdd(const TUint8 *,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_cir_buf.xml#class_c_cir_buf_base_1a61fee9ee0108c24e608d932b47aa04f6">CCirBufBase::DoRemove(TUint8 *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_cir_buf.xml#class_c_cir_buf_base_1a4b734f277d4b052dda64ec067e98feeb">CCirBufBase::DoRemove(TUint8 *,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_cir_buf.xml#class_c_cir_buf_base_1ae40fab3826901f1f4c344f9f2a3a4aaa">CCirBufBase::Length()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_cir_buf.xml#class_c_cir_buf_base_1a025031636003e6d68522c5ee533f8b8f">CCirBufBase::Reset()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_cir_buf.xml#class_c_cir_buf_base_1aa1b3dddfbe351d2954747739da778b92">CCirBufBase::SetLengthL(TInt)</cxxClassFunctionInherited>
+			<cxxClassVariableInherited href="class_c_cir_buf.xml#class_c_cir_buf_base_1a03b093068c7884d20a899e6a6db5b16d">CCirBufBase::iCount</cxxClassVariableInherited>
+			<cxxClassVariableInherited href="class_c_cir_buf.xml#class_c_cir_buf_base_1a01a42ce9a8d5cd91127b921287ecb257">CCirBufBase::iHead</cxxClassVariableInherited>
+			<cxxClassVariableInherited href="class_c_cir_buf.xml#class_c_cir_buf_base_1ab02b1d91ac7cc7ac37676edcef826bf3">CCirBufBase::iLength</cxxClassVariableInherited>
+			<cxxClassVariableInherited href="class_c_cir_buf.xml#class_c_cir_buf_base_1aaa34f682f6d813b7e24bf1b8eb04a0ab">CCirBufBase::iPtr</cxxClassVariableInherited>
+			<cxxClassVariableInherited href="class_c_cir_buf.xml#class_c_cir_buf_base_1a4c56ff9cd10fb3e7619878fa7d70d484">CCirBufBase::iPtrE</cxxClassVariableInherited>
+			<cxxClassVariableInherited href="class_c_cir_buf.xml#class_c_cir_buf_base_1a7ef358c8db211bf4058dc9ebbf79f29d">CCirBufBase::iSize</cxxClassVariableInherited>
+			<cxxClassVariableInherited href="class_c_cir_buf.xml#class_c_cir_buf_base_1a4ff645fd19fe70d01abf3e5a02e75d31">CCirBufBase::iTail</cxxClassVariableInherited>
+			<cxxClassFunctionInherited href="class_c_cir_buf.xml#class_c_cir_buf_base_1a986956c2d1710e3482d51d03b5b69d24">CCirBufBase::~CCirBufBase()</cxxClassFunctionInherited>
+		</cxxClassInheritsDetail>
+	</cxxClassInherits>
+</cxxClass>

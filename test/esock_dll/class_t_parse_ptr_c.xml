@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_t_parse_ptr_c">
+	<apiName>TParsePtrC</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassDerivations>
+				<cxxClassDerivation>
+					<cxxClassDerivationAccessSpecifier value="public"/>
+					<cxxClassBaseClass href="class_t_parse_base.xml#class_t_parse_base">TParseBase</cxxClassBaseClass>
+				</cxxClassDerivation>
+			</cxxClassDerivations>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="1752"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="1733"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="1760"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>Parses, but cannot modify, filenames using less space on the stack than <xref href="class_t_parse.xml#class_t_parse">TParse</xref>.</p>
+			<p>Stores a reference to a filename, unlike <xref href="class_t_parse.xml#class_t_parse">TParse</xref>, which uses a 512 byte TFileName object as an internal buffer to store a copy of the filename. The filename&apos;s components (drive, path, etc.) can be retrieved using the functions provided by the base class, <xref href="class_t_parse_base.xml#class_t_parse_base">TParseBase</xref>. Note that because the filename cannot be modified through this class, the base class functions <xref href="class_t_parse_base.xml#class_t_parse_base_1a212b5bfd10c4bd1a5490ada94bae9dfa">PopDir()</xref> and <xref href="class_t_parse_base.xml#class_t_parse_base_1a40c858911df2e77ed52f3ad2250bb184">AddDir()</xref> cannot be called, because a panic will be raised.</p>
+			<p>
+				<xref href="class_t_parse.xml#class_t_parse">TParse</xref> </p>
+			<p>
+				<xref href="e32cmn_8h.xml#e32cmn_8h_1a72afe68dd91b1f19845cd42da728241f">TFileName</xref> </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_t_parse_ptr_c_1a2f33474138c0edfc541f32959d4ea7e3">
+		<apiName>TParsePtrC</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType>IMPORT_C</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TParsePtrC</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TParsePtrC(const TDesC &amp;aName)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TParsePtrC::TParsePtrC(const TDesC &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aName</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1754"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_parse_ptr_c_1aff09a693a4d03422a3ba6a42d3531ed9">
+		<apiName>NameBuf</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionVirtual/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_des16.xml#class_t_des16">TDes</apiRelation> &amp;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TParsePtrC</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TDes &amp; NameBuf()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TParsePtrC::NameBuf()</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_t_parse_base.xml#class_t_parse_base_1a0311e5c36fc152f9f4c016ca1b320360">TParseBase::NameBuf()</cxxFunctionReimplemented>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1756"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_parse_ptr_c_1a1518f7ebf77fee00b7f1d22f136a5e3f">
+		<apiName>NameBufC</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionConst/>
+				<cxxFunctionVirtual/>
+				<cxxFunctionDeclaredType>IMPORT_C const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC</apiRelation> &amp;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TParsePtrC</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C const TDesC &amp; NameBufC() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TParsePtrC::NameBufC()const</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_t_parse_base.xml#class_t_parse_base_1a3d8c2943893adca9aa699117985b7690">TParseBase::NameBufC()const</cxxFunctionReimplemented>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1757"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxVariable id="class_t_parse_ptr_c_1af810de982f174f0d9437bb13f084a8a7">
+		<apiName>iNameBuf</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="class_t_ptr_c16.xml#class_t_ptr_c16">TPtrC</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TParsePtrC</cxxVariableScopedName>
+				<cxxVariablePrototype>TPtrC iNameBuf</cxxVariablePrototype>
+				<cxxVariableNameLookup>TParsePtrC::iNameBuf</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1759"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxClassInherits>
+		<cxxClassInheritsDetail>
+			<cxxClassFunctionInherited href="class_t_parse_ptr_c.xml#class_t_parse_base_1a40c858911df2e77ed52f3ad2250bb184">TParseBase::AddDir(const TDesC &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_parse_ptr_c.xml#class_t_parse_base_1ac9320052bf096af786e9fcf84dfe6c75">TParseBase::Drive()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_parse_ptr_c.xml#class_t_parse_base_1a7c58d14c175b398766c02e72c20c82ff">TParseBase::DriveAndPath()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_parse_ptr_c.xml#class_t_parse_base_1a2909c6862741c9a6486aab0a5874e127">TParseBase::DrivePresent()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_parse_ptr_c.xml#class_t_parse_base_1ab2e6833687e155a0e2b2af6d92a2bace">TParseBase::Ext()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_parse_ptr_c.xml#class_t_parse_base_1aaf73a40557c0004e8f6fd82364fd51ef">TParseBase::ExtPresent()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_parse_ptr_c.xml#class_t_parse_base_1a74cd45934c4406044a03f35ea9141224">TParseBase::FullName()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_parse_ptr_c.xml#class_t_parse_base_1ad97d6bb5a428c9e6d792e347285f8be0">TParseBase::IsExtWild()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_parse_ptr_c.xml#class_t_parse_base_1a466ff89c8f8cb57faba6900c722143a1">TParseBase::IsKMatchAny()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_parse_ptr_c.xml#class_t_parse_base_1ae8adf0f577902feecda1ffeaf197f3e3">TParseBase::IsKMatchOne()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_parse_ptr_c.xml#class_t_parse_base_1af4ebb84f27ed4622b3bbfe804003e0d9">TParseBase::IsNameWild()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_parse_ptr_c.xml#class_t_parse_base_1add6dd840bb1f5b348d2b498d464d5583">TParseBase::IsRoot()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_parse_ptr_c.xml#class_t_parse_base_1ae5b727ddcc529c84998ec6527c233cbd">TParseBase::IsWild()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_parse_ptr_c.xml#class_t_parse_base_1a310fadf7f2842f3a06f563e1ea479f99">TParseBase::Name()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_parse_ptr_c.xml#class_t_parse_base_1ab1fb9f20bbd887ebc2a2594b4d1a00f4">TParseBase::NameAndExt()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_parse_ptr_c.xml#class_t_parse_base_1ab88a62f6b45384e85e22e672d91c20ff">TParseBase::NameOrExtPresent()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_parse_ptr_c.xml#class_t_parse_base_1abf79cc1fc2aa26b812bc3ef3ee132b39">TParseBase::NamePresent()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_parse_ptr_c.xml#class_t_parse_base_1a88ff45ee1aa0c912d42101fe05d3a099">TParseBase::Path()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_parse_ptr_c.xml#class_t_parse_base_1a0064c0de96b3608de7db7c8057dd0591">TParseBase::PathPresent()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_parse_ptr_c.xml#class_t_parse_base_1a212b5bfd10c4bd1a5490ada94bae9dfa">TParseBase::PopDir()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_parse_ptr_c.xml#class_t_parse_base_1aa5bada766c0d46ece7380f10c5f1fe5e">TParseBase::Set(const TDesC *,const TDesC *,const TDesC *,TBool)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_parse_ptr_c.xml#class_t_parse_base_1a9a9e5ef3553d0294410a61a7a2a346bb">TParseBase::TParseBase()</cxxClassFunctionInherited>
+			<cxxClassVariableInherited href="class_t_parse_ptr_c.xml#class_t_parse_base_1a16b8124b1deb42c3961c044c272984d3">TParseBase::iMod</cxxClassVariableInherited>
+		</cxxClassInheritsDetail>
+	</cxxClassInherits>
+</cxxClass>

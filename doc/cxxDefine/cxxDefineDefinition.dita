@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (c) 2011 Nokia Corporation and/or its subsidiary(-ies).
+All rights reserved.        
+        -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<reference id="cxxDefineDefinition" outputclass="element"
+xml:lang="en-us">
+<title>cxxDefineDefinition</title>
+<shortdesc>Contains child elements that provide a description of a
+preprocessor definition introduced through the #define directive.</shortdesc>
+<refbody>
+<section>             <title>Description</title>             <p>The
+&lt;cxxDefineDefinition> element is defined within &lt;cxxDefineDetail>.
+ It provides information about a preprocessor directive, such as the
+file where it is located, the fact that it is globally accessible
+(i.e. “public), and the name of preprocessor symbol that has been
+introduced.</p><?Pub Caret1?>         </section>
+<example>             <title>Example</title>             <codeblock
+>&lt;cxxDefineDefinition>
+    &lt;cxxDefinePrototype>#define ENABLE_NETWORKING_PERFMETRICS&lt;/cxxDefinePrototype>
+    &lt;cxxDefineNameLookup>ENABLE_NETWORKING_PERFMETRICS&lt;/cxxDefineNameLookup>
+    &lt;cxxDefineParameters/>
+    &lt;cxxDefineAPIItemLocation>
+        &lt;cxxDefineDeclarationFile name="filePath" value="C:/EPOC/master/sf/os/commsfw/src/cfperfmetrics.cpp"/>
+        &lt;cxxDefineDeclarationFileLine name="lineNumber" value="17"/>
+    &lt;/cxxDefineAPIItemLocation>
+&lt;/cxxDefineDefinition></codeblock>         </example>
+<section
+conref="../packagedef.dita#cxxDefineDefinition-reference/cxxDefineDefinition-containedBy-section"
+></section>
+<section
+conref="../packagedef.dita#cxxDefineDefinition-reference/cxxDefineDefinition-contains-section"
+></section>
+<section
+conref="../packagedef.dita#cxxDefineDefinition-reference/cxxDefineDefinition-contentModel-section"
+></section>
+<section
+conref="../packagedef.dita#cxxDefineDefinition-reference/cxxDefineDefinition-attList-section"
+></section>
+<section
+conref="../packagedef.dita#cxxDefineDefinition-reference/cxxDefineDefinition-classValue-section"
+></section>
+</refbody>
+</reference>
+<?Pub *0000002108?>

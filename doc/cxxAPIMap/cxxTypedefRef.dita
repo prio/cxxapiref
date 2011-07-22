@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (c) 2011 Nokia Corporation and/or its subsidiary(-ies).
+All rights reserved.		
+		-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference xml:lang="en-us" outputclass="element" id="cxxTypedefRef">
+    <title>cxxTypedefRef</title>
+    <shortdesc>This element provides a C++ typedef topic type as a link in a DITA map. </shortdesc>
+    <refbody>
+        <section>
+            <title>Description</title>
+            <p>A &lt;cxxTypedefRef&gt; element can contain &lt;topicref&gt;
+and &lt;topicmeta&gt; elements, allowing you to express navigation or table-of-contents
+hierarchies, as well as implying relationships between the containing topicref
+and its children.</p>
+        </section>
+        <example>
+            <title>Example</title>
+            <codeblock>&lt;cxxAPIMap id=&quot;&quot; title=&quot;AMap&quot;&gt;
+    &lt;cxxFileRef href=&quot;afile.xml&quot; navtitle=&quot;AFile.h&quot; &gt;
+        &lt;cxxDefineRef href=&quot;adefine.xml&quot; navtitle=&quot;AClass::aDefine&quot; /&gt;    			
+        &lt;cxxEnumerationRef href=&quot;anenum.xml&quot; navtitle=&quot;AClass::anEnum&quot; /&gt;
+        &lt;cxxFunctionRef href=&quot;afunction.xml&quot; navtitle=&quot;AClass::aFunction&quot; /&gt;
+        &lt;cxxTypedefRef href=&quot;atypedef.xml&quot; navtitle=&quot;AClass::aTypeDef&quot; /&gt;
+        &lt;cxxVariableRef href=&quot;avariable.xml&quot; navtitle=&quot;AClass::aVariable&quot; /&gt;		
+    &lt;/cxxFileRef&gt;
+&lt;/cxxAPIMap&gt;</codeblock>
+        </example>          
+        <section conref="../packagedef.dita#cxxTypedefRef-reference/cxxTypedefRef-containedBy-section"/>
+        <section conref="../packagedef.dita#cxxTypedefRef-reference/cxxTypedefRef-contains-section"/>
+        <section conref="../packagedef.dita#cxxTypedefRef-reference/cxxTypedefRef-contentModel-section"/>
+        <section conref="../packagedef.dita#cxxTypedefRef-reference/cxxTypedefRef-attList-section"/>
+        <section conref="../packagedef.dita#cxxTypedefRef-reference/cxxTypedefRef-classValue-section"/>
+    </refbody>
+</reference>

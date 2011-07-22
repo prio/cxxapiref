@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (c) 2011 Nokia Corporation and/or its subsidiary(-ies).
+All rights reserved.        
+        -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<reference id="cxxFriendVolatile" outputclass="element" xml:lang="en-us">
+<title>cxxFriendVolatile</title>
+<shortdesc>Used to indicate that a friend  function has the<tt>volatile</tt
+> <i>cv-qualifier</i>.     </shortdesc>
+<refbody>
+<section id="section_B63FF10B2B1042BA83D4D0A8EFBA42D6">          
+  <title>Description</title><p>The &lt;cxxFriendVolatile> <?Pub Caret?>element
+is present when the friend function has a <tt>volatile</tt>      
+          <i>cv-qualifier</i> . The two mandatory attributes <i>name</i
+> and <i>value</i> both have the value “volatile”.</p><p>See ISO/IEC
+14882:2003(E) 7.1.5.1 The cv-qualifiers [dcl.type.cv]</p>         </section>
+<example id="example_3360D444B3304F9E9E519513D9221AE0">          
+  <title>Example</title><p>Given this code:</p>             <codeblock
+>struct X {
+    friend void g() volatile;
+};</codeblock><p>Function <tt>g()</tt> would have the <tt>cxxFriendVolatile</tt
+> element:</p>             <codeblock>&lt;cxxFriendVolatile /></codeblock
+><p>If the mandatory attributes are present they must be set thus:</p
+>             <codeblock>&lt;cxxFriendVolatile name="volatile" value="volatile" /></codeblock
+>         </example>
+<section
+conref="../packagedef.dita#cxxFriendVolatile-reference/cxxFriendVolatile-containedBy-section"
+></section>
+<section
+conref="../packagedef.dita#cxxFriendVolatile-reference/cxxFriendVolatile-contains-section"
+></section>
+<section
+conref="../packagedef.dita#cxxFriendVolatile-reference/cxxFriendVolatile-contentModel-section"
+></section>
+<section
+conref="../packagedef.dita#cxxFriendVolatile-reference/cxxFriendVolatile-attList-section"
+></section>
+<section
+conref="../packagedef.dita#cxxFriendVolatile-reference/cxxFriendVolatile-classValue-section"
+></section>
+</refbody>
+</reference>
+<?Pub *0000001953?>

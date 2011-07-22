@@ -1,0 +1,2683 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_r_connection">
+	<apiName>RConnection</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="1046"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="991"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="1180"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>The management interface for a network connection or subconnection.</p>
+			<p>Provides clients with the following functionality:</p>
+			<p>Opening and closing the connection</p>
+			<p>Starting a connection, which means associating it with a new underlying interface</p>
+			<p>Attaching the <xref href="class_r_connection.xml#class_r_connection">RConnection</xref> instance to an existing interface</p>
+			<p>Stopping the connection, which means disassociating it from the underlying interface</p>
+			<p>Obtaining progress information and notification during connection start-up</p>
+			<p>Notifying when subconnections come up and go down</p>
+			<p>Notifying when there is a service change for the connection</p>
+			<p>Notifying when a given amount of data has been sent or received on a connection or subconnection</p>
+			<p>Reading CommDB fields specific to an active connection</p>
+			<p>Collecting statistical information on the network connection and subconnections. A UI component can display the collected statistical information in order to allow the user to examine the status of connections. The information that can be gathered is the following:</p>
+			<p>All available internet access point names and internet access point &apos;friendly&apos; names as appropriate for each network (GPRS/UMTS) connection</p>
+			<p>Enumerating the currently active connections and subconnections</p>
+			<p>The current status of all network connections e.g. active/suspended</p>
+			<p>The amount of data (in bytes) transferred uplink and downlink by the network connection and subconnections</p>
+			<p>The amount of time each network connection has been active (in seconds)</p>
+			<p>The current status of the connection and subconnections with respect to data transfer, i.e. active/inactive</p>
+			<p>The Quality of Service profile associated with each Packet Data Protocol (GPRS/UMTS) context, e.g. low/medium/high</p>
+			<p>Note that several of the new functions are asynchronous. It is essential for these calls that the client ensures that the parameters they pass to the <xref href="class_r_connection.xml#class_r_connection">RConnection</xref> API remain in scope for the duration of the asynchronous call.   since v7.0s </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxEnumeration id="class_r_connection_1afad96067c134db412a46c98a53e478ab">
+		<apiName>TConnAttachType</apiName>
+		<cxxEnumerationDetail>
+			<cxxEnumerationDefinition>
+				<cxxEnumerationAccessSpecifier value="public"/>
+				<cxxEnumerationScopedName>RConnection</cxxEnumerationScopedName>
+				<cxxEnumerationPrototype>TConnAttachType</cxxEnumerationPrototype>
+				<cxxEnumerationNameLookup>RConnection:TConnAttachType</cxxEnumerationNameLookup>
+				<cxxEnumerators>
+					<cxxEnumerator id="class_r_connection_1afad96067c134db412a46c98a53e478abaf687c84d202f1d0f6aa720871716ff5a">
+						<apiName>EAttachTypeNormal</apiName>
+						<cxxEnumeratorScopedName>RConnection</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EAttachTypeNormal</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RConnection::EAttachTypeNormal</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="1053"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>The application wishes to use the connection for normal data transfer, and the idle timers will take that into account. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_r_connection_1afad96067c134db412a46c98a53e478aba8b4467b50ae294334b349d4b7c6c8e05">
+						<apiName>EAttachTypeMonitor</apiName>
+						<cxxEnumeratorScopedName>RConnection</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EAttachTypeMonitor</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RConnection::EAttachTypeMonitor</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="1058"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>The system control type of application wishes to monitor the state of the connection without otherwise affecting it. In particular, the interface idle timers will not be affected. </p>
+						</apiDesc>
+					</cxxEnumerator>
+				</cxxEnumerators>
+				<cxxEnumerationAPIItemLocation>
+					<cxxEnumerationDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxEnumerationDeclarationFileLine name="lineNumber" value="1050"/>
+					<cxxEnumerationDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxEnumerationDefinitionFileLineStart name="lineNumber" value="1049"/>
+					<cxxEnumerationDefinitionFileLineEnd name="lineNumber" value="1058"/>
+				</cxxEnumerationAPIItemLocation>
+			</cxxEnumerationDefinition>
+			<apiDesc>
+				<p>Identifies the intended use of the connection. </p>
+			</apiDesc>
+		</cxxEnumerationDetail>
+	</cxxEnumeration>
+	<cxxEnumeration id="class_r_connection_1aa0392e29e5e164b0241fd3d669b41409">
+		<apiName>TConnStopType</apiName>
+		<cxxEnumerationDetail>
+			<cxxEnumerationDefinition>
+				<cxxEnumerationAccessSpecifier value="public"/>
+				<cxxEnumerationScopedName>RConnection</cxxEnumerationScopedName>
+				<cxxEnumerationPrototype>TConnStopType</cxxEnumerationPrototype>
+				<cxxEnumerationNameLookup>RConnection:TConnStopType</cxxEnumerationNameLookup>
+				<cxxEnumerators>
+					<cxxEnumerator id="class_r_connection_1aa0392e29e5e164b0241fd3d669b41409af195ff85d6196ba7cbf5f4e13558e397">
+						<apiName>EStopNormal</apiName>
+						<cxxEnumeratorScopedName>RConnection</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EStopNormal</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RConnection::EStopNormal</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="1065"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Any sockets or host/service resolvers associated with this interface will be errored with KErrCancel. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_r_connection_1aa0392e29e5e164b0241fd3d669b41409aa8f3b7c45af33b482fa24d05ee4f90c3">
+						<apiName>EStopAuthoritative</apiName>
+						<cxxEnumeratorScopedName>RConnection</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EStopAuthoritative</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RConnection::EStopAuthoritative</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="1072"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Any sockets or host/service resolvers associated with this interface will be errored with KErrConnectionTerminated and should clean up quietly without prompting the user. </p>
+						</apiDesc>
+					</cxxEnumerator>
+				</cxxEnumerators>
+				<cxxEnumerationAPIItemLocation>
+					<cxxEnumerationDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxEnumerationDeclarationFileLine name="lineNumber" value="1061"/>
+					<cxxEnumerationDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxEnumerationDefinitionFileLineStart name="lineNumber" value="1060"/>
+					<cxxEnumerationDefinitionFileLineEnd name="lineNumber" value="1072"/>
+				</cxxEnumerationAPIItemLocation>
+			</cxxEnumerationDefinition>
+			<apiDesc>
+				<p>Identifies the type of requirement for stopping the connection. </p>
+			</apiDesc>
+		</cxxEnumerationDetail>
+	</cxxEnumeration>
+	<cxxFunction id="class_r_connection_1a7cb6f402c1136cb13cd8ec72c3e8e10b">
+		<apiName>RConnection</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType>IMPORT_C</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C RConnection()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RConnection::RConnection()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1077"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="38"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="42"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Connection Management Interface</p>
+				<p>Empty constructor. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_connection_1a4c5628773c226f8ec083854db310858c">
+		<apiName>~RConnection</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionVirtual/>
+				<cxxFunctionDestructor/>
+				<cxxFunctionDeclaredType>IMPORT_C</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual IMPORT_C ~RConnection()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RConnection::~RConnection()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1078"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="44"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="47"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Empty destructor. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_connection_1a76b3d7cbd7cf3428acf55183b2e8b004">
+		<apiName>Open</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Open(RSocketServ &amp;aSocketServer, TUint aConnectionType=KConnectionTypeDefault)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RConnection::Open(RSocketServ &amp;,TUint)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_socket_serv.xml#class_r_socket_serv">RSocketServ</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSocketServer</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Socket Server session. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aConnectionType</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>
+							<apiRelation href="es__sock_8h.xml#_1af3ebf690cbf646acf583aed29e4ee34a">KConnectionTypeDefault</apiRelation>
+						</cxxFunctionParameterDefaultValue>
+						<apiDefNote>Reserved. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1079"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="49"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="60"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Opens a new <xref href="class_r_connection.xml#class_r_connection">RConnection</xref> instance.</p>
+				<p>KErrNone if successful, otherwise another of the system wide error codes. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_connection_1a57fb6fd6efc90dfa17211e527ab5e636">
+		<apiName>Open</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Open(RSocketServ &amp;aSocketServer, TName &amp;aName)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RConnection::Open(RSocketServ &amp;,TName &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_socket_serv.xml#class_r_socket_serv">RSocketServ</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSocketServer</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Socket Server session. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_buf.xml#class_t_buf">TName</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aName</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Name of an existing RConnection (obtainable via Name() method). </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1080"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="62"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="73"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Opens a new <xref href="class_r_connection.xml#class_r_connection">RConnection</xref> instance cloned from an existing <xref href="class_r_connection.xml#class_r_connection">RConnection</xref> instance.</p>
+				<p>KErrNone if successful, otherwise another of the system wide error codes. </p>
+				<p>
+					<b>capability</b>
+				</p>
+				<p>Dependent on the type of connection so deferred to PRT </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_connection_1a5a48bce19dffd1bf64dae8392225b51e">
+		<apiName>Close</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Close()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RConnection::Close()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1081"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="75"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="86"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Closes the connection.</p>
+				<p>The connection will not be dropped immediately: it will be dropped when there is no more data traffic on the connection. So if a client needs to graciously shutdown the connection, <xref href="class_r_connection.xml#class_r_connection_1a5a48bce19dffd1bf64dae8392225b51e">Close()</xref>, not <xref href="class_r_connection.xml#class_r_connection_1a3d6739ba0ec75b63cf934d23d66cf989">Stop()</xref>, needs to be used after shutting down the socket. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_connection_1a8dac7a673ef3a18b247b919563c96053">
+		<apiName>Start</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Start(TRequestStatus &amp;aStatus)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RConnection::Start(TRequestStatus &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On return, the status of the request, e.g. KErrNone, KErrAlreadyExists. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1083"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="88"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="103"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Start a connection asynchonously using the default connection preferences.</p>
+				<p>The request completes once the connection is fully up or an error has occurred. Successful completion will be accompanied by a KConnectionUp progress.</p>
+				<p>If an <xref href="class_r_connection.xml#class_r_connection">RConnection</xref> has been stopped or has gone down, any subsequent start will act in the same way as a start with a new <xref href="class_r_connection.xml#class_r_connection">RConnection</xref>. i.e. The preferences from previous starts will not be used.</p>
+				<p>
+					<b>capability</b>
+				</p>
+				<p>Dependent on the access point implementation </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_connection_1a007dd6e5b68ce034c7de47dddf8771a7">
+		<apiName>Start</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Start(TConnPref &amp;aPref, TRequestStatus &amp;aStatus)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RConnection::Start(TConnPref &amp;,TRequestStatus &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_conn_pref.xml#class_t_conn_pref">TConnPref</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPref</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Connection preferences. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On return, the status of the request, e.g. KErrNone, KErrAlreadyExists.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1084"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="105"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="157"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Start a connection asynchonously using the connection preferences specified.</p>
+				<p>The connection preferences can be of type <xref href="class_t_conn_snap_pref.xml#class_t_conn_snap_pref">TConnSnapPref</xref>, TCommDbConnPref, TCommDbMultiConnPref or <xref href="class_t_conn_pref_list.xml#class_t_conn_pref_list">TConnPrefList</xref>. See the definitions of these classes to see their usage.</p>
+				<p>The request completes once the connection is fully up or an error has occurred. Successful completion will be accompanied by a KConnectionUp progress.</p>
+				<p>If an <xref href="class_r_connection.xml#class_r_connection">RConnection</xref> has been stopped or has gone down, any subsequent start will act in the same way as a start with a new <xref href="class_r_connection.xml#class_r_connection">RConnection</xref>. i.e. The preferences from previous starts will not be used.</p>
+				<p>
+					<xref href="class_t_conn_snap_pref.xml#class_t_conn_snap_pref">TConnSnapPref</xref> </p>
+				<p>TCommDbConnPref </p>
+				<p>TCommDbMultiConnPref </p>
+				<p>
+					<xref href="class_t_conn_pref_list.xml#class_t_conn_pref_list">TConnPrefList</xref>
+				</p>
+				<p>
+					<b>capability</b>
+				</p>
+				<p>Dependent on the access point implementation </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_connection_1a3d8e807960bbd1c9383f9fb975e6d2bd">
+		<apiName>Start</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Start()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RConnection::Start()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1085"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="159"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="184"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Start a connection synchonously using the default connection preferences.</p>
+				<p>The request completes once the connection is fully up or an error has occurred. Successful completion will be accompanied by a KConnectionUp progress.</p>
+				<p>If an <xref href="class_r_connection.xml#class_r_connection">RConnection</xref> has been stopped or has gone down, any subsequent start will act in the same way as a start with a new <xref href="class_r_connection.xml#class_r_connection">RConnection</xref>. i.e. The preferences from previous starts will not be used.</p>
+				<p>KErrNone if successful or the connection already exists, otherwise another of the system wide error codes. </p>
+				<p>
+					<b>capability</b>
+				</p>
+				<p>Dependent on the access point implementation </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_connection_1aec3d0236a91ab02fa7938a0799419947">
+		<apiName>Start</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Start(TConnPref &amp;aPref)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RConnection::Start(TConnPref &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_conn_pref.xml#class_t_conn_pref">TConnPref</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPref</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Connection preferences. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1086"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="186"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="221"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Start a connection synchonously using the connection preferences specified.</p>
+				<p>The connection preferences can be of type <xref href="class_t_conn_snap_pref.xml#class_t_conn_snap_pref">TConnSnapPref</xref>, TCommDbConnPref, TCommDbMultiConnPref or <xref href="class_t_conn_pref_list.xml#class_t_conn_pref_list">TConnPrefList</xref>. See the definitions of these classes to see their usage.</p>
+				<p>The request completes once the connection is fully up or an error has occurred. Successful completion will be accompanied by a KConnectionUp progress.</p>
+				<p>If an <xref href="class_r_connection.xml#class_r_connection">RConnection</xref> has been stopped or has gone down, any subsequent start will act in the same way as a start with a new <xref href="class_r_connection.xml#class_r_connection">RConnection</xref>. i.e. The preferences from previous starts will not be used.</p>
+				<p>
+					<xref href="class_t_conn_snap_pref.xml#class_t_conn_snap_pref">TConnSnapPref</xref> </p>
+				<p>TCommDbConnPref </p>
+				<p>TCommDbMultiConnPref </p>
+				<p>
+					<xref href="class_t_conn_pref_list.xml#class_t_conn_pref_list">TConnPrefList</xref>
+				</p>
+				<p>KErrNone if successful or the connection already exists, otherwise another of the system wide error codes. </p>
+				<p>
+					<b>capability</b>
+				</p>
+				<p>Dependent on the access point implementation </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_connection_1a3d6739ba0ec75b63cf934d23d66cf989">
+		<apiName>Stop</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Stop()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RConnection::Stop()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1087"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="223"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="236"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Stops the entire connection by disconnecting the underlying network interface immediately, regardless of whether other clients are using it or not.</p>
+				<p>Applications using the connection will be sent the socket error code KErrCancel. The application generally responds with clean up operations and pop-up boxes alerting the user to the termination of the application.</p>
+				<p>KErrNone if successful, otherwise another of the system wide error codes. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_connection_1a67f0c1a064f2e01111810fdd3c569b24">
+		<apiName>Stop</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Stop(TConnStopType aStopType)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RConnection::Stop(TConnStopType)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_connection.xml#_1aa0392e29e5e164b0241fd3d669b41409">TConnStopType</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStopType</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The type of stop which is being requested. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1088"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="238"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="253"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Stops the entire connection by disconnecting the underlying network interface immediately, regardless of whether other clients are using it or not.</p>
+				<p>If the argument is EStopNormal this is identical to calling <xref href="class_r_connection.xml#class_r_connection_1a3d6739ba0ec75b63cf934d23d66cf989">Stop()</xref> with no argument. If it is EStopAuthoritative then applications using the connection will be sent the socket error code KErrConnectionTerminated, which generally results in the applications closing quietly (without pop-up boxes).</p>
+				<p>KErrNone or another of the system wide error codes; in particular KErrArgument if the stop type is unrecognised. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_connection_1a5c09974de73e15fafca832890231f9b3">
+		<apiName>Stop</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Stop(TSubConnectionUniqueId aSubConnectionUniqueId)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RConnection::Stop(TSubConnectionUniqueId)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="es__sock_8h.xml#_1a8f81fd2534e8e8cb970bb2c347d60222">TSubConnectionUniqueId</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSubConnectionUniqueId</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A valid identifier for a subconnection. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1089"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="255"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="270"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Stops a subconnection.</p>
+				<p>Applications will be sent a socket error code to indicate that they must perform clean up operations.</p>
+				<p>since v7.0s An attached connection: as a result of performing either a <xref href="class_r_connection.xml#class_r_connection_1a3d8e807960bbd1c9383f9fb975e6d2bd">Start()</xref> or an <xref href="class_r_connection.xml#class_r_connection_1ac1d1bd58d49752e6c15aa64edf346338">Attach()</xref> </p>
+				<p>KErrNone if successful, otherwise another of the system wide error codes. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_connection_1a6d456bf9b0bcb1af376781b9f4a29dc4">
+		<apiName>Stop</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Stop(TSubConnectionUniqueId aSubConnectionUniqueId, TConnStopType aStopType)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RConnection::Stop(TSubConnectionUniqueId,TConnStopType)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="es__sock_8h.xml#_1a8f81fd2534e8e8cb970bb2c347d60222">TSubConnectionUniqueId</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSubConnectionUniqueId</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A valid identifier for a subconnection </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_connection.xml#_1aa0392e29e5e164b0241fd3d669b41409">TConnStopType</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStopType</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The kind of stop to do (controls what error code is reported to interface clients) </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1090"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="272"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="286"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Stop a subconnection on an interface</p>
+				<p>since v7.0s Must be attached to a connection; either by performing a <xref href="class_r_connection.xml#class_r_connection_1a3d8e807960bbd1c9383f9fb975e6d2bd">Start()</xref>, or using <xref href="class_r_connection.xml#class_r_connection_1ac1d1bd58d49752e6c15aa64edf346338">Attach()</xref> </p>
+				<p>KErrNone if successful, otherwise one of the system-wide error codes </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_connection_1a17e0e8ba387060b01d0eafa525272681">
+		<apiName>WaitForIncoming</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void WaitForIncoming(RSubConnection &amp;aIncomingSubConnection, TRequestStatus &amp;aStatus)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RConnection::WaitForIncoming(RSubConnection &amp;,TRequestStatus &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_sub_connection.xml#class_r_sub_connection">RSubConnection</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIncomingSubConnection</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On completion, the subconnection representing the incoming session. The incoming session can be accepted (by calling RSubConnection::Accept) or rejected (by calling RSubConnection::Stop) The subconnection is implicitly started (no need to call RSubConnection::Start). aIncomingSubConnection must not be open prior to calling this method. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On completion, the status of the request, e.g. KErrNone or another of the system wide error codes. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1092"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="311"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="345"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Subscribe for an incoming session on this connection.</p>
+				<p>since v9.2 Must be attached to a connection by performing a <xref href="class_r_connection.xml#class_r_connection_1a3d8e807960bbd1c9383f9fb975e6d2bd">Start()</xref>. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_connection_1a0efa010419e9f3a7da19b4f0567fe7f4">
+		<apiName>WaitForIncoming</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt WaitForIncoming(RSubConnection &amp;aIncomingSubConnection)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RConnection::WaitForIncoming(RSubConnection &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_sub_connection.xml#class_r_sub_connection">RSubConnection</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIncomingSubConnection</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On completion, the subconnection representing the incoming session. The incoming session can be accepted (by calling RSubConnection::Accept) or rejected (by calling RSubConnection::Stop) The subconnection is implicitly started (no need to call RSubConnection::Start). aIncomingSubConnection must not be open prior to calling this method. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1093"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="289"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="309"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Synchronously wait for an incoming session on this connection.</p>
+				<p>since v9.2 Must be attached to a connection by performing a <xref href="class_r_connection.xml#class_r_connection_1a3d8e807960bbd1c9383f9fb975e6d2bd">Start()</xref>. </p>
+				<p>KErrNone if successful, otherwise another of the system wide error codes. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_connection_1a9271476bc909ff25aad9ed56f1870672">
+		<apiName>CancelWaitForIncoming</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void CancelWaitForIncoming()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RConnection::CancelWaitForIncoming()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1094"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="347"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="359"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Cancel the previous subscription for an incoming session.</p>
+				<p>since v9.2 <xref href="class_r_connection.xml#class_r_connection_1a17e0e8ba387060b01d0eafa525272681">WaitForIncoming()</xref> </p>
+				<p>Must be attached to a connection by performing a <xref href="class_r_connection.xml#class_r_connection_1a3d8e807960bbd1c9383f9fb975e6d2bd">Start()</xref>. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_connection_1a60bf75f693c0f2b558d4e9fa898cfc0c">
+		<apiName>ProgressNotification</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void ProgressNotification(TNifProgressBuf &amp;aProgress, TRequestStatus &amp;aStatus, TUint aSelectedProgress=KConnProgressDefault)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RConnection::ProgressNotification(TNifProgressBuf &amp;,TRequestStatus &amp;,TUint)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_pckg_buf.xml#class_t_pckg_buf">TNifProgressBuf</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aProgress</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A buffer to receive progress notification. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On return, the status of the request. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSelectedProgress</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>
+							<apiRelation href="es__sock_8h.xml#_1a1e7af182bc0eaec6a17aa2dd96570fec">KConnProgressDefault</apiRelation>
+						</cxxFunctionParameterDefaultValue>
+						<apiDefNote>The type of progress to report. If set, report only the particular progress specified and any progress in error. If not set, report all progress normally. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1096"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="362"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="372"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Requests asynchronous progress notification for the connection.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_connection_1a070177dadc3e9b62de206bdbe4be0a82">
+		<apiName>ProgressNotification</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void ProgressNotification(TSubConnectionUniqueId aSubConnectionUniqueId, TNifProgressBuf &amp;aProgress, TRequestStatus &amp;aStatus, TUint aSelectedProgress=KConnProgressDefault)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RConnection::ProgressNotification(TSubConnectionUniqueId,TNifProgressBuf &amp;,TRequestStatus &amp;,TUint)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="es__sock_8h.xml#_1a8f81fd2534e8e8cb970bb2c347d60222">TSubConnectionUniqueId</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSubConnectionUniqueId</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A valid identifier for a subconnection. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_pckg_buf.xml#class_t_pckg_buf">TNifProgressBuf</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aProgress</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A buffer to receive progress notification. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On return, the status of the request. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSelectedProgress</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>
+							<apiRelation href="es__sock_8h.xml#_1a1e7af182bc0eaec6a17aa2dd96570fec">KConnProgressDefault</apiRelation>
+						</cxxFunctionParameterDefaultValue>
+						<apiDefNote>The type of progress to report. If set, report only the particular progress specified and any progress in error. If not set, report all progress normally. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1097"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="374"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="393"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Requests asynchronous progress notification for a subconnection.</p>
+				<p>NOTE: This function is not supported and will correctly return KErrNotSupported.</p>
+				<p>since v7.0s An attached connection: as a result of performing either a <xref href="class_r_connection.xml#class_r_connection_1a3d8e807960bbd1c9383f9fb975e6d2bd">Start()</xref> or an <xref href="class_r_connection.xml#class_r_connection_1ac1d1bd58d49752e6c15aa64edf346338">Attach()</xref> </p>
+				<p>No outstanding request for progress notifications for this subconnection on this <xref href="class_r_connection.xml#class_r_connection">RConnection</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_connection_1aa5e08aac28353fb4df819af9bbb708dd">
+		<apiName>CancelProgressNotification</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void CancelProgressNotification()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RConnection::CancelProgressNotification()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1098"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="395"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="401"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Cancels a request for progress notification for the connection, as issued by <xref href="class_r_connection.xml#class_r_connection_1a60bf75f693c0f2b558d4e9fa898cfc0c">ProgressNotification()</xref>. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_connection_1a01df2a23a504e78171394de52a8bc5df">
+		<apiName>CancelProgressNotification</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void CancelProgressNotification(TSubConnectionUniqueId aSubConnectionUniqueId)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RConnection::CancelProgressNotification(TSubConnectionUniqueId)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="es__sock_8h.xml#_1a8f81fd2534e8e8cb970bb2c347d60222">TSubConnectionUniqueId</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSubConnectionUniqueId</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The identifier for the subconnection used to make the request. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1099"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="403"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="417"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Cancels a request for progress notification for a specified subconnection, as issued by <xref href="class_r_connection.xml#class_r_connection_1a60bf75f693c0f2b558d4e9fa898cfc0c">ProgressNotification()</xref>.</p>
+				<p>since v7.0s An attached connection: as a result of performing either a <xref href="class_r_connection.xml#class_r_connection_1a3d8e807960bbd1c9383f9fb975e6d2bd">Start()</xref> or an <xref href="class_r_connection.xml#class_r_connection_1ac1d1bd58d49752e6c15aa64edf346338">Attach()</xref> </p>
+				<p>An outstanding request for a progress notification on the subconnection on this <xref href="class_r_connection.xml#class_r_connection">RConnection</xref>
+				</p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_connection_1a021328297f7015a97a30335133cf0a4c">
+		<apiName>Progress</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Progress(TNifProgress &amp;aProgress)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RConnection::Progress(TNifProgress &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_nif_progress.xml#class_t_nif_progress">TNifProgress</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aProgress</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A buffer to receive progress information. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1100"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="419"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="428"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Obtains the current progress information for the connection.</p>
+				<p>KErrNone if successful, otherwise another of the system wide error codes. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_connection_1a29e07b922e0e80dbdc49cf059640df30">
+		<apiName>Progress</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Progress(TSubConnectionUniqueId aSubConnectionUniqueId, TNifProgress &amp;aProgress)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RConnection::Progress(TSubConnectionUniqueId,TNifProgress &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="es__sock_8h.xml#_1a8f81fd2534e8e8cb970bb2c347d60222">TSubConnectionUniqueId</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSubConnectionUniqueId</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A valid identifier for the subconnection of interest. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_nif_progress.xml#class_t_nif_progress">TNifProgress</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aProgress</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On return, progress information. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1101"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="430"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="444"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Obtains the current progress information on a specified subconnection.</p>
+				<p>since v7.0s An attached connection: as a result of performing either a <xref href="class_r_connection.xml#class_r_connection_1a3d8e807960bbd1c9383f9fb975e6d2bd">Start()</xref> or an <xref href="class_r_connection.xml#class_r_connection_1ac1d1bd58d49752e6c15aa64edf346338">Attach()</xref> </p>
+				<p>KErrNone if successful, otherwise another of the system wide error codes. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_connection_1aacc97d61449b4da19315c0743f80aecb">
+		<apiName>LastProgressError</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt LastProgressError(TNifProgress &amp;aProgress)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RConnection::LastProgressError(TNifProgress &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_nif_progress.xml#class_t_nif_progress">TNifProgress</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aProgress</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A buffer to receive progress information. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1102"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="446"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="455"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Obtains information about the last <xref href="class_r_connection.xml#class_r_connection_1a021328297f7015a97a30335133cf0a4c">Progress()</xref> call which failed with an error.</p>
+				<p>KErrNone if successful, otherwise another of the system wide error codes. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_connection_1aabd1d7026bf76fdb035ba9e01bd23c97">
+		<apiName>ServiceChangeNotification</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void ServiceChangeNotification(TUint32 &amp;aNewISPId, TDes &amp;aNewServiceType, TRequestStatus &amp;aStatus)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RConnection::ServiceChangeNotification(TUint32 &amp;,TDes &amp;,TRequestStatus &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a8240e11f17c80b6b222fc2af50234da4">TUint32</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aNewISPId</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On completion, the new ISP Id. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des16.xml#class_t_des16">TDes</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aNewServiceType</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On completion, the new service type. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On completion, &quot;KErrNone&quot; if succesful, &quot;KErrNotReady&quot; if called before &quot;RConnection::Start(...)&quot; being called, &quot;KErrInUse&quot; if called twice. Otherwise another of the system wide error codes. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1103"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="457"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="473"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Requests service change notification from the agent. This call completes if the underlying service changes (i.e. ISP, GPRS APN or LAN Service). Important: It Panics if used BEFORE &quot;RConnecion::Open(...)&quot; being called.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_connection_1aab16ad616b3524ee4ea15acdaed0b257">
+		<apiName>CancelServiceChangeNotification</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void CancelServiceChangeNotification()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RConnection::CancelServiceChangeNotification()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1104"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="475"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="484"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Cancels a request for notification of change of service for the connection, as issued by <xref href="class_r_connection.xml#class_r_connection_1aabd1d7026bf76fdb035ba9e01bd23c97">ServiceChangeNotification()</xref>. Nothing happens if called without having called &quot;RConnection::ServiceChangeNotification(...)&quot; before. Important: It Panics if used BEFORE &quot;RConnecion::Open(...)&quot; being called. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_connection_1a74bb6fae5149b59612ae1534ef39bdac">
+		<apiName>GetIntSetting</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt GetIntSetting(const TDesC &amp;aSettingName, TUint32 &amp;aValue)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RConnection::GetIntSetting(const TDesC &amp;,TUint32 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSettingName</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The CommDb table name and field name to be accessed. Of the form &quot;&lt;table name&gt;\&lt;field name&gt;&quot; (for example &quot;IAP\Id&quot; or &quot;ModemBearer\PortName&quot;). </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a8240e11f17c80b6b222fc2af50234da4">TUint32</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aValue</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On return, the value of the table/field pair. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1110"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="486"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="505"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Since SymbianOS v9.5 </p>
+				<p>Reads current CommDb settings for the active connection.</p>
+				<p>An attached connection: as a result of performing either a <xref href="class_r_connection.xml#class_r_connection_1a3d8e807960bbd1c9383f9fb975e6d2bd">Start()</xref> or an <xref href="class_r_connection.xml#class_r_connection_1ac1d1bd58d49752e6c15aa64edf346338">Attach()</xref> </p>
+				<p>KErrNone if succesful, or another of the system-wide error codes. </p>
+				<p>
+					<b>capability</b>
+				</p>
+				<p>Dependent on table - deferred to RDBMS</p>
+				<p>Since 9.5 - For replacement functionality see GetParameters </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_connection_1abbdd860a15fdec137b0c76bb912173b5">
+		<apiName>GetBoolSetting</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt GetBoolSetting(const TDesC &amp;aSettingName, TBool &amp;aValue)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RConnection::GetBoolSetting(const TDesC &amp;,TBool &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSettingName</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The CommDb table name and field name to be accessed. Of the form &quot;&lt;table name&gt;\&lt;field name&gt;&quot;. (for example &quot;IAP\Id&quot; or &quot;ModemBearer\PortName&quot;). </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aValue</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On return, the value of the table/field pair. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1115"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="507"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="527"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Since SymbianOS v9.5 </p>
+				<p>Reads current CommDb settings for the active connection.</p>
+				<p>An attached connection: as a result of performing either a <xref href="class_r_connection.xml#class_r_connection_1a3d8e807960bbd1c9383f9fb975e6d2bd">Start()</xref> or an <xref href="class_r_connection.xml#class_r_connection_1ac1d1bd58d49752e6c15aa64edf346338">Attach()</xref> </p>
+				<p>KErrNone if succesful, or another of the system-wide error codes. </p>
+				<p>
+					<b>capability</b>
+				</p>
+				<p>Dependent on table - deferred to RDBMS</p>
+				<p>Since 9.5 - For replacement functionality see GetParameters </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_connection_1a115f25cdef81dafc2ae72a6fa24ed57d">
+		<apiName>GetDesSetting</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt GetDesSetting(const TDesC &amp;aSettingName, TDes8 &amp;aValue)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RConnection::GetDesSetting(const TDesC &amp;,TDes8 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSettingName</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The CommDb table name and field name to be accessed. Of the form &quot;&lt;table name&gt;\&lt;field name&gt;&quot; (for example &quot;IAP\Id&quot; or &quot;ModemBearer\PortName&quot;). </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aValue</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On return, the value of the table/field pair. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1120"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="529"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="548"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Since SymbianOS v9.5 </p>
+				<p>Reads current CommDb settings for the active connection.</p>
+				<p>An attached connection: as a result of performing either a <xref href="class_r_connection.xml#class_r_connection_1a3d8e807960bbd1c9383f9fb975e6d2bd">Start()</xref> or an <xref href="class_r_connection.xml#class_r_connection_1ac1d1bd58d49752e6c15aa64edf346338">Attach()</xref>
+				</p>
+				<p>KErrNone if succesful, or another of the system-wide error codes. </p>
+				<p>
+					<b>capability</b>
+				</p>
+				<p>Dependent on table - deferred to RDBMS</p>
+				<p>Since 9.5 - For replacement functionality see GetParameters </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_connection_1afff0f70fff880f936b26d53a3da01db4">
+		<apiName>GetDesSetting</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt GetDesSetting(const TDesC &amp;aSettingName, TDes16 &amp;aValue)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RConnection::GetDesSetting(const TDesC &amp;,TDes16 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSettingName</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The CommDb table name and field name to be accessed. Of the form &quot;&lt;table name&gt;\&lt;field name&gt;&quot; (for example &quot;IAP\Id&quot; or &quot;ModemBearer\PortName&quot;). </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des16.xml#class_t_des16">TDes16</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aValue</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On return, the value of the table/field pair. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1125"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="550"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="569"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Since SymbianOS v9.5 </p>
+				<p>Reads current CommDb settings for the active connection.</p>
+				<p>An attached connection: as a result of performing either a <xref href="class_r_connection.xml#class_r_connection_1a3d8e807960bbd1c9383f9fb975e6d2bd">Start()</xref> or an <xref href="class_r_connection.xml#class_r_connection_1ac1d1bd58d49752e6c15aa64edf346338">Attach()</xref>
+				</p>
+				<p>KErrNone if succesful, or another of the system-wide error codes. </p>
+				<p>
+					<b>capability</b>
+				</p>
+				<p>Dependent on table - deferred to RDBMS</p>
+				<p>Since 9.5 - For replacement functionality see GetParameters </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_connection_1a257392c874c5c172af92c11601d01ead">
+		<apiName>GetLongDesSetting</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt GetLongDesSetting(const TDesC &amp;aSettingName, TDes &amp;aValue)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RConnection::GetLongDesSetting(const TDesC &amp;,TDes &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSettingName</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The CommDb table name and field name to be accessed. Of the form &quot;&lt;table name&gt;\&lt;field name&gt;&quot;. (for example &quot;IAP\Id&quot; or &quot;ModemBearer\PortName&quot;). </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des16.xml#class_t_des16">TDes</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aValue</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On return, the value of the table/field pair. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1130"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="571"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="590"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Since SymbianOS v9.5 </p>
+				<p>Reads current CommDb settings for the active connection.</p>
+				<p>An attached connection: as a result of performing either a <xref href="class_r_connection.xml#class_r_connection_1a3d8e807960bbd1c9383f9fb975e6d2bd">Start()</xref> or an <xref href="class_r_connection.xml#class_r_connection_1ac1d1bd58d49752e6c15aa64edf346338">Attach()</xref>
+				</p>
+				<p>KErrNone if succesful, or another of the system-wide error codes. </p>
+				<p>
+					<b>capability</b>
+				</p>
+				<p>Dependent on table - deferred to RDBMS</p>
+				<p>Since 9.5 - For replacement functionality see GetParameters </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_connection_1a3afd68eb13ce41bfd60ac108d96db12d">
+		<apiName>GetParameters</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt GetParameters(ESock::CCommsDataObjectBase &amp;aDataObject)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RConnection::GetParameters(ESock::CCommsDataObjectBase &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_e_sock_1_1_c_comms_data_object_base.xml#class_e_sock_1_1_c_comms_data_object_base">ESock::CCommsDataObjectBase</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDataObject</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1133"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="604"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="658"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>KErrNone - The get parameters call was serviced successfully KErrNotReady - This error will most likely indicate that the connection has not been started KErrNoMemory - Failure to allocate the required memory for the retrieved query bundle KErrNotFound - The interface required by the data object was not found in the connection stack Other system-wide error codes dependent on specific data object implementations </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_connection_1ac5b8e049457a38221fe3d6fe5b492a84">
+		<apiName>SetParameters</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt SetParameters(ESock::CCommsDataObjectBase &amp;aDataObject)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RConnection::SetParameters(ESock::CCommsDataObjectBase &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_e_sock_1_1_c_comms_data_object_base.xml#class_e_sock_1_1_c_comms_data_object_base">ESock::CCommsDataObjectBase</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDataObject</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1134"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="667"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="672"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Speculative method - Not yet supported Do not call this function, it has ony been introduced for symmetry with <xref href="class_r_connection.xml#class_r_connection_1a3afd68eb13ce41bfd60ac108d96db12d">RConnection::GetParameters</xref> and will be completed at a later date. KErrNotSupported </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_connection_1a594b3dd3e313c3d85c518431629ab527">
+		<apiName>Name</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Name(TName &amp;aName)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RConnection::Name(TName &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_buf.xml#class_t_buf">TName</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aName</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On return, the unique name of the RConnection. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1136"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="794"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="804"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets the unique name of an <xref href="class_r_connection.xml#class_r_connection">RConnection</xref>.</p>
+				<p>Used to create an <xref href="class_r_connection.xml#class_r_connection">RConnection</xref> which is a clone of an existing <xref href="class_r_connection.xml#class_r_connection">RConnection</xref> (possibly in a different process).</p>
+				<p>KErrNone if succesful, or another of the system-wide error codes. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_connection_1a6a2cf721b32de28f45a15ff58c70942f">
+		<apiName>EnumerateConnections</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt EnumerateConnections(TUint &amp;aCount)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RConnection::EnumerateConnections(TUint &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCount</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On return, contains the number of currently active interfaces on the server. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1138"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="820"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="832"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Enumerates the number of currently active interfaces.</p>
+				<p>
+					<note type="note">
+						<p>This does not count the number of RConnections but the number of underlying interfaces. These may be attached to by varying numbers of RConnections, RSockets etc. </p>
+					</note>KErrNone if successful, otherwise another of the system wide error codes. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_connection_1adcb13b8b19bc602d761f750c2989ac05">
+		<apiName>GetConnectionInfo</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt GetConnectionInfo(TUint aIndex, TDes8 &amp;aConnectionInfo)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RConnection::GetConnectionInfo(TUint,TDes8 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The index of the connection - must be between 1 and the value of aCount returned in EnumerateConnections(). </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aConnectionInfo</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On return, contains a TPckg&lt;TConnectionInfo&gt; containing information about the connection. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1139"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="834"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="850"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets information about one of the currently active connections.</p>
+				<p>Note that the actual connection information is gathered on a call to <xref href="class_r_connection.xml#class_r_connection_1a6a2cf721b32de28f45a15ff58c70942f">EnumerateConnections()</xref> and <xref href="class_r_connection.xml#class_r_connection_1adcb13b8b19bc602d761f750c2989ac05">GetConnectionInfo()</xref> is simply used to return the information to the client. Therefore, if the state of the connections change after the <xref href="class_r_connection.xml#class_r_connection_1a6a2cf721b32de28f45a15ff58c70942f">EnumerateConnections()</xref> call, then the information returned by <xref href="class_r_connection.xml#class_r_connection_1adcb13b8b19bc602d761f750c2989ac05">GetConnectionInfo()</xref> may be out of date.</p>
+				<p>KErrNone if successful, otherwise another of the system wide error codes. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_connection_1a7e16a528b62359d1c174cca27caa6ec0">
+		<apiName>AllInterfaceNotification</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void AllInterfaceNotification(TDes8 &amp;aNotification, TRequestStatus &amp;aStatus)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RConnection::AllInterfaceNotification(TDes8 &amp;,TRequestStatus &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aNotification</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On return, a wrapped interface change notification (TInterfaceNotification). </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On return, the status of the request. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1141"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="852"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="864"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Requests asynchronous change notification for all interfaces.</p>
+				<p>This allows a client to receive a notification whenever a connection in the system goes up or down.</p>
+				<p>This allows the automatic update of the list of active network connections.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_connection_1ae250254c5c6bf966319529362457cd56">
+		<apiName>CancelAllInterfaceNotification</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void CancelAllInterfaceNotification()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RConnection::CancelAllInterfaceNotification()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1142"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="866"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="870"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Cancels a change notification request previously issued by a call to <xref href="class_r_connection.xml#class_r_connection_1a7e16a528b62359d1c174cca27caa6ec0">AllInterfaceNotification()</xref>. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_connection_1aef6949dc79a95b9730ea51c8e3111e02">
+		<apiName>Ioctl</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Ioctl(TUint aOptionLevel, TUint aOptionName, TRequestStatus &amp;aStatus, TDes8 *aDesc)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RConnection::Ioctl(TUint,TUint,TRequestStatus &amp;,TDes8 *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aOptionLevel</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Option level to be used. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aOptionName</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Option name to be used. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDesc</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1144"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="675"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="690"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Get information on the connection in an asynchronous manner</p>
+				<p>
+					<b>capability</b>
+				</p>
+				<p>Dependent on the type of operation so deferred to PRT. See documentation of constant values used in aOptionName and aOptionLevel for more information </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_connection_1ae4bdeecc850b72345b8858cdef494a98">
+		<apiName>Ioctl</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Ioctl(TUint aOptionLevel, TUint aOptionName, TRequestStatus &amp;aStatus)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RConnection::Ioctl(TUint,TUint,TRequestStatus &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aOptionLevel</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Option level to be used. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aOptionName</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Option name to be used. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1145"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="692"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="707"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Get information on the connection in an asynchronous manner</p>
+				<p>
+					<b>capability</b>
+				</p>
+				<p>Dependent on the type of operation so deferred to PRT. See documentation of constant values used in aOptionName and aOptionLevel for more information </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_connection_1ac45bc7121906e09c37e251b49008efb4">
+		<apiName>CancelIoctl</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void CancelIoctl()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RConnection::CancelIoctl()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1146"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="709"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="718"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Cancel any outstanding Ioctl request</p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_connection_1aec51b582d0d847b749265ad52f3419c0">
+		<apiName>Control</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Control(TUint aOptionLevel, TUint aOptionName, TDes8 &amp;aOption)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RConnection::Control(TUint,TUint,TDes8 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aOptionLevel</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Option level to be used. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aOptionName</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Option name to be used. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aOption</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On return, the option value. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1147"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="720"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="762"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets detailed information on connection clients and sockets.</p>
+				<p>More likely to be used by system control type applications.</p>
+				<p>KErrNone if succesful, or another of the system-wide error codes. </p>
+				<p>
+					<b>capability</b>
+				</p>
+				<p>Dependent on the type of operation so deferred to PRT. See documentation of constant values used in aOptionName and aOptionLevel for more information </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_connection_1a37b631fcd8e99606fb5f82ca3edbc0e6">
+		<apiName>GetOpt</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt GetOpt(TUint aOptionLevel, TUint aOptionName, TInt &amp;aOption)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RConnection::GetOpt(TUint,TUint,TInt &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aOptionLevel</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Option level to be queried. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aOptionName</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Option name to be queried. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aOption</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On return, the option value. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1148"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="779"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="792"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets an option.</p>
+				<p>KErrNone if succesful, or another of the system-wide error codes. </p>
+				<p>
+					<b>capability</b>
+				</p>
+				<p>Dependent on the type of operation so deferred to PRT. See documentation of constant values used in aOptionName and aOptionLevel for more information </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_connection_1a04026fbe20ec11c0a98301cb3f152638">
+		<apiName>SetOpt</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt SetOpt(TUint aOptionLevel, TUint aOptionName, TInt aOption=0)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RConnection::SetOpt(TUint,TUint,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aOptionLevel</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Option level to be set. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aOptionName</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Option name to be set </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aOption</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>0</cxxFunctionParameterDefaultValue>
+						<apiDefNote>Option value. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1149"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="764"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="777"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Sets an option.</p>
+				<p>KErrNone if succesful, or another of the system-wide error codes. </p>
+				<p>
+					<b>capability</b>
+				</p>
+				<p>Dependent on the type of operation so deferred to PRT. See documentation of constant values used in aOptionName and aOptionLevel for more information </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_connection_1ac1d1bd58d49752e6c15aa64edf346338">
+		<apiName>Attach</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Attach(const TDesC8 &amp;aConnectionInfo, TConnAttachType aAttachType)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RConnection::Attach(const TDesC8 &amp;,TConnAttachType)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aConnectionInfo</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Identity of the connection to attach to. This is a TPckg&lt;TConnectionInfo&gt;&amp; (possibly obtained from a call to GetConnectionInfo()). </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_connection.xml#_1afad96067c134db412a46c98a53e478ab">TConnAttachType</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aAttachType</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Identifies the intended use of the connection. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1151"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="872"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="885"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Attaches the <xref href="class_r_connection.xml#class_r_connection">RConnection</xref> object to an existing interface.</p>
+				<p>This operation will not start an interface, as <xref href="class_r_connection.xml#class_r_connection_1a3d8e807960bbd1c9383f9fb975e6d2bd">Start()</xref> does, but attaches to an existing interface if it exists.</p>
+				<p>KErrNone if succesful, or another of the system-wide error codes. </p>
+				<p>
+					<b>capability</b>
+				</p>
+				<p>dependent on the type of connection so deferred to PRT </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_connection_1a750fc6de8de24169a433848948510ba7">
+		<apiName>EnumerateSubConnections</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt EnumerateSubConnections(TUint &amp;aCount)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RConnection::EnumerateSubConnections(TUint &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCount</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On return, contains the number of currently active connections. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1153"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="888"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="904"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Asks the server to gather information on the currently active subconnections.</p>
+				<p>since v7.0s An attached connection: as a result of performing either a <xref href="class_r_connection.xml#class_r_connection_1a3d8e807960bbd1c9383f9fb975e6d2bd">Start()</xref> or an <xref href="class_r_connection.xml#class_r_connection_1ac1d1bd58d49752e6c15aa64edf346338">Attach()</xref> </p>
+				<note type="note">
+					<p>Unlike <xref href="class_r_connection.xml#class_r_connection_1a6a2cf721b32de28f45a15ff58c70942f">EnumerateConnections()</xref>, <xref href="class_r_connection.xml#class_r_connection_1a750fc6de8de24169a433848948510ba7">EnumerateSubConnections()</xref> does not cache the information about subconnections, so it is possible for a greater or fewer number of records to be returned through <xref href="class_r_connection.xml#class_r_connection_1a718f65056c51d0da7e88e5a0fce8e3f5">GetSubConnectionInfo()</xref>
+					</p>
+				</note>
+				<p>KErrNone if successful, otherwise another of the system wide error codes. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_connection_1a718f65056c51d0da7e88e5a0fce8e3f5">
+		<apiName>GetSubConnectionInfo</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt GetSubConnectionInfo(TDes8 &amp;aSubConnectionInfo)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RConnection::GetSubConnectionInfo(TDes8 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSubConnectionInfo</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A TPckg&lt;TSubConnectionInfo-derived class&gt;: the actual class depends upon the type of subconnection, eg. GPRS context, PPP, NCP. On entry, must contain a valid TSubConnectionUniqueId to indicate which of the subconnections it wishes to gather information about. On return, contains information about the subconnection. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1154"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="906"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="927"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets information about one of the currently active subconnections.</p>
+				<p>This function is used when a valid TSubConnectionUniqueId has been discovered using the alternative form of <xref href="class_r_connection.xml#class_r_connection_1a718f65056c51d0da7e88e5a0fce8e3f5">GetSubConnectionInfo()</xref>, and the client wishes to update its TSubConnectionInfo-derived structure with the latest subconnection information.</p>
+				<p>since v7.0s An attached connection: as a result of performing either a <xref href="class_r_connection.xml#class_r_connection_1a3d8e807960bbd1c9383f9fb975e6d2bd">Start()</xref> or an <xref href="class_r_connection.xml#class_r_connection_1ac1d1bd58d49752e6c15aa64edf346338">Attach()</xref>
+				</p>
+				<p>KErrNone if successful, otherwise another of the system wide error codes. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_connection_1ab68d5d3e60fe302ea1612e1a9390684a">
+		<apiName>GetSubConnectionInfo</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt GetSubConnectionInfo(TUint aIndex, TDes8 &amp;aSubConnectionInfo)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RConnection::GetSubConnectionInfo(TUint,TDes8 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The index of the connection - must be between 1 and the value of aCount returned in EnumerateSubConnections(). </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSubConnectionInfo</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On return, contains a TPckg&lt;TSubConnectionInfo-derived class&gt; containing information about the subconnection; the actual class depends upon the type of subconnection, eg. GPRS context, PPP NCP. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1155"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="929"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="949"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets information about one of the currently active subconnections.</p>
+				<p>This function is intended for the initial enumeration of connections, when no TSubConnectionUniqueIds are available, so the client must iterate through the list of subconnections.</p>
+				<p>since v7.0s An attached connection: as a result of performing either a <xref href="class_r_connection.xml#class_r_connection_1a3d8e807960bbd1c9383f9fb975e6d2bd">Start()</xref> or an <xref href="class_r_connection.xml#class_r_connection_1ac1d1bd58d49752e6c15aa64edf346338">Attach()</xref>
+				</p>
+				<p>KErrNone if successful, otherwise another of the system wide error codes. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_connection_1a60e9a5eaf00aa58061aa13ca5d8c1bff">
+		<apiName>AllSubConnectionNotification</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void AllSubConnectionNotification(TSubConnectionNotificationBuf &amp;aSubConnectionEvent, TRequestStatus &amp;aStatus)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RConnection::AllSubConnectionNotification(TSubConnectionNotificationBuf &amp;,TRequestStatus &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_buf8.xml#class_t_buf8">TSubConnectionNotificationBuf</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSubConnectionEvent</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefinitionName>aSubConnectionNotification</cxxFunctionParameterDefinitionName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On return, the status of the request. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1156"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="951"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="968"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Requests notification of any change in the state of any of the subconnections belonging to this <xref href="class_r_connection.xml#class_r_connection">RConnection</xref>.</p>
+				<p>since v7.0s An attached connection: as a result of performing either a <xref href="class_r_connection.xml#class_r_connection_1a3d8e807960bbd1c9383f9fb975e6d2bd">Start()</xref> or an <xref href="class_r_connection.xml#class_r_connection_1ac1d1bd58d49752e6c15aa64edf346338">Attach()</xref> </p>
+				<p>No outstanding request for subconnection notifications for this subconnection on this <xref href="class_r_connection.xml#class_r_connection">RConnection</xref>
+				</p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_connection_1ad93b14d81450e6dcd970a364ddd2e9a6">
+		<apiName>CancelAllSubConnectionNotification</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void CancelAllSubConnectionNotification()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RConnection::CancelAllSubConnectionNotification()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1157"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="970"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="981"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Cancels the request for notification to changes to the state of subconnections, made using the <xref href="class_r_connection.xml#class_r_connection_1a60e9a5eaf00aa58061aa13ca5d8c1bff">AllSubConnectionNotification()</xref>.</p>
+				<p>since v7.0s An attached connection: as a result of performing either a <xref href="class_r_connection.xml#class_r_connection_1a3d8e807960bbd1c9383f9fb975e6d2bd">Start()</xref> or an <xref href="class_r_connection.xml#class_r_connection_1ac1d1bd58d49752e6c15aa64edf346338">Attach()</xref> </p>
+				<p>An outstanding request for notification about changes to the state of subconnections. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_connection_1a203ac7e70dbbb104df4944918e6a3ce1">
+		<apiName>DataTransferredRequest</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void DataTransferredRequest(TPckg&lt; TUint &gt; &amp;aUplinkVolume, TPckg&lt; TUint &gt; &amp;aDownlinkVolume, TRequestStatus &amp;aStatus)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RConnection::DataTransferredRequest(TPckg&lt; TUint &gt; &amp;,TPckg&lt; TUint &gt; &amp;,TRequestStatus &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_pckg.xml#class_t_pckg">TPckg</apiRelation>&lt; <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation> &gt; &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aUplinkVolume</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On return, contains the amount of data in bytes transferred by this connection to the remote endpoint. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_pckg.xml#class_t_pckg">TPckg</apiRelation>&lt; <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation> &gt; &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDownlinkVolume</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On return, contains the amount of data in bytes transferred by this connection from the remote endpoint. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On return, the status of the request. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1159"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="983"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="997"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets the amount of data that has been transferred by the entire connection.</p>
+				<p>since v7.0s</p>
+				<p>An attached connection, as a result of performing either a <xref href="class_r_connection.xml#class_r_connection_1a3d8e807960bbd1c9383f9fb975e6d2bd">Start()</xref> or an <xref href="class_r_connection.xml#class_r_connection_1ac1d1bd58d49752e6c15aa64edf346338">Attach()</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_connection_1a41963c4efcf24716c4fbc5ce55518610">
+		<apiName>DataTransferredRequest</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void DataTransferredRequest(TSubConnectionUniqueId aSubConnectionUniqueId, TPckg&lt; TUint &gt; &amp;aUplinkVolume, TPckg&lt; TUint &gt; &amp;aDownlinkVolume, TRequestStatus &amp;aStatus)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RConnection::DataTransferredRequest(TSubConnectionUniqueId,TPckg&lt; TUint &gt; &amp;,TPckg&lt; TUint &gt; &amp;,TRequestStatus &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="es__sock_8h.xml#_1a8f81fd2534e8e8cb970bb2c347d60222">TSubConnectionUniqueId</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSubConnectionUniqueId</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A valid identifier for the subconnection being queried. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_pckg.xml#class_t_pckg">TPckg</apiRelation>&lt; <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation> &gt; &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aUplinkVolume</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On return, contains the amount of data in bytes transferred by this connection to the remote endpoint. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_pckg.xml#class_t_pckg">TPckg</apiRelation>&lt; <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation> &gt; &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDownlinkVolume</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On return, contains the amount of data in bytes transferred by this connection from the remote endpoint. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On return, the status of the request. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1160"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="999"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1014"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets the amount of data that has been transferred by the specified subconnection.</p>
+				<p>since v9.5. Replaced with <xref href="class_r_comms_data_monitoring_api_ext.xml#class_r_comms_data_monitoring_api_ext_1a127e450473836e315a61e42d738d8e8b">RCommsDataMonitoringApiExt::RequestDataTransferred</xref> </p>
+				<p>An attached connection, as a result of performing either a <xref href="class_r_connection.xml#class_r_connection_1a3d8e807960bbd1c9383f9fb975e6d2bd">Start()</xref> or an <xref href="class_r_connection.xml#class_r_connection_1ac1d1bd58d49752e6c15aa64edf346338">Attach()</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_connection_1a0bc0463ee33c3f1e88cdccd87a5f3d50">
+		<apiName>DataTransferredCancel</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void DataTransferredCancel()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RConnection::DataTransferredCancel()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1161"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1016"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1027"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Cancels a request for the amount of data transferred on the entire connection, issued by <xref href="class_r_connection.xml#class_r_connection_1a203ac7e70dbbb104df4944918e6a3ce1">DataTransferredRequest()</xref>.</p>
+				<p>since v7.0s An attached connection; either as a result of performing a <xref href="class_r_connection.xml#class_r_connection_1a3d8e807960bbd1c9383f9fb975e6d2bd">Start()</xref> or an <xref href="class_r_connection.xml#class_r_connection_1ac1d1bd58d49752e6c15aa64edf346338">Attach()</xref> </p>
+				<p>An outstanding request for the amount of data transferred on this connection made using GetDataTransferred() </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_connection_1a1c022254a1720a47233f2e928492c9b2">
+		<apiName>DataTransferredCancel</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void DataTransferredCancel(TSubConnectionUniqueId aSubConnectionUniqueId)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RConnection::DataTransferredCancel(TSubConnectionUniqueId)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="es__sock_8h.xml#_1a8f81fd2534e8e8cb970bb2c347d60222">TSubConnectionUniqueId</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSubConnectionUniqueId</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The identifier for the subconnection used to make the request. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1162"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1029"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1040"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Cancels a request for the amount of data transferred on a specified subconnection, issued by <xref href="class_r_connection.xml#class_r_connection_1a203ac7e70dbbb104df4944918e6a3ce1">DataTransferredRequest()</xref>.</p>
+				<p>since v9.5. Replaced with <xref href="class_r_comms_data_monitoring_api_ext.xml#class_r_comms_data_monitoring_api_ext_1a9b4b093e8d894b24a618905d00f56bb6">RCommsDataMonitoringApiExt::CancelDataTransferredRequest</xref> </p>
+				<p>An attached connection; either as a result of performing a <xref href="class_r_connection.xml#class_r_connection_1a3d8e807960bbd1c9383f9fb975e6d2bd">Start()</xref> or an <xref href="class_r_connection.xml#class_r_connection_1ac1d1bd58d49752e6c15aa64edf346338">Attach()</xref> </p>
+				<p>An outstanding request for the amount of data transferred on this connection made using GetDataTransferred() </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_connection_1a3506077ad1d70fff21220064a36d98eb">
+		<apiName>DataSentNotificationRequest</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void DataSentNotificationRequest(TUint aThreshold, TPckg&lt; TUint &gt; &amp;aUplinkVolume, TRequestStatus &amp;aStatus)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RConnection::DataSentNotificationRequest(TUint,TPckg&lt; TUint &gt; &amp;,TRequestStatus &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aThreshold</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The number of additional bytes to be sent by this connection before the request completes. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_pckg.xml#class_t_pckg">TPckg</apiRelation>&lt; <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation> &gt; &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aUplinkVolume</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The total number of bytes sent by this connection so far. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On return, the status of the request. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1163"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1042"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1060"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Requests a notification after an additional aThreshold bytes have been sent by the entire connection.</p>
+				<p>Making this request with an aThreshold of zero will result in the server reading the value in aUplinkVolume and producing a notification when the absolute amount of data specified here has been sent.</p>
+				<p>since v7.0s An attached connection, as a result of performing either a <xref href="class_r_connection.xml#class_r_connection_1a3d8e807960bbd1c9383f9fb975e6d2bd">Start()</xref> or an <xref href="class_r_connection.xml#class_r_connection_1ac1d1bd58d49752e6c15aa64edf346338">Attach()</xref> </p>
+				<p>No outstanding request for data sent notifications on this <xref href="class_r_connection.xml#class_r_connection">RConnection</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_connection_1a6e4dc8894edb9ddf3444c9aa416b223a">
+		<apiName>DataSentNotificationRequest</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void DataSentNotificationRequest(TSubConnectionUniqueId aSubConnectionUniqueId, TUint aThreshold, TPckg&lt; TUint &gt; &amp;aUplinkVolume, TRequestStatus &amp;aStatus)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RConnection::DataSentNotificationRequest(TSubConnectionUniqueId,TUint,TPckg&lt; TUint &gt; &amp;,TRequestStatus &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="es__sock_8h.xml#_1a8f81fd2534e8e8cb970bb2c347d60222">TSubConnectionUniqueId</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSubConnectionUniqueId</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A valid identifier for the subconnection of interest. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aThreshold</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The number of additional bytes to be sent by this connection before the request completes. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_pckg.xml#class_t_pckg">TPckg</apiRelation>&lt; <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation> &gt; &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aUplinkVolume</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The total number of bytes sent by this connection so far. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On return, the status of the request. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1164"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1062"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1082"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Requests a notification after an additional aThreshold bytes have been sent on a specified subconnection.</p>
+				<p>Making this request with an aThreshold of zero will result in the server reading the value in aUplinkVolume and producing a notification when the absolute amount of data specified here has been sent.</p>
+				<p>since v9.5. Replaced with <xref href="class_r_comms_data_monitoring_api_ext.xml#class_r_comms_data_monitoring_api_ext_1a74b06ab00bcf091457698a84a10ebb17">RCommsDataMonitoringApiExt::RequestDataSentNotification</xref> </p>
+				<p>An attached connection, as a result of performing either a <xref href="class_r_connection.xml#class_r_connection_1a3d8e807960bbd1c9383f9fb975e6d2bd">Start()</xref> or an <xref href="class_r_connection.xml#class_r_connection_1ac1d1bd58d49752e6c15aa64edf346338">Attach()</xref> </p>
+				<p>No outstanding request for data sent notifications for this subconnection on this <xref href="class_r_connection.xml#class_r_connection">RConnection</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_connection_1a9864142d0bdfd66bd357d44ee576866d">
+		<apiName>DataSentNotificationCancel</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void DataSentNotificationCancel()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RConnection::DataSentNotificationCancel()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1165"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1084"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1095"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Cancels a request for the amount of data sent on this connection, as issued by <xref href="class_r_connection.xml#class_r_connection_1a3506077ad1d70fff21220064a36d98eb">DataSentNotificationRequest()</xref>.</p>
+				<p>since v7.0s An attached connection, as a result of performing either a <xref href="class_r_connection.xml#class_r_connection_1a3d8e807960bbd1c9383f9fb975e6d2bd">Start()</xref> or an <xref href="class_r_connection.xml#class_r_connection_1ac1d1bd58d49752e6c15aa64edf346338">Attach()</xref> </p>
+				<p>An outstanding request for the amount of data transferred on this connection, made using <xref href="class_r_connection.xml#class_r_connection_1a3506077ad1d70fff21220064a36d98eb">DataSentNotificationRequest()</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_connection_1a3fbef2dbe899b6a5174a30e29ace88bf">
+		<apiName>DataSentNotificationCancel</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void DataSentNotificationCancel(TSubConnectionUniqueId aSubConnectionUniqueId)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RConnection::DataSentNotificationCancel(TSubConnectionUniqueId)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="es__sock_8h.xml#_1a8f81fd2534e8e8cb970bb2c347d60222">TSubConnectionUniqueId</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSubConnectionUniqueId</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The identifier for the subconnection used to make the request. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1166"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1097"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1109"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Cancels a request for the amount of data sent by the specified subconnection.</p>
+				<p>since v9.5. Replaced with <xref href="class_r_comms_data_monitoring_api_ext.xml#class_r_comms_data_monitoring_api_ext_1a5b01044e423ff3a9d46a60100678c45f">RCommsDataMonitoringApiExt::CancelDataSentNotificationRequest</xref> </p>
+				<p>An attached connection, as a result of performing either a <xref href="class_r_connection.xml#class_r_connection_1a3d8e807960bbd1c9383f9fb975e6d2bd">Start()</xref> or an <xref href="class_r_connection.xml#class_r_connection_1ac1d1bd58d49752e6c15aa64edf346338">Attach()</xref> </p>
+				<p>An outstanding request for the amount of data transferred on this subconnection, made using <xref href="class_r_connection.xml#class_r_connection_1a3506077ad1d70fff21220064a36d98eb">DataSentNotificationRequest()</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_connection_1a9953e9e3b071d18fbec8dd68dfd92bcb">
+		<apiName>DataReceivedNotificationRequest</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void DataReceivedNotificationRequest(TUint aThreshold, TPckg&lt; TUint &gt; &amp;aDownlinkVolume, TRequestStatus &amp;aStatus)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RConnection::DataReceivedNotificationRequest(TUint,TPckg&lt; TUint &gt; &amp;,TRequestStatus &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aThreshold</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The number of additional bytes to be received by this connection before the request completes. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_pckg.xml#class_t_pckg">TPckg</apiRelation>&lt; <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation> &gt; &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDownlinkVolume</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The total number of bytes received by this connection so far </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On return, the status of the request. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1167"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1111"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1133"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Requests a notification after an additional aThreshold bytes have been received by this connection.</p>
+				<p>Completes when an amount of data equal to aThreshold has been received, starting from when the request is posted.</p>
+				<p>Making this request with an aThreshold of zero will result in the server reading the value in aDownlinkVolume, and producing a notification when the absolute amount of data specified here has been sent.</p>
+				<p>since v7.0s An attached connection, as a result of performing either a <xref href="class_r_connection.xml#class_r_connection_1a3d8e807960bbd1c9383f9fb975e6d2bd">Start()</xref> or an <xref href="class_r_connection.xml#class_r_connection_1ac1d1bd58d49752e6c15aa64edf346338">Attach()</xref> </p>
+				<p>No outstanding request for data received notifications for this connection on this <xref href="class_r_connection.xml#class_r_connection">RConnection</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_connection_1aa2702b2f73efa0f7d297a84f7decc52c">
+		<apiName>DataReceivedNotificationRequest</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void DataReceivedNotificationRequest(TSubConnectionUniqueId aSubConnectionUniqueId, TUint aThreshold, TPckg&lt; TUint &gt; &amp;aDownlinkVolume, TRequestStatus &amp;aStatus)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RConnection::DataReceivedNotificationRequest(TSubConnectionUniqueId,TUint,TPckg&lt; TUint &gt; &amp;,TRequestStatus &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="es__sock_8h.xml#_1a8f81fd2534e8e8cb970bb2c347d60222">TSubConnectionUniqueId</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSubConnectionUniqueId</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A valid identifier for a subconnection. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aThreshold</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The number of additional bytes to be received by this connection before the request completes. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_pckg.xml#class_t_pckg">TPckg</apiRelation>&lt; <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation> &gt; &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDownlinkVolume</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On return, the total number of bytes received by this connection so far. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On return, the status of the request. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1168"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1135"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1158"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Requests notification after an additional aThreshold bytes have been received by a specified subconnection.</p>
+				<p>Completes when an amount of data equal to aThreshold has been received, starting from when the request is posted.</p>
+				<p>Making this request with an aThreshold of zero will result in the server reading the value in aDownlinkVolume, and producing a notification when the absolute amount of data specified here has been sent.</p>
+				<p>since v9.5. Replaced with <xref href="class_r_comms_data_monitoring_api_ext.xml#class_r_comms_data_monitoring_api_ext_1a42c127d96b4fde03405ac754b2e4e39d">RCommsDataMonitoringApiExt::RequestDataReceivedNotification</xref> </p>
+				<p>An attached connection, as a result of performing either a <xref href="class_r_connection.xml#class_r_connection_1a3d8e807960bbd1c9383f9fb975e6d2bd">Start()</xref> or an <xref href="class_r_connection.xml#class_r_connection_1ac1d1bd58d49752e6c15aa64edf346338">Attach()</xref> </p>
+				<p>No outstanding request for data received notifications for this subconnection on this <xref href="class_r_connection.xml#class_r_connection">RConnection</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_connection_1a722413d2e199b767dde29d3f0eaba707">
+		<apiName>DataReceivedNotificationCancel</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void DataReceivedNotificationCancel()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RConnection::DataReceivedNotificationCancel()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1169"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1160"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1171"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Cancels a request (issued by DataReceivedNotificationRequest ()) for the amount of data received by the entire connection.</p>
+				<p>since v7.0s An attached connection, as a result of performing either a <xref href="class_r_connection.xml#class_r_connection_1a3d8e807960bbd1c9383f9fb975e6d2bd">Start()</xref> or an <xref href="class_r_connection.xml#class_r_connection_1ac1d1bd58d49752e6c15aa64edf346338">Attach()</xref> </p>
+				<p>An outstanding request for the amount of data received on this connection made using <xref href="class_r_connection.xml#class_r_connection_1a9953e9e3b071d18fbec8dd68dfd92bcb">DataReceivedNotificationRequest()</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_connection_1ad05a56e0940346ea3bc8dd8c6a9089bd">
+		<apiName>DataReceivedNotificationCancel</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void DataReceivedNotificationCancel(TSubConnectionUniqueId aSubConnectionUniqueId)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RConnection::DataReceivedNotificationCancel(TSubConnectionUniqueId)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="es__sock_8h.xml#_1a8f81fd2534e8e8cb970bb2c347d60222">TSubConnectionUniqueId</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSubConnectionUniqueId</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The identifier for the subconnection used to make the request. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1170"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1173"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1188"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Cancels a request (issued by DataReceivedNotificationRequest ()) for the amount of data received by the specified subconnection.</p>
+				<p>since v9.5. Replaced with <xref href="class_r_comms_data_monitoring_api_ext.xml#class_r_comms_data_monitoring_api_ext_1a8d21037fdacede14003acf6106454767">RCommsDataMonitoringApiExt::CancelDataReceivedNotificationRequest</xref> </p>
+				<p>An attached connection, as a result of performing either a <xref href="class_r_connection.xml#class_r_connection_1a3d8e807960bbd1c9383f9fb975e6d2bd">Start()</xref> or an <xref href="class_r_connection.xml#class_r_connection_1ac1d1bd58d49752e6c15aa64edf346338">Attach()</xref> </p>
+				<p>An outstanding request for the amount of data received on this subconnection made using <xref href="class_r_connection.xml#class_r_connection_1a9953e9e3b071d18fbec8dd68dfd92bcb">DataReceivedNotificationRequest()</xref>
+				</p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_connection_1a04cd483668eea7d04d667caca80ed565">
+		<apiName>IsConnectionActiveRequest</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void IsConnectionActiveRequest(TUint aSecs, TPckg&lt; TBool &gt; &amp;aState, TRequestStatus &amp;aStatus)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RConnection::IsConnectionActiveRequest(TUint,TPckg&lt; TBool &gt; &amp;,TRequestStatus &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSecs</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The period for checking whether the connection is active. The maximum period allowed is approximately 35 mins.</apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_pckg.xml#class_t_pckg">TPckg</apiRelation>&lt; <apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation> &gt; &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aState</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefinitionName>aConnectionActive</cxxFunctionParameterDefinitionName>
+						<apiDefNote>On entry, the state the client believes the subconnection is currently in; on return, contains the current state of the subconnection. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On return, the status of the request </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1171"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1190"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1211"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Checks whether the connection is active or inactive.</p>
+				<p>Notes whether any data is passed for aSecs after the time of call before responding. If data is passed the connection is considered active; otherwise it is considered inactive.</p>
+				<p>since v7.0s An attached connection, as a result of performing either a <xref href="class_r_connection.xml#class_r_connection_1a3d8e807960bbd1c9383f9fb975e6d2bd">Start()</xref> or an <xref href="class_r_connection.xml#class_r_connection_1ac1d1bd58d49752e6c15aa64edf346338">Attach()</xref> </p>
+				<p>No outstanding request for activity notifications for this connection on this <xref href="class_r_connection.xml#class_r_connection">RConnection</xref> </p>
+				<p>
+					<xref href="class_r_connection.xml#class_r_connection_1a54fed430a3d0652098bd086bdf1f8d84">IsSubConnectionActiveRequest()</xref> for details of when this method will return. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_connection_1a7fd89fad3361c73a551805bcb282a605">
+		<apiName>IsConnectionActiveCancel</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void IsConnectionActiveCancel()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RConnection::IsConnectionActiveCancel()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1172"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1213"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1223"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Cancels a request for activity notifications on the connection   since v7.0s An attached connection, as a result of performing either a <xref href="class_r_connection.xml#class_r_connection_1a3d8e807960bbd1c9383f9fb975e6d2bd">Start()</xref> or an <xref href="class_r_connection.xml#class_r_connection_1ac1d1bd58d49752e6c15aa64edf346338">Attach()</xref> </p>
+				<p>An outstanding request for activity notification on this connection made using <xref href="class_r_connection.xml#class_r_connection_1a04cd483668eea7d04d667caca80ed565">IsConnectionActiveRequest()</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_connection_1a54fed430a3d0652098bd086bdf1f8d84">
+		<apiName>IsSubConnectionActiveRequest</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void IsSubConnectionActiveRequest(TSubConnectionUniqueId aSubConnectionUniqueId, TUint aSecs, TPckg&lt; TBool &gt; &amp;aState, TRequestStatus &amp;aStatus)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RConnection::IsSubConnectionActiveRequest(TSubConnectionUniqueId,TUint,TPckg&lt; TBool &gt; &amp;,TRequestStatus &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="es__sock_8h.xml#_1a8f81fd2534e8e8cb970bb2c347d60222">TSubConnectionUniqueId</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSubConnectionUniqueId</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A valid identifier for a subconnection </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSecs</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The quantisation period for checking whether the subconnection is active </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_pckg.xml#class_t_pckg">TPckg</apiRelation>&lt; <apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation> &gt; &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aState</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefinitionName>aSubconnectionActive</cxxFunctionParameterDefinitionName>
+						<apiDefNote>The state the client believes the subconnection is currently in; on return, contains the current state of the subconnection </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On return, the status of the request </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1173"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1225"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1244"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Checks whether the subconnection is active or has changed state (active/inactive)</p>
+				<p>since v7.0s An attached connection, as a result of performing either a <xref href="class_r_connection.xml#class_r_connection_1a3d8e807960bbd1c9383f9fb975e6d2bd">Start()</xref> or an <xref href="class_r_connection.xml#class_r_connection_1ac1d1bd58d49752e6c15aa64edf346338">Attach()</xref> </p>
+				<p>No outstanding request for activity notifications for this subconnection on this <xref href="class_r_connection.xml#class_r_connection">RConnection</xref> </p>
+				<note type="note">
+					<p>The request will be completed when the aState passed in by the client is not the same as the current state, but this transition can only occur in quantised periods of aSecs </p>
+					<p>The maximum period allowed is approximately 35 mins </p>
+				</note>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_connection_1a3239a1e1339b2bcc6946952dbd033e34">
+		<apiName>IsSubConnectionActiveCancel</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void IsSubConnectionActiveCancel(TSubConnectionUniqueId aSubConnectionUniqueId)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RConnection::IsSubConnectionActiveCancel(TSubConnectionUniqueId)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="es__sock_8h.xml#_1a8f81fd2534e8e8cb970bb2c347d60222">TSubConnectionUniqueId</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSubConnectionUniqueId</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The identifier for the subconnection used to make the request </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1174"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1246"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1258"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Cancels a request for activity notifications on the specified subconnection   since v7.0s An attached connection, as a result of performing either a <xref href="class_r_connection.xml#class_r_connection_1a3d8e807960bbd1c9383f9fb975e6d2bd">Start()</xref> or an <xref href="class_r_connection.xml#class_r_connection_1ac1d1bd58d49752e6c15aa64edf346338">Attach()</xref> </p>
+				<p>An outstanding request for an activity notification on this subconnection made using <xref href="class_r_connection.xml#class_r_connection_1a54fed430a3d0652098bd086bdf1f8d84">IsSubConnectionActiveRequest()</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_connection_1a0f95ac5307a47a69883fa75700bad456">
+		<apiName>SameSession</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>TBool SameSession(TInt aSessionHandle)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RConnection::SameSession(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSessionHandle</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The handle which is to be checked against that of this RConnection </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1176"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="806"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="818"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Checks that the Session Handle passed is the same as that of this <xref href="class_r_connection.xml#class_r_connection">RConnection</xref>.</p>
+				<p>Use to verify the <xref href="class_r_connection.xml#class_r_connection">RConnection</xref> argument passed to the <xref href="class_r_socket.xml#class_r_socket">RSocket</xref> and <xref href="class_r_host_resolver.xml#class_r_host_resolver">RHostResolver</xref> Open(..., <xref href="class_r_connection.xml#class_r_connection">RConnection</xref>&amp; aConnection) methods.</p>
+				<p>ETrue if handle is the same, else EFalse  </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxVariable id="class_r_connection_1ac6258f87bb6b5ced73d9a21cd6e46f7a">
+		<apiName>iNewISPId</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="class_t_pckg.xml#class_t_pckg">TPckg</apiRelation>&lt; <apiRelation href="e32def_8h.xml#_1a8240e11f17c80b6b222fc2af50234da4">TUint32</apiRelation> &gt;</cxxVariableDeclaredType>
+				<cxxVariableScopedName>RConnection</cxxVariableScopedName>
+				<cxxVariablePrototype>TPckg&lt; TUint32 &gt; iNewISPId</cxxVariablePrototype>
+				<cxxVariableNameLookup>RConnection::iNewISPId</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1178"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_r_connection_1ab34e28b1511ad96883139be2673cb730">
+		<apiName>iReserved</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a8240e11f17c80b6b222fc2af50234da4">TUint32</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>RConnection</cxxVariableScopedName>
+				<cxxVariablePrototype>TUint32 iReserved[4]</cxxVariablePrototype>
+				<cxxVariableNameLookup>RConnection::iReserved</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1179"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+</cxxClass>

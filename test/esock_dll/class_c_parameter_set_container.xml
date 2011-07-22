@@ -1,0 +1,941 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_c_parameter_set_container">
+	<apiName>CParameterSetContainer</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassDerivations>
+				<cxxClassDerivation>
+					<cxxClassDerivationAccessSpecifier value="public"/>
+					<cxxClassBaseClass href="class_c_base.xml#class_c_base">CBase</cxxClassBaseClass>
+				</cxxClassDerivation>
+			</cxxClassDerivations>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_parameterbundle.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="62"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/comms-infras/es_parameterbundle.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="56"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="168"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>A container for 0..n Parameter Sets. Can be seen as a &quot;row&quot; or &quot;record&quot; of information, with its own 32 bit Id to be used as a key to the set if required </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_c_parameter_set_container_1a17ff6c71e86312e8b32550e0dee3d933">
+		<apiName>NewL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_c_parameter_set_container.xml#class_c_parameter_set_container">CParameterSetContainer</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CParameterSetContainer</cxxFunctionScopedName>
+				<cxxFunctionPrototype>static IMPORT_C CParameterSetContainer * NewL(CParameterBundleBase &amp;aBundle, TUint32 aContainerId=0)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CParameterSetContainer::NewL(CParameterBundleBase &amp;,TUint32)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_c_parameter_bundle_base.xml#class_c_parameter_bundle_base">CParameterBundleBase</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aBundle</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Bundle that this container is to be added to </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a8240e11f17c80b6b222fc2af50234da4">TUint32</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aContainerId</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>0</cxxFunctionParameterDefaultValue>
+						<apiDefNote>identifier for the specific container instance </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_parameterbundle.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="64"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_parameterbundle.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="51"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="59"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Creates a new parameter set container. This class is used as a container for a number of parameter sets (generic and extension) that are associated with each other. It is a specific instantiatable class and therefore creates an instance of <xref href="class_c_parameter_set_container.xml#class_c_parameter_set_container">CParameterSetContainer</xref> without using ECOM.</p>
+				<p>a pointer to a parameter set container if successful, otherwise leaves with system error code. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_parameter_set_container_1a5d4d621106bf3018f07932ba82628bb4">
+		<apiName>LoadL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_c_parameter_set_container.xml#class_c_parameter_set_container">CParameterSetContainer</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CParameterSetContainer</cxxFunctionScopedName>
+				<cxxFunctionPrototype>static IMPORT_C CParameterSetContainer * LoadL(CParameterBundleBase &amp;aBundle, TPtrC8 &amp;aBuffer)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CParameterSetContainer::LoadL(CParameterBundleBase &amp;,TPtrC8 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_c_parameter_bundle_base.xml#class_c_parameter_bundle_base">CParameterBundleBase</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aBundle</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Bundle that this container is to be added to </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_ptr_c8.xml#class_t_ptr_c8">TPtrC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aBuffer</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Buffer containing the serialised object information </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_parameterbundle.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="65"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_parameterbundle.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="87"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="96"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Creates a new parameter set container from a buffer containing the serialised object.</p>
+				<p>a pointer to a parameter set container if successful, otherwise leaves with system error code. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_parameter_set_container_1ad0fa005b361a4ad90947453b540df7fa">
+		<apiName>NewL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_c_parameter_set_container.xml#class_c_parameter_set_container">CParameterSetContainer</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CParameterSetContainer</cxxFunctionScopedName>
+				<cxxFunctionPrototype>static IMPORT_C CParameterSetContainer * NewL(TUint32 aContainerId=0)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CParameterSetContainer::NewL(TUint32)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a8240e11f17c80b6b222fc2af50234da4">TUint32</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aContainerId</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>0</cxxFunctionParameterDefaultValue>
+						<apiDefNote>identifier for the specific container instance </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_parameterbundle.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="67"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_parameterbundle.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="70"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="77"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Creates a new parameter set container. This class is used as a container for a number of parameter sets (generic and extension) that are associated with each other. It is a specific instantiatable class and therefore creates an instance of <xref href="class_c_parameter_set_container.xml#class_c_parameter_set_container">CParameterSetContainer</xref> without using ECOM.</p>
+				<p>a pointer to a parameter set container if successful, otherwise leaves with system error code. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_parameter_set_container_1a677c4b9bf31453bfbda026023f62f15e">
+		<apiName>LoadL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_c_parameter_set_container.xml#class_c_parameter_set_container">CParameterSetContainer</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CParameterSetContainer</cxxFunctionScopedName>
+				<cxxFunctionPrototype>static IMPORT_C CParameterSetContainer * LoadL(TPtrC8 &amp;aBuffer)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CParameterSetContainer::LoadL(TPtrC8 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_ptr_c8.xml#class_t_ptr_c8">TPtrC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aBuffer</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Buffer containing the serialised object information </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_parameterbundle.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="68"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_parameterbundle.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="105"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="113"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Creates a new parameter set container from a buffer containing the serialised object.</p>
+				<p>a pointer to a parameter set container if successful, otherwise leaves with system error code. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_parameter_set_container_1a0370075978abd4450008cda6c322c550">
+		<apiName>~CParameterSetContainer</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionVirtual/>
+				<cxxFunctionDestructor/>
+				<cxxFunctionDeclaredType>IMPORT_C</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CParameterSetContainer</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual IMPORT_C ~CParameterSetContainer()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CParameterSetContainer::~CParameterSetContainer()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_parameterbundle.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="71"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_parameterbundle.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="116"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="120"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_parameter_set_container_1a51c6100e7a3d6cbf211a32cbebdabd6c">
+		<apiName>Id</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a8240e11f17c80b6b222fc2af50234da4">TUint32</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CParameterSetContainer</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TUint32 Id() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CParameterSetContainer::Id()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_parameterbundle.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="74"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="73"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="76"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_parameter_set_container_1a8b4539f39cb93e6e2708884a17c719b8">
+		<apiName>AddParameterSetL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CParameterSetContainer</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void AddParameterSetL(XParameterSetBase *aParameterSet)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CParameterSetContainer::AddParameterSetL(XParameterSetBase *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_x_parameter_set_base.xml#class_x_parameter_set_base">XParameterSetBase</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aParameterSet</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_parameterbundle.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="78"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_parameterbundle.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="123"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="128"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_parameter_set_container_1a9ceae7b43ef25cffcd9593a9562840ad">
+		<apiName>AddParameterSet</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CParameterSetContainer</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt AddParameterSet(XParameterSetBase *aParameterSet)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CParameterSetContainer::AddParameterSet(XParameterSetBase *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_x_parameter_set_base.xml#class_x_parameter_set_base">XParameterSetBase</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aParameterSet</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_parameterbundle.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="79"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_parameterbundle.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="130"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="134"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_parameter_set_container_1ae94308d6660dc198922ea221d1831856">
+		<apiName>FindParameterSet</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_x_parameter_set_base.xml#class_x_parameter_set_base">XParameterSetBase</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CParameterSetContainer</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C XParameterSetBase * FindParameterSet(const Meta::STypeId &amp;aSetId)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CParameterSetContainer::FindParameterSet(const Meta::STypeId &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="struct_meta_1_1_s_type_id.xml#struct_meta_1_1_s_type_id">Meta::STypeId</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSetId</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The STypeId of the set </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_parameterbundle.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="86"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_parameterbundle.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="142"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="153"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Searches a container for a parameter set of the given type. Pointer to the set if found, otherwise a NULL pointer.</p>
+				<p>Searches a parameter set container for a parameter set. Pointer to the set if found, otherwise a NULL pointer. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_parameter_set_container_1ac1ed1f03a96f277507f931fb88b75951">
+		<apiName>FindParameterSet</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>const <apiRelation href="class_x_parameter_set_base.xml#class_x_parameter_set_base">XParameterSetBase</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CParameterSetContainer</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline const XParameterSetBase * FindParameterSet(const Meta::STypeId &amp;aSetId) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CParameterSetContainer::FindParameterSet(const Meta::STypeId &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="struct_meta_1_1_s_type_id.xml#struct_meta_1_1_s_type_id">Meta::STypeId</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSetId</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_parameterbundle.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="89"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="88"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="91"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_parameter_set_container_1a9d4852440def04ca4a20f00e3ca1b24d">
+		<apiName>FindParameterSet</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CParameterSetContainer</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TBool FindParameterSet(const XParameterSetBase &amp;aRhs)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CParameterSetContainer::FindParameterSet(const XParameterSetBase &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_x_parameter_set_base.xml#class_x_parameter_set_base">XParameterSetBase</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aRhs</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The parameter set to find </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_parameterbundle.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="98"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_parameterbundle.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="156"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="167"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Searches a container for a specific parameter set instance. ETrue if set was found in parameter set container. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_parameter_set_container_1a73a6e13fedf94f14ac38c1f2b3ed71b5">
+		<apiName>GetParameterSet</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_x_parameter_set_base.xml#class_x_parameter_set_base">XParameterSetBase</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CParameterSetContainer</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C XParameterSetBase * GetParameterSet(TInt aIndex)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CParameterSetContainer::GetParameterSet(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_parameterbundle.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="99"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_parameterbundle.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="175"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="180"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Searches a parameter set container for a parameter set. Pointer to the set if found, otherwise a NULL pointer. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_parameter_set_container_1a1e0f66b054666fac735b3ed95b599e9c">
+		<apiName>GetParameterSet</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>const <apiRelation href="class_x_parameter_set_base.xml#class_x_parameter_set_base">XParameterSetBase</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CParameterSetContainer</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline const XParameterSetBase * GetParameterSet(TInt aIndex) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CParameterSetContainer::GetParameterSet(TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_parameterbundle.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="102"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="101"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="104"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_parameter_set_container_1af36a5b28e504e0446f9ac8d5bb1144d9">
+		<apiName>CountParameterSets</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CParameterSetContainer</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt CountParameterSets() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CParameterSetContainer::CountParameterSets()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_parameterbundle.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="107"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="106"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="109"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_parameter_set_container_1a64999491a8995d06eaa9353418d63b01">
+		<apiName>ReplaceParameterSetL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CParameterSetContainer</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void ReplaceParameterSetL(TInt aIndex, XParameterSetBase *aNewSet)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CParameterSetContainer::ReplaceParameterSetL(TInt,XParameterSetBase *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote>- index of container to delete and replace </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_x_parameter_set_base.xml#class_x_parameter_set_base">XParameterSetBase</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aNewSet</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_parameterbundle.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="117"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_parameterbundle.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="268"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="271"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Deletes set at index aIndex and replaces it with aParameterSet. Ownership of set passes to this parameter set container. throws KErrArgument if aIndex out of range </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_parameter_set_container_1a51b2ce02cd2f46d60a96608a2f525a18">
+		<apiName>ReplaceParameterSet</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CParameterSetContainer</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt ReplaceParameterSet(TInt aIndex, XParameterSetBase *aNewSet)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CParameterSetContainer::ReplaceParameterSet(TInt,XParameterSetBase *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_x_parameter_set_base.xml#class_x_parameter_set_base">XParameterSetBase</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aNewSet</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_parameterbundle.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="118"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_parameterbundle.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="273"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="290"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_parameter_set_container_1a848fc8eed0ffb19cb9d52fd6d91c830b">
+		<apiName>DeleteParameterSetL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CParameterSetContainer</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void DeleteParameterSetL(TInt aIndex)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CParameterSetContainer::DeleteParameterSetL(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote>- index of container to delete and remove from array </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_parameterbundle.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="124"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_parameterbundle.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="293"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="296"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Deletes set at index, and reorganises the array so it&apos;s 1 smaller throws KErrArgument if aIndex out of range </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_parameter_set_container_1a74fa3f8e14daefc472587647d06b9a98">
+		<apiName>DeleteParameterSet</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CParameterSetContainer</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt DeleteParameterSet(TInt aIndex)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CParameterSetContainer::DeleteParameterSet(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_parameterbundle.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="125"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_parameterbundle.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="298"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="308"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_parameter_set_container_1a3bd0fd41f3267c25cca95cde18d3745d">
+		<apiName>RemoveParameterSet</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_x_parameter_set_base.xml#class_x_parameter_set_base">XParameterSetBase</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CParameterSetContainer</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C XParameterSetBase * RemoveParameterSet(TInt aIndex)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CParameterSetContainer::RemoveParameterSet(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote>- index of container to delete and remove from array </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_parameterbundle.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="133"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_parameterbundle.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="311"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="321"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Removes the parameter set at the index. Ownership is transfered to the calling method returns NULL if the index was invalid, otherwise a pointer to the removed parameter set. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_parameter_set_container_1a8fefe463320a373c3a45113c6b3c42e6">
+		<apiName>GrowToFitL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CParameterSetContainer</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void GrowToFitL(TInt aMinSize)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CParameterSetContainer::GrowToFitL(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMinSize</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_parameterbundle.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="137"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_parameterbundle.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="324"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="327"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Makes room for a bulk setting operation </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_parameter_set_container_1a24e68312e6fe48b80471189738ae2f16">
+		<apiName>GrowToFit</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CParameterSetContainer</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt GrowToFit(TInt aMinSize)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CParameterSetContainer::GrowToFit(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMinSize</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_parameterbundle.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="138"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_parameterbundle.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="329"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="346"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_parameter_set_container_1a280797e31d1514bbbb3bcaeec9cc665f">
+		<apiName>ClearParameterSetPointer</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CParameterSetContainer</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void ClearParameterSetPointer(TInt aIndex)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CParameterSetContainer::ClearParameterSetPointer(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_parameterbundle.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="141"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="140"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="143"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_parameter_set_container_1a500339607c819f53379d1bc36cab0e17">
+		<apiName>Load</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionVirtual/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CParameterSetContainer</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual IMPORT_C TInt Load(TPtrC8 &amp;aBuffer)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CParameterSetContainer::Load(TPtrC8 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_ptr_c8.xml#class_t_ptr_c8">TPtrC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aBuffer</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Buffer containing the serialised container object </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_parameterbundle.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="146"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_parameterbundle.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="234"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="265"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Instructs this container to set its members based on the serialised data in the buffer passed.</p>
+				<p>KErrNone if successful, otherwise system wide error </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_parameter_set_container_1a67887481936a809474ee7a800f207d3f">
+		<apiName>Store</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionVirtual/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CParameterSetContainer</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual IMPORT_C TInt Store(TDes8 &amp;aBuffer) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CParameterSetContainer::Store(TDes8 &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aBuffer</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_parameterbundle.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="147"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_parameterbundle.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="201"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="212"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Instructs this container to create a serialised version of itself and append it to the buffer that has been passed.</p>
+				<p>KErrNone if successful, otherwise system wide error (e.g. KErrOverflow if the descriptor is too small) If unsuccessful, there is no guarantee as to the buffer or data stored in it. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_parameter_set_container_1a13205d7ac8e2291e33f831b252fce63d">
+		<apiName>Length</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionVirtual/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CParameterSetContainer</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual IMPORT_C TInt Length() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CParameterSetContainer::Length()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_parameterbundle.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="148"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_parameterbundle.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="187"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="190"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Calculates the length of buffer required to serialise this parameter set container. Length of buffer required. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_parameter_set_container_1a5509e52d0e86161492811b35716041dd">
+		<apiName>CParameterSetContainer</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>CParameterSetContainer</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline CParameterSetContainer(TUint32 aContainerId)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CParameterSetContainer::CParameterSetContainer(TUint32)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a8240e11f17c80b6b222fc2af50234da4">TUint32</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aContainerId</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_parameterbundle.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="153"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="151"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="154"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_parameter_set_container_1af798d22713d4878d55ff9f448051dcd4">
+		<apiName>ConstructL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CParameterSetContainer</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void ConstructL(CParameterBundleBase &amp;aBundle)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CParameterSetContainer::ConstructL(CParameterBundleBase &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_c_parameter_bundle_base.xml#class_c_parameter_bundle_base">CParameterBundleBase</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aBundle</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Bundle (parent container) that this new parameter set container is to be added to </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_parameterbundle.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="156"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_parameterbundle.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="221"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="224"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Set up the container with empty sets</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_parameter_set_container_1add20d642bbf98904a2d1777e89cd075a">
+		<apiName>Copy</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionInline/>
+				<cxxFunctionVirtual/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CParameterSetContainer</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline virtual void Copy(const TAny *)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CParameterSetContainer::Copy(const TAny *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_parameterbundle.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="162"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="161"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="164"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxVariable id="class_c_parameter_set_container_1ad5c34620d25e03435452d92b147bde4d">
+		<apiName>iContainerId</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a8240e11f17c80b6b222fc2af50234da4">TUint32</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>CParameterSetContainer</cxxVariableScopedName>
+				<cxxVariablePrototype>TUint32 iContainerId</cxxVariablePrototype>
+				<cxxVariableNameLookup>CParameterSetContainer::iContainerId</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_parameterbundle.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="166"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_c_parameter_set_container_1a634155beebc83512be15056db48c67a4">
+		<apiName>iParameterSets</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="class_meta_1_1_r_meta_data_container.xml#class_meta_1_1_r_meta_data_container">Meta::RMetaDataEComContainer</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>CParameterSetContainer</cxxVariableScopedName>
+				<cxxVariablePrototype>Meta::RMetaDataEComContainer iParameterSets</cxxVariablePrototype>
+				<cxxVariableNameLookup>CParameterSetContainer::iParameterSets</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_parameterbundle.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="167"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxClassInherits>
+		<cxxClassInheritsDetail>
+			<cxxClassFunctionInherited href="class_c_parameter_set_container.xml#class_c_base_1a240de7932690a4e987d75690b0b6f82b">CBase::CBase()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_parameter_set_container.xml#class_c_base_1ac0a06aeab68b3e01be81f9dd79e011c6">CBase::Delete(CBase *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_parameter_set_container.xml#class_c_base_1aae681a54d9c9b10c7d42e7e32ff109d5">CBase::Extension_(TUint,TAny *&amp;,TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_parameter_set_container.xml#class_c_base_1af4c4965092a763b0856ccbfa3cf99eaf">CBase::operator new(TUint)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_parameter_set_container.xml#class_c_base_1ab9e5f557dea4db22886189926687ddc1">CBase::operator new(TUint,TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_parameter_set_container.xml#class_c_base_1aa464dd21494443ac109084ed03b81f28">CBase::operator new(TUint,TLeave)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_parameter_set_container.xml#class_c_base_1af8429815362d4df6fecd47179e0c5dfe">CBase::operator new(TUint,TLeave,TUint)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_parameter_set_container.xml#class_c_base_1a80505bdf8b1b20a2ed102307a78eeeeb">CBase::operator new(TUint,TUint)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_parameter_set_container.xml#class_c_base_1a1390361b94424be22bb2b1020eb400ea">CBase::~CBase()</cxxClassFunctionInherited>
+		</cxxClassInheritsDetail>
+	</cxxClassInherits>
+</cxxClass>

@@ -1,0 +1,656 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_t_fixed_array">
+	<apiName>TFixedArray</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="5134"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="5133"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="5165"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>A thin wrapper class for C++ arrays allowing automatic checking of index values to ensure that all accesses are legal.</p>
+			<p>The class also supports the deletion of objects.</p>
+			<p>The class is templated, based on a class type and an integer value. The class type defines the type of object contained in the array; the integer value defines the size (dimension) of the array.</p>
+			<p>A wrapper object can be:</p>
+			<p>1. embedded in objects allocated on the heap.</p>
+			<p>2. used on the program stack. </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxTypedef id="class_t_fixed_array_1aef3faac19f70277d4555919e437f54c7">
+		<apiName>ThisClass</apiName>
+		<cxxTypedefDetail>
+			<cxxTypedefDefinition>
+				<cxxTypedefAccessSpecifier value="private"/>
+				<cxxTypedefDeclaredType>
+					<apiRelation href="class_t_fixed_array.xml#class_t_fixed_array">TFixedArray</apiRelation>&lt; T, S &gt;</cxxTypedefDeclaredType>
+				<cxxTypedefScopedName>TFixedArray</cxxTypedefScopedName>
+				<cxxTypedefPrototype>TFixedArray&lt; T, S &gt; ThisClass</cxxTypedefPrototype>
+				<cxxTypedefNameLookup>TFixedArray::ThisClass</cxxTypedefNameLookup>
+				<cxxTypedefAPIItemLocation>
+					<cxxTypedefDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxTypedefDeclarationFileLine name="lineNumber" value="5135"/>
+				</cxxTypedefAPIItemLocation>
+			</cxxTypedefDefinition>
+			<apiDesc/>
+		</cxxTypedefDetail>
+	</cxxTypedef>
+	<cxxFunction id="class_t_fixed_array_1aa0c9002efb838a282e4741f2986ee49b">
+		<apiName>TFixedArray</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TFixedArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TFixedArray()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TFixedArray::TFixedArray()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5137"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="4687"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="4693"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Default constructor.</p>
+				<p>Constructs an uninitialised C++ array. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_fixed_array_1a718ff5bb967a5ebb38b4b26e2a69a641">
+		<apiName>TFixedArray</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TFixedArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TFixedArray(const T *aList, TInt aLength)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TFixedArray::TFixedArray(const T *,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const T *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aList</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A pointer to a set of contiguous objects. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The number of contiguous objects to be copied. This value must not be negative and must not be greater than the size of the array as defined by the integer template parameter.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5138"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="4720"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="4732"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Constructs a C++ array initialised with the specified objects.</p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>USER 133, in a debug build only, if aLength is negative or is greater than the size of the array as defined by the integer template parameter. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_fixed_array_1aa731faaadc33954b353a3e9fd8c15a17">
+		<apiName>Copy</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TFixedArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void Copy(const T *aList, TInt aLength)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TFixedArray::Copy(const T *,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const T *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aList</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A pointer to a set of contiguous objects. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The number of contiguous objects to be copied. This value must not be negative and must not be greater than the size of the array as defined by the integer template parameter.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5140"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="4699"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="4714"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Copies the specified set of contiguous objects into the C++ array.</p>
+				<p>The copy operation starts at the beginning of the array, replacing any existing data.</p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>USER 133, in a debug build only, if aLength is negative or is greater than the size of the array as defined by the integer template parameter. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_fixed_array_1a46cf5b9bea4d26cca5c04a9359a7c8cb">
+		<apiName>Reset</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TFixedArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void Reset()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TFixedArray::Reset()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5141"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="4738"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="4742"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Fills every element of the array with binary zeroes. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_fixed_array_1a8c74f4291a907457b18ebb561dfef188">
+		<apiName>DeleteAll</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TFixedArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void DeleteAll()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TFixedArray::DeleteAll()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5142"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="4934"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="4944"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Invokes the delete operator on every member of the array.</p>
+				<p>The function can only be used for arrays of pointers to <xref href="class_c_base.xml#class_c_base">CBase</xref> derived objects.</p>
+				<p>If the array is to be used after a call to this function, it is good practice to call <xref href="class_t_fixed_array.xml#class_t_fixed_array_1a46cf5b9bea4d26cca5c04a9359a7c8cb">TFixedArray&lt;class T,TInt S&gt;::Reset()</xref> to set all array elements to NULL. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_fixed_array_1a9ca42212a23245471463b10eb1669662">
+		<apiName>Count</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TFixedArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt Count() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TFixedArray::Count()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5144"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="4748"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="4757"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets the size of the array.</p>
+				<p>For any instance of this class, the array size is fixed and has the same value as the integer template parameter.</p>
+				<p>The size of the array. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_fixed_array_1ac1e69e46d1fefcc74a54e9500136e3a7">
+		<apiName>Length</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TFixedArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt Length() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TFixedArray::Length()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5145"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="4763"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="4769"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets the size of an array element, in bytes.</p>
+				<p>The size of an array element, in bytes. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_fixed_array_1a484621a6a38cbd5a1a9eaf24de7b64b2">
+		<apiName>operator[]</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>T &amp;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TFixedArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline T &amp; operator[](TInt aIndex)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TFixedArray::operator[](TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The position of the element within the array. This is an offset value; a zero value refers to the first element in the array. This value must be greater than or equal to zero and less than the size of the array.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5147"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="4782"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="4795"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets a reference to the specified element within the C++ array.</p>
+				<p>A reference to an element of the array.</p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>USER 133, in a debug build only, if aIndex is negative or greater than or equal to the size of the array as defined by the integer template parameter. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_fixed_array_1aa6a18e08ebd0e14c570fb6266805c133">
+		<apiName>operator[]</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>const T &amp;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TFixedArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline const T &amp; operator[](TInt aIndex) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TFixedArray::operator[](TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The position of the element within the array. This is an offset value; a zero value refers to the first element in the array. This value must be greater than or equal to zero and less than the size of the array.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5148"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="4801"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="4815"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets a const reference to the specified element within the C++ array.</p>
+				<p>A const reference to an element of the array; the element cannot be changed through this reference.</p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>USER 133, in a debug build only, if aIndex is negative or greater than or equal to the size of the array as defined by the integer template parameter. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_fixed_array_1ada1508e109af51acf63d7dae1dd3c870">
+		<apiName>At</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>T &amp;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TFixedArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline T &amp; At(TInt aIndex)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TFixedArray::At(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The position of the element within the array. This is an offset value; a zero value refers to the first element in the array. This value must be greater than or equal to zero and less than the size of the array.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5150"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="4821"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="4834"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets a reference to the specified element within the C++ array.</p>
+				<p>A reference to an element of the array.</p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>USER 133, if aIndex is negative or greater than or equal to the size of the array as defined by the integer template parameter. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_fixed_array_1a4a47bcd9a6ff6db0b9dcabf47f57d027">
+		<apiName>At</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>const T &amp;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TFixedArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline const T &amp; At(TInt aIndex) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TFixedArray::At(TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The position of the element within the array. This is an offset value; a zero value refers to the first element in the array. This value must be greater than or equal to zero and less than the size of the array.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5151"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="4840"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="4854"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets a const reference to the specified element within the C++ array.</p>
+				<p>A const reference to an element of the array; the element cannot be changed through this reference.</p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>USER 133, in a debug build only, if aIndex is negative or greater than or equal to the size of the array as defined by the integer template parameter. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_fixed_array_1a87a137dd3faea580378ed44f808dba91">
+		<apiName>Begin</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>T *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TFixedArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline T * Begin()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TFixedArray::Begin()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5153"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="4860"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="4866"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets a pointer to the first element of the array.</p>
+				<p>A pointer to the first element of the array. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_fixed_array_1ae22ae0ede554f61b93d612a473f34165">
+		<apiName>End</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>T *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TFixedArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline T * End()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TFixedArray::End()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5154"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="4872"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="4878"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets a pointer to the first byte following the end of the array.</p>
+				<p>A pointer to the first byte following the end of the array. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_fixed_array_1ade0224f58325dc3531ea89987b52efca">
+		<apiName>Begin</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>const T *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TFixedArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline const T * Begin() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TFixedArray::Begin()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5155"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="4884"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="4890"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets a pointer to the first element of the array.</p>
+				<p>A pointer to a const element of the array. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_fixed_array_1a2cf9e7064a2d26b5c8dbb3a89daf15ff">
+		<apiName>End</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>const T *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TFixedArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline const T * End() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TFixedArray::End()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5156"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="4896"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="4902"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets a pointer to the first byte following the end of the array.</p>
+				<p>A pointer to the const first byte following the end of the array. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_fixed_array_1a595b84dd76b7aae9055dd98a1632f278">
+		<apiName>Array</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="class_t_array.xml#class_t_array">TArray</apiRelation>&lt; T &gt;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TFixedArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TArray&lt; T &gt; Array() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TFixedArray::Array()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5158"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="4922"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="4928"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Creates and returns a generic array for this C++ array.</p>
+				<p>A generic array for this C++ array. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_fixed_array_1a4c0563e1b38b427d562be920e1988148">
+		<apiName>InRange</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TFixedArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline static TBool InRange(TInt aIndex)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TFixedArray::InRange(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5160"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="4775"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="4776"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_fixed_array_1a88fd31372cc120395a51d849c16ccdbd">
+		<apiName>CountFunctionR</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TFixedArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline static TInt CountFunctionR(const CBase *aThis)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TFixedArray::CountFunctionR(const CBase *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_c_base.xml#class_c_base">CBase</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aThis</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5161"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="4908"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="4909"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_fixed_array_1a54c2956d5c7293ec79bf96577c9482d4">
+		<apiName>AtFunctionR</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>const <apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TFixedArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline static const TAny * AtFunctionR(const CBase *aThis, TInt aIndex)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TFixedArray::AtFunctionR(const CBase *,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_c_base.xml#class_c_base">CBase</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aThis</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5162"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="4915"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="4916"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxVariable id="class_t_fixed_array_1a64f36dc5ac720f3578774ab3edada76c">
+		<apiName>iRep</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="protected"/>
+				<cxxVariableDeclaredType>T</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TFixedArray</cxxVariableScopedName>
+				<cxxVariablePrototype>T iRep[S]</cxxVariablePrototype>
+				<cxxVariableNameLookup>TFixedArray::iRep</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="5164"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+</cxxClass>

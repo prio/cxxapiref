@@ -1,0 +1,812 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_r_socket_serv">
+	<apiName>RSocketServ</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="705"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="682"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="730"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>Provides the <xref href="class_r_socket_serv.xml#class_r_socket_serv_1ad5144937e6d39a25435117d2eef94f87">Connect()</xref> function to create an IPC communication channel to the socket server. To close the channel <xref href="class_r_handle_base.xml#class_r_handle_base">RHandleBase</xref> provides a <xref href="class_r_handle_base.xml#class_r_handle_base_1ad79a6f0c004c694d4eecbea1696cbcc8">RHandleBase::Close()</xref> function.</p>
+			<p>The prime use for instances of <xref href="class_r_socket_serv.xml#class_r_socket_serv">RSocketServ</xref> is to establish subsession communications for <xref href="class_r_socket.xml#class_r_socket">RSocket</xref>, <xref href="class_r_host_resolver.xml#class_r_host_resolver">RHostResolver</xref>, <xref href="class_r_net_database.xml#class_r_net_database">RNetDatabase</xref> and <xref href="class_r_connection.xml#class_r_connection">RConnection</xref>. Any of the resources which are open using the session are automatically closed when the session is terminated, however it is more appropriate to issue a Close() on each subsession object before closing the session.</p>
+			<p>The following operations are also provided:</p>
+			<p>
+				<xref href="class_r_socket_serv.xml#class_r_socket_serv_1ae995b2ff4fffa344153b1e345976f36e">NumProtocols()</xref> - enumerates the number of protocols of which the socket server is currently aware.</p>
+			<p>
+				<xref href="class_r_socket_serv.xml#class_r_socket_serv_1a1428cfa6de49f13aab400e7f69c44670">GetProtocolInfo()</xref>/FindProtocol() - return information about a specific protocol.</p>
+			<p>
+				<xref href="class_r_socket_serv.xml#class_r_socket_serv_1ab20be8361b8d7f68b5c313dd99c4aeaf">StartProtocol()</xref> - loads a protocol asynchronously.</p>
+			<p>
+				<note type="note">
+					<p>This class is not intended for user derivation.   </p>
+				</note>
+			</p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_r_socket_serv_1a7babb718c9078462ae96c8ac808250fe">
+		<apiName>RSocketServ</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType>IMPORT_C</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocketServ</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C RSocketServ()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocketServ::RSocketServ()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="707"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="154"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="159"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Default Constructor </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_serv_1ad5144937e6d39a25435117d2eef94f87">
+		<apiName>Connect</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocketServ</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Connect(TUint aMessageSlots=KESockDefaultMessageSlots)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocketServ::Connect(TUint)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMessageSlots</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>
+							<apiRelation href="es__sock_8h.xml#_1a99b1367ad1bfc50dcadb9e6d46616049">KESockDefaultMessageSlots</apiRelation>
+						</cxxFunctionParameterDefaultValue>
+						<apiDefNote>The number of message slots required. If not specified, 8. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="708"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="161"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="202"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Opens a session to the socket server.</p>
+				<p>The number of message slots indicates how many asychronous operations are allowed to be uncompleted at any one time by the combined resources opened on the session. The result of having too few slots is not fatal. However, operations may return KErrServerBusy indicating that no message slot was available after a small time trying.</p>
+				<p>
+					<xref href="class_r_handle_base.xml#class_r_handle_base_1ad79a6f0c004c694d4eecbea1696cbcc8">RHandleBase::Close()</xref> should be called once the session is no longer required. All resources which are opened using the session will be automatically closed when the session terminates.</p>
+				<p>When the last session which has open resources for a protocol is closed a protocol module will be unloaded automatically by the socket server.</p>
+				<p>KErrNone if successful, otherwise another of the system-wide error codes. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_serv_1a54575e3d04191584484fba745e1c2bb9">
+		<apiName>Connect</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocketServ</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Connect(const TSessionPref &amp;aPref, TUint aMessageSlots=KESockDefaultMessageSlots)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocketServ::Connect(const TSessionPref &amp;,TUint)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_session_pref.xml#class_t_session_pref">TSessionPref</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPref</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMessageSlots</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>
+							<apiRelation href="es__sock_8h.xml#_1a99b1367ad1bfc50dcadb9e6d46616049">KESockDefaultMessageSlots</apiRelation>
+						</cxxFunctionParameterDefaultValue>
+						<apiDefNote>The number of message slots required. If not specified, 8. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="709"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="218"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="267"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Opens a session to the socket server.</p>
+				<p>The session prefs provides a hint to the server of which protocol the client intend to use. This might result in better performance for the connection.</p>
+				<p>The number of message slots indicates how many asychronous operations are allowed to be uncompleted at any one time by the combined resources opened on the session. The result of having too few slots is not fatal. However, operations may return KErrServerBusy indicating that no message slot was available after a small time trying.</p>
+				<p>
+					<xref href="class_r_handle_base.xml#class_r_handle_base_1ad79a6f0c004c694d4eecbea1696cbcc8">RHandleBase::Close()</xref> should be called once the session is no longer required. All resources which are opened using the session will be automatically closed when the session terminates.</p>
+				<p>When the last session which has open resources for a protocol is closed a protocol module will be unloaded automatically by the socket server.</p>
+				<p>KErrNone if successful, otherwise another of the system-wide error codes. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_serv_1aec8cf15455a2012d05bdfb54b991f24c">
+		<apiName>Version</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_version.xml#class_t_version">TVersion</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocketServ</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TVersion Version() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocketServ::Version()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="710"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="396"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="403"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets the version number of this client.</p>
+				<p>Client side version number </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_serv_1ae995b2ff4fffa344153b1e345976f36e">
+		<apiName>NumProtocols</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocketServ</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt NumProtocols(TUint &amp;aCount)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocketServ::NumProtocols(TUint &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCount</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The number of protocols is returned in aCount </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="711"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="269"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="280"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets the number of protocols the socket server is currently aware of.</p>
+				<p>The count returned can be used in conjunction with <xref href="class_r_socket_serv.xml#class_r_socket_serv_1a1428cfa6de49f13aab400e7f69c44670">GetProtocolInfo()</xref>.</p>
+				<p>KErrNone if successful, otherwise another of the system-wide error codes. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_serv_1a1428cfa6de49f13aab400e7f69c44670">
+		<apiName>GetProtocolInfo</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocketServ</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt GetProtocolInfo(TUint anIndex, TProtocolDesc &amp;aProtocol)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocketServ::GetProtocolInfo(TUint,TProtocolDesc &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Index of required protocol description. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="struct_t_protocol_desc.xml#struct_t_protocol_desc">TProtocolDesc</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aProtocol</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A protocol description type to hold protocol information. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="712"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="282"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="294"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets information about a specific protocol.</p>
+				<p>KErrNone if successful, otherwise another of the system-wide error codes. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_serv_1a3331e2f50df3210b7959fa347fb390f7">
+		<apiName>FindProtocol</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocketServ</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt FindProtocol(const TProtocolName &amp;aName, TProtocolDesc &amp;aProtocol)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocketServ::FindProtocol(const TProtocolName &amp;,TProtocolDesc &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_buf.xml#class_t_buf">TProtocolName</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aName</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Typed descriptor which identifies a protocol name. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="struct_t_protocol_desc.xml#struct_t_protocol_desc">TProtocolDesc</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aProtocol</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A protocol description type to hold protocol information. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="713"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="296"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="308"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets information about a specific protocol, identified by it&apos;s name.</p>
+				<p>There is no wildcard support.</p>
+				<p>KErrNone if successful, otherwise another of the system-wide error codes. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_serv_1ab20be8361b8d7f68b5c313dd99c4aeaf">
+		<apiName>StartProtocol</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocketServ</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void StartProtocol(TUint anAddrFamily, TUint aSockType, TUint aProtocol, TRequestStatus &amp;aStatus)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocketServ::StartProtocol(TUint,TUint,TUint,TRequestStatus &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anAddrFamily</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Integer which identifies a protocol suite. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSockType</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Integer which identifies a type of socket. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aProtocol</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Integer which identifies a specific protocol in a family. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On completion will contain an error code: see the system-wide error codes.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="714"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="310"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="337"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Loads a specified protocol asynchronously.</p>
+				<p>The protocol is specified by family, socket type and protocol identifier.</p>
+				<p>Note that client programs do not normally need to call this function, as loading of a protocol is done automatically by the Sockets Server when a socket of that protocol is opened. Some applications may, however, need to ensure that an open socket call will not take a significant amount of time (e.g. IrCOMM). This function can be called by such applications to preload the protocol.</p>
+				<p>There is no way to cancel this operation once it has been called.</p>
+				<p>
+					<b>capability</b>
+				</p>
+				<p>NetworkControl Protocol starting is a critical operation in the comms process and must be restricted </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_serv_1a973eabb78116c9f6963c90f8de07ce9d">
+		<apiName>StopProtocol</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocketServ</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void StopProtocol(TUint anAddrFamily, TUint aSockType, TUint aProtocol, TRequestStatus &amp;aStatus)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocketServ::StopProtocol(TUint,TUint,TUint,TRequestStatus &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anAddrFamily</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Integer which identifies a protocol suite </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSockType</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Integer which identifies a type of socket </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aProtocol</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Integer which identifies a specific protocol in a family </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On completion, will contain a system-wide error codes</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="715"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="339"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="353"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Unload a protocol asynchronously - note it will fail if there are any resources open</p>
+				<p>
+					<b>capability</b>
+				</p>
+				<p>NetworkControl Protocol stopping is a critical operation in the comms process and must be restricted </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_serv_1aa4c80d6a16759032820b55ee49665ec7">
+		<apiName>InstallExtension</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocketServ</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt InstallExtension(const TDesC &amp;aDllName, const TDesC &amp;aArgs=TPtrC())</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocketServ::InstallExtension(const TDesC &amp;,const TDesC &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDllName</cxxFunctionParameterDeclarationName>
+						<apiDefNote>DllName for Esock Extension </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aArgs</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>
+							<apiRelation href="class_t_ptr_c16.xml#class_t_ptr_c16">TPtrC</apiRelation>()</cxxFunctionParameterDefaultValue>
+						<apiDefNote>argument for Esock Extension </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="716"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="377"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="394"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Install an Esock Extension. PLEASE NOTE: This API is currently unsupported, calling it will always return KErrNotSupported.</p>
+				<p>KErrNone if successful, otherwise another of the system-wide error codes.</p>
+				<p>
+					<b>capability</b>
+				</p>
+				<p>NetworkControl Loading extensions to Esock will be behavioural changing and must be restricted to privileged apps</p>
+				<p>Because it always return KErrNotSupported thus useless </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_serv_1a68fd6fb7663c5c41031ce6676f69a072">
+		<apiName>SetExclusiveMode</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocketServ</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void SetExclusiveMode(TRequestStatus &amp;aStatus)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocketServ::SetExclusiveMode(TRequestStatus &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On completion, will contain a system-wide error codes</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="717"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="355"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="366"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Set this session as the socket server exclusive session. PLEASE NOTE: This API is currently unsupported, calling it will always return KErrNone but without actually doing anything.</p>
+				<p>
+					<b>capability</b>
+				</p>
+				<p>NetworkControl Restricting Esock to one session is very dangerous and must be highly restricted </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_serv_1ad723ab590cfcb1310485db339a0a818e">
+		<apiName>ClearExclusiveMode</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocketServ</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void ClearExclusiveMode()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocketServ::ClearExclusiveMode()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="718"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="368"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="375"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Clear exclusive mode for this session PLEASE NOTE: This API is currently unsupported, calling it will always return KErrNone but without actually doing anything. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_serv_1aa2ac502d3ed4ed468a23a4894d5c0037">
+		<apiName>__DbgMarkHeap</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocketServ</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt __DbgMarkHeap()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocketServ::__DbgMarkHeap()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="719"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="550"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="556"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Set a heap mark in the socket server </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_serv_1a3424390f94896ef4d4e6928a5e85b53c">
+		<apiName>__DbgCheckHeap</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocketServ</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt __DbgCheckHeap(TInt aCount)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocketServ::__DbgCheckHeap(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCount</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="720"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="558"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="564"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Set a heap mark in the socket server </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_serv_1ad3da0b992d2e6557622d662885a0f7cf">
+		<apiName>__DbgMarkEnd</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocketServ</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt __DbgMarkEnd(TInt aCount)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocketServ::__DbgMarkEnd(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCount</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="721"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="566"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="572"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Set a heap mark in the socket server </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_serv_1adf179f3336788b0b3a81d7f0b7c96d45">
+		<apiName>__DbgFailNext</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocketServ</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt __DbgFailNext(TInt aCount)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocketServ::__DbgFailNext(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCount</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="722"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="574"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="580"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Set a heap mark in the socket server </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_serv_1a78482617c9ab071f7d3a32f2bbbf98c7">
+		<apiName>__DbgCheckFailNext</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocketServ</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TBool __DbgCheckFailNext() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocketServ::__DbgCheckFailNext()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="723"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="582"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="588"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Empty release implementation </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_serv_1af6a8e0b54134edcc925abc3f7072e350">
+		<apiName>__DbgFailNextMbuf</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocketServ</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt __DbgFailNextMbuf(TInt aCount)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocketServ::__DbgFailNextMbuf(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCount</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="724"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="590"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="596"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Set a Mbuf mark in the socket server </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_serv_1af30756996d62ac5f992836c8e2a1dbbf">
+		<apiName>__DbgSetMbufPoolLimit</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocketServ</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt __DbgSetMbufPoolLimit(TInt asize)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocketServ::__DbgSetMbufPoolLimit(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>asize</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="725"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="598"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="604"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Set the Mbuf pool limit </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_serv_1a35beca5a8759407186a502187cd2b035">
+		<apiName>__DbgCheckMbuf</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocketServ</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt __DbgCheckMbuf(TInt asize)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocketServ::__DbgCheckMbuf(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>asize</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="726"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="606"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="612"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Set the Mbuf pool limit </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_serv_1af2dcc704d1456bc94cb9773829586ab6">
+		<apiName>__DbgMbufFreeSpace</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocketServ</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt __DbgMbufFreeSpace()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocketServ::__DbgMbufFreeSpace()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="727"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="614"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="620"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Get the amount of free space in the MBuf manager </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_serv_1a8765f367d3c6cd4fef7b459634e1271f">
+		<apiName>__DbgMbufTotalSpace</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocketServ</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt __DbgMbufTotalSpace()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocketServ::__DbgMbufTotalSpace()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="728"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="622"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="628"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Get the amount of free space in the MBuf manager </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_socket_serv_1acb1937c9ecb7b2080260ce672c810d0b">
+		<apiName>__DbgControl</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSocketServ</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt __DbgControl(const ESockDebug::TControlMsg &amp;aRequestMsg)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSocketServ::__DbgControl(const ESockDebug::TControlMsg &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_e_sock_debug_1_1_t_control_msg.xml#class_e_sock_debug_1_1_t_control_msg">ESockDebug::TControlMsg</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aRequestMsg</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="729"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="630"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="638"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>General purpose control message for esock debug, self dispatching messages to be thrown over it</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+</cxxClass>

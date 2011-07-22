@@ -1,0 +1,260 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_t_c_f_player_role">
+	<apiName>TCFPlayerRole</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassDerivations>
+				<cxxClassDerivation>
+					<cxxClassDerivationAccessSpecifier value="public"/>
+					<cxxClassBaseClass href="class_den_1_1_t_player_role.xml#class_den_1_1_t_player_role">Den::TPlayerRole</cxxClassBaseClass>
+				</cxxClassDerivation>
+			</cxxClassDerivations>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_common.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="78"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/comms-infras/ss_common.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="74"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="112"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>
+				<xref href="class_t_c_f_player_role.xml#class_t_c_f_player_role">TCFPlayerRole</xref> and TPlayerRole can be removed after Players are relieved from knowing their roles which should hopefully come as part of the &quot;Global Object Broker&quot; work. </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxVariable id="class_t_c_f_player_role_1a81ccd931549953cf967079ec8e5a5d5b">
+		<apiName>KDefaultKindex</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableStorageClassSpecifierStatic/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TCFPlayerRole</cxxVariableScopedName>
+				<cxxVariablePrototype>static const TInt KDefaultKindex</cxxVariablePrototype>
+				<cxxVariableNameLookup>TCFPlayerRole::KDefaultKindex</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_common.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="89"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Parallel threads operate the same technologies in the same plane but with some interesting (probably private difference), eg two data threads both bound to a control thread, one default and one devoted to realtime. We describe them as &quot;kin&quot; of one another, and they are distinguished by their &quot;kindex&quot; ie kin index, which is simply a whole number zero upwards, zero being the default and generally only value. It&apos;s up to a control provider to know about the parallel threads and specify the kindex when requesting a FC to talk to (eg a SCPR when creating a flow)</p>
+				<p>At present there are no parallel threads for CPRs as they have 1:1 with MCPR. It may be that in the future we have to worry about the same TierMgr in two threads, eg an authentication protocol being used by both BT &amp; IP, and they&apos;re running separate control thread. This will require further thought once the use is clearer. </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxEnumeration id="class_t_c_f_player_role_1a3d20c9afaad87bc08223ccfa461f1bfb">
+		<apiName>TRole</apiName>
+		<cxxEnumerationDetail>
+			<cxxEnumerationDefinition>
+				<cxxEnumerationAccessSpecifier value="public"/>
+				<cxxEnumerationScopedName>TCFPlayerRole</cxxEnumerationScopedName>
+				<cxxEnumerationPrototype>TRole</cxxEnumerationPrototype>
+				<cxxEnumerationNameLookup>TCFPlayerRole:TRole</cxxEnumerationNameLookup>
+				<cxxEnumerators>
+					<cxxEnumerator id="class_t_c_f_player_role_1a3d20c9afaad87bc08223ccfa461f1bfbaa5284da75b65d31abfe2a1f1adc17427">
+						<apiName>EDataPlane</apiName>
+						<cxxEnumeratorScopedName>TCFPlayerRole</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EDataPlane = 0x000001</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TCFPlayerRole::EDataPlane</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="0x000001"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_common.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="92"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc/>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_c_f_player_role_1a3d20c9afaad87bc08223ccfa461f1bfba8f7eb1fa453adc4bcc22c9d8021c8446">
+						<apiName>ESubConnPlane</apiName>
+						<cxxEnumeratorScopedName>TCFPlayerRole</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ESubConnPlane = 0x000010</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TCFPlayerRole::ESubConnPlane</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="0x000010"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_common.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="93"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc/>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_c_f_player_role_1a3d20c9afaad87bc08223ccfa461f1bfba3276433a8a029b69809940a03b352468">
+						<apiName>EConnPlane</apiName>
+						<cxxEnumeratorScopedName>TCFPlayerRole</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EConnPlane = 0x000100</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TCFPlayerRole::EConnPlane</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="0x000100"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_common.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="94"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc/>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_c_f_player_role_1a3d20c9afaad87bc08223ccfa461f1bfba4c260d534a5b0152761893c92cc28652">
+						<apiName>EMetaConnPlane</apiName>
+						<cxxEnumeratorScopedName>TCFPlayerRole</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EMetaConnPlane = 0x001000</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TCFPlayerRole::EMetaConnPlane</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="0x001000"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_common.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="95"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc/>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_c_f_player_role_1a3d20c9afaad87bc08223ccfa461f1bfbab9210fd241265eb7d452153357d46892">
+						<apiName>ETierMgrPlane</apiName>
+						<cxxEnumeratorScopedName>TCFPlayerRole</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ETierMgrPlane = 0x010000</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TCFPlayerRole::ETierMgrPlane</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="0x010000"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_common.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="96"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc/>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_c_f_player_role_1a3d20c9afaad87bc08223ccfa461f1bfbad5d073c09caa97f71a4e534fe2783623">
+						<apiName>ETierResolver</apiName>
+						<cxxEnumeratorScopedName>TCFPlayerRole</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ETierResolver = 0x100000</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TCFPlayerRole::ETierResolver</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="0x100000"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_common.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="97"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc/>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_c_f_player_role_1a3d20c9afaad87bc08223ccfa461f1bfbac736016051f0baa7a14b7068dd0853a0">
+						<apiName>EAllPlanes</apiName>
+						<cxxEnumeratorScopedName>TCFPlayerRole</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EAllPlanes = EDataPlane | ESubConnPlane | EConnPlane | EMetaConnPlane | ETierMgrPlane</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TCFPlayerRole::EAllPlanes</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="EDataPlane | ESubConnPlane | EConnPlane | EMetaConnPlane | ETierMgrPlane"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_common.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="98"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc/>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_c_f_player_role_1a3d20c9afaad87bc08223ccfa461f1bfba4936f2098dac796c2960a2f4867b70f9">
+						<apiName>EPrePlanarArchitecture</apiName>
+						<cxxEnumeratorScopedName>TCFPlayerRole</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EPrePlanarArchitecture = 0x40000000</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TCFPlayerRole::EPrePlanarArchitecture</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="0x40000000"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_common.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="99"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc/>
+					</cxxEnumerator>
+				</cxxEnumerators>
+				<cxxEnumerationAPIItemLocation>
+					<cxxEnumerationDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_common.h"/>
+					<cxxEnumerationDeclarationFileLine name="lineNumber" value="91"/>
+					<cxxEnumerationDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxEnumerationDefinitionFileLineStart name="lineNumber" value="90"/>
+					<cxxEnumerationDefinitionFileLineEnd name="lineNumber" value="100"/>
+				</cxxEnumerationAPIItemLocation>
+			</cxxEnumerationDefinition>
+			<apiDesc/>
+		</cxxEnumerationDetail>
+	</cxxEnumeration>
+	<cxxFunction id="class_t_c_f_player_role_1a67636729d536876b0661a40f82547273">
+		<apiName>TCFPlayerRole</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TCFPlayerRole</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TCFPlayerRole()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TCFPlayerRole::TCFPlayerRole()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_common.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="105"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="103"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="106"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_c_f_player_role_1a147f7abb991fc61cc469a79cd48f7f31">
+		<apiName>TCFPlayerRole</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TCFPlayerRole</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TCFPlayerRole(TUint aRole, TUint16 aKindex=KDefaultKindex)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TCFPlayerRole::TCFPlayerRole(TUint,TUint16)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aRole</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a7c545c7b28f2e5d128d132d2ea1cdb2b">TUint16</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aKindex</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>
+							<apiRelation href="class_t_c_f_player_role.xml#_1a81ccd931549953cf967079ec8e5a5d5b">KDefaultKindex</apiRelation>
+						</cxxFunctionParameterDefaultValue>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_common.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="110"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="108"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="111"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxClassInherits>
+		<cxxClassInheritsDetail>
+			<cxxClassFunctionInherited href="class_t_c_f_player_role.xml#class_den_1_1_t_player_role_1aebd060e58cabe5e43f09f32e6495de9b">Den::TPlayerRole::HasRole(TUint32)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_c_f_player_role.xml#class_den_1_1_t_player_role_1aa7c45fdb12ff462d7d94771e16b4d241">Den::TPlayerRole::Kindex()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_c_f_player_role.xml#class_den_1_1_t_player_role_1a0938f505ecf46fc5d0d4ab817dfdd861">Den::TPlayerRole::Role()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_c_f_player_role.xml#class_den_1_1_t_player_role_1a377dec6e4e5995abbe8b4e13b913b921">Den::TPlayerRole::TPlayerRole()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_c_f_player_role.xml#class_den_1_1_t_player_role_1a59eff389e1d8a0e0ca827d37b19f2897">Den::TPlayerRole::TPlayerRole(TUint32,TUint32)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_c_f_player_role.xml#class_messages_1_1_t_client_type_1a8704645fdc0f2af15ba70cba195df604">Messages::TClientType::ClearFlags(TUint32)</cxxClassFunctionInherited>
+			<cxxClassEnumeratorInherited href="class_t_c_f_player_role.xml#class_messages_1_1_t_client_type_1ae5eca64320aab321e205caeb7526051ea53398f1dc0835dd200a7163c3a815ed4">Messages::TClientType::EAdministrative</cxxClassEnumeratorInherited>
+			<cxxClassEnumeratorInherited href="class_t_c_f_player_role.xml#class_messages_1_1_t_client_type_1a8544a8fa62e28ccba1e97c07060042b4ac4180bd5d2932a59e2ea7cad6e520f74">Messages::TClientType::EAll</cxxClassEnumeratorInherited>
+			<cxxClassEnumeratorInherited href="class_t_c_f_player_role.xml#class_messages_1_1_t_client_type_1ae5eca64320aab321e205caeb7526051ea5117e072f445716a4d1e4b3528e2b510">Messages::TClientType::ELastReservedFlag_InternalTechnology_CanBeReusedAtAnyTime_DoNotUseInCode</cxxClassEnumeratorInherited>
+			<cxxClassEnumeratorInherited href="class_t_c_f_player_role.xml#class_messages_1_1_t_client_type_1a8544a8fa62e28ccba1e97c07060042b4a4a759d9485ae5534176a14a5c8acf890">Messages::TClientType::ELastReservedType_InternalTechnology_CanBeReusedAtAnyTime_DoNotUseInCode</cxxClassEnumeratorInherited>
+			<cxxClassEnumeratorInherited href="class_t_c_f_player_role.xml#class_messages_1_1_t_client_type_1ae5eca64320aab321e205caeb7526051eacaee83a1f0d21e87b9baa1aa4d5d7802">Messages::TClientType::ELeaving</cxxClassEnumeratorInherited>
+			<cxxClassEnumeratorInherited href="class_t_c_f_player_role.xml#class_messages_1_1_t_client_type_1a8544a8fa62e28ccba1e97c07060042b4aa83a39fcdd0775cc11806f23df15908d">Messages::TClientType::ERegistrar</cxxClassEnumeratorInherited>
+			<cxxClassEnumeratorInherited href="class_t_c_f_player_role.xml#class_messages_1_1_t_client_type_1a8544a8fa62e28ccba1e97c07060042b4a715dc7c0e00f5095cf861df804fb9637">Messages::TClientType::EUnknown</cxxClassEnumeratorInherited>
+			<cxxClassEnumeratorInherited href="class_t_c_f_player_role.xml#class_messages_1_1_t_client_type_1a8544a8fa62e28ccba1e97c07060042b4a3249dae6d26e38fcb9a3708dc46b8dbd">Messages::TClientType::EWorker</cxxClassEnumeratorInherited>
+			<cxxClassFunctionInherited href="class_t_c_f_player_role.xml#class_messages_1_1_t_client_type_1a0814fa21b6c6813ea569395a6342855c">Messages::TClientType::Flags()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_c_f_player_role.xml#class_messages_1_1_t_client_type_1aee4f2a186ade1a8f004351f0d4a8ddd8">Messages::TClientType::IsNull()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_c_f_player_role.xml#class_messages_1_1_t_client_type_1a297e2f26fc01397a369abeda0689d98c">Messages::TClientType::NullType()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_c_f_player_role.xml#class_messages_1_1_t_client_type_1a1d6833d3125b6aaddedee3af05165582">Messages::TClientType::SetFlags(TUint32)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_c_f_player_role.xml#class_messages_1_1_t_client_type_1a80f06214290d9843bde350f690843c1a">Messages::TClientType::TClientType()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_c_f_player_role.xml#class_messages_1_1_t_client_type_1aaded116b2ccdb1e41497d3c706c50478">Messages::TClientType::TClientType(TUint,TUint)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_c_f_player_role.xml#class_messages_1_1_t_client_type_1af36a0b770d55d6a91a0c8e60b18a3ff2">Messages::TClientType::TClientType(const TClientType &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_c_f_player_role.xml#class_messages_1_1_t_client_type_1a2d443694885f4372ba7cc0723fa24814">Messages::TClientType::Type()const</cxxClassFunctionInherited>
+			<cxxClassVariableInherited href="class_t_c_f_player_role.xml#class_messages_1_1_t_client_type_1a4085ef60ba0fcf003291fa663d56752d">Messages::TClientType::iClientFlags</cxxClassVariableInherited>
+			<cxxClassVariableInherited href="class_t_c_f_player_role.xml#class_messages_1_1_t_client_type_1a3797e428f3463632c66e7dd19c985905">Messages::TClientType::iClientType</cxxClassVariableInherited>
+			<cxxClassEnumerationInherited href="class_t_c_f_player_role.xml#class_messages_1_1_t_client_type_1ae5eca64320aab321e205caeb7526051e">Messages::TClientType:TFlags</cxxClassEnumerationInherited>
+			<cxxClassEnumerationInherited href="class_t_c_f_player_role.xml#class_messages_1_1_t_client_type_1a8544a8fa62e28ccba1e97c07060042b4">Messages::TClientType:TType</cxxClassEnumerationInherited>
+		</cxxClassInheritsDetail>
+	</cxxClassInherits>
+</cxxClass>

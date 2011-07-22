@@ -1,0 +1,271 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_c_idle">
+	<apiName>CIdle</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassDerivations>
+				<cxxClassDerivation>
+					<cxxClassDerivationAccessSpecifier value="public"/>
+					<cxxClassBaseClass href="class_c_active.xml#class_c_active">CActive</cxxClassBaseClass>
+				</cxxClassDerivation>
+			</cxxClassDerivations>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="1688"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="1676"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="1706"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>An active object that performs low-priority processing when no higher-priority active objects are ready to run.</p>
+			<p>An idle time active object together with its associated callback function may be used to implement potentially long running background tasks, such as spreadsheet recalculation and word processor repagination. </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_c_idle_1a3f7d6c63e377895a66c1c9a0cdeb640f">
+		<apiName>New</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_c_idle.xml#class_c_idle">CIdle</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CIdle</cxxFunctionScopedName>
+				<cxxFunctionPrototype>static IMPORT_C CIdle * New(TInt aPriority)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CIdle::New(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPriority</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1690"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_idle_1a43e2e09d80044de430a06606e3e8122d">
+		<apiName>NewL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_c_idle.xml#class_c_idle">CIdle</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CIdle</cxxFunctionScopedName>
+				<cxxFunctionPrototype>static IMPORT_C CIdle * NewL(TInt aPriority)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CIdle::NewL(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPriority</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1691"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_idle_1a00b984b58068908dec252faa3cb14435">
+		<apiName>~CIdle</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDestructor/>
+				<cxxFunctionDeclaredType>IMPORT_C</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CIdle</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C ~CIdle()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CIdle::~CIdle()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1692"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_idle_1af9e668c58ac3dd53046b06110320c4e5">
+		<apiName>Start</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CIdle</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Start(TCallBack aCallBack)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CIdle::Start(TCallBack)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_call_back.xml#class_t_call_back">TCallBack</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCallBack</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1693"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_idle_1a4030e0bc5e7fca7e9381eba7116adcdf">
+		<apiName>CIdle</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType>IMPORT_C</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CIdle</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C CIdle(TInt aPriority)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CIdle::CIdle(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPriority</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1695"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_idle_1a4824bbb9477aea719addb948b9bf88df">
+		<apiName>RunL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionVirtual/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CIdle</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void RunL()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CIdle::RunL()</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_c_active.xml#class_c_active_1a1562734d9d119b6ff24bc3aec793ce3d">CActive::RunL()</cxxFunctionReimplemented>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1696"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Handles an active object&apos;s request completion event.</p>
+				<p>A derived class must provide an implementation to handle the completed request. If appropriate, it may issue another request.</p>
+				<p>The function is called by the active scheduler when a request completion event occurs, i.e. after the active scheduler&apos;s WaitForAnyRequest() function completes.</p>
+				<p>Before calling this active object&apos;s <xref href="class_c_idle.xml#class_c_idle_1a4824bbb9477aea719addb948b9bf88df">RunL()</xref> function, the active scheduler has:</p>
+				<p>1. decided that this is the highest priority active object with a completed request</p>
+				<p>2. marked this active object&apos;s request as complete (i.e. the request is no longer outstanding)</p>
+				<p>
+					<xref href="class_c_idle.xml#class_c_idle_1a4824bbb9477aea719addb948b9bf88df">RunL()</xref> runs under a trap harness in the active scheduler. If it leaves, then the active scheduler calls <xref href="class_c_active.xml#class_c_active_1af7a68e3e7ac05c01a9e22dd81393f834">RunError()</xref> to handle the leave.</p>
+				<p>Note that once the active scheduler&apos;s <xref href="class_c_idle.xml#class_c_idle_1af9e668c58ac3dd53046b06110320c4e5">Start()</xref> function has been called, all user code is run under one of the program&apos;s active object&apos;s <xref href="class_c_idle.xml#class_c_idle_1a4824bbb9477aea719addb948b9bf88df">RunL()</xref> or <xref href="class_c_active.xml#class_c_active_1af7a68e3e7ac05c01a9e22dd81393f834">RunError()</xref> functions.</p>
+				<p>
+					<xref href="class_c_active_scheduler.xml#class_c_active_scheduler_1a71f4452eae5e178915987c6d1a428972">CActiveScheduler::Start</xref> </p>
+				<p>
+					<xref href="class_c_active_scheduler.xml#class_c_active_scheduler_1a6d3f55a0772c98d0cd2845a7c074b941">CActiveScheduler::Error</xref> </p>
+				<p>
+					<xref href="class_c_active_scheduler.xml#class_c_active_scheduler_1af43f6899a3a1a6b6cb040a4f2bbb40f9">CActiveScheduler::WaitForAnyRequest</xref> </p>
+				<p>TRAPD </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_idle_1a7d278a526d0d8f1f11596a14b7f49816">
+		<apiName>DoCancel</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionVirtual/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CIdle</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void DoCancel()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CIdle::DoCancel()</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_c_active.xml#class_c_active_1abca693565d1f15ef883f32d534fba261">CActive::DoCancel()</cxxFunctionReimplemented>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1697"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Implements cancellation of an outstanding request.</p>
+				<p>This function is called as part of the active object&apos;s <xref href="class_c_active.xml#class_c_active_1a97781da8872ba6e86b5b83ad7170eb90">Cancel()</xref>.</p>
+				<p>It must call the appropriate cancel function offered by the active object&apos;s asynchronous service provider. The asynchronous service provider&apos;s cancel is expected to act immediately.</p>
+				<p>
+					<xref href="class_c_idle.xml#class_c_idle_1a7d278a526d0d8f1f11596a14b7f49816">DoCancel()</xref> must not wait for event completion; this is handled by <xref href="class_c_active.xml#class_c_active_1a97781da8872ba6e86b5b83ad7170eb90">Cancel()</xref>.</p>
+				<p>
+					<xref href="class_c_active.xml#class_c_active_1a97781da8872ba6e86b5b83ad7170eb90">CActive::Cancel</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxVariable id="class_c_idle_1ac6f149b770eeeb6d01e91f927129fecc">
+		<apiName>iCallBack</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="protected"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="class_t_call_back.xml#class_t_call_back">TCallBack</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>CIdle</cxxVariableScopedName>
+				<cxxVariablePrototype>TCallBack iCallBack</cxxVariablePrototype>
+				<cxxVariableNameLookup>CIdle::iCallBack</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1705"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>The callback object that encapsulates the background task.</p>
+				<p>
+					<xref href="class_c_idle.xml#class_c_idle_1af9e668c58ac3dd53046b06110320c4e5">Start</xref> </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxClassInherits>
+		<cxxClassInheritsDetail>
+			<cxxClassFunctionInherited href="class_c_idle.xml#class_c_active_1acfaa5bb1a4cda9d586f0ffaf2b0a0eb7">CActive::CActive(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_idle.xml#class_c_active_1a97781da8872ba6e86b5b83ad7170eb90">CActive::Cancel()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_idle.xml#class_c_active_1a44f0f5a2867d153feab11ee669d33b8d">CActive::Deque()</cxxClassFunctionInherited>
+			<cxxClassEnumeratorInherited href="class_c_idle.xml#class_c_active_1a378cd39842666e0a9b5f2fc089375f35ac59ba0db48385ddf49262e21f2a599b3">CActive::EPriorityHigh</cxxClassEnumeratorInherited>
+			<cxxClassEnumeratorInherited href="class_c_idle.xml#class_c_active_1a378cd39842666e0a9b5f2fc089375f35a5faa05021b83e97f1a5b00917aa34733">CActive::EPriorityIdle</cxxClassEnumeratorInherited>
+			<cxxClassEnumeratorInherited href="class_c_idle.xml#class_c_active_1a378cd39842666e0a9b5f2fc089375f35ac074efb2a15cd04c06d354fb1fd13f27">CActive::EPriorityLow</cxxClassEnumeratorInherited>
+			<cxxClassEnumeratorInherited href="class_c_idle.xml#class_c_active_1a378cd39842666e0a9b5f2fc089375f35ad19560103adbae4fa3eeca42c703e00b">CActive::EPriorityStandard</cxxClassEnumeratorInherited>
+			<cxxClassEnumeratorInherited href="class_c_idle.xml#class_c_active_1a378cd39842666e0a9b5f2fc089375f35ac4fc6edcb2aea0b20ab823f1017d788a">CActive::EPriorityUserInput</cxxClassEnumeratorInherited>
+			<cxxClassFunctionInherited href="class_c_idle.xml#class_c_active_1a098237f668ebdf6e5125a2deac03323d">CActive::Extension_(TUint,TAny *&amp;,TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_idle.xml#class_c_active_1a6d1d16020878d00c3af277ad2b0866f5">CActive::IsActive()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_idle.xml#class_c_active_1a97d8e693eb6f85ca883dbb385650ca28">CActive::IsAdded()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_idle.xml#class_c_active_1acb9ff1d90fbcb96058e2947c3f05c8e8">CActive::Priority()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_idle.xml#class_c_active_1af7a68e3e7ac05c01a9e22dd81393f834">CActive::RunError(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_idle.xml#class_c_active_1a511d5a8dc1d43eca953eb5c69b0e022d">CActive::SetActive()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_idle.xml#class_c_active_1a0d7c2ce1a5364daadef07b1020c9714f">CActive::SetPriority(TInt)</cxxClassFunctionInherited>
+			<cxxClassVariableInherited href="class_c_idle.xml#class_c_active_1a38314f150856c0f369555b0ef17c3140">CActive::iStatus</cxxClassVariableInherited>
+			<cxxClassFunctionInherited href="class_c_idle.xml#class_c_active_1a81e8cc3a48d5d6f56c502690f9969ef8">CActive::~CActive()</cxxClassFunctionInherited>
+			<cxxClassEnumerationInherited href="class_c_idle.xml#class_c_active_1a378cd39842666e0a9b5f2fc089375f35">CActive:TPriority</cxxClassEnumerationInherited>
+			<cxxClassFunctionInherited href="class_c_idle.xml#class_c_base_1a240de7932690a4e987d75690b0b6f82b">CBase::CBase()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_idle.xml#class_c_base_1ac0a06aeab68b3e01be81f9dd79e011c6">CBase::Delete(CBase *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_idle.xml#class_c_base_1af4c4965092a763b0856ccbfa3cf99eaf">CBase::operator new(TUint)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_idle.xml#class_c_base_1ab9e5f557dea4db22886189926687ddc1">CBase::operator new(TUint,TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_idle.xml#class_c_base_1aa464dd21494443ac109084ed03b81f28">CBase::operator new(TUint,TLeave)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_idle.xml#class_c_base_1af8429815362d4df6fecd47179e0c5dfe">CBase::operator new(TUint,TLeave,TUint)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_idle.xml#class_c_base_1a80505bdf8b1b20a2ed102307a78eeeeb">CBase::operator new(TUint,TUint)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_idle.xml#class_c_base_1a1390361b94424be22bb2b1020eb400ea">CBase::~CBase()</cxxClassFunctionInherited>
+		</cxxClassInheritsDetail>
+	</cxxClassInherits>
+</cxxClass>

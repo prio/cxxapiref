@@ -1,0 +1,430 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_c_active_comms_mobility_api_ext">
+	<apiName>CActiveCommsMobilityApiExt</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassDerivations>
+				<cxxClassDerivation>
+					<cxxClassDerivationAccessSpecifier value="public"/>
+					<cxxClassBaseClass href="class_c_active.xml#class_c_active">CActive</cxxClassBaseClass>
+				</cxxClassDerivation>
+			</cxxClassDerivations>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_mobility_apiext.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="86"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/comms-infras/es_mobility_apiext.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="74"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="109"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>Comms Mobility API extension for client running an Active Scheduler.. Whenever an Active Scheduler is present, this API is recommended over <xref href="class_r_comms_mobility_api_ext.xml#class_r_comms_mobility_api_ext">RCommsMobilityApiExt</xref> because of its simplicity.</p>
+			<p>With few important exceptions, <xref href="class_c_active_comms_mobility_api_ext.xml#class_c_active_comms_mobility_api_ext">CActiveCommsMobilityApiExt</xref> exports very similar APIs to <xref href="class_r_comms_mobility_api_ext.xml#class_r_comms_mobility_api_ext">RCommsMobilityApiExt</xref>
+			</p>
+			<p>
+				<xref href="class_r_comms_mobility_api_ext.xml#class_r_comms_mobility_api_ext">RCommsMobilityApiExt</xref>
+			</p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_c_active_comms_mobility_api_ext_1a5966accd443a597ec3daead1a5a52998">
+		<apiName>NewL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_c_active_comms_mobility_api_ext.xml#class_c_active_comms_mobility_api_ext">CActiveCommsMobilityApiExt</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CActiveCommsMobilityApiExt</cxxFunctionScopedName>
+				<cxxFunctionPrototype>static IMPORT_C CActiveCommsMobilityApiExt * NewL(RCommsSubSession &amp;aExtensionProvider, MMobilityProtocolResp &amp;aProtocol)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CActiveCommsMobilityApiExt::NewL(RCommsSubSession &amp;,MMobilityProtocolResp &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>RCommsSubSession &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aExtensionProvider</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The corresponding RCommsSubSession under which the extension is to be opened (in case of Mobility this is the RConnection or RCommsManager instance). </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_m_mobility_protocol_resp.xml#class_m_mobility_protocol_resp">MMobilityProtocolResp</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aProtocol</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Handles the response communication between the implementation and the client.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_mobility_apiext.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="88"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_mobility_apiext.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="193"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="200"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>This call is used to construct the Mobility extension, initialised with the <xref href="class_m_mobility_protocol_resp.xml#class_m_mobility_protocol_resp">MMobilityProtocolResp</xref> implementation provided as a parameter. <xref href="class_m_mobility_protocol_resp.xml#class_m_mobility_protocol_resp">MMobilityProtocolResp</xref> implementation is used when a Mobility notification arrives to the Client and is being dispatched on one of the call back APIs of <xref href="class_m_mobility_protocol_resp.xml#class_m_mobility_protocol_resp">MMobilityProtocolResp</xref>.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_active_comms_mobility_api_ext_1a68940071cec910856597455326d7273e">
+		<apiName>~CActiveCommsMobilityApiExt</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDestructor/>
+				<cxxFunctionDeclaredType>IMPORT_C</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CActiveCommsMobilityApiExt</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C ~CActiveCommsMobilityApiExt()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CActiveCommsMobilityApiExt::~CActiveCommsMobilityApiExt()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_mobility_apiext.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="89"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_mobility_apiext.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="208"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="213"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Cancels the outstanding notification request and deletes the Mobility extension.</p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_active_comms_mobility_api_ext_1ad6fd6bcd821e24d52588b2d7210e5c3a">
+		<apiName>MigrateToPreferredCarrier</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CActiveCommsMobilityApiExt</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void MigrateToPreferredCarrier()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CActiveCommsMobilityApiExt::MigrateToPreferredCarrier()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_mobility_apiext.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="91"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_mobility_apiext.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="238"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="241"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Instructs the Implementation that it should migrate the Client to the newly available preferred carrier (or, in case of the current carrier becoming unavailable, to the less preferred but available carrier).</p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_active_comms_mobility_api_ext_1af2dd6b6e7a2549fab42813f8afb6b233">
+		<apiName>IgnorePreferredCarrier</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CActiveCommsMobilityApiExt</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void IgnorePreferredCarrier()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CActiveCommsMobilityApiExt::IgnorePreferredCarrier()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_mobility_apiext.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="92"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_mobility_apiext.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="251"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="254"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Instructs the Implementation that it should not migrate the Client to the newly available preferred carrier and that the Client wishes to continue using the current carrier.</p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_active_comms_mobility_api_ext_1a4745fe323545968b2eb3807d6c41a188">
+		<apiName>NewCarrierAccepted</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CActiveCommsMobilityApiExt</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void NewCarrierAccepted()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CActiveCommsMobilityApiExt::NewCarrierAccepted()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_mobility_apiext.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="93"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_mobility_apiext.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="262"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="265"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Instructs the Implementation that the Client wishes to use the new carrier it has been migrated to.</p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_active_comms_mobility_api_ext_1a65c945da9ee1b74dbf77e0e4b71c57a0">
+		<apiName>NewCarrierRejected</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CActiveCommsMobilityApiExt</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void NewCarrierRejected()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CActiveCommsMobilityApiExt::NewCarrierRejected()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_mobility_apiext.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="94"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_mobility_apiext.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="275"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="278"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Instruct the Implementation that the Client wishes to reject the new carrier it has been migrated to be offered another preferred carrier unless nothing else is available. In case nothing else is available the request completes with an error.</p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_active_comms_mobility_api_ext_1a92794980f768a1c7bbc3cfc76f09154a">
+		<apiName>ConstructL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CActiveCommsMobilityApiExt</cxxFunctionScopedName>
+				<cxxFunctionPrototype>void ConstructL(RCommsSubSession &amp;aExtensionProvider)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CActiveCommsMobilityApiExt::ConstructL(RCommsSubSession &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>RCommsSubSession &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aExtensionProvider</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_mobility_apiext.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="97"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_mobility_apiext.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="215"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="221"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_active_comms_mobility_api_ext_1a7c28167e27173a2ea9b6a7c128ca4c42">
+		<apiName>CActiveCommsMobilityApiExt</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionExplicit/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>CActiveCommsMobilityApiExt</cxxFunctionScopedName>
+				<cxxFunctionPrototype>CActiveCommsMobilityApiExt(MMobilityProtocolResp &amp;aProtocol)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CActiveCommsMobilityApiExt::CActiveCommsMobilityApiExt(MMobilityProtocolResp &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_m_mobility_protocol_resp.xml#class_m_mobility_protocol_resp">MMobilityProtocolResp</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aProtocol</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_mobility_apiext.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="98"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_mobility_apiext.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="223"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="228"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_active_comms_mobility_api_ext_1af935e7af1f592720ab321153bcacba5c">
+		<apiName>DoCancel</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionVirtual/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CActiveCommsMobilityApiExt</cxxFunctionScopedName>
+				<cxxFunctionPrototype>void DoCancel()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CActiveCommsMobilityApiExt::DoCancel()</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_c_active.xml#class_c_active_1abca693565d1f15ef883f32d534fba261">CActive::DoCancel()</cxxFunctionReimplemented>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_mobility_apiext.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="101"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_mobility_apiext.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="136"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="140"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Implements cancellation of an outstanding request.</p>
+				<p>This function is called as part of the active object&apos;s <xref href="class_c_active.xml#class_c_active_1a97781da8872ba6e86b5b83ad7170eb90">Cancel()</xref>.</p>
+				<p>It must call the appropriate cancel function offered by the active object&apos;s asynchronous service provider. The asynchronous service provider&apos;s cancel is expected to act immediately.</p>
+				<p>
+					<xref href="class_c_active_comms_mobility_api_ext.xml#class_c_active_comms_mobility_api_ext_1af935e7af1f592720ab321153bcacba5c">DoCancel()</xref> must not wait for event completion; this is handled by <xref href="class_c_active.xml#class_c_active_1a97781da8872ba6e86b5b83ad7170eb90">Cancel()</xref>.</p>
+				<p>
+					<xref href="class_c_active.xml#class_c_active_1a97781da8872ba6e86b5b83ad7170eb90">CActive::Cancel</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_active_comms_mobility_api_ext_1afd169634b69646a0aef3171c572df8e5">
+		<apiName>RunL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionVirtual/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CActiveCommsMobilityApiExt</cxxFunctionScopedName>
+				<cxxFunctionPrototype>void RunL()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CActiveCommsMobilityApiExt::RunL()</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_c_active.xml#class_c_active_1a1562734d9d119b6ff24bc3aec793ce3d">CActive::RunL()</cxxFunctionReimplemented>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_mobility_apiext.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="102"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_mobility_apiext.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="142"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="172"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Handles an active object&apos;s request completion event.</p>
+				<p>A derived class must provide an implementation to handle the completed request. If appropriate, it may issue another request.</p>
+				<p>The function is called by the active scheduler when a request completion event occurs, i.e. after the active scheduler&apos;s WaitForAnyRequest() function completes.</p>
+				<p>Before calling this active object&apos;s <xref href="class_c_active_comms_mobility_api_ext.xml#class_c_active_comms_mobility_api_ext_1afd169634b69646a0aef3171c572df8e5">RunL()</xref> function, the active scheduler has:</p>
+				<p>1. decided that this is the highest priority active object with a completed request</p>
+				<p>2. marked this active object&apos;s request as complete (i.e. the request is no longer outstanding)</p>
+				<p>
+					<xref href="class_c_active_comms_mobility_api_ext.xml#class_c_active_comms_mobility_api_ext_1afd169634b69646a0aef3171c572df8e5">RunL()</xref> runs under a trap harness in the active scheduler. If it leaves, then the active scheduler calls <xref href="class_c_active_comms_mobility_api_ext.xml#class_c_active_comms_mobility_api_ext_1ae4a6b4594bc895082b195b2cb5effab7">RunError()</xref> to handle the leave.</p>
+				<p>Note that once the active scheduler&apos;s Start() function has been called, all user code is run under one of the program&apos;s active object&apos;s <xref href="class_c_active_comms_mobility_api_ext.xml#class_c_active_comms_mobility_api_ext_1afd169634b69646a0aef3171c572df8e5">RunL()</xref> or <xref href="class_c_active_comms_mobility_api_ext.xml#class_c_active_comms_mobility_api_ext_1ae4a6b4594bc895082b195b2cb5effab7">RunError()</xref> functions.</p>
+				<p>
+					<xref href="class_c_active_scheduler.xml#class_c_active_scheduler_1a71f4452eae5e178915987c6d1a428972">CActiveScheduler::Start</xref> </p>
+				<p>
+					<xref href="class_c_active_scheduler.xml#class_c_active_scheduler_1a6d3f55a0772c98d0cd2845a7c074b941">CActiveScheduler::Error</xref> </p>
+				<p>
+					<xref href="class_c_active_scheduler.xml#class_c_active_scheduler_1af43f6899a3a1a6b6cb040a4f2bbb40f9">CActiveScheduler::WaitForAnyRequest</xref> </p>
+				<p>TRAPD </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_active_comms_mobility_api_ext_1ae4a6b4594bc895082b195b2cb5effab7">
+		<apiName>RunError</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionVirtual/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CActiveCommsMobilityApiExt</cxxFunctionScopedName>
+				<cxxFunctionPrototype>TInt RunError(TInt aError)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CActiveCommsMobilityApiExt::RunError(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_c_active.xml#class_c_active_1af7a68e3e7ac05c01a9e22dd81393f834">CActive::RunError(TInt)</cxxFunctionReimplemented>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aError</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_mobility_apiext.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="103"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_mobility_apiext.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="174"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="179"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxVariable id="class_c_active_comms_mobility_api_ext_1a7462124d4d6e97deb44329a2f969b6d7">
+		<apiName>iProtocol</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="class_m_mobility_protocol_resp.xml#class_m_mobility_protocol_resp">MMobilityProtocolResp</apiRelation> &amp;</cxxVariableDeclaredType>
+				<cxxVariableScopedName>CActiveCommsMobilityApiExt</cxxVariableScopedName>
+				<cxxVariablePrototype>MMobilityProtocolResp &amp; iProtocol</cxxVariablePrototype>
+				<cxxVariableNameLookup>CActiveCommsMobilityApiExt::iProtocol</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_mobility_apiext.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="106"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_c_active_comms_mobility_api_ext_1a24d1867484508b5154cebd4500cc4ac5">
+		<apiName>iExtApi</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="class_r_comms_mobility_api_ext.xml#class_r_comms_mobility_api_ext">RCommsMobilityApiExt</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>CActiveCommsMobilityApiExt</cxxVariableScopedName>
+				<cxxVariablePrototype>RCommsMobilityApiExt iExtApi</cxxVariablePrototype>
+				<cxxVariableNameLookup>CActiveCommsMobilityApiExt::iExtApi</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_mobility_apiext.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="107"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_c_active_comms_mobility_api_ext_1a560fca31a3de9e7a2c1dbfade17692d1">
+		<apiName>iResponseBuf</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="class_r_buf8.xml#class_r_buf8">RBuf8</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>CActiveCommsMobilityApiExt</cxxVariableScopedName>
+				<cxxVariablePrototype>RBuf8 iResponseBuf</cxxVariablePrototype>
+				<cxxVariableNameLookup>CActiveCommsMobilityApiExt::iResponseBuf</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_mobility_apiext.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="108"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxClassInherits>
+		<cxxClassInheritsDetail>
+			<cxxClassFunctionInherited href="class_c_active_comms_mobility_api_ext.xml#class_c_active_1acfaa5bb1a4cda9d586f0ffaf2b0a0eb7">CActive::CActive(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_active_comms_mobility_api_ext.xml#class_c_active_1a97781da8872ba6e86b5b83ad7170eb90">CActive::Cancel()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_active_comms_mobility_api_ext.xml#class_c_active_1a44f0f5a2867d153feab11ee669d33b8d">CActive::Deque()</cxxClassFunctionInherited>
+			<cxxClassEnumeratorInherited href="class_c_active_comms_mobility_api_ext.xml#class_c_active_1a378cd39842666e0a9b5f2fc089375f35ac59ba0db48385ddf49262e21f2a599b3">CActive::EPriorityHigh</cxxClassEnumeratorInherited>
+			<cxxClassEnumeratorInherited href="class_c_active_comms_mobility_api_ext.xml#class_c_active_1a378cd39842666e0a9b5f2fc089375f35a5faa05021b83e97f1a5b00917aa34733">CActive::EPriorityIdle</cxxClassEnumeratorInherited>
+			<cxxClassEnumeratorInherited href="class_c_active_comms_mobility_api_ext.xml#class_c_active_1a378cd39842666e0a9b5f2fc089375f35ac074efb2a15cd04c06d354fb1fd13f27">CActive::EPriorityLow</cxxClassEnumeratorInherited>
+			<cxxClassEnumeratorInherited href="class_c_active_comms_mobility_api_ext.xml#class_c_active_1a378cd39842666e0a9b5f2fc089375f35ad19560103adbae4fa3eeca42c703e00b">CActive::EPriorityStandard</cxxClassEnumeratorInherited>
+			<cxxClassEnumeratorInherited href="class_c_active_comms_mobility_api_ext.xml#class_c_active_1a378cd39842666e0a9b5f2fc089375f35ac4fc6edcb2aea0b20ab823f1017d788a">CActive::EPriorityUserInput</cxxClassEnumeratorInherited>
+			<cxxClassFunctionInherited href="class_c_active_comms_mobility_api_ext.xml#class_c_active_1a098237f668ebdf6e5125a2deac03323d">CActive::Extension_(TUint,TAny *&amp;,TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_active_comms_mobility_api_ext.xml#class_c_active_1a6d1d16020878d00c3af277ad2b0866f5">CActive::IsActive()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_active_comms_mobility_api_ext.xml#class_c_active_1a97d8e693eb6f85ca883dbb385650ca28">CActive::IsAdded()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_active_comms_mobility_api_ext.xml#class_c_active_1acb9ff1d90fbcb96058e2947c3f05c8e8">CActive::Priority()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_active_comms_mobility_api_ext.xml#class_c_active_1a511d5a8dc1d43eca953eb5c69b0e022d">CActive::SetActive()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_active_comms_mobility_api_ext.xml#class_c_active_1a0d7c2ce1a5364daadef07b1020c9714f">CActive::SetPriority(TInt)</cxxClassFunctionInherited>
+			<cxxClassVariableInherited href="class_c_active_comms_mobility_api_ext.xml#class_c_active_1a38314f150856c0f369555b0ef17c3140">CActive::iStatus</cxxClassVariableInherited>
+			<cxxClassFunctionInherited href="class_c_active_comms_mobility_api_ext.xml#class_c_active_1a81e8cc3a48d5d6f56c502690f9969ef8">CActive::~CActive()</cxxClassFunctionInherited>
+			<cxxClassEnumerationInherited href="class_c_active_comms_mobility_api_ext.xml#class_c_active_1a378cd39842666e0a9b5f2fc089375f35">CActive:TPriority</cxxClassEnumerationInherited>
+			<cxxClassFunctionInherited href="class_c_active_comms_mobility_api_ext.xml#class_c_base_1a240de7932690a4e987d75690b0b6f82b">CBase::CBase()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_active_comms_mobility_api_ext.xml#class_c_base_1ac0a06aeab68b3e01be81f9dd79e011c6">CBase::Delete(CBase *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_active_comms_mobility_api_ext.xml#class_c_base_1af4c4965092a763b0856ccbfa3cf99eaf">CBase::operator new(TUint)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_active_comms_mobility_api_ext.xml#class_c_base_1ab9e5f557dea4db22886189926687ddc1">CBase::operator new(TUint,TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_active_comms_mobility_api_ext.xml#class_c_base_1aa464dd21494443ac109084ed03b81f28">CBase::operator new(TUint,TLeave)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_active_comms_mobility_api_ext.xml#class_c_base_1af8429815362d4df6fecd47179e0c5dfe">CBase::operator new(TUint,TLeave,TUint)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_active_comms_mobility_api_ext.xml#class_c_base_1a80505bdf8b1b20a2ed102307a78eeeeb">CBase::operator new(TUint,TUint)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_active_comms_mobility_api_ext.xml#class_c_base_1a1390361b94424be22bb2b1020eb400ea">CBase::~CBase()</cxxClassFunctionInherited>
+		</cxxClassInheritsDetail>
+	</cxxClassInherits>
+</cxxClass>

@@ -1,0 +1,321 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_r_ref">
+	<apiName>RRef</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassDerivations>
+				<cxxClassDerivation>
+					<cxxClassDerivationAccessSpecifier value="public"/>
+					<cxxClassBaseClass href="class_r_ref_base.xml#class_r_ref_base">RRefBase</cxxClassBaseClass>
+				</cxxClassDerivation>
+			</cxxClassDerivations>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="4449"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="4448"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="4460"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>Contains, or packages, a copy of an instance of another class.</p>
+			<p>The template parameter defines the type of the contained object.</p>
+			<p>The contained object is held in allocated memory, and can be accessed through the member selection and dereference operators. </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_r_ref_1a5a2b88f04deec623a425e70fd4cc7c53">
+		<apiName>RRef</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>RRef</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline RRef()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RRef::RRef()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="4451"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="4341"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="4342"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Default constructor. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_ref_1a9fccc396671200ef32f7f5a8311ba57a">
+		<apiName>RRef</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>RRef</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline RRef(const RRef&lt; T &gt; &amp;anObject)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RRef::RRef(const RRef&lt; T &gt; &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_r_ref.xml#class_r_ref">RRef</apiRelation>&lt; T &gt; &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anObject</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A reference to another &apos;reference&apos; object. On return from this constructor, anObject may be safely orphaned if it lives on the program stack. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="4452"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="4357"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="4358"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Copy constructor.</p>
+				<p>The constructor frees any existing contained object, and takes ownership of the object owned by anObject.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_ref_1aedbd1b6df74005aaaaf7b29c93d48582">
+		<apiName>operator=</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RRef</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void operator=(const RRef&lt; T &gt; &amp;anObject)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RRef::operator=(const RRef&lt; T &gt; &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_r_ref.xml#class_r_ref">RRef</apiRelation>&lt; T &gt; &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anObject</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A reference to another &apos;reference&apos; object. On return from this constructor, anObject may be safely orphaned if it lives on the program stack. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="4453"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="4374"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="4375"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Assignment operator.</p>
+				<p>The constructor frees any existing contained object, and takes ownership of the object owned by anObject.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_ref_1a35bf4c40cc375bd41cbdce0d6208eafc">
+		<apiName>operator-&gt;</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>T *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RRef</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline T * operator-&gt;()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RRef::operator-&gt;()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="4454"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="4386"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="4387"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets a pointer to the contained object.</p>
+				<p>A pointer to the contained object </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_ref_1ab8c1b0e9231746a7a42fec832241e723">
+		<apiName>operator T *</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>RRef</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline operator T *()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RRef::operator T *()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="4455"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="4398"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="4399"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets a pointer to the contained object.</p>
+				<p>A pointer to the contained object </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_ref_1a396e428ffd843f6f95fb3dda4fb62b87">
+		<apiName>Alloc</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RRef</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void Alloc(const T &amp;anObject)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RRef::Alloc(const T &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const T &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anObject</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The object to be packaged up by this reference object. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="4456"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="4414"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="4415"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Creates a copy of the specified object, which is to be contained by this reference object.</p>
+				<p>The amount of memory set aside to contain the object is defined by the size of the object</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_ref_1a4107d8493845f43e5c5934c60d90039a">
+		<apiName>Alloc</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RRef</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void Alloc(const T &amp;anObject, TInt aSize)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RRef::Alloc(const T &amp;,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const T &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anObject</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The object to be packaged up by this reference object. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSize</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The amount of memory to be set aside to contain the object. You must make sure that this is big enough. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="4457"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="4431"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="4432"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Creates a copy of the specified object, which is to be contained by this reference object.</p>
+				<p>The amount of memory set aside to contain the object is defined by aSize.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_ref_1a371ce7c46ae52bab16cf14a85875ad39">
+		<apiName>AllocL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RRef</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void AllocL(const T &amp;anObject)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RRef::AllocL(const T &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const T &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anObject</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The object to be packaged up by this reference object. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="4458"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="4447"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="4448"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Creates a copy of the specified object, which is to be contained by this reference object, and leaves on failure.</p>
+				<p>The amount of memory set aside to contain the object is defined by the size of the object</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_ref_1a1ed977b858454b7773a9df42fcebd90e">
+		<apiName>AllocL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RRef</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void AllocL(const T &amp;anObject, TInt aSize)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RRef::AllocL(const T &amp;,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const T &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anObject</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The object to be packaged up by this reference object. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSize</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The amount of memory to be set aside to contain the object. You must make sure that this is big enough. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="4459"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="4464"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="4465"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Creates a copy of the specified object, which is to be contained by this reference object, and leaves on failure.</p>
+				<p>The amount of memory set aside to contain the object is defined by aSize.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxClassInherits>
+		<cxxClassInheritsDetail>
+			<cxxClassFunctionInherited href="class_r_ref.xml#class_r_ref_base_1a4ee2a060489915d7d39d44d740156805">RRefBase::Copy(const RRefBase &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_ref.xml#class_r_ref_base_1a325546e77468c73adb4c117606b0a5cb">RRefBase::DoAlloc(const TAny *,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_ref.xml#class_r_ref_base_1a78186a3b2a10ad28f1ec30969b2be084">RRefBase::DoAllocL(const TAny *,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_ref.xml#class_r_ref_base_1af2583cb6a0f55e901be0286bb8aa1da3">RRefBase::Free()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_ref.xml#class_r_ref_base_1a8ce48a00d6f507e837b75514db4ffef0">RRefBase::RRefBase()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_ref.xml#class_r_ref_base_1aea19cd846a1e72e4c1816d990b4761ef">RRefBase::RRefBase(const RRefBase &amp;)</cxxClassFunctionInherited>
+			<cxxClassVariableInherited href="class_r_ref.xml#class_r_ref_base_1aeefa2895b2f5117b33762b0a1fc1d3a1">RRefBase::iPtr</cxxClassVariableInherited>
+		</cxxClassInheritsDetail>
+	</cxxClassInherits>
+</cxxClass>

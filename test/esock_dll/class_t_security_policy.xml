@@ -1,0 +1,1323 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_t_security_policy">
+	<apiName>TSecurityPolicy</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="3623"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="3622"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="3737"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>Class representing a generic security policy</p>
+			<p>This class can specify a security policy consisting of either:</p>
+			<p>
+				<ol>
+					<li>
+						<p>A check for between 0 and 7 capabilities</p>
+					</li>
+					<li>
+						<p>A check for a given Secure ID along with 0-3 capabilities</p>
+					</li>
+					<li>
+						<p>A check for a given Vendor ID along with 0-3 capabilities</p>
+					</li>
+				</ol>
+			</p>
+			<p>If multiple capabilities are specified, all of them must be present for the security check to succeed (&apos;AND&apos; relation).</p>
+			<p>The envisaged use case for this class is to specify access rights to an object managed either by the kernel or by a server but in principle owned by a client and usable in a limited way by other clients. For example<ul>
+					<li>
+						<p>Publish and Subscribe properties</p>
+					</li>
+					<li>
+						<p>DBMS databases</p>
+					</li>
+				</ul>
+			</p>
+			<p>In these cases the owning client would pass one (or more) of these objects to the server to specify which security checks should be done on other clients before allowing access to the object.</p>
+			<p>To pass a <xref href="class_t_security_policy.xml#class_t_security_policy">TSecurityPolicy</xref> object via IPC, a client should obtain a descriptor for the object using <xref href="class_t_security_policy.xml#class_t_security_policy_1a788a816e8e4f878c4ff74a1a887f857e">Package()</xref> and send this. When a server receives this descriptor it should read the descriptor contents into a TSecurityPolicyBuf and then <xref href="class_t_security_policy.xml#class_t_security_policy_1a35ee09155645373911d2a4d2056d692c">Set()</xref> should be used to create a policy object from this.</p>
+			<p>Because this class has non-default constructors, compilers will not initialise this object at compile time, instead code will be generated to construct the object at run-time. This is wasteful - and Symbian OS DLLs are not permitted to have such uninitialised data. To overcome these problems a set of macros are provided to construct a const object which behaves like a <xref href="class_t_security_policy.xml#class_t_security_policy">TSecurityPolicy</xref>. These are:</p>
+			<p>_LIT_SECURITY_POLICY_C1 through _LIT_SECURITY_POLICY_C7, _LIT_SECURITY_POLICY_S0 through _LIT_SECURITY_POLICY_S3 and _LIT_SECURITY_POLICY_V0 through _LIT_SECURITY_POLICY_V3.</p>
+			<p>Also, the macros _LIT_SECURITY_POLICY_PASS and _LIT_SECURITY_POLICY_FAIL are provided in order to allow easy construction of a const object which can be used as a TSecuityPolicy which always passes or always fails, respectively.</p>
+			<p>If a security policy object is needed to be embedded in another class then the <xref href="struct_t_static_security_policy.xml#struct_t_static_security_policy">TStaticSecurityPolicy</xref> structure can be used. This behaves in the same way as a <xref href="class_t_security_policy.xml#class_t_security_policy">TSecurityPolicy</xref> object but may be initialised at compile time.</p>
+			<p>
+				<xref href="struct_t_static_security_policy.xml#struct_t_static_security_policy">TStaticSecurityPolicy</xref> </p>
+			<p>
+				<xref href="e32cmn_8h.xml#e32cmn_8h_1a743208a9b2f878059a150d8fec782721">TSecurityPolicyBuf</xref> </p>
+			<p>_LIT_SECURITY_POLICY_PASS </p>
+			<p>_LIT_SECURITY_POLICY_FAIL </p>
+			<p>_LIT_SECURITY_POLICY_C1 </p>
+			<p>_LIT_SECURITY_POLICY_C2 </p>
+			<p>_LIT_SECURITY_POLICY_C3 </p>
+			<p>_LIT_SECURITY_POLICY_C4 </p>
+			<p>_LIT_SECURITY_POLICY_C5 </p>
+			<p>_LIT_SECURITY_POLICY_C6 </p>
+			<p>_LIT_SECURITY_POLICY_C7 </p>
+			<p>_LIT_SECURITY_POLICY_S0 </p>
+			<p>_LIT_SECURITY_POLICY_S1 </p>
+			<p>_LIT_SECURITY_POLICY_S2 </p>
+			<p>_LIT_SECURITY_POLICY_S3 </p>
+			<p>_LIT_SECURITY_POLICY_V0 </p>
+			<p>_LIT_SECURITY_POLICY_V1 </p>
+			<p>_LIT_SECURITY_POLICY_V2 </p>
+			<p>_LIT_SECURITY_POLICY_V3</p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxEnumeration id="class_t_security_policy_1af19ec538e2cd14839c2b7186a7618ddb">
+		<apiName>TSecPolicyType</apiName>
+		<cxxEnumerationDetail>
+			<cxxEnumerationDefinition>
+				<cxxEnumerationAccessSpecifier value="public"/>
+				<cxxEnumerationScopedName>TSecurityPolicy</cxxEnumerationScopedName>
+				<cxxEnumerationPrototype>TSecPolicyType</cxxEnumerationPrototype>
+				<cxxEnumerationNameLookup>TSecurityPolicy:TSecPolicyType</cxxEnumerationNameLookup>
+				<cxxEnumerators>
+					<cxxEnumerator id="class_t_security_policy_1af19ec538e2cd14839c2b7186a7618ddba9c2ee37f5406fedc489d2befd7d8923d">
+						<apiName>EAlwaysFail</apiName>
+						<cxxEnumeratorScopedName>TSecurityPolicy</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EAlwaysFail = 0</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TSecurityPolicy::EAlwaysFail</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="0"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="3627"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc/>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_security_policy_1af19ec538e2cd14839c2b7186a7618ddbaa62146e3daa68e0b6743c90b77793ab2">
+						<apiName>EAlwaysPass</apiName>
+						<cxxEnumeratorScopedName>TSecurityPolicy</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EAlwaysPass = 1</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TSecurityPolicy::EAlwaysPass</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="1"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="3628"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc/>
+					</cxxEnumerator>
+				</cxxEnumerators>
+				<cxxEnumerationAPIItemLocation>
+					<cxxEnumerationDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxEnumerationDeclarationFileLine name="lineNumber" value="3626"/>
+					<cxxEnumerationDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxEnumerationDefinitionFileLineStart name="lineNumber" value="3625"/>
+					<cxxEnumerationDefinitionFileLineEnd name="lineNumber" value="3629"/>
+				</cxxEnumerationAPIItemLocation>
+			</cxxEnumerationDefinition>
+			<apiDesc/>
+		</cxxEnumerationDetail>
+	</cxxEnumeration>
+	<cxxFunction id="class_t_security_policy_1a0fc46e14d3f03d7241a38ec424f0057b">
+		<apiName>TSecurityPolicy</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TSecurityPolicy</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TSecurityPolicy()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSecurityPolicy::TSecurityPolicy()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3632"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="7185"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="7186"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Constructs a <xref href="class_t_security_policy.xml#class_t_security_policy">TSecurityPolicy</xref> that will always fail, irrespective of the checked object&apos;s attributes. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_security_policy_1a833e8174888e1d00066f1206974e3d7d">
+		<apiName>TSecurityPolicy</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType>IMPORT_C</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TSecurityPolicy</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TSecurityPolicy(TSecPolicyType aType)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSecurityPolicy::TSecurityPolicy(TSecPolicyType)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_security_policy.xml#_1af19ec538e2cd14839c2b7186a7618ddb">TSecPolicyType</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aType</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3633"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_security_policy_1aac677b6e4df01ddca81cbb8bf7af64a5">
+		<apiName>TSecurityPolicy</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType>IMPORT_C</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TSecurityPolicy</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TSecurityPolicy(TCapability aCap1, TCapability aCap2=ECapability_None, TCapability aCap3=ECapability_None)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSecurityPolicy::TSecurityPolicy(TCapability,TCapability,TCapability)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1acc669c503e01bb03c69557bd0003bd81">TCapability</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCap1</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1acc669c503e01bb03c69557bd0003bd81">TCapability</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCap2</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>ECapability_None</cxxFunctionParameterDefaultValue>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1acc669c503e01bb03c69557bd0003bd81">TCapability</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCap3</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>ECapability_None</cxxFunctionParameterDefaultValue>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3634"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_security_policy_1a924ce9dca7647a284295de57e1f7a15b">
+		<apiName>TSecurityPolicy</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType>IMPORT_C</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TSecurityPolicy</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TSecurityPolicy(TCapability aCap1, TCapability aCap2, TCapability aCap3, TCapability aCap4, TCapability aCap5=ECapability_None, TCapability aCap6=ECapability_None, TCapability aCap7=ECapability_None)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSecurityPolicy::TSecurityPolicy(TCapability,TCapability,TCapability,TCapability,TCapability,TCapability,TCapability)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1acc669c503e01bb03c69557bd0003bd81">TCapability</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCap1</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1acc669c503e01bb03c69557bd0003bd81">TCapability</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCap2</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1acc669c503e01bb03c69557bd0003bd81">TCapability</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCap3</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1acc669c503e01bb03c69557bd0003bd81">TCapability</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCap4</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1acc669c503e01bb03c69557bd0003bd81">TCapability</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCap5</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>ECapability_None</cxxFunctionParameterDefaultValue>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1acc669c503e01bb03c69557bd0003bd81">TCapability</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCap6</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>ECapability_None</cxxFunctionParameterDefaultValue>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1acc669c503e01bb03c69557bd0003bd81">TCapability</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCap7</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>ECapability_None</cxxFunctionParameterDefaultValue>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3635"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_security_policy_1a894f3e8cc734c4041823bd771c7e0112">
+		<apiName>TSecurityPolicy</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType>IMPORT_C</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TSecurityPolicy</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TSecurityPolicy(TSecureId aSecureId, TCapability aCap1=ECapability_None, TCapability aCap2=ECapability_None, TCapability aCap3=ECapability_None)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSecurityPolicy::TSecurityPolicy(TSecureId,TCapability,TCapability,TCapability)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_secure_id.xml#class_t_secure_id">TSecureId</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSecureId</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1acc669c503e01bb03c69557bd0003bd81">TCapability</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCap1</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>ECapability_None</cxxFunctionParameterDefaultValue>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1acc669c503e01bb03c69557bd0003bd81">TCapability</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCap2</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>ECapability_None</cxxFunctionParameterDefaultValue>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1acc669c503e01bb03c69557bd0003bd81">TCapability</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCap3</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>ECapability_None</cxxFunctionParameterDefaultValue>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3636"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_security_policy_1afd4aace0bab39238d5dd95f9b09d0d16">
+		<apiName>TSecurityPolicy</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType>IMPORT_C</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TSecurityPolicy</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TSecurityPolicy(TVendorId aVendorId, TCapability aCap1=ECapability_None, TCapability aCap2=ECapability_None, TCapability aCap3=ECapability_None)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSecurityPolicy::TSecurityPolicy(TVendorId,TCapability,TCapability,TCapability)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_vendor_id.xml#class_t_vendor_id">TVendorId</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aVendorId</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1acc669c503e01bb03c69557bd0003bd81">TCapability</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCap1</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>ECapability_None</cxxFunctionParameterDefaultValue>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1acc669c503e01bb03c69557bd0003bd81">TCapability</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCap2</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>ECapability_None</cxxFunctionParameterDefaultValue>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1acc669c503e01bb03c69557bd0003bd81">TCapability</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCap3</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>ECapability_None</cxxFunctionParameterDefaultValue>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3637"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_security_policy_1a35ee09155645373911d2a4d2056d692c">
+		<apiName>Set</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TSecurityPolicy</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Set(const TDesC8 &amp;aDes)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSecurityPolicy::Set(const TDesC8 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3638"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_security_policy_1a788a816e8e4f878c4ff74a1a887f857e">
+		<apiName>Package</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_ptr_c8.xml#class_t_ptr_c8">TPtrC8</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TSecurityPolicy</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TPtrC8 Package() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSecurityPolicy::Package()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3639"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_security_policy_1a60b5cd584e33306f6a5b07d8f6ff735f">
+		<apiName>CheckPolicy</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TSecurityPolicy</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool CheckPolicy(RProcess aProcess, const char *aDiagnostic=0) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSecurityPolicy::CheckPolicy(RProcess,const char *)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_process.xml#class_r_process">RProcess</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aProcess</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The RProcess object to check against this TSecurityPolicy. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const char *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDiagnostic</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>0</cxxFunctionParameterDefaultValue>
+						<apiDefNote>A string that will be emitted along with any diagnostic message that may be issued if the policy check fails. This string must be enclosed in the __PLATSEC_DIAGNOSTIC_STRING macro which enables it to be easily removed from the system. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3655"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="5070"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="5073"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Checks this policy against the platform security attributes of aProcess.</p>
+				<p>When a check fails the action taken is determined by the system wide Platform Security configuration. If PlatSecDiagnostics is ON, then a diagnostic message is emitted. If PlatSecEnforcement is OFF, then this function will return ETrue even though the check failed.</p>
+				<p>ETrue if all the requirements of this <xref href="class_t_security_policy.xml#class_t_security_policy">TSecurityPolicy</xref> are met by the platform security attributes of aProcess, EFalse otherwise. </p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>USER 190 if &apos;this&apos; is an invalid <xref href="struct_s_security_info.xml#struct_s_security_info">SSecurityInfo</xref> object </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_security_policy_1a71b0f6fd7f224b99ab981acd7b6fc26e">
+		<apiName>CheckPolicy</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TSecurityPolicy</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool CheckPolicy(RThread aThread, const char *aDiagnostic=0) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSecurityPolicy::CheckPolicy(RThread,const char *)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_thread.xml#class_r_thread">RThread</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aThread</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The thread whose owning process&apos; platform security attributes are to be checked against this TSecurityPolicy. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const char *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDiagnostic</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>0</cxxFunctionParameterDefaultValue>
+						<apiDefNote>A string that will be emitted along with any diagnostic message that may be issued if the policy check fails. This string must be enclosed in the __PLATSEC_DIAGNOSTIC_STRING macro which enables it to be easily removed from the system. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3656"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="5093"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="5096"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Checks this policy against the platform security attributes of the process owning aThread.</p>
+				<p>When a check fails the action taken is determined by the system wide Platform Security configuration. If PlatSecDiagnostics is ON, then a diagnostic message is emitted. If PlatSecEnforcement is OFF, then this function will return ETrue even though the check failed.</p>
+				<p>ETrue if all the requirements of this <xref href="class_t_security_policy.xml#class_t_security_policy">TSecurityPolicy</xref> are met by the platform security parameters of the owning process of aThread, EFalse otherwise. </p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>USER 190 if &apos;this&apos; is an invalid <xref href="struct_s_security_info.xml#struct_s_security_info">SSecurityInfo</xref> object </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_security_policy_1a9ade5676d2b32f9c4194d053664572b5">
+		<apiName>CheckPolicy</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TSecurityPolicy</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool CheckPolicy(RMessagePtr2 aMsgPtr, const char *aDiagnostic=0) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSecurityPolicy::CheckPolicy(RMessagePtr2,const char *)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_message_ptr2.xml#class_r_message_ptr2">RMessagePtr2</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMsgPtr</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The RMessagePtr2 object to check against this TSecurityPolicy. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const char *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDiagnostic</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>0</cxxFunctionParameterDefaultValue>
+						<apiDefNote>A string that will be emitted along with any diagnostic message that may be issued if the policy check fails. This string must be enclosed in the __PLATSEC_DIAGNOSTIC_STRING macro which enables it to be easily removed from the system. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3657"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="5115"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="5118"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Checks this policy against the platform security attributes of the process which sent the given message.</p>
+				<p>When a check fails the action taken is determined by the system wide Platform Security configuration. If PlatSecDiagnostics is ON, then a diagnostic message is emitted. If PlatSecEnforcement is OFF, then this function will return ETrue even though the check failed.</p>
+				<p>ETrue if all the requirements of this <xref href="class_t_security_policy.xml#class_t_security_policy">TSecurityPolicy</xref> are met by the platform security attributes of aMsg, EFalse otherwise. </p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>USER 190 if &apos;this&apos; is an invalid <xref href="struct_s_security_info.xml#struct_s_security_info">SSecurityInfo</xref> object </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_security_policy_1a07ba05358a3f241a56ef7c76e3adf417">
+		<apiName>CheckPolicy</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TSecurityPolicy</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool CheckPolicy(RMessagePtr2 aMsgPtr, TSecurityInfo &amp;aMissing, const char *aDiagnostic=0) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSecurityPolicy::CheckPolicy(RMessagePtr2,TSecurityInfo &amp;,const char *)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_message_ptr2.xml#class_r_message_ptr2">RMessagePtr2</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMsgPtr</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The RMessagePtr2 object to check against this TSecurityPolicy. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_security_info.xml#class_t_security_info">TSecurityInfo</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMissing</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A TSecurityInfo object which this method fills with any capabilities or IDs it finds to be missing. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const char *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDiagnostic</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>0</cxxFunctionParameterDefaultValue>
+						<apiDefNote>A string that will be emitted along with any diagnostic message that may be issued if the policy check fails. This string must be enclosed in the __PLATSEC_DIAGNOSTIC_STRING macro which enables it to be easily removed from the system. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3658"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="5141"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="5144"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Checks this policy against the platform security attributes of the process which sent the given message.</p>
+				<p>When a check fails the action taken is determined by the system wide Platform Security configuration. If PlatSecDiagnostics is ON, then a diagnostic message is emitted. If PlatSecEnforcement is OFF, then this function will return ETrue even though the check failed.</p>
+				<p>ETrue if all the requirements of this <xref href="class_t_security_policy.xml#class_t_security_policy">TSecurityPolicy</xref> are met by the platform security attributes of aMsg, EFalse otherwise. </p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>USER 190 if &apos;this&apos; is an invalid <xref href="struct_s_security_info.xml#struct_s_security_info">SSecurityInfo</xref> object</p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_security_policy_1af6a1aa62bd0553a64804a3740892438f">
+		<apiName>CheckPolicyCreator</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TSecurityPolicy</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool CheckPolicyCreator(const char *aDiagnostic=0) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSecurityPolicy::CheckPolicyCreator(const char *)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const char *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDiagnostic</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>0</cxxFunctionParameterDefaultValue>
+						<apiDefNote>A string that will be emitted along with any diagnostic message that may be issued if the policy check fails. This string must be enclosed in the __PLATSEC_DIAGNOSTIC_STRING macro which enables it to be easily removed from the system. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3659"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="5161"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="5164"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Checks this policy against the platform security attributes of this process&apos; creator.</p>
+				<p>When a check fails the action taken is determined by the system wide Platform Security configuration. If PlatSecDiagnostics is ON, then a diagnostic message is emitted. If PlatSecEnforcement is OFF, then this function will return ETrue even though the check failed.</p>
+				<p>ETrue if all the requirements of this <xref href="class_t_security_policy.xml#class_t_security_policy">TSecurityPolicy</xref> are met by the platform security attributes of this process&apos; creator, EFalse otherwise. </p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>USER 190 if &apos;this&apos; is an invalid <xref href="struct_s_security_info.xml#struct_s_security_info">SSecurityInfo</xref> object </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_security_policy_1af863ad37621e23ec654f02d8bf746b87">
+		<apiName>CheckPolicy</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TSecurityPolicy</cxxFunctionScopedName>
+				<cxxFunctionPrototype>TInt CheckPolicy(RSessionBase aSession) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSecurityPolicy::CheckPolicy(RSessionBase)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_session_base.xml#class_r_session_base">RSessionBase</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSession</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3676"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_security_policy_1a9cde9f4c31a44443028d5cab9cbb7494">
+		<apiName>Validate</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TSecurityPolicy</cxxFunctionScopedName>
+				<cxxFunctionPrototype>TBool Validate() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSecurityPolicy::Validate()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3680"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_security_policy_1a3cc036c68189f28c71d13dee45f79e20">
+		<apiName>DoCheckPolicy</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TSecurityPolicy</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TBool DoCheckPolicy(RProcess aProcess, const char *aDiagnostic) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSecurityPolicy::DoCheckPolicy(RProcess,const char *)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_process.xml#class_r_process">RProcess</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aProcess</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const char *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDiagnostic</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3689"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_security_policy_1aca44d75581d0ec10e753e06158c182b5">
+		<apiName>DoCheckPolicy</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TSecurityPolicy</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TBool DoCheckPolicy(RProcess aProcess) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSecurityPolicy::DoCheckPolicy(RProcess)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_process.xml#class_r_process">RProcess</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aProcess</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3690"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_security_policy_1a67dca82a237b46298ee529621584dab0">
+		<apiName>DoCheckPolicy</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TSecurityPolicy</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TBool DoCheckPolicy(RThread aThread, const char *aDiagnostic) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSecurityPolicy::DoCheckPolicy(RThread,const char *)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_thread.xml#class_r_thread">RThread</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aThread</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const char *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDiagnostic</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3691"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_security_policy_1a55371e88681c8e153a92f100dcb65e45">
+		<apiName>DoCheckPolicy</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TSecurityPolicy</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TBool DoCheckPolicy(RThread aThread) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSecurityPolicy::DoCheckPolicy(RThread)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_thread.xml#class_r_thread">RThread</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aThread</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3692"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_security_policy_1a34ac93aa28bbdb90b010e5b7c16ac126">
+		<apiName>DoCheckPolicy</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TSecurityPolicy</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TBool DoCheckPolicy(RMessagePtr2 aMsgPtr, const char *aDiagnostic) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSecurityPolicy::DoCheckPolicy(RMessagePtr2,const char *)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_message_ptr2.xml#class_r_message_ptr2">RMessagePtr2</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMsgPtr</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const char *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDiagnostic</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3693"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_security_policy_1a37cefe36a5446d9ea5b2720ebfd3f8df">
+		<apiName>DoCheckPolicy</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TSecurityPolicy</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TBool DoCheckPolicy(RMessagePtr2 aMsgPtr) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSecurityPolicy::DoCheckPolicy(RMessagePtr2)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_message_ptr2.xml#class_r_message_ptr2">RMessagePtr2</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMsgPtr</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3694"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_security_policy_1a279e47c5e8bc6a7266b3139f48ce0b18">
+		<apiName>DoCheckPolicyCreator</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TSecurityPolicy</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TBool DoCheckPolicyCreator(const char *aDiagnostic) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSecurityPolicy::DoCheckPolicyCreator(const char *)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const char *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDiagnostic</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3695"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_security_policy_1a98193b90a8151181787c1caec09c5641">
+		<apiName>DoCheckPolicyCreator</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TSecurityPolicy</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TBool DoCheckPolicyCreator() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSecurityPolicy::DoCheckPolicyCreator()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3696"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_security_policy_1aca8d5b071f8bd92b80ae2cf51e121a83">
+		<apiName>DoCheckPolicy</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TSecurityPolicy</cxxFunctionScopedName>
+				<cxxFunctionPrototype>TBool DoCheckPolicy(RMessagePtr2 aMsgPtr, TSecurityInfo &amp;aMissing, const char *aDiagnostic) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSecurityPolicy::DoCheckPolicy(RMessagePtr2,TSecurityInfo &amp;,const char *)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_message_ptr2.xml#class_r_message_ptr2">RMessagePtr2</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMsgPtr</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_security_info.xml#class_t_security_info">TSecurityInfo</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMissing</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const char *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDiagnostic</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3698"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_security_policy_1a1f170add9c2dd5ce1a093f2a4aada39f">
+		<apiName>DoCheckPolicy</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TSecurityPolicy</cxxFunctionScopedName>
+				<cxxFunctionPrototype>TBool DoCheckPolicy(RMessagePtr2 aMsgPtr, TSecurityInfo &amp;aMissing) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSecurityPolicy::DoCheckPolicy(RMessagePtr2,TSecurityInfo &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_message_ptr2.xml#class_r_message_ptr2">RMessagePtr2</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMsgPtr</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_security_info.xml#class_t_security_info">TSecurityInfo</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMissing</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3700"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxEnumeration id="class_t_security_policy_1aa780a8fdeca8c01b7124bf9185f29405">
+		<apiName>TType</apiName>
+		<cxxEnumerationDetail>
+			<cxxEnumerationDefinition>
+				<cxxEnumerationAccessSpecifier value="public"/>
+				<cxxEnumerationScopedName>TSecurityPolicy</cxxEnumerationScopedName>
+				<cxxEnumerationPrototype>TType</cxxEnumerationPrototype>
+				<cxxEnumerationNameLookup>TSecurityPolicy:TType</cxxEnumerationNameLookup>
+				<cxxEnumerators>
+					<cxxEnumerator id="class_t_security_policy_1aa780a8fdeca8c01b7124bf9185f29405a40c7c6395f52b961090ccf3dfd8e4ed8">
+						<apiName>ETypeFail</apiName>
+						<cxxEnumeratorScopedName>TSecurityPolicy</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ETypeFail = 0</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TSecurityPolicy::ETypeFail</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="0"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="3708"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Always fail </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_security_policy_1aa780a8fdeca8c01b7124bf9185f29405a3ec5101aa6f291edcc6968bd40c97c06">
+						<apiName>ETypePass</apiName>
+						<cxxEnumeratorScopedName>TSecurityPolicy</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ETypePass = 1</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TSecurityPolicy::ETypePass</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="1"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="3709"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Always pass </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_security_policy_1aa780a8fdeca8c01b7124bf9185f29405aff008982374b66db65b0bc7bd4d7ad7f">
+						<apiName>ETypeC3</apiName>
+						<cxxEnumeratorScopedName>TSecurityPolicy</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ETypeC3 = 2</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TSecurityPolicy::ETypeC3</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="2"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="3710"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Up to 3 capabilities </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_security_policy_1aa780a8fdeca8c01b7124bf9185f29405ab79d7f8701d195116268be5380e4a484">
+						<apiName>ETypeC7</apiName>
+						<cxxEnumeratorScopedName>TSecurityPolicy</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ETypeC7 = 3</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TSecurityPolicy::ETypeC7</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="3"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="3711"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Up to 7 capabilities </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_security_policy_1aa780a8fdeca8c01b7124bf9185f29405aea00dbc86a447228e2ce73cc9f3d0e4c">
+						<apiName>ETypeS3</apiName>
+						<cxxEnumeratorScopedName>TSecurityPolicy</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ETypeS3 = 4</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TSecurityPolicy::ETypeS3</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="4"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="3712"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Secure ID and up to 3 capabilities </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_security_policy_1aa780a8fdeca8c01b7124bf9185f29405aef4ae1e982191fe6edc20ed80f962842">
+						<apiName>ETypeV3</apiName>
+						<cxxEnumeratorScopedName>TSecurityPolicy</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ETypeV3 = 5</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TSecurityPolicy::ETypeV3</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="5"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="3713"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Vendor ID and up to 3 capabilities </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_security_policy_1aa780a8fdeca8c01b7124bf9185f29405a4bc1ccd9596980b2956b21ebed440e66">
+						<apiName>ETypeLimit</apiName>
+						<cxxEnumeratorScopedName>TSecurityPolicy</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ETypeLimit</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TSecurityPolicy::ETypeLimit</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="3722"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>The number of possible <xref href="class_t_security_policy.xml#class_t_security_policy">TSecurityPolicy</xref> types This is intended for internal Symbian use only.  </p>
+						</apiDesc>
+					</cxxEnumerator>
+				</cxxEnumerators>
+				<cxxEnumerationAPIItemLocation>
+					<cxxEnumerationDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxEnumerationDeclarationFileLine name="lineNumber" value="3707"/>
+					<cxxEnumerationDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxEnumerationDefinitionFileLineStart name="lineNumber" value="3706"/>
+					<cxxEnumerationDefinitionFileLineEnd name="lineNumber" value="3722"/>
+				</cxxEnumerationAPIItemLocation>
+			</cxxEnumerationDefinition>
+			<apiDesc>
+				<p>Constants to specify the type of <xref href="class_t_security_policy.xml#class_t_security_policy">TSecurityPolicy</xref> objects. </p>
+			</apiDesc>
+		</cxxEnumerationDetail>
+	</cxxEnumeration>
+	<cxxFunction id="class_t_security_policy_1ab4143219a42bc22225552285fb01460b">
+		<apiName>CheckPolicy</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TSecurityPolicy</cxxFunctionScopedName>
+				<cxxFunctionPrototype>TBool CheckPolicy(const SSecurityInfo &amp;aSecInfo, SSecurityInfo &amp;aMissing) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSecurityPolicy::CheckPolicy(const SSecurityInfo &amp;,SSecurityInfo &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="struct_s_security_info.xml#struct_s_security_info">SSecurityInfo</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSecInfo</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="struct_s_security_info.xml#struct_s_security_info">SSecurityInfo</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMissing</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3724"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_security_policy_1afe875d044d5153c67f50af783368f7cd">
+		<apiName>ConstructAndCheck3</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TSecurityPolicy</cxxFunctionScopedName>
+				<cxxFunctionPrototype>void ConstructAndCheck3(TCapability aCap1, TCapability aCap2, TCapability aCap3)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSecurityPolicy::ConstructAndCheck3(TCapability,TCapability,TCapability)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1acc669c503e01bb03c69557bd0003bd81">TCapability</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCap1</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1acc669c503e01bb03c69557bd0003bd81">TCapability</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCap2</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1acc669c503e01bb03c69557bd0003bd81">TCapability</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCap3</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3726"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxVariable id="class_t_security_policy_1a00ba39e74ba7458b4b2e5bcf33a7ab20">
+		<apiName>iType</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1aae4399ce3f10d6c2b5ec96a13bbb5881">TUint8</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TSecurityPolicy</cxxVariableScopedName>
+				<cxxVariablePrototype>TUint8 iType</cxxVariablePrototype>
+				<cxxVariableNameLookup>TSecurityPolicy::iType</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="3728"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_t_security_policy_1ac9bc46f2ea746a8cb483430b15a197ca">
+		<apiName>iCaps</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1aae4399ce3f10d6c2b5ec96a13bbb5881">TUint8</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TSecurityPolicy</cxxVariableScopedName>
+				<cxxVariablePrototype>TUint8 iCaps[3]</cxxVariablePrototype>
+				<cxxVariableNameLookup>TSecurityPolicy::iCaps</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="3729"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_t_security_policy_1a7be90aba6dd5fd10d25aa001d501ffe5">
+		<apiName>iSecureId</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a8240e11f17c80b6b222fc2af50234da4">TUint32</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TSecurityPolicy</cxxVariableScopedName>
+				<cxxVariablePrototype>TUint32 iSecureId</cxxVariablePrototype>
+				<cxxVariableNameLookup>TSecurityPolicy::iSecureId</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="3732"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_t_security_policy_1a025473326d2257f10a54db544f2a9c56">
+		<apiName>iVendorId</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a8240e11f17c80b6b222fc2af50234da4">TUint32</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TSecurityPolicy</cxxVariableScopedName>
+				<cxxVariablePrototype>TUint32 iVendorId</cxxVariablePrototype>
+				<cxxVariableNameLookup>TSecurityPolicy::iVendorId</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="3733"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_t_security_policy_1abdccefe4917efe0c81f4c903f97ae7b1">
+		<apiName>iExtraCaps</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1aae4399ce3f10d6c2b5ec96a13bbb5881">TUint8</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TSecurityPolicy</cxxVariableScopedName>
+				<cxxVariablePrototype>TUint8 iExtraCaps[4]</cxxVariablePrototype>
+				<cxxVariableNameLookup>TSecurityPolicy::iExtraCaps</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="3734"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_t_security_policy_1a04f24ca76c646493d4fc36a082dc8dcd">
+		<apiName>@16</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>union TSecurityPolicy::@15</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TSecurityPolicy</cxxVariableScopedName>
+				<cxxVariablePrototype>union TSecurityPolicy::@15 @16</cxxVariablePrototype>
+				<cxxVariableNameLookup>TSecurityPolicy::@16</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="3735"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+</cxxClass>

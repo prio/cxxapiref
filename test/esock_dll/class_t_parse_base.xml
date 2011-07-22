@@ -1,0 +1,901 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_t_parse_base">
+	<apiName>TParseBase</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassAbstract/>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="1656"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="1629"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="1697"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>Base class for file name parsing.</p>
+			<p>You first need to set up the path to be parsed using either a <xref href="class_t_parse.xml#class_t_parse">TParse</xref>, <xref href="class_t_parse_ptr.xml#class_t_parse_ptr">TParsePtr</xref> or <xref href="class_t_parse_ptr_c.xml#class_t_parse_ptr_c">TParsePtrC</xref> object.</p>
+			<p>The interrogation and extraction functions in this class allow you to test whether a component has been specified in the pathname, and if so, to extract it. If a component is not present in the pathname, the extraction function returns an empty string.</p>
+			<p>This class also allows directories to be added to, and popped from the path.</p>
+			<p>Notes:</p>
+			<p>1. the filename modification functions cannot be used by the <xref href="class_t_parse_ptr_c.xml#class_t_parse_ptr_c">TParsePtrC</xref> class.</p>
+			<p>2. navigation using .. and . is not supported.</p>
+			<p>
+				<xref href="class_t_parse.xml#class_t_parse">TParse</xref> </p>
+			<p>
+				<xref href="class_t_parse_ptr.xml#class_t_parse_ptr">TParsePtr</xref> </p>
+			<p>
+				<xref href="class_t_parse_ptr_c.xml#class_t_parse_ptr_c">TParsePtrC</xref> </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxClassNested>
+		<cxxClassNestedDetail>
+			<cxxClassNestedStruct href="struct_t_parse_base_1_1_s_field.xml#struct_t_parse_base_1_1_s_field">TParseBase::SField</cxxClassNestedStruct>
+		</cxxClassNestedDetail>
+	</cxxClassNested>
+	<cxxEnumeration id="class_t_parse_base_1abe02174c801bac3a7fd1cde3bbfad847">
+		<apiName>TField</apiName>
+		<cxxEnumerationDetail>
+			<cxxEnumerationDefinition>
+				<cxxEnumerationAccessSpecifier value="private"/>
+				<cxxEnumerationScopedName>TParseBase</cxxEnumerationScopedName>
+				<cxxEnumerationPrototype>TField</cxxEnumerationPrototype>
+				<cxxEnumerationNameLookup>TParseBase:TField</cxxEnumerationNameLookup>
+				<cxxEnumerators>
+					<cxxEnumerator id="class_t_parse_base_1abe02174c801bac3a7fd1cde3bbfad847a69aede932c58c8e5e69304428f828d64">
+						<apiName>EDrive</apiName>
+						<cxxEnumeratorScopedName>TParseBase</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EDrive</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TParseBase::EDrive</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="1659"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc/>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_parse_base_1abe02174c801bac3a7fd1cde3bbfad847a5beac8675ad3b87b5c0a0e34e1a7abb5">
+						<apiName>EPath</apiName>
+						<cxxEnumeratorScopedName>TParseBase</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EPath</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TParseBase::EPath</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="1659"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc/>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_parse_base_1abe02174c801bac3a7fd1cde3bbfad847af59aca87202fed5c3d4d7852298b43f3">
+						<apiName>EName</apiName>
+						<cxxEnumeratorScopedName>TParseBase</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EName</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TParseBase::EName</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="1659"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc/>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_parse_base_1abe02174c801bac3a7fd1cde3bbfad847a28fe21cd691d0be927d327da092147fb">
+						<apiName>EExt</apiName>
+						<cxxEnumeratorScopedName>TParseBase</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EExt</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TParseBase::EExt</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="1659"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc/>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_parse_base_1abe02174c801bac3a7fd1cde3bbfad847a7715f28edc45bf67c36fe259535f08ab">
+						<apiName>EMaxFields</apiName>
+						<cxxEnumeratorScopedName>TParseBase</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EMaxFields</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TParseBase::EMaxFields</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="1659"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc/>
+					</cxxEnumerator>
+				</cxxEnumerators>
+				<cxxEnumerationAPIItemLocation>
+					<cxxEnumerationDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxEnumerationDeclarationFileLine name="lineNumber" value="1659"/>
+					<cxxEnumerationDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxEnumerationDefinitionFileLineStart name="lineNumber" value="1659"/>
+					<cxxEnumerationDefinitionFileLineEnd name="lineNumber" value="1659"/>
+				</cxxEnumerationAPIItemLocation>
+			</cxxEnumerationDefinition>
+			<apiDesc/>
+		</cxxEnumerationDetail>
+	</cxxEnumeration>
+	<cxxEnumeration id="class_t_parse_base_1aa6f586ceb2964f3703968f1401035b59">
+		<apiName>TWild</apiName>
+		<cxxEnumerationDetail>
+			<cxxEnumerationDefinition>
+				<cxxEnumerationAccessSpecifier value="private"/>
+				<cxxEnumerationScopedName>TParseBase</cxxEnumerationScopedName>
+				<cxxEnumerationPrototype>TWild</cxxEnumerationPrototype>
+				<cxxEnumerationNameLookup>TParseBase:TWild</cxxEnumerationNameLookup>
+				<cxxEnumerators>
+					<cxxEnumerator id="class_t_parse_base_1aa6f586ceb2964f3703968f1401035b59ad3d7c5f8b320ed3132e9c9de953c9843">
+						<apiName>EWildName</apiName>
+						<cxxEnumeratorScopedName>TParseBase</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EWildName = 0x01</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TParseBase::EWildName</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="0x01"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="1660"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc/>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_parse_base_1aa6f586ceb2964f3703968f1401035b59ac3b903d1085f2f97586d12492d29f25e">
+						<apiName>EWildExt</apiName>
+						<cxxEnumeratorScopedName>TParseBase</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EWildExt = 0x02</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TParseBase::EWildExt</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="0x02"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="1660"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc/>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_parse_base_1aa6f586ceb2964f3703968f1401035b59ab44a78739910137a0e4cb3a696754ab1">
+						<apiName>EWildEither</apiName>
+						<cxxEnumeratorScopedName>TParseBase</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EWildEither = 0x04</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TParseBase::EWildEither</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="0x04"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="1660"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc/>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_parse_base_1aa6f586ceb2964f3703968f1401035b59a7071c5f9ba327a0b6fe3529b12213f31">
+						<apiName>EIsRoot</apiName>
+						<cxxEnumeratorScopedName>TParseBase</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EIsRoot = 0x08</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TParseBase::EIsRoot</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="0x08"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="1660"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc/>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_parse_base_1aa6f586ceb2964f3703968f1401035b59a1ca744d8cd76b49cf141357f49875099">
+						<apiName>EWildIsKMatchOne</apiName>
+						<cxxEnumeratorScopedName>TParseBase</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EWildIsKMatchOne = 0x10</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TParseBase::EWildIsKMatchOne</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="0x10"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="1660"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc/>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_parse_base_1aa6f586ceb2964f3703968f1401035b59a02177193dbd90cfb805bdb9d7fedf18f">
+						<apiName>EWildIsKMatchAny</apiName>
+						<cxxEnumeratorScopedName>TParseBase</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EWildIsKMatchAny = 0x20</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TParseBase::EWildIsKMatchAny</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="0x20"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="1660"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc/>
+					</cxxEnumerator>
+				</cxxEnumerators>
+				<cxxEnumerationAPIItemLocation>
+					<cxxEnumerationDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxEnumerationDeclarationFileLine name="lineNumber" value="1660"/>
+					<cxxEnumerationDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxEnumerationDefinitionFileLineStart name="lineNumber" value="1660"/>
+					<cxxEnumerationDefinitionFileLineEnd name="lineNumber" value="1660"/>
+				</cxxEnumerationAPIItemLocation>
+			</cxxEnumerationDefinition>
+			<apiDesc/>
+		</cxxEnumerationDetail>
+	</cxxEnumeration>
+	<cxxFunction id="class_t_parse_base_1a9a9e5ef3553d0294410a61a7a2a346bb">
+		<apiName>TParseBase</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType>IMPORT_C</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TParseBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TParseBase()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TParseBase::TParseBase()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1662"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_parse_base_1a212b5bfd10c4bd1a5490ada94bae9dfa">
+		<apiName>PopDir</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TParseBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt PopDir()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TParseBase::PopDir()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1663"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_parse_base_1a40c858911df2e77ed52f3ad2250bb184">
+		<apiName>AddDir</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TParseBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt AddDir(const TDesC &amp;aName)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TParseBase::AddDir(const TDesC &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aName</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1664"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_parse_base_1a74cd45934c4406044a03f35ea9141224">
+		<apiName>FullName</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC</apiRelation> &amp;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TParseBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C const TDesC &amp; FullName() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TParseBase::FullName()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1665"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_parse_base_1ac9320052bf096af786e9fcf84dfe6c75">
+		<apiName>Drive</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_ptr_c16.xml#class_t_ptr_c16">TPtrC</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TParseBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TPtrC Drive() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TParseBase::Drive()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1666"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_parse_base_1a88ff45ee1aa0c912d42101fe05d3a099">
+		<apiName>Path</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_ptr_c16.xml#class_t_ptr_c16">TPtrC</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TParseBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TPtrC Path() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TParseBase::Path()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1667"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_parse_base_1a7c58d14c175b398766c02e72c20c82ff">
+		<apiName>DriveAndPath</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_ptr_c16.xml#class_t_ptr_c16">TPtrC</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TParseBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TPtrC DriveAndPath() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TParseBase::DriveAndPath()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1668"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_parse_base_1a310fadf7f2842f3a06f563e1ea479f99">
+		<apiName>Name</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_ptr_c16.xml#class_t_ptr_c16">TPtrC</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TParseBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TPtrC Name() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TParseBase::Name()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1669"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_parse_base_1ab2e6833687e155a0e2b2af6d92a2bace">
+		<apiName>Ext</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_ptr_c16.xml#class_t_ptr_c16">TPtrC</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TParseBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TPtrC Ext() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TParseBase::Ext()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1670"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_parse_base_1ab1fb9f20bbd887ebc2a2594b4d1a00f4">
+		<apiName>NameAndExt</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_ptr_c16.xml#class_t_ptr_c16">TPtrC</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TParseBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TPtrC NameAndExt() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TParseBase::NameAndExt()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1671"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_parse_base_1a2909c6862741c9a6486aab0a5874e127">
+		<apiName>DrivePresent</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TParseBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TBool DrivePresent() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TParseBase::DrivePresent()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1672"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_parse_base_1a0064c0de96b3608de7db7c8057dd0591">
+		<apiName>PathPresent</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TParseBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TBool PathPresent() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TParseBase::PathPresent()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1673"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_parse_base_1abf79cc1fc2aa26b812bc3ef3ee132b39">
+		<apiName>NamePresent</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TParseBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TBool NamePresent() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TParseBase::NamePresent()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1674"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_parse_base_1aaf73a40557c0004e8f6fd82364fd51ef">
+		<apiName>ExtPresent</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TParseBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TBool ExtPresent() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TParseBase::ExtPresent()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1675"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_parse_base_1ab88a62f6b45384e85e22e672d91c20ff">
+		<apiName>NameOrExtPresent</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TParseBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TBool NameOrExtPresent() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TParseBase::NameOrExtPresent()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1676"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_parse_base_1add6dd840bb1f5b348d2b498d464d5583">
+		<apiName>IsRoot</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TParseBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TBool IsRoot() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TParseBase::IsRoot()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1677"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_parse_base_1ae5b727ddcc529c84998ec6527c233cbd">
+		<apiName>IsWild</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TParseBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TBool IsWild() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TParseBase::IsWild()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1678"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_parse_base_1ae8adf0f577902feecda1ffeaf197f3e3">
+		<apiName>IsKMatchOne</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TParseBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TBool IsKMatchOne() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TParseBase::IsKMatchOne()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1679"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_parse_base_1a466ff89c8f8cb57faba6900c722143a1">
+		<apiName>IsKMatchAny</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TParseBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TBool IsKMatchAny() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TParseBase::IsKMatchAny()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1680"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_parse_base_1af4ebb84f27ed4622b3bbfe804003e0d9">
+		<apiName>IsNameWild</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TParseBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TBool IsNameWild() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TParseBase::IsNameWild()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1681"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_parse_base_1ad97d6bb5a428c9e6d792e347285f8be0">
+		<apiName>IsExtWild</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TParseBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TBool IsExtWild() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TParseBase::IsExtWild()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1682"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_parse_base_1a0311e5c36fc152f9f4c016ca1b320360">
+		<apiName>NameBuf</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionPureVirtual/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="class_t_des16.xml#class_t_des16">TDes</apiRelation> &amp;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TParseBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual TDes &amp; NameBuf()=0</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TParseBase::NameBuf()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1684"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_parse_base_1a3d8c2943893adca9aa699117985b7690">
+		<apiName>NameBufC</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionConst/>
+				<cxxFunctionPureVirtual/>
+				<cxxFunctionDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC</apiRelation> &amp;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TParseBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual const TDesC &amp; NameBufC() const =0</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TParseBase::NameBufC()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1685"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_parse_base_1aa5bada766c0d46ece7380f10c5f1fe5e">
+		<apiName>Set</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TParseBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>TInt Set(const TDesC *aName, const TDesC *aRelated, const TDesC *aDefault, TBool allowWild)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TParseBase::Set(const TDesC *,const TDesC *,const TDesC *,TBool)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aName</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aRelated</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDefault</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>allowWild</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1686"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_parse_base_1aba6d12a50dd69669af86bc1229c43896">
+		<apiName>ParseDrive</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TParseBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>TInt ParseDrive(TLex &amp;aName, TBool &amp;aDone)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TParseBase::ParseDrive(TLex &amp;,TBool &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_lex16.xml#class_t_lex16">TLex</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aName</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDone</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1688"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_parse_base_1a6fc9b69187435e2138e6209f69ecfd42">
+		<apiName>ParsePath</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TParseBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>TInt ParsePath(TLex &amp;aName, TBool &amp;aDone)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TParseBase::ParsePath(TLex &amp;,TBool &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_lex16.xml#class_t_lex16">TLex</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aName</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDone</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1689"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_parse_base_1a01b90f63e09492463a4db0246f4f5d3b">
+		<apiName>ParseName</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TParseBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>TInt ParseName(TLex &amp;aName, TBool &amp;aDone)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TParseBase::ParseName(TLex &amp;,TBool &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_lex16.xml#class_t_lex16">TLex</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aName</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDone</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1690"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_parse_base_1a6bbc1d6570c3f9dc4415ea06da1a4a91">
+		<apiName>ParseExt</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TParseBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>TInt ParseExt(TLex &amp;aName, TBool &amp;aDone)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TParseBase::ParseExt(TLex &amp;,TBool &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_lex16.xml#class_t_lex16">TLex</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aName</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDone</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1691"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxVariable id="class_t_parse_base_1a16b8124b1deb42c3961c044c272984d3">
+		<apiName>iMod</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="protected"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a2ec3eb91f35fbe76b844587a3d73bd94">TInt16</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TParseBase</cxxVariableScopedName>
+				<cxxVariablePrototype>TInt16 iMod</cxxVariablePrototype>
+				<cxxVariableNameLookup>TParseBase::iMod</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1693"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_t_parse_base_1a7cc8652a144e472a405622fb5c3c8ea1">
+		<apiName>iWild</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a2ec3eb91f35fbe76b844587a3d73bd94">TInt16</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TParseBase</cxxVariableScopedName>
+				<cxxVariablePrototype>TInt16 iWild</cxxVariablePrototype>
+				<cxxVariableNameLookup>TParseBase::iWild</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1695"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_t_parse_base_1a362a11a61fbfde8fb84e34c3d386a2cb">
+		<apiName>iField</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="struct_t_parse_base_1_1_s_field.xml#struct_t_parse_base_1_1_s_field">SField</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TParseBase</cxxVariableScopedName>
+				<cxxVariablePrototype>SField iField[EMaxFields]</cxxVariablePrototype>
+				<cxxVariableNameLookup>TParseBase::iField</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1696"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+</cxxClass>

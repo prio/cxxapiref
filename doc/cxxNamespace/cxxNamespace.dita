@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (c) 2011 Nokia Corporation and/or its subsidiary(-ies).
+All rights reserved.        
+        -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<reference id="cxxNamespace" outputclass="element" xml:lang="en-us">
+<title>cxxNamespace</title>
+<shortdesc>cxxNamespace is a topic type that contains all the elements
+to describe a c++ namespace</shortdesc>
+<refbody>
+<section>             <title>Description</title>             <p>The
+&lt;cxxNamespace> element requires an ID attribute. The elements &lt;apiName>
+ and &lt;cxxNamespaceDetail> are required for this topic. </p
+>         </section>
+<example>             <title>Example</title>             <codeblock
+>&lt;cxxNamespace id="namespace_outer">
+	&lt;apiName>Outer&lt;/apiName>
+	&lt;shortdesc />
+	&lt;cxxNamespaceDetail>
+		&lt;cxxNamespaceDefinition>
+			&lt;cxxNamespaceAPIItemLocation>
+				&lt;cxxNamespaceDeclarationFile name="filePath" value="t:/epoc32/include/feature/file_14749.h" />
+				&lt;cxxNamespaceDeclarationFile name="filePath" value="t:/epoc32/include/feature/file_14749_func.h" />
+				&lt;cxxNamespaceDeclarationFile name="filePath" value="t:/sf/feature/14749/src/file_14749.cpp" />
+				&lt;cxxNamespaceDeclarationFile name="filePath" value="t:/sf/feature/14749/src/file_14749_func.cpp" />
+			&lt;/cxxNamespaceAPIItemLocation>
+		&lt;/cxxNamespaceDefinition>
+		&lt;apiDesc>
+			&lt;p otherprops="linkagainst">14749.lib&lt;/p>&lt;p>Example adapted from ISO/IEC 14882:2003(E) 7.3.1 Namespace definition [namespace.def]&lt;/p>
+			&lt;p>Even more documentation for namespace Outer from &lt;xref format="html" href="file:">file:&lt;/xref> &lt;xref href="file__14749_8h.xml#file__14749_8h_1a80752018587ae8dc67f2b250db6e7eb8">file_14749_func.h&lt;/xref>&lt;/p>
+			&lt;p>More documentation for namespace Outer from &lt;xref format="html" href="file:">file:&lt;/xref> &lt;xref href="file__14749_8h.xml#file__14749_8h_1a80752018587ae8dc67f2b250db6e7eb8">file_14749_class.h&lt;/xref> &lt;/p>
+		&lt;/apiDesc>
+	&lt;/cxxNamespaceDetail>
+	&lt;cxxNamespaceMembers>
+		&lt;cxxNamespaceMembersDetail>
+			&lt;cxxNamespaceMemberClass href="class_outer_1_1_a_class_in_outer.xml#class_outer_1_1_a_class_in_outer">Outer::AClassInOuter&lt;/cxxNamespaceMemberClass>
+			&lt;cxxNamespaceMemberNamespace href="namespace_outer_1_1_inner.xml#namespace_outer_1_1_inner">Outer::Inner&lt;/cxxNamespaceMemberNamespace>
+		&lt;/cxxNamespaceMembersDetail>
+	&lt;/cxxNamespaceMembers>
+&lt;/cxxNamespace></codeblock>         </example>
+<section
+conref="../packagedef.dita#cxxNamespace-reference/cxxNamespace-containedBy-section"
+></section>
+<section
+conref="../packagedef.dita#cxxNamespace-reference/cxxNamespace-contains-section"
+></section>
+<section
+conref="../packagedef.dita#cxxNamespace-reference/cxxNamespace-contentModel-section"
+></section>
+<section
+conref="../packagedef.dita#cxxNamespace-reference/cxxNamespace-attList-section"
+></section>
+<section
+conref="../packagedef.dita#cxxNamespace-reference/cxxNamespace-classValue-section"
+></section>
+</refbody>
+</reference>
+<?Pub *0000003120?>

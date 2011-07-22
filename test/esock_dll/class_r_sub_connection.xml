@@ -1,0 +1,717 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_r_sub_connection">
+	<apiName>RSubConnection</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="1439"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="1429"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="1502"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>A Sub-Connection, a channel within a Connection. A representation of a channel between this device and remote devices with which we are communicating. This channel will be used by one or more sockets. Depending on the state of the channel, it may not be possible to bind arbitary sockets into it. Attempts to bind sockets from different protocol families to a single channel is an error, as each channel can only be used by one protocol family. <note type="note">
+					<p>The sub-connection can represent a end-to-end channel and/or a channel from this device to an intermediate device (e.g an access server such as a GGSN which using UMTS and PDP contexts. Properties can be specified simultaneously on protocol and link level.)</p>
+				</note>Before using any of these services, a connection to a socket server session must have been made and the connection must be open.</p>
+			<p>Since v9.0 </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxClassNested>
+		<cxxClassNestedDetail>
+			<cxxClassNestedStruct href="struct_r_sub_connection_1_1_t_event_filter.xml#struct_r_sub_connection_1_1_t_event_filter">RSubConnection::TEventFilter</cxxClassNestedStruct>
+		</cxxClassNestedDetail>
+	</cxxClassNested>
+	<cxxEnumeration id="class_r_sub_connection_1acbb3bb41f1b6b03ede7757ac1183826b">
+		<apiName>TSubConnType</apiName>
+		<cxxEnumerationDetail>
+			<cxxEnumerationDefinition>
+				<cxxEnumerationAccessSpecifier value="public"/>
+				<cxxEnumerationScopedName>RSubConnection</cxxEnumerationScopedName>
+				<cxxEnumerationPrototype>TSubConnType</cxxEnumerationPrototype>
+				<cxxEnumerationNameLookup>RSubConnection:TSubConnType</cxxEnumerationNameLookup>
+				<cxxEnumerators>
+					<cxxEnumerator id="class_r_sub_connection_1acbb3bb41f1b6b03ede7757ac1183826baeaaa3d76f773fd3ce075da79c55d7dd7">
+						<apiName>EAttachToDefault</apiName>
+						<cxxEnumeratorScopedName>RSubConnection</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EAttachToDefault</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RSubConnection::EAttachToDefault</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="1445"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc/>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_r_sub_connection_1acbb3bb41f1b6b03ede7757ac1183826ba7f2a75bf4ed414321eed5581a73b9944">
+						<apiName>ECreateNew</apiName>
+						<cxxEnumeratorScopedName>RSubConnection</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ECreateNew</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RSubConnection::ECreateNew</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="1446"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc/>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_r_sub_connection_1acbb3bb41f1b6b03ede7757ac1183826babc9bf05dfa3a38f015f9d476618f68e0">
+						<apiName>EWaitIncoming</apiName>
+						<cxxEnumeratorScopedName>RSubConnection</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EWaitIncoming</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RSubConnection::EWaitIncoming</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="1448"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc/>
+					</cxxEnumerator>
+				</cxxEnumerators>
+				<cxxEnumerationAPIItemLocation>
+					<cxxEnumerationDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxEnumerationDeclarationFileLine name="lineNumber" value="1444"/>
+					<cxxEnumerationDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxEnumerationDefinitionFileLineStart name="lineNumber" value="1443"/>
+					<cxxEnumerationDefinitionFileLineEnd name="lineNumber" value="1448"/>
+				</cxxEnumerationAPIItemLocation>
+			</cxxEnumerationDefinition>
+			<apiDesc/>
+		</cxxEnumerationDetail>
+	</cxxEnumeration>
+	<cxxFunction id="class_r_sub_connection_1a2902224a83e3ce872a9c7631059a116d">
+		<apiName>RSubConnection</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType>IMPORT_C</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSubConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C RSubConnection()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSubConnection::RSubConnection()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1459"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1086"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1090"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Empty sub-connection handle constructor </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_sub_connection_1aa6da6343f7b5d1c90e771d04ce59c6c6">
+		<apiName>Open</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSubConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Open(RSocketServ &amp;aServer, TSubConnType aSubConnType, RConnection &amp;aConnection)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSubConnection::Open(RSocketServ &amp;,TSubConnType,RConnection &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_socket_serv.xml#class_r_socket_serv">RSocketServ</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aServer</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_sub_connection.xml#_1acbb3bb41f1b6b03ede7757ac1183826b">TSubConnType</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSubConnType</cxxFunctionParameterDeclarationName>
+						<apiDefNote>specifies the type of sub connection, the different available types are defined by TSubConnType. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_connection.xml#class_r_connection">RConnection</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aConnection</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Parent Connection that is to be sub divided by this sub-connection </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1460"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1092"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1102"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Opens a new <xref href="class_r_sub_connection.xml#class_r_sub_connection">RSubConnection</xref> instance.</p>
+				<p>KErrNone if successful, otherwise another of the system wide error codes. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_sub_connection_1aa88258e09c8be94e12f3119bd9128b7f">
+		<apiName>Close</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSubConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Close()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSubConnection::Close()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1461"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1104"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1114"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Closes the sub-connection.</p>
+				<p>The sub-connection will not be dropped immediately: it will be dropped when there is no more data traffic on the sub-connection. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_sub_connection_1a3344822af1e3fa15f661c7104fe5efff">
+		<apiName>Start</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSubConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Start(TRequestStatus &amp;aStatus)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSubConnection::Start(TRequestStatus &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1462"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1116"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1123"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Unused </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_sub_connection_1ab54f2f6e3a3f1f3c77d707f6a727e9bf">
+		<apiName>Start</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSubConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Start()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSubConnection::Start()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1463"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1125"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1135"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Unused </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_sub_connection_1a474c14ef94cc734a0b61f8b611b0b93c">
+		<apiName>Stop</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSubConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Stop()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSubConnection::Stop()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1464"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1137"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1144"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Unused </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_sub_connection_1ac7210b711b83b3c7bb9d46718385fff6">
+		<apiName>Add</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSubConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Add(RSocket &amp;aSocket, TRequestStatus &amp;aStatus)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSubConnection::Add(RSocket &amp;,TRequestStatus &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_socket.xml#class_r_socket">RSocket</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSocket</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Socket to be associated with the Sub-Connection </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Status to complete when socket has been added (or failed to add) </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1467"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1181"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1195"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Associate a socket with a subconnection. The socket must already be using the same connection or the association attempt will fail. The completion of this method does not indicate that the socket is now running over the sub-connection, it only indicates that the association is complete and a negotiation has started to move the socket onto the subconnection. An event (via eventNotification) will be sent once the socket is running on the sub-connection.</p>
+				<p>KErrNone if successful, otherwise a system wide error </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_sub_connection_1a1a6b38778f49a883de72410f5b90579d">
+		<apiName>Remove</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSubConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Remove(RSocket &amp;aSocket, TRequestStatus &amp;aStatus)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSubConnection::Remove(RSocket &amp;,TRequestStatus &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_socket.xml#class_r_socket">RSocket</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSocket</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Socket to be removed from the Sub-Connection </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Status to complete when socket has been removed (or failed to remove) </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1468"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1197"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1210"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Remove a socket from a subconnection. The socket will be moved back to the default sub-connection. The successful completion of this method does not indicate that the socket has moved back to the default sub-connection, it only indicates that the move negotiation has been successful. An event (via eventNotification) will be sent once the socket is running on the default sub-connection.</p>
+				<p>KErrNone if successful, otherwise a system wide error </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_sub_connection_1a06da3752dafd2e4c4693ea74aae68a59">
+		<apiName>SetParameters</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSubConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt SetParameters(const RSubConParameterBundle &amp;aParametersSet)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSubConnection::SetParameters(const RSubConParameterBundle &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_r_sub_con_parameter_bundle.xml#class_r_sub_con_parameter_bundle">RSubConParameterBundle</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aParametersSet</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefinitionName>aParameterBundle</cxxFunctionParameterDefinitionName>
+						<apiDefNote>bundle of parameters to be applied to the sub-connection </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1471"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1212"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1229"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Set Parameters of the sub-connection. Successful completion of this method only indicates that the negotiation has been successfully started. An event via eventNotification) will be sent once the granted parameters are available.</p>
+				<p>KErrNone if successful, otherwise a system wide error </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_sub_connection_1a22192e88c2edde448e82555423e67177">
+		<apiName>GetParameters</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSubConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt GetParameters(RSubConParameterBundle &amp;aParametersSet)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSubConnection::GetParameters(RSubConParameterBundle &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_sub_con_parameter_bundle.xml#class_r_sub_con_parameter_bundle">RSubConParameterBundle</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aParametersSet</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefinitionName>aParameterBundle</cxxFunctionParameterDefinitionName>
+						<apiDefNote>bundle of parameters to write the current parameters into </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1472"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1231"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1246"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Fetch the sub-connection&apos;s current parameters (Requested, Acceptable and Granted)</p>
+				<p>KErrNone if successful, otherwise a system wide error </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_sub_connection_1a4c3e8ea3b93f05879a007d40e42c485a">
+		<apiName>SetParameters</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSubConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt SetParameters(const RParameterFamilyBundle &amp;aParametersSet)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSubConnection::SetParameters(const RParameterFamilyBundle &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_r_parameter_family_bundle.xml#class_r_parameter_family_bundle">RParameterFamilyBundle</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aParametersSet</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefinitionName>aParameterBundle</cxxFunctionParameterDefinitionName>
+						<apiDefNote>bundle of parameters to be applied to the sub-connection </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1475"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1248"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1274"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Set Parameters of the sub-connection. Successful completion of this method only indicates that the negotiation has been successfully started. An event via eventNotification) will be sent once the granted parameters are available.</p>
+				<p>KErrNone if successful, otherwise a system wide error </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_sub_connection_1a5e3983b4ae3bc1e300a4fe4c71580a28">
+		<apiName>GetParameters</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSubConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt GetParameters(RParameterFamilyBundle &amp;aParametersSet)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSubConnection::GetParameters(RParameterFamilyBundle &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_parameter_family_bundle.xml#class_r_parameter_family_bundle">RParameterFamilyBundle</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aParametersSet</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefinitionName>aParameterBundle</cxxFunctionParameterDefinitionName>
+						<apiDefNote>bundle of parameters to write the current parameters into </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1476"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1276"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1304"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Fetch the sub-connection&apos;s current parameters (Requested, Acceptable and Granted)</p>
+				<p>KErrNone if successful, otherwise a system wide error </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_sub_connection_1a81fb9e3f47e7499bcad10c4fc5326fb6">
+		<apiName>EventNotification</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSubConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void EventNotification(TNotificationEventBuf &amp;aEventBuffer, TBool aGenericEventsOnly, TRequestStatus &amp;aStatus)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSubConnection::EventNotification(TNotificationEventBuf &amp;,TBool,TRequestStatus &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_notification_event_buf.xml#class_t_notification_event_buf">TNotificationEventBuf</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aEventBuffer</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A buffer to receive event notification. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aGenericEventsOnly</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On return, the status of the request. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1479"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1306"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1314"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Requests asynchronous event notification for the sub-connection.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_sub_connection_1a48851aa6c9bb872080dcf87cabc6bb09">
+		<apiName>EventNotification</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSubConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void EventNotification(TNotificationEventBuf &amp;aEventBuffer, TEventFilter aEventFilterList[], TUint aEventListLength, TRequestStatus &amp;aStatus)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSubConnection::EventNotification(TNotificationEventBuf &amp;,TEventFilter,TUint,TRequestStatus &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_notification_event_buf.xml#class_t_notification_event_buf">TNotificationEventBuf</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aEventBuffer</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A buffer to receive event notification. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="struct_r_sub_connection_1_1_t_event_filter.xml#struct_r_sub_connection_1_1_t_event_filter">TEventFilter</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aEventFilterList</cxxFunctionParameterDeclarationName>
+						<apiDefNote>list of event filters specifying a subset of events of interest. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aEventListLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Length of the filter list provided </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On return, the status of the request. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1480"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1316"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1340"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Requests asynchronous notification of a specific list of events for the sub-connection.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_sub_connection_1ab01bc35b8121a6c9cd9c71d360ad3074">
+		<apiName>CancelEventNotification</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSubConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void CancelEventNotification()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSubConnection::CancelEventNotification()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1481"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1342"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1347"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Cancel an outstanding Event Notification request </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_sub_connection_1a4c794875fd44577b020190f0fe1436c9">
+		<apiName>Control</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSubConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Control(TUint aOptionLevel, TUint aOptionName, TDes8 &amp;aOption)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSubConnection::Control(TUint,TUint,TDes8 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aOptionLevel</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aOptionName</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aOption</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1484"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1349"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1352"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_sub_connection_1ad3c8975fb96d3d71e785cef564aacd6d">
+		<apiName>SameSession</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSubConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>TBool SameSession(TInt aSessionHandle)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSubConnection::SameSession(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSessionHandle</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The handle which is to be checked against that of this RSubConnection </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1495"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1354"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1366"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Checks that the Session Handle passed is the same as that of this <xref href="class_r_sub_connection.xml#class_r_sub_connection">RSubConnection</xref>.</p>
+				<p>Use to verify the <xref href="class_r_sub_connection.xml#class_r_sub_connection">RSubConnection</xref> argument passed to the <xref href="class_r_socket.xml#class_r_socket">RSocket</xref> and <xref href="class_r_host_resolver.xml#class_r_host_resolver">RHostResolver</xref> Open(..., <xref href="class_r_sub_connection.xml#class_r_sub_connection">RSubConnection</xref>&amp; aSubConnection) methods.</p>
+				<p>ETrue if handle is the same, else EFalse  </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_sub_connection_1a3658c48b7f936dc1d5d00527b3e34841">
+		<apiName>Open</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSubConnection</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Open(RSocketServ &amp;aServer, TSubConnOpen::TSubConnType aSubConnType, RConnection &amp;aConnection)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSubConnection::Open(RSocketServ &amp;,TSubConnOpen::TSubConnType,RConnection &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_socket_serv.xml#class_r_socket_serv">RSocketServ</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aServer</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Socket Server session. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_sub_conn_open.xml#_1a13c7880efa5df89b1d42a7319adace1f">TSubConnOpen::TSubConnType</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSubConnType</cxxFunctionParameterDeclarationName>
+						<apiDefNote>EAttachToDefault when attaching to default or ECreateNew for new one </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_connection.xml#class_r_connection">RConnection</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aConnection</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Parent Connection that is to be sub divided by this sub-connection </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1498"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1147"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1179"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Opens a new <xref href="class_r_sub_connection.xml#class_r_sub_connection">RSubConnection</xref> instance.</p>
+				<p>KErrNone if successful, otherwise another of the system wide error codes. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxVariable id="class_r_sub_connection_1ae9b124143f0c5e89220f714449188b19">
+		<apiName>iSpare</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>RSubConnection</cxxVariableScopedName>
+				<cxxVariablePrototype>TInt iSpare</cxxVariablePrototype>
+				<cxxVariableNameLookup>RSubConnection::iSpare</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1501"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+</cxxClass>

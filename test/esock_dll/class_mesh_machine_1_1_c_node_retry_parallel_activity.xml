@@ -1,0 +1,325 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_mesh_machine_1_1_c_node_retry_parallel_activity">
+	<apiName>MeshMachine::CNodeRetryParallelActivity</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassDerivations>
+				<cxxClassDerivation>
+					<cxxClassDerivationAccessSpecifier value="public"/>
+					<cxxClassBaseClass href="class_mesh_machine_1_1_c_node_parallel_activity_base.xml#class_mesh_machine_1_1_c_node_parallel_activity_base">MeshMachine::CNodeParallelActivityBase</cxxClassBaseClass>
+				</cxxClassDerivation>
+			</cxxClassDerivations>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="1197"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="1195"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="1257"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>Base class for activities that run in parallel and can be synchronised or retried. </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_mesh_machine_1_1_c_node_retry_parallel_activity_1a309a87b10d0c5dda2f8d5d4e47568d31">
+		<apiName>ITFHIERARCHY_2</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>typedef</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>MeshMachine::CNodeRetryParallelActivity</cxxFunctionScopedName>
+				<cxxFunctionPrototype>typedef ITFHIERARCHY_2(CNodeRetryParallelActivity, AContextStore, AActivitySemaphore) TIfStaticFetcherNearestInHierarchy</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MeshMachine::CNodeRetryParallelActivity::ITFHIERARCHY_2(CNodeRetryParallelActivity,AContextStore,AActivitySemaphore)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_mesh_machine_1_1_c_node_retry_parallel_activity.xml#class_mesh_machine_1_1_c_node_retry_parallel_activity">CNodeRetryParallelActivity</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_mesh_machine_1_1_a_context_store.xml#class_mesh_machine_1_1_a_context_store">AContextStore</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_mesh_machine_1_1_a_activity_semaphore.xml#class_mesh_machine_1_1_a_activity_semaphore">AActivitySemaphore</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1202"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Defines a helper list of interfaces. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_mesh_machine_1_1_c_node_retry_parallel_activity_1aee6cad1bcfa52aef2e6a413100cb9a9e">
+		<apiName>NewL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_mesh_machine_1_1_c_node_activity_base.xml#class_mesh_machine_1_1_c_node_activity_base">CNodeActivityBase</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>MeshMachine::CNodeRetryParallelActivity</cxxFunctionScopedName>
+				<cxxFunctionPrototype>static IMPORT_C CNodeActivityBase * NewL(const TNodeActivity &amp;aActivitySig, AMMNodeBase &amp;aNode)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MeshMachine::CNodeRetryParallelActivity::NewL(const TNodeActivity &amp;,AMMNodeBase &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_mesh_machine_1_1_c_node_parallel_activity_base.xml#class_mesh_machine_1_1_c_node_parallel_activity_base_1ab984a28b372e9b8716f8767eb1daf2bd">MeshMachine::CNodeParallelActivityBase::NewL(const TNodeActivity &amp;,AMMNodeBase &amp;)</cxxFunctionReimplemented>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="struct_mesh_machine_1_1_t_node_activity.xml#struct_mesh_machine_1_1_t_node_activity">TNodeActivity</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aActivitySig</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Context information about how the activity is to be started </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_mesh_machine_1_1_a_m_m_node_base.xml#class_mesh_machine_1_1_a_m_m_node_base">AMMNodeBase</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aNode</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The node to which this activity will belong. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1212"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Create a new activity. This should never be called by user code.</p>
+				<p>A pointer to the new object. Ownership is transfered. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_mesh_machine_1_1_c_node_retry_parallel_activity_1aa0636abfdd9df0538595155cda5d705e">
+		<apiName>ReturnInterfacePtrL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>MeshMachine::CNodeRetryParallelActivity</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void ReturnInterfacePtrL(AContextStore *&amp;aInterface)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MeshMachine::CNodeRetryParallelActivity::ReturnInterfacePtrL(AContextStore *&amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_mesh_machine_1_1_a_context_store.xml#class_mesh_machine_1_1_a_context_store">AContextStore</apiRelation> *&amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aInterface</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On return, contains a pointer to the store interface </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1218"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Fetch the context store interface </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_mesh_machine_1_1_c_node_retry_parallel_activity_1a64d8b880397ff50de2ec7413382de85c">
+		<apiName>ReturnInterfacePtrL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>MeshMachine::CNodeRetryParallelActivity</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void ReturnInterfacePtrL(AActivitySemaphore *&amp;aInterface)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MeshMachine::CNodeRetryParallelActivity::ReturnInterfacePtrL(AActivitySemaphore *&amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_mesh_machine_1_1_a_activity_semaphore.xml#class_mesh_machine_1_1_a_activity_semaphore">AActivitySemaphore</apiRelation> *&amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aInterface</cxxFunctionParameterDeclarationName>
+						<apiDefNote>On return, contains a pointer to the semaphore interface </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1224"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Fetch the activity semaphore interface </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_mesh_machine_1_1_c_node_retry_parallel_activity_1a2d03f09741bf6a642bdc1f721bb7606a">
+		<apiName>IsIdle</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionVirtual/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>MeshMachine::CNodeRetryParallelActivity</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual IMPORT_C TBool IsIdle() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MeshMachine::CNodeRetryParallelActivity::IsIdle()const</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_mesh_machine_1_1_c_node_activity_base.xml#class_mesh_machine_1_1_c_node_activity_base_1a98366fdd461fbefd9593a2dbe36c28ff">MeshMachine::CNodeActivityBase::IsIdle()const</cxxFunctionReimplemented>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1230"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Check if the activity has stopped <tt>ETrue</tt> if the activity is still running, otherwise <tt>EFalse</tt> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_mesh_machine_1_1_c_node_retry_parallel_activity_1a80c875ede659f81c4f44e033c3dc9bdb">
+		<apiName>SetIdle</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionVirtual/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>MeshMachine::CNodeRetryParallelActivity</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual IMPORT_C void SetIdle()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MeshMachine::CNodeRetryParallelActivity::SetIdle()</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_mesh_machine_1_1_c_node_activity_base.xml#class_mesh_machine_1_1_c_node_activity_base_1a5a5e6c8f757f8c5a9cc3d7170b5134b9">MeshMachine::CNodeActivityBase::SetIdle()</cxxFunctionReimplemented>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1236"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Put the activity into the idle state. This stops the activity running and notifies the mesh machine that it is ok to delete this activity. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_mesh_machine_1_1_c_node_retry_parallel_activity_1a0004a26be28fa3ac9e09fc30df8bcf2c">
+		<apiName>Signal</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionVirtual/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>MeshMachine::CNodeRetryParallelActivity</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual IMPORT_C TBool Signal(TNodeContextBase &amp;aContext)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MeshMachine::CNodeRetryParallelActivity::Signal(TNodeContextBase &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_mesh_machine_1_1_c_node_activity_base.xml#class_mesh_machine_1_1_c_node_activity_base_1a04b83f351aa13775b67783d601a7cc06">MeshMachine::CNodeActivityBase::Signal(TNodeContextBase &amp;)</cxxFunctionReimplemented>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_mesh_machine_1_1_t_node_context_base.xml#class_mesh_machine_1_1_t_node_context_base">TNodeContextBase</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aContext</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Current context in the state machine.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1247"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Signal to the activity that an event has occurred and that it is worthwhile checking to see if the mutex has now cleared.</p>
+				<p>
+					<tt>ETrue</tt> if state or transition has been unparked </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_mesh_machine_1_1_c_node_retry_parallel_activity_1ac9494f47bd67091d6e476e82c742c522">
+		<apiName>CNodeRetryParallelActivity</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType>IMPORT_C</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>MeshMachine::CNodeRetryParallelActivity</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C CNodeRetryParallelActivity(const TNodeActivity &amp;aActivitySig, AMMNodeBase &amp;aNode, TUint aActivitiesCount)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MeshMachine::CNodeRetryParallelActivity::CNodeRetryParallelActivity(const TNodeActivity &amp;,AMMNodeBase &amp;,TUint)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="struct_mesh_machine_1_1_t_node_activity.xml#struct_mesh_machine_1_1_t_node_activity">TNodeActivity</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aActivitySig</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Context information about how the activity is to be started </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_mesh_machine_1_1_a_m_m_node_base.xml#class_mesh_machine_1_1_a_m_m_node_base">AMMNodeBase</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aNode</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The node to which this activity will belong. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aActivitiesCount</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The unique part of the activity id </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1256"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Constructor for <xref href="class_mesh_machine_1_1_c_node_retry_parallel_activity.xml#class_mesh_machine_1_1_c_node_retry_parallel_activity">CNodeRetryParallelActivity</xref>
+				</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxClassInherits>
+		<cxxClassInheritsDetail>
+			<cxxClassFunctionInherited href="class_mesh_machine_1_1_c_node_retry_parallel_activity.xml#class_c_base_1a240de7932690a4e987d75690b0b6f82b">CBase::CBase()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_mesh_machine_1_1_c_node_retry_parallel_activity.xml#class_c_base_1ac0a06aeab68b3e01be81f9dd79e011c6">CBase::Delete(CBase *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_mesh_machine_1_1_c_node_retry_parallel_activity.xml#class_c_base_1aae681a54d9c9b10c7d42e7e32ff109d5">CBase::Extension_(TUint,TAny *&amp;,TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_mesh_machine_1_1_c_node_retry_parallel_activity.xml#class_c_base_1af4c4965092a763b0856ccbfa3cf99eaf">CBase::operator new(TUint)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_mesh_machine_1_1_c_node_retry_parallel_activity.xml#class_c_base_1ab9e5f557dea4db22886189926687ddc1">CBase::operator new(TUint,TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_mesh_machine_1_1_c_node_retry_parallel_activity.xml#class_c_base_1aa464dd21494443ac109084ed03b81f28">CBase::operator new(TUint,TLeave)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_mesh_machine_1_1_c_node_retry_parallel_activity.xml#class_c_base_1af8429815362d4df6fecd47179e0c5dfe">CBase::operator new(TUint,TLeave,TUint)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_mesh_machine_1_1_c_node_retry_parallel_activity.xml#class_c_base_1a80505bdf8b1b20a2ed102307a78eeeeb">CBase::operator new(TUint,TUint)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_mesh_machine_1_1_c_node_retry_parallel_activity.xml#class_c_base_1a1390361b94424be22bb2b1020eb400ea">CBase::~CBase()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_mesh_machine_1_1_c_node_retry_parallel_activity.xml#class_mesh_machine_1_1_c_node_activity_base_1ab304e7de40365149d62ebf2bb2f1fa2c">MeshMachine::CNodeActivityBase::Abort(TNodeContextBase &amp;,TBool)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_mesh_machine_1_1_c_node_retry_parallel_activity.xml#class_mesh_machine_1_1_c_node_activity_base_1a09631aab3b00619a999b02cd120f1b1d">MeshMachine::CNodeActivityBase::Accept(TNodeContextBase &amp;,const TNodeActivity &amp;,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_mesh_machine_1_1_c_node_retry_parallel_activity.xml#class_mesh_machine_1_1_c_node_activity_base_1a585b131390fe9df9682ada795314f8fb">MeshMachine::CNodeActivityBase::ActivitySigId()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_mesh_machine_1_1_c_node_retry_parallel_activity.xml#class_mesh_machine_1_1_c_node_activity_base_1a4f7cef677def48f41b3e7f65ac0a063f">MeshMachine::CNodeActivityBase::AppendActivityL()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_mesh_machine_1_1_c_node_retry_parallel_activity.xml#class_mesh_machine_1_1_c_node_activity_base_1a12f4e8cace34326eade4e733e9a28110">MeshMachine::CNodeActivityBase::AppendPreallocatedActivity()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_mesh_machine_1_1_c_node_retry_parallel_activity.xml#class_mesh_machine_1_1_c_node_activity_base_1aac576dedae57d702ea4a5222d5251f43">MeshMachine::CNodeActivityBase::BorrowPreallocatedSpace(AMMNodeBase &amp;,TUint)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_mesh_machine_1_1_c_node_retry_parallel_activity.xml#class_mesh_machine_1_1_c_node_activity_base_1ac7e43d3d6d5c4649f7a2dbadab4c498d">MeshMachine::CNodeActivityBase::CNodeActivityBase(const TNodeActivity &amp;,AMMNodeBase &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_mesh_machine_1_1_c_node_retry_parallel_activity.xml#class_mesh_machine_1_1_c_node_activity_base_1ad32d53df4cfba6ee3b4dab7497ef3e29">MeshMachine::CNodeActivityBase::Cancel(TNodeContextBase &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_mesh_machine_1_1_c_node_retry_parallel_activity.xml#class_mesh_machine_1_1_c_node_activity_base_1a520f7840a36a013e742c4ac59c9b70bd">MeshMachine::CNodeActivityBase::ClearPostedTo()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_mesh_machine_1_1_c_node_retry_parallel_activity.xml#class_mesh_machine_1_1_c_node_activity_base_1a5a6b91e306b7637250135c39ed7b8515">MeshMachine::CNodeActivityBase::Destroy()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_mesh_machine_1_1_c_node_retry_parallel_activity.xml#class_mesh_machine_1_1_c_node_activity_base_1a625fe1c76e3e9da41823aa11063967e8">MeshMachine::CNodeActivityBase::DoFetchInterfaceControlL(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_mesh_machine_1_1_c_node_retry_parallel_activity.xml#class_mesh_machine_1_1_c_node_activity_base_1a375df579b7e63d3a8558f5cf2515b01d">MeshMachine::CNodeActivityBase::Error()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_mesh_machine_1_1_c_node_retry_parallel_activity.xml#class_mesh_machine_1_1_c_node_activity_base_1a5ad9c5110a810ea7c747134121d19fde">MeshMachine::CNodeActivityBase::FindOriginator(const Messages::RNodeInterface &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_mesh_machine_1_1_c_node_retry_parallel_activity.xml#class_mesh_machine_1_1_c_node_activity_base_1a7d2b59669162f44c61686df1ff6302a1">MeshMachine::CNodeActivityBase::FindOriginator(const Messages::TNodePeerId &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_mesh_machine_1_1_c_node_retry_parallel_activity.xml#class_mesh_machine_1_1_c_node_activity_base_1af25d5d775a2086f87a5c2eded9457bcf">MeshMachine::CNodeActivityBase::FindOriginator(const Messages::TRuntimeCtxId &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_mesh_machine_1_1_c_node_retry_parallel_activity.xml#class_mesh_machine_1_1_c_node_activity_base_1a66d8e082141b4987be7fa31a76d8f43e">MeshMachine::CNodeActivityBase::FirstOriginator()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_mesh_machine_1_1_c_node_retry_parallel_activity.xml#class_mesh_machine_1_1_c_node_activity_base_1aaedd7c9acbcb6b8af0f01b500028d455">MeshMachine::CNodeActivityBase::InsertPreallocatedDestroyActivity()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_mesh_machine_1_1_c_node_retry_parallel_activity.xml#class_mesh_machine_1_1_c_node_activity_base_1a1b543514c052b92356fd04adda1f285d">MeshMachine::CNodeActivityBase::KickOffMessageId()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_mesh_machine_1_1_c_node_retry_parallel_activity.xml#class_mesh_machine_1_1_c_node_activity_base_1a9d571257c049950fc7e81c4a84f7b474">MeshMachine::CNodeActivityBase::MatchSender(const TNodeContextBase &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_mesh_machine_1_1_c_node_retry_parallel_activity.xml#class_mesh_machine_1_1_c_node_activity_base_1a4a1b14625247ffb1ef1e0ce1d71453ad">MeshMachine::CNodeActivityBase::Next(TNodeContextBase &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_mesh_machine_1_1_c_node_retry_parallel_activity.xml#class_mesh_machine_1_1_c_node_activity_base_1a7ca4396d3ed4d9bcf8f7808aa7142f7e">MeshMachine::CNodeActivityBase::PostRequestTo(const Messages::RNodeInterface &amp;,const Messages::TSignalBase &amp;,const TBool)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_mesh_machine_1_1_c_node_retry_parallel_activity.xml#class_mesh_machine_1_1_c_node_activity_base_1acb84d1b8438958972a3df62d5fc7d729">MeshMachine::CNodeActivityBase::PostRequestTo(const Messages::TNodeId &amp;,const Messages::TSignalBase &amp;,const TBool)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_mesh_machine_1_1_c_node_retry_parallel_activity.xml#class_mesh_machine_1_1_c_node_activity_base_1af8ed44f0d3cab824b28fa87898d1468a">MeshMachine::CNodeActivityBase::PostToOriginator(const Messages::TNodePeerId &amp;,const Messages::TSignalBase &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_mesh_machine_1_1_c_node_retry_parallel_activity.xml#class_mesh_machine_1_1_c_node_activity_base_1a035b0944aeccf83eeffc500121f8fbf6">MeshMachine::CNodeActivityBase::PostToOriginators(const Messages::TSignalBase &amp;,TUint32,TUint32)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_mesh_machine_1_1_c_node_retry_parallel_activity.xml#class_mesh_machine_1_1_c_node_activity_base_1ae4777e75ff360641452d317838a59984">MeshMachine::CNodeActivityBase::PostedToId()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_mesh_machine_1_1_c_node_retry_parallel_activity.xml#class_mesh_machine_1_1_c_node_activity_base_1a63a468ea915d61ae579e526e4223ea21">MeshMachine::CNodeActivityBase::RemoveOriginator(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_mesh_machine_1_1_c_node_retry_parallel_activity.xml#class_mesh_machine_1_1_c_node_activity_base_1a9307a179494793eeca8d825d2be6ad37">MeshMachine::CNodeActivityBase::ReturnPreallocatedSpace(TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_mesh_machine_1_1_c_node_retry_parallel_activity.xml#class_mesh_machine_1_1_c_node_activity_base_1a1627d8234b4084259d559fa6092343ee">MeshMachine::CNodeActivityBase::SetError(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_mesh_machine_1_1_c_node_retry_parallel_activity.xml#class_mesh_machine_1_1_c_node_activity_base_1a9dde4b98499b30714edd1aee9784f05b">MeshMachine::CNodeActivityBase::SetPostedTo(const Messages::TNodeId &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_mesh_machine_1_1_c_node_retry_parallel_activity.xml#class_mesh_machine_1_1_c_node_activity_base_1a735be94414c91f6ea170bb5b584ae804">MeshMachine::CNodeActivityBase::SoleOriginator()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_mesh_machine_1_1_c_node_retry_parallel_activity.xml#class_mesh_machine_1_1_c_node_activity_base_1a78261c2ad762c847f9cb6cdcb0be4238">MeshMachine::CNodeActivityBase::StartL(TNodeContextBase &amp;,const Messages::XNodePeerId &amp;,const NetStateMachine::TStateTriple &amp;)</cxxClassFunctionInherited>
+			<cxxClassVariableInherited href="class_mesh_machine_1_1_c_node_retry_parallel_activity.xml#class_mesh_machine_1_1_c_node_activity_base_1acd7957a5dd8c0c5fd7a9e52d5434eb77">MeshMachine::CNodeActivityBase::iNode</cxxClassVariableInherited>
+			<cxxClassVariableInherited href="class_mesh_machine_1_1_c_node_retry_parallel_activity.xml#class_mesh_machine_1_1_c_node_activity_base_1a1ca34ec4802e82c1f90d8809b8745cce">MeshMachine::CNodeActivityBase::iOriginators</cxxClassVariableInherited>
+			<cxxClassFunctionInherited href="class_mesh_machine_1_1_c_node_retry_parallel_activity.xml#class_mesh_machine_1_1_c_node_activity_base_1a5106da3b2e24cde0ba5f4324f764558a">MeshMachine::CNodeActivityBase::~CNodeActivityBase()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_mesh_machine_1_1_c_node_retry_parallel_activity.xml#class_mesh_machine_1_1_c_node_parallel_activity_base_1a04397d62d56854c90027fbe6ad872249">MeshMachine::CNodeParallelActivityBase::ActivityId()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_mesh_machine_1_1_c_node_retry_parallel_activity.xml#class_mesh_machine_1_1_c_node_parallel_activity_base_1a63ac81f06c6d613aa4b098c4d27ba860">MeshMachine::CNodeParallelActivityBase::CNodeParallelActivityBase(const TNodeActivity &amp;,AMMNodeBase &amp;,TUint)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_mesh_machine_1_1_c_node_retry_parallel_activity.xml#class_mesh_machine_1_1_c_node_parallel_activity_base_1a4c345bfca7d7ca7b35c6906e658496c0">MeshMachine::CNodeParallelActivityBase::GetNextActivityCountL(const TNodeActivity &amp;,const AMMNodeBase &amp;)</cxxClassFunctionInherited>
+			<cxxClassVariableInherited href="class_mesh_machine_1_1_c_node_retry_parallel_activity.xml#class_mesh_machine_1_1_c_node_parallel_activity_base_1a35cae5ca6a0d6ab509b458b15eb19b4a">MeshMachine::CNodeParallelActivityBase::iActivityId</cxxClassVariableInherited>
+		</cxxClassInheritsDetail>
+	</cxxClassInherits>
+</cxxClass>

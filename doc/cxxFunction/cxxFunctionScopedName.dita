@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (c) 2011 Nokia Corporation and/or its subsidiary(-ies).
+All rights reserved.        
+        -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<reference id="cxxFunctionScopedName" outputclass="element"
+xml:lang="en-us">
+<title>cxxFunctionScopedName</title>
+<shortdesc>Identifies the fully qualified <?Pub Caret?>scope of the
+function, if it is not at the global scope. The scope is the enclosing
+namespace/class/struct/union.</shortdesc>
+<refbody>
+<section id="section_25EF9205173F459E9EB36AECFCF68F4F">          
+  <title>Description</title><p>The &lt;cxxFunctionScopedName> element
+describes the enclosing namespace/class/struct/union. For global functions
+this element is empty.</p><p>See ISO/IEC 14882:2003(E) Section 3.3
+Declarative regions and scopes [basic.scope]</p>         </section>
+<example id="example_FF7A84282CD44009BD751F549307E616">          
+  <title>Example</title><p>Given this code:</p>             <codeblock
+>namespace N {
+  class C {
+    struct D {
+      int SomeFunction();
+    };
+  };
+};
+            </codeblock><p>                 <tt>SomeFunction</tt> would
+have a scoped name element:</p>             <codeblock>&lt;cxxFunctionScopedName>N::C::D&lt;/cxxFunctionScopedName></codeblock
+>         </example>
+<section
+conref="../packagedef.dita#cxxFunctionScopedName-reference/cxxFunctionScopedName-containedBy-section"
+></section>
+<section
+conref="../packagedef.dita#cxxFunctionScopedName-reference/cxxFunctionScopedName-contains-section"
+></section>
+<section
+conref="../packagedef.dita#cxxFunctionScopedName-reference/cxxFunctionScopedName-contentModel-section"
+></section>
+<section
+conref="../packagedef.dita#cxxFunctionScopedName-reference/cxxFunctionScopedName-attList-section"
+></section>
+<section
+conref="../packagedef.dita#cxxFunctionScopedName-reference/cxxFunctionScopedName-classValue-section"
+></section>
+</refbody>
+</reference>
+<?Pub *0000001905?>

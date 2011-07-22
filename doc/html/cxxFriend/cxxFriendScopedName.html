@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="cxxFriendScopedName"/>
+<meta name="abstract" content="Identifies the enclosing scope of the friend function. This is the namespace/class/struct/union within which the friend declaration is located."/>
+<meta name="description" content="Identifies the enclosing scope of the friend function. This is the namespace/class/struct/union within which the friend declaration is located."/>
+<meta name="DC.Relation" scheme="URI" content="../cxxFriend/cxxFriend_module.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="cxxFriendScopedName"/>
+<meta name="DC.Language" content="en-us"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>cxxFriendScopedName</title>
+<link rel="stylesheet" type="text/css" href="../nokiacxxref.css"/></head>
+<body class="element" id="cxxFriendScopedName"><a name="cxxFriendScopedName"><!-- --></a>
+
+
+<h1 class="topictitle1">cxxFriendScopedName</h1>
+
+
+<div><p>Identifies the enclosing scope of the friend function.
+This is the namespace/class/struct/union within which
+the friend declaration is located.</p>
+
+<div class="section" id="cxxFriendScopedName__section_25EF9205173F459E9EB36AECFCF68F4F"><a name="cxxFriendScopedName__section_25EF9205173F459E9EB36AECFCF68F4F"><!-- --></a><h2 class="sectiontitle">Description</h2>          
+  <p>The &lt;cxxFriendScopedName&gt; element
+describes the declaration (qualified name lookup) of the enclosing
+namespace/class/struct/union. This element is empty for friend functions
+at the global scope.</p>
+<p>See ISO/IEC 14882:2003(E) Section 3.3 Declarative
+regions and scopes [basic.scope]</p>
+         </div>
+
+<div class="example" id="cxxFriendScopedName__example_225ACA276BB049AE8598334E3015187B"><a name="cxxFriendScopedName__example_225ACA276BB049AE8598334E3015187B"><!-- --></a><h2 class="sectiontitle">Example</h2>          
+  <p>For example given this code:</p>
+      
+      <pre class="codeblock">/** This class allows, by means of friendship,
+any member of the class Class_13969_02 to
+access my private members e.g. member a.
+It also allows the specific function
+Class_13969_03::getA(const char*)
+to access my private members.
+*/
+class Class_13969_01
+{
+private:
+	enum { a=100 };
+public:
+    /** friend reference to a complete class. */
+    friend class Class_13969_02;
+    /** friend reference to a specific member function. */
+    friend void Class_13969_03::getA(const char*);
+};
+
+/** Any member of this class can access 
+private members of Class_13969_01.
+*/
+class Class_13969_02
+{
+public:
+    int v[Class_13969_01::a]; // OK, Class_13969_02 is a friend of Class_13969_01
+};
+
+/** Only a specific member, Class_13969_03::getA(const char*),
+in this class can access private members of Class_13969_01.
+*/
+class Class_13969_03
+{
+public:
+    void getA(const char*);
+};
+</pre>
+<p>The friend reference <tt>friend void Class_13969_03::getA(const
+char*);</tt> appears in the class <tt>Class_13969_01</tt> with the
+scoped name <tt>Class_13969_01</tt> but has the <tt>cxxFriendNameLookup</tt> as being within <tt>Class_13969_03</tt>.</p>
+         <pre class="codeblock">&lt;cxxFriendScopedName&gt;Class_13969_01&lt;/cxxFriendScopedName&gt;
+...
+&lt;cxxFriendNameLookup&gt;Class_13969_03::getA(const char *)&lt;/cxxFriendNameLookup&gt;</pre>
+</div>
+
+<div class="elementContainedBy"><h2 class="sectiontitle">Contained by</h2>
+
+<p id="cxxFriendScopedName__d7127e7630"><a name="cxxFriendScopedName__d7127e7630"><!-- --></a>
+<a href="cxxFriendDefinition.html" title="Describes all of the details of a C++ friend function.">cxxFriendDefinition</a> 
+</p>
+
+</div>
+
+<div class="elementContains"><h2 class="sectiontitle">Contains</h2>
+
+<p id="cxxFriendScopedName__d7127e7642"><a name="cxxFriendScopedName__d7127e7642"><!-- --></a>
+</p>
+
+</div>
+
+<div class="elementContentModel"><h2 class="sectiontitle">Content Model</h2>
+
+<p id="cxxFriendScopedName__d7127e7651"><a name="cxxFriendScopedName__d7127e7651"><!-- --></a>
+No content.
+</p>
+
+</div>
+
+<div class="elementAttList"/>
+
+<div class="elementClassValue"><h2 class="sectiontitle">Inheritance</h2>
+
+<p id="cxxFriendScopedName__d7127e7662"><a name="cxxFriendScopedName__d7127e7662"><!-- --></a>
+ topic/<span class="keyword">keyword</span> reference/<span class="keyword">keyword</span> apiRef/<span class="keyword">apiItemName</span> apiOperation/<span class="keyword">apiItemName</span> cxxFriend/<span class="keyword">cxxFriendScopedName</span></p>
+
+</div>
+
+</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../cxxFriend/cxxFriend_module.html" title="Defines a top-level container for all the elements necessary to describe an C++ API friend.">cxxFriend module</a></div>
+</div>
+</div>
+
+</body>
+</html>

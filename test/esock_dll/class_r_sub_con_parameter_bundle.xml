@@ -1,0 +1,425 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_r_sub_con_parameter_bundle">
+	<apiName>RSubConParameterBundle</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="1340"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="1326"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="1372"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>Container for (bundle of) SubConnection parameter families.</p>
+			<p>May contain and 0..N SubConnection parameter families.</p>
+			<p>Note: If the <xref href="class_r_sub_con_parameter_bundle.xml#class_r_sub_con_parameter_bundle">RSubConParameterBundle</xref> object takes ownership of any <xref href="class_c_sub_con_parameter_family.xml#class_c_sub_con_parameter_family">CSubConParameterFamily</xref> object, then when the bundle object is destroyed, any family owned by this object will also be destroyed.</p>
+			<p>THIS API IS DEPRECATED IN FAVOUR OF <xref href="class_r_parameter_family_bundle.xml#class_r_parameter_family_bundle">RParameterFamilyBundle</xref>
+			</p>
+			<p>since v9.6 </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_r_sub_con_parameter_bundle_1ac646e0bf10c620842f3afbbaa6c47726">
+		<apiName>RSubConParameterBundle</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType>IMPORT_C</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSubConParameterBundle</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C RSubConParameterBundle()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSubConParameterBundle::RSubConParameterBundle()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1342"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="689"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="694"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Empty sub-connection parameter bundle constructor </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_sub_con_parameter_bundle_1ad371b776022aea3eacd8c871f660d938">
+		<apiName>Close</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSubConParameterBundle</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Close()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSubConParameterBundle::Close()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1343"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="711"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="720"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Close the parameter bundle handle </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_sub_con_parameter_bundle_1a0d2121561c9d9ccc1170646189a9e904">
+		<apiName>Length</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSubConParameterBundle</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TUint Length() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSubConParameterBundle::Length()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1345"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="722"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="730"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Calculates the length of buffer required to serialise this parameter set bundle.</p>
+				<p>Length of buffer required. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_sub_con_parameter_bundle_1a536885f03d751535de71272d10e90b29">
+		<apiName>Load</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSubConParameterBundle</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Load(const TDesC8 &amp;aDes)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSubConParameterBundle::Load(const TDesC8 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Buffer containing the serialised bundle object </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1346"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="732"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="744"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Instructs this sub-connection bundle to set its members based on the serialiesd data in the buffer passed.</p>
+				<p>KErrNone if successful, otherwise system wide error </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_sub_con_parameter_bundle_1a755536cd2adce6add16846bbfdeccf24">
+		<apiName>Store</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSubConParameterBundle</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Store(TDes8 &amp;aDes) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSubConParameterBundle::Store(TDes8 &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Buffer to append the serialised object to </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1347"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="746"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="759"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Instructs this sub-connection parameter bundle to create a serilised version of itself and append it to the buffer that has been passed.</p>
+				<p>KErrNone if successful, otherwise system wide error (e.g. EKrrOverflow if the descriptor is too small) If unsuccessful, there is no guarantee as to the buffer or data stored in it. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_sub_con_parameter_bundle_1a90c8606471075936bd69ae2dcc616f73">
+		<apiName>AddFamilyL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSubConParameterBundle</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void AddFamilyL(CSubConParameterFamily *aFamily)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSubConParameterBundle::AddFamilyL(CSubConParameterFamily *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_c_sub_con_parameter_family.xml#class_c_sub_con_parameter_family">CSubConParameterFamily</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFamily</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Family to be added (bundle takes ownership) </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1348"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="761"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="775"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Add a sub-connection parameter family to the bundle.</p>
+				<p>Note: The <xref href="class_r_sub_con_parameter_bundle.xml#class_r_sub_con_parameter_bundle">RSubConParameterBundle</xref> object takes ownership of the parameter family that is passed into this method. When the bundle object is destroyed, any family owned by this object will also be destroyed.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_sub_con_parameter_bundle_1af029e53c7ee76c7a0a31c9f759728521">
+		<apiName>FindFamily</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_c_sub_con_parameter_family.xml#class_c_sub_con_parameter_family">CSubConParameterFamily</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSubConParameterBundle</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C CSubConParameterFamily * FindFamily(TUint32 aFamilyId)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSubConParameterBundle::FindFamily(TUint32)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a8240e11f17c80b6b222fc2af50234da4">TUint32</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFamilyId</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Id of the family to match against. It is an identifier for the specific family type, currently only 4, QoS (KSubConQoSFamily),Authorisation (KSubConAuthorisationFamily), CallDescrParams (KSubConnCallDescrParamsFamily) and ContextDescrParams (KSubConnContextDescrParamsFamily), are defined. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1349"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="777"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="789"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Search the sub-connection parameter bundle for a parameter family</p>
+				<p>Matching family or NULL pointer if not found </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_sub_con_parameter_bundle_1a0e036d9f1903b6a3042086e995320cb2">
+		<apiName>ClearAllParameters</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSubConParameterBundle</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void ClearAllParameters(CSubConParameterFamily::TParameterSetType aType)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSubConParameterBundle::ClearAllParameters(CSubConParameterFamily::TParameterSetType)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_c_sub_con_parameter_family.xml#_1a5029204c01183ed974a0c87a0e278291">CSubConParameterFamily::TParameterSetType</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aType</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The type of the set to be deleted(requested, acceptable or granted) </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1350"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="791"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="801"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Clears (removes and deletes) all parameter sets with the type specified (delegated to the families)</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_sub_con_parameter_bundle_1a257afd1738c2b8ac58ebec0fd454034a">
+		<apiName>CopyToFamilyBundleL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSubConParameterBundle</cxxFunctionScopedName>
+				<cxxFunctionPrototype>void CopyToFamilyBundleL(RParameterFamilyBundle &amp;aDest) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSubConParameterBundle::CopyToFamilyBundleL(RParameterFamilyBundle &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_parameter_family_bundle.xml#class_r_parameter_family_bundle">RParameterFamilyBundle</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDest</cxxFunctionParameterDeclarationName>
+						<apiDefNote>RParameterFamilyBundle to copy parameters to </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1356"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="804"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="817"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Copy the contents of this parameter bundle to a <xref href="class_r_parameter_family_bundle.xml#class_r_parameter_family_bundle">RParameterFamilyBundle</xref>. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_sub_con_parameter_bundle_1a1fde33b7447b0dc84879d92349e13c6a">
+		<apiName>CopyFromFamilyBundleL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSubConParameterBundle</cxxFunctionScopedName>
+				<cxxFunctionPrototype>void CopyFromFamilyBundleL(RParameterFamilyBundle &amp;aSrc)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSubConParameterBundle::CopyFromFamilyBundleL(RParameterFamilyBundle &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_parameter_family_bundle.xml#class_r_parameter_family_bundle">RParameterFamilyBundle</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSrc</cxxFunctionParameterDeclarationName>
+						<apiDefNote>RParameterFamilyBundle to copy contents from </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1362"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="819"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="833"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Copy the contents of an <xref href="class_r_parameter_family_bundle.xml#class_r_parameter_family_bundle">RParameterFamilyBundle</xref> to this <xref href="class_r_sub_con_parameter_bundle.xml#class_r_sub_con_parameter_bundle">RSubConParameterBundle</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_sub_con_parameter_bundle_1acf805e89b5cb10ec960b663839fab70d">
+		<apiName>CheckBundle</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSubConParameterBundle</cxxFunctionScopedName>
+				<cxxFunctionPrototype>TInt CheckBundle() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSubConParameterBundle::CheckBundle()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1365"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="675"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="687"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Check to see if the handle has a heap object. If it hasn&apos;t, it creates one</p>
+				<p>KErrNone if successful, otherwise a system wide error </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_sub_con_parameter_bundle_1abd3bfc0772b0ab15c648c53092788f80">
+		<apiName>RSubConParameterBundle</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>RSubConParameterBundle</cxxFunctionScopedName>
+				<cxxFunctionPrototype>RSubConParameterBundle(const RSubConParameterBundle &amp;aBundle)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSubConParameterBundle::RSubConParameterBundle(const RSubConParameterBundle &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_r_sub_con_parameter_bundle.xml#class_r_sub_con_parameter_bundle">RSubConParameterBundle</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aBundle</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1367"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="696"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="701"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Copy Constructor </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_sub_con_parameter_bundle_1a33a23b9af433d69ee670460aba84056d">
+		<apiName>operator=</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="class_r_sub_con_parameter_bundle.xml#class_r_sub_con_parameter_bundle">RSubConParameterBundle</apiRelation> &amp;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSubConParameterBundle</cxxFunctionScopedName>
+				<cxxFunctionPrototype>RSubConParameterBundle &amp; operator=(const RSubConParameterBundle &amp;aBundle)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSubConParameterBundle::operator=(const RSubConParameterBundle &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_r_sub_con_parameter_bundle.xml#class_r_sub_con_parameter_bundle">RSubConParameterBundle</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aBundle</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1368"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="703"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="709"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Assignment operator </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxVariable id="class_r_sub_con_parameter_bundle_1a4495aa0ba5d3f22b8a09c8fda113f760">
+		<apiName>iBundle</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableStorageClassSpecifierMutable/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="class_c_sub_con_parameter_bundle.xml#class_c_sub_con_parameter_bundle">CSubConParameterBundle</apiRelation> *</cxxVariableDeclaredType>
+				<cxxVariableScopedName>RSubConParameterBundle</cxxVariableScopedName>
+				<cxxVariablePrototype>CSubConParameterBundle * iBundle</cxxVariablePrototype>
+				<cxxVariableNameLookup>RSubConParameterBundle::iBundle</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1371"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+</cxxClass>

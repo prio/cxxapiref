@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_cleanup_delete">
+	<apiName>CleanupDelete</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="2928"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="2927"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="2933"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>A utility class used by the templated function <xref href="_c_s___c_l_i_8_c_p_p.xml#_c_s___c_l_i_8_c_p_p_1ac8a1a9ad6c7dff4f749b934056cc5cfd">CleanupDeletePushL()</xref> to create a <xref href="class_t_cleanup_item.xml#class_t_cleanup_item">TCleanupItem</xref> item that will perform a delete type operation on the class T type object.</p>
+			<p>
+				<xref href="_c_s___c_l_i_8_c_p_p.xml#_c_s___c_l_i_8_c_p_p_1ac8a1a9ad6c7dff4f749b934056cc5cfd">CleanupDeletePushL()</xref> </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_cleanup_delete_1a3d7633a8b72c8f21bef49116120d899f">
+		<apiName>PushL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CleanupDelete</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline static void PushL(T *aPtr)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CleanupDelete::PushL(T *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>T *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPtr</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The object for which a TCleanupItem is to be constructed. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2930"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="3057"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="3066"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Creates a <xref href="class_t_cleanup_item.xml#class_t_cleanup_item">TCleanupItem</xref> for the specified object.</p>
+				<p>The cleanup operation is the private static function <xref href="class_cleanup_delete.xml#class_cleanup_delete_1a0f2b10b972be134c631ce60c8780922f">Delete()</xref> of this class, which deletes the specified object.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_cleanup_delete_1a0f2b10b972be134c631ce60c8780922f">
+		<apiName>Delete</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CleanupDelete</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline static void Delete(TAny *aPtr)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CleanupDelete::Delete(TAny *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPtr</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A pointer to the object for which clean up is to be performed. The implementation deletes this object. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2932"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="3072"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="3079"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>The cleanup operation to be performed.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+</cxxClass>

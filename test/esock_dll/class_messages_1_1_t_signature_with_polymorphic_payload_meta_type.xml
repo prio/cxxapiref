@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_messages_1_1_t_signature_with_polymorphic_payload_meta_type">
+	<apiName>Messages::TSignatureWithPolymorphicPayloadMetaType</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassDerivations>
+				<cxxClassDerivation>
+					<cxxClassDerivationAccessSpecifier value="public"/>
+					<cxxClassBaseClass href="class_messages_1_1_t_signature_with_polymorphic_payload_meta_type_base.xml#class_messages_1_1_t_signature_with_polymorphic_payload_meta_type_base">Messages::TSignatureWithPolymorphicPayloadMetaTypeBase</cxxClassBaseClass>
+				</cxxClassDerivation>
+			</cxxClassDerivations>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/elements/nm_signatures.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="497"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/elements/nm_signatures.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="496"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="530"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>The class that determins how the payload will be loaded. A templated class that says the payload attribute offset and the payload atrribute creation class ( Policy class ). The loading of the payload will be determined by the attribute creation class.</p>
+			<p>Template parameters: class TSIGNATURE - The signature class. TInt PAYLOADATTRIBOFFSET - The offset where the payload is persent in the signature class. class TATTRIBUTECREATIONPOLICY - This class determines how the payload should be constructued. The attribute policty class should implement the <xref href="struct_meta_1_1_s_meta_data.xml#struct_meta_1_1_s_meta_data">Meta::SMetaData</xref>* New(TPtrC8&amp; aSrc, TPtr8&amp; aDst) function. TInt PAYLOADBUFFERMAXLEN - The maximum payload length. Used internally during the load time.</p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_messages_1_1_t_signature_with_polymorphic_payload_meta_type_1a7785870af447461c62ce00d4fb514905">
+		<apiName>NewL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>MMetaType *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Messages::TSignatureWithPolymorphicPayloadMetaType</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline static MMetaType * NewL(const TAny *aMem, const TAny *aData)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Messages::TSignatureWithPolymorphicPayloadMetaType::NewL(const TAny *,const TAny *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMem</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aData</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/nm_signatures.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="500"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="499"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="508"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_messages_1_1_t_signature_with_polymorphic_payload_meta_type_1a66a0adb956d309f5dfebc382ae5e2656">
+		<apiName>Load</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionVirtual/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Messages::TSignatureWithPolymorphicPayloadMetaType</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline virtual TInt Load(TPtrC8 &amp;aBuffer)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Messages::TSignatureWithPolymorphicPayloadMetaType::Load(TPtrC8 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_meta_1_1_m_meta_type.xml#class_meta_1_1_m_meta_type_1ab2200f8b5cb6ba279a2ca803d12772e1">Meta::MMetaType::Load(TPtrC8 &amp;)</cxxFunctionReimplemented>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_ptr_c8.xml#class_t_ptr_c8">TPtrC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aBuffer</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/nm_signatures.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="511"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="510"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="521"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_messages_1_1_t_signature_with_polymorphic_payload_meta_type_1a35d6c66ef55792619e66a15f2210981c">
+		<apiName>TSignatureWithPolymorphicPayloadMetaType</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>Messages::TSignatureWithPolymorphicPayloadMetaType</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TSignatureWithPolymorphicPayloadMetaType(const TAny *aData)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Messages::TSignatureWithPolymorphicPayloadMetaType::TSignatureWithPolymorphicPayloadMetaType(const TAny *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aData</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/nm_signatures.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="528"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="524"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="529"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxClassInherits>
+		<cxxClassInheritsDetail>
+			<cxxClassFunctionInherited href="class_messages_1_1_t_signature_with_polymorphic_payload_meta_type.xml#class_messages_1_1_t_signature_with_polymorphic_payload_meta_type_base_1ac012477d803b7a5addf777f7282ec3f9">Messages::TSignatureWithPolymorphicPayloadMetaTypeBase::Copy(const TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_messages_1_1_t_signature_with_polymorphic_payload_meta_type.xml#class_messages_1_1_t_signature_with_polymorphic_payload_meta_type_base_1a9a0c03d829e5dc551e85060a53a92408">Messages::TSignatureWithPolymorphicPayloadMetaTypeBase::InternalLoad(TPtrC8 &amp;,TDes8 &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_messages_1_1_t_signature_with_polymorphic_payload_meta_type.xml#class_messages_1_1_t_signature_with_polymorphic_payload_meta_type_base_1a0a8d8964fd37ffb6dd86f0ef5a390e10">Messages::TSignatureWithPolymorphicPayloadMetaTypeBase::Length()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_messages_1_1_t_signature_with_polymorphic_payload_meta_type.xml#class_messages_1_1_t_signature_with_polymorphic_payload_meta_type_base_1a5f28a51e0810cf2de7afe5d866120c59">Messages::TSignatureWithPolymorphicPayloadMetaTypeBase::Store(TDes8 &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_messages_1_1_t_signature_with_polymorphic_payload_meta_type.xml#class_messages_1_1_t_signature_with_polymorphic_payload_meta_type_base_1a4f0f83cd0ae7c7ec345f7a47134943d1">Messages::TSignatureWithPolymorphicPayloadMetaTypeBase::TSignatureWithPolymorphicPayloadMetaTypeBase(TUint8 *,Meta::SMetaData **,TInt)</cxxClassFunctionInherited>
+			<cxxClassVariableInherited href="class_messages_1_1_t_signature_with_polymorphic_payload_meta_type.xml#class_messages_1_1_t_signature_with_polymorphic_payload_meta_type_base_1aaea376f871a26b508454783126826d23">Messages::TSignatureWithPolymorphicPayloadMetaTypeBase::iData</cxxClassVariableInherited>
+			<cxxClassVariableInherited href="class_messages_1_1_t_signature_with_polymorphic_payload_meta_type.xml#class_messages_1_1_t_signature_with_polymorphic_payload_meta_type_base_1a808cc1340f1d70dfcd5044ea93af66a3">Messages::TSignatureWithPolymorphicPayloadMetaTypeBase::iHostSize</cxxClassVariableInherited>
+			<cxxClassVariableInherited href="class_messages_1_1_t_signature_with_polymorphic_payload_meta_type.xml#class_messages_1_1_t_signature_with_polymorphic_payload_meta_type_base_1a3fa0af478846546241df3aefcf02eec1">Messages::TSignatureWithPolymorphicPayloadMetaTypeBase::iPayload</cxxClassVariableInherited>
+		</cxxClassInheritsDetail>
+	</cxxClassInherits>
+</cxxClass>

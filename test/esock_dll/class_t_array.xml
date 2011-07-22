@@ -1,0 +1,236 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_t_array">
+	<apiName>TArray</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="4976"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="4975"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="4985"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>Generic array.</p>
+			<p>This class defines a generic array which can be constructed by any of the following templated concrete arrays:</p>
+			<p>1. CArrayFixFlat&lt;class T&gt;</p>
+			<p>2. CArrayFixSeg&lt;class T&gt;</p>
+			<p>3. CArrayVarFlat&lt;class T&gt;</p>
+			<p>4. CArrayVarSeg&lt;class T&gt;</p>
+			<p>5. CArrayPakFlat&lt;class T&gt;</p>
+			<p>6. RArray&lt;class T&gt;</p>
+			<p>7. RPointerArray&lt;class T&gt;</p>
+			<p>and also by the following template specialisation classes:</p>
+			<p>1. <xref href="class_r_array_3_01_t_int_01_4.xml#class_r_array_3_01_t_int_01_4">RArray&lt;TInt&gt;</xref>
+			</p>
+			<p>2. <xref href="class_r_array_3_01_t_uint_01_4.xml#class_r_array_3_01_t_uint_01_4">RArray&lt;TUint&gt;</xref>
+			</p>
+			<p>It allows a degree of polymorphism amongst the array classes. It permits the operator[] and the <xref href="class_t_array.xml#class_t_array_1a773fc21c47f3224aa099c540ece88c01">Count()</xref> member functions of an array to be invoked without knowing which array class has been used to construct that array.</p>
+			<p>
+				<xref href="class_t_array.xml#class_t_array">TArray</xref> allows access to elements of an array but does not permit changes to those elements.</p>
+			<p>Use the Array() member function of an array to construct and return a TArray&lt;class T&gt; object for that array.</p>
+			<p>A TArray&lt;class T&gt; type object is not intended to be constructed explicitly by user code.</p>
+			<p>
+				<xref href="class_c_array_fix_flat.xml#class_c_array_fix_flat">CArrayFixFlat</xref> </p>
+			<p>
+				<xref href="class_c_array_fix_seg.xml#class_c_array_fix_seg">CArrayFixSeg</xref> </p>
+			<p>
+				<xref href="class_c_array_var_flat.xml#class_c_array_var_flat">CArrayVarFlat</xref> </p>
+			<p>
+				<xref href="class_c_array_var_seg.xml#class_c_array_var_seg">CArrayVarSeg</xref> </p>
+			<p>
+				<xref href="class_c_array_pak_flat.xml#class_c_array_pak_flat">CArrayPakFlat</xref> </p>
+			<p>
+				<xref href="class_r_array.xml#class_r_array">RArray</xref> </p>
+			<p>
+				<xref href="class_r_pointer_array.xml#class_r_pointer_array">RPointerArray</xref> </p>
+			<p>
+				<xref href="class_r_array_3_01_t_int_01_4.xml#class_r_array_3_01_t_int_01_4">RArray&lt;TInt&gt;</xref> </p>
+			<p>
+				<xref href="class_r_array_3_01_t_uint_01_4.xml#class_r_array_3_01_t_uint_01_4">RArray&lt;TUint&gt;</xref> </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_t_array_1a73132cbfb26d06974164b2d70fbca6ba">
+		<apiName>TArray</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TArray(TInt(*aCount)(const CBase *aPtr), const TAny *(*anAt)(const CBase *aPtr, TInt anIndex), const CBase *aPtr)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TArray::TArray(TInt(*)(const CBase *aPtr),const TAny *(*)(const CBase *aPtr, TInt anIndex),const CBase *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>(*)(const <apiRelation href="class_c_base.xml#class_c_base">CBase</apiRelation> *aPtr)</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCount</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A pointer to a function which takes a 			  const CBase* argument and returns a               TInt aCount must point to the member function which returns the current number of elements of type class T contained in the array at aPtr, for which this TArray is being constructed. This argument is supplied by the Array() member function of the array class. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *(*)(const <apiRelation href="class_c_base.xml#class_c_base">CBase</apiRelation> *aPtr, <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation> anIndex)</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anAt</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A pointer to a function which takes a               const CBase* and a               TInt argument, and returns a pointer to               TAny anAt must point to the member function which returns a reference to the element located at position anIndex within the array at aPtr, for which this TArray is being constructed. This argument is supplied by the Array() member function of the array class. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_c_base.xml#class_c_base">CBase</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPtr</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A pointer to the array for which this TArray is being constructed. This argument is supplied by the Array() member function of the array class.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="4978"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="3423"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="3476"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Constructor.</p>
+				<p>A <xref href="class_t_array.xml#class_t_array">TArray</xref> object is not intended to be instantiated explicitly. An object of this type is instantiated as a result of a call to to the Array() member function of a concrete array class</p>
+				<p>
+					<xref href="class_c_array_fix.xml#class_c_array_fix_1aaf9e8b30e66a91f34f7bfb7b107958b4">CArrayFixFlat::Array</xref> </p>
+				<p>
+					<xref href="class_c_array_fix.xml#class_c_array_fix_1aaf9e8b30e66a91f34f7bfb7b107958b4">CArrayFixSeg::Array</xref> </p>
+				<p>
+					<xref href="class_c_array_var.xml#class_c_array_var_1a0b0c4749feb454162b6b2e1cfa57e1ca">CArrayVarFlat::Array</xref> </p>
+				<p>
+					<xref href="class_c_array_var.xml#class_c_array_var_1a0b0c4749feb454162b6b2e1cfa57e1ca">CArrayVarSeg::Array</xref> </p>
+				<p>
+					<xref href="class_c_array_pak.xml#class_c_array_pak_1aec99ca7969cd217543adbd42e6e17269">CArrayPakFlat::Array</xref> </p>
+				<p>
+					<xref href="class_r_array.xml#class_r_array_1abfa38e930fb9818d14362352f2193779">RArray::Array</xref> </p>
+				<p>
+					<xref href="class_r_pointer_array.xml#class_r_pointer_array_1a8b68c7c569ec6dec147893ba43fef717">RPointerArray::Array</xref> </p>
+				<p>
+					<xref href="class_r_array_3_01_t_int_01_4.xml#class_r_array_3_01_t_int_01_4_1a42f6bd3bc76247c1ceba51f0d47a2338">RArray&lt;TInt&gt;::Array</xref> </p>
+				<p>
+					<xref href="class_r_array_3_01_t_uint_01_4.xml#class_r_array_3_01_t_uint_01_4_1a372149c3a04b0126629c16608534fb10">RArray&lt;TUint&gt;::Array</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_array_1a773fc21c47f3224aa099c540ece88c01">
+		<apiName>Count</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt Count() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TArray::Count()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="4979"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="3482"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="3489"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets the number of elements currently held in the array for which this generic array has been constructed.</p>
+				<p>The number of array elements. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_array_1a1306a7b1ce2bea8bbda2f2e26e2f1279">
+		<apiName>operator[]</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>const T &amp;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline const T &amp; operator[](TInt anIndex) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TArray::operator[](TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The position of the element within the array for which this TArray has been constructed. The position is relative to zero; i.e. zero implies the first element in the array.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="4980"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="3495"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="3513"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets a reference to the element located at the specified position.</p>
+				<p>The returned reference is const and cannot be used to change the element. Any member function of the referenced template class T must be declared as const if that function is to be accessed through this operator.</p>
+				<p>A const reference to the element located at position anIndex within the array for which this <xref href="class_t_array.xml#class_t_array">TArray</xref> has been constructed.</p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>E32USER-CBase 21, if anIndex is negative, or greater than or equal to the number of objects currently within the array. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxVariable id="class_t_array_1a423d70dffe05767c0173e3b1428d9a2e">
+		<apiName>iPtr</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>const <apiRelation href="class_c_base.xml#class_c_base">CBase</apiRelation> *</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TArray</cxxVariableScopedName>
+				<cxxVariablePrototype>const CBase * iPtr</cxxVariablePrototype>
+				<cxxVariableNameLookup>TArray::iPtr</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="4982"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_t_array_1a306a569954e3d4388200ee66cf7a66b0">
+		<apiName>iCount</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>(*</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TArray</cxxVariableScopedName>
+				<cxxVariablePrototype>TInt(* iCount)(const CBase *aPtr)</cxxVariablePrototype>
+				<cxxVariableNameLookup>TArray::iCount</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="4983"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_t_array_1a6e57b5ff592f1579b09957da5e7ce78f">
+		<apiName>iAt</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *(*</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TArray</cxxVariableScopedName>
+				<cxxVariablePrototype>const TAny *(* iAt)(const CBase *aPtr, TInt anIndex)</cxxVariablePrototype>
+				<cxxVariableNameLookup>TArray::iAt</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="4984"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+</cxxClass>

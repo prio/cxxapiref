@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (c) 2011 Nokia Corporation and/or its subsidiary(-ies).
+All rights reserved.        
+        -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<reference id="cxxFriendTemplateParameters" outputclass="element"
+xml:lang="en-us">
+<title>cxxFriendTemplateParameters</title>
+<shortdesc>Container for elements to describe each of the template
+parameters of a function template that is also a friend function<?Pub
+Caret?>.</shortdesc>
+<refbody>
+<section id="section_BB16EAA97F01427CAFFFB15C63DEAC8D">          
+  <title>Description</title><p>The &lt;cxxFriendTemplateParameters>
+element contains child elements that describe the template parameters
+of a friend function template.</p><p>See ISO/IEC 14882:2003(E) 14.1
+Template parameters [temp.param]</p>         </section>
+<example id="example_7637310D62AB4BDB88913D5B7CC94BDC">          
+  <title>Example</title><p>Given this code:</p>             <codeblock
+>/**
+ @tparam T The type of the first function object.
+ @tparam U The type of the second function object.
+ @return 1 on success, 0 on failure.
+ */
+template&lt;typename T, typename U>
+int templateFunction(T&amp; x, U&amp; y)
+{
+} 
+            </codeblock><p>Then function <tt>templateFunction    
+            </tt> would have the following <tt>cxxFriendTemplateParameters</tt
+> element:</p>             <codeblock>&lt;cxxFriendTemplateParameters>
+  &lt;cxxFriendTemplateParameter>
+    &lt;cxxFriendTemplateParameterType>typename T&lt;/cxxFriendTemplateParameterType>
+    &lt;apiDefNote>The type of the first function object. &lt;/apiDefNote>
+  &lt;/cxxFriendTemplateParameter>
+  &lt;cxxFriendTemplateParameter>
+    &lt;cxxFriendTemplateParameterType>typename U&lt;/cxxFriendTemplateParameterType>
+    &lt;apiDefNote>The type of the second function object. &lt;/apiDefNote>
+  &lt;/cxxFriendTemplateParameter>
+&lt;/cxxFriendTemplateParameters>
+            </codeblock>                      </example>
+<section
+conref="../packagedef.dita#cxxFriendTemplateParameters-reference/cxxFriendTemplateParameters-containedBy-section"
+></section>
+<section
+conref="../packagedef.dita#cxxFriendTemplateParameters-reference/cxxFriendTemplateParameters-contains-section"
+></section>
+<section
+conref="../packagedef.dita#cxxFriendTemplateParameters-reference/cxxFriendTemplateParameters-contentModel-section"
+></section>
+<section
+conref="../packagedef.dita#cxxFriendTemplateParameters-reference/cxxFriendTemplateParameters-attList-section"
+></section>
+<section
+conref="../packagedef.dita#cxxFriendTemplateParameters-reference/cxxFriendTemplateParameters-classValue-section"
+></section>
+</refbody>
+</reference>
+<?Pub *0000002630?>

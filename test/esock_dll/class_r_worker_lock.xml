@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_r_worker_lock">
+	<apiName>RWorkerLock</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassDerivations>
+				<cxxClassDerivation>
+					<cxxClassDerivationAccessSpecifier value="public"/>
+					<cxxClassBaseClass href="class_r_fast_lock.xml#class_r_fast_lock">RFastLock</cxxClassBaseClass>
+				</cxxClassDerivation>
+			</cxxClassDerivations>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/elements/rworkerlock.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="44"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/elements/rworkerlock.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="43"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="95"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>Thin veneer on locking code to provide for logging. Intention is to keep it inline. </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_r_worker_lock_1a136e1de0dc6dedcfe4a1f8a1d09811a4">
+		<apiName>Wait</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RWorkerLock</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void Wait()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RWorkerLock::Wait()</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_r_fast_lock.xml#class_r_fast_lock_1aad5c34a4a88a3e688650c3fb7f91c750">RFastLock::Wait()</cxxFunctionReimplemented>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/rworkerlock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="47"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="46"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="56"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_worker_lock_1a647fae45e5f69fb3a9773d678c78c810">
+		<apiName>Signal</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RWorkerLock</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void Signal()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RWorkerLock::Signal()</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_r_fast_lock.xml#class_r_fast_lock_1a57e978abf543265b3918c814a3630ca7">RFastLock::Signal()</cxxFunctionReimplemented>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/rworkerlock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="59"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="58"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="66"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_worker_lock_1a066728c83a46b4996f2e1c80d5044cb4">
+		<apiName>AssertLockHeld</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RWorkerLock</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void AssertLockHeld() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RWorkerLock::AssertLockHeld()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/rworkerlock.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="68"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="67"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="73"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxClassInherits>
+		<cxxClassInheritsDetail>
+			<cxxClassFunctionInherited href="class_r_worker_lock.xml#class_r_fast_lock_1a131786768e2b14465ff47b27a0f2d014">RFastLock::CreateLocal(TOwnerType)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_worker_lock.xml#class_r_fast_lock_1a107e20d9dafd0670064ea5d9f0e7ae92">RFastLock::RFastLock()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_worker_lock.xml#class_r_handle_base_1a5acffa0d0548854c050e087b53e9036a">RHandleBase::Attributes()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_worker_lock.xml#class_r_handle_base_1a728f019e766bb5928a76f834107f28b3">RHandleBase::BTraceId()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_worker_lock.xml#class_r_handle_base_1ad79a6f0c004c694d4eecbea1696cbcc8">RHandleBase::Close()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_worker_lock.xml#class_r_handle_base_1ad1a439467a218ac000b1b1d6901e5a8a">RHandleBase::DoExtendedClose()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_worker_lock.xml#class_r_handle_base_1a8428cab2039187ea1b5206d26c72b4e3">RHandleBase::Duplicate(const RThread &amp;,TOwnerType)</cxxClassFunctionInherited>
+			<cxxClassEnumeratorInherited href="class_r_worker_lock.xml#class_r_handle_base_1ae1e84a8b8292c5a91e9f67f5834f84eba4a88c7aaa037ffebbd6d07e96e50deea">RHandleBase::EDirectReadAccess</cxxClassEnumeratorInherited>
+			<cxxClassEnumeratorInherited href="class_r_worker_lock.xml#class_r_handle_base_1ae1e84a8b8292c5a91e9f67f5834f84eba16b9c662c1433cd95304b5f94b092342">RHandleBase::EDirectWriteAccess</cxxClassEnumeratorInherited>
+			<cxxClassEnumeratorInherited href="class_r_worker_lock.xml#class_r_handle_base_1ae1e84a8b8292c5a91e9f67f5834f84eba7777915ffc30609e5659c341a1c2392c">RHandleBase::EReadAccess</cxxClassEnumeratorInherited>
+			<cxxClassEnumeratorInherited href="class_r_worker_lock.xml#class_r_handle_base_1ae1e84a8b8292c5a91e9f67f5834f84ebacf44af0b945bad7aea199fab102472a2">RHandleBase::EWriteAccess</cxxClassEnumeratorInherited>
+			<cxxClassFunctionInherited href="class_r_worker_lock.xml#class_r_handle_base_1a73491dd5bd728ba4ce1199b65e2e5f59">RHandleBase::FullName()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_worker_lock.xml#class_r_handle_base_1ad8eef16c4499e3fb2a69a4206a4bb48e">RHandleBase::FullName(TDes &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_worker_lock.xml#class_r_handle_base_1a10a02b67da6e5350b87729c062331c02">RHandleBase::Handle()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_worker_lock.xml#class_r_handle_base_1a2695b04020246384d6af8480101d167a">RHandleBase::HandleInfo(THandleInfo *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_worker_lock.xml#class_r_handle_base_1aa937149e5311d8ba4f95b05a1163bd86">RHandleBase::Name()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_worker_lock.xml#class_r_handle_base_1a2ba493226719395d33452916cf2c7b5b">RHandleBase::NotifyDestruction(TRequestStatus &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_worker_lock.xml#class_r_handle_base_1a0f31804c3362e9c4e878f33688d19fef">RHandleBase::Open(const TFindHandleBase &amp;,TOwnerType)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_worker_lock.xml#class_r_handle_base_1a72abaf23694869e23eed8601bac08602">RHandleBase::OpenByName(const TDesC &amp;,TOwnerType,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_worker_lock.xml#class_r_handle_base_1aa4706b89afddb4d82a9d0e7b45e3f920">RHandleBase::RHandleBase()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_worker_lock.xml#class_r_handle_base_1aa1197a55c876356e33ec6bf5248ee33d">RHandleBase::RHandleBase(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_worker_lock.xml#class_r_handle_base_1a03c76caf06fd87df38da54b8b0c39660">RHandleBase::SetHandle(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_worker_lock.xml#class_r_handle_base_1aa3ccd98b5c883151329937098d98d3d2">RHandleBase::SetHandleNC(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_worker_lock.xml#class_r_handle_base_1a856c39af65967538e388a65fac4c5b0c">RHandleBase::SetReturnedHandle(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_worker_lock.xml#class_r_handle_base_1a022806379a6fb6b94bd807286a77c839">RHandleBase::SetReturnedHandle(TInt,RHandleBase &amp;)</cxxClassFunctionInherited>
+			<cxxClassVariableInherited href="class_r_worker_lock.xml#class_r_handle_base_1aeab89dcc0c851c282effbbc9edea54f3">RHandleBase::iHandle</cxxClassVariableInherited>
+			<cxxClassEnumerationInherited href="class_r_worker_lock.xml#class_r_handle_base_1ae1e84a8b8292c5a91e9f67f5834f84eb">RHandleBase:TAttributes</cxxClassEnumerationInherited>
+			<cxxClassFunctionInherited href="class_r_worker_lock.xml#class_r_semaphore_1a5949b0cd5e075b3902414fd12600c560">RSemaphore::CreateGlobal(const TDesC &amp;,TInt,TOwnerType)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_worker_lock.xml#class_r_semaphore_1a6e4c6b55375108d3058a1f2984996093">RSemaphore::CreateLocal(TInt,TOwnerType)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_worker_lock.xml#class_r_semaphore_1a847d4595ce95c4557ef98267cf3fc28d">RSemaphore::Open(RMessagePtr2,TInt,TOwnerType)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_worker_lock.xml#class_r_semaphore_1a46147488798f3b0b4658a4e74bbf3362">RSemaphore::Open(TInt,TOwnerType)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_worker_lock.xml#class_r_semaphore_1a41f00bba90e824e73f8a2f285cdb6237">RSemaphore::Open(const TFindSemaphore &amp;,TOwnerType)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_worker_lock.xml#class_r_semaphore_1a9efc140966cc748e6985b18d63985e09">RSemaphore::OpenGlobal(const TDesC &amp;,TOwnerType)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_worker_lock.xml#class_r_semaphore_1a2917c92866fac33c5cf3381670bb019d">RSemaphore::Signal(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_worker_lock.xml#class_r_semaphore_1a4dae189cd14372a9b9107c774c26e989">RSemaphore::Wait(TInt)</cxxClassFunctionInherited>
+		</cxxClassInheritsDetail>
+	</cxxClassInherits>
+</cxxClass>

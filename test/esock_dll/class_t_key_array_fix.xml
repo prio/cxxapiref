@@ -1,0 +1,257 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_t_key_array_fix">
+	<apiName>TKeyArrayFix</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassDerivations>
+				<cxxClassDerivation>
+					<cxxClassDerivationAccessSpecifier value="public"/>
+					<cxxClassBaseClass href="class_t_key.xml#class_t_key">TKey</cxxClassBaseClass>
+				</cxxClassDerivation>
+			</cxxClassDerivations>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="301"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="277"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="313"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>Defines the characteristics of a key used to access the elements of arrays of fixed length objects.</p>
+			<p>An object of this type can represent three categories of key, depending on the constructor used:</p>
+			<p>1. a descriptor key</p>
+			<p>2. a text key</p>
+			<p>3. a numeric key.</p>
+			<p>The Sort(), InsertIsqL(), Find() and FindIsqL() member functions of the <xref href="class_c_array_fix_flat.xml#class_c_array_fix_flat">CArrayFixFlat</xref> and <xref href="class_c_array_fix_seg.xml#class_c_array_fix_seg">CArrayFixSeg</xref> class hierarchies need a <xref href="class_t_key_array_fix.xml#class_t_key_array_fix">TKeyArrayFix</xref> object as an argument to define the location and type of key within an array element.</p>
+			<p>
+				<xref href="class_c_array_fix_flat.xml#class_c_array_fix_flat">CArrayFixFlat</xref> </p>
+			<p>
+				<xref href="class_c_array_fix_seg.xml#class_c_array_fix_seg">CArrayFixSeg</xref> </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_t_key_array_fix_1a070806b8cbf625b5b6e28698eba137db">
+		<apiName>TKeyArrayFix</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType>IMPORT_C</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TKeyArrayFix</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TKeyArrayFix(TInt anOffset, TKeyCmpText aType)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TKeyArrayFix::TKeyArrayFix(TInt,TKeyCmpText)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anOffset</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1a446e498855eefce7f182246e22161913">TKeyCmpText</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aType</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="303"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_key_array_fix_1ae0fbc7d2e0f2e76d650c446c05a4be44">
+		<apiName>TKeyArrayFix</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType>IMPORT_C</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TKeyArrayFix</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TKeyArrayFix(TInt anOffset, TKeyCmpText aType, TInt aLength)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TKeyArrayFix::TKeyArrayFix(TInt,TKeyCmpText,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anOffset</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1a446e498855eefce7f182246e22161913">TKeyCmpText</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aType</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="304"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_key_array_fix_1a43023f72b6ad2f868d5f0cd4b24f63ef">
+		<apiName>TKeyArrayFix</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType>IMPORT_C</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TKeyArrayFix</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TKeyArrayFix(TInt anOffset, TKeyCmpNumeric aType)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TKeyArrayFix::TKeyArrayFix(TInt,TKeyCmpNumeric)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anOffset</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1a97493b976a5ff31ab3df05f705783cfd">TKeyCmpNumeric</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aType</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="305"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_key_array_fix_1acb54222f4c2cd91865f2df1948273a99">
+		<apiName>Set</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionVirtual/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TKeyArrayFix</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual IMPORT_C void Set(CBufBase *aBase, TInt aRecordLength)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TKeyArrayFix::Set(CBufBase *,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_c_buf_base.xml#class_c_buf_base">CBufBase</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aBase</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aRecordLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="307"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_key_array_fix_1a4403d8c4873a192cd65b83b28a46527a">
+		<apiName>At</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionConst/>
+				<cxxFunctionVirtual/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TKeyArrayFix</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TAny * At(TInt anIndex) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TKeyArrayFix::At(TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_t_key.xml#class_t_key_1a711d6d114092369c5b3c3dd3d81e1f70">TKey::At(TInt)const</cxxFunctionReimplemented>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="308"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxVariable id="class_t_key_array_fix_1ab2cf28ae1e2176fccc679543f7cb1147">
+		<apiName>iRecordLength</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="protected"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TKeyArrayFix</cxxVariableScopedName>
+				<cxxVariablePrototype>TInt iRecordLength</cxxVariablePrototype>
+				<cxxVariableNameLookup>TKeyArrayFix::iRecordLength</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="310"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_t_key_array_fix_1a953ed4e3d52d54cb48aae61f14def9ae">
+		<apiName>iBase</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="protected"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="class_c_buf_base.xml#class_c_buf_base">CBufBase</apiRelation> *</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TKeyArrayFix</cxxVariableScopedName>
+				<cxxVariablePrototype>CBufBase * iBase</cxxVariablePrototype>
+				<cxxVariableNameLookup>TKeyArrayFix::iBase</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="311"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxClassInherits>
+		<cxxClassInheritsDetail>
+			<cxxClassFunctionInherited href="class_t_key_array_fix.xml#class_t_key_1a8a984446a49b9f3e50c5147c9c15fbf8">TKey::Compare(TInt,TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_key_array_fix.xml#class_t_key_1ad1d144b2bd2a7656dc59775f09acddc8">TKey::SetPtr(const TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_key_array_fix.xml#class_t_key_1a0a7792c289bf59c4dc9b6360cf1731d5">TKey::TKey()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_key_array_fix.xml#class_t_key_1ab5c0f4b36f3e13de7c4ebdd544829cd6">TKey::TKey(TInt,TKeyCmpNumeric)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_key_array_fix.xml#class_t_key_1a8ffdcd98b08b0beb8762956f49665fdb">TKey::TKey(TInt,TKeyCmpText)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_key_array_fix.xml#class_t_key_1a40bd24bb23d8fabbf69e9bd1d1c5fe10">TKey::TKey(TInt,TKeyCmpText,TInt)</cxxClassFunctionInherited>
+			<cxxClassVariableInherited href="class_t_key_array_fix.xml#class_t_key_1a31e555775e29189d6d83339c83a891b4">TKey::iCmpType</cxxClassVariableInherited>
+			<cxxClassVariableInherited href="class_t_key_array_fix.xml#class_t_key_1a6608dc7e80d35d9aef547d829abc7380">TKey::iKeyLength</cxxClassVariableInherited>
+			<cxxClassVariableInherited href="class_t_key_array_fix.xml#class_t_key_1addc93e8f884957d0706eba12a0f2d5fb">TKey::iKeyOffset</cxxClassVariableInherited>
+			<cxxClassVariableInherited href="class_t_key_array_fix.xml#class_t_key_1ae3c4895796adb0f475defe328097bc6a">TKey::iPtr</cxxClassVariableInherited>
+		</cxxClassInheritsDetail>
+	</cxxClassInherits>
+</cxxClass>

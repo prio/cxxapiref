@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_m_externalizer">
+	<apiName>MExternalizer</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassAbstract/>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="272"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="271"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="283"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>A family of classes defining an interface that can be implemented by classes that need to perform externalisation on behalf of others.</p>
+			<p>
+				<xref href="class_c_store_map.xml#class_c_store_map">CStoreMap</xref> </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_m_externalizer_1a7b8a764e1c5c761ab567d33a4edca2ff">
+		<apiName>operator()</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>MExternalizer</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void operator()(const T &amp;anObject, RWriteStream &amp;aStream) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MExternalizer::operator()(const T &amp;,RWriteStream &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const T &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anObject</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_write_stream.xml#class_r_write_stream">RWriteStream</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStream</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="274"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="207"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="208"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_m_externalizer_1a2d6ab18b9394d2f3bc5e50f46911ded4">
+		<apiName>ExternalizeL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionConst/>
+				<cxxFunctionPureVirtual/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>MExternalizer</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual void ExternalizeL(const T &amp;anObject, RWriteStream &amp;aStream) const =0</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MExternalizer::ExternalizeL(const T &amp;,RWriteStream &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const T &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anObject</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The object to be externalised. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_write_stream.xml#class_r_write_stream">RWriteStream</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStream</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The write stream. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="282"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Performs externalisation.</p>
+				<p>The function is called by operator().</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+</cxxClass>

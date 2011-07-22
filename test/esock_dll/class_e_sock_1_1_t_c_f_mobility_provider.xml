@@ -1,0 +1,223 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_e_sock_1_1_t_c_f_mobility_provider">
+	<apiName>ESock::TCFMobilityProvider</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_nodemessages_mobility.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="44"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/comms-infras/ss_nodemessages_mobility.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="43"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="140"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>The interface for a mobility provider, i.e.: a node that can swap access points and needs to be instructed (by TCFMobilityControlClients via this interface) when to do so. <xref href="class_e_sock_1_1_t_c_f_mobility_control_client.xml#class_e_sock_1_1_t_c_f_mobility_control_client">TCFMobilityControlClient</xref> are the reverse facing role (nodes that want to instruct TCFMobilityProviders to swap the access points).</p>
+			<p>Typical TCFMobilityProviders are: -CPRs (towards the application represented by ESock::AMobilityProtocolReq extension API) -MCPRs towards CPRs.</p>
+			<p>
+				<xref href="class_e_sock_1_1_t_c_f_mobility_control_client.xml#class_e_sock_1_1_t_c_f_mobility_control_client">TCFMobilityControlClient</xref> </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxEnumeration id="class_e_sock_1_1_t_c_f_mobility_provider_1a570dbb253f936cfa3de1eb96a1fcd19c">
+		<apiName>@73</apiName>
+		<cxxEnumerationDetail>
+			<cxxEnumerationDefinition>
+				<cxxEnumerationAccessSpecifier value="private"/>
+				<cxxEnumerationScopedName>ESock::TCFMobilityProvider</cxxEnumerationScopedName>
+				<cxxEnumerationPrototype>@73</cxxEnumerationPrototype>
+				<cxxEnumerationNameLookup>ESock::TCFMobilityProvider:@73</cxxEnumerationNameLookup>
+				<cxxEnumerators>
+					<cxxEnumerator id="class_e_sock_1_1_t_c_f_mobility_provider_1a570dbb253f936cfa3de1eb96a1fcd19ca091dfe92c0e079ff1c8b7dfa6d56d45c">
+						<apiName>ECFStartMobility</apiName>
+						<cxxEnumeratorScopedName>ESock::TCFMobilityProvider</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ECFStartMobility = 1</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>ESock::TCFMobilityProvider::ECFStartMobility</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="1"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_nodemessages_mobility.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="48"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc/>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_e_sock_1_1_t_c_f_mobility_provider_1a570dbb253f936cfa3de1eb96a1fcd19ca3413a4f2fecb1f11e3fe687630727d2d">
+						<apiName>ECFMobilityStarted</apiName>
+						<cxxEnumeratorScopedName>ESock::TCFMobilityProvider</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ECFMobilityStarted = 2</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>ESock::TCFMobilityProvider::ECFMobilityStarted</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="2"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_nodemessages_mobility.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="49"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc/>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_e_sock_1_1_t_c_f_mobility_provider_1a570dbb253f936cfa3de1eb96a1fcd19ca0fd87da76d1a69148fdfba104860bb32">
+						<apiName>ECFMigrationRequested</apiName>
+						<cxxEnumeratorScopedName>ESock::TCFMobilityProvider</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ECFMigrationRequested = 3</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>ESock::TCFMobilityProvider::ECFMigrationRequested</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="3"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_nodemessages_mobility.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="50"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc/>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_e_sock_1_1_t_c_f_mobility_provider_1a570dbb253f936cfa3de1eb96a1fcd19ca147944c3e3724d9d5d32046df973a2da">
+						<apiName>ECFMigrationComplete</apiName>
+						<cxxEnumeratorScopedName>ESock::TCFMobilityProvider</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ECFMigrationComplete = 4</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>ESock::TCFMobilityProvider::ECFMigrationComplete</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="4"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_nodemessages_mobility.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="51"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc/>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_e_sock_1_1_t_c_f_mobility_provider_1a570dbb253f936cfa3de1eb96a1fcd19ca1fd0397d351899fdb9ef291dc5b465e2">
+						<apiName>ECFMigrationAccepted</apiName>
+						<cxxEnumeratorScopedName>ESock::TCFMobilityProvider</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ECFMigrationAccepted = 5</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>ESock::TCFMobilityProvider::ECFMigrationAccepted</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="5"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_nodemessages_mobility.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="52"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc/>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_e_sock_1_1_t_c_f_mobility_provider_1a570dbb253f936cfa3de1eb96a1fcd19cab812321730f8f6df4ba11d2d4da6e80d">
+						<apiName>ECFMigrationRejected</apiName>
+						<cxxEnumeratorScopedName>ESock::TCFMobilityProvider</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ECFMigrationRejected = 6</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>ESock::TCFMobilityProvider::ECFMigrationRejected</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="6"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_nodemessages_mobility.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="54"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc/>
+					</cxxEnumerator>
+				</cxxEnumerators>
+				<cxxEnumerationAPIItemLocation>
+					<cxxEnumerationDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_nodemessages_mobility.h"/>
+					<cxxEnumerationDeclarationFileLine name="lineNumber" value="47"/>
+					<cxxEnumerationDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxEnumerationDefinitionFileLineStart name="lineNumber" value="46"/>
+					<cxxEnumerationDefinitionFileLineEnd name="lineNumber" value="54"/>
+				</cxxEnumerationAPIItemLocation>
+			</cxxEnumerationDefinition>
+			<apiDesc/>
+		</cxxEnumerationDetail>
+	</cxxEnumeration>
+	<cxxTypedef id="class_e_sock_1_1_t_c_f_mobility_provider_1a5946d593c1b9f529412aa34ac776448d">
+		<apiName>TStartMobility</apiName>
+		<cxxTypedefDetail>
+			<cxxTypedefDefinition>
+				<cxxTypedefAccessSpecifier value="public"/>
+				<cxxTypedefDeclaredType>
+					<apiRelation href="class_messages_1_1_t_message_sig_any_number_default.xml#class_messages_1_1_t_message_sig_any_number_default">Messages::TMessageSigAnyNumberDefault</apiRelation>&lt; ECFStartMobility, TCFMobilityProvider::ERealmId &gt;</cxxTypedefDeclaredType>
+				<cxxTypedefScopedName>ESock::TCFMobilityProvider</cxxTypedefScopedName>
+				<cxxTypedefPrototype>Messages::TMessageSigAnyNumberDefault&lt; ECFStartMobility, TCFMobilityProvider::ERealmId &gt; TStartMobility</cxxTypedefPrototype>
+				<cxxTypedefNameLookup>ESock::TCFMobilityProvider::TStartMobility</cxxTypedefNameLookup>
+				<cxxTypedefAPIItemLocation>
+					<cxxTypedefDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_nodemessages_mobility.h"/>
+					<cxxTypedefDeclarationFileLine name="lineNumber" value="86"/>
+				</cxxTypedefAPIItemLocation>
+			</cxxTypedefDefinition>
+			<apiDesc/>
+		</cxxTypedefDetail>
+	</cxxTypedef>
+	<cxxTypedef id="class_e_sock_1_1_t_c_f_mobility_provider_1ac917296e17b83fb551aa35056d2faf24">
+		<apiName>TMobilityStarted</apiName>
+		<cxxTypedefDetail>
+			<cxxTypedefDefinition>
+				<cxxTypedefAccessSpecifier value="public"/>
+				<cxxTypedefDeclaredType>
+					<apiRelation href="struct_messages_1_1_t_message_sig_void.xml#struct_messages_1_1_t_message_sig_void">Messages::TMessageSigVoid</apiRelation>&lt; ECFMobilityStarted, TCFMobilityProvider::ERealmId &gt;</cxxTypedefDeclaredType>
+				<cxxTypedefScopedName>ESock::TCFMobilityProvider</cxxTypedefScopedName>
+				<cxxTypedefPrototype>Messages::TMessageSigVoid&lt; ECFMobilityStarted, TCFMobilityProvider::ERealmId &gt; TMobilityStarted</cxxTypedefPrototype>
+				<cxxTypedefNameLookup>ESock::TCFMobilityProvider::TMobilityStarted</cxxTypedefNameLookup>
+				<cxxTypedefAPIItemLocation>
+					<cxxTypedefDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_nodemessages_mobility.h"/>
+					<cxxTypedefDeclarationFileLine name="lineNumber" value="87"/>
+				</cxxTypedefAPIItemLocation>
+			</cxxTypedefDefinition>
+			<apiDesc/>
+		</cxxTypedefDetail>
+	</cxxTypedef>
+	<cxxTypedef id="class_e_sock_1_1_t_c_f_mobility_provider_1afac3b90753806974410265da1d9e6fcc">
+		<apiName>TMigrationRequested</apiName>
+		<cxxTypedefDetail>
+			<cxxTypedefDefinition>
+				<cxxTypedefAccessSpecifier value="public"/>
+				<cxxTypedefDeclaredType>
+					<apiRelation href="struct_messages_1_1_t_message_sig_void.xml#struct_messages_1_1_t_message_sig_void">Messages::TMessageSigVoid</apiRelation>&lt; ECFMigrationRequested, TCFMobilityProvider::ERealmId &gt;</cxxTypedefDeclaredType>
+				<cxxTypedefScopedName>ESock::TCFMobilityProvider</cxxTypedefScopedName>
+				<cxxTypedefPrototype>Messages::TMessageSigVoid&lt; ECFMigrationRequested, TCFMobilityProvider::ERealmId &gt; TMigrationRequested</cxxTypedefPrototype>
+				<cxxTypedefNameLookup>ESock::TCFMobilityProvider::TMigrationRequested</cxxTypedefNameLookup>
+				<cxxTypedefAPIItemLocation>
+					<cxxTypedefDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_nodemessages_mobility.h"/>
+					<cxxTypedefDeclarationFileLine name="lineNumber" value="103"/>
+				</cxxTypedefAPIItemLocation>
+			</cxxTypedefDefinition>
+			<apiDesc/>
+		</cxxTypedefDetail>
+	</cxxTypedef>
+	<cxxTypedef id="class_e_sock_1_1_t_c_f_mobility_provider_1a931a6713cfe6f0b10bf9406fb677b334">
+		<apiName>TMigrationComplete</apiName>
+		<cxxTypedefDetail>
+			<cxxTypedefDefinition>
+				<cxxTypedefAccessSpecifier value="public"/>
+				<cxxTypedefDeclaredType>
+					<apiRelation href="struct_messages_1_1_t_message_sig_void.xml#struct_messages_1_1_t_message_sig_void">Messages::TMessageSigVoid</apiRelation>&lt; ECFMigrationComplete, TCFMobilityProvider::ERealmId &gt;</cxxTypedefDeclaredType>
+				<cxxTypedefScopedName>ESock::TCFMobilityProvider</cxxTypedefScopedName>
+				<cxxTypedefPrototype>Messages::TMessageSigVoid&lt; ECFMigrationComplete, TCFMobilityProvider::ERealmId &gt; TMigrationComplete</cxxTypedefPrototype>
+				<cxxTypedefNameLookup>ESock::TCFMobilityProvider::TMigrationComplete</cxxTypedefNameLookup>
+				<cxxTypedefAPIItemLocation>
+					<cxxTypedefDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_nodemessages_mobility.h"/>
+					<cxxTypedefDeclarationFileLine name="lineNumber" value="104"/>
+				</cxxTypedefAPIItemLocation>
+			</cxxTypedefDefinition>
+			<apiDesc/>
+		</cxxTypedefDetail>
+	</cxxTypedef>
+	<cxxTypedef id="class_e_sock_1_1_t_c_f_mobility_provider_1a3dfb8c04184a2889896b13ee482ea04f">
+		<apiName>TMigrationAccepted</apiName>
+		<cxxTypedefDetail>
+			<cxxTypedefDefinition>
+				<cxxTypedefAccessSpecifier value="public"/>
+				<cxxTypedefDeclaredType>
+					<apiRelation href="struct_messages_1_1_t_message_sig_void.xml#struct_messages_1_1_t_message_sig_void">Messages::TMessageSigVoid</apiRelation>&lt; ECFMigrationAccepted, TCFMobilityProvider::ERealmId &gt;</cxxTypedefDeclaredType>
+				<cxxTypedefScopedName>ESock::TCFMobilityProvider</cxxTypedefScopedName>
+				<cxxTypedefPrototype>Messages::TMessageSigVoid&lt; ECFMigrationAccepted, TCFMobilityProvider::ERealmId &gt; TMigrationAccepted</cxxTypedefPrototype>
+				<cxxTypedefNameLookup>ESock::TCFMobilityProvider::TMigrationAccepted</cxxTypedefNameLookup>
+				<cxxTypedefAPIItemLocation>
+					<cxxTypedefDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_nodemessages_mobility.h"/>
+					<cxxTypedefDeclarationFileLine name="lineNumber" value="115"/>
+				</cxxTypedefAPIItemLocation>
+			</cxxTypedefDefinition>
+			<apiDesc/>
+		</cxxTypedefDetail>
+	</cxxTypedef>
+	<cxxTypedef id="class_e_sock_1_1_t_c_f_mobility_provider_1ac3edc81283047cc07800c8accfaecd8c">
+		<apiName>TMigrationRejected</apiName>
+		<cxxTypedefDetail>
+			<cxxTypedefDefinition>
+				<cxxTypedefAccessSpecifier value="public"/>
+				<cxxTypedefDeclaredType>Messages::TMessageSigNumber&lt; ECFMigrationRejected, TCFMobilityProvider::ERealmId &gt;</cxxTypedefDeclaredType>
+				<cxxTypedefScopedName>ESock::TCFMobilityProvider</cxxTypedefScopedName>
+				<cxxTypedefPrototype>Messages::TMessageSigNumber&lt; ECFMigrationRejected, TCFMobilityProvider::ERealmId &gt; TMigrationRejected</cxxTypedefPrototype>
+				<cxxTypedefNameLookup>ESock::TCFMobilityProvider::TMigrationRejected</cxxTypedefNameLookup>
+				<cxxTypedefAPIItemLocation>
+					<cxxTypedefDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_nodemessages_mobility.h"/>
+					<cxxTypedefDeclarationFileLine name="lineNumber" value="139"/>
+				</cxxTypedefAPIItemLocation>
+			</cxxTypedefDefinition>
+			<apiDesc/>
+		</cxxTypedefDetail>
+	</cxxTypedef>
+</cxxClass>

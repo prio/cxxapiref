@@ -1,0 +1,2248 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_t_char">
+	<apiName>TChar</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="440"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="439"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="1112"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>Holds a character value and provides a number of utility functions to manipulate it and test its properties.</p>
+			<p>For example, there are functions to convert the character to uppercase and test whether or not it is a control character.</p>
+			<p>The character value is stored as a 32-bit unsigned integer. The shorthand &quot;TChar value&quot; is used to describe the character value wrapped by a <xref href="class_t_char.xml#class_t_char">TChar</xref> object.</p>
+			<p>
+				<xref href="class_t_char.xml#class_t_char">TChar</xref> can be used to represent Unicode values outside plane 0 (that is, the extended Unicode range from 0x10000 to 0xFFFFF). This differentiates it from TText which can only be used for 16-bit Unicode character values.</p>
+			<p>
+				<xref href="e32def_8h.xml#e32def_8h_1a8094a5c8ef3bcf6221e5ff6405127d34">TText</xref> </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxClassNested>
+		<cxxClassNestedDetail>
+			<cxxClassNestedStruct href="struct_t_char_1_1_t_char_info.xml#struct_t_char_1_1_t_char_info">TChar::TCharInfo</cxxClassNestedStruct>
+		</cxxClassNestedDetail>
+	</cxxClassNested>
+	<cxxEnumeration id="class_t_char_1ae7cea2eeeb1831dfdaa712cf56d4eaf6">
+		<apiName>TCategory</apiName>
+		<cxxEnumerationDetail>
+			<cxxEnumerationDefinition>
+				<cxxEnumerationAccessSpecifier value="public"/>
+				<cxxEnumerationScopedName>TChar</cxxEnumerationScopedName>
+				<cxxEnumerationPrototype>TCategory</cxxEnumerationPrototype>
+				<cxxEnumerationNameLookup>TChar:TCategory</cxxEnumerationNameLookup>
+				<cxxEnumerators>
+					<cxxEnumerator id="class_t_char_1ae7cea2eeeb1831dfdaa712cf56d4eaf6a2a7ffc311c531700489b57a51514dfd7">
+						<apiName>EAlphaGroup</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EAlphaGroup = 0x00</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::EAlphaGroup</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="0x00"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="478"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Alphabetic letters.</p>
+							<p>Includes ELuCategory, ELlCategory and ELtCategory. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1ae7cea2eeeb1831dfdaa712cf56d4eaf6a7ee82c5da624d579a23e2f1bebf2476a">
+						<apiName>ELetterOtherGroup</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ELetterOtherGroup = 0x10</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::ELetterOtherGroup</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="0x10"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="486"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Other letters.</p>
+							<p>Includes ELoCategory. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1ae7cea2eeeb1831dfdaa712cf56d4eaf6a56431dc50e9609bfebb4544350f67808">
+						<apiName>ELetterModifierGroup</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ELetterModifierGroup = 0x20</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::ELetterModifierGroup</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="0x20"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="494"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Letter modifiers.</p>
+							<p>Includes ELmCategory. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1ae7cea2eeeb1831dfdaa712cf56d4eaf6aa98fb873c27eefedc87beaa8d6b7cc43">
+						<apiName>EMarkGroup</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EMarkGroup = 0x30</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::EMarkGroup</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="0x30"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="502"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Marks group.</p>
+							<p>Includes EMnCategory, EMcCategory and EMeCategory. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1ae7cea2eeeb1831dfdaa712cf56d4eaf6a46e2076111360a10ead6e58ca7e9cc60">
+						<apiName>ENumberGroup</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ENumberGroup = 0x40</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::ENumberGroup</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="0x40"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="510"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Numbers group.</p>
+							<p>Includes ENdCategory, ENlCategory and ENoCategory. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1ae7cea2eeeb1831dfdaa712cf56d4eaf6a053169c2fcee1b9cb0f7bb4b6bc2c777">
+						<apiName>EPunctuationGroup</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EPunctuationGroup = 0x50</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::EPunctuationGroup</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="0x50"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="518"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Punctuation group.</p>
+							<p>IncludesEPcCategory, PdCategory, EpeCategory, EPsCategory and EPoCategory. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1ae7cea2eeeb1831dfdaa712cf56d4eaf6a2bd5137e1b236755031316efdfa79888">
+						<apiName>ESymbolGroup</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ESymbolGroup = 0x60</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::ESymbolGroup</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="0x60"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="526"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Symbols group.</p>
+							<p>Includes ESmCategory, EScCategory, ESkCategory and ESoCategory. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1ae7cea2eeeb1831dfdaa712cf56d4eaf6a6ce935c68d3e5989d2bfca8f3a01d778">
+						<apiName>ESeparatorGroup</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ESeparatorGroup = 0x70</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::ESeparatorGroup</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="0x70"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="534"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Separators group.</p>
+							<p>Includes EZsCategory, EZlCategory and EZlpCategory. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1ae7cea2eeeb1831dfdaa712cf56d4eaf6afd7008e4a54195188ebe9ccd8ee1892a">
+						<apiName>EControlGroup</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EControlGroup = 0x80</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::EControlGroup</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="0x80"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="543"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Control, format, private use, unassigned.</p>
+							<p>Includes ECcCategory, ECtCategory, ECsCategory, ECoCategory and ECnCategory. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1ae7cea2eeeb1831dfdaa712cf56d4eaf6ac992508fc35ecb19e903e06dc6f59f94">
+						<apiName>EMaxAssignedGroup</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EMaxAssignedGroup = 0xE0</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::EMaxAssignedGroup</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="0xE0"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="549"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>The highest possible groups category. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1ae7cea2eeeb1831dfdaa712cf56d4eaf6aeb316c003dbb0c77201d7a09c4d7a936">
+						<apiName>EUnassignedGroup</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EUnassignedGroup = 0xF0</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::EUnassignedGroup</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="0xF0"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="555"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Unassigned to any other group. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1ae7cea2eeeb1831dfdaa712cf56d4eaf6aca8dbf2f5cf00af934e72ddf9078f6e1">
+						<apiName>ELuCategory</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ELuCategory = EAlphaGroup | 0</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::ELuCategory</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="EAlphaGroup | 0"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="561"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Letter, Uppercase. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1ae7cea2eeeb1831dfdaa712cf56d4eaf6ac2d023b0089c7775329b5b6ad6370960">
+						<apiName>ELlCategory</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ELlCategory = EAlphaGroup | 1</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::ELlCategory</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="EAlphaGroup | 1"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="567"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Letter, Lowercase. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1ae7cea2eeeb1831dfdaa712cf56d4eaf6ac96c1394c2f30f2138cfb5760c125247">
+						<apiName>ELtCategory</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ELtCategory = EAlphaGroup | 2</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::ELtCategory</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="EAlphaGroup | 2"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="573"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Letter, Titlecase. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1ae7cea2eeeb1831dfdaa712cf56d4eaf6a0e4d094f01017c3da97f7091a5080f70">
+						<apiName>ELoCategory</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ELoCategory = ELetterOtherGroup | 0</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::ELoCategory</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="ELetterOtherGroup | 0"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="579"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Letter, Other. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1ae7cea2eeeb1831dfdaa712cf56d4eaf6a5530e96d5aa85a58e5af28b1341a5b04">
+						<apiName>EMaxLetterCategory</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EMaxLetterCategory = ELetterOtherGroup | 0x0F</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::EMaxLetterCategory</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="ELetterOtherGroup | 0x0F"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="585"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>The highest possible (non-modifier) letter category. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1ae7cea2eeeb1831dfdaa712cf56d4eaf6a5d061f4139646c0b681ace31e4f5b53c">
+						<apiName>ELmCategory</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ELmCategory = ELetterModifierGroup | 0</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::ELmCategory</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="ELetterModifierGroup | 0"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="590"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Letter, Modifier. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1ae7cea2eeeb1831dfdaa712cf56d4eaf6afd3047d22d9a33bf894e6a7a35338cd7">
+						<apiName>EMaxLetterOrLetterModifierCategory</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EMaxLetterOrLetterModifierCategory = ELetterModifierGroup | 0x0F</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::EMaxLetterOrLetterModifierCategory</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="ELetterModifierGroup | 0x0F"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="596"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>The highest possible letter category. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1ae7cea2eeeb1831dfdaa712cf56d4eaf6ab6c6360c74eea676ac7818bc82380e71">
+						<apiName>EMnCategory</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EMnCategory = EMarkGroup | 0</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::EMnCategory</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="EMarkGroup | 0"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="601"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Mark, Non-Spacing </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1ae7cea2eeeb1831dfdaa712cf56d4eaf6a57db6e51e737f31e796e23f63bf27470">
+						<apiName>EMcCategory</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EMcCategory = EMarkGroup | 1</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::EMcCategory</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="EMarkGroup | 1"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="607"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Mark, Combining. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1ae7cea2eeeb1831dfdaa712cf56d4eaf6a6f08ac0c80d9496b8a0c44f27b8d23e8">
+						<apiName>EMeCategory</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EMeCategory = EMarkGroup | 2</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::EMeCategory</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="EMarkGroup | 2"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="613"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Mark, Enclosing. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1ae7cea2eeeb1831dfdaa712cf56d4eaf6a76c78db952395fe1bbd34169a589e47f">
+						<apiName>ENdCategory</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ENdCategory = ENumberGroup | 0</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::ENdCategory</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="ENumberGroup | 0"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="619"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Number, Decimal Digit. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1ae7cea2eeeb1831dfdaa712cf56d4eaf6aa06677cd399a190cc9b9ece19a4b71f8">
+						<apiName>ENlCategory</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ENlCategory = ENumberGroup | 1</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::ENlCategory</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="ENumberGroup | 1"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="625"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Number, Letter. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1ae7cea2eeeb1831dfdaa712cf56d4eaf6a5e663a037467a8d085571c7e409860c8">
+						<apiName>ENoCategory</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ENoCategory = ENumberGroup | 2</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::ENoCategory</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="ENumberGroup | 2"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="631"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Number, Other. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1ae7cea2eeeb1831dfdaa712cf56d4eaf6a1f934b04cb4d6bd20af29b214a26ed5f">
+						<apiName>EPcCategory</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EPcCategory = EPunctuationGroup | 0</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::EPcCategory</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="EPunctuationGroup | 0"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="637"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Punctuation, Connector. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1ae7cea2eeeb1831dfdaa712cf56d4eaf6a435eb67508288f27302fa67daa3153e6">
+						<apiName>EPdCategory</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EPdCategory = EPunctuationGroup | 1</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::EPdCategory</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="EPunctuationGroup | 1"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="643"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Punctuation, Dash. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1ae7cea2eeeb1831dfdaa712cf56d4eaf6a0bae4b3f695f912e36b963fc6e70c6f6">
+						<apiName>EPsCategory</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EPsCategory = EPunctuationGroup | 2</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::EPsCategory</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="EPunctuationGroup | 2"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="649"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Punctuation, Open. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1ae7cea2eeeb1831dfdaa712cf56d4eaf6a97a01d151409467617ade0e02b717436">
+						<apiName>EPeCategory</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EPeCategory = EPunctuationGroup | 3</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::EPeCategory</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="EPunctuationGroup | 3"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="655"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Punctuation, Close. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1ae7cea2eeeb1831dfdaa712cf56d4eaf6ab850bbfd3784efa43fb803e2cc3e958e">
+						<apiName>EPiCategory</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EPiCategory = EPunctuationGroup | 4</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::EPiCategory</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="EPunctuationGroup | 4"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="661"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Punctuation, Initial Quote </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1ae7cea2eeeb1831dfdaa712cf56d4eaf6a2311873da31e8115db3b94a519521b84">
+						<apiName>EPfCategory</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EPfCategory = EPunctuationGroup | 5</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::EPfCategory</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="EPunctuationGroup | 5"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="667"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Punctuation, Final Quote </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1ae7cea2eeeb1831dfdaa712cf56d4eaf6ae9601a75320e2c3a7da69f91a0b6091e">
+						<apiName>EPoCategory</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EPoCategory = EPunctuationGroup | 6</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::EPoCategory</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="EPunctuationGroup | 6"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="673"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Punctuation, Other. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1ae7cea2eeeb1831dfdaa712cf56d4eaf6a3eeae4a21a6f83780fda3bed16ac6a36">
+						<apiName>ESmCategory</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ESmCategory = ESymbolGroup | 0</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::ESmCategory</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="ESymbolGroup | 0"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="679"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Symbol, Math. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1ae7cea2eeeb1831dfdaa712cf56d4eaf6a74fe203bd0166e7502568b677b5cd7ca">
+						<apiName>EScCategory</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EScCategory = ESymbolGroup | 1</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::EScCategory</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="ESymbolGroup | 1"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="685"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Symbol, Currency. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1ae7cea2eeeb1831dfdaa712cf56d4eaf6a5a429394798ff6c0dc3a282a428e8bf3">
+						<apiName>ESkCategory</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ESkCategory = ESymbolGroup | 2</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::ESkCategory</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="ESymbolGroup | 2"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="691"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Symbol, Modifier. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1ae7cea2eeeb1831dfdaa712cf56d4eaf6adef1cc043ce58e043ce5e8c376afd92b">
+						<apiName>ESoCategory</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ESoCategory = ESymbolGroup | 3</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::ESoCategory</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="ESymbolGroup | 3"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="697"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Symbol, Other. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1ae7cea2eeeb1831dfdaa712cf56d4eaf6a325c4da5c2449fc545aa72d6cd272893">
+						<apiName>EMaxGraphicCategory</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EMaxGraphicCategory = ESymbolGroup | 0x0F</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::EMaxGraphicCategory</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="ESymbolGroup | 0x0F"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="703"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>The highest possible graphic character category. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1ae7cea2eeeb1831dfdaa712cf56d4eaf6a6836a1ad1027bc945690699fd1e5686d">
+						<apiName>EZsCategory</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EZsCategory = ESeparatorGroup | 0</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::EZsCategory</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="ESeparatorGroup | 0"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="709"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Separator, Space. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1ae7cea2eeeb1831dfdaa712cf56d4eaf6a336ca55a229bef78a06f137578b152e3">
+						<apiName>EMaxPrintableCategory</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EMaxPrintableCategory = EZsCategory</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::EMaxPrintableCategory</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="EZsCategory"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="715"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>The highest possible printable character category. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1ae7cea2eeeb1831dfdaa712cf56d4eaf6ae34b3b8116a45e75ff5245272b1e7a13">
+						<apiName>EZlCategory</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EZlCategory = ESeparatorGroup | 1</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::EZlCategory</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="ESeparatorGroup | 1"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="721"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Separator, Line. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1ae7cea2eeeb1831dfdaa712cf56d4eaf6a50a1a7b9648842c9d5883c97cdc23d88">
+						<apiName>EZpCategory</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EZpCategory = ESeparatorGroup | 2</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::EZpCategory</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="ESeparatorGroup | 2"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="727"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Separator, Paragraph. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1ae7cea2eeeb1831dfdaa712cf56d4eaf6a5bc21551b5ad8f989e0f0b02c43707b3">
+						<apiName>ECcCategory</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ECcCategory = EControlGroup | 0</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::ECcCategory</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="EControlGroup | 0"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="733"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Other, Control. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1ae7cea2eeeb1831dfdaa712cf56d4eaf6ae5fc85290b97f7bc71da7689ba644690">
+						<apiName>ECfCategory</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ECfCategory = EControlGroup | 1</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::ECfCategory</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="EControlGroup | 1"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="739"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Other, Format. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1ae7cea2eeeb1831dfdaa712cf56d4eaf6a3399ea6bca5e38b075567f53ab433c1e">
+						<apiName>EMaxAssignedCategory</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EMaxAssignedCategory = EMaxAssignedGroup | 0x0F</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::EMaxAssignedCategory</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="EMaxAssignedGroup | 0x0F"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="747"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>The highest possible category for assigned 16-bit characters; does not include surrogates, which are interpreted as pairs and have no meaning on their own. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1ae7cea2eeeb1831dfdaa712cf56d4eaf6acd60523882db0242da5db1444a42f75d">
+						<apiName>ECsCategory</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ECsCategory = EUnassignedGroup | 0</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::ECsCategory</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="EUnassignedGroup | 0"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="753"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Other, Surrogate. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1ae7cea2eeeb1831dfdaa712cf56d4eaf6a787682d189ae5f912e7006cc3922d6f3">
+						<apiName>ECoCategory</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ECoCategory = EUnassignedGroup | 1</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::ECoCategory</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="EUnassignedGroup | 1"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="759"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Other, Private Use. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1ae7cea2eeeb1831dfdaa712cf56d4eaf6a3af0e33e4da541641dc232e9289eb32e">
+						<apiName>ECnCategory</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ECnCategory = EUnassignedGroup | 2</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::ECnCategory</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="EUnassignedGroup | 2"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="766"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Other, Not Assigned. </p>
+						</apiDesc>
+					</cxxEnumerator>
+				</cxxEnumerators>
+				<cxxEnumerationAPIItemLocation>
+					<cxxEnumerationDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxEnumerationDeclarationFileLine name="lineNumber" value="472"/>
+					<cxxEnumerationDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxEnumerationDefinitionFileLineStart name="lineNumber" value="471"/>
+					<cxxEnumerationDefinitionFileLineEnd name="lineNumber" value="766"/>
+				</cxxEnumerationAPIItemLocation>
+			</cxxEnumerationDefinition>
+			<apiDesc>
+				<p>General Unicode character category.</p>
+				<p>The high nibble encodes the major category (Mark, Number, etc.) and a low nibble encodes the subdivisions of that category.</p>
+				<p>The category codes can be used in three ways:</p>
+				<p>(i) as unique constants: there is one for each Unicode category, with a name of the form <codeblock>    E&lt;XX&gt;Category</codeblock> where <codeblock>    &lt;XX&gt;</codeblock> is the category name given by the Unicode database (e.g., the constant ELuCategory is used for lowercase letters, category Lu);</p>
+				<p>(ii) as numbers in certain ranges: letter categories are all &lt;= EMaxLetterCategory;</p>
+				<p>(iii) as codes in which the upper nibble gives the category group (e.g., punctuation categories all yield TRUE for the test (category &amp; 0xF0) ==EPunctuationGroup). </p>
+			</apiDesc>
+		</cxxEnumerationDetail>
+	</cxxEnumeration>
+	<cxxEnumeration id="class_t_char_1ab6ac2c01b16381cb130cc118f4f29d9a">
+		<apiName>TBdCategory</apiName>
+		<cxxEnumerationDetail>
+			<cxxEnumerationDefinition>
+				<cxxEnumerationAccessSpecifier value="public"/>
+				<cxxEnumerationScopedName>TChar</cxxEnumerationScopedName>
+				<cxxEnumerationPrototype>TBdCategory</cxxEnumerationPrototype>
+				<cxxEnumerationNameLookup>TChar:TBdCategory</cxxEnumerationNameLookup>
+				<cxxEnumerators>
+					<cxxEnumerator id="class_t_char_1ab6ac2c01b16381cb130cc118f4f29d9aab08a6864a7e22a4147fe8f735a945a4c">
+						<apiName>ELeftToRight</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ELeftToRight</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::ELeftToRight</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="780"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Left to right. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1ab6ac2c01b16381cb130cc118f4f29d9aa86214a89e31d4155ed219762237d8e5a">
+						<apiName>ELeftToRightEmbedding</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ELeftToRightEmbedding</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::ELeftToRightEmbedding</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="786"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Left to right embedding. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1ab6ac2c01b16381cb130cc118f4f29d9aa780714635733c31c89f4038a41a33f77">
+						<apiName>ELeftToRightOverride</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ELeftToRightOverride</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::ELeftToRightOverride</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="792"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Left-to-Right Override. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1ab6ac2c01b16381cb130cc118f4f29d9aaf41e0d1b2de26abc207ec675f8eaaf58">
+						<apiName>ERightToLeft</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ERightToLeft</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::ERightToLeft</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="798"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Right to left. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1ab6ac2c01b16381cb130cc118f4f29d9aae4b4c9a30cec74f69f02bd13a062fb97">
+						<apiName>ERightToLeftArabic</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ERightToLeftArabic</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::ERightToLeftArabic</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="804"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Right to left Arabic. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1ab6ac2c01b16381cb130cc118f4f29d9aa2cfb6446d1e50559bd5c14fc78897703">
+						<apiName>ERightToLeftEmbedding</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ERightToLeftEmbedding</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::ERightToLeftEmbedding</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="810"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Right to left embedding. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1ab6ac2c01b16381cb130cc118f4f29d9aaad3f2ab6e50ad3bafb8fa11ba16b4a92">
+						<apiName>ERightToLeftOverride</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ERightToLeftOverride</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::ERightToLeftOverride</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="816"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Right-to-Left Override. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1ab6ac2c01b16381cb130cc118f4f29d9aa011e291f1e02cf003d26677a232ec4a3">
+						<apiName>EPopDirectionalFormat</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EPopDirectionalFormat</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::EPopDirectionalFormat</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="822"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Pop Directional Format. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1ab6ac2c01b16381cb130cc118f4f29d9aaeabac2609795971aff839c9d56b5be6f">
+						<apiName>EEuropeanNumber</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EEuropeanNumber</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::EEuropeanNumber</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="828"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>European number. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1ab6ac2c01b16381cb130cc118f4f29d9aa200deaf946263e57f01c79d7fa0a7da7">
+						<apiName>EEuropeanNumberSeparator</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EEuropeanNumberSeparator</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::EEuropeanNumberSeparator</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="834"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>European number separator. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1ab6ac2c01b16381cb130cc118f4f29d9aa6ff6c76c7dea83d7163cdd4396008e66">
+						<apiName>EEuropeanNumberTerminator</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EEuropeanNumberTerminator</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::EEuropeanNumberTerminator</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="840"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>European number terminator. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1ab6ac2c01b16381cb130cc118f4f29d9aac5579b1cbbec278b5476e457846f82c3">
+						<apiName>EArabicNumber</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EArabicNumber</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::EArabicNumber</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="846"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Arabic number. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1ab6ac2c01b16381cb130cc118f4f29d9aa5463d74d506127d9f5f6f1b16f0d6d7d">
+						<apiName>ECommonNumberSeparator</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ECommonNumberSeparator</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::ECommonNumberSeparator</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="852"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Common number separator. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1ab6ac2c01b16381cb130cc118f4f29d9aa84c6b42a6bbefdc7beb9a74cb718e018">
+						<apiName>ENonSpacingMark</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ENonSpacingMark</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::ENonSpacingMark</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="858"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Non Spacing Mark. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1ab6ac2c01b16381cb130cc118f4f29d9aa85b8a63e9e06d14527b251a613d06c4f">
+						<apiName>EBoundaryNeutral</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EBoundaryNeutral</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::EBoundaryNeutral</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="864"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Boundary Neutral. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1ab6ac2c01b16381cb130cc118f4f29d9aa3ebf4c816dc0f81f92c35b9db40ed806">
+						<apiName>EParagraphSeparator</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EParagraphSeparator</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::EParagraphSeparator</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="870"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Paragraph Separator. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1ab6ac2c01b16381cb130cc118f4f29d9aaed6b6c29dbf005f64f9fc5558dfca943">
+						<apiName>ESegmentSeparator</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ESegmentSeparator</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::ESegmentSeparator</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="876"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Segment separator. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1ab6ac2c01b16381cb130cc118f4f29d9aa9ddd7a6423ca20eacf4ec776f5d6a2cc">
+						<apiName>EWhitespace</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EWhitespace</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::EWhitespace</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="882"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Whitespace </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1ab6ac2c01b16381cb130cc118f4f29d9aad6639575ab823f2b23096529d27ddc57">
+						<apiName>EOtherNeutral</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EOtherNeutral</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::EOtherNeutral</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="889"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Other neutrals; all other characters: punctuation, symbols. </p>
+						</apiDesc>
+					</cxxEnumerator>
+				</cxxEnumerators>
+				<cxxEnumerationAPIItemLocation>
+					<cxxEnumerationDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxEnumerationDeclarationFileLine name="lineNumber" value="776"/>
+					<cxxEnumerationDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxEnumerationDefinitionFileLineStart name="lineNumber" value="775"/>
+					<cxxEnumerationDefinitionFileLineEnd name="lineNumber" value="889"/>
+				</cxxEnumerationAPIItemLocation>
+			</cxxEnumerationDefinition>
+			<apiDesc>
+				<p>The bi-directional Unicode character category.</p>
+				<p>For more information on the bi-directional algorithm, see Unicode Technical Report No. 9 available at: <xref format="html" href="http://www.unicode.org/unicode/reports/tr9.">http://www.unicode.org/unicode/reports/tr9.</xref> </p>
+			</apiDesc>
+		</cxxEnumerationDetail>
+	</cxxEnumeration>
+	<cxxEnumeration id="class_t_char_1ab8c5c171474b90b3c817cff7262ceaa4">
+		<apiName>TCjkWidth</apiName>
+		<cxxEnumerationDetail>
+			<cxxEnumerationDefinition>
+				<cxxEnumerationAccessSpecifier value="public"/>
+				<cxxEnumerationScopedName>TChar</cxxEnumerationScopedName>
+				<cxxEnumerationPrototype>TCjkWidth</cxxEnumerationPrototype>
+				<cxxEnumerationNameLookup>TChar:TCjkWidth</cxxEnumerationNameLookup>
+				<cxxEnumerators>
+					<cxxEnumerator id="class_t_char_1ab8c5c171474b90b3c817cff7262ceaa4a09ace1ed2ca11d3cba3eabf163ab89cf">
+						<apiName>ENeutralWidth</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ENeutralWidth</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::ENeutralWidth</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="901"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Includes &apos;ambiguous width&apos; defined in Unicode Technical Report 11: East Asian Width </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1ab8c5c171474b90b3c817cff7262ceaa4a40dab331f159bba588fbdc4719cd51f0">
+						<apiName>EHalfWidth</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EHalfWidth</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::EHalfWidth</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="907"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Character which occupies a single cell. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1ab8c5c171474b90b3c817cff7262ceaa4aaf561ad0932bf3363020efc725e8ce37">
+						<apiName>EFullWidth</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EFullWidth</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::EFullWidth</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="913"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Character which occupies 2 cells. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1ab8c5c171474b90b3c817cff7262ceaa4ada2135808081a4f6ed5a485b5c8b8085">
+						<apiName>ENarrow</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ENarrow</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::ENarrow</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="921"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Characters that are always narrow and have explicit full-width counterparts. All of ASCII is an example of East Asian Narrow characters. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1ab8c5c171474b90b3c817cff7262ceaa4aee6318f19011cf061c21ffa059d7e253">
+						<apiName>EWide</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EWide</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::EWide</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="928"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Characters that are always wide. This category includes characters that have explicit half-width counterparts. </p>
+						</apiDesc>
+					</cxxEnumerator>
+				</cxxEnumerators>
+				<cxxEnumerationAPIItemLocation>
+					<cxxEnumerationDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxEnumerationDeclarationFileLine name="lineNumber" value="897"/>
+					<cxxEnumerationDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxEnumerationDefinitionFileLineStart name="lineNumber" value="896"/>
+					<cxxEnumerationDefinitionFileLineEnd name="lineNumber" value="928"/>
+				</cxxEnumerationAPIItemLocation>
+			</cxxEnumerationDefinition>
+			<apiDesc>
+				<p>Notional character width as known to East Asian (Chinese, Japanese, Korean (CJK)) coding systems. </p>
+			</apiDesc>
+		</cxxEnumerationDetail>
+	</cxxEnumeration>
+	<cxxEnumeration id="class_t_char_1ad743734a347f01ca5067260cf9cffb0e">
+		<apiName>TEncoding</apiName>
+		<cxxEnumerationDetail>
+			<cxxEnumerationDefinition>
+				<cxxEnumerationAccessSpecifier value="public"/>
+				<cxxEnumerationScopedName>TChar</cxxEnumerationScopedName>
+				<cxxEnumerationPrototype>TEncoding</cxxEnumerationPrototype>
+				<cxxEnumerationNameLookup>TChar:TEncoding</cxxEnumerationNameLookup>
+				<cxxEnumerators>
+					<cxxEnumerator id="class_t_char_1ad743734a347f01ca5067260cf9cffb0eac8eba8c2543d0ab3a92d6883c97060ad">
+						<apiName>EUnicode</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EUnicode</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::EUnicode</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="941"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>The Unicode encoding. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1ad743734a347f01ca5067260cf9cffb0ea6e8ae4c5ca99f8044c912dbd04e54890">
+						<apiName>EShiftJIS</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EShiftJIS</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::EShiftJIS</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="948"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>The shift-JIS encoding (used in Japan). </p>
+						</apiDesc>
+					</cxxEnumerator>
+				</cxxEnumerators>
+				<cxxEnumerationAPIItemLocation>
+					<cxxEnumerationDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxEnumerationDeclarationFileLine name="lineNumber" value="937"/>
+					<cxxEnumerationDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxEnumerationDefinitionFileLineStart name="lineNumber" value="936"/>
+					<cxxEnumerationDefinitionFileLineEnd name="lineNumber" value="948"/>
+				</cxxEnumerationAPIItemLocation>
+			</cxxEnumerationDefinition>
+			<apiDesc>
+				<p>Encoding systems used by the translation functions. </p>
+			</apiDesc>
+		</cxxEnumerationDetail>
+	</cxxEnumeration>
+	<cxxEnumeration id="class_t_char_1a6d1e6f70314e88200d2589e90deb773e">
+		<apiName>@1</apiName>
+		<cxxEnumerationDetail>
+			<cxxEnumerationDefinition>
+				<cxxEnumerationAccessSpecifier value="public"/>
+				<cxxEnumerationScopedName>TChar</cxxEnumerationScopedName>
+				<cxxEnumerationPrototype>@1</cxxEnumerationPrototype>
+				<cxxEnumerationNameLookup>TChar:@1</cxxEnumerationNameLookup>
+				<cxxEnumerators>
+					<cxxEnumerator id="class_t_char_1a6d1e6f70314e88200d2589e90deb773ea290d22f091fe813586caafad431bfcbb">
+						<apiName>EFoldCase</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EFoldCase = 1</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::EFoldCase</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="1"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="963"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Convert characters to their lower case form if any. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1a6d1e6f70314e88200d2589e90deb773eaaa9bfbfb51702157da93e3922562c9e9">
+						<apiName>EFoldAccents</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EFoldAccents = 2</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::EFoldAccents</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="2"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="969"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Strip accents </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1a6d1e6f70314e88200d2589e90deb773eae6742e5c29d983e73933fdecb05f6ce4">
+						<apiName>EFoldDigits</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EFoldDigits = 4</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::EFoldDigits</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="4"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="975"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Convert digits representing values 0..9 to characters &apos;0&apos;..&apos;9&apos; </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1a6d1e6f70314e88200d2589e90deb773ea63087af4dd8dbb7018548d79cab586c9">
+						<apiName>EFoldSpaces</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EFoldSpaces = 8</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::EFoldSpaces</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="8"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="981"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Convert all spaces (ordinary, fixed-width, ideographic, etc.) to &apos; &apos; </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1a6d1e6f70314e88200d2589e90deb773ea477166cd9cee91207f1e67a076cf2248">
+						<apiName>EFoldKana</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EFoldKana = 16</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::EFoldKana</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="16"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="987"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Convert hiragana to katakana. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1a6d1e6f70314e88200d2589e90deb773eae3b2e10e561b24e76d658e56a2fe3407">
+						<apiName>EFoldWidth</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EFoldWidth = 32</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::EFoldWidth</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="32"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="993"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Fold fullwidth and halfwidth variants to their standard forms </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1a6d1e6f70314e88200d2589e90deb773ea8dd8190465ccf734950ec64f2aa9c43e">
+						<apiName>EFoldStandard</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EFoldStandard = EFoldCase | EFoldAccents | EFoldDigits | EFoldSpaces</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::EFoldStandard</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="EFoldCase | EFoldAccents | EFoldDigits | EFoldSpaces"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="999"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Perform standard folding operations, i.e.those done by <xref href="class_t_char.xml#class_t_char_1a0cf47970fa2d411f808aab230a2b7ea2">Fold()</xref> with no argument </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_char_1a6d1e6f70314e88200d2589e90deb773eae7cf1bebf269efd2445176694e4a909e">
+						<apiName>EFoldAll</apiName>
+						<cxxEnumeratorScopedName>TChar</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EFoldAll = -1</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TChar::EFoldAll</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="-1"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="1006"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Perform all possible folding operations </p>
+						</apiDesc>
+					</cxxEnumerator>
+				</cxxEnumerators>
+				<cxxEnumerationAPIItemLocation>
+					<cxxEnumerationDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxEnumerationDeclarationFileLine name="lineNumber" value="959"/>
+					<cxxEnumerationDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxEnumerationDefinitionFileLineStart name="lineNumber" value="958"/>
+					<cxxEnumerationDefinitionFileLineEnd name="lineNumber" value="1006"/>
+				</cxxEnumerationAPIItemLocation>
+			</cxxEnumerationDefinition>
+			<apiDesc>
+				<p>Flags defining operations to be performed using <xref href="class_t_char.xml#class_t_char_1a0cf47970fa2d411f808aab230a2b7ea2">TChar::Fold()</xref>.</p>
+				<p>The flag values are passed to the <xref href="class_t_char.xml#class_t_char_1a0cf47970fa2d411f808aab230a2b7ea2">Fold()</xref> funtion.</p>
+				<p>
+					<xref href="class_t_char.xml#class_t_char_1a0cf47970fa2d411f808aab230a2b7ea2">TChar::Fold</xref> </p>
+			</apiDesc>
+		</cxxEnumerationDetail>
+	</cxxEnumeration>
+	<cxxFunction id="class_t_char_1ab0f8196a93e2041dc54ec5402b043ca9">
+		<apiName>TChar</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TChar</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TChar()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TChar::TChar()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1066"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="236"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="242"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Default constructor.</p>
+				<p>Constructs this character object with an undefined value. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_char_1a1d052e7f55de28333697979c6e4860fe">
+		<apiName>TChar</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TChar</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TChar(TUint aChar)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TChar::TChar(TUint)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aChar</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The initialisation value. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1067"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="247"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="254"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Constructs this character object and initialises it with the specified value.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_char_1acc147c89dd3ea325edef817def65383c">
+		<apiName>operator-=</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="class_t_char.xml#class_t_char">TChar</apiRelation> &amp;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TChar</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TChar &amp; operator-=(TUint aChar)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TChar::operator-=(TUint)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aChar</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The value to be subtracted.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1068"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="259"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="269"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Subtracts an unsigned integer value from this character object.</p>
+				<p>This character object is changed by the operation.</p>
+				<p>A reference to this character object. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_char_1a997c64c8577468ed0ac70dae366fbf98">
+		<apiName>operator+=</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="class_t_char.xml#class_t_char">TChar</apiRelation> &amp;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TChar</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TChar &amp; operator+=(TUint aChar)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TChar::operator+=(TUint)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aChar</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The value to be added.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1069"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="274"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="284"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Adds an unsigned integer value to this character object.</p>
+				<p>This character object is changed by the operation.</p>
+				<p>A reference to this character object. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_char_1a1459916ea590e6cd75804c6c610f822b">
+		<apiName>operator-</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="class_t_char.xml#class_t_char">TChar</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TChar</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TChar operator-(TUint aChar)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TChar::operator-(TUint)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aChar</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The value to be subtracted.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1070"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="289"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="301"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets the result of subtracting an unsigned integer value from this character object.</p>
+				<p>This character object is not changed.</p>
+				<p>A character object whose value is the result of the subtraction operation. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_char_1aa9e0dcebb82bc446bfae658924cd395e">
+		<apiName>operator+</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="class_t_char.xml#class_t_char">TChar</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TChar</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TChar operator+(TUint aChar)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TChar::operator+(TUint)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aChar</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The value to be added.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1071"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="306"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="316"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets the result of adding an unsigned integer value to this character object.</p>
+				<p>This character object is not changed.</p>
+				<p>A character object whose value is the result of the addition operation. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_char_1a84dbd7aca25f794f915a1ee825875b30">
+		<apiName>operator TUint</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TChar</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline operator TUint() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TChar::operator TUint()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1072"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="321"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="328"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets the value of the character as an unsigned integer.</p>
+				<p>The operator casts a <xref href="class_t_char.xml#class_t_char">TChar</xref> to a TUint, returning the TUint value wrapped by this character object. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_char_1a0cf47970fa2d411f808aab230a2b7ea2">
+		<apiName>Fold</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TChar</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void Fold()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TChar::Fold()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1074"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="174"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="194"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Converts the character to a form which can be used in tolerant comparisons without control over the operations performed.</p>
+				<p>Tolerant comparisons are those which ignore character differences like case and accents.</p>
+				<p>This function can be used when searching for a string in a text file or a file in a directory. Folding performs the following conversions: converts to lowercase, strips accents, converts all digits representing the values 0..9 to the ordinary digit characters &apos;0&apos;..&apos;9&apos;, converts all spaces (standard, non-break, fixed-width, ideographic, etc.) to the ordinary space character (0x0020), converts Japanese characters in the hiragana syllabary to katakana, and converts East Asian halfwidth and fullwidth variants to their ordinary forms. You can choose to perform any subset of these operations by using the other function overload.</p>
+				<p>
+					<xref href="class_user.xml#class_user_1a90c20bf600254c5807df3a034bab2dd9">User::Fold</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_char_1ac0e0f92dcc0a96ee5f37e8a627099b3a">
+		<apiName>LowerCase</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TChar</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void LowerCase()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TChar::LowerCase()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1075"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="199"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="207"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Converts the character to its lowercase form.</p>
+				<p>Characters lacking a lowercase form are unchanged.</p>
+				<p>
+					<xref href="class_user.xml#class_user_1aee42f046e3bac8bc8daea495bccc67ae">User::LowerCase</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_char_1a17741a7b382c6627b7c82318d5652683">
+		<apiName>UpperCase</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TChar</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void UpperCase()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TChar::UpperCase()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1076"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="212"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="220"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Converts the character to its uppercase form.</p>
+				<p>Characters lacking an uppercase form are unchanged.</p>
+				<p>
+					<xref href="class_user.xml#class_user_1a9f6dec80d04c38600f5e544ca0f3f569">User::UpperCase</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_char_1accbd4e2ce8ef142a60e1cb9d7eb2c496">
+		<apiName>Eos</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TChar</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool Eos() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TChar::Eos()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1077"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="256"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="262"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Tests whether the character is the C/C++ end-of-string character - 0.</p>
+				<p>True, if the character is 0; false, otherwise. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_char_1a7652643cb0dab01ab54f50dadb181f9b">
+		<apiName>GetUpperCase</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TChar</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TUint GetUpperCase() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TChar::GetUpperCase()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1078"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_char_1a1aaf70ccfc597a0ff20f7a83eb2a25f9">
+		<apiName>GetLowerCase</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TChar</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TUint GetLowerCase() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TChar::GetLowerCase()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1079"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_char_1a4153df899e010fcfdd6bcd43eb4ae6e1">
+		<apiName>IsLower</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TChar</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TBool IsLower() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TChar::IsLower()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1080"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_char_1a13b158fd0262ad8cc5a3c5af60965259">
+		<apiName>IsUpper</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TChar</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TBool IsUpper() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TChar::IsUpper()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1081"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_char_1a88763a23649a97b7dde6d4a647af092b">
+		<apiName>IsAlpha</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TChar</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TBool IsAlpha() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TChar::IsAlpha()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1082"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_char_1a75d8624b71095ec57b5f2e888adb8601">
+		<apiName>IsDigit</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TChar</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TBool IsDigit() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TChar::IsDigit()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1083"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_char_1a07c9f91aaba64cef24efb971bd9d807f">
+		<apiName>IsAlphaDigit</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TChar</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TBool IsAlphaDigit() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TChar::IsAlphaDigit()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1084"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_char_1ade62a0311cf41e84da8b699f6dd2f2a3">
+		<apiName>IsHexDigit</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TChar</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TBool IsHexDigit() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TChar::IsHexDigit()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1085"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_char_1a81cd63634e2fd02e83179bd57697afd7">
+		<apiName>IsSpace</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TChar</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TBool IsSpace() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TChar::IsSpace()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1086"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_char_1a6a45930d1b99bc007e043d83062a58ea">
+		<apiName>IsPunctuation</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TChar</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TBool IsPunctuation() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TChar::IsPunctuation()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1087"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_char_1a6cfa4e0bce830eb2bed299e831f729d3">
+		<apiName>IsGraph</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TChar</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TBool IsGraph() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TChar::IsGraph()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1088"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_char_1a978d32f9905989c07d5a7c4401ef44d5">
+		<apiName>IsPrint</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TChar</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TBool IsPrint() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TChar::IsPrint()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1089"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_char_1a66e5cb4c47bef3df292386ab65804010">
+		<apiName>IsControl</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TChar</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TBool IsControl() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TChar::IsControl()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1090"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_char_1a72da2e097119076b02514b9439e7d8ef">
+		<apiName>Fold</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TChar</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void Fold(TInt aFlags)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TChar::Fold(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFlags</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Flags which define the operations to be performed. The values are defined in the enum beginning with EFoldCase.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1091"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="226"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="237"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Converts the character to a form which can be used in tolerant comparisons allowing selection of the specific fold operations to be performed.</p>
+				<p>
+					<xref href="class_t_char.xml#class_t_char_1a6d1e6f70314e88200d2589e90deb773ea290d22f091fe813586caafad431bfcbb">TChar::EFoldCase</xref> </p>
+				<p>
+					<xref href="class_user.xml#class_user_1a90c20bf600254c5807df3a034bab2dd9">User::Fold</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_char_1aa37effe3e4a070ad6b3f38305d17e10b">
+		<apiName>TitleCase</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TChar</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void TitleCase()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TChar::TitleCase()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1092"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="242"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="250"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Converts the character to its titlecase form.</p>
+				<p>The titlecase form of a character is identical to its uppercase form unless a specific titlecase form exists. Characters lacking a titlecase form are unchanged. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_char_1aa4bbfbb0fc046e07ab869a7f1dd10ec6">
+		<apiName>GetTitleCase</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TChar</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TUint GetTitleCase() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TChar::GetTitleCase()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1093"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_char_1afa9df0696c6bcd7ab8040db8bfcf0eb8">
+		<apiName>IsTitle</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TChar</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TBool IsTitle() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TChar::IsTitle()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1094"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_char_1a6be43510d52e334931da0ff4862bf083">
+		<apiName>IsAssigned</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TChar</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TBool IsAssigned() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TChar::IsAssigned()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1095"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_char_1a9caea9206b1d93aa2c65bd410b75e426">
+		<apiName>GetInfo</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TChar</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void GetInfo(TCharInfo &amp;aInfo) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TChar::GetInfo(TCharInfo &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="struct_t_char_1_1_t_char_info.xml#struct_t_char_1_1_t_char_info">TCharInfo</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aInfo</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1096"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_char_1a962c74c6030ba72a62f51c30d026c8a0">
+		<apiName>GetCategory</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_char.xml#_1ae7cea2eeeb1831dfdaa712cf56d4eaf6">TCategory</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TChar</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TCategory GetCategory() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TChar::GetCategory()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1097"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_char_1a63a9984bba6922b5954fcd7914c49de9">
+		<apiName>GetBdCategory</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_char.xml#_1ab6ac2c01b16381cb130cc118f4f29d9a">TBdCategory</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TChar</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TBdCategory GetBdCategory() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TChar::GetBdCategory()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1098"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_char_1af47978ba6b2774c4b3b09dec90422575">
+		<apiName>GetCombiningClass</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TChar</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt GetCombiningClass() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TChar::GetCombiningClass()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1099"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_char_1a8ce67a24c69698f71408f88694783801">
+		<apiName>IsMirrored</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TChar</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TBool IsMirrored() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TChar::IsMirrored()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1100"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_char_1adbda2c332043c800ac18328cdf5c5b0c">
+		<apiName>GetNumericValue</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TChar</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt GetNumericValue() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TChar::GetNumericValue()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1101"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_char_1a27b9cd5d174399ac266c98bfecd90269">
+		<apiName>GetCjkWidth</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_char.xml#_1ab8c5c171474b90b3c817cff7262ceaa4">TCjkWidth</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TChar</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TCjkWidth GetCjkWidth() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TChar::GetCjkWidth()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1102"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_char_1ac96cf3b273ccbe022b5ce1db90f22f18">
+		<apiName>Compose</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TChar</cxxFunctionScopedName>
+				<cxxFunctionPrototype>static IMPORT_C TBool Compose(TUint &amp;aResult, const TDesC16 &amp;aSource)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TChar::Compose(TUint &amp;,const TDesC16 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aResult</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC16</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSource</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1103"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_char_1a0f5d9d371a59386039e4f575e39aabca">
+		<apiName>Decompose</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TChar</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TBool Decompose(TPtrC16 &amp;aResult) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TChar::Decompose(TPtrC16 &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_ptr_c16.xml#class_t_ptr_c16">TPtrC16</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aResult</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1104"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_char_1adf3713286d93bcb3e595b7ec8fe9d538">
+		<apiName>SetChar</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TChar</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void SetChar(TUint aChar)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TChar::SetChar(TUint)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aChar</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1107"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="168"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="169"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxVariable id="class_t_char_1a37d77bb192fb9c85298b2b39f9a0c4e3">
+		<apiName>iChar</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TChar</cxxVariableScopedName>
+				<cxxVariablePrototype>TUint iChar</cxxVariablePrototype>
+				<cxxVariableNameLookup>TChar::iChar</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1110"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_t_char_1ad4e01df98903ae00f14a83498a3acf8d">
+		<apiName>__DECLARE_TEST</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType/>
+				<cxxVariableScopedName>TChar</cxxVariableScopedName>
+				<cxxVariablePrototype>__DECLARE_TEST</cxxVariablePrototype>
+				<cxxVariableNameLookup>TChar::__DECLARE_TEST</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1111"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+</cxxClass>

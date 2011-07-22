@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (c) 2011 Nokia Corporation and/or its subsidiary(-ies).
+All rights reserved.        
+        -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<reference id="cxxClassRef" outputclass="element" xml:lang="en-us">
+<title>cxxClassRef</title>
+<shortdesc>Provides a C++ class topic type as a link in a DITA map. </shortdesc>
+<refbody>
+<section>             <title>Description</title>             <p>A
+&lt;cxxClassRef> element can contain other &lt;cxxClassRef> elements
+or &lt;cxxStructRef> and &lt;cxxUnionRef> elements; allowing you <?Pub
+Caret?>to express navigation or table-of-contents hierarchies.</p
+>         </section>
+<example>             <title>Example</title>             <codeblock
+>&lt;cxxAPIMap id="amap" title="AMap">
+	&lt;cxxFileRef href="afile.xml" navtitle="afile.h" />
+	&lt;cxxClassRef href="aclass.xml" navtitle="AClass" />
+	&lt;cxxStructRef href="astruct.xml" navtitle="AClass::AStruct" />
+	&lt;cxxUnionRef href="aunion.xml" navtitle="AClass::AUnion" />
+	&lt;cxxNamespaceRef href="anamespace.xml" navtitle="AClass::ANamespace" />
+&lt;/cxxAPIMap></codeblock>         </example>
+<section
+conref="../packagedef.dita#cxxClassRef-reference/cxxClassRef-containedBy-section"
+></section>
+<section
+conref="../packagedef.dita#cxxClassRef-reference/cxxClassRef-contains-section"
+></section>
+<section
+conref="../packagedef.dita#cxxClassRef-reference/cxxClassRef-contentModel-section"
+></section>
+<section
+conref="../packagedef.dita#cxxClassRef-reference/cxxClassRef-attList-section"
+></section>
+<section
+conref="../packagedef.dita#cxxClassRef-reference/cxxClassRef-classValue-section"
+></section>
+</refbody>
+</reference>
+<?Pub *0000001664?>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (c) 2011 Nokia Corporation and/or its subsidiary(-ies).
+All rights reserved.        
+        -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "..\..\..\reference.dtd">
+<reference id="cxxClassDerivationAccessSpecifier" outputclass="element"
+xml:lang="en-us">
+<title>cxxClassDerivationAccessSpecifier</title>
+<shortdesc>Indicates the access specifier used when a class inherits
+from another class.</shortdesc>
+<refbody>
+<section> 			<title>Description</title> 			<p>The &lt;cxxClassDerivationAccessSpecifier>
+element is contained within a &lt;cxxClassDerivation> element.  The
+mandatory value attribute is set to “public”, “protected” or “private”
+to describe the access the class has to the members of the base class. </p
+><p>Use the &lt;cxxClassDerivationAccessSpecifier> element together
+with the sibling element &lt;cxxClassBaseClass>. This specifies the
+base class. Alternatively you can use <?Pub Caret?>&lt;cxxClassBaseStruct>
+or &lt;cxxClassBaseUnion> if you derive from a struct or union instead
+of from a class.</p> 		</section>
+<example><title>Example</title> 		<codeblock>&lt;cxxClassDerivation>
+	&lt;cxxClassDerivationAccessSpecifier value="public"/>
+	&lt;cxxClassBaseClass href="class_base">Base&lt;/cxxClassBaseClass>
+&lt;/cxxClassDerivation>
+</codeblock> 		</example>
+<section
+conref="../packagedef.dita#cxxClassDerivationAccessSpecifier-reference/cxxClassDerivationAccessSpecifier-containedBy-section"
+></section>
+<section
+conref="../packagedef.dita#cxxClassDerivationAccessSpecifier-reference/cxxClassDerivationAccessSpecifier-contains-section"
+></section>
+<section
+conref="../packagedef.dita#cxxClassDerivationAccessSpecifier-reference/cxxClassDerivationAccessSpecifier-contentModel-section"
+></section>
+<section
+conref="../packagedef.dita#cxxClassDerivationAccessSpecifier-reference/cxxClassDerivationAccessSpecifier-attList-section"
+></section>
+<section
+conref="../packagedef.dita#cxxClassDerivationAccessSpecifier-reference/cxxClassDerivationAccessSpecifier-classValue-section"
+></section>
+</refbody>
+</reference>
+<?Pub *0000002056?>

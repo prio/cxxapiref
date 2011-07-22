@@ -1,0 +1,899 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_c_server2">
+	<apiName>CServer2</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassAbstract/>
+			<cxxClassDerivations>
+				<cxxClassDerivation>
+					<cxxClassDerivationAccessSpecifier value="public"/>
+					<cxxClassBaseClass href="class_c_active.xml#class_c_active">CActive</cxxClassBaseClass>
+				</cxxClassDerivation>
+			</cxxClassDerivations>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="2186"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="2185"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="2284"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>Abstract base class for servers (version 2).</p>
+			<p>This is an active object. It accepts requests from client threads and forwards them to the relevant server-side client session. It also handles the creation of server-side client sessions as a result of requests from client threads.</p>
+			<p>A server must define and implement a derived class.</p>
+			<p>(Note that this class should be used instead of CServer) </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxEnumeration id="class_c_server2_1ad2da849def777140039e97fa8427a8ad">
+		<apiName>TServerType</apiName>
+		<cxxEnumerationDetail>
+			<cxxEnumerationDefinition>
+				<cxxEnumerationAccessSpecifier value="public"/>
+				<cxxEnumerationScopedName>CServer2</cxxEnumerationScopedName>
+				<cxxEnumerationPrototype>TServerType</cxxEnumerationPrototype>
+				<cxxEnumerationNameLookup>CServer2:TServerType</cxxEnumerationNameLookup>
+				<cxxEnumerators>
+					<cxxEnumerator id="class_c_server2_1ad2da849def777140039e97fa8427a8adafba620c56363e8f3958341edf2e13e2b">
+						<apiName>EUnsharableSessions</apiName>
+						<cxxEnumeratorScopedName>CServer2</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EUnsharableSessions = EIpcSession_Unsharable</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>CServer2::EUnsharableSessions</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="EIpcSession_Unsharable"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="2196"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc/>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_c_server2_1ad2da849def777140039e97fa8427a8ada728882f219d51f6ea3fa946f6d798835">
+						<apiName>ESharableSessions</apiName>
+						<cxxEnumeratorScopedName>CServer2</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ESharableSessions = EIpcSession_Sharable</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>CServer2::ESharableSessions</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="EIpcSession_Sharable"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="2197"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc/>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_c_server2_1ad2da849def777140039e97fa8427a8adad20a5b23e945988611e2c23aed154332">
+						<apiName>EGlobalSharableSessions</apiName>
+						<cxxEnumeratorScopedName>CServer2</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EGlobalSharableSessions = EIpcSession_GlobalSharable</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>CServer2::EGlobalSharableSessions</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="EIpcSession_GlobalSharable"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="2198"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc/>
+					</cxxEnumerator>
+				</cxxEnumerators>
+				<cxxEnumerationAPIItemLocation>
+					<cxxEnumerationDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxEnumerationDeclarationFileLine name="lineNumber" value="2195"/>
+					<cxxEnumerationDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxEnumerationDefinitionFileLineStart name="lineNumber" value="2194"/>
+					<cxxEnumerationDefinitionFileLineEnd name="lineNumber" value="2199"/>
+				</cxxEnumerationAPIItemLocation>
+			</cxxEnumerationDefinition>
+			<apiDesc>
+				<p>This enumeration defines the maximum sharability of sessions opened with this server; for backwards compatibilty, these should be have the same values as the corresponding EIpcSessionType enumeration </p>
+			</apiDesc>
+		</cxxEnumerationDetail>
+	</cxxEnumeration>
+	<cxxFunction id="class_c_server2_1a8abb2fa5a546381df2bec7f54dd42d1c">
+		<apiName>~CServer2</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionPureVirtual/>
+				<cxxFunctionDestructor/>
+				<cxxFunctionDeclaredType>IMPORT_C</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CServer2</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual IMPORT_C ~CServer2()=0</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CServer2::~CServer2()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2202"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_server2_1a24edc88681e0dd9561545e3db9c20c09">
+		<apiName>Start</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CServer2</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Start(const TDesC &amp;aName)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CServer2::Start(const TDesC &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aName</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2203"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_server2_1abf3c3ef35618226189d9117af15e3b4f">
+		<apiName>StartL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CServer2</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void StartL(const TDesC &amp;aName)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CServer2::StartL(const TDesC &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aName</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2204"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_server2_1a6cb81054edc65d05e562054b443432dc">
+		<apiName>ReStart</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CServer2</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void ReStart()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CServer2::ReStart()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2205"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_server2_1a5143755d992a70b3d93fdebaf53409ad">
+		<apiName>SetPinClientDescriptors</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CServer2</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void SetPinClientDescriptors(TBool aPin)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CServer2::SetPinClientDescriptors(TBool)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPin</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2206"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_server2_1a0df4f69503bdd7422764be53952bca40">
+		<apiName>Server</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="class_r_server2.xml#class_r_server2">RServer2</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CServer2</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline RServer2 Server() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CServer2::Server()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2217"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="2217"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="2217"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets a handle to the server.</p>
+				<p>Note that the <xref href="class_r_server2.xml#class_r_server2">RServer2</xref> object is classified as Symbian internal, and its member functions cannot be acessed. However, the handle can be passed to the <xref href="class_r_session_base.xml#class_r_session_base_1a5dade8a728ac0be73126d5ee132f1c78">RSessionBase::CreateSession()</xref> variants that take a server handle.</p>
+				<p>The handle to the server. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_server2_1a041f9d9de0b6f86537fe86bcdc308ac6">
+		<apiName>Message</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>const <apiRelation href="class_r_message2.xml#class_r_message2">RMessage2</apiRelation> &amp;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CServer2</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline const RMessage2 &amp; Message() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CServer2::Message()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2219"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="2694"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="2695"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets a reference to the server&apos;s current message.</p>
+				<p>The current message that contains the client request details. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_server2_1a1e5f52a8fe31c123718f0ac224be5c96">
+		<apiName>CServer2</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType>IMPORT_C</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CServer2</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C CServer2(TInt aPriority, TServerType aType=EUnsharableSessions)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CServer2::CServer2(TInt,TServerType)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPriority</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_c_server2.xml#_1ad2da849def777140039e97fa8427a8ad">TServerType</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aType</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>EUnsharableSessions</cxxFunctionParameterDefaultValue>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2220"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_server2_1af262f5b7eb5b09cbdb765c70ae2dbf93">
+		<apiName>DoCancel</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionVirtual/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CServer2</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void DoCancel()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CServer2::DoCancel()</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_c_active.xml#class_c_active_1abca693565d1f15ef883f32d534fba261">CActive::DoCancel()</cxxFunctionReimplemented>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2221"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Implements cancellation of an outstanding request.</p>
+				<p>This function is called as part of the active object&apos;s <xref href="class_c_active.xml#class_c_active_1a97781da8872ba6e86b5b83ad7170eb90">Cancel()</xref>.</p>
+				<p>It must call the appropriate cancel function offered by the active object&apos;s asynchronous service provider. The asynchronous service provider&apos;s cancel is expected to act immediately.</p>
+				<p>
+					<xref href="class_c_server2.xml#class_c_server2_1af262f5b7eb5b09cbdb765c70ae2dbf93">DoCancel()</xref> must not wait for event completion; this is handled by <xref href="class_c_active.xml#class_c_active_1a97781da8872ba6e86b5b83ad7170eb90">Cancel()</xref>.</p>
+				<p>
+					<xref href="class_c_active.xml#class_c_active_1a97781da8872ba6e86b5b83ad7170eb90">CActive::Cancel</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_server2_1a845ad63a92b6eb0067e3d30ae2751522">
+		<apiName>RunL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionVirtual/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CServer2</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void RunL()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CServer2::RunL()</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_c_active.xml#class_c_active_1a1562734d9d119b6ff24bc3aec793ce3d">CActive::RunL()</cxxFunctionReimplemented>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2222"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Handles an active object&apos;s request completion event.</p>
+				<p>A derived class must provide an implementation to handle the completed request. If appropriate, it may issue another request.</p>
+				<p>The function is called by the active scheduler when a request completion event occurs, i.e. after the active scheduler&apos;s WaitForAnyRequest() function completes.</p>
+				<p>Before calling this active object&apos;s <xref href="class_c_server2.xml#class_c_server2_1a845ad63a92b6eb0067e3d30ae2751522">RunL()</xref> function, the active scheduler has:</p>
+				<p>1. decided that this is the highest priority active object with a completed request</p>
+				<p>2. marked this active object&apos;s request as complete (i.e. the request is no longer outstanding)</p>
+				<p>
+					<xref href="class_c_server2.xml#class_c_server2_1a845ad63a92b6eb0067e3d30ae2751522">RunL()</xref> runs under a trap harness in the active scheduler. If it leaves, then the active scheduler calls <xref href="class_c_server2.xml#class_c_server2_1a57ea3513e01ddfa35940b4427f2f4741">RunError()</xref> to handle the leave.</p>
+				<p>Note that once the active scheduler&apos;s <xref href="class_c_server2.xml#class_c_server2_1a24edc88681e0dd9561545e3db9c20c09">Start()</xref> function has been called, all user code is run under one of the program&apos;s active object&apos;s <xref href="class_c_server2.xml#class_c_server2_1a845ad63a92b6eb0067e3d30ae2751522">RunL()</xref> or <xref href="class_c_server2.xml#class_c_server2_1a57ea3513e01ddfa35940b4427f2f4741">RunError()</xref> functions.</p>
+				<p>
+					<xref href="class_c_active_scheduler.xml#class_c_active_scheduler_1a71f4452eae5e178915987c6d1a428972">CActiveScheduler::Start</xref> </p>
+				<p>
+					<xref href="class_c_active_scheduler.xml#class_c_active_scheduler_1a6d3f55a0772c98d0cd2845a7c074b941">CActiveScheduler::Error</xref> </p>
+				<p>
+					<xref href="class_c_active_scheduler.xml#class_c_active_scheduler_1af43f6899a3a1a6b6cb040a4f2bbb40f9">CActiveScheduler::WaitForAnyRequest</xref> </p>
+				<p>TRAPD </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_server2_1a57ea3513e01ddfa35940b4427f2f4741">
+		<apiName>RunError</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionVirtual/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CServer2</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt RunError(TInt aError)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CServer2::RunError(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_c_active.xml#class_c_active_1af7a68e3e7ac05c01a9e22dd81393f834">CActive::RunError(TInt)</cxxFunctionReimplemented>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aError</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2223"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_server2_1a179425d9bdd7cc0fccf363c25eb70d96">
+		<apiName>DoConnect</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionVirtual/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CServer2</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual IMPORT_C void DoConnect(const RMessage2 &amp;aMessage)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CServer2::DoConnect(const RMessage2 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_r_message2.xml#class_r_message2">RMessage2</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMessage</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2224"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_server2_1a78a886d15e40f5151f754877e9137e8e">
+		<apiName>Extension_</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionVirtual/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CServer2</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual IMPORT_C TInt Extension_(TUint aExtensionId, TAny *&amp;a0, TAny *a1)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CServer2::Extension_(TUint,TAny *&amp;,TAny *)</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_c_active.xml#class_c_active_1a098237f668ebdf6e5125a2deac03323d">CActive::Extension_(TUint,TAny *&amp;,TAny *)</cxxFunctionReimplemented>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aExtensionId</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *&amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>a0</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>a1</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2225"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_server2_1ad2e790dbf2ff99d8a0dbfae1c63177fd">
+		<apiName>NewSessionL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionConst/>
+				<cxxFunctionPureVirtual/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_c_session2.xml#class_c_session2">CSession2</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CServer2</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual IMPORT_C CSession2 * NewSessionL(const TVersion &amp;aVersion, const RMessage2 &amp;aMessage) const =0</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CServer2::NewSessionL(const TVersion &amp;,const RMessage2 &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_version.xml#class_t_version">TVersion</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aVersion</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The version information supplied by the client. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_r_message2.xml#class_r_message2">RMessage2</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMessage</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Represents the details of the client request that is requesting the creation of the session.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2251"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Creates a server-side session object.</p>
+				<p>The session represents a communication link between a client and a server, and its creation is initiated by the client through a call to one of the <xref href="class_r_session_base.xml#class_r_session_base_1a5dade8a728ac0be73126d5ee132f1c78">RSessionBase::CreateSession()</xref> variants.</p>
+				<p>A server must provide an implementation, which as a minimum should:</p>
+				<p>
+					<ul>
+						<li>
+							<p>check that the version of the server is compatible with the client by comparing the client supplied version number against the server&apos;s version number; it should leave if there is incompatibility.</p>
+						</li>
+					</ul>
+				</p>
+				<p>
+					<ul>
+						<li>
+							<p>construct and return the server side client session object.</p>
+						</li>
+					</ul>
+				</p>
+				<p>A pointer to the newly created server-side session object.</p>
+				<p>
+					<xref href="class_user.xml#class_user_1ad88e578e6665c3ec77d33df3a8016dca">User::QueryVersionSupported()</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_server2_1a8b87538330c6bdb1e5ead0c71d2ab591">
+		<apiName>Connect</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CServer2</cxxFunctionScopedName>
+				<cxxFunctionPrototype>void Connect(const RMessage2 &amp;aMessage)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CServer2::Connect(const RMessage2 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_r_message2.xml#class_r_message2">RMessage2</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMessage</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2252"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_server2_1a0a62b55afa27aa5a56d77bd1d2ee4f49">
+		<apiName>DoConnectL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CServer2</cxxFunctionScopedName>
+				<cxxFunctionPrototype>void DoConnectL(const RMessage2 &amp;aMessage, CSession2 *volatile &amp;aSession)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CServer2::DoConnectL(const RMessage2 &amp;,CSession2 *volatile &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_r_message2.xml#class_r_message2">RMessage2</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMessage</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_c_session2.xml#class_c_session2">CSession2</apiRelation> *volatile &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSession</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2253"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_server2_1a0bdca4e3eeae68e4ca808dc3e69e497f">
+		<apiName>SetMaster</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CServer2</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void SetMaster(const CServer2 *aServer)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CServer2::SetMaster(const CServer2 *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_c_server2.xml#class_c_server2">CServer2</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aServer</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2255"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxEnumeration id="class_c_server2_1a7d6b5a9c5175bc2d770f94739e3aec72">
+		<apiName>TPanic</apiName>
+		<cxxEnumerationDetail>
+			<cxxEnumerationDefinition>
+				<cxxEnumerationAccessSpecifier value="public"/>
+				<cxxEnumerationScopedName>CServer2</cxxEnumerationScopedName>
+				<cxxEnumerationPrototype>TPanic</cxxEnumerationPrototype>
+				<cxxEnumerationNameLookup>CServer2:TPanic</cxxEnumerationNameLookup>
+				<cxxEnumerators>
+					<cxxEnumerator id="class_c_server2_1a7d6b5a9c5175bc2d770f94739e3aec72ae61d5cce3ebe70d60d9976a6b146bfba">
+						<apiName>EBadMessageNumber</apiName>
+						<cxxEnumeratorScopedName>CServer2</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EBadMessageNumber</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>CServer2::EBadMessageNumber</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="2262"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc/>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_c_server2_1a7d6b5a9c5175bc2d770f94739e3aec72a0fedb99dfcd4911403fb4ebfce7c2a1b">
+						<apiName>ESessionNotConnected</apiName>
+						<cxxEnumeratorScopedName>CServer2</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ESessionNotConnected</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>CServer2::ESessionNotConnected</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="2263"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc/>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_c_server2_1a7d6b5a9c5175bc2d770f94739e3aec72a23bd0d8975f72315fb450f566bd927cc">
+						<apiName>ESessionAlreadyConnected</apiName>
+						<cxxEnumeratorScopedName>CServer2</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ESessionAlreadyConnected</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>CServer2::ESessionAlreadyConnected</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="2264"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc/>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_c_server2_1a7d6b5a9c5175bc2d770f94739e3aec72a01c1cda19d8ddb14c176b35c419a7479">
+						<apiName>EClientDoesntHaveRequiredCaps</apiName>
+						<cxxEnumeratorScopedName>CServer2</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EClientDoesntHaveRequiredCaps</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>CServer2::EClientDoesntHaveRequiredCaps</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="2265"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc/>
+					</cxxEnumerator>
+				</cxxEnumerators>
+				<cxxEnumerationAPIItemLocation>
+					<cxxEnumerationDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxEnumerationDeclarationFileLine name="lineNumber" value="2261"/>
+					<cxxEnumerationDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxEnumerationDefinitionFileLineStart name="lineNumber" value="2260"/>
+					<cxxEnumerationDefinitionFileLineEnd name="lineNumber" value="2266"/>
+				</cxxEnumerationAPIItemLocation>
+			</cxxEnumerationDefinition>
+			<apiDesc/>
+		</cxxEnumerationDetail>
+	</cxxEnumeration>
+	<cxxVariable id="class_c_server2_1af1fa7aa19f01470cd2e481fbea6d34f4">
+		<apiName>iSessionType</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1aae4399ce3f10d6c2b5ec96a13bbb5881">TUint8</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>CServer2</cxxVariableScopedName>
+				<cxxVariablePrototype>TUint8 iSessionType</cxxVariablePrototype>
+				<cxxVariableNameLookup>CServer2::iSessionType</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="2269"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_c_server2_1a8f5bf27a3c07ef5df83d19351210ff5b">
+		<apiName>iServerRole</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1aae4399ce3f10d6c2b5ec96a13bbb5881">TUint8</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>CServer2</cxxVariableScopedName>
+				<cxxVariablePrototype>TUint8 iServerRole</cxxVariablePrototype>
+				<cxxVariableNameLookup>CServer2::iServerRole</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="2270"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_c_server2_1ab9e3c4950d15a7df7186c220358128c8">
+		<apiName>iServerOpts</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a7c545c7b28f2e5d128d132d2ea1cdb2b">TUint16</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>CServer2</cxxVariableScopedName>
+				<cxxVariablePrototype>TUint16 iServerOpts</cxxVariablePrototype>
+				<cxxVariableNameLookup>CServer2::iServerOpts</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="2271"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_c_server2_1a87949f164f617ccabf3e12b3bce4b043">
+		<apiName>iServer</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="class_r_server2.xml#class_r_server2">RServer2</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>CServer2</cxxVariableScopedName>
+				<cxxVariablePrototype>RServer2 iServer</cxxVariablePrototype>
+				<cxxVariableNameLookup>CServer2::iServer</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="2272"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_c_server2_1afc1b912b94a9c869ce8189db30bbe9e6">
+		<apiName>iMessage</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="class_r_message2.xml#class_r_message2">RMessage2</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>CServer2</cxxVariableScopedName>
+				<cxxVariablePrototype>RMessage2 iMessage</cxxVariablePrototype>
+				<cxxVariableNameLookup>CServer2::iMessage</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="2273"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_c_server2_1a407dcb8d57b9fe6ae6754988d97efb2f">
+		<apiName>iSpare</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxVariableDeclaredType>
+				<cxxVariableScopedName>CServer2</cxxVariableScopedName>
+				<cxxVariablePrototype>TAny * iSpare</cxxVariablePrototype>
+				<cxxVariableNameLookup>CServer2::iSpare</cxxVariableNameLookup>
+				<cxxVariableReimplemented href="class_c_active.xml#class_c_active_1a4bb76130b67b5430b3b736194df7edeb">CActive::iSpare</cxxVariableReimplemented>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="2274"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_c_server2_1a66ac4b6d6134d9bab917b5ccbd89fc57">
+		<apiName>iSessionQ</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="class_t_dbl_que.xml#class_t_dbl_que">TDblQue</apiRelation>&lt; <apiRelation href="class_c_session2.xml#class_c_session2">CSession2</apiRelation> &gt;</cxxVariableDeclaredType>
+				<cxxVariableScopedName>CServer2</cxxVariableScopedName>
+				<cxxVariablePrototype>TDblQue&lt; CSession2 &gt; iSessionQ</cxxVariablePrototype>
+				<cxxVariableNameLookup>CServer2::iSessionQ</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="2275"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_c_server2_1a6b920ca25f02accf546a5d0539e53be5">
+		<apiName>iSessionIter</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="protected"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="class_t_dbl_que_iter.xml#class_t_dbl_que_iter">TDblQueIter</apiRelation>&lt; <apiRelation href="class_c_session2.xml#class_c_session2">CSession2</apiRelation> &gt;</cxxVariableDeclaredType>
+				<cxxVariableScopedName>CServer2</cxxVariableScopedName>
+				<cxxVariablePrototype>TDblQueIter&lt; CSession2 &gt; iSessionIter</cxxVariablePrototype>
+				<cxxVariableNameLookup>CServer2::iSessionIter</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="2278"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxFunction id="class_c_server2_1abdb646a925908f9bfeac46b51c83f45f">
+		<apiName>Disconnect</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CServer2</cxxFunctionScopedName>
+				<cxxFunctionPrototype>void Disconnect(const RMessage2 &amp;aMessage)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CServer2::Disconnect(const RMessage2 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_r_message2.xml#class_r_message2">RMessage2</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMessage</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2280"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_server2_1ae302149e8a0a3c8d81806a69650d1802">
+		<apiName>BadMessage</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CServer2</cxxFunctionScopedName>
+				<cxxFunctionPrototype>static void BadMessage(const RMessage2 &amp;aMessage)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CServer2::BadMessage(const RMessage2 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_r_message2.xml#class_r_message2">RMessage2</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMessage</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2281"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_server2_1a02d688fffc659df24f2812da62e15a07">
+		<apiName>NotConnected</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CServer2</cxxFunctionScopedName>
+				<cxxFunctionPrototype>static void NotConnected(const RMessage2 &amp;aMessage)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CServer2::NotConnected(const RMessage2 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_r_message2.xml#class_r_message2">RMessage2</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMessage</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2282"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxClassInherits>
+		<cxxClassInheritsDetail>
+			<cxxClassFunctionInherited href="class_c_server2.xml#class_c_active_1acfaa5bb1a4cda9d586f0ffaf2b0a0eb7">CActive::CActive(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_server2.xml#class_c_active_1a97781da8872ba6e86b5b83ad7170eb90">CActive::Cancel()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_server2.xml#class_c_active_1a44f0f5a2867d153feab11ee669d33b8d">CActive::Deque()</cxxClassFunctionInherited>
+			<cxxClassEnumeratorInherited href="class_c_server2.xml#class_c_active_1a378cd39842666e0a9b5f2fc089375f35ac59ba0db48385ddf49262e21f2a599b3">CActive::EPriorityHigh</cxxClassEnumeratorInherited>
+			<cxxClassEnumeratorInherited href="class_c_server2.xml#class_c_active_1a378cd39842666e0a9b5f2fc089375f35a5faa05021b83e97f1a5b00917aa34733">CActive::EPriorityIdle</cxxClassEnumeratorInherited>
+			<cxxClassEnumeratorInherited href="class_c_server2.xml#class_c_active_1a378cd39842666e0a9b5f2fc089375f35ac074efb2a15cd04c06d354fb1fd13f27">CActive::EPriorityLow</cxxClassEnumeratorInherited>
+			<cxxClassEnumeratorInherited href="class_c_server2.xml#class_c_active_1a378cd39842666e0a9b5f2fc089375f35ad19560103adbae4fa3eeca42c703e00b">CActive::EPriorityStandard</cxxClassEnumeratorInherited>
+			<cxxClassEnumeratorInherited href="class_c_server2.xml#class_c_active_1a378cd39842666e0a9b5f2fc089375f35ac4fc6edcb2aea0b20ab823f1017d788a">CActive::EPriorityUserInput</cxxClassEnumeratorInherited>
+			<cxxClassFunctionInherited href="class_c_server2.xml#class_c_active_1a6d1d16020878d00c3af277ad2b0866f5">CActive::IsActive()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_server2.xml#class_c_active_1a97d8e693eb6f85ca883dbb385650ca28">CActive::IsAdded()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_server2.xml#class_c_active_1acb9ff1d90fbcb96058e2947c3f05c8e8">CActive::Priority()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_server2.xml#class_c_active_1a511d5a8dc1d43eca953eb5c69b0e022d">CActive::SetActive()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_server2.xml#class_c_active_1a0d7c2ce1a5364daadef07b1020c9714f">CActive::SetPriority(TInt)</cxxClassFunctionInherited>
+			<cxxClassVariableInherited href="class_c_server2.xml#class_c_active_1a38314f150856c0f369555b0ef17c3140">CActive::iStatus</cxxClassVariableInherited>
+			<cxxClassFunctionInherited href="class_c_server2.xml#class_c_active_1a81e8cc3a48d5d6f56c502690f9969ef8">CActive::~CActive()</cxxClassFunctionInherited>
+			<cxxClassEnumerationInherited href="class_c_server2.xml#class_c_active_1a378cd39842666e0a9b5f2fc089375f35">CActive:TPriority</cxxClassEnumerationInherited>
+			<cxxClassFunctionInherited href="class_c_server2.xml#class_c_base_1a240de7932690a4e987d75690b0b6f82b">CBase::CBase()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_server2.xml#class_c_base_1ac0a06aeab68b3e01be81f9dd79e011c6">CBase::Delete(CBase *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_server2.xml#class_c_base_1af4c4965092a763b0856ccbfa3cf99eaf">CBase::operator new(TUint)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_server2.xml#class_c_base_1ab9e5f557dea4db22886189926687ddc1">CBase::operator new(TUint,TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_server2.xml#class_c_base_1aa464dd21494443ac109084ed03b81f28">CBase::operator new(TUint,TLeave)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_server2.xml#class_c_base_1af8429815362d4df6fecd47179e0c5dfe">CBase::operator new(TUint,TLeave,TUint)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_server2.xml#class_c_base_1a80505bdf8b1b20a2ed102307a78eeeeb">CBase::operator new(TUint,TUint)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_server2.xml#class_c_base_1a1390361b94424be22bb2b1020eb400ea">CBase::~CBase()</cxxClassFunctionInherited>
+		</cxxClassInheritsDetail>
+	</cxxClassInherits>
+</cxxClass>

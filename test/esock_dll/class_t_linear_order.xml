@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_t_linear_order">
+	<apiName>TLinearOrder</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="5097"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="5096"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="5103"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>A templated class which packages a function that determines the order of two objects of a given class type. During binary search operations the search term is always passed as the first argument and the second argument is an element of the array being searched.</p>
+			<p>A TLinearOrder&lt;T&gt; object is constructed and passed as a parameter to member functions of the array classes RArray&lt;T&gt; and RPointerArray&lt;T&gt;.</p>
+			<p>
+				<xref href="class_r_array.xml#class_r_array">RArray</xref> </p>
+			<p>
+				<xref href="class_r_pointer_array.xml#class_r_pointer_array">RPointerArray</xref> </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_t_linear_order_1a862484558f1c4e63a33d6f08b04eeabf">
+		<apiName>TLinearOrder</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TLinearOrder</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TLinearOrder(TInt(*anOrder)(const T &amp;, const T &amp;))</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TLinearOrder::TLinearOrder(TInt(*)(const T &amp;, const T &amp;))</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>(*)(const T &amp;, const T &amp;)</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anOrder</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A pointer to a function that takes constant references to two class T objects and returns a TInt value. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5099"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="3572"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="3588"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Constructs the object taking the specified function as an argument.</p>
+				<p>The specified function should implement an algorithm that determines the order of two class T type objects. It should return:</p>
+				<p>1. zero, if the two objects are equal.</p>
+				<p>2. a negative value, if the first object is less than the second.</p>
+				<p>3. a positive value, if the first object is greater than the second.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_linear_order_1aba13978b311afd4e26159566820a87fd">
+		<apiName>operator TGeneralLinearOrder</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TLinearOrder</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline operator TGeneralLinearOrder() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TLinearOrder::operator TGeneralLinearOrder()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5100"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="3594"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="3599"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Operator that gets the function that determines the order of two objects of a given class type. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxVariable id="class_t_linear_order_1a1543424e9d1fb63f569fbd6f840f0df3">
+		<apiName>iOrder</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32cmn_8h.xml#_1a2392910b2bc7c682e120b4b53db60db0">TGeneralLinearOrder</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TLinearOrder</cxxVariableScopedName>
+				<cxxVariablePrototype>TGeneralLinearOrder iOrder</cxxVariablePrototype>
+				<cxxVariableNameLookup>TLinearOrder::iOrder</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="5102"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+</cxxClass>

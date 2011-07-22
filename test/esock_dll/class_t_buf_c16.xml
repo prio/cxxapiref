@@ -1,0 +1,330 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_t_buf_c16">
+	<apiName>TBufC16</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassDerivations>
+				<cxxClassDerivation>
+					<cxxClassDerivationAccessSpecifier value="public"/>
+					<cxxClassBaseClass href="class_t_buf_c_base16.xml#class_t_buf_c_base16">TBufCBase16</cxxClassBaseClass>
+				</cxxClassDerivation>
+			</cxxClassDerivations>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/e32des16.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="505"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/e32des16.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="480"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="515"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>16-bit non-modifiable buffer descriptor.</p>
+			<p>This is a descriptor class which provides a buffer of fixed length for containing and accessing TUint16 data.</p>
+			<p>The class intended for instantiation. The 16-bit data that the descriptor represents is part of the descriptor object itself.</p>
+			<p>The class is templated, based on an integer value which defines the size of the descriptor&apos;s data area.</p>
+			<p>The data is intended to be accessed, but not modified; however, it can be completely replaced using the assignment operators of this class. The base class provides the functions through which the data is accessed.</p>
+			<p>
+				<xref href="class_t_buf_c.xml#class_t_buf_c">TBufC</xref> </p>
+			<p>
+				<xref href="class_t_des_c16.xml#class_t_des_c16">TDesC16</xref> </p>
+			<p>
+				<xref href="class_t_ptr16.xml#class_t_ptr16">TPtr16</xref> </p>
+			<p>
+				<xref href="e32def_8h.xml#e32def_8h_1a7c545c7b28f2e5d128d132d2ea1cdb2b">TUint16</xref> </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_t_buf_c16_1a3458db4fd0856ae338e6e02b885456ff">
+		<apiName>TBufC16</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TBufC16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBufC16()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TBufC16::TBufC16()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des16.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="507"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1593"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1608"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Constructs an empty 16-bit non-modifiable buffer descriptor.</p>
+				<p>It contains no data.</p>
+				<p>The integer template parameter determines the size of the data area which is created as part of the buffer descriptor object.</p>
+				<p>Data can, subsequently, be assigned into this buffer descriptor using the assignment operators.</p>
+				<p>
+					<xref href="class_t_buf_c16.xml#class_t_buf_c16_1a8c1b37f046e27d82d95cd073cbf8b230">TBufC16::operator=</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_buf_c16_1a8346c2efedf6f8ca3202d100e6f0f8cb">
+		<apiName>TBufC16</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TBufC16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBufC16(const TUint16 *aString)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TBufC16::TBufC16(const TUint16 *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="e32def_8h.xml#_1a7c545c7b28f2e5d128d132d2ea1cdb2b">TUint16</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aString</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A pointer to a zero terminated string. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des16.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="508"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1614"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1632"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Constructs the 16-bit non-modifiable buffer descriptor from a zero terminated string.</p>
+				<p>The integer template parameter determines the size of the data area which is created as part of this object.</p>
+				<p>The string, excluding the zero terminator, is copied into this buffer descriptor&apos;s data area. The length of this buffer descriptor is set to the length of the string, excluding the zero terminator.</p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>USER 8, if the length of the string, excluding the zero terminator, is greater than the value of the integer template parameter.</p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_buf_c16_1a33d847c29569e5cd2e92260e37edc226">
+		<apiName>TBufC16</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TBufC16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBufC16(const TDesC16 &amp;aDes)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TBufC16::TBufC16(const TDesC16 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC16</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The source 16-bit non-modifiable descriptor.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des16.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="509"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1638"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1656"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Constructs the 16-bit non-modifiable buffer descriptor from any existing descriptor.</p>
+				<p>The integer template parameter determines the size of the data area which is created as part of this object.</p>
+				<p>Data is copied from the source descriptor into this buffer descriptor and the length of this buffer descriptor is set to the length of the source descriptor.</p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>USER 8, if the length of the source descriptor is greater than the value of the integer template parameter. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_buf_c16_1a8c1b37f046e27d82d95cd073cbf8b230">
+		<apiName>operator=</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="class_t_buf_c16.xml#class_t_buf_c16">TBufC16</apiRelation>&lt; S &gt; &amp;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TBufC16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBufC16&lt; S &gt; &amp; operator=(const TUint16 *aString)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TBufC16::operator=(const TUint16 *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="e32def_8h.xml#_1a7c545c7b28f2e5d128d132d2ea1cdb2b">TUint16</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aString</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A pointer to a zero-terminated string.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des16.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="510"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1662"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1675"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Copies data into this descriptor replacing any existing data.</p>
+				<p>The length of this descriptor is set to reflect the new data.</p>
+				<p>A reference to this descriptor.</p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>USER 11, if the length of the string, excluding the zero terminator, is greater than the maximum length of this (target) descriptor. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_buf_c16_1ac9b7029c583341be7d61d5fd514b2236">
+		<apiName>operator=</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="class_t_buf_c16.xml#class_t_buf_c16">TBufC16</apiRelation>&lt; S &gt; &amp;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TBufC16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBufC16&lt; S &gt; &amp; operator=(const TDesC16 &amp;aDes)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TBufC16::operator=(const TDesC16 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC16</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A 16-bit non-modifiable descriptor.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des16.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="511"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1681"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1694"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Copies data into this descriptor, replacing any existing data.</p>
+				<p>The length of this descriptor is set to reflect the new data.</p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>USER 11, if the length of the descriptor aDes is greater than the maximum length of this (target) descriptor.</p>
+				<p>A reference to this descriptor. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_buf_c16_1acc5b05c5b4369dcb904b06034f551811">
+		<apiName>Des</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="class_t_ptr16.xml#class_t_ptr16">TPtr16</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TBufC16</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TPtr16 Des()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TBufC16::Des()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des16.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="512"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1700"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1724"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Creates and returns a 16-bit modifiable pointer descriptor for the data represented by this 16-bit non-modifiable buffer descriptor.</p>
+				<p>The content of a non-modifiable buffer descriptor normally cannot be altered, other than by complete replacement of the data. Creating a modifiable pointer descriptor provides a way of changing the data.</p>
+				<p>The modifiable pointer descriptor is set to point to this non-modifiable buffer descriptor&apos;s data.</p>
+				<p>The length of the modifiable pointer descriptor is set to the length of this non-modifiable buffer descriptor.</p>
+				<p>The maximum length of the modifiable pointer descriptor is set to the value of the integer template parameter.</p>
+				<p>When data is modified through this new pointer descriptor, the lengths of both it and this constant buffer descriptor are changed.</p>
+				<p>A 16-bit modifiable pointer descriptor representing the data in this 16-bit non-modifiable buffer descriptor. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxVariable id="class_t_buf_c16_1a7634d38982c909a8464b847bb236df86">
+		<apiName>iBuf</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="protected"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a7c545c7b28f2e5d128d132d2ea1cdb2b">TUint16</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TBufC16</cxxVariableScopedName>
+				<cxxVariablePrototype>TUint16 iBuf[__Align16(S)]</cxxVariablePrototype>
+				<cxxVariableNameLookup>TBufC16::iBuf</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32des16.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="514"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxClassInherits>
+		<cxxClassInheritsDetail>
+			<cxxClassFunctionInherited href="class_t_buf_c16.xml#class_t_buf_c_base16_1af12e2d29a8a342c4b519b89942ce9e26">TBufCBase16::Copy(const TDesC16 &amp;,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_buf_c16.xml#class_t_buf_c_base16_1a035e1ead51f8be9838dd769cfe7f3f7f">TBufCBase16::Copy(const TUint16 *,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_buf_c16.xml#class_t_buf_c_base16_1a63668de2234acc8fb38191b160646cd4">TBufCBase16::DoDes(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_buf_c16.xml#class_t_buf_c_base16_1a7e60e6b8ab9b7f02a2b83349e545ddb4">TBufCBase16::TBufCBase16()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_buf_c16.xml#class_t_buf_c_base16_1ab889a31bc0735f2c0462d51415d1c7a6">TBufCBase16::TBufCBase16(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_buf_c16.xml#class_t_buf_c_base16_1a90bf9f3ae87a285591cae076dcd3712d">TBufCBase16::TBufCBase16(const TDesC16 &amp;,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_buf_c16.xml#class_t_buf_c_base16_1ad6bbee7d79bc5ab2898c8040fa5037c4">TBufCBase16::TBufCBase16(const TUint16 *,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_buf_c16.xml#class_t_buf_c_base16_1a8557bf25c73654fdc114e673f95dd94a">TBufCBase16::WPtr()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_buf_c16.xml#class_t_des_c16_1a507892b663ca7de7f7c6a6528cd31ac7">TDesC16::Alloc()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_buf_c16.xml#class_t_des_c16_1a0df1d14b4641b3327db5704bc62ad1c7">TDesC16::AllocL()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_buf_c16.xml#class_t_des_c16_1a4acd6d6e48c568c5bf2ec3848592b360">TDesC16::AllocLC()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_buf_c16.xml#class_t_des_c16_1a3be336c958a65eeaac630fd7fa655d4a">TDesC16::AtC(TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_buf_c16.xml#class_t_des_c16_1ad1e8125fd943f4a1a7dcf9a4249ba102">TDesC16::Compare(const TDesC16 &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_buf_c16.xml#class_t_des_c16_1af669d15948ca001b487ad0021ef2d0d7">TDesC16::CompareC(const TDesC16 &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_buf_c16.xml#class_t_des_c16_1a52933d119f00dd3e33ed94b599c0c788">TDesC16::CompareC(const TDesC16 &amp;,TInt,const TCollationMethod *)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_buf_c16.xml#class_t_des_c16_1a678c1206c75c6f2dc947227bc8c3319c">TDesC16::CompareF(const TDesC16 &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_buf_c16.xml#class_t_des_c16_1ad39a4a29ddf358a738c74ce9596ba4c9">TDesC16::DoSetLength(TInt)</cxxClassFunctionInherited>
+			<cxxClassEnumeratorInherited href="class_t_buf_c16.xml#class_t_des_c16_1ab5f5b198753aeaa17ed6498bc62ad1e5a0a55e2ec901c6a876c3ddf14080bfcd2">TDesC16::EIsNotPrefix</cxxClassEnumeratorInherited>
+			<cxxClassEnumeratorInherited href="class_t_buf_c16.xml#class_t_des_c16_1ab5f5b198753aeaa17ed6498bc62ad1e5afb2c93c3aeecff1d6eb57ed01e4bd610">TDesC16::EIsPrefix</cxxClassEnumeratorInherited>
+			<cxxClassEnumeratorInherited href="class_t_buf_c16.xml#class_t_des_c16_1ab5f5b198753aeaa17ed6498bc62ad1e5acd647587c266629cbee5e8a399e3902f">TDesC16::EMightBePrefix</cxxClassEnumeratorInherited>
+			<cxxClassFunctionInherited href="class_t_buf_c16.xml#class_t_des_c16_1ab66f80feedaf344bc75852d3233d5c2a">TDesC16::Find(const TDesC16 &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_buf_c16.xml#class_t_des_c16_1a33cb546d6f12409ee6c803d9db0b95ea">TDesC16::Find(const TUint16 *,TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_buf_c16.xml#class_t_des_c16_1a8e9e0a82da14d719e79c5d291ca21067">TDesC16::FindC(const TDesC16 &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_buf_c16.xml#class_t_des_c16_1ac589c8c33a6fb033721a4994ab03425c">TDesC16::FindC(const TDesC16 &amp;,TInt &amp;,const TCollationMethod &amp;,TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_buf_c16.xml#class_t_des_c16_1af0f5abee26c53e785c77c55c5c081568">TDesC16::FindC(const TUint16 *,TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_buf_c16.xml#class_t_des_c16_1a7aeb7e4ba90a8606e0c23f7838b340a0">TDesC16::FindC(const TUint16 *,TInt,TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_buf_c16.xml#class_t_des_c16_1a85191c6595a4798a3926710dcc514c4b">TDesC16::FindF(const TDesC16 &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_buf_c16.xml#class_t_des_c16_1a342f4a61207f9d4141bb8847e6337053">TDesC16::FindF(const TUint16 *,TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_buf_c16.xml#class_t_des_c16_1ab88d73cf9fec96c48bb53aa6046f8fa3">TDesC16::GetCollationKeysL(TInt,const TCollationMethod *)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_buf_c16.xml#class_t_des_c16_1a24077584f5e6f3398573c2ae4a25fee6">TDesC16::GetFoldedDecomposedFormL()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_buf_c16.xml#class_t_des_c16_1af05a1ee2ecbe7dd9ece2289e885f2641">TDesC16::GetNormalizedDecomposedFormL()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_buf_c16.xml#class_t_des_c16_1a3bb227d65325e51b7aef09a9544ec39b">TDesC16::HasPrefixC(const TDesC16 &amp;,TInt,const TCollationMethod *)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_buf_c16.xml#class_t_des_c16_1aa8825b4fc0c9010e83e57687cab87a15">TDesC16::Left(TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_buf_c16.xml#class_t_des_c16_1a2ef7023bd86fa9ea71ab80a0197382ef">TDesC16::Length()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_buf_c16.xml#class_t_des_c16_1a978312e2ac39af3b6e50c5514b660e5d">TDesC16::Locate(TChar)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_buf_c16.xml#class_t_des_c16_1a4f9ffded9ecd4113807d261a55e2ab95">TDesC16::LocateF(TChar)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_buf_c16.xml#class_t_des_c16_1aebc12e1ded64c2ab7e2537ebf830c946">TDesC16::LocateReverse(TChar)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_buf_c16.xml#class_t_des_c16_1a9430071a7f9acd274c9d7964e1ba007f">TDesC16::LocateReverseF(TChar)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_buf_c16.xml#class_t_des_c16_1a87a8ffbf366c1be67ec40150f19f47e0">TDesC16::Match(const TDesC16 &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_buf_c16.xml#class_t_des_c16_1a823bbd943319ee98ae6ad91717e5bb54">TDesC16::MatchC(const TDesC16 &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_buf_c16.xml#class_t_des_c16_1a4b734820e866102f32328f67fdffdfa7">TDesC16::MatchC(const TDesC16 &amp;,TInt,TInt,TInt,TInt,const TCollationMethod *)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_buf_c16.xml#class_t_des_c16_1a710ab2599a3635bb5d18ed225a687d51">TDesC16::MatchC(const TDesC16 &amp;,const TCollationMethod *,TInt,TInt,TInt,TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_buf_c16.xml#class_t_des_c16_1ae7e5042e0837c21d1f6a2fc2fdfd52de">TDesC16::MatchF(const TDesC16 &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_buf_c16.xml#class_t_des_c16_1a29b286e99e0ad6602180c4263be9e08c">TDesC16::Mid(TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_buf_c16.xml#class_t_des_c16_1ab8ea8cf7727d0f082cd71b194a42594a">TDesC16::Mid(TInt,TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_buf_c16.xml#class_t_des_c16_1aecaa198401e07d7d5d8e22566c25bf13">TDesC16::Ptr()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_buf_c16.xml#class_t_des_c16_1a75b210be1333cda0796e7d3275b04f36">TDesC16::Right(TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_buf_c16.xml#class_t_des_c16_1a4db51a97960783f7246a42e0efb89f54">TDesC16::Size()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_buf_c16.xml#class_t_des_c16_1a4b1d29fd4cf322d1c56764e7fd4415cf">TDesC16::TDesC16()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_buf_c16.xml#class_t_des_c16_1a85024415ac901bd6f6803e83fa2840d8">TDesC16::TDesC16(TInt,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_buf_c16.xml#class_t_des_c16_1a725908a60ae3a8bb36e8a458bb7eea5e">TDesC16::Type()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_buf_c16.xml#class_t_des_c16_1a0391ff2c8868e0747d614871fc323cc9">TDesC16::operator!=(const TDesC16 &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_buf_c16.xml#class_t_des_c16_1a1bbb36cf760e98e8b0cbf5d9799db9d0">TDesC16::operator&lt;(const TDesC16 &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_buf_c16.xml#class_t_des_c16_1a95af6a9f194107771ba71f9ff745f573">TDesC16::operator&lt;=(const TDesC16 &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_buf_c16.xml#class_t_des_c16_1a893f6b6c501f109f8edbd2ddf5114b59">TDesC16::operator==(const TDesC16 &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_buf_c16.xml#class_t_des_c16_1a858db94612fe57cb6ab03e29987d2e07">TDesC16::operator&gt;(const TDesC16 &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_buf_c16.xml#class_t_des_c16_1acfc646db1851c1aa58e2bcffed1eb6d0">TDesC16::operator&gt;=(const TDesC16 &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_buf_c16.xml#class_t_des_c16_1ad6d1dcbb0c2e1dbb3c4907bec939441b">TDesC16::operator[](TInt)const</cxxClassFunctionInherited>
+			<cxxClassEnumerationInherited href="class_t_buf_c16.xml#class_t_des_c16_1ab5f5b198753aeaa17ed6498bc62ad1e5">TDesC16:TPrefix</cxxClassEnumerationInherited>
+		</cxxClassInheritsDetail>
+	</cxxClassInherits>
+</cxxClass>

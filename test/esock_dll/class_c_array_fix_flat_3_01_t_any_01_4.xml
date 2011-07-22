@@ -1,0 +1,164 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_c_array_fix_flat_3_01_t_any_01_4">
+	<apiName>CArrayFixFlat&lt; TAny &gt;</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassDerivations>
+				<cxxClassDerivation>
+					<cxxClassDerivationAccessSpecifier value="public"/>
+					<cxxClassBaseClass href="class_c_array_fix_3_01_t_any_01_4.xml#class_c_array_fix_3_01_t_any_01_4">CArrayFix&lt; TAny &gt;</cxxClassBaseClass>
+				</cxxClassDerivation>
+			</cxxClassDerivations>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="491"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="473"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="495"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>An array of fixed length untyped objects using a flat dynamic buffer.</p>
+			<p>The array elements are contained within a <xref href="class_c_buf_flat.xml#class_c_buf_flat">CBufFlat</xref>.</p>
+			<p>The class is useful for constructing an array of fixed length buffers, where the length is decided at run time.</p>
+			<p>This class is also useful as a data member of a base class in a thin template class/base class pair where the type of the array element is not known until the owning thin template class is instantiated.</p>
+			<p>
+				<xref href="class_c_buf_flat.xml#class_c_buf_flat">CBufFlat</xref> </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_c_array_fix_flat_3_01_t_any_01_4_1aed279450fc48653141896bc877114477">
+		<apiName>CArrayFixFlat</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>CArrayFixFlat&lt; TAny &gt;</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline CArrayFixFlat(TInt aRecordLength, TInt aGranularity)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CArrayFixFlat&lt; TAny &gt;::CArrayFixFlat(TInt,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aRecordLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The length of the elements of this fixed length array. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aGranularity</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The granularity of the array.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="493"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1068"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1082"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Constructs a flat array of fixed length objects with the specified granularity to contain elements of the specified length.</p>
+				<p>Note that no memory is allocated to the array buffer by this constructor.</p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>E32USER-CBase 17, if aRecordLength is not positive. </p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>E32USER-CBase 18, if aGranularity is not positive. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_array_fix_flat_3_01_t_any_01_4_1aae3a1a55d83f3837be0ddc88592e3a6c">
+		<apiName>SetReserveL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CArrayFixFlat&lt; TAny &gt;</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void SetReserveL(TInt aCount)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CArrayFixFlat&lt; TAny &gt;::SetReserveL(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCount</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The total number of elements for which space is to be reserved.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="494"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1087"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1107"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Reserves space in the array buffer.</p>
+				<p>If necessary, the array buffer is allocated or re-allocated so that it can accommodate the specified number of elements.</p>
+				<p>After a successful call to this function, elements can be added to the array and the process is guaranteed not to fail for lack of memory - provided the total number of elements does not exceed the specified number.</p>
+				<p>This function does not increase the number of elements in the array; i.e. the member function <xref href="class_c_array_fix_base.xml#class_c_array_fix_base_1ad5bc874aceea074862134dc8e4937faa">CArrayFixBase::Count()</xref> returns the same value both before and after a call to this function.</p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>E32USER-CBase 27, if aCount is less than the current number of elements in the array. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxClassInherits>
+		<cxxClassInheritsDetail>
+			<cxxClassFunctionInherited href="class_c_array_fix_flat_3_01_t_any_01_4.xml#class_c_array_fix_3_01_t_any_01_4_1a31c85f3fd802a2fd39653b4f38a9c2a0">CArrayFix&lt; TAny &gt;::AppendL(const TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_flat_3_01_t_any_01_4.xml#class_c_array_fix_3_01_t_any_01_4_1a19658c4895f43d55b0e11f9d4539b9a6">CArrayFix&lt; TAny &gt;::AppendL(const TAny *,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_flat_3_01_t_any_01_4.xml#class_c_array_fix_3_01_t_any_01_4_1a4b194fab03a893cbfe0b6f1a7879f0a9">CArrayFix&lt; TAny &gt;::At(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_flat_3_01_t_any_01_4.xml#class_c_array_fix_3_01_t_any_01_4_1af63f4ebad1333a5ae40c9d86b7b6ba26">CArrayFix&lt; TAny &gt;::At(TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_flat_3_01_t_any_01_4.xml#class_c_array_fix_3_01_t_any_01_4_1a07fae14a505e074380f98e09a16f2915">CArrayFix&lt; TAny &gt;::Back(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_flat_3_01_t_any_01_4.xml#class_c_array_fix_3_01_t_any_01_4_1a0ba57df48ac68b81a1b18ee36c8c94ab">CArrayFix&lt; TAny &gt;::Back(TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_flat_3_01_t_any_01_4.xml#class_c_array_fix_3_01_t_any_01_4_1a403b1387f9c5587a947f22c483d66571">CArrayFix&lt; TAny &gt;::CArrayFix(TBufRep,TInt,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_flat_3_01_t_any_01_4.xml#class_c_array_fix_3_01_t_any_01_4_1a3b46eb2292731f2a994a333c47735e1d">CArrayFix&lt; TAny &gt;::End(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_flat_3_01_t_any_01_4.xml#class_c_array_fix_3_01_t_any_01_4_1a350cf4ab185b2bc79233daec359509c2">CArrayFix&lt; TAny &gt;::End(TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_flat_3_01_t_any_01_4.xml#class_c_array_fix_3_01_t_any_01_4_1a40b52f4c615e01d0612a3415a4c7b9a5">CArrayFix&lt; TAny &gt;::ExtendL()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_flat_3_01_t_any_01_4.xml#class_c_array_fix_base_1aa5f4ec3cf4a6ee0720d8cef5f49571a2">CArrayFixBase::AtR(const CBase *,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_flat_3_01_t_any_01_4.xml#class_c_array_fix_base_1a9332965c85c8cd40b2aa89d30fa74780">CArrayFixBase::CArrayFixBase(TBufRep,TInt,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_flat_3_01_t_any_01_4.xml#class_c_array_fix_base_1a1096056ab5233a348e9ac23a856afcbd">CArrayFixBase::Compress()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_flat_3_01_t_any_01_4.xml#class_c_array_fix_base_1ad5bc874aceea074862134dc8e4937faa">CArrayFixBase::Count()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_flat_3_01_t_any_01_4.xml#class_c_array_fix_base_1aea4c4fa199ab6a1ce2f3273c147a15e6">CArrayFixBase::CountR(const CBase *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_flat_3_01_t_any_01_4.xml#class_c_array_fix_base_1a0a48e851ef51536e74ad8eae8a7f688f">CArrayFixBase::Delete(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_flat_3_01_t_any_01_4.xml#class_c_array_fix_base_1ac366ebf07a899be33720d79b2ee6effb">CArrayFixBase::Delete(TInt,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_flat_3_01_t_any_01_4.xml#class_c_array_fix_base_1a2a4837d39526d53d306f1a481a6a81ed">CArrayFixBase::ExpandL(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_flat_3_01_t_any_01_4.xml#class_c_array_fix_base_1af9b3dbe6ae3a52e52c65dc2c579e8366">CArrayFixBase::Find(const TAny *,TKeyArrayFix &amp;,TInt &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_flat_3_01_t_any_01_4.xml#class_c_array_fix_base_1a943ed3546dc8d398e5160559b68d4fea">CArrayFixBase::FindIsq(const TAny *,TKeyArrayFix &amp;,TInt &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_flat_3_01_t_any_01_4.xml#class_c_array_fix_base_1a74ca35541c4ce37e6ef846fac8cecdfc">CArrayFixBase::InsertIsqAllowDuplicatesL(const TAny *,TKeyArrayFix &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_flat_3_01_t_any_01_4.xml#class_c_array_fix_base_1a625810302f839d7528f0e6ae8597d576">CArrayFixBase::InsertIsqL(const TAny *,TKeyArrayFix &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_flat_3_01_t_any_01_4.xml#class_c_array_fix_base_1a2eed684551c181499bfcfd097cb00b58">CArrayFixBase::InsertL(TInt,const TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_flat_3_01_t_any_01_4.xml#class_c_array_fix_base_1ab9bf1169212cc6105bcbd120eb689e33">CArrayFixBase::InsertL(TInt,const TAny *,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_flat_3_01_t_any_01_4.xml#class_c_array_fix_base_1a3d64c6ad1faa7a89bb2d9c787055c9ff">CArrayFixBase::InsertRepL(TInt,const TAny *,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_flat_3_01_t_any_01_4.xml#class_c_array_fix_base_1a67029b460d062fec97d7cb3e3df1640c">CArrayFixBase::Length()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_flat_3_01_t_any_01_4.xml#class_c_array_fix_base_1a39ca2548f91bfae2dcd5d0527502c282">CArrayFixBase::Reset()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_flat_3_01_t_any_01_4.xml#class_c_array_fix_base_1accaf91d332f7b951cb00d3249a2e477b">CArrayFixBase::ResizeL(TInt,const TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_flat_3_01_t_any_01_4.xml#class_c_array_fix_base_1ab630d07d0518980df7e3fdd97e9fc1a3">CArrayFixBase::SetKey(TKeyArrayFix &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_flat_3_01_t_any_01_4.xml#class_c_array_fix_base_1a09720a5e362d9334e33b3331fbc5eb12">CArrayFixBase::SetReserveFlatL(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_flat_3_01_t_any_01_4.xml#class_c_array_fix_base_1adbf2852d698fe50d5971cd903e210e68">CArrayFixBase::Sort(TKeyArrayFix &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_flat_3_01_t_any_01_4.xml#class_c_array_fix_base_1a24adf1bad260868b60d50069113c57bc">CArrayFixBase::~CArrayFixBase()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_flat_3_01_t_any_01_4.xml#class_c_base_1a240de7932690a4e987d75690b0b6f82b">CBase::CBase()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_flat_3_01_t_any_01_4.xml#class_c_base_1ac0a06aeab68b3e01be81f9dd79e011c6">CBase::Delete(CBase *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_flat_3_01_t_any_01_4.xml#class_c_base_1aae681a54d9c9b10c7d42e7e32ff109d5">CBase::Extension_(TUint,TAny *&amp;,TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_flat_3_01_t_any_01_4.xml#class_c_base_1af4c4965092a763b0856ccbfa3cf99eaf">CBase::operator new(TUint)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_flat_3_01_t_any_01_4.xml#class_c_base_1ab9e5f557dea4db22886189926687ddc1">CBase::operator new(TUint,TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_flat_3_01_t_any_01_4.xml#class_c_base_1aa464dd21494443ac109084ed03b81f28">CBase::operator new(TUint,TLeave)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_flat_3_01_t_any_01_4.xml#class_c_base_1af8429815362d4df6fecd47179e0c5dfe">CBase::operator new(TUint,TLeave,TUint)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_flat_3_01_t_any_01_4.xml#class_c_base_1a80505bdf8b1b20a2ed102307a78eeeeb">CBase::operator new(TUint,TUint)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_flat_3_01_t_any_01_4.xml#class_c_base_1a1390361b94424be22bb2b1020eb400ea">CBase::~CBase()</cxxClassFunctionInherited>
+		</cxxClassInheritsDetail>
+	</cxxClassInherits>
+</cxxClass>

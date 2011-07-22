@@ -1,0 +1,244 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_meta_1_1_t_meta_ptr">
+	<apiName>Meta::TMetaPtr</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassDerivations>
+				<cxxClassDerivation>
+					<cxxClassDerivationAccessSpecifier value="public"/>
+					<cxxClassBaseClass href="class_meta_1_1_m_meta_type.xml#class_meta_1_1_m_meta_type">Meta::MMetaType</cxxClassBaseClass>
+				</cxxClassDerivation>
+			</cxxClassDerivations>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/elements/metatype.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="165"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/elements/metatype.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="158"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="179"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>Implementation of <xref href="class_meta_1_1_m_meta_type.xml#class_meta_1_1_m_meta_type">MMetaType</xref> for pointers to meta objects</p>
+			<p>since v9.0 </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_meta_1_1_t_meta_ptr_1a2dba1269a9c4050a6295cf031aa21315">
+		<apiName>NewL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="class_meta_1_1_m_meta_type.xml#class_meta_1_1_m_meta_type">MMetaType</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Meta::TMetaPtr</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline static MMetaType * NewL(const TAny *aMem, const TAny *aData)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Meta::TMetaPtr::NewL(const TAny *,const TAny *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMem</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aData</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/metatype.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="167"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="456"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="463"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Instantiates a meta type of a particular type. Used for attribure registration (in the data v-table). </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_meta_1_1_t_meta_ptr_1a4fa571817b6017894461ebd41512022a">
+		<apiName>Load</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionVirtual/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Meta::TMetaPtr</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline virtual TInt Load(TPtrC8 &amp;aBuffer)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Meta::TMetaPtr::Load(TPtrC8 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_meta_1_1_m_meta_type.xml#class_meta_1_1_m_meta_type_1ab2200f8b5cb6ba279a2ca803d12772e1">Meta::MMetaType::Load(TPtrC8 &amp;)</cxxFunctionReimplemented>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_ptr_c8.xml#class_t_ptr_c8">TPtrC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aBuffer</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/metatype.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="169"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="466"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="498"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Loads content of a meta object (in iData) from a descriptor </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_meta_1_1_t_meta_ptr_1a00d0dc60a2cb43ec1a38759d290f9d54">
+		<apiName>Store</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionVirtual/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Meta::TMetaPtr</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline virtual TInt Store(TDes8 &amp;aBuffer) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Meta::TMetaPtr::Store(TDes8 &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_meta_1_1_m_meta_type.xml#class_meta_1_1_m_meta_type_1acdb4180f73da9e9aa2e6d62bfadc2f1d">Meta::MMetaType::Store(TDes8 &amp;)const</cxxFunctionReimplemented>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aBuffer</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/metatype.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="170"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="501"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="516"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Stores content of a meta object (in iData) to a descriptor </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_meta_1_1_t_meta_ptr_1a8d6d93dbc5da152fc8e61661b1c9fee3">
+		<apiName>Copy</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionVirtual/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Meta::TMetaPtr</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline virtual void Copy(const TAny *aData)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Meta::TMetaPtr::Copy(const TAny *)</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_meta_1_1_m_meta_type.xml#class_meta_1_1_m_meta_type_1aca11e735c606971089dc0967a2a01ea3">Meta::MMetaType::Copy(const TAny *)</cxxFunctionReimplemented>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aData</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/metatype.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="171"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="519"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="525"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Copies content of a meta object (in aData) into another meta object (in iData). </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_meta_1_1_t_meta_ptr_1aa1fe220d31870d62c13b063219f3b388">
+		<apiName>Length</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionVirtual/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Meta::TMetaPtr</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline virtual TInt Length() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Meta::TMetaPtr::Length()const</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_meta_1_1_m_meta_type.xml#class_meta_1_1_m_meta_type_1a0c9f1d6255621824df482f4b3e0f83fa">Meta::MMetaType::Length()const</cxxFunctionReimplemented>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/metatype.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="172"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="528"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="542"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Returns the length of the handled meta object. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_meta_1_1_t_meta_ptr_1ae7d80de99bff7a44ff3b8968fa840373">
+		<apiName>TMetaPtr</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>Meta::TMetaPtr</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TMetaPtr(const TAny *aData)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Meta::TMetaPtr::TMetaPtr(const TAny *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aData</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/metatype.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="175"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/RConnection.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="447"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="453"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Constructor </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxVariable id="class_meta_1_1_t_meta_ptr_1a6ca00d1a10b76abedf1effc2779235ce">
+		<apiName>iData</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>TYPE **</cxxVariableDeclaredType>
+				<cxxVariableScopedName>Meta::TMetaPtr</cxxVariableScopedName>
+				<cxxVariablePrototype>TYPE ** iData</cxxVariablePrototype>
+				<cxxVariableNameLookup>Meta::TMetaPtr::iData</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/elements/metatype.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="178"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+</cxxClass>

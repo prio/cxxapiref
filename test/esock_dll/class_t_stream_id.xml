@@ -1,0 +1,292 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_t_stream_id">
+	<apiName>TStreamId</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/s32std.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="40"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/s32std.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="39"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="58"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>Provides unique identification for stream within a store.</p>
+			<p>A store always assigns a new id and constructs and returns an associated <xref href="class_t_stream_id.xml#class_t_stream_id">TStreamId</xref> object when a new stream is created.</p>
+			<p>
+				<xref href="class_r_store_write_stream.xml#class_r_store_write_stream_1a81f45402a97e46b286ea49915df424d4">RStoreWriteStream::CreateL()</xref> </p>
+			<p>
+				<xref href="class_r_store_write_stream.xml#class_r_store_write_stream_1a8a73d2d15bd223279ffd0744e3cd17f8">RStoreWriteStream::CreateLC()</xref> </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_t_stream_id_1aaf4b208dce5dba5ad024da64231be4c7">
+		<apiName>TStreamId</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TStreamId</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TStreamId()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TStreamId::TStreamId()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="44"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="44"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="44"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Constructs an uninitialised object. It is necessary because there are also non-default constructors in this class. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_stream_id_1a9279ed8de29d3779490749153424fcc2">
+		<apiName>TStreamId</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TStreamId</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TStreamId(TUint32 aValue)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TStreamId::TStreamId(TUint32)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a8240e11f17c80b6b222fc2af50234da4">TUint32</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aValue</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The stream ID value. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="45"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="18"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="37"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Constructs the object with the specified stream ID value.</p>
+				<p>Users of stores do not normally use this function.</p>
+				<p>In debug mode, the function checks that the supplied stream ID value is not greater than the maximum permitted value, and raises a STORE-Store 2 panic if it is. In release mode, no checking on the supplied value is done.</p>
+				<p>The checking of the supplied value is done by a private function implemented in estor. dll. This means that in debug mode, a call is made into estor.dll, but in release mode it is not.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_stream_id_1afb173f222a3c8006162e7b9dff67886a">
+		<apiName>operator==</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TStreamId</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool operator==(TStreamId anId) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TStreamId::operator==(TStreamId)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_stream_id.xml#class_t_stream_id">TStreamId</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anId</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The stream id to be compared with this stream id. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="47"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="38"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="44"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Equality comparison operator. Use this operator to determine whether this stream id is equal to the specified stream id.</p>
+				<p>True, if the stream ids are equal; false otherwise </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_stream_id_1a650fa5099fdd1aece36028b4adf2a018">
+		<apiName>operator!=</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TStreamId</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool operator!=(TStreamId anId) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TStreamId::operator!=(TStreamId)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_stream_id.xml#class_t_stream_id">TStreamId</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anId</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The stream id to be compared with this stream id. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="48"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="45"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="51"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Inequality comparison operator. Use this operator to determine whether this stream id is unequal to the specified stream id.</p>
+				<p>True, if the two stream ids are unequal, false otherwise. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_stream_id_1a6ef449e9c7a53c4eda7f19afcae2f2d3">
+		<apiName>ExternalizeL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TStreamId</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void ExternalizeL(RWriteStream &amp;aStream) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TStreamId::ExternalizeL(RWriteStream &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_write_stream.xml#class_r_write_stream">RWriteStream</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStream</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Stream to which the object should be externalised. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="50"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="52"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="64"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Externalises an object of this class to a write stream.</p>
+				<p>The presence of this function means that the standard templated <xref href="cs__subconn_8cpp.xml#cs__subconn_8cpp_1aed202e99a694b96c29b80fb93177bc29">operator&lt;&lt;()</xref> can be used to externalise objects of this class.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_stream_id_1a6da57cc69cb90170aff60d19be49151d">
+		<apiName>InternalizeL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TStreamId</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void InternalizeL(RReadStream &amp;aStream)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TStreamId::InternalizeL(RReadStream &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_read_stream.xml#class_r_read_stream">RReadStream</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStream</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="51"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_stream_id_1a59857e65b5a6aaed28f5c92130dbe724">
+		<apiName>Value</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a8240e11f17c80b6b222fc2af50234da4">TUint32</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TStreamId</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TUint32 Value() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TStreamId::Value()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="53"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="65"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="74"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets the stream ID value encapsulated by this object.</p>
+				<p>The stream ID value. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxVariable id="class_t_stream_id_1ac78cc4e86a0f7713b057761aeb06cb61">
+		<apiName>iVal</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a8240e11f17c80b6b222fc2af50234da4">TUint32</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TStreamId</cxxVariableScopedName>
+				<cxxVariablePrototype>TUint32 iVal</cxxVariablePrototype>
+				<cxxVariableNameLookup>TStreamId::iVal</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/s32std.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="55"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxFunction id="class_t_stream_id_1a257578219fc9676e44941c708785e724">
+		<apiName>__DbgChkRange</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TStreamId</cxxFunctionScopedName>
+				<cxxFunctionPrototype>static IMPORT_C void __DbgChkRange(TUint32 aValue)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TStreamId::__DbgChkRange(TUint32)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a8240e11f17c80b6b222fc2af50234da4">TUint32</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aValue</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="57"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+</cxxClass>

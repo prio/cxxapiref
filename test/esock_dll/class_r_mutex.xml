@@ -1,0 +1,328 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_r_mutex">
+	<apiName>RMutex</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassDerivations>
+				<cxxClassDerivation>
+					<cxxClassDerivationAccessSpecifier value="public"/>
+					<cxxClassBaseClass href="class_r_handle_base.xml#class_r_handle_base">RHandleBase</cxxClassBaseClass>
+				</cxxClassDerivation>
+			</cxxClassDerivations>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="3307"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="3306"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="3318"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>A handle to a mutex.</p>
+			<p>The mutex itself is a kernel side object.</p>
+			<p>Handles should be closed after use. <xref href="class_r_handle_base.xml#class_r_handle_base">RHandleBase</xref> provides the necessary <xref href="class_r_handle_base.xml#class_r_handle_base_1ad79a6f0c004c694d4eecbea1696cbcc8">Close()</xref> function which should be called when the handle is no longer required.</p>
+			<p>
+				<xref href="class_r_handle_base.xml#class_r_handle_base_1ad79a6f0c004c694d4eecbea1696cbcc8">RHandleBase::Close</xref> </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_r_mutex_1a4ef7cce3062dd2fbb2fabc0c768a121b">
+		<apiName>Open</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RMutex</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt Open(const TFindMutex &amp;aFind, TOwnerType aType=EOwnerProcess)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RMutex::Open(const TFindMutex &amp;,TOwnerType)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_find_mutex.xml#class_t_find_mutex">TFindMutex</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFind</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A reference to the object which is used to find the mutex. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1a68a23fa0195efd67397df339a83a5a86">TOwnerType</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aType</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>EOwnerProcess</cxxFunctionParameterDefaultValue>
+						<apiDefNote>An enumeration whose enumerators define the ownership of this mutex handle. If not explicitly specified, EOwnerProcess is taken as default.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3309"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="3574"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="3595"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Opens a handle to the global mutex found using a <xref href="class_t_find_mutex.xml#class_t_find_mutex">TFindMutex</xref> object.</p>
+				<p>A <xref href="class_t_find_mutex.xml#class_t_find_mutex">TFindMutex</xref> object is used to find all global mutexes whose full names match a specified pattern.</p>
+				<p>By default, any thread in the process can use this instance of <xref href="class_r_mutex.xml#class_r_mutex">RMutex</xref> to access the mutex. However, specifying EOwnerThread as the second parameter to this function, means that only the opening thread can use this instance of <xref href="class_r_mutex.xml#class_r_mutex">RMutex</xref> to access the mutex; any other thread in this process that wants to access the mutex must either duplicate the handle or use <xref href="class_r_mutex.xml#class_r_mutex_1ab8128bc6363b395837d52a5f847a771d">OpenGlobal()</xref> again.</p>
+				<p>KErrNone if successful, otherwise one of the other system wide error codes. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_mutex_1ae9ac9459b5213b3b28c90006cd88354d">
+		<apiName>CreateLocal</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RMutex</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt CreateLocal(TOwnerType aType=EOwnerProcess)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RMutex::CreateLocal(TOwnerType)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1a68a23fa0195efd67397df339a83a5a86">TOwnerType</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aType</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>EOwnerProcess</cxxFunctionParameterDefaultValue>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3310"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_mutex_1a70e2c621c29381aea9fd3c477f0c0f88">
+		<apiName>CreateGlobal</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RMutex</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt CreateGlobal(const TDesC &amp;aName, TOwnerType aType=EOwnerProcess)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RMutex::CreateGlobal(const TDesC &amp;,TOwnerType)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aName</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1a68a23fa0195efd67397df339a83a5a86">TOwnerType</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aType</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>EOwnerProcess</cxxFunctionParameterDefaultValue>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3311"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_mutex_1ab8128bc6363b395837d52a5f847a771d">
+		<apiName>OpenGlobal</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RMutex</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt OpenGlobal(const TDesC &amp;aName, TOwnerType aType=EOwnerProcess)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RMutex::OpenGlobal(const TDesC &amp;,TOwnerType)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aName</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1a68a23fa0195efd67397df339a83a5a86">TOwnerType</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aType</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>EOwnerProcess</cxxFunctionParameterDefaultValue>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3312"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_mutex_1ac4e01f9940fdd27e2432449d803c906e">
+		<apiName>Open</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RMutex</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Open(RMessagePtr2 aMessage, TInt aParam, TOwnerType aType=EOwnerProcess)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RMutex::Open(RMessagePtr2,TInt,TOwnerType)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_message_ptr2.xml#class_r_message_ptr2">RMessagePtr2</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMessage</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aParam</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1a68a23fa0195efd67397df339a83a5a86">TOwnerType</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aType</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>EOwnerProcess</cxxFunctionParameterDefaultValue>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3313"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_mutex_1a8920fc26bf8114a461c15606f426cf59">
+		<apiName>Open</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RMutex</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Open(TInt aArgumentIndex, TOwnerType aType=EOwnerProcess)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RMutex::Open(TInt,TOwnerType)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aArgumentIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1a68a23fa0195efd67397df339a83a5a86">TOwnerType</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aType</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>EOwnerProcess</cxxFunctionParameterDefaultValue>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3314"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_mutex_1a47823ae9212e6c92d039741a052b7572">
+		<apiName>Wait</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RMutex</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Wait()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RMutex::Wait()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3315"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_mutex_1a1ad3e0921c9b6aca73d4f7b599271c03">
+		<apiName>Signal</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RMutex</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Signal()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RMutex::Signal()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3316"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_mutex_1a2c2a0ef8a88e8b82a8971e2f87252e3f">
+		<apiName>IsHeld</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RMutex</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TBool IsHeld()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RMutex::IsHeld()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3317"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxClassInherits>
+		<cxxClassInheritsDetail>
+			<cxxClassFunctionInherited href="class_r_mutex.xml#class_r_handle_base_1a5acffa0d0548854c050e087b53e9036a">RHandleBase::Attributes()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_mutex.xml#class_r_handle_base_1a728f019e766bb5928a76f834107f28b3">RHandleBase::BTraceId()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_mutex.xml#class_r_handle_base_1ad79a6f0c004c694d4eecbea1696cbcc8">RHandleBase::Close()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_mutex.xml#class_r_handle_base_1ad1a439467a218ac000b1b1d6901e5a8a">RHandleBase::DoExtendedClose()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_mutex.xml#class_r_handle_base_1a8428cab2039187ea1b5206d26c72b4e3">RHandleBase::Duplicate(const RThread &amp;,TOwnerType)</cxxClassFunctionInherited>
+			<cxxClassEnumeratorInherited href="class_r_mutex.xml#class_r_handle_base_1ae1e84a8b8292c5a91e9f67f5834f84eba4a88c7aaa037ffebbd6d07e96e50deea">RHandleBase::EDirectReadAccess</cxxClassEnumeratorInherited>
+			<cxxClassEnumeratorInherited href="class_r_mutex.xml#class_r_handle_base_1ae1e84a8b8292c5a91e9f67f5834f84eba16b9c662c1433cd95304b5f94b092342">RHandleBase::EDirectWriteAccess</cxxClassEnumeratorInherited>
+			<cxxClassEnumeratorInherited href="class_r_mutex.xml#class_r_handle_base_1ae1e84a8b8292c5a91e9f67f5834f84eba7777915ffc30609e5659c341a1c2392c">RHandleBase::EReadAccess</cxxClassEnumeratorInherited>
+			<cxxClassEnumeratorInherited href="class_r_mutex.xml#class_r_handle_base_1ae1e84a8b8292c5a91e9f67f5834f84ebacf44af0b945bad7aea199fab102472a2">RHandleBase::EWriteAccess</cxxClassEnumeratorInherited>
+			<cxxClassFunctionInherited href="class_r_mutex.xml#class_r_handle_base_1a73491dd5bd728ba4ce1199b65e2e5f59">RHandleBase::FullName()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_mutex.xml#class_r_handle_base_1ad8eef16c4499e3fb2a69a4206a4bb48e">RHandleBase::FullName(TDes &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_mutex.xml#class_r_handle_base_1a10a02b67da6e5350b87729c062331c02">RHandleBase::Handle()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_mutex.xml#class_r_handle_base_1a2695b04020246384d6af8480101d167a">RHandleBase::HandleInfo(THandleInfo *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_mutex.xml#class_r_handle_base_1aa937149e5311d8ba4f95b05a1163bd86">RHandleBase::Name()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_mutex.xml#class_r_handle_base_1a2ba493226719395d33452916cf2c7b5b">RHandleBase::NotifyDestruction(TRequestStatus &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_mutex.xml#class_r_handle_base_1a0f31804c3362e9c4e878f33688d19fef">RHandleBase::Open(const TFindHandleBase &amp;,TOwnerType)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_mutex.xml#class_r_handle_base_1a72abaf23694869e23eed8601bac08602">RHandleBase::OpenByName(const TDesC &amp;,TOwnerType,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_mutex.xml#class_r_handle_base_1aa4706b89afddb4d82a9d0e7b45e3f920">RHandleBase::RHandleBase()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_mutex.xml#class_r_handle_base_1aa1197a55c876356e33ec6bf5248ee33d">RHandleBase::RHandleBase(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_mutex.xml#class_r_handle_base_1a03c76caf06fd87df38da54b8b0c39660">RHandleBase::SetHandle(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_mutex.xml#class_r_handle_base_1aa3ccd98b5c883151329937098d98d3d2">RHandleBase::SetHandleNC(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_mutex.xml#class_r_handle_base_1a856c39af65967538e388a65fac4c5b0c">RHandleBase::SetReturnedHandle(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_mutex.xml#class_r_handle_base_1a022806379a6fb6b94bd807286a77c839">RHandleBase::SetReturnedHandle(TInt,RHandleBase &amp;)</cxxClassFunctionInherited>
+			<cxxClassVariableInherited href="class_r_mutex.xml#class_r_handle_base_1aeab89dcc0c851c282effbbc9edea54f3">RHandleBase::iHandle</cxxClassVariableInherited>
+			<cxxClassEnumerationInherited href="class_r_mutex.xml#class_r_handle_base_1ae1e84a8b8292c5a91e9f67f5834f84eb">RHandleBase:TAttributes</cxxClassEnumerationInherited>
+		</cxxClassInheritsDetail>
+	</cxxClassInherits>
+</cxxClass>

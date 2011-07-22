@@ -1,0 +1,722 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_r_sub_session_base">
+	<apiName>RSubSessionBase</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="4378"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="4377"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="4403"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>Client-side handle to a sub-session.</p>
+			<p>It represents a client-side sub-session, and has a corresponding sub-session object on the server-side.</p>
+			<p>Clients normally define and implement a derived class to provide a richer interface. In particular, a derived class should:</p>
+			<p>1. provide a function to create a new sub-session with the server; this should call <xref href="class_r_sub_session_base.xml#class_r_sub_session_base_1ac1adf58e7adde023baf0525baeb2a0ca">CreateSubSession()</xref>.</p>
+			<p>2. provide a function to close the current sub-session; this should call <xref href="class_r_sub_session_base.xml#class_r_sub_session_base_1af9a75bd9f7400c9439e2f76f8d059d00">CloseSubSession()</xref>.</p>
+			<p>A session must already exist with a server before a client can establish any sub-sessions. </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_r_sub_session_base_1aabe5abe9803cadf198a0c429e2aa5f2e">
+		<apiName>SubSessionHandle</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSubSessionBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt SubSessionHandle() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSubSessionBase::SubSessionHandle()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="4380"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="4152"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="4161"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets the sub-session handle number.</p>
+				<p>This number is automatically passed to the server when making requests and is used to identify the appropriate server-side sub-session.</p>
+				<p>The sub-session handle number. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_sub_session_base_1a6ecd5459966453b3a99ac3f99d97e1bc">
+		<apiName>RSubSessionBase</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>RSubSessionBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline RSubSessionBase()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSubSessionBase::RSubSessionBase()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="4382"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="4142"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="4147"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Default constructor </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_sub_session_base_1a1239f2d6b3c11eed6965602c114886fd">
+		<apiName>Session</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C const <apiRelation href="class_r_session_base.xml#class_r_session_base">RSessionBase</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSubSessionBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C const RSessionBase Session() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSubSessionBase::Session()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="4383"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_sub_session_base_1ac1adf58e7adde023baf0525baeb2a0ca">
+		<apiName>CreateSubSession</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSubSessionBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt CreateSubSession(const RSessionBase &amp;aSession, TInt aFunction, const TIpcArgs &amp;aArgs)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSubSessionBase::CreateSubSession(const RSessionBase &amp;,TInt,const TIpcArgs &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_r_session_base.xml#class_r_session_base">RSessionBase</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSession</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The session to which this sub-session will belong. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFunction</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The opcode specifying the requested service; the server should interpret this as a request to create a sub-session. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_ipc_args.xml#class_t_ipc_args">TIpcArgs</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aArgs</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The message arguments.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="4384"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="4175"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="4176"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Creates a new sub-session within an existing session.</p>
+				<p>KErrNone if successful, otherwise one of the system-wide error codes. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_sub_session_base_1a50e62f82ea5de8fd858e7a75c21c0930">
+		<apiName>CreateSubSession</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSubSessionBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt CreateSubSession(const RSessionBase &amp;aSession, TInt aFunction)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSubSessionBase::CreateSubSession(const RSessionBase &amp;,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_r_session_base.xml#class_r_session_base">RSessionBase</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSession</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The session to which this sub-session will belong. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFunction</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The opcode specifying the requested service; the server should interpret this as a request to create a sub-session.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="4385"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="4191"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="4192"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Creates a new sub-session within an existing session.</p>
+				<p>This variant sends no message arguments to the server.</p>
+				<p>KErrNone if successful, otherwise one of the system-wide error codes. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_sub_session_base_1ae2da2f53114e1af7938db52291b0fecf">
+		<apiName>CreateAutoCloseSubSession</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSubSessionBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt CreateAutoCloseSubSession(RSessionBase &amp;aSession, TInt aFunction, const TIpcArgs &amp;aArgs)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSubSessionBase::CreateAutoCloseSubSession(RSessionBase &amp;,TInt,const TIpcArgs &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_session_base.xml#class_r_session_base">RSessionBase</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSession</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFunction</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_ipc_args.xml#class_t_ipc_args">TIpcArgs</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aArgs</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="4386"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_sub_session_base_1af9a75bd9f7400c9439e2f76f8d059d00">
+		<apiName>CloseSubSession</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSubSessionBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void CloseSubSession(TInt aFunction)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSubSessionBase::CloseSubSession(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFunction</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="4387"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_sub_session_base_1a1877065a894f19c8e75f076995e2b136">
+		<apiName>Send</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSubSessionBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt Send(TInt aFunction, const TIpcArgs &amp;aArgs) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSubSessionBase::Send(TInt,const TIpcArgs &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFunction</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The opcode specifying the requested service. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_ipc_args.xml#class_t_ipc_args">TIpcArgs</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aArgs</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The message arguments.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="4388"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="4214"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="4215"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Sends a blind message to the server - no reply is expected.</p>
+				<p>A set of message arguments is passed that can be used to specify client addresses, which the server can use to read from and write to the client address space.</p>
+				<p>Note that this function can fail if there are no available message-slots, either in the system wide pool (if this is being used), or in the session reserved pool (if this is being used). If the client request is synchronous, then always use the synchronous variant of <xref href="class_r_sub_session_base.xml#class_r_sub_session_base_1aa2f319884f3ea300a0a61c9788bb5d93">SendReceive()</xref>; this is guaranteed to reach the server.</p>
+				<p>KErrNone if successful, otherwise one of the system-wide error codes. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_sub_session_base_1aa2f319884f3ea300a0a61c9788bb5d93">
+		<apiName>SendReceive</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSubSessionBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void SendReceive(TInt aFunction, const TIpcArgs &amp;aArgs, TRequestStatus &amp;aStatus) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSubSessionBase::SendReceive(TInt,const TIpcArgs &amp;,TRequestStatus &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFunction</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The opcode specifying the requested service. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_ipc_args.xml#class_t_ipc_args">TIpcArgs</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aArgs</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The message arguments. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A request status which indicates the completion status of the asynchronous request. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="4389"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="4237"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="4238"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Sends a message to the server and waits asynchronously for the reply.</p>
+				<p>An opcode specifies the service required. A set of message arguments is passed that can be used to specify client addresses, which the server can use to read from and write to the client address space.</p>
+				<p>Note that this function can fail if there are no available message-slots, either in the system wide pool (if this is being used), or in the session reserved pool (if this is being used). If the client request is synchronous, then always use the synchronous variant of <xref href="class_r_sub_session_base.xml#class_r_sub_session_base_1aa2f319884f3ea300a0a61c9788bb5d93">SendReceive()</xref>; this is guaranteed to reach the server.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_sub_session_base_1abfee930312ede77f6ee1a850be3e7ea5">
+		<apiName>SendReceive</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSubSessionBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt SendReceive(TInt aFunction, const TIpcArgs &amp;aArgs) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSubSessionBase::SendReceive(TInt,const TIpcArgs &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFunction</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The opcode specifying the requested service. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_ipc_args.xml#class_t_ipc_args">TIpcArgs</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aArgs</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The message arguments.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="4390"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="4260"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="4261"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Sends a message to the server and waits synchronously for a reply.</p>
+				<p>An opcode specifies the service required. A set of message arguments is passed that can be used to specify client addresses, which the server can use to read from and write to the client address space.</p>
+				<p>Note that this function will only fail if the server itself fails or environmental errors occur in the server. All requests made using this function are guaranteed to reach the server. This means that all synchronous client requests (typically those that return void) should be routed through this synchronous variant of <xref href="class_r_sub_session_base.xml#class_r_sub_session_base_1aa2f319884f3ea300a0a61c9788bb5d93">SendReceive()</xref>.</p>
+				<p>KErrNone if successful, otherwise one of the system-wide error codes. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_sub_session_base_1ae855884063702416b6aa73c30263706b">
+		<apiName>Send</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSubSessionBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt Send(TInt aFunction) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSubSessionBase::Send(TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFunction</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The opcode specifying the requested service.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="4391"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="4275"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="4276"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Sends a blind message to the server - no reply is expected.</p>
+				<p>This variant sends no message arguments to the server.</p>
+				<p>KErrNone if successful, otherwise one of the system-wide error codes. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_sub_session_base_1a31d1b25a10b3cf364677f050ea1b3a10">
+		<apiName>SendReceive</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSubSessionBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void SendReceive(TInt aFunction, TRequestStatus &amp;aStatus) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSubSessionBase::SendReceive(TInt,TRequestStatus &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFunction</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The opcode specifying the requested service. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A request status which indicates the completion status of the asynchronous request. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="4392"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="4290"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="4291"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Sends a message to the server and waits asynchronously for the reply.</p>
+				<p>An opcode specifies the service required. This variant sends no message arguments to the server.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_sub_session_base_1a79a9c918d3d693edae2b91069339a6e4">
+		<apiName>SendReceive</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSubSessionBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt SendReceive(TInt aFunction) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSubSessionBase::SendReceive(TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFunction</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The opcode specifying the requested service.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="4393"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="4306"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="4307"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Sends a message to the server and waits synchronously for a reply.</p>
+				<p>An opcode specifies the service required. This variant sends no message arguments to the server.</p>
+				<p>KErrNone if successful, otherwise one of the system-wide error codes. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_sub_session_base_1a780e1b34e51674ef147aacf93d0071d5">
+		<apiName>DoCreateSubSession</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSubSessionBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt DoCreateSubSession(const RSessionBase &amp;aSession, TInt aFunction, const TIpcArgs *aArgs)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSubSessionBase::DoCreateSubSession(const RSessionBase &amp;,TInt,const TIpcArgs *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_r_session_base.xml#class_r_session_base">RSessionBase</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSession</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFunction</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_ipc_args.xml#class_t_ipc_args">TIpcArgs</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aArgs</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="4395"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_sub_session_base_1a7fe4188eb382c37d5711366e1bcaa174">
+		<apiName>DoSend</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSubSessionBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt DoSend(TInt aFunction, const TIpcArgs *aArgs) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSubSessionBase::DoSend(TInt,const TIpcArgs *)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFunction</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_ipc_args.xml#class_t_ipc_args">TIpcArgs</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aArgs</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="4396"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_sub_session_base_1a77a07945a7e6c8a25cdff1f63d6e845c">
+		<apiName>DoSendReceive</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSubSessionBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void DoSendReceive(TInt aFunction, const TIpcArgs *aArgs, TRequestStatus &amp;aStatus) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSubSessionBase::DoSendReceive(TInt,const TIpcArgs *,TRequestStatus &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFunction</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_ipc_args.xml#class_t_ipc_args">TIpcArgs</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aArgs</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="4397"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_sub_session_base_1ad5275bbda8e96ad13f7e075355ceab95">
+		<apiName>DoSendReceive</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSubSessionBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt DoSendReceive(TInt aFunction, const TIpcArgs *aArgs) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSubSessionBase::DoSendReceive(TInt,const TIpcArgs *)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFunction</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_ipc_args.xml#class_t_ipc_args">TIpcArgs</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aArgs</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="4398"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_sub_session_base_1a0c6496e1fa8a4692360cdd53280b6837">
+		<apiName>DoCreateSubSession</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RSubSessionBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>TInt DoCreateSubSession(RSessionBase &amp;aSession, TInt aFunction, const TIpcArgs *aArgs, TBool aAutoClose)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RSubSessionBase::DoCreateSubSession(RSessionBase &amp;,TInt,const TIpcArgs *,TBool)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_session_base.xml#class_r_session_base">RSessionBase</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSession</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFunction</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_ipc_args.xml#class_t_ipc_args">TIpcArgs</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aArgs</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aAutoClose</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="4399"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxVariable id="class_r_sub_session_base_1ab6ec0092c7f8d155869271da88999bbc">
+		<apiName>iSession</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="class_r_session_base.xml#class_r_session_base">RSessionBase</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>RSubSessionBase</cxxVariableScopedName>
+				<cxxVariablePrototype>RSessionBase iSession</cxxVariablePrototype>
+				<cxxVariableNameLookup>RSubSessionBase::iSession</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="4401"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_r_sub_session_base_1a46c43c6f8b8cc8e9efa3a0c2512f932f">
+		<apiName>iSubSessionHandle</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>RSubSessionBase</cxxVariableScopedName>
+				<cxxVariablePrototype>TInt iSubSessionHandle</cxxVariablePrototype>
+				<cxxVariableNameLookup>RSubSessionBase::iSubSessionHandle</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="4402"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+</cxxClass>

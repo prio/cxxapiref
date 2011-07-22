@@ -1,0 +1,346 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_t_time_interval_base">
+	<apiName>TTimeIntervalBase</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="1567"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="1566"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="1581"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>Provides a base class for all time interval classes using a 32-bit representation.</p>
+			<p>It supports retrieving the interval and provides various operations for comparing intervals. Its concrete derived classes can be added to and subtracted from a <xref href="class_t_time.xml#class_t_time">TTime</xref>.</p>
+			<p>The comparison operators simply compare the integer representations of the two intervals. They do not take account of different time interval units. So, for example, when comparing for equality an interval of three hours with an interval of three days, the result is true.</p>
+			<p>
+				<xref href="class_t_time.xml#class_t_time">TTime</xref> </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_t_time_interval_base_1a96dcb895615f4e999b3f49b97588e6ba">
+		<apiName>operator==</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTimeIntervalBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool operator==(TTimeIntervalBase aInterval) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTimeIntervalBase::operator==(TTimeIntervalBase)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_time_interval_base.xml#class_t_time_interval_base">TTimeIntervalBase</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aInterval</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The time interval to be compared with this time interval.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1569"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1479"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1487"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Tests whether this time interval is the same as the specified time interval.</p>
+				<p>True if the two time intervals are equal. False otherwise. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_interval_base_1a8e8174f9e12853a93490d9ec28515e27">
+		<apiName>operator!=</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTimeIntervalBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool operator!=(TTimeIntervalBase aInterval) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTimeIntervalBase::operator!=(TTimeIntervalBase)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_time_interval_base.xml#class_t_time_interval_base">TTimeIntervalBase</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aInterval</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The time interval to be compared with this time interval.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1570"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1492"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1501"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Tests whether this time interval is not the same as the specified time interval.</p>
+				<p>True if the two time intervals differ. False otherwise. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_interval_base_1a0f4796b76beeb41af9e50c8c15536b6d">
+		<apiName>operator&gt;=</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTimeIntervalBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool operator&gt;=(TTimeIntervalBase aInterval) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTimeIntervalBase::operator&gt;=(TTimeIntervalBase)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_time_interval_base.xml#class_t_time_interval_base">TTimeIntervalBase</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aInterval</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The time interval to be compared with this time interval.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1571"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1506"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1516"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Tests whether this time interval is greater than or equal to the specified time interval.</p>
+				<p>True if this time interval is greater than or equal to the specified time interval. False otherwise. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_interval_base_1a2d6988119e4c278ae9793ef438e82ffb">
+		<apiName>operator&lt;=</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTimeIntervalBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool operator&lt;=(TTimeIntervalBase aInterval) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTimeIntervalBase::operator&lt;=(TTimeIntervalBase)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_time_interval_base.xml#class_t_time_interval_base">TTimeIntervalBase</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aInterval</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The time interval to be compared with this time interval.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1572"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1521"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1531"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Tests whether this time interval is less than or equal to the specified time interval.</p>
+				<p>True if this time interval is less than or equal to the specified time interval. False otherwise. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_interval_base_1a49ccc07082d54e58f5efdaa831877e63">
+		<apiName>operator&gt;</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTimeIntervalBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool operator&gt;(TTimeIntervalBase aInterval) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTimeIntervalBase::operator&gt;(TTimeIntervalBase)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_time_interval_base.xml#class_t_time_interval_base">TTimeIntervalBase</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aInterval</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The time interval to be compared with this time interval.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1573"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1536"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1545"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Tests whether this time interval is greater than the specified time interval.</p>
+				<p>True if this time interval is greater than the specified time interval. False otherwise. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_interval_base_1a261c215f74bf6253c8183733a959a866">
+		<apiName>operator&lt;</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTimeIntervalBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool operator&lt;(TTimeIntervalBase aInterval) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTimeIntervalBase::operator&lt;(TTimeIntervalBase)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_time_interval_base.xml#class_t_time_interval_base">TTimeIntervalBase</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aInterval</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The time interval to be compared with this time interval.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1574"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1550"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1559"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Tests whether this time interval is less than the specified time interval.</p>
+				<p>True if this time interval is less than the specified time interval. False otherwise. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_interval_base_1a601b2569e85a2d438977151e511d9065">
+		<apiName>Int</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTimeIntervalBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt Int() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTimeIntervalBase::Int()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1575"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1564"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1570"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets the time interval as a 32 bit integer.</p>
+				<p>The time interval as a 32 bit integer. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_interval_base_1a5343785c53c67cbec63c4a01b3acd4bb">
+		<apiName>TTimeIntervalBase</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TTimeIntervalBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TTimeIntervalBase()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTimeIntervalBase::TTimeIntervalBase()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1577"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1458"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1462"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Default constructor. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_interval_base_1a7eae2382d38772bf7726295ae12f1b2e">
+		<apiName>TTimeIntervalBase</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TTimeIntervalBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TTimeIntervalBase(TInt aInterval)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTimeIntervalBase::TTimeIntervalBase(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aInterval</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The interval value. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1578"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1467"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1474"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Constructor taking an interval value.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxVariable id="class_t_time_interval_base_1aeb2b5bec0eaecf9a1ea2e613daf67d9a">
+		<apiName>iInterval</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="protected"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TTimeIntervalBase</cxxVariableScopedName>
+				<cxxVariablePrototype>TInt iInterval</cxxVariablePrototype>
+				<cxxVariableNameLookup>TTimeIntervalBase::iInterval</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1580"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+</cxxClass>

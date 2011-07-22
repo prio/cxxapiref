@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_c_policy_server_1_1_t_policy_element">
+	<apiName>CPolicyServer::TPolicyElement</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="2401"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="2400"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="2440"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>Class specifying a security check and the action to take</p>
+			<p>If iAction is &gt;=0 it must be a member of TFailureAction If iAction is &lt;0 it is assumed to specify a custom action specific to the derived implementation. In this case, CustomFailureActionL must be implemented by the derived class. </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxVariable id="class_c_policy_server_1_1_t_policy_element_1a55ea70d2306887b0936f90da99f229bd">
+		<apiName>iPolicy</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="struct_t_static_security_policy.xml#struct_t_static_security_policy">TStaticSecurityPolicy</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>CPolicyServer::TPolicyElement</cxxVariableScopedName>
+				<cxxVariablePrototype>TStaticSecurityPolicy iPolicy</cxxVariablePrototype>
+				<cxxVariableNameLookup>CPolicyServer::TPolicyElement::iPolicy</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="2433"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Security policy to check against the client which sent a message.</p>
+				<p>This class can specify a security policy consisting of either:</p>
+				<p>
+					<ol>
+						<li>
+							<p>A check for between 0 and 7 capabilities</p>
+						</li>
+						<li>
+							<p>A check for a given Secure ID along with 0-3 capabilities</p>
+						</li>
+						<li>
+							<p>A check for a given Vendor ID along with 0-3 capabilities</p>
+						</li>
+					</ol>
+				</p>
+				<p>This member should only be initialised by one of the following macros:</p>
+				<p>
+					<ul>
+						<li>
+							<p>_INIT_SECURITY_POLICY_PASS</p>
+						</li>
+						<li>
+							<p>_INIT_SECURITY_POLICY_FAIL</p>
+						</li>
+						<li>
+							<p>_INIT_SECURITY_POLICY_C1</p>
+						</li>
+						<li>
+							<p>_INIT_SECURITY_POLICY_C2</p>
+						</li>
+						<li>
+							<p>_INIT_SECURITY_POLICY_C3</p>
+						</li>
+						<li>
+							<p>_INIT_SECURITY_POLICY_C4</p>
+						</li>
+						<li>
+							<p>_INIT_SECURITY_POLICY_C5</p>
+						</li>
+						<li>
+							<p>_INIT_SECURITY_POLICY_C6</p>
+						</li>
+						<li>
+							<p>_INIT_SECURITY_POLICY_C7</p>
+						</li>
+						<li>
+							<p>_INIT_SECURITY_POLICY_S0</p>
+						</li>
+						<li>
+							<p>_INIT_SECURITY_POLICY_S1</p>
+						</li>
+						<li>
+							<p>_INIT_SECURITY_POLICY_S2</p>
+						</li>
+						<li>
+							<p>_INIT_SECURITY_POLICY_S3</p>
+						</li>
+						<li>
+							<p>_INIT_SECURITY_POLICY_V0</p>
+						</li>
+						<li>
+							<p>_INIT_SECURITY_POLICY_V1</p>
+						</li>
+						<li>
+							<p>_INIT_SECURITY_POLICY_V2</p>
+						</li>
+						<li>
+							<p>_INIT_SECURITY_POLICY_V3</p>
+						</li>
+					</ul>
+				</p>
+				<p>
+					<xref href="class_c_policy_server_1_1_t_policy.xml#class_c_policy_server_1_1_t_policy">TPolicy</xref> </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_c_policy_server_1_1_t_policy_element_1accd9e0f90f287b2828c5297cb2132943">
+		<apiName>iAction</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>CPolicyServer::TPolicyElement</cxxVariableScopedName>
+				<cxxVariablePrototype>TInt iAction</cxxVariablePrototype>
+				<cxxVariableNameLookup>CPolicyServer::TPolicyElement::iAction</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="2439"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Action to take on failure. Either a value from TFailureAction or a negative value which has meaning to the <xref href="class_c_policy_server.xml#class_c_policy_server_1a461aabe6b726788562cf592bda72ea8e">CustomFailureActionL()</xref> method of a derived class. </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+</cxxClass>

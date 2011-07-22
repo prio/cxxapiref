@@ -1,0 +1,284 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_c_heartbeat">
+	<apiName>CHeartbeat</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassDerivations>
+				<cxxClassDerivation>
+					<cxxClassDerivationAccessSpecifier value="public"/>
+					<cxxClassBaseClass href="class_c_timer.xml#class_c_timer">CTimer</cxxClassBaseClass>
+				</cxxClassDerivation>
+			</cxxClassDerivations>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="2090"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="2049"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="2102"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>Heatbeat timer.</p>
+			<p>This class generates regular heartbeat events on a fixed fraction of a second. It is more accurate than a <xref href="class_c_periodic.xml#class_c_periodic">CPeriodic</xref> timer, because it provides a function to restore timer accuracy if it gets out of synchronisation with the system clock.</p>
+			<p>The protected <xref href="class_c_heartbeat.xml#class_c_heartbeat_1a460aa23406016271b82c4b66068052c3">RunL()</xref> function is called when the timer completes. The <xref href="class_c_heartbeat.xml#class_c_heartbeat_1a460aa23406016271b82c4b66068052c3">RunL()</xref> function in turn calls either the <xref href="class_m_beating.xml#class_m_beating_1a441af67290dcb9de592a8831c1a7f7f5">MBeating::Beat()</xref> or the <xref href="class_m_beating.xml#class_m_beating_1a7655610cad46142d3d4acb8c814d3cd1">MBeating::Synchronize()</xref> functions; <xref href="class_m_beating.xml#class_m_beating">MBeating</xref> is specified as a parameter to the <xref href="class_c_heartbeat.xml#class_c_heartbeat_1a3e4b0b6dd388edcbe90d4a02d493fc16">Start()</xref> function used to start the heartbeat timer.</p>
+			<p>The relevant <xref href="class_m_beating.xml#class_m_beating">MBeating</xref> function may not be called immediately after the signal from the timer request has been generated, for the following reasons:</p>
+			<p>1. the <xref href="class_c_heartbeat.xml#class_c_heartbeat_1a460aa23406016271b82c4b66068052c3">RunL()</xref> of another active object may be running at the time of the signal</p>
+			<p>2. other active objects may have a higher priority than the <xref href="class_c_heartbeat.xml#class_c_heartbeat">CHeartbeat</xref>
+			</p>
+			<p>If no heartbeat is missed, then the Beat() function is called.</p>
+			<p>If one or more heartbeats are missed then the Synchronize() function is called. It is important to bear in mind that the machine might be switched off after a few beats of the heart, and then Synchronize() will be called several days later. It is therefore essential that synchronisation is achieved as quickly as possible, rather than trying to catch up a tick at a time. In the context of an analogue clock, for instance, the clock should just redraw itself with the current time - rather than moving the hands round in steps until the time is correct.</p>
+			<p>
+				<xref href="class_c_heartbeat.xml#class_c_heartbeat">CHeartbeat</xref> is an active object, derived from <xref href="class_c_active.xml#class_c_active">CActive</xref> (via <xref href="class_c_timer.xml#class_c_timer">CTimer</xref>). You should be familiar with <xref href="class_c_active.xml#class_c_active">CActive</xref> in order to understand <xref href="class_c_heartbeat.xml#class_c_heartbeat">CHeartbeat</xref> behaviour, but not necessarily with <xref href="class_c_timer.xml#class_c_timer">CTimer</xref>.</p>
+			<p>
+				<xref href="class_m_beating.xml#class_m_beating">MBeating</xref> </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_c_heartbeat_1a100043ba6370680222fbe67add12b24b">
+		<apiName>New</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_c_heartbeat.xml#class_c_heartbeat">CHeartbeat</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CHeartbeat</cxxFunctionScopedName>
+				<cxxFunctionPrototype>static IMPORT_C CHeartbeat * New(TInt aPriority)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CHeartbeat::New(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPriority</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2092"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_heartbeat_1a469ae40eb7fdb9829e775d984a650423">
+		<apiName>NewL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_c_heartbeat.xml#class_c_heartbeat">CHeartbeat</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CHeartbeat</cxxFunctionScopedName>
+				<cxxFunctionPrototype>static IMPORT_C CHeartbeat * NewL(TInt aPriority)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CHeartbeat::NewL(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPriority</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2093"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_heartbeat_1a7db52789b7c024f57a6b42aa8df709d9">
+		<apiName>~CHeartbeat</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDestructor/>
+				<cxxFunctionDeclaredType>IMPORT_C</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CHeartbeat</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C ~CHeartbeat()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CHeartbeat::~CHeartbeat()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2094"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_heartbeat_1a3e4b0b6dd388edcbe90d4a02d493fc16">
+		<apiName>Start</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CHeartbeat</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Start(TTimerLockSpec aLock, MBeating *aBeating)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CHeartbeat::Start(TTimerLockSpec,MBeating *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1aa4d2ca9a47063ef29c53800b9537e82c">TTimerLockSpec</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLock</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_m_beating.xml#class_m_beating">MBeating</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aBeating</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2095"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_heartbeat_1af9138719a7501e5f98eeffff5a84ab5d">
+		<apiName>CHeartbeat</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType>IMPORT_C</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CHeartbeat</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C CHeartbeat(TInt aPriority)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CHeartbeat::CHeartbeat(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPriority</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2097"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_heartbeat_1a460aa23406016271b82c4b66068052c3">
+		<apiName>RunL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionVirtual/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CHeartbeat</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void RunL()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CHeartbeat::RunL()</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_c_active.xml#class_c_active_1a1562734d9d119b6ff24bc3aec793ce3d">CActive::RunL()</cxxFunctionReimplemented>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2098"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Handles an active object&apos;s request completion event.</p>
+				<p>A derived class must provide an implementation to handle the completed request. If appropriate, it may issue another request.</p>
+				<p>The function is called by the active scheduler when a request completion event occurs, i.e. after the active scheduler&apos;s WaitForAnyRequest() function completes.</p>
+				<p>Before calling this active object&apos;s <xref href="class_c_heartbeat.xml#class_c_heartbeat_1a460aa23406016271b82c4b66068052c3">RunL()</xref> function, the active scheduler has:</p>
+				<p>1. decided that this is the highest priority active object with a completed request</p>
+				<p>2. marked this active object&apos;s request as complete (i.e. the request is no longer outstanding)</p>
+				<p>
+					<xref href="class_c_heartbeat.xml#class_c_heartbeat_1a460aa23406016271b82c4b66068052c3">RunL()</xref> runs under a trap harness in the active scheduler. If it leaves, then the active scheduler calls <xref href="class_c_active.xml#class_c_active_1af7a68e3e7ac05c01a9e22dd81393f834">RunError()</xref> to handle the leave.</p>
+				<p>Note that once the active scheduler&apos;s <xref href="class_c_heartbeat.xml#class_c_heartbeat_1a3e4b0b6dd388edcbe90d4a02d493fc16">Start()</xref> function has been called, all user code is run under one of the program&apos;s active object&apos;s <xref href="class_c_heartbeat.xml#class_c_heartbeat_1a460aa23406016271b82c4b66068052c3">RunL()</xref> or <xref href="class_c_active.xml#class_c_active_1af7a68e3e7ac05c01a9e22dd81393f834">RunError()</xref> functions.</p>
+				<p>
+					<xref href="class_c_active_scheduler.xml#class_c_active_scheduler_1a71f4452eae5e178915987c6d1a428972">CActiveScheduler::Start</xref> </p>
+				<p>
+					<xref href="class_c_active_scheduler.xml#class_c_active_scheduler_1a6d3f55a0772c98d0cd2845a7c074b941">CActiveScheduler::Error</xref> </p>
+				<p>
+					<xref href="class_c_active_scheduler.xml#class_c_active_scheduler_1af43f6899a3a1a6b6cb040a4f2bbb40f9">CActiveScheduler::WaitForAnyRequest</xref> </p>
+				<p>TRAPD </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxVariable id="class_c_heartbeat_1a76e9d3db06f6599c25a6d6e1ebd98b4f">
+		<apiName>iLock</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1aa4d2ca9a47063ef29c53800b9537e82c">TTimerLockSpec</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>CHeartbeat</cxxVariableScopedName>
+				<cxxVariablePrototype>TTimerLockSpec iLock</cxxVariablePrototype>
+				<cxxVariableNameLookup>CHeartbeat::iLock</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="2100"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_c_heartbeat_1aa0403d55e9527f2f8a690b06ba6fe0d8">
+		<apiName>iBeating</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="class_m_beating.xml#class_m_beating">MBeating</apiRelation> *</cxxVariableDeclaredType>
+				<cxxVariableScopedName>CHeartbeat</cxxVariableScopedName>
+				<cxxVariablePrototype>MBeating * iBeating</cxxVariablePrototype>
+				<cxxVariableNameLookup>CHeartbeat::iBeating</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="2101"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxClassInherits>
+		<cxxClassInheritsDetail>
+			<cxxClassFunctionInherited href="class_c_heartbeat.xml#class_c_active_1acfaa5bb1a4cda9d586f0ffaf2b0a0eb7">CActive::CActive(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_heartbeat.xml#class_c_active_1a97781da8872ba6e86b5b83ad7170eb90">CActive::Cancel()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_heartbeat.xml#class_c_active_1a44f0f5a2867d153feab11ee669d33b8d">CActive::Deque()</cxxClassFunctionInherited>
+			<cxxClassEnumeratorInherited href="class_c_heartbeat.xml#class_c_active_1a378cd39842666e0a9b5f2fc089375f35ac59ba0db48385ddf49262e21f2a599b3">CActive::EPriorityHigh</cxxClassEnumeratorInherited>
+			<cxxClassEnumeratorInherited href="class_c_heartbeat.xml#class_c_active_1a378cd39842666e0a9b5f2fc089375f35a5faa05021b83e97f1a5b00917aa34733">CActive::EPriorityIdle</cxxClassEnumeratorInherited>
+			<cxxClassEnumeratorInherited href="class_c_heartbeat.xml#class_c_active_1a378cd39842666e0a9b5f2fc089375f35ac074efb2a15cd04c06d354fb1fd13f27">CActive::EPriorityLow</cxxClassEnumeratorInherited>
+			<cxxClassEnumeratorInherited href="class_c_heartbeat.xml#class_c_active_1a378cd39842666e0a9b5f2fc089375f35ad19560103adbae4fa3eeca42c703e00b">CActive::EPriorityStandard</cxxClassEnumeratorInherited>
+			<cxxClassEnumeratorInherited href="class_c_heartbeat.xml#class_c_active_1a378cd39842666e0a9b5f2fc089375f35ac4fc6edcb2aea0b20ab823f1017d788a">CActive::EPriorityUserInput</cxxClassEnumeratorInherited>
+			<cxxClassFunctionInherited href="class_c_heartbeat.xml#class_c_active_1a098237f668ebdf6e5125a2deac03323d">CActive::Extension_(TUint,TAny *&amp;,TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_heartbeat.xml#class_c_active_1a6d1d16020878d00c3af277ad2b0866f5">CActive::IsActive()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_heartbeat.xml#class_c_active_1a97d8e693eb6f85ca883dbb385650ca28">CActive::IsAdded()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_heartbeat.xml#class_c_active_1acb9ff1d90fbcb96058e2947c3f05c8e8">CActive::Priority()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_heartbeat.xml#class_c_active_1af7a68e3e7ac05c01a9e22dd81393f834">CActive::RunError(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_heartbeat.xml#class_c_active_1a511d5a8dc1d43eca953eb5c69b0e022d">CActive::SetActive()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_heartbeat.xml#class_c_active_1a0d7c2ce1a5364daadef07b1020c9714f">CActive::SetPriority(TInt)</cxxClassFunctionInherited>
+			<cxxClassVariableInherited href="class_c_heartbeat.xml#class_c_active_1a38314f150856c0f369555b0ef17c3140">CActive::iStatus</cxxClassVariableInherited>
+			<cxxClassFunctionInherited href="class_c_heartbeat.xml#class_c_active_1a81e8cc3a48d5d6f56c502690f9969ef8">CActive::~CActive()</cxxClassFunctionInherited>
+			<cxxClassEnumerationInherited href="class_c_heartbeat.xml#class_c_active_1a378cd39842666e0a9b5f2fc089375f35">CActive:TPriority</cxxClassEnumerationInherited>
+			<cxxClassFunctionInherited href="class_c_heartbeat.xml#class_c_base_1a240de7932690a4e987d75690b0b6f82b">CBase::CBase()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_heartbeat.xml#class_c_base_1ac0a06aeab68b3e01be81f9dd79e011c6">CBase::Delete(CBase *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_heartbeat.xml#class_c_base_1af4c4965092a763b0856ccbfa3cf99eaf">CBase::operator new(TUint)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_heartbeat.xml#class_c_base_1ab9e5f557dea4db22886189926687ddc1">CBase::operator new(TUint,TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_heartbeat.xml#class_c_base_1aa464dd21494443ac109084ed03b81f28">CBase::operator new(TUint,TLeave)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_heartbeat.xml#class_c_base_1af8429815362d4df6fecd47179e0c5dfe">CBase::operator new(TUint,TLeave,TUint)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_heartbeat.xml#class_c_base_1a80505bdf8b1b20a2ed102307a78eeeeb">CBase::operator new(TUint,TUint)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_heartbeat.xml#class_c_base_1a1390361b94424be22bb2b1020eb400ea">CBase::~CBase()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_heartbeat.xml#class_c_timer_1a183ea35d31e1c6e0c1907423d8692ce2">CTimer::After(TTimeIntervalMicroSeconds32)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_heartbeat.xml#class_c_timer_1a5a4c1a884c0fd0ce451f128584825c40">CTimer::At(const TTime &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_heartbeat.xml#class_c_timer_1a52674872da9b18b30a728fc7f6b0d2ad">CTimer::AtUTC(const TTime &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_heartbeat.xml#class_c_timer_1a8c690d94750a3fbc0b5ed7f1abe32e41">CTimer::CTimer(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_heartbeat.xml#class_c_timer_1ada3caefd57182489e9027e79f7176571">CTimer::ConstructL()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_heartbeat.xml#class_c_timer_1a10ac3be9d71f49d0f32c104544b0084f">CTimer::DoCancel()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_heartbeat.xml#class_c_timer_1a25aec5f810324958bc27f4399a55303e">CTimer::HighRes(TTimeIntervalMicroSeconds32)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_heartbeat.xml#class_c_timer_1a3f524bf66473cc627f102c0990d478a5">CTimer::Inactivity(TTimeIntervalSeconds)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_heartbeat.xml#class_c_timer_1abb77357f6ab909668358dadf022af58a">CTimer::Lock(TTimerLockSpec)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_heartbeat.xml#class_c_timer_1aba21a9f4b975acbd5bc9e6290e7d0925">CTimer::~CTimer()</cxxClassFunctionInherited>
+		</cxxClassInheritsDetail>
+	</cxxClassInherits>
+</cxxClass>

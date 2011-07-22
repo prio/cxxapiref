@@ -1,0 +1,2079 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_r_e_com_session">
+	<apiName>REComSession</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassDerivations>
+				<cxxClassDerivation>
+					<cxxClassDerivationAccessSpecifier value="public"/>
+					<cxxClassBaseClass href="class_r_session_base.xml#class_r_session_base">RSessionBase</cxxClassBaseClass>
+				</cxxClassDerivation>
+			</cxxClassDerivations>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/ecom/ecom.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="86"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/ecom/ecom.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="85"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="449"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>The <xref href="class_r_e_com_session.xml#class_r_e_com_session">REComSession</xref> singleton class provides an API to identify (resolution), instantiate, and destroy interface class implementations requested by ECOM clients. It manages the session connection to the ECOM Server itself so that typically only one connection is made to the ECOM Server per thread. It provides an un-initialise function where it releases memory and handles of unused plug-ins, see the <xref href="class_r_e_com_session.xml#class_r_e_com_session_1af45d97cf94ebbed435322bbdcee25863">FinalClose()</xref> function. It also ensures that all necessary clean-up is performed in the event of a Leave by any of the <xref href="class_r_e_com_session.xml#class_r_e_com_session_1aff94a3ef0a5a3a8645ea4b3d1ff9ae5a">ListImplementationsL()</xref> or <xref href="class_r_e_com_session.xml#class_r_e_com_session_1adf6aba41fe39a0e7701e7b0ae83171c6">CreateImplementationL()</xref> methods.</p>
+			<p>Note: Although a public default constructor is provided in this class it is strongly recommended this object is never created by users of this API on the stack or heap by value. To access the non-static methods of this API use the static <xref href="class_r_e_com_session.xml#class_r_e_com_session_1a9eea0401a5cdbb02bd9792ae8c156fdf">OpenL()</xref> method to obtain a pointer or a reference to the single reference counted session in use. <xref href="class_r_e_com_session.xml#class_r_e_com_session_1a2e4f35e53bc566535c31d883e1318bcc">Close()</xref> must be called when finished with.</p>
+			<p>Special care must be taken when using aInstanceKey. It is a 32-bit instance key that is returned from a call to one of the <xref href="class_r_e_com_session.xml#class_r_e_com_session_1adf6aba41fe39a0e7701e7b0ae83171c6">CreateImplementationL()</xref> methods. This instance key must only be used with <xref href="class_r_e_com_session.xml#class_r_e_com_session_1afd01b4163e8a132bbd99952385402197">DestroyedImplementation()</xref> to identify the implementation instance for destruction, or <xref href="class_r_e_com_session.xml#class_r_e_com_session_1a7249d9fc2313f9031336737a398598ba">GetImplementationUidL()</xref> to retrieve the Implementation Uid of the instance it refers to. No meaning must be attached to this instance key by ECOM clients and it must not be used for any other purpose.</p>
+			<p>
+				<xref href="class_r_e_com_session.xml#class_r_e_com_session_1af45d97cf94ebbed435322bbdcee25863">REComSession::FinalClose()</xref> </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_r_e_com_session_1a0960ed256895e155050bde82e2afe613">
+		<apiName>REComSession</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType>IMPORT_C</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>REComSession</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C REComSession()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>REComSession::REComSession()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/ecom/ecom.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="92"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_e_com_session_1a9eea0401a5cdbb02bd9792ae8c156fdf">
+		<apiName>OpenL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_r_e_com_session.xml#class_r_e_com_session">REComSession</apiRelation> &amp;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>REComSession</cxxFunctionScopedName>
+				<cxxFunctionPrototype>static IMPORT_C REComSession &amp; OpenL()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>REComSession::OpenL()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/ecom/ecom.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="94"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_e_com_session_1a2e4f35e53bc566535c31d883e1318bcc">
+		<apiName>Close</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>REComSession</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Close()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>REComSession::Close()</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_r_handle_base.xml#class_r_handle_base_1ad79a6f0c004c694d4eecbea1696cbcc8">RHandleBase::Close()</cxxFunctionReimplemented>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/ecom/ecom.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="95"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_e_com_session_1a7249d9fc2313f9031336737a398598ba">
+		<apiName>GetImplementationUidL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>REComSession</cxxFunctionScopedName>
+				<cxxFunctionPrototype>static IMPORT_C TUid GetImplementationUidL(TUid aInstanceKey)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>REComSession::GetImplementationUidL(TUid)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aInstanceKey</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/ecom/ecom.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="99"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_e_com_session_1afd01b4163e8a132bbd99952385402197">
+		<apiName>DestroyedImplementation</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>REComSession</cxxFunctionScopedName>
+				<cxxFunctionPrototype>static IMPORT_C void DestroyedImplementation(TUid aInstanceKey)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>REComSession::DestroyedImplementation(TUid)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aInstanceKey</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/ecom/ecom.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="103"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_e_com_session_1af45d97cf94ebbed435322bbdcee25863">
+		<apiName>FinalClose</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>REComSession</cxxFunctionScopedName>
+				<cxxFunctionPrototype>static IMPORT_C void FinalClose()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>REComSession::FinalClose()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/ecom/ecom.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="106"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_e_com_session_1a46ae00c8802eb962bc616563ce58a6df">
+		<apiName>NotifyOnChange</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>REComSession</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void NotifyOnChange(TRequestStatus &amp;aStatus)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>REComSession::NotifyOnChange(TRequestStatus &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/ecom/ecom.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="112"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_e_com_session_1a23c95d38c1f9ffbad79bbd0ec04d977d">
+		<apiName>CancelNotifyOnChange</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>REComSession</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void CancelNotifyOnChange(TRequestStatus &amp;aStatus)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>REComSession::CancelNotifyOnChange(TRequestStatus &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/ecom/ecom.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="113"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_e_com_session_1aff94a3ef0a5a3a8645ea4b3d1ff9ae5a">
+		<apiName>ListImplementationsL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>REComSession</cxxFunctionScopedName>
+				<cxxFunctionPrototype>static IMPORT_C void ListImplementationsL(TUid aInterfaceUid, RImplInfoPtrArray &amp;aImplInfoArray)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>REComSession::ListImplementationsL(TUid,RImplInfoPtrArray &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aInterfaceUid</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_pointer_array.xml#class_r_pointer_array">RImplInfoPtrArray</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aImplInfoArray</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/ecom/ecom.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="125"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_e_com_session_1aefba324d8db9d8c84f91e79c8d0b4e5e">
+		<apiName>ListImplementationsL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>REComSession</cxxFunctionScopedName>
+				<cxxFunctionPrototype>static IMPORT_C void ListImplementationsL(TUid aInterfaceUid, const TEComResolverParams &amp;aResolutionParameters, RImplInfoPtrArray &amp;aImplInfoArray)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>REComSession::ListImplementationsL(TUid,const TEComResolverParams &amp;,RImplInfoPtrArray &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aInterfaceUid</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_e_com_resolver_params.xml#class_t_e_com_resolver_params">TEComResolverParams</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aResolutionParameters</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_pointer_array.xml#class_r_pointer_array">RImplInfoPtrArray</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aImplInfoArray</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/ecom/ecom.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="131"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_e_com_session_1ab8932a07c5b82cbb20147d108fa5c199">
+		<apiName>ListImplementationsL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>REComSession</cxxFunctionScopedName>
+				<cxxFunctionPrototype>static IMPORT_C void ListImplementationsL(TUid aInterfaceUid, const TEComResolverParams &amp;aResolutionParameters, TUid aResolverUid, RImplInfoPtrArray &amp;aImplInfoArray)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>REComSession::ListImplementationsL(TUid,const TEComResolverParams &amp;,TUid,RImplInfoPtrArray &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aInterfaceUid</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_e_com_resolver_params.xml#class_t_e_com_resolver_params">TEComResolverParams</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aResolutionParameters</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aResolverUid</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_pointer_array.xml#class_r_pointer_array">RImplInfoPtrArray</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aImplInfoArray</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/ecom/ecom.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="138"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_e_com_session_1af780ba53c643290333aaa722a9b3091e">
+		<apiName>ListImplementationsL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>REComSession</cxxFunctionScopedName>
+				<cxxFunctionPrototype>static IMPORT_C void ListImplementationsL(TUid aInterfaceUid, RImplInfoPtrArray &amp;aImplInfoArray, TBool aCapabilityCheck)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>REComSession::ListImplementationsL(TUid,RImplInfoPtrArray &amp;,TBool)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aInterfaceUid</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_pointer_array.xml#class_r_pointer_array">RImplInfoPtrArray</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aImplInfoArray</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCapabilityCheck</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/ecom/ecom.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="147"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_e_com_session_1a5e1dd391769f4805dd86de4f923a20a4">
+		<apiName>ListImplementationsL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>REComSession</cxxFunctionScopedName>
+				<cxxFunctionPrototype>static IMPORT_C void ListImplementationsL(TUid aInterfaceUid, const TEComResolverParams &amp;aResolutionParameters, RImplInfoPtrArray &amp;aImplInfoArray, TBool aCapabilityCheck)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>REComSession::ListImplementationsL(TUid,const TEComResolverParams &amp;,RImplInfoPtrArray &amp;,TBool)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aInterfaceUid</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_e_com_resolver_params.xml#class_t_e_com_resolver_params">TEComResolverParams</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aResolutionParameters</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_pointer_array.xml#class_r_pointer_array">RImplInfoPtrArray</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aImplInfoArray</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCapabilityCheck</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/ecom/ecom.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="153"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_e_com_session_1a55c3b078590688e505bfa37a5cb1e3cf">
+		<apiName>ListImplementationsL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>REComSession</cxxFunctionScopedName>
+				<cxxFunctionPrototype>static IMPORT_C void ListImplementationsL(TUid aInterfaceUid, const TEComResolverParams &amp;aResolutionParameters, TUid aResolverUid, RImplInfoPtrArray &amp;aImplInfoArray, TBool aCapabilityCheck)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>REComSession::ListImplementationsL(TUid,const TEComResolverParams &amp;,TUid,RImplInfoPtrArray &amp;,TBool)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aInterfaceUid</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_e_com_resolver_params.xml#class_t_e_com_resolver_params">TEComResolverParams</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aResolutionParameters</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aResolverUid</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_pointer_array.xml#class_r_pointer_array">RImplInfoPtrArray</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aImplInfoArray</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCapabilityCheck</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/ecom/ecom.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="160"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_e_com_session_1adf6aba41fe39a0e7701e7b0ae83171c6">
+		<apiName>CreateImplementationL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>REComSession</cxxFunctionScopedName>
+				<cxxFunctionPrototype>static IMPORT_C TAny * CreateImplementationL(TUid aImplementationUid, TUid &amp;aInstanceKey)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>REComSession::CreateImplementationL(TUid,TUid &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aImplementationUid</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aInstanceKey</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/ecom/ecom.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="180"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_e_com_session_1a6b285672ac810d448416dfcf1f82df11">
+		<apiName>CreateImplementationL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>REComSession</cxxFunctionScopedName>
+				<cxxFunctionPrototype>static IMPORT_C TAny * CreateImplementationL(TUid aImplementationUid, TInt32 aKeyOffset)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>REComSession::CreateImplementationL(TUid,TInt32)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aImplementationUid</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a08ea5ecd72297daaa3a4f3c41ce9e103">TInt32</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aKeyOffset</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/ecom/ecom.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="185"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_e_com_session_1a664086482f9593cc95f7ef5d53cc11e6">
+		<apiName>CreateImplementationL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>REComSession</cxxFunctionScopedName>
+				<cxxFunctionPrototype>static IMPORT_C TAny * CreateImplementationL(TUid aImplementationUid, TUid &amp;aInstanceKey, TAny *aConstructionParameters)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>REComSession::CreateImplementationL(TUid,TUid &amp;,TAny *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aImplementationUid</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aInstanceKey</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aConstructionParameters</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/ecom/ecom.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="191"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_e_com_session_1a82bdb47a40ee93f24d1f09b69e061d61">
+		<apiName>CreateImplementationL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>REComSession</cxxFunctionScopedName>
+				<cxxFunctionPrototype>static IMPORT_C TAny * CreateImplementationL(TUid aImplementationUid, TInt32 aKeyOffset, TAny *aConstructionParameters)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>REComSession::CreateImplementationL(TUid,TInt32,TAny *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aImplementationUid</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a08ea5ecd72297daaa3a4f3c41ce9e103">TInt32</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aKeyOffset</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aConstructionParameters</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/ecom/ecom.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="197"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_e_com_session_1ae13080472d853b0a8a9f2208d64ed004">
+		<apiName>CreateImplementationL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>REComSession</cxxFunctionScopedName>
+				<cxxFunctionPrototype>static IMPORT_C TAny * CreateImplementationL(TUid aInterfaceUid, TUid &amp;aInstanceKey, const TEComResolverParams &amp;aResolutionParameters)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>REComSession::CreateImplementationL(TUid,TUid &amp;,const TEComResolverParams &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aInterfaceUid</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aInstanceKey</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_e_com_resolver_params.xml#class_t_e_com_resolver_params">TEComResolverParams</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aResolutionParameters</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/ecom/ecom.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="203"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_e_com_session_1a2a4b2e08e81598450dc0ffdd519cbebc">
+		<apiName>CreateImplementationL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>REComSession</cxxFunctionScopedName>
+				<cxxFunctionPrototype>static IMPORT_C TAny * CreateImplementationL(TUid aInterfaceUid, TInt32 aKeyOffset, const TEComResolverParams &amp;aResolutionParameters)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>REComSession::CreateImplementationL(TUid,TInt32,const TEComResolverParams &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aInterfaceUid</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a08ea5ecd72297daaa3a4f3c41ce9e103">TInt32</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aKeyOffset</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_e_com_resolver_params.xml#class_t_e_com_resolver_params">TEComResolverParams</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aResolutionParameters</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/ecom/ecom.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="209"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_e_com_session_1ab405a7c3df8ccaaaba1fb9f8ba8e19e7">
+		<apiName>CreateImplementationL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>REComSession</cxxFunctionScopedName>
+				<cxxFunctionPrototype>static IMPORT_C TAny * CreateImplementationL(TUid aInterfaceUid, TUid &amp;aInstanceKey, TAny *aConstructionParameters, const TEComResolverParams &amp;aResolutionParameters)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>REComSession::CreateImplementationL(TUid,TUid &amp;,TAny *,const TEComResolverParams &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aInterfaceUid</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aInstanceKey</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aConstructionParameters</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_e_com_resolver_params.xml#class_t_e_com_resolver_params">TEComResolverParams</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aResolutionParameters</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/ecom/ecom.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="216"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_e_com_session_1a8068e069d89f609dded3bda3fe29b577">
+		<apiName>CreateImplementationL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>REComSession</cxxFunctionScopedName>
+				<cxxFunctionPrototype>static IMPORT_C TAny * CreateImplementationL(TUid aInterfaceUid, TInt32 aKeyOffset, TAny *aConstructionParameters, const TEComResolverParams &amp;aResolutionParameters)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>REComSession::CreateImplementationL(TUid,TInt32,TAny *,const TEComResolverParams &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aInterfaceUid</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a08ea5ecd72297daaa3a4f3c41ce9e103">TInt32</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aKeyOffset</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aConstructionParameters</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_e_com_resolver_params.xml#class_t_e_com_resolver_params">TEComResolverParams</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aResolutionParameters</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/ecom/ecom.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="223"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_e_com_session_1a2f19baebe941f04624abde43e0cc325f">
+		<apiName>CreateImplementationL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>REComSession</cxxFunctionScopedName>
+				<cxxFunctionPrototype>static IMPORT_C TAny * CreateImplementationL(TUid aInterfaceUid, TUid &amp;aInstanceKey, const TEComResolverParams &amp;aResolutionParameters, TUid aResolverUid)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>REComSession::CreateImplementationL(TUid,TUid &amp;,const TEComResolverParams &amp;,TUid)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aInterfaceUid</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aInstanceKey</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_e_com_resolver_params.xml#class_t_e_com_resolver_params">TEComResolverParams</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aResolutionParameters</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aResolverUid</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/ecom/ecom.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="230"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_e_com_session_1a5272988dc302aaa562621c63a5e02d0e">
+		<apiName>CreateImplementationL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>REComSession</cxxFunctionScopedName>
+				<cxxFunctionPrototype>static IMPORT_C TAny * CreateImplementationL(TUid aInterfaceUid, TInt32 aKeyOffset, const TEComResolverParams &amp;aResolutionParameters, TUid aResolverUid)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>REComSession::CreateImplementationL(TUid,TInt32,const TEComResolverParams &amp;,TUid)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aInterfaceUid</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a08ea5ecd72297daaa3a4f3c41ce9e103">TInt32</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aKeyOffset</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_e_com_resolver_params.xml#class_t_e_com_resolver_params">TEComResolverParams</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aResolutionParameters</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aResolverUid</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/ecom/ecom.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="237"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_e_com_session_1a2073420b8852a33e20ae6f86854183d5">
+		<apiName>CreateImplementationL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>REComSession</cxxFunctionScopedName>
+				<cxxFunctionPrototype>static IMPORT_C TAny * CreateImplementationL(TUid aInterfaceUid, TUid &amp;aInstanceKey, TAny *aConstructionParameters, const TEComResolverParams &amp;aResolutionParameters, TUid aResolverUid)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>REComSession::CreateImplementationL(TUid,TUid &amp;,TAny *,const TEComResolverParams &amp;,TUid)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aInterfaceUid</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aInstanceKey</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aConstructionParameters</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_e_com_resolver_params.xml#class_t_e_com_resolver_params">TEComResolverParams</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aResolutionParameters</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aResolverUid</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/ecom/ecom.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="245"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_e_com_session_1ae4585597a04d684c4a1dd77d6b48ee52">
+		<apiName>CreateImplementationL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>REComSession</cxxFunctionScopedName>
+				<cxxFunctionPrototype>static IMPORT_C TAny * CreateImplementationL(TUid aInterfaceUid, TInt32 aKeyOffset, TAny *aConstructionParameters, const TEComResolverParams &amp;aResolutionParameters, TUid aResolverUid)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>REComSession::CreateImplementationL(TUid,TInt32,TAny *,const TEComResolverParams &amp;,TUid)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aInterfaceUid</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a08ea5ecd72297daaa3a4f3c41ce9e103">TInt32</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aKeyOffset</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aConstructionParameters</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_e_com_resolver_params.xml#class_t_e_com_resolver_params">TEComResolverParams</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aResolutionParameters</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aResolverUid</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/ecom/ecom.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="253"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_e_com_session_1ae81edb9eae980a7c6cbf6f1c272993ea">
+		<apiName>ListImplementationsL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>REComSession</cxxFunctionScopedName>
+				<cxxFunctionPrototype>static IMPORT_C void ListImplementationsL(TUid aInterfaceUid, RExtendedInterfacesArray &amp;aExtendedInterfaces, RImplInfoPtrArray &amp;aImplInfoArray)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>REComSession::ListImplementationsL(TUid,RExtendedInterfacesArray &amp;,RImplInfoPtrArray &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aInterfaceUid</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_array.xml#class_r_array">RExtendedInterfacesArray</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aExtendedInterfaces</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_pointer_array.xml#class_r_pointer_array">RImplInfoPtrArray</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aImplInfoArray</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/ecom/ecom.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="275"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_e_com_session_1a37d20b7ae6212960e49b37b119f3b019">
+		<apiName>ListImplementationsL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>REComSession</cxxFunctionScopedName>
+				<cxxFunctionPrototype>static IMPORT_C void ListImplementationsL(TUid aInterfaceUid, RExtendedInterfacesArray &amp;aExtendedInterfaces, const TEComResolverParams &amp;aResolutionParameters, RImplInfoPtrArray &amp;aImplInfoArray)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>REComSession::ListImplementationsL(TUid,RExtendedInterfacesArray &amp;,const TEComResolverParams &amp;,RImplInfoPtrArray &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aInterfaceUid</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_array.xml#class_r_array">RExtendedInterfacesArray</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aExtendedInterfaces</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_e_com_resolver_params.xml#class_t_e_com_resolver_params">TEComResolverParams</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aResolutionParameters</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_pointer_array.xml#class_r_pointer_array">RImplInfoPtrArray</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aImplInfoArray</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/ecom/ecom.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="282"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_e_com_session_1a349188ee1ac1f6a0b44f6ad92e58b2bd">
+		<apiName>ListImplementationsL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>REComSession</cxxFunctionScopedName>
+				<cxxFunctionPrototype>static IMPORT_C void ListImplementationsL(TUid aInterfaceUid, RExtendedInterfacesArray &amp;aExtendedInterfaces, const TEComResolverParams &amp;aResolutionParameters, TUid aResolverUid, RImplInfoPtrArray &amp;aImplInfoArray)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>REComSession::ListImplementationsL(TUid,RExtendedInterfacesArray &amp;,const TEComResolverParams &amp;,TUid,RImplInfoPtrArray &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aInterfaceUid</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_array.xml#class_r_array">RExtendedInterfacesArray</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aExtendedInterfaces</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_e_com_resolver_params.xml#class_t_e_com_resolver_params">TEComResolverParams</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aResolutionParameters</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aResolverUid</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_pointer_array.xml#class_r_pointer_array">RImplInfoPtrArray</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aImplInfoArray</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/ecom/ecom.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="290"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_e_com_session_1a8dde53e243cc62f3ecf0821f73270d2f">
+		<apiName>CreateImplementationL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>REComSession</cxxFunctionScopedName>
+				<cxxFunctionPrototype>static IMPORT_C TAny * CreateImplementationL(TUid aInterfaceUid, const RExtendedInterfacesArray &amp;aExtendedInterfaces, TUid &amp;aInstanceKey, const TEComResolverParams &amp;aResolutionParameters, TAny *aConstructionParameters=NULL)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>REComSession::CreateImplementationL(TUid,const RExtendedInterfacesArray &amp;,TUid &amp;,const TEComResolverParams &amp;,TAny *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aInterfaceUid</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_r_array.xml#class_r_array">RExtendedInterfacesArray</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aExtendedInterfaces</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aInstanceKey</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_e_com_resolver_params.xml#class_t_e_com_resolver_params">TEComResolverParams</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aResolutionParameters</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aConstructionParameters</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>NULL</cxxFunctionParameterDefaultValue>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/ecom/ecom.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="314"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_e_com_session_1addd12bca6b5734717ba1d1bd5247edde">
+		<apiName>CreateImplementationL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>REComSession</cxxFunctionScopedName>
+				<cxxFunctionPrototype>static IMPORT_C TAny * CreateImplementationL(TUid aInterfaceUid, const RExtendedInterfacesArray &amp;aExtendedInterfaces, TInt32 aKeyOffset, const TEComResolverParams &amp;aResolutionParameters, TAny *aConstructionParameters=NULL)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>REComSession::CreateImplementationL(TUid,const RExtendedInterfacesArray &amp;,TInt32,const TEComResolverParams &amp;,TAny *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aInterfaceUid</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_r_array.xml#class_r_array">RExtendedInterfacesArray</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aExtendedInterfaces</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a08ea5ecd72297daaa3a4f3c41ce9e103">TInt32</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aKeyOffset</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_e_com_resolver_params.xml#class_t_e_com_resolver_params">TEComResolverParams</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aResolutionParameters</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aConstructionParameters</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>NULL</cxxFunctionParameterDefaultValue>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/ecom/ecom.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="322"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_e_com_session_1aea49bbeaaaa2fe0eb72351a29caff068">
+		<apiName>CreateImplementationL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>REComSession</cxxFunctionScopedName>
+				<cxxFunctionPrototype>static IMPORT_C TAny * CreateImplementationL(TUid aInterfaceUid, const RExtendedInterfacesArray &amp;aExtendedInterfaces, TUid &amp;aInstanceKey, const TEComResolverParams &amp;aResolutionParameters, TUid aResolverUid, TAny *aConstructionParameters=NULL)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>REComSession::CreateImplementationL(TUid,const RExtendedInterfacesArray &amp;,TUid &amp;,const TEComResolverParams &amp;,TUid,TAny *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aInterfaceUid</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_r_array.xml#class_r_array">RExtendedInterfacesArray</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aExtendedInterfaces</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aInstanceKey</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_e_com_resolver_params.xml#class_t_e_com_resolver_params">TEComResolverParams</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aResolutionParameters</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aResolverUid</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aConstructionParameters</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>NULL</cxxFunctionParameterDefaultValue>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/ecom/ecom.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="331"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_e_com_session_1afb9409cb84cfcf1493b5fc35c4208a61">
+		<apiName>CreateImplementationL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>REComSession</cxxFunctionScopedName>
+				<cxxFunctionPrototype>static IMPORT_C TAny * CreateImplementationL(TUid aInterfaceUid, const RExtendedInterfacesArray &amp;aExtendedInterfaces, TInt32 aKeyOffset, const TEComResolverParams &amp;aResolutionParameters, TUid aResolverUid, TAny *aConstructionParameters=NULL)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>REComSession::CreateImplementationL(TUid,const RExtendedInterfacesArray &amp;,TInt32,const TEComResolverParams &amp;,TUid,TAny *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aInterfaceUid</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_r_array.xml#class_r_array">RExtendedInterfacesArray</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aExtendedInterfaces</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a08ea5ecd72297daaa3a4f3c41ce9e103">TInt32</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aKeyOffset</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_e_com_resolver_params.xml#class_t_e_com_resolver_params">TEComResolverParams</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aResolutionParameters</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aResolverUid</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aConstructionParameters</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>NULL</cxxFunctionParameterDefaultValue>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/ecom/ecom.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="340"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_e_com_session_1a3b36dcef619214af7c07ac61e09a7498">
+		<apiName>GetExtendedInterfaceL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>REComSession</cxxFunctionScopedName>
+				<cxxFunctionPrototype>static IMPORT_C TAny * GetExtendedInterfaceL(const TUid &amp;aInstanceKey, const TUid &amp;aExtendedInterfaceUid)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>REComSession::GetExtendedInterfaceL(const TUid &amp;,const TUid &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aInstanceKey</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aExtendedInterfaceUid</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/ecom/ecom.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="348"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_e_com_session_1af0518ca83412af61b98f1263596866e7">
+		<apiName>ListExtendedInterfacesL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>REComSession</cxxFunctionScopedName>
+				<cxxFunctionPrototype>static IMPORT_C void ListExtendedInterfacesL(const TUid &amp;aImplementationUid, RExtendedInterfacesArray &amp;aIfInfo)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>REComSession::ListExtendedInterfacesL(const TUid &amp;,RExtendedInterfacesArray &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aImplementationUid</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_array.xml#class_r_array">RExtendedInterfacesArray</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIfInfo</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/ecom/ecom.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="352"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_e_com_session_1ad5fe54a5eed8468530b8c767a374d069">
+		<apiName>ManuallyReleaseExtendedInterfaceL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>REComSession</cxxFunctionScopedName>
+				<cxxFunctionPrototype>static IMPORT_C void ManuallyReleaseExtendedInterfaceL(const TUid &amp;aInstanceKey, const TUid &amp;aExtendedInterfaceUid)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>REComSession::ManuallyReleaseExtendedInterfaceL(const TUid &amp;,const TUid &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aInstanceKey</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aExtendedInterfaceUid</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/ecom/ecom.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="356"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_e_com_session_1a31b0434d9bfa008c753a0b30731369a5">
+		<apiName>OpenLC</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="class_r_e_com_session.xml#class_r_e_com_session">REComSession</apiRelation> &amp;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>REComSession</cxxFunctionScopedName>
+				<cxxFunctionPrototype>static REComSession &amp; OpenLC()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>REComSession::OpenLC()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/ecom/ecom.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="362"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_e_com_session_1a45a5b9e75c3edaa36dcddf7fa1efc1f4">
+		<apiName>ConstructL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>REComSession</cxxFunctionScopedName>
+				<cxxFunctionPrototype>void ConstructL()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>REComSession::ConstructL()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/ecom/ecom.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="364"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_e_com_session_1ae3a18ecb698df0abcd52dec7f1edf576">
+		<apiName>ReallyClose</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>REComSession</cxxFunctionScopedName>
+				<cxxFunctionPrototype>void ReallyClose()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>REComSession::ReallyClose()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/ecom/ecom.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="365"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_e_com_session_1aa3558f123ddc120dafc424323dfc7173">
+		<apiName>ListImplementationsL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>REComSession</cxxFunctionScopedName>
+				<cxxFunctionPrototype>void ListImplementationsL(TInt aServiceId, TUid aInterfaceUid, const RExtendedInterfacesArray &amp;aExtendedInterfaces, const TEComResolverParams &amp;aResolutionParameters, TUid aResolverUid, RImplInfoPtrArray &amp;aImplInfoArray, TBool aCapabilityCheck=ETrue)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>REComSession::ListImplementationsL(TInt,TUid,const RExtendedInterfacesArray &amp;,const TEComResolverParams &amp;,TUid,RImplInfoPtrArray &amp;,TBool)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aServiceId</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aInterfaceUid</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_r_array.xml#class_r_array">RExtendedInterfacesArray</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aExtendedInterfaces</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_e_com_resolver_params.xml#class_t_e_com_resolver_params">TEComResolverParams</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aResolutionParameters</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aResolverUid</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_pointer_array.xml#class_r_pointer_array">RImplInfoPtrArray</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aImplInfoArray</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCapabilityCheck</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>ETrue</cxxFunctionParameterDefaultValue>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/ecom/ecom.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="374"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_e_com_session_1a093a790384529b72bf224da4087e98aa">
+		<apiName>ResolveAndCreateImplL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>REComSession</cxxFunctionScopedName>
+				<cxxFunctionPrototype>TAny * ResolveAndCreateImplL(TUid aImplementationUid, TUid &amp;aInstanceKey, TAny *aCreationParameters, TBool aCreationParamsFlag)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>REComSession::ResolveAndCreateImplL(TUid,TUid &amp;,TAny *,TBool)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aImplementationUid</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aInstanceKey</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCreationParameters</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCreationParamsFlag</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/ecom/ecom.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="380"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_e_com_session_1aee8b4ee4672523ceaafb452b3ed04129">
+		<apiName>ResolveAndCreateImplL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>REComSession</cxxFunctionScopedName>
+				<cxxFunctionPrototype>TAny * ResolveAndCreateImplL(TUid aInterfaceUid, const TEComResolverParams &amp;aResolutionParameters, TUid &amp;aInstanceKey, TAny *aCreationParameters, TBool aCreationParamsFlag)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>REComSession::ResolveAndCreateImplL(TUid,const TEComResolverParams &amp;,TUid &amp;,TAny *,TBool)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aInterfaceUid</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_e_com_resolver_params.xml#class_t_e_com_resolver_params">TEComResolverParams</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aResolutionParameters</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aInstanceKey</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCreationParameters</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCreationParamsFlag</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/ecom/ecom.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="387"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_e_com_session_1a09fec66e0c3fb88dade75a89236407ef">
+		<apiName>ResolveAndCreateImplL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>REComSession</cxxFunctionScopedName>
+				<cxxFunctionPrototype>TAny * ResolveAndCreateImplL(TUid aInterfaceUid, const TEComResolverParams &amp;aResolutionParameters, TUid aResolverUid, TUid &amp;aInstanceKey, TAny *aCreationParameters, TBool aCreationParamsFlag)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>REComSession::ResolveAndCreateImplL(TUid,const TEComResolverParams &amp;,TUid,TUid &amp;,TAny *,TBool)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aInterfaceUid</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_e_com_resolver_params.xml#class_t_e_com_resolver_params">TEComResolverParams</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aResolutionParameters</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aResolverUid</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aInstanceKey</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCreationParameters</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCreationParamsFlag</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/ecom/ecom.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="395"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_e_com_session_1abc880a60575969a79c9e6bbdf840c178">
+		<apiName>ResolveAndCreateImplL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>REComSession</cxxFunctionScopedName>
+				<cxxFunctionPrototype>TAny * ResolveAndCreateImplL(TUid aInterfaceUid, const RExtendedInterfacesArray &amp;aExtendedInterfaces, const TEComResolverParams &amp;aResolutionParameters, TUid &amp;aInstanceKey, TAny *aCreationParameters, TBool aCreationParamsFlag)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>REComSession::ResolveAndCreateImplL(TUid,const RExtendedInterfacesArray &amp;,const TEComResolverParams &amp;,TUid &amp;,TAny *,TBool)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aInterfaceUid</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_r_array.xml#class_r_array">RExtendedInterfacesArray</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aExtendedInterfaces</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_e_com_resolver_params.xml#class_t_e_com_resolver_params">TEComResolverParams</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aResolutionParameters</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aInstanceKey</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCreationParameters</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCreationParamsFlag</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/ecom/ecom.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="403"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_e_com_session_1ae12b00aa297a28a32fecc96629d4252d">
+		<apiName>ResolveAndCreateImplL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>REComSession</cxxFunctionScopedName>
+				<cxxFunctionPrototype>TAny * ResolveAndCreateImplL(TUid aInterfaceUid, const RExtendedInterfacesArray &amp;aExtendedInterfaces, const TEComResolverParams &amp;aResolutionParameters, TUid aResolverUid, TUid &amp;aInstanceKey, TAny *aCreationParameters, TBool aCreationParamsFlag)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>REComSession::ResolveAndCreateImplL(TUid,const RExtendedInterfacesArray &amp;,const TEComResolverParams &amp;,TUid,TUid &amp;,TAny *,TBool)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aInterfaceUid</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_r_array.xml#class_r_array">RExtendedInterfacesArray</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aExtendedInterfaces</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_e_com_resolver_params.xml#class_t_e_com_resolver_params">TEComResolverParams</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aResolutionParameters</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aResolverUid</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aInstanceKey</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCreationParameters</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCreationParamsFlag</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/ecom/ecom.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="412"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_e_com_session_1a0d2ffe4bd1f98b1d8a71ec072e5d90fc">
+		<apiName>ResolveAndCreateImplL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>REComSession</cxxFunctionScopedName>
+				<cxxFunctionPrototype>TAny * ResolveAndCreateImplL(TInt aServiceId, TUid aInterfaceUid, const RExtendedInterfacesArray &amp;aExtendedInterfaces, const TEComResolverParams &amp;aResolutionParameters, TUid aResolverUid, TUid &amp;aInstanceKey, TAny *aCreationParameters, TBool aCreationParamsFlag)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>REComSession::ResolveAndCreateImplL(TInt,TUid,const RExtendedInterfacesArray &amp;,const TEComResolverParams &amp;,TUid,TUid &amp;,TAny *,TBool)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aServiceId</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aInterfaceUid</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_r_array.xml#class_r_array">RExtendedInterfacesArray</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aExtendedInterfaces</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_e_com_resolver_params.xml#class_t_e_com_resolver_params">TEComResolverParams</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aResolutionParameters</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aResolverUid</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aInstanceKey</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCreationParameters</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCreationParamsFlag</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/ecom/ecom.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="422"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_e_com_session_1ad15b5f8c3d1c6c9d43d821efdb8c8237">
+		<apiName>ProcessListExtendedInterfacesL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>REComSession</cxxFunctionScopedName>
+				<cxxFunctionPrototype>void ProcessListExtendedInterfacesL(const TUid &amp;aImplementationUid, RExtendedInterfacesArray &amp;aIfInfo)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>REComSession::ProcessListExtendedInterfacesL(const TUid &amp;,RExtendedInterfacesArray &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aImplementationUid</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_array.xml#class_r_array">RExtendedInterfacesArray</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIfInfo</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/ecom/ecom.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="426"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_e_com_session_1a582c21c2d6fb709e3d4dde22c5c5b80c">
+		<apiName>PackMatchStrAndExtendedInterfacesL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>REComSession</cxxFunctionScopedName>
+				<cxxFunctionPrototype>void PackMatchStrAndExtendedInterfacesL(const TEComResolverParams &amp;aResolutionParameters, const RExtendedInterfacesArray &amp;aExtendedInterfaces, RBuf8 &amp;aMatchStrExtInfBuf)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>REComSession::PackMatchStrAndExtendedInterfacesL(const TEComResolverParams &amp;,const RExtendedInterfacesArray &amp;,RBuf8 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_e_com_resolver_params.xml#class_t_e_com_resolver_params">TEComResolverParams</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aResolutionParameters</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_r_array.xml#class_r_array">RExtendedInterfacesArray</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aExtendedInterfaces</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_buf8.xml#class_r_buf8">RBuf8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMatchStrExtInfBuf</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/ecom/ecom.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="431"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_e_com_session_1a79c9cfc7259ed970796cc738a3e0bf0d">
+		<apiName>SetGetParametersL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>REComSession</cxxFunctionScopedName>
+				<cxxFunctionPrototype>static IMPORT_C void SetGetParametersL(const TIpcArgs &amp;aArgs)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>REComSession::SetGetParametersL(const TIpcArgs &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_ipc_args.xml#class_t_ipc_args">TIpcArgs</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aArgs</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/ecom/ecom.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="438"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxVariable id="class_r_e_com_session_1a39f3ea0172b7fbe6cd75007bebe38e28">
+		<apiName>iReserved1</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>REComSession</cxxVariableScopedName>
+				<cxxVariablePrototype>TInt iReserved1</cxxVariablePrototype>
+				<cxxVariableNameLookup>REComSession::iReserved1</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/ecom/ecom.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="443"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Not used </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_r_e_com_session_1a5ffdb3cbe4a48b2f1b3cc2e4373138d5">
+		<apiName>iReserved3</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>REComSession</cxxVariableScopedName>
+				<cxxVariablePrototype>TInt iReserved3</cxxVariablePrototype>
+				<cxxVariableNameLookup>REComSession::iReserved3</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/ecom/ecom.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="446"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>not used </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_r_e_com_session_1af3969277a98f92ae52eda3800fb974fe">
+		<apiName>iReserved2</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>REComSession</cxxVariableScopedName>
+				<cxxVariablePrototype>TInt iReserved2</cxxVariablePrototype>
+				<cxxVariableNameLookup>REComSession::iReserved2</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/ecom/ecom.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="448"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>not used </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxClassInherits>
+		<cxxClassInheritsDetail>
+			<cxxClassFunctionInherited href="class_r_e_com_session.xml#class_r_handle_base_1a5acffa0d0548854c050e087b53e9036a">RHandleBase::Attributes()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_e_com_session.xml#class_r_handle_base_1a728f019e766bb5928a76f834107f28b3">RHandleBase::BTraceId()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_e_com_session.xml#class_r_handle_base_1ad1a439467a218ac000b1b1d6901e5a8a">RHandleBase::DoExtendedClose()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_e_com_session.xml#class_r_handle_base_1a8428cab2039187ea1b5206d26c72b4e3">RHandleBase::Duplicate(const RThread &amp;,TOwnerType)</cxxClassFunctionInherited>
+			<cxxClassEnumeratorInherited href="class_r_e_com_session.xml#class_r_handle_base_1ae1e84a8b8292c5a91e9f67f5834f84eba4a88c7aaa037ffebbd6d07e96e50deea">RHandleBase::EDirectReadAccess</cxxClassEnumeratorInherited>
+			<cxxClassEnumeratorInherited href="class_r_e_com_session.xml#class_r_handle_base_1ae1e84a8b8292c5a91e9f67f5834f84eba16b9c662c1433cd95304b5f94b092342">RHandleBase::EDirectWriteAccess</cxxClassEnumeratorInherited>
+			<cxxClassEnumeratorInherited href="class_r_e_com_session.xml#class_r_handle_base_1ae1e84a8b8292c5a91e9f67f5834f84eba7777915ffc30609e5659c341a1c2392c">RHandleBase::EReadAccess</cxxClassEnumeratorInherited>
+			<cxxClassEnumeratorInherited href="class_r_e_com_session.xml#class_r_handle_base_1ae1e84a8b8292c5a91e9f67f5834f84ebacf44af0b945bad7aea199fab102472a2">RHandleBase::EWriteAccess</cxxClassEnumeratorInherited>
+			<cxxClassFunctionInherited href="class_r_e_com_session.xml#class_r_handle_base_1a73491dd5bd728ba4ce1199b65e2e5f59">RHandleBase::FullName()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_e_com_session.xml#class_r_handle_base_1ad8eef16c4499e3fb2a69a4206a4bb48e">RHandleBase::FullName(TDes &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_e_com_session.xml#class_r_handle_base_1a10a02b67da6e5350b87729c062331c02">RHandleBase::Handle()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_e_com_session.xml#class_r_handle_base_1a2695b04020246384d6af8480101d167a">RHandleBase::HandleInfo(THandleInfo *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_e_com_session.xml#class_r_handle_base_1aa937149e5311d8ba4f95b05a1163bd86">RHandleBase::Name()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_e_com_session.xml#class_r_handle_base_1a2ba493226719395d33452916cf2c7b5b">RHandleBase::NotifyDestruction(TRequestStatus &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_e_com_session.xml#class_r_handle_base_1a0f31804c3362e9c4e878f33688d19fef">RHandleBase::Open(const TFindHandleBase &amp;,TOwnerType)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_e_com_session.xml#class_r_handle_base_1a72abaf23694869e23eed8601bac08602">RHandleBase::OpenByName(const TDesC &amp;,TOwnerType,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_e_com_session.xml#class_r_handle_base_1aa4706b89afddb4d82a9d0e7b45e3f920">RHandleBase::RHandleBase()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_e_com_session.xml#class_r_handle_base_1aa1197a55c876356e33ec6bf5248ee33d">RHandleBase::RHandleBase(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_e_com_session.xml#class_r_handle_base_1a03c76caf06fd87df38da54b8b0c39660">RHandleBase::SetHandle(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_e_com_session.xml#class_r_handle_base_1aa3ccd98b5c883151329937098d98d3d2">RHandleBase::SetHandleNC(TInt)</cxxClassFunctionInherited>
+			<cxxClassVariableInherited href="class_r_e_com_session.xml#class_r_handle_base_1aeab89dcc0c851c282effbbc9edea54f3">RHandleBase::iHandle</cxxClassVariableInherited>
+			<cxxClassEnumerationInherited href="class_r_e_com_session.xml#class_r_handle_base_1ae1e84a8b8292c5a91e9f67f5834f84eb">RHandleBase:TAttributes</cxxClassEnumerationInherited>
+			<cxxClassFunctionInherited href="class_r_e_com_session.xml#class_r_session_base_1a3da427f00cf3e494b89119cfa5416771">RSessionBase::CreateSession(RServer2,const TVersion &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_e_com_session.xml#class_r_session_base_1a1266fd1eba520510d432b7711b6798eb">RSessionBase::CreateSession(RServer2,const TVersion &amp;,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_e_com_session.xml#class_r_session_base_1a5b14f997eebb6fe8ffa5436f7ea0bd27">RSessionBase::CreateSession(RServer2,const TVersion &amp;,TInt,TIpcSessionType,const TSecurityPolicy *,TRequestStatus *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_e_com_session.xml#class_r_session_base_1a5dade8a728ac0be73126d5ee132f1c78">RSessionBase::CreateSession(const TDesC &amp;,const TVersion &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_e_com_session.xml#class_r_session_base_1ad8f6693e1c8767a5cd3fa08886036f62">RSessionBase::CreateSession(const TDesC &amp;,const TVersion &amp;,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_e_com_session.xml#class_r_session_base_1a4760f8946a1aea481dbe039d47fb128c">RSessionBase::CreateSession(const TDesC &amp;,const TVersion &amp;,TInt,TIpcSessionType,const TSecurityPolicy *,TRequestStatus *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_e_com_session.xml#class_r_session_base_1a523d20c16d4b0e1ff0eed8e862675336">RSessionBase::CreateSession(const TDesC &amp;,const TVersion &amp;,TInt,TRequestStatus *)</cxxClassFunctionInherited>
+			<cxxClassEnumeratorInherited href="class_r_e_com_session.xml#class_r_session_base_1a0ffd23819f0045705bcf154b1388c34eae7384eae3f1daa950bfa43e68863940b">RSessionBase::EAutoAttach</cxxClassEnumeratorInherited>
+			<cxxClassEnumeratorInherited href="class_r_e_com_session.xml#class_r_session_base_1a0ffd23819f0045705bcf154b1388c34ea69c2eea3881891bd8b507f19b40a1d96">RSessionBase::EExplicitAttach</cxxClassEnumeratorInherited>
+			<cxxClassFunctionInherited href="class_r_e_com_session.xml#class_r_session_base_1a743760aa081d0b874a002d7bbdec9bb0">RSessionBase::Open(RMessagePtr2,TInt,TOwnerType)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_e_com_session.xml#class_r_session_base_1a1644c66054e6791ff1e3ae8b1f2b2a26">RSessionBase::Open(RMessagePtr2,TInt,const TSecurityPolicy &amp;,TOwnerType)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_e_com_session.xml#class_r_session_base_1a7d52cf0faf5fdf47dc58767e9ef1cda0">RSessionBase::Open(TInt,TOwnerType)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_e_com_session.xml#class_r_session_base_1a662b9ed2cc316a760f94117ac6c819bf">RSessionBase::Open(TInt,const TSecurityPolicy &amp;,TOwnerType)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_e_com_session.xml#class_r_session_base_1aafae0fbb037dfba020dc1a3bf045218d">RSessionBase::Send(TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_e_com_session.xml#class_r_session_base_1adbaf69bd23e69c674292833ecaa31cb7">RSessionBase::Send(TInt,const TIpcArgs &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_e_com_session.xml#class_r_session_base_1a6a2397638ec18679ceb89c283fa8a036">RSessionBase::SendReceive(TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_e_com_session.xml#class_r_session_base_1ae2dba89573f2555366cd102eca46b66e">RSessionBase::SendReceive(TInt,TRequestStatus &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_e_com_session.xml#class_r_session_base_1aa9e1777e878e9b09c940523be4367560">RSessionBase::SendReceive(TInt,const TIpcArgs &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_e_com_session.xml#class_r_session_base_1ad0a6921bd0ff2996da532c19c5968544">RSessionBase::SendReceive(TInt,const TIpcArgs &amp;,TRequestStatus &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_e_com_session.xml#class_r_session_base_1a880167f5ce0c78259477651c4af0a478">RSessionBase::SetReturnedHandle(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_e_com_session.xml#class_r_session_base_1a807b94b8b357ea6faf3f9e3905b56637">RSessionBase::SetReturnedHandle(TInt,RHandleBase &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_e_com_session.xml#class_r_session_base_1aa2a85cbf7ca636a046aab5062e8ed493">RSessionBase::SetReturnedHandle(TInt,const TSecurityPolicy &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_e_com_session.xml#class_r_session_base_1a7c402c51aee0b335fdba6deae5bb87d1">RSessionBase::ShareAuto()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_e_com_session.xml#class_r_session_base_1a70c86fa33cfd916e8c969e408e61d18c">RSessionBase::ShareProtected()</cxxClassFunctionInherited>
+			<cxxClassEnumerationInherited href="class_r_e_com_session.xml#class_r_session_base_1a0ffd23819f0045705bcf154b1388c34e">RSessionBase:TAttachMode</cxxClassEnumerationInherited>
+		</cxxClassInheritsDetail>
+	</cxxClassInherits>
+</cxxClass>

@@ -1,0 +1,201 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxStruct PUBLIC "-//NOKIA//DTD DITA C++ API Struct Reference Type v0.5.0//EN" "dtd/cxxStruct.dtd" >
+<cxxStruct id="struct_e_sock_1_1_t_sig_meta_ext_container">
+	<apiName>ESock::TSigMetaExtContainer</apiName>
+	<cxxStructDetail>
+		<cxxStructDefinition>
+			<cxxStructAccessSpecifier value="public"/>
+			<cxxStructDerivations>
+				<cxxClassDerivation>
+					<cxxClassDerivationAccessSpecifier value="public"/>
+					<cxxClassBaseClass href="class_messages_1_1_t_signature_base.xml#class_messages_1_1_t_signature_base">Messages::TSignatureBase</cxxClassBaseClass>
+				</cxxClassDerivation>
+			</cxxStructDerivations>
+			<cxxStructAPIItemLocation>
+				<cxxStructDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_nodemessages.h"/>
+				<cxxStructDeclarationFileLine name="lineNumber" value="220"/>
+				<cxxStructDefinitionFile name="filePath" value="K:/epoc32/include/comms-infras/ss_nodemessages.h"/>
+				<cxxStructDefinitionFileLineStart name="lineNumber" value="219"/>
+				<cxxStructDefinitionFileLineEnd name="lineNumber" value="236"/>
+			</cxxStructAPIItemLocation>
+		</cxxStructDefinition>
+		<apiDesc>
+			<p>Message signature to carry and own a reference on a <xref href="class_e_sock_1_1_r_meta_extension_container_c.xml#class_e_sock_1_1_r_meta_extension_container_c">RMetaExtensionContainerC</xref> The reference will be automatically aquired upon explicit construction The reference will be automatically released after dispatch or on error The <xref href="class_e_sock_1_1_r_meta_extension_container_c.xml#class_e_sock_1_1_r_meta_extension_container_c">RMetaExtensionContainerC</xref> to be posted MUST be open else a panic will occur (in udeb) </p>
+		</apiDesc>
+	</cxxStructDetail>
+	<cxxFunction id="struct_e_sock_1_1_t_sig_meta_ext_container_1a1c851bfc7b223c9b5e10f7583cb4f507">
+		<apiName>DispatchL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionVirtual/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>ESock::TSigMetaExtContainer</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual IMPORT_C void DispatchL(const Messages::TRuntimeCtxId &amp;aSender, const Messages::TRuntimeCtxId &amp;aRecipient)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>ESock::TSigMetaExtContainer::DispatchL(const Messages::TRuntimeCtxId &amp;,const Messages::TRuntimeCtxId &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_messages_1_1_t_signature_base.xml#class_messages_1_1_t_signature_base_1a947ba2d7cad684ab78784a56d802fd0a">Messages::TSignatureBase::DispatchL(const TRuntimeCtxId &amp;,const TRuntimeCtxId &amp;)</cxxFunctionReimplemented>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_messages_1_1_t_runtime_ctx_id.xml#class_messages_1_1_t_runtime_ctx_id">Messages::TRuntimeCtxId</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSender</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_messages_1_1_t_runtime_ctx_id.xml#class_messages_1_1_t_runtime_ctx_id">Messages::TRuntimeCtxId</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aRecipient</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_nodemessages.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="222"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="struct_e_sock_1_1_t_sig_meta_ext_container_1a85a7273f22dd473d3aaee36209702587">
+		<apiName>Error</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionVirtual/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>ESock::TSigMetaExtContainer</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual IMPORT_C void Error(const Messages::TRuntimeCtxId &amp;aSender, const Messages::TRuntimeCtxId &amp;aRecipient, TInt aError)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>ESock::TSigMetaExtContainer::Error(const Messages::TRuntimeCtxId &amp;,const Messages::TRuntimeCtxId &amp;,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_messages_1_1_t_signature_base.xml#class_messages_1_1_t_signature_base_1a59825b6e6033e8dfdf0476f5d04997d9">Messages::TSignatureBase::Error(const TRuntimeCtxId &amp;,const TRuntimeCtxId &amp;,TInt)</cxxFunctionReimplemented>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_messages_1_1_t_runtime_ctx_id.xml#class_messages_1_1_t_runtime_ctx_id">Messages::TRuntimeCtxId</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSender</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_messages_1_1_t_runtime_ctx_id.xml#class_messages_1_1_t_runtime_ctx_id">Messages::TRuntimeCtxId</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aRecipient</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aError</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_nodemessages.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="223"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="struct_e_sock_1_1_t_sig_meta_ext_container_1a6e63da1d4f25a16d1bf8ae7069df5df9">
+		<apiName>TSigMetaExtContainer</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>ESock::TSigMetaExtContainer</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TSigMetaExtContainer()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>ESock::TSigMetaExtContainer::TSigMetaExtContainer()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_nodemessages.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="226"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="226"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="226"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="struct_e_sock_1_1_t_sig_meta_ext_container_1a2f0121c31da5d34376ff4634f3db5b50">
+		<apiName>TSigMetaExtContainer</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionExplicit/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>ESock::TSigMetaExtContainer</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TSigMetaExtContainer(const Messages::TNodeSignal::TMessageId &amp;aMessageId, RMetaExtensionContainerC &amp;aConfig)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>ESock::TSigMetaExtContainer::TSigMetaExtContainer(const Messages::TNodeSignal::TMessageId &amp;,RMetaExtensionContainerC &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_messages_1_1_t_node_signal_1_1_t_message_id.xml#class_messages_1_1_t_node_signal_1_1_t_message_id">Messages::TNodeSignal::TMessageId</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMessageId</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_e_sock_1_1_r_meta_extension_container_c.xml#class_e_sock_1_1_r_meta_extension_container_c">RMetaExtensionContainerC</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aConfig</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_nodemessages.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="229"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="227"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="230"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxVariable id="struct_e_sock_1_1_t_sig_meta_ext_container_1aeb75123f9ec17785fcfb8b02da00b6cc">
+		<apiName>iConfig</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>EXPORT_DATA_VTABLE_AND_FN <apiRelation href="class_e_sock_1_1_r_meta_extension_container_c.xml#class_e_sock_1_1_r_meta_extension_container_c">RMetaExtensionContainerC</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>ESock::TSigMetaExtContainer</cxxVariableScopedName>
+				<cxxVariablePrototype>EXPORT_DATA_VTABLE_AND_FN RMetaExtensionContainerC iConfig</cxxVariablePrototype>
+				<cxxVariableNameLookup>ESock::TSigMetaExtContainer::iConfig</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_nodemessages.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="235"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxStructInherits>
+		<cxxStructInheritsDetail>
+			<cxxStructFunctionInherited href="struct_e_sock_1_1_t_sig_meta_ext_container.xml#class_messages_1_1_t_node_signal_1a3a3193ca2f47fb4f53d7576e42c21758">Messages::TNodeSignal::ClearMessageId()</cxxStructFunctionInherited>
+			<cxxStructFunctionInherited href="struct_e_sock_1_1_t_sig_meta_ext_container.xml#class_messages_1_1_t_node_signal_1a0a83a4a6924100e59150136ed19e1980">Messages::TNodeSignal::IsMessage()</cxxStructFunctionInherited>
+			<cxxStructFunctionInherited href="struct_e_sock_1_1_t_sig_meta_ext_container.xml#class_messages_1_1_t_node_signal_1ab39bb57767d4cb2d78b3795a0f5b78fa">Messages::TNodeSignal::MessageId()const</cxxStructFunctionInherited>
+			<cxxStructFunctionInherited href="struct_e_sock_1_1_t_sig_meta_ext_container.xml#class_messages_1_1_t_node_signal_1a153d2f0a3ddfb88a4b31ba3b4dfaff4e">Messages::TNodeSignal::TNodeSignal()</cxxStructFunctionInherited>
+			<cxxStructFunctionInherited href="struct_e_sock_1_1_t_sig_meta_ext_container.xml#class_messages_1_1_t_node_signal_1ae1d488c37ff67a75bd8e27b61c713a14">Messages::TNodeSignal::TNodeSignal(const TMessageId &amp;)</cxxStructFunctionInherited>
+			<cxxStructEnumeratorInherited href="struct_e_sock_1_1_t_sig_meta_ext_container.xml#class_messages_1_1_t_signal_base_1a5a29ec5d119ad8819cdd6629454fa47ca114844dc7f9584c17dece8485465ff3a">Messages::TSignalBase::KMaxInlineMessageSize</cxxStructEnumeratorInherited>
+			<cxxStructEnumeratorInherited href="struct_e_sock_1_1_t_sig_meta_ext_container.xml#class_messages_1_1_t_signal_base_1aac6470882a88863b23904c252e5664e0a3cbeff0418645692b0feb97202bcfdc5">Messages::TSignalBase::KMaxUnstoredOverhead</cxxStructEnumeratorInherited>
+			<cxxStructEnumerationInherited href="struct_e_sock_1_1_t_sig_meta_ext_container.xml#class_messages_1_1_t_signal_base_1a5a29ec5d119ad8819cdd6629454fa47c">Messages::TSignalBase:@54</cxxStructEnumerationInherited>
+			<cxxStructEnumerationInherited href="struct_e_sock_1_1_t_sig_meta_ext_container.xml#class_messages_1_1_t_signal_base_1aac6470882a88863b23904c252e5664e0">Messages::TSignalBase:@55</cxxStructEnumerationInherited>
+			<cxxStructFunctionInherited href="struct_e_sock_1_1_t_sig_meta_ext_container.xml#class_messages_1_1_t_signature_base_1a9827cf5d35ef6008b1c050ea967e9d2a">Messages::TSignatureBase::CRef()const</cxxStructFunctionInherited>
+			<cxxStructFunctionInherited href="struct_e_sock_1_1_t_sig_meta_ext_container.xml#class_messages_1_1_t_signature_base_1a44d907d9f0eca2b2f3c3800e7f8f944e">Messages::TSignatureBase::TSignatureBase()</cxxStructFunctionInherited>
+			<cxxStructFunctionInherited href="struct_e_sock_1_1_t_sig_meta_ext_container.xml#class_messages_1_1_t_signature_base_1af659f812c101d5933230dff25989d50e">Messages::TSignatureBase::TSignatureBase(const TNodeSignal::TMessageId &amp;)</cxxStructFunctionInherited>
+			<cxxStructFunctionInherited href="struct_e_sock_1_1_t_sig_meta_ext_container.xml#class_meta_1_1_m_meta_data_1a09e6daad7b43e0288fcd033702991dd9">Meta::MMetaData::GetAttribPtr(const TInt)const</cxxStructFunctionInherited>
+			<cxxStructFunctionInherited href="struct_e_sock_1_1_t_sig_meta_ext_container.xml#class_meta_1_1_m_meta_data_1a60edb1ccdf03129b7af1bcd9a297d456">Meta::MMetaData::GetVDataTable()const</cxxStructFunctionInherited>
+			<cxxStructFunctionInherited href="struct_e_sock_1_1_t_sig_meta_ext_container.xml#struct_meta_1_1_s_meta_data_1a80fa6d3672bc5aa2187ec04a3a1743a0">Meta::SMetaData::Check(TPtrC8 &amp;)const</cxxStructFunctionInherited>
+			<cxxStructFunctionInherited href="struct_e_sock_1_1_t_sig_meta_ext_container.xml#struct_meta_1_1_s_meta_data_1a603c6fa3e46a3de80de4091240ffa485">Meta::SMetaData::CheckTypeOf(TPtrC8 &amp;)const</cxxStructFunctionInherited>
+			<cxxStructFunctionInherited href="struct_e_sock_1_1_t_sig_meta_ext_container.xml#struct_meta_1_1_s_meta_data_1a9a8bea4b5a6069e86abaabceb314d254">Meta::SMetaData::Copy(const SMetaData &amp;)</cxxStructFunctionInherited>
+			<cxxStructFunctionInherited href="struct_e_sock_1_1_t_sig_meta_ext_container.xml#struct_meta_1_1_s_meta_data_1a7da9e8c04d63707dc93f6dc21cb57389">Meta::SMetaData::GetTypeId()const</cxxStructFunctionInherited>
+			<cxxStructFunctionInherited href="struct_e_sock_1_1_t_sig_meta_ext_container.xml#struct_meta_1_1_s_meta_data_1a0ca2bb0dce010fdbe56eb03a41dbc3ac">Meta::SMetaData::IsTypeOf(const STypeId &amp;)const</cxxStructFunctionInherited>
+			<cxxStructFunctionInherited href="struct_e_sock_1_1_t_sig_meta_ext_container.xml#struct_meta_1_1_s_meta_data_1a43786a968494243167f11f116ad6b8b3">Meta::SMetaData::Length()const</cxxStructFunctionInherited>
+			<cxxStructFunctionInherited href="struct_e_sock_1_1_t_sig_meta_ext_container.xml#struct_meta_1_1_s_meta_data_1a101e5580b1a0df7220daf747ec761257">Meta::SMetaData::Load(TPtrC8 &amp;)</cxxStructFunctionInherited>
+			<cxxStructFunctionInherited href="struct_e_sock_1_1_t_sig_meta_ext_container.xml#struct_meta_1_1_s_meta_data_1aa8777745426eb505890cc8147b7029f1">Meta::SMetaData::SMetaData()</cxxStructFunctionInherited>
+			<cxxStructFunctionInherited href="struct_e_sock_1_1_t_sig_meta_ext_container.xml#struct_meta_1_1_s_meta_data_1a68997efcd068e284db4646b52969520f">Meta::SMetaData::Store(TDes8 &amp;)const</cxxStructFunctionInherited>
+			<cxxStructFunctionInherited href="struct_e_sock_1_1_t_sig_meta_ext_container.xml#struct_meta_1_1_s_meta_data_1aa491df867ecdad76f3e5455da5bd4bdf">Meta::SMetaData::~SMetaData()</cxxStructFunctionInherited>
+			<cxxStructFunctionInherited href="struct_e_sock_1_1_t_sig_meta_ext_container.xml#class_meta_1_1_s_meta_data_net_ctor_1a98544396de55db976adace5ff6678c51">Meta::SMetaDataNetCtor::operator new(TUint,TDes8 &amp;)</cxxStructFunctionInherited>
+		</cxxStructInheritsDetail>
+	</cxxStructInherits>
+</cxxStruct>

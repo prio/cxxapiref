@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="cxxFriendTemplateParameters"/>
+<meta name="abstract" content="Container for elements to describe each of the template parameters of a function template that is also a friend function."/>
+<meta name="description" content="Container for elements to describe each of the template parameters of a function template that is also a friend function."/>
+<meta name="DC.Relation" scheme="URI" content="../cxxFriend/cxxFriend_module.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="cxxFriendTemplateParameters"/>
+<meta name="DC.Language" content="en-us"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>cxxFriendTemplateParameters</title>
+<link rel="stylesheet" type="text/css" href="../nokiacxxref.css"/></head>
+<body class="element" id="cxxFriendTemplateParameters"><a name="cxxFriendTemplateParameters"><!-- --></a>
+
+
+<h1 class="topictitle1">cxxFriendTemplateParameters</h1>
+
+
+<div><p>Container for elements to describe each of the template
+parameters of a function template that is also a friend function.</p>
+
+<div class="section" id="cxxFriendTemplateParameters__section_BB16EAA97F01427CAFFFB15C63DEAC8D"><a name="cxxFriendTemplateParameters__section_BB16EAA97F01427CAFFFB15C63DEAC8D"><!-- --></a><h2 class="sectiontitle">Description</h2>          
+  <p>The &lt;cxxFriendTemplateParameters&gt;
+element contains child elements that describe the template parameters
+of a friend function template.</p>
+<p>See ISO/IEC 14882:2003(E) 14.1
+Template parameters [temp.param]</p>
+         </div>
+
+<div class="example" id="cxxFriendTemplateParameters__example_7637310D62AB4BDB88913D5B7CC94BDC"><a name="cxxFriendTemplateParameters__example_7637310D62AB4BDB88913D5B7CC94BDC"><!-- --></a><h2 class="sectiontitle">Example</h2>          
+  <p>Given this code:</p>
+             <pre class="codeblock">/**
+ @tparam T The type of the first function object.
+ @tparam U The type of the second function object.
+ @return 1 on success, 0 on failure.
+ */
+template&lt;typename T, typename U&gt;
+int templateFunction(T&amp; x, U&amp; y)
+{
+} 
+            </pre>
+<p>Then function <tt>templateFunction    
+            </tt> would have the following <tt>cxxFriendTemplateParameters</tt> element:</p>
+             <pre class="codeblock">&lt;cxxFriendTemplateParameters&gt;
+  &lt;cxxFriendTemplateParameter&gt;
+    &lt;cxxFriendTemplateParameterType&gt;typename T&lt;/cxxFriendTemplateParameterType&gt;
+    &lt;apiDefNote&gt;The type of the first function object. &lt;/apiDefNote&gt;
+  &lt;/cxxFriendTemplateParameter&gt;
+  &lt;cxxFriendTemplateParameter&gt;
+    &lt;cxxFriendTemplateParameterType&gt;typename U&lt;/cxxFriendTemplateParameterType&gt;
+    &lt;apiDefNote&gt;The type of the second function object. &lt;/apiDefNote&gt;
+  &lt;/cxxFriendTemplateParameter&gt;
+&lt;/cxxFriendTemplateParameters&gt;
+            </pre>
+                      </div>
+
+<div class="elementContainedBy"><h2 class="sectiontitle">Contained by</h2>
+
+<p id="cxxFriendTemplateParameters__d7519e8033"><a name="cxxFriendTemplateParameters__d7519e8033"><!-- --></a>
+<a href="cxxFriendDefinition.html" title="Describes all of the details of a C++ friend function.">cxxFriendDefinition</a> 
+</p>
+
+</div>
+
+<div class="elementContains"><h2 class="sectiontitle">Contains</h2>
+
+<p id="cxxFriendTemplateParameters__d7519e8045"><a name="cxxFriendTemplateParameters__d7519e8045"><!-- --></a>
+<a href="cxxFriendTemplateParameter.html" title="Contains the type of the template parameter and any documentation associated with the parameter.">cxxFriendTemplateParameter</a> 
+</p>
+
+</div>
+
+<div class="elementContentModel"><h2 class="sectiontitle">Content Model</h2>
+
+<p id="cxxFriendTemplateParameters__d7519e8057"><a name="cxxFriendTemplateParameters__d7519e8057"><!-- --></a>
+<a href="cxxFriendTemplateParameter.html" title="Contains the type of the template parameter and any documentation associated with the parameter.">cxxFriendTemplateParameter</a> 
+(<em>at least 1</em>)
+</p>
+
+</div>
+
+<div class="elementAttList"/>
+
+<div class="elementClassValue"><h2 class="sectiontitle">Inheritance</h2>
+
+<p id="cxxFriendTemplateParameters__d7519e8074"><a name="cxxFriendTemplateParameters__d7519e8074"><!-- --></a>
+ topic/<span class="keyword">ph</span> reference/<span class="keyword">ph</span> apiRef/<span class="keyword">apiDefItem</span> apiOperation/<span class="keyword">apiDefItem</span> cxxFriend/<span class="keyword">cxxFriendTemplateParameters</span></p>
+
+</div>
+
+</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../cxxFriend/cxxFriend_module.html" title="Defines a top-level container for all the elements necessary to describe an C++ API friend.">cxxFriend module</a></div>
+</div>
+</div>
+
+</body>
+</html>

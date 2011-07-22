@@ -1,0 +1,1464 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_t_ipc_args">
+	<apiName>TIpcArgs</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="6346"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="6345"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="6548"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>A Version 2 client/server class that clients use to package the arguments to be sent to a server.</p>
+			<p>The object can package up to 4 arguments together with information about each argument&apos;s type, width and accessibility; it is also possible for the package to contain zero arguments. In addition to the default constructor, the class has four templated constructors, allowing an object of this type to be constructed for 0, 1, 2, 3 or 4 arguments.</p>
+			<p>Internally, the arguments are stored in a simple TInt array. Consecutive arguments in a constructor&apos;s parameter list are put into consecutive slots in the array. The <xref href="class_t_ipc_args.xml#class_t_ipc_args_1ac03a242f06078d4ff93be650ef85f9fe">Set()</xref> overloaded functions can be used to set argument values into specific slots within this array. </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxEnumeration id="class_t_ipc_args_1a7260fcc2a1a91efd15fcd187d6d4ebd8">
+		<apiName>TArgType</apiName>
+		<cxxEnumerationDetail>
+			<cxxEnumerationDefinition>
+				<cxxEnumerationAccessSpecifier value="public"/>
+				<cxxEnumerationScopedName>TIpcArgs</cxxEnumerationScopedName>
+				<cxxEnumerationPrototype>TArgType</cxxEnumerationPrototype>
+				<cxxEnumerationNameLookup>TIpcArgs:TArgType</cxxEnumerationNameLookup>
+				<cxxEnumerators>
+					<cxxEnumerator id="class_t_ipc_args_1a7260fcc2a1a91efd15fcd187d6d4ebd8ab01e45a70ca4ae7458d24da39cecb5c9">
+						<apiName>EUnspecified</apiName>
+						<cxxEnumeratorScopedName>TIpcArgs</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EUnspecified = 0</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TIpcArgs::EUnspecified</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="0"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="6356"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Type not specified. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_ipc_args_1a7260fcc2a1a91efd15fcd187d6d4ebd8a71dbddd4d331c9fe56b2c089d7e86507">
+						<apiName>EHandle</apiName>
+						<cxxEnumeratorScopedName>TIpcArgs</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EHandle = 1</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TIpcArgs::EHandle</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="1"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="6357"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Handle type. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_ipc_args_1a7260fcc2a1a91efd15fcd187d6d4ebd8afe737d7c974d09f0c3059dd8f054ee1b">
+						<apiName>EFlagDes</apiName>
+						<cxxEnumeratorScopedName>TIpcArgs</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EFlagDes = 4</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TIpcArgs::EFlagDes</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="4"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="6358"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Descriptor type. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_ipc_args_1a7260fcc2a1a91efd15fcd187d6d4ebd8ac1fc00435f8025c142351d8f87173559">
+						<apiName>EFlagConst</apiName>
+						<cxxEnumeratorScopedName>TIpcArgs</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EFlagConst = 2</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TIpcArgs::EFlagConst</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="2"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="6359"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Read only type. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_ipc_args_1a7260fcc2a1a91efd15fcd187d6d4ebd8aa363061ea6a069c50db61bc6ba35f857">
+						<apiName>EFlag16Bit</apiName>
+						<cxxEnumeratorScopedName>TIpcArgs</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EFlag16Bit = 1</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TIpcArgs::EFlag16Bit</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="1"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="6360"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>16 bit rather than 8 bit. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_ipc_args_1a7260fcc2a1a91efd15fcd187d6d4ebd8a73a3089d18f19ef8782eef3a7385ad06">
+						<apiName>EDes8</apiName>
+						<cxxEnumeratorScopedName>TIpcArgs</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EDes8 = EFlagDes</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TIpcArgs::EDes8</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="EFlagDes"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="6361"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>8 bit read/write descriptor. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_ipc_args_1a7260fcc2a1a91efd15fcd187d6d4ebd8a042190cb4e241507a043217eb0f5c79f">
+						<apiName>EDes16</apiName>
+						<cxxEnumeratorScopedName>TIpcArgs</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EDes16 = EFlagDes|EFlag16Bit</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TIpcArgs::EDes16</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="EFlagDes|EFlag16Bit"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="6362"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>16 bit read/write descriptor. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_ipc_args_1a7260fcc2a1a91efd15fcd187d6d4ebd8a5042fbaa074d3699d8d3705b67ef538f">
+						<apiName>EDesC8</apiName>
+						<cxxEnumeratorScopedName>TIpcArgs</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EDesC8 = EFlagDes|EFlagConst</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TIpcArgs::EDesC8</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="EFlagDes|EFlagConst"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="6363"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>8 bit read only descriptor. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_ipc_args_1a7260fcc2a1a91efd15fcd187d6d4ebd8a43eb16f61c1ac2f1c873b48d2ed35e9c">
+						<apiName>EDesC16</apiName>
+						<cxxEnumeratorScopedName>TIpcArgs</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EDesC16 = EFlagDes|EFlagConst|EFlag16Bit</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TIpcArgs::EDesC16</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="EFlagDes|EFlagConst|EFlag16Bit"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="6364"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>16 bit read only descriptor. </p>
+						</apiDesc>
+					</cxxEnumerator>
+				</cxxEnumerators>
+				<cxxEnumerationAPIItemLocation>
+					<cxxEnumerationDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxEnumerationDeclarationFileLine name="lineNumber" value="6355"/>
+					<cxxEnumerationDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxEnumerationDefinitionFileLineStart name="lineNumber" value="6354"/>
+					<cxxEnumerationDefinitionFileLineEnd name="lineNumber" value="6365"/>
+				</cxxEnumerationAPIItemLocation>
+			</cxxEnumerationDefinition>
+			<apiDesc>
+				<p>Argument types; some of these may be ORed together to specify type, accessibility, and width. </p>
+			</apiDesc>
+		</cxxEnumerationDetail>
+	</cxxEnumeration>
+	<cxxEnumeration id="class_t_ipc_args_1a33a24bc5ad504fc893205770d156bc2e">
+		<apiName>@18</apiName>
+		<cxxEnumerationDetail>
+			<cxxEnumerationDefinition>
+				<cxxEnumerationAccessSpecifier value="public"/>
+				<cxxEnumerationScopedName>TIpcArgs</cxxEnumerationScopedName>
+				<cxxEnumerationPrototype>@18</cxxEnumerationPrototype>
+				<cxxEnumerationNameLookup>TIpcArgs:@18</cxxEnumerationNameLookup>
+				<cxxEnumerators>
+					<cxxEnumerator id="class_t_ipc_args_1a33a24bc5ad504fc893205770d156bc2ea1f3e77eb7b9d90fb1a0524a41b16ca69">
+						<apiName>KBitsPerType</apiName>
+						<cxxEnumeratorScopedName>TIpcArgs</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>KBitsPerType = 3</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TIpcArgs::KBitsPerType</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="3"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="6373"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Number of bits of type information used for each of the 4 arguments. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_ipc_args_1a33a24bc5ad504fc893205770d156bc2ea6a71f032cd35849921960bd2f37d8307">
+						<apiName>KPinArgShift</apiName>
+						<cxxEnumeratorScopedName>TIpcArgs</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>KPinArgShift = KBitsPerType*KMaxMessageArguments</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TIpcArgs::KPinArgShift</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="KBitsPerType*KMaxMessageArguments"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="6374"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Bit number of the start of the pin flags. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_ipc_args_1a33a24bc5ad504fc893205770d156bc2eae8318d30370bb982cc6b93d28ec3fc11">
+						<apiName>KPinArg0</apiName>
+						<cxxEnumeratorScopedName>TIpcArgs</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>KPinArg0 = 1&lt;&lt;(KPinArgShift+0)</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TIpcArgs::KPinArg0</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="1&amp;lt;&amp;lt;(KPinArgShift+0)"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="6375"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Set to pin argument at index 0. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_ipc_args_1a33a24bc5ad504fc893205770d156bc2ea6772894f72a2ff1f6cc30c25d778ad05">
+						<apiName>KPinArg1</apiName>
+						<cxxEnumeratorScopedName>TIpcArgs</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>KPinArg1 = 1&lt;&lt;(KPinArgShift+1)</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TIpcArgs::KPinArg1</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="1&amp;lt;&amp;lt;(KPinArgShift+1)"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="6376"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Set to pin argument at index 1. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_ipc_args_1a33a24bc5ad504fc893205770d156bc2eae4788193782229d5b2d968c7fa09fed0">
+						<apiName>KPinArg2</apiName>
+						<cxxEnumeratorScopedName>TIpcArgs</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>KPinArg2 = 1&lt;&lt;(KPinArgShift+2)</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TIpcArgs::KPinArg2</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="1&amp;lt;&amp;lt;(KPinArgShift+2)"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="6377"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Set to pin argument at index 2. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_ipc_args_1a33a24bc5ad504fc893205770d156bc2ead9a8cd8ebfcc200647223098d59b9ac2">
+						<apiName>KPinArg3</apiName>
+						<cxxEnumeratorScopedName>TIpcArgs</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>KPinArg3 = 1&lt;&lt;(KPinArgShift+3)</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TIpcArgs::KPinArg3</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="1&amp;lt;&amp;lt;(KPinArgShift+3)"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="6378"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Set to pin argument at index 3. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_t_ipc_args_1a33a24bc5ad504fc893205770d156bc2ea591a28f5f620a4852bb124ecee962cbf">
+						<apiName>KPinMask</apiName>
+						<cxxEnumeratorScopedName>TIpcArgs</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>KPinMask = 0xf&lt;&lt;KPinArgShift</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TIpcArgs::KPinMask</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="0xf&amp;lt;&amp;lt;KPinArgShift"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="6379"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>The bits used for the pinning attributes of each argument. </p>
+						</apiDesc>
+					</cxxEnumerator>
+				</cxxEnumerators>
+				<cxxEnumerationAPIItemLocation>
+					<cxxEnumerationDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxEnumerationDeclarationFileLine name="lineNumber" value="6372"/>
+					<cxxEnumerationDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxEnumerationDefinitionFileLineStart name="lineNumber" value="6371"/>
+					<cxxEnumerationDefinitionFileLineEnd name="lineNumber" value="6380"/>
+				</cxxEnumerationAPIItemLocation>
+			</cxxEnumerationDefinition>
+			<apiDesc/>
+		</cxxEnumerationDetail>
+	</cxxEnumeration>
+	<cxxEnumeration id="class_t_ipc_args_1aaef9fe1f73ce5fd8856d0f608b5ebb56">
+		<apiName>TNothing</apiName>
+		<cxxEnumerationDetail>
+			<cxxEnumerationDefinition>
+				<cxxEnumerationAccessSpecifier value="public"/>
+				<cxxEnumerationScopedName>TIpcArgs</cxxEnumerationScopedName>
+				<cxxEnumerationPrototype>TNothing</cxxEnumerationPrototype>
+				<cxxEnumerationNameLookup>TIpcArgs:TNothing</cxxEnumerationNameLookup>
+				<cxxEnumerators>
+					<cxxEnumerator id="class_t_ipc_args_1aaef9fe1f73ce5fd8856d0f608b5ebb56aa65c48fcc81d81d98b39ab50eb2e9b2c">
+						<apiName>ENothing</apiName>
+						<cxxEnumeratorScopedName>TIpcArgs</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ENothing</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>TIpcArgs::ENothing</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="6399"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>An enum value that can be used to indicate an empty or unused argument to a server. For example:</p>
+							<p>
+								<codeblock>                  TIpcArgs args(arg1, TIpcArgs::ENothing, arg2);</codeblock>
+							</p>
+							<p>This argument will have an undefined value when the server receives the message. </p>
+						</apiDesc>
+					</cxxEnumerator>
+				</cxxEnumerators>
+				<cxxEnumerationAPIItemLocation>
+					<cxxEnumerationDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxEnumerationDeclarationFileLine name="lineNumber" value="6386"/>
+					<cxxEnumerationDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxEnumerationDefinitionFileLineStart name="lineNumber" value="6386"/>
+					<cxxEnumerationDefinitionFileLineEnd name="lineNumber" value="6399"/>
+				</cxxEnumerationAPIItemLocation>
+			</cxxEnumerationDefinition>
+			<apiDesc>
+				<p>Indicates a Null argument. </p>
+			</apiDesc>
+		</cxxEnumerationDetail>
+	</cxxEnumeration>
+	<cxxFunction id="class_t_ipc_args_1af4d923af310c0150da6c4788ba96c88b">
+		<apiName>TIpcArgs</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TIpcArgs</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TIpcArgs()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TIpcArgs::TIpcArgs()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="6410"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="6408"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="6410"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Default constructor.</p>
+				<p>An argument package constructed using this constructor has no arguments; however, arguments can subsequently be set into this argument package object using the <xref href="class_t_ipc_args.xml#class_t_ipc_args_1ac03a242f06078d4ff93be650ef85f9fe">Set()</xref> member functions. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_ipc_args_1abc0af6c0ca5d6b3f38b0ef5a791658fe">
+		<apiName>TIpcArgs</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionExplicit/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TIpcArgs</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TIpcArgs(T0 a0)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TIpcArgs::TIpcArgs(T0)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>T0</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>a0</cxxFunctionParameterDeclarationName>
+						<apiDefNote>An argument of general class type T0 to be contained by this object. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="6422"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="6421"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="6425"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>A templated constructor that constructs the argument package; it takes 1 argument.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_ipc_args_1a0ee2721bd393e09ce4d891a3cf4571a2">
+		<apiName>TIpcArgs</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TIpcArgs</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TIpcArgs(T0 a0, T1 a1)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TIpcArgs::TIpcArgs(T0,T1)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>T0</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>a0</cxxFunctionParameterDeclarationName>
+						<apiDefNote>An argument of general class type T0 to be contained by this object. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>T1</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>a1</cxxFunctionParameterDeclarationName>
+						<apiDefNote>An argument of general class type T1 to be contained by this object. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="6439"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="6438"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="6443"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>A templated constructor that constructs the argument package; it takes 2 arguments.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_ipc_args_1adc2aedaa072b007d3357b145953e8c58">
+		<apiName>TIpcArgs</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TIpcArgs</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TIpcArgs(T0 a0, T1 a1, T2 a2)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TIpcArgs::TIpcArgs(T0,T1,T2)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>T0</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>a0</cxxFunctionParameterDeclarationName>
+						<apiDefNote>An argument of general class type T0 to be contained by this object. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>T1</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>a1</cxxFunctionParameterDeclarationName>
+						<apiDefNote>An argument of general class type T1 to be contained by this object. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>T2</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>a2</cxxFunctionParameterDeclarationName>
+						<apiDefNote>An argument of general class type T2 to be contained by this object. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="6459"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="6458"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="6464"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>A templated constructor that constructs the argument package; it takes 3 arguments.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_ipc_args_1a8adae5282fe862cb6629702f7128c463">
+		<apiName>TIpcArgs</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TIpcArgs</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TIpcArgs(T0 a0, T1 a1, T2 a2, T3 a3)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TIpcArgs::TIpcArgs(T0,T1,T2,T3)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>T0</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>a0</cxxFunctionParameterDeclarationName>
+						<apiDefNote>An argument of general class type T0 to be contained by this object. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>T1</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>a1</cxxFunctionParameterDeclarationName>
+						<apiDefNote>An argument of general class type T1 to be contained by this object. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>T2</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>a2</cxxFunctionParameterDeclarationName>
+						<apiDefNote>An argument of general class type T2 to be contained by this object. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>T3</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>a3</cxxFunctionParameterDeclarationName>
+						<apiDefNote>An argument of general class type T3 to be contained by this object. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="6482"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="6481"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="6488"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>A templated constructor that constructs the argument package; it takes 4 arguments.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_ipc_args_1ac03a242f06078d4ff93be650ef85f9fe">
+		<apiName>Set</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TIpcArgs</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void Set(TInt aIndex, TNothing)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TIpcArgs::Set(TInt,TNothing)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_ipc_args.xml#_1aaef9fe1f73ce5fd8856d0f608b5ebb56">TNothing</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="6490"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="6775"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="6776"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Sets an argument to default value and type. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_ipc_args_1a511df8bd514f7f4b4ac27bfc3f6f1d57">
+		<apiName>Set</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TIpcArgs</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void Set(TInt aIndex, TInt aValue)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TIpcArgs::Set(TInt,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote>An index value that identifies the slot in the array of arguments into which the argument value is to be placed. This must be a value in the range 0 to 3. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aValue</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The argument value. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="6491"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="6789"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="6793"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Sets an argument value of TInt type.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_ipc_args_1aa241f1a5e1badaa6db253c96a7ec5b7b">
+		<apiName>Set</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TIpcArgs</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void Set(TInt aIndex, const TAny *aValue)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TIpcArgs::Set(TInt,const TAny *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote>An index value that identifies the slot in the array of arguments into which the argument value is to be placed. This must be a value in the range 0 to 3. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aValue</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The argument value. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="6492"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="6806"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="6810"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Sets an argument value of TAny* type.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_ipc_args_1a1a3217bd6000d37a9b04b88a9315b7ab">
+		<apiName>Set</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TIpcArgs</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void Set(TInt aIndex, RHandleBase aValue)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TIpcArgs::Set(TInt,RHandleBase)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote>An index value that identifies the slot in the array of arguments into which the argument value is to be placed. This must be a value in the range 0 to 3. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_handle_base.xml#class_r_handle_base">RHandleBase</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aValue</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The argument value. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="6493"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="6823"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="6827"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Sets an argument value of <xref href="class_r_handle_base.xml#class_r_handle_base">RHandleBase</xref> type.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_ipc_args_1aa94e31025644e0c90b5a23ba34025701">
+		<apiName>Set</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TIpcArgs</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void Set(TInt aIndex, const TDesC8 *aValue)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TIpcArgs::Set(TInt,const TDesC8 *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote>An index value that identifies the slot in the array of arguments into which the argument value is to be placed. This must be a value in the range 0 to 3. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aValue</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The argument value. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="6494"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="6840"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="6844"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Sets an argument value TDesC8* type.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_ipc_args_1ad02d884589841ea36832095243f37129">
+		<apiName>Set</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TIpcArgs</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void Set(TInt aIndex, const TDesC16 *aValue)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TIpcArgs::Set(TInt,const TDesC16 *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote>An index value that identifies the slot in the array of arguments into which the argument value is to be placed. This must be a value in the range 0 to 3. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC16</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aValue</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The argument value. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="6496"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="6859"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="6863"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Sets an argument value of TDesC16* type.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_ipc_args_1ae666c99b175ec45f5e20d6835dbee4dc">
+		<apiName>Set</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TIpcArgs</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void Set(TInt aIndex, TDes8 *aValue)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TIpcArgs::Set(TInt,TDes8 *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote>An index value that identifies the slot in the array of arguments into which the argument value is to be placed. This must be a value in the range 0 to 3. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aValue</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The argument value. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="6498"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="6878"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="6882"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Sets an argument value of TDes8* type.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_ipc_args_1a47adbf42a5250a123c34948ab1439d81">
+		<apiName>Set</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TIpcArgs</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void Set(TInt aIndex, TDes16 *aValue)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TIpcArgs::Set(TInt,TDes16 *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote>An index value that identifies the slot in the array of arguments into which the argument value is to be placed. This must be a value in the range 0 to 3. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des16.xml#class_t_des16">TDes16</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aValue</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The argument value. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="6500"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="6897"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="6901"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Sets an argument value of TDes16* type.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_ipc_args_1a2c4b4da02ccd8a855098ac9cd328ad26">
+		<apiName>PinArgs</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="class_t_ipc_args.xml#class_t_ipc_args">TIpcArgs</apiRelation> &amp;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TIpcArgs</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TIpcArgs &amp; PinArgs(TBool aPinArg0=ETrue, TBool aPinArg1=ETrue, TBool aPinArg2=ETrue, TBool aPinArg3=ETrue)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TIpcArgs::PinArgs(TBool,TBool,TBool,TBool)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPinArg0</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>ETrue</cxxFunctionParameterDefaultValue>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPinArg1</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>ETrue</cxxFunctionParameterDefaultValue>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPinArg2</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>ETrue</cxxFunctionParameterDefaultValue>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPinArg3</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>ETrue</cxxFunctionParameterDefaultValue>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="6503"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="6916"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="6928"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Allows the client to specify whether each argument of the <xref href="class_t_ipc_args.xml#class_t_ipc_args">TIpcArgs</xref> object will be pinned before being sent to the server.</p>
+				<p>To pin all the arguments in the <xref href="class_t_ipc_args.xml#class_t_ipc_args">TIpcArgs</xref> object pass no parameters to this method.</p>
+				<p>A reference to this <xref href="class_t_ipc_args.xml#class_t_ipc_args">TIpcArgs</xref> object that can be passed as a parameter to one of the overloads the DSession::Send() and DSession::SendReceive() methods. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_ipc_args_1a859434f7589ee02d8f9b757f847e1207">
+		<apiName>Type</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="class_t_ipc_args.xml#_1a7260fcc2a1a91efd15fcd187d6d4ebd8">TArgType</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TIpcArgs</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline static TArgType Type(TNothing)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TIpcArgs::Type(TNothing)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_ipc_args.xml#_1aaef9fe1f73ce5fd8856d0f608b5ebb56">TNothing</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="6505"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="6931"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="6932"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_ipc_args_1a073bbe9b435d5513a6af9de2e613eb9a">
+		<apiName>Type</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="class_t_ipc_args.xml#_1a7260fcc2a1a91efd15fcd187d6d4ebd8">TArgType</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TIpcArgs</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline static TArgType Type(TInt)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TIpcArgs::Type(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="6506"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="6933"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="6934"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_ipc_args_1ac4d42b368f801b091507db9503716fa9">
+		<apiName>Type</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="class_t_ipc_args.xml#_1a7260fcc2a1a91efd15fcd187d6d4ebd8">TArgType</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TIpcArgs</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline static TArgType Type(const TAny *)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TIpcArgs::Type(const TAny *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="6507"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="6935"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="6936"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_ipc_args_1a93b9828f39867f31226a2e649cb2231c">
+		<apiName>Type</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="class_t_ipc_args.xml#_1a7260fcc2a1a91efd15fcd187d6d4ebd8">TArgType</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TIpcArgs</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline static TArgType Type(RHandleBase aValue)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TIpcArgs::Type(RHandleBase)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_handle_base.xml#class_r_handle_base">RHandleBase</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aValue</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="6508"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="6937"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="6938"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_ipc_args_1a2747dc29f141f02100b119bcd87f48d2">
+		<apiName>Type</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="class_t_ipc_args.xml#_1a7260fcc2a1a91efd15fcd187d6d4ebd8">TArgType</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TIpcArgs</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline static TArgType Type(const TDesC8 *)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TIpcArgs::Type(const TDesC8 *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="6509"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="6939"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="6940"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_ipc_args_1a01e3418828ad18bfe5755d0528ad94f1">
+		<apiName>Type</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="class_t_ipc_args.xml#_1a7260fcc2a1a91efd15fcd187d6d4ebd8">TArgType</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TIpcArgs</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline static TArgType Type(const TDesC16 *)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TIpcArgs::Type(const TDesC16 *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC16</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="6511"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="6942"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="6943"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_ipc_args_1a22188a1b7000b88cd10af5b58559a7f5">
+		<apiName>Type</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="class_t_ipc_args.xml#_1a7260fcc2a1a91efd15fcd187d6d4ebd8">TArgType</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TIpcArgs</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline static TArgType Type(TDes8 *)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TIpcArgs::Type(TDes8 *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="6513"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="6945"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="6946"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_ipc_args_1ac5906d57da6664ed40433cd741e8196c">
+		<apiName>Type</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="class_t_ipc_args.xml#_1a7260fcc2a1a91efd15fcd187d6d4ebd8">TArgType</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TIpcArgs</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline static TArgType Type(TDes16 *)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TIpcArgs::Type(TDes16 *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des16.xml#class_t_des16">TDes16</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="6515"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="6948"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="6949"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_ipc_args_1a32693856abff218d50f6fb706c524d56">
+		<apiName>Assign</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TIpcArgs</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline static void Assign(TInt &amp;, TNothing)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TIpcArgs::Assign(TInt &amp;,TNothing)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_ipc_args.xml#_1aaef9fe1f73ce5fd8856d0f608b5ebb56">TNothing</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="6518"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="6951"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="6952"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_ipc_args_1a0bc94fd5963d3b254e14408c4684d726">
+		<apiName>Assign</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TIpcArgs</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline static void Assign(TInt &amp;aArg, TInt aValue)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TIpcArgs::Assign(TInt &amp;,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aArg</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aValue</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="6519"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="6953"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="6954"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_ipc_args_1ae8246776ae7a5e17ea32d40fc93dd79c">
+		<apiName>Assign</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TIpcArgs</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline static void Assign(TInt &amp;aArg, const TAny *aValue)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TIpcArgs::Assign(TInt &amp;,const TAny *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aArg</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aValue</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="6520"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="6955"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="6956"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_ipc_args_1aa499dc07e6666ec989c65c9f552f7069">
+		<apiName>Assign</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TIpcArgs</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline static void Assign(TInt &amp;aArg, RHandleBase aValue)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TIpcArgs::Assign(TInt &amp;,RHandleBase)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aArg</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_handle_base.xml#class_r_handle_base">RHandleBase</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aValue</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="6521"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="6957"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="6958"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_ipc_args_1a4f5d2bcc1d3fc78e661db30b303f9598">
+		<apiName>Assign</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TIpcArgs</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline static void Assign(TInt &amp;aArg, const TDesC8 *aValue)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TIpcArgs::Assign(TInt &amp;,const TDesC8 *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aArg</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aValue</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="6522"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="6959"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="6960"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_ipc_args_1a591a8ec32d3aa5395e3458c981bf6ba3">
+		<apiName>Assign</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TIpcArgs</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline static void Assign(TInt &amp;aArg, const TDesC16 *aValue)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TIpcArgs::Assign(TInt &amp;,const TDesC16 *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aArg</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC16</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aValue</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="6524"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="6962"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="6963"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_ipc_args_1aa23c8e2367a625773896b45fede23168">
+		<apiName>Assign</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TIpcArgs</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline static void Assign(TInt &amp;aArg, TDes8 *aValue)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TIpcArgs::Assign(TInt &amp;,TDes8 *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aArg</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aValue</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="6526"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="6965"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="6966"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_ipc_args_1a48d94769d6c28907cc23a116394c289c">
+		<apiName>Assign</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TIpcArgs</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline static void Assign(TInt &amp;aArg, TDes16 *aValue)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TIpcArgs::Assign(TInt &amp;,TDes16 *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aArg</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des16.xml#class_t_des16">TDes16</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aValue</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="6528"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="6968"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="6969"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxVariable id="class_t_ipc_args_1a3b1efd36b49aab62121373c33fa9e8a9">
+		<apiName>iArgs</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TIpcArgs</cxxVariableScopedName>
+				<cxxVariablePrototype>TInt iArgs[KMaxMessageArguments]</cxxVariablePrototype>
+				<cxxVariableNameLookup>TIpcArgs::iArgs</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="6538"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>The location where the message arguments are stored.</p>
+				<p>There is no reason to access this data member directly and it should be considered as internal. </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_t_ipc_args_1abcd1d66d22e6901f456688420327dfd6">
+		<apiName>iFlags</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TIpcArgs</cxxVariableScopedName>
+				<cxxVariablePrototype>TInt iFlags</cxxVariablePrototype>
+				<cxxVariableNameLookup>TIpcArgs::iFlags</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="6547"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>The location where the flag bits describing the argument types are stored.</p>
+				<p>The symbolic values describing the argument types are internal to Symbian, and there is therefore no reason to access this data member directly. It should be considered as internal. </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+</cxxClass>

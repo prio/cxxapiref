@@ -1,0 +1,1725 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_den_1_1_c_common_worker_thread">
+	<apiName>Den::CCommonWorkerThread</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassAbstract/>
+			<cxxClassDerivations>
+				<cxxClassDerivation>
+					<cxxClassDerivationAccessSpecifier value="public"/>
+					<cxxClassBaseClass href="class_c_base.xml#class_c_base">CBase</cxxClassBaseClass>
+				</cxxClassDerivation>
+			</cxxClassDerivations>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="131"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="127"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="336"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>The Worker Thread is the holder of the relevant ESock objects in the CPM instance, e.g. the PitBoss, the Dealer and the Player (depending on configuration). It is also in charge of inter-thread communication as it holds the object enabling communication with the RootServer (CWorkerRootServChannelHandler) and a list of objects for communication with other Worker threads (CWorkerTransport).</p>
+			<p>
+				<xref href="class_den_1_1_c_common_worker_thread.xml#class_den_1_1_c_common_worker_thread_1a9bee0a65820ecc4582838727a6f0442c">CWorkerRootServChannelHandler</xref> </p>
+			<p>CWorkerTransport </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_den_1_1_c_common_worker_thread_1ab68db584ff7ee987c79e9238872b65f8">
+		<apiName>~CCommonWorkerThread</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDestructor/>
+				<cxxFunctionDeclaredType>IMPORT_C</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::CCommonWorkerThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C ~CCommonWorkerThread()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CCommonWorkerThread::~CCommonWorkerThread()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="135"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_c_common_worker_thread_1ac950930b01cea26483426dbe1a154989">
+		<apiName>Dealer</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>CCommonDealer *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::CCommonWorkerThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline CCommonDealer * Dealer() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CCommonWorkerThread::Dealer()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="141"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="140"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="143"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>the pointer to the Dealer in this thread. This method might return NULL if the worker thread doesnt have a Dealer. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_c_common_worker_thread_1a4c1274717bff83d97dfb63c5dd4a9b36">
+		<apiName>WorkerDealer</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C CCommonWorkerDealer *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::CCommonWorkerThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C CCommonWorkerDealer * WorkerDealer() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CCommonWorkerThread::WorkerDealer()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="144"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_c_common_worker_thread_1a1c952e2f72bd64a2c68b4c07b94c32dc">
+		<apiName>Player</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>CCommonPlayer *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::CCommonWorkerThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline CCommonPlayer * Player() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CCommonWorkerThread::Player()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="150"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="149"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="152"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>the pointer to the Player in this thread. This method might return NULL if the worker thread doesnt have a Player. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_c_common_worker_thread_1a961bd3e12b4d904488ecb9ee4e7a4932">
+		<apiName>WorkerId</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="namespace_comms_f_w.xml#_1a0989c80b4dbcc151a4ccf043c03f7c96">CommsFW::TWorkerId</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::CCommonWorkerThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline CommsFW::TWorkerId WorkerId() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CCommonWorkerThread::WorkerId()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="155"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="154"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="157"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_c_common_worker_thread_1a0f11bdacddb617a55c7a5fc7ee85f94d">
+		<apiName>TransportGlobals</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="class_messages_1_1_c_globals.xml#class_messages_1_1_c_globals">Messages::CGlobals</apiRelation> &amp;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::CCommonWorkerThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline Messages::CGlobals &amp; TransportGlobals()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CCommonWorkerThread::TransportGlobals()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="160"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="159"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="163"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_c_common_worker_thread_1aefa4dc8a8c051168cbed8335af556c44">
+		<apiName>PitBoss</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>CCommonPitBoss &amp;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::CCommonWorkerThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline CCommonPitBoss &amp; PitBoss() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CCommonWorkerThread::PitBoss()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="171"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="170"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="174"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Return the pointer to the domain PitBoss. This will be initialised when:<ol>
+						<li>
+							<p>If this is Main thread: In CCommonWorkerThread::ConstructL(TCFModuleInfo* aModuleInfo).<ol>
+									<li>
+										<p>In other common worker threads: When receiving TWorkerMsg::EMainIntroduction. </p>
+									</li>
+								</ol>
+							</p>
+						</li>
+					</ol>
+				</p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_c_common_worker_thread_1af273f136c75d3f0ad746f06ae451185f">
+		<apiName>IsMainThread</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::CCommonWorkerThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool IsMainThread()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CCommonWorkerThread::IsMainThread()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="182"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="181"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="184"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Use this to discover whether this Worker Thread is EMainThread (&quot;Esock_Main&quot;) which is the main Dealer also containing the PitBoss. TWorkerThreadInfo </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_c_common_worker_thread_1a60f8d1465d04d3ad99ae9e511f19f3a4">
+		<apiName>WorkerProperties</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="class_t_worker_thread_register.xml#class_t_worker_thread_register">TWorkerThreadRegister</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::CCommonWorkerThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TWorkerThreadRegister * WorkerProperties(CommsFW::TWorkerId aWorker)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CCommonWorkerThread::WorkerProperties(CommsFW::TWorkerId)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="namespace_comms_f_w.xml#_1a0989c80b4dbcc151a4ccf043c03f7c96">CommsFW::TWorkerId</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aWorker</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="187"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="186"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="189"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_c_common_worker_thread_1a219095262df04f18592bfb2e720bf33a">
+		<apiName>SetDealerShutdownComplete</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::CCommonWorkerThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void SetDealerShutdownComplete(TBool aComplete)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CCommonWorkerThread::SetDealerShutdownComplete(TBool)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aComplete</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="191"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_c_common_worker_thread_1a373917d21f39ad6905d9d4affbcd7b19">
+		<apiName>DealerShutdownComplete</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::CCommonWorkerThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool DealerShutdownComplete() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CCommonWorkerThread::DealerShutdownComplete()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="193"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="192"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="195"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_c_common_worker_thread_1a58ef97401b96c927533a6e8d30df1706">
+		<apiName>SetPlayerShutdownComplete</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::CCommonWorkerThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void SetPlayerShutdownComplete(TBool aComplete)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CCommonWorkerThread::SetPlayerShutdownComplete(TBool)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aComplete</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="197"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_c_common_worker_thread_1ac0a96c1fe220147efc6cfd64f6a133e7">
+		<apiName>PlayerShutdownComplete</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::CCommonWorkerThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool PlayerShutdownComplete() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CCommonWorkerThread::PlayerShutdownComplete()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="199"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="198"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="201"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_c_common_worker_thread_1a05045dfba69faf8468c42ba0311ccfea">
+		<apiName>ShuttingDown</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::CCommonWorkerThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TBool ShuttingDown() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CCommonWorkerThread::ShuttingDown()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="203"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_c_common_worker_thread_1a017bc0d70fd32cf2c0d80c432a29c23e">
+		<apiName>SetShuttingDown</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::CCommonWorkerThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void SetShuttingDown()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CCommonWorkerThread::SetShuttingDown()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="204"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_c_common_worker_thread_1a2608407f6f3ed5e060a8c1927c8879e4">
+		<apiName>SessionShutdownComplete</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::CCommonWorkerThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void SessionShutdownComplete()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CCommonWorkerThread::SessionShutdownComplete()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="205"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_c_common_worker_thread_1ab112e96b04989f114f3218eaa09992d3">
+		<apiName>MaybeTriggerThreadShutdownCallback</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::CCommonWorkerThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void MaybeTriggerThreadShutdownCallback()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CCommonWorkerThread::MaybeTriggerThreadShutdownCallback()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="206"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_c_common_worker_thread_1a279f23b599ee1370d7386f5cb782bd14">
+		<apiName>TriggerThreadShutdownCallback</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::CCommonWorkerThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>void TriggerThreadShutdownCallback()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CCommonWorkerThread::TriggerThreadShutdownCallback()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="207"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_c_common_worker_thread_1a648f1f9477edb85ef5e092d27ad26d12">
+		<apiName>DestroyDealer</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::CCommonWorkerThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void DestroyDealer()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CCommonWorkerThread::DestroyDealer()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="208"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_c_common_worker_thread_1a0c2d53c2bd0f516c9e1a056306679589">
+		<apiName>DestroyPlayer</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::CCommonWorkerThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void DestroyPlayer()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CCommonWorkerThread::DestroyPlayer()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="209"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_c_common_worker_thread_1a570571a25ae6099ca3932c6a66ba893b">
+		<apiName>DropTransportToPeer</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::CCommonWorkerThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>void DropTransportToPeer(TInt aPeer)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CCommonWorkerThread::DropTransportToPeer(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPeer</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="210"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_c_common_worker_thread_1aa9913091ab63ba6486879b76d86c1bb1">
+		<apiName>MaybeCompleteUnbindings</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::CCommonWorkerThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TBool MaybeCompleteUnbindings()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CCommonWorkerThread::MaybeCompleteUnbindings()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="211"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_c_common_worker_thread_1a2ca2473bd02c183aaab6f03b7d8bc326">
+		<apiName>CFUnbindMessageReceived</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::CCommonWorkerThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>void CFUnbindMessageReceived(const CommsFW::TCFUnbindMsg &amp;aMsg)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CCommonWorkerThread::CFUnbindMessageReceived(const CommsFW::TCFUnbindMsg &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const CommsFW::TCFUnbindMsg &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMsg</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="214"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_c_common_worker_thread_1aa61230d48c3a93ced28e72152244f222">
+		<apiName>CFShutdownMessageReceived</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::CCommonWorkerThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>void CFShutdownMessageReceived(const CommsFW::TCFShutdownMsg &amp;aMsg)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CCommonWorkerThread::CFShutdownMessageReceived(const CommsFW::TCFShutdownMsg &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const CommsFW::TCFShutdownMsg &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMsg</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="215"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_c_common_worker_thread_1abd1fe56c56c017994813549086286180">
+		<apiName>PeerReachable</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::CCommonWorkerThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool PeerReachable(CommsFW::TWorkerId aPeerId) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CCommonWorkerThread::PeerReachable(CommsFW::TWorkerId)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="namespace_comms_f_w.xml#_1a0989c80b4dbcc151a4ccf043c03f7c96">CommsFW::TWorkerId</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPeerId</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="219"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="218"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="221"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_c_common_worker_thread_1a7030f6cd850a251883fdec4ce5252078">
+		<apiName>PostMessage</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::CCommonWorkerThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void PostMessage(CommsFW::TWorkerId aWorkerId, CommsFW::TCFMessage &amp;aMessage)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CCommonWorkerThread::PostMessage(CommsFW::TWorkerId,CommsFW::TCFMessage &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="namespace_comms_f_w.xml#_1a0989c80b4dbcc151a4ccf043c03f7c96">CommsFW::TWorkerId</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aWorkerId</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>CommsFW::TCFMessage &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMessage</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="224"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_c_common_worker_thread_1a1ef045e434d8fa1663e5680f74c01e31">
+		<apiName>Transport</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="class_comms_f_w_1_1_c_comms_transport.xml#class_comms_f_w_1_1_c_comms_transport">CommsFW::CCommsTransport</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::CCommonWorkerThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline CommsFW::CCommsTransport * Transport() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CCommonWorkerThread::Transport()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="226"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="225"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="228"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_c_common_worker_thread_1af8108276395dda3b580b1a924083b5ec">
+		<apiName>DefaultOptimalDealer</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::CCommonWorkerThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool DefaultOptimalDealer() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CCommonWorkerThread::DefaultOptimalDealer()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="232"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="231"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="234"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_c_common_worker_thread_1a0886d132dea6e8cce0e1586a64c48719">
+		<apiName>DispatchL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::CCommonWorkerThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void DispatchL(const CommsFW::TCFMessage &amp;aMessage, CommsFW::TWorkerId aSenderId)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CCommonWorkerThread::DispatchL(const CommsFW::TCFMessage &amp;,CommsFW::TWorkerId)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const CommsFW::TCFMessage &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMessage</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="namespace_comms_f_w.xml#_1a0989c80b4dbcc151a4ccf043c03f7c96">CommsFW::TWorkerId</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSenderId</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="237"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_c_common_worker_thread_1a34f7d740fb7229bb5adbcf6b8d5a86b2">
+		<apiName>DoDispatchL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionPureVirtual/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::CCommonWorkerThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual TBool DoDispatchL(const CommsFW::TCFMessage &amp;aMessage, CommsFW::TWorkerId aSenderId)=0</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CCommonWorkerThread::DoDispatchL(const CommsFW::TCFMessage &amp;,CommsFW::TWorkerId)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const CommsFW::TCFMessage &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMessage</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="namespace_comms_f_w.xml#_1a0989c80b4dbcc151a4ccf043c03f7c96">CommsFW::TWorkerId</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSenderId</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="238"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_c_common_worker_thread_1a03f500d6e72608c53dcc047a90f370f0">
+		<apiName>OnDispatchLeave</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::CCommonWorkerThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void OnDispatchLeave(const CommsFW::TCFMessage &amp;aMessage, CommsFW::TWorkerId aSenderId, TInt aFirstDispatchLeaveReason)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CCommonWorkerThread::OnDispatchLeave(const CommsFW::TCFMessage &amp;,CommsFW::TWorkerId,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const CommsFW::TCFMessage &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMessage</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="namespace_comms_f_w.xml#_1a0989c80b4dbcc151a4ccf043c03f7c96">CommsFW::TWorkerId</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSenderId</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFirstDispatchLeaveReason</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="239"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_c_common_worker_thread_1a5517e9afc7acdc914b55d833bac7dd52">
+		<apiName>IncProlongBindingLife</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::CCommonWorkerThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void IncProlongBindingLife()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CCommonWorkerThread::IncProlongBindingLife()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="242"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_c_common_worker_thread_1a426a93147e4af1d722ee654ac8b1b665">
+		<apiName>DecProlongBindingLife</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::CCommonWorkerThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void DecProlongBindingLife()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CCommonWorkerThread::DecProlongBindingLife()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="243"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_c_common_worker_thread_1a0381bdc2e64a7d7f86906e0c51cfb6d8">
+		<apiName>CompleteSessionClose</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::CCommonWorkerThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void CompleteSessionClose(CWorkerSession *aSession)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CCommonWorkerThread::CompleteSessionClose(CWorkerSession *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_den_1_1_c_worker_session.xml#class_den_1_1_c_worker_session">CWorkerSession</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSession</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="244"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_c_common_worker_thread_1a4d4b05f564b7960f8fd0b47d151c7c52">
+		<apiName>ConstructL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::CCommonWorkerThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void ConstructL(CommsFW::TCFModuleInfo &amp;aModuleInfo, CShutdownWatchDog &amp;aShutdownWatchDog)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CCommonWorkerThread::ConstructL(CommsFW::TCFModuleInfo &amp;,CShutdownWatchDog &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>CommsFW::TCFModuleInfo &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aModuleInfo</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>CShutdownWatchDog &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aShutdownWatchDog</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="245"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_c_common_worker_thread_1abee6ba86b15efc5ce35c29347a2ca717">
+		<apiName>PostMortemCleanupThreadEntry</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::CCommonWorkerThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>static IMPORT_C TInt PostMortemCleanupThreadEntry(TAny *aArg)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CCommonWorkerThread::PostMortemCleanupThreadEntry(TAny *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aArg</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="247"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_c_common_worker_thread_1aabb6527c70fa2bcd8524beebaa01be6d">
+		<apiName>DoCreatePitBossL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionPureVirtual/>
+				<cxxFunctionDeclaredType>CCommonPitBoss *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::CCommonWorkerThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual CCommonPitBoss * DoCreatePitBossL(CCommonWorkerThread *aWorkerThread)=0</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CCommonWorkerThread::DoCreatePitBossL(CCommonWorkerThread *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_den_1_1_c_common_worker_thread.xml#class_den_1_1_c_common_worker_thread">CCommonWorkerThread</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aWorkerThread</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="250"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_c_common_worker_thread_1a855ca6c88c92ba11113636d69a7eb83f">
+		<apiName>DoCreatePlayerL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionPureVirtual/>
+				<cxxFunctionDeclaredType>CCommonPlayer *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::CCommonWorkerThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual CCommonPlayer * DoCreatePlayerL(CCommonWorkerThread *aWorkerThread, TPlayerRole aPlayerRole)=0</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CCommonWorkerThread::DoCreatePlayerL(CCommonWorkerThread *,TPlayerRole)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_den_1_1_c_common_worker_thread.xml#class_den_1_1_c_common_worker_thread">CCommonWorkerThread</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aWorkerThread</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_den_1_1_t_player_role.xml#class_den_1_1_t_player_role">TPlayerRole</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPlayerRole</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="251"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_c_common_worker_thread_1a2ebed65da66751b52313f36a6e2a40b8">
+		<apiName>DoCreateDealerL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionPureVirtual/>
+				<cxxFunctionDeclaredType>CCommonDealer *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::CCommonWorkerThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual CCommonDealer * DoCreateDealerL(CCommonWorkerThread *aWorkerThread, TPlayerRole aPlayerRole)=0</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CCommonWorkerThread::DoCreateDealerL(CCommonWorkerThread *,TPlayerRole)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_den_1_1_c_common_worker_thread.xml#class_den_1_1_c_common_worker_thread">CCommonWorkerThread</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aWorkerThread</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_den_1_1_t_player_role.xml#class_den_1_1_t_player_role">TPlayerRole</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPlayerRole</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="252"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_c_common_worker_thread_1a75855cb028bf1bb4fa7bfa157f44274b">
+		<apiName>DoCompleteUnbinding</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionPureVirtual/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::CCommonWorkerThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual void DoCompleteUnbinding(CommsFW::TWorkerId aWorker)=0</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CCommonWorkerThread::DoCompleteUnbinding(CommsFW::TWorkerId)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="namespace_comms_f_w.xml#_1a0989c80b4dbcc151a4ccf043c03f7c96">CommsFW::TWorkerId</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aWorker</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="253"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_c_common_worker_thread_1a9453f5028d3b43db16917c949cc04126">
+		<apiName>DoSetShuttingDown</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionPureVirtual/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::CCommonWorkerThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual void DoSetShuttingDown()=0</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CCommonWorkerThread::DoSetShuttingDown()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="254"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_c_common_worker_thread_1acaee0fc1df324b41f928d56c1d88be8d">
+		<apiName>DoPostMortemCleanup</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionPureVirtual/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::CCommonWorkerThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual void DoPostMortemCleanup()=0</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CCommonWorkerThread::DoPostMortemCleanup()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="255"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_c_common_worker_thread_1abfb59ac5d2f0ef3dd652edb2d3956516">
+		<apiName>CFBindMessageReceived</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionPureVirtual/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::CCommonWorkerThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual void CFBindMessageReceived(const CommsFW::TCFBindMsg &amp;aMsg)=0</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CCommonWorkerThread::CFBindMessageReceived(const CommsFW::TCFBindMsg &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const CommsFW::TCFBindMsg &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMsg</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="256"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_c_common_worker_thread_1ac419d54033289bf0286484b9e57f3dcb">
+		<apiName>CFMessageForward</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionPureVirtual/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::CCommonWorkerThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual void CFMessageForward(const CommsFW::TCFForwardMsg &amp;aMessage)=0</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CCommonWorkerThread::CFMessageForward(const CommsFW::TCFForwardMsg &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const CommsFW::TCFForwardMsg &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMessage</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="257"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_c_common_worker_thread_1a9aebf77d4c1c25007a14c56848af326b">
+		<apiName>DoProcessWorkerIntroductionL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionPureVirtual/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::CCommonWorkerThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual void DoProcessWorkerIntroductionL(const TWorkerIntroductionMsg &amp;aMessage)=0</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CCommonWorkerThread::DoProcessWorkerIntroductionL(const TWorkerIntroductionMsg &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const TWorkerIntroductionMsg &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMessage</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="259"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_c_common_worker_thread_1a32da737f1f1fd7c2307ad8e66cf6d6a7">
+		<apiName>SendIntroMessage</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::CCommonWorkerThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void SendIntroMessage(const CommsFW::TCFModuleName &amp;aPeerName, CommsFW::TWorkerId aPeerId)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CCommonWorkerThread::SendIntroMessage(const CommsFW::TCFModuleName &amp;,CommsFW::TWorkerId)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_buf8.xml#class_t_buf8">CommsFW::TCFModuleName</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPeerName</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="namespace_comms_f_w.xml#_1a0989c80b4dbcc151a4ccf043c03f7c96">CommsFW::TWorkerId</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPeerId</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="261"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_c_common_worker_thread_1a0d9e1fcb7e4ccc719b1fcf3d621675d5">
+		<apiName>DoFillIntroMessage</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionPureVirtual/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::CCommonWorkerThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual void DoFillIntroMessage(CommsFW::TWorkerId aPeerId, TWorkerIntroductionMsg &amp;aIntroMsg)=0</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CCommonWorkerThread::DoFillIntroMessage(CommsFW::TWorkerId,TWorkerIntroductionMsg &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="namespace_comms_f_w.xml#_1a0989c80b4dbcc151a4ccf043c03f7c96">CommsFW::TWorkerId</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPeerId</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>TWorkerIntroductionMsg &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIntroMsg</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="262"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_c_common_worker_thread_1a8a202a0ffc6baf48af4c2ff00d6880f2">
+		<apiName>CCommonWorkerThread</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType>IMPORT_C</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::CCommonWorkerThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C CCommonWorkerThread()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CCommonWorkerThread::CCommonWorkerThread()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="264"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_c_common_worker_thread_1adff19878ac082eb36dbd8eaff31cc351">
+		<apiName>DeleteHBufC8</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::CCommonWorkerThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>static IMPORT_C void DeleteHBufC8(TAny *aHBufC)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CCommonWorkerThread::DeleteHBufC8(TAny *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aHBufC</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="265"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_c_common_worker_thread_1a8dd4489ad1ee4cc50bad2ab35d412f7c">
+		<apiName>DetermineRoleL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::CCommonWorkerThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void DetermineRoleL(HBufC8 *aIniData, TBool &amp;aIsDealer, TBool &amp;aIsPlayer, TPlayerRole &amp;aPlayerRole)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CCommonWorkerThread::DetermineRoleL(HBufC8 *,TBool &amp;,TBool &amp;,TPlayerRole &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_h_buf_c8.xml#class_h_buf_c8">HBufC8</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIniData</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIsDealer</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIsPlayer</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_den_1_1_t_player_role.xml#class_den_1_1_t_player_role">TPlayerRole</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPlayerRole</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="267"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_c_common_worker_thread_1a7d659d80bbd7393acd8978017570cdc7">
+		<apiName>DoDeterminePlayerRoleL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionPureVirtual/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::CCommonWorkerThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual void DoDeterminePlayerRoleL(HBufC8 *aIniData, TPlayerRole &amp;aPlayerRole)=0</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CCommonWorkerThread::DoDeterminePlayerRoleL(HBufC8 *,TPlayerRole &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_h_buf_c8.xml#class_h_buf_c8">HBufC8</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIniData</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_den_1_1_t_player_role.xml#class_den_1_1_t_player_role">TPlayerRole</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPlayerRole</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="268"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_c_common_worker_thread_1a765ee10c5b4c5f3aee9968d035485af0">
+		<apiName>ProcessIniDataL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::CCommonWorkerThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>void ProcessIniDataL()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CCommonWorkerThread::ProcessIniDataL()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="270"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_c_common_worker_thread_1a2ce45ae88569ec1020ff25dd6ed29f0e">
+		<apiName>DecodePeerId</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::CCommonWorkerThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt DecodePeerId(const CommsFW::TCFSubModuleAddress *aSubModule1, const CommsFW::TCFSubModuleAddress *aSubModule2, CommsFW::TWorkerId &amp;aPeerId)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CCommonWorkerThread::DecodePeerId(const CommsFW::TCFSubModuleAddress *,const CommsFW::TCFSubModuleAddress *,CommsFW::TWorkerId &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_comms_f_w_1_1_t_c_f_sub_module_address.xml#class_comms_f_w_1_1_t_c_f_sub_module_address">CommsFW::TCFSubModuleAddress</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSubModule1</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_comms_f_w_1_1_t_c_f_sub_module_address.xml#class_comms_f_w_1_1_t_c_f_sub_module_address">CommsFW::TCFSubModuleAddress</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSubModule2</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="namespace_comms_f_w.xml#_1a0989c80b4dbcc151a4ccf043c03f7c96">CommsFW::TWorkerId</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPeerId</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="271"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_c_common_worker_thread_1a4c999da226cd6258c35292114adedc56">
+		<apiName>MaybeCompleteUnbinding</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::CCommonWorkerThread</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void MaybeCompleteUnbinding(CommsFW::TWorkerId aWorker)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CCommonWorkerThread::MaybeCompleteUnbinding(CommsFW::TWorkerId)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="namespace_comms_f_w.xml#_1a0989c80b4dbcc151a4ccf043c03f7c96">CommsFW::TWorkerId</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aWorker</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="272"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxVariable id="class_den_1_1_c_common_worker_thread_1a73c2c32f36339c0eecc1bc2ac065c2d3">
+		<apiName>iChannelHandler</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="protected"/>
+				<cxxVariableDeclaredType>CWorkerRootServChannelHandler *</cxxVariableDeclaredType>
+				<cxxVariableScopedName>Den::CCommonWorkerThread</cxxVariableScopedName>
+				<cxxVariablePrototype>CWorkerRootServChannelHandler * iChannelHandler</cxxVariablePrototype>
+				<cxxVariableNameLookup>Den::CCommonWorkerThread::iChannelHandler</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="276"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>This is the handler used for bi-directional communication with the Root Server. </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_den_1_1_c_common_worker_thread_1a280648e5900fee2ba434ec2f9c5a4f1f">
+		<apiName>iWorkerRegister</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="protected"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="class_comms_f_w_1_1_c_worker_thread_register.xml#class_comms_f_w_1_1_c_worker_thread_register">CWorkerRegister</apiRelation> *</cxxVariableDeclaredType>
+				<cxxVariableScopedName>Den::CCommonWorkerThread</cxxVariableScopedName>
+				<cxxVariablePrototype>CWorkerRegister * iWorkerRegister</cxxVariablePrototype>
+				<cxxVariableNameLookup>Den::CCommonWorkerThread::iWorkerRegister</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="278"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_den_1_1_c_common_worker_thread_1ae17ebede2d16449e5f1ebe5162a6dd82">
+		<apiName>iTransport</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="protected"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="class_comms_f_w_1_1_c_comms_transport.xml#class_comms_f_w_1_1_c_comms_transport">CommsFW::CCommsTransport</apiRelation> *</cxxVariableDeclaredType>
+				<cxxVariableScopedName>Den::CCommonWorkerThread</cxxVariableScopedName>
+				<cxxVariablePrototype>CommsFW::CCommsTransport * iTransport</cxxVariablePrototype>
+				<cxxVariableNameLookup>Den::CCommonWorkerThread::iTransport</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="279"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_den_1_1_c_common_worker_thread_1a43fe28e559b77dc0c59466577126b900">
+		<apiName>iWorkerId</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="protected"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="namespace_comms_f_w.xml#_1a0989c80b4dbcc151a4ccf043c03f7c96">CommsFW::TWorkerId</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>Den::CCommonWorkerThread</cxxVariableScopedName>
+				<cxxVariablePrototype>CommsFW::TWorkerId iWorkerId</cxxVariablePrototype>
+				<cxxVariableNameLookup>Den::CCommonWorkerThread::iWorkerId</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="285"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Indentification of this thread. No other instance must have the same id. TWorkerThreadInfo </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_den_1_1_c_common_worker_thread_1af933b9939293ec3be5f2238fc3390737">
+		<apiName>iDealer</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="protected"/>
+				<cxxVariableDeclaredType>CCommonDealer *</cxxVariableDeclaredType>
+				<cxxVariableScopedName>Den::CCommonWorkerThread</cxxVariableScopedName>
+				<cxxVariablePrototype>CCommonDealer * iDealer</cxxVariablePrototype>
+				<cxxVariableNameLookup>Den::CCommonWorkerThread::iDealer</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="287"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_den_1_1_c_common_worker_thread_1a4be6afe1c9c784e1a3e86a2c73ddffb7">
+		<apiName>iPlayer</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="protected"/>
+				<cxxVariableDeclaredType>CCommonPlayer *</cxxVariableDeclaredType>
+				<cxxVariableScopedName>Den::CCommonWorkerThread</cxxVariableScopedName>
+				<cxxVariablePrototype>CCommonPlayer * iPlayer</cxxVariablePrototype>
+				<cxxVariableNameLookup>Den::CCommonWorkerThread::iPlayer</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="288"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_den_1_1_c_common_worker_thread_1a0a8fa981e9ff9807fb9f24098ed3fc82">
+		<apiName>iPitBoss</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="protected"/>
+				<cxxVariableDeclaredType>CCommonPitBoss *</cxxVariableDeclaredType>
+				<cxxVariableScopedName>Den::CCommonWorkerThread</cxxVariableScopedName>
+				<cxxVariablePrototype>CCommonPitBoss * iPitBoss</cxxVariablePrototype>
+				<cxxVariableNameLookup>Den::CCommonWorkerThread::iPitBoss</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="289"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_den_1_1_c_common_worker_thread_1ae4823f0790cb20313b42f199aeed7d96">
+		<apiName>iDefaultOptimalDealer</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="protected"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>Den::CCommonWorkerThread</cxxVariableScopedName>
+				<cxxVariablePrototype>TBool iDefaultOptimalDealer</cxxVariablePrototype>
+				<cxxVariableNameLookup>Den::CCommonWorkerThread::iDefaultOptimalDealer</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="291"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_den_1_1_c_common_worker_thread_1af739639e36dcf881a30926b4af26be4e">
+		<apiName>iWorkerShuttingDown</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="protected"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>Den::CCommonWorkerThread</cxxVariableScopedName>
+				<cxxVariablePrototype>TBool iWorkerShuttingDown</cxxVariablePrototype>
+				<cxxVariableNameLookup>Den::CCommonWorkerThread::iWorkerShuttingDown</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="295"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Set when a CommsFW::TCFShutdownMsg is received from the Root Server. </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_den_1_1_c_common_worker_thread_1ad1966f154fdecf69847479e3c73ebe8f">
+		<apiName>iDealerShutdownComplete</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="protected"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>Den::CCommonWorkerThread</cxxVariableScopedName>
+				<cxxVariablePrototype>TBool iDealerShutdownComplete</cxxVariablePrototype>
+				<cxxVariableNameLookup>Den::CCommonWorkerThread::iDealerShutdownComplete</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="301"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Set by the Dealer instance to signal to the Worker Thread that it has finished with the shutdown bookkeeping and is ready to be deleted. </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_den_1_1_c_common_worker_thread_1a962a3a355502901341a9a4442f00b2c3">
+		<apiName>iPlayerShutdownComplete</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="protected"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>Den::CCommonWorkerThread</cxxVariableScopedName>
+				<cxxVariablePrototype>TBool iPlayerShutdownComplete</cxxVariablePrototype>
+				<cxxVariableNameLookup>Den::CCommonWorkerThread::iPlayerShutdownComplete</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="307"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Set by the Player instance to signal to the Worker Thread that it has finished with the shutdown bookkeeping and is ready to be deleted. </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_den_1_1_c_common_worker_thread_1a21576b0d6fa280bf6467d013b89fc62e">
+		<apiName>iProlongBindingLife</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="protected"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>Den::CCommonWorkerThread</cxxVariableScopedName>
+				<cxxVariablePrototype>TInt iProlongBindingLife</cxxVariablePrototype>
+				<cxxVariableNameLookup>Den::CCommonWorkerThread::iProlongBindingLife</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="315"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>If the value of this TInt is larger than 0 any unbind requests will not be served, but postponed until iProlongBindingLife is 0. This is to ensure that if e.g. a TWorkerMsg::ECleanupDeadPeer or TPlayerMsg::ESessionClose is received they will be fully served before completing any unbind and thus deleting channel handlers. </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_den_1_1_c_common_worker_thread_1a98ab0e73cabd2878bc710f774a8ae5f9">
+		<apiName>iShutdownWatchDog</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="protected"/>
+				<cxxVariableDeclaredType>CShutdownWatchDog *</cxxVariableDeclaredType>
+				<cxxVariableScopedName>Den::CCommonWorkerThread</cxxVariableScopedName>
+				<cxxVariablePrototype>CShutdownWatchDog * iShutdownWatchDog</cxxVariablePrototype>
+				<cxxVariableNameLookup>Den::CCommonWorkerThread::iShutdownWatchDog</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="317"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_den_1_1_c_common_worker_thread_1adc5cd58f9ac9a7f64263c6f69c0267d7">
+		<apiName>iGlobals</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="protected"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="class_messages_1_1_c_globals.xml#class_messages_1_1_c_globals">Messages::CGlobals</apiRelation> *</cxxVariableDeclaredType>
+				<cxxVariableScopedName>Den::CCommonWorkerThread</cxxVariableScopedName>
+				<cxxVariablePrototype>Messages::CGlobals * iGlobals</cxxVariablePrototype>
+				<cxxVariableNameLookup>Den::CCommonWorkerThread::iGlobals</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="318"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_den_1_1_c_common_worker_thread_1a3f29a473ea313783c4c950d6397bf6d7">
+		<apiName>iFailType</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="class_r_allocator.xml#_1a7ffe84bf79cb94d968a46b1969bfebb8">RAllocator::TAllocFail</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>Den::CCommonWorkerThread</cxxVariableScopedName>
+				<cxxVariablePrototype>RAllocator::TAllocFail iFailType</cxxVariablePrototype>
+				<cxxVariableNameLookup>Den::CCommonWorkerThread::iFailType</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="334"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_den_1_1_c_common_worker_thread_1af90c4de38602e93e9529d2933ed5132e">
+		<apiName>iFailRate</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>Den::CCommonWorkerThread</cxxVariableScopedName>
+				<cxxVariablePrototype>TInt iFailRate</cxxVariablePrototype>
+				<cxxVariableNameLookup>Den::CCommonWorkerThread::iFailRate</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_thread.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="335"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxClassInherits>
+		<cxxClassInheritsDetail>
+			<cxxClassFunctionInherited href="class_den_1_1_c_common_worker_thread.xml#class_c_base_1a240de7932690a4e987d75690b0b6f82b">CBase::CBase()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_den_1_1_c_common_worker_thread.xml#class_c_base_1ac0a06aeab68b3e01be81f9dd79e011c6">CBase::Delete(CBase *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_den_1_1_c_common_worker_thread.xml#class_c_base_1aae681a54d9c9b10c7d42e7e32ff109d5">CBase::Extension_(TUint,TAny *&amp;,TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_den_1_1_c_common_worker_thread.xml#class_c_base_1af4c4965092a763b0856ccbfa3cf99eaf">CBase::operator new(TUint)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_den_1_1_c_common_worker_thread.xml#class_c_base_1ab9e5f557dea4db22886189926687ddc1">CBase::operator new(TUint,TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_den_1_1_c_common_worker_thread.xml#class_c_base_1aa464dd21494443ac109084ed03b81f28">CBase::operator new(TUint,TLeave)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_den_1_1_c_common_worker_thread.xml#class_c_base_1af8429815362d4df6fecd47179e0c5dfe">CBase::operator new(TUint,TLeave,TUint)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_den_1_1_c_common_worker_thread.xml#class_c_base_1a80505bdf8b1b20a2ed102307a78eeeeb">CBase::operator new(TUint,TUint)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_den_1_1_c_common_worker_thread.xml#class_c_base_1a1390361b94424be22bb2b1020eb400ea">CBase::~CBase()</cxxClassFunctionInherited>
+		</cxxClassInheritsDetail>
+	</cxxClassInherits>
+</cxxClass>

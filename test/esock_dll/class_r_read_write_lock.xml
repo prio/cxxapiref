@@ -1,0 +1,521 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_r_read_write_lock">
+	<apiName>RReadWriteLock</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="2512"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="2511"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="2556"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>A read-write lock.</p>
+			<p>This is a lock for co-ordinating readers and writers to shared resources. It is designed to allow multiple concurrent readers. It is not a kernel side object and so does not inherit from <xref href="class_r_handle_base.xml#class_r_handle_base">RHandleBase</xref>. </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxEnumeration id="class_r_read_write_lock_1af413991a11e284df3d7c07dba3da781c">
+		<apiName>TReadWriteLockPriority</apiName>
+		<cxxEnumerationDetail>
+			<cxxEnumerationDefinition>
+				<cxxEnumerationAccessSpecifier value="public"/>
+				<cxxEnumerationScopedName>RReadWriteLock</cxxEnumerationScopedName>
+				<cxxEnumerationPrototype>TReadWriteLockPriority</cxxEnumerationPrototype>
+				<cxxEnumerationNameLookup>RReadWriteLock:TReadWriteLockPriority</cxxEnumerationNameLookup>
+				<cxxEnumerators>
+					<cxxEnumerator id="class_r_read_write_lock_1af413991a11e284df3d7c07dba3da781ca3e6ca9b6895ebc8da2436e85e40907e5">
+						<apiName>EWriterPriority</apiName>
+						<cxxEnumeratorScopedName>RReadWriteLock</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EWriterPriority</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RReadWriteLock::EWriterPriority</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="2517"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Pending writers always get the lock before pending readers </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_r_read_write_lock_1af413991a11e284df3d7c07dba3da781ca5961ab0bfff1f79e5127370707c34d06">
+						<apiName>EAlternatePriority</apiName>
+						<cxxEnumeratorScopedName>RReadWriteLock</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EAlternatePriority</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RReadWriteLock::EAlternatePriority</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="2519"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Lock is given alternately to pending readers and writers </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_r_read_write_lock_1af413991a11e284df3d7c07dba3da781cab0cb2c7b05470cfa5a48b167ae6669c7">
+						<apiName>EReaderPriority</apiName>
+						<cxxEnumeratorScopedName>RReadWriteLock</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EReaderPriority</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RReadWriteLock::EReaderPriority</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="2521"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Pending readers always get the lock before pending writers - beware writer starvation! </p>
+						</apiDesc>
+					</cxxEnumerator>
+				</cxxEnumerators>
+				<cxxEnumerationAPIItemLocation>
+					<cxxEnumerationDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxEnumerationDeclarationFileLine name="lineNumber" value="2515"/>
+					<cxxEnumerationDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxEnumerationDefinitionFileLineStart name="lineNumber" value="2514"/>
+					<cxxEnumerationDefinitionFileLineEnd name="lineNumber" value="2522"/>
+				</cxxEnumerationAPIItemLocation>
+			</cxxEnumerationDefinition>
+			<apiDesc/>
+		</cxxEnumerationDetail>
+	</cxxEnumeration>
+	<cxxEnumeration id="class_r_read_write_lock_1a2e65c6f41978100c1b7a5b9cf421f70f">
+		<apiName>TReadWriteLockClientCategoryLimit</apiName>
+		<cxxEnumerationDetail>
+			<cxxEnumerationDefinition>
+				<cxxEnumerationAccessSpecifier value="public"/>
+				<cxxEnumerationScopedName>RReadWriteLock</cxxEnumerationScopedName>
+				<cxxEnumerationPrototype>TReadWriteLockClientCategoryLimit</cxxEnumerationPrototype>
+				<cxxEnumerationNameLookup>RReadWriteLock:TReadWriteLockClientCategoryLimit</cxxEnumerationNameLookup>
+				<cxxEnumerators>
+					<cxxEnumerator id="class_r_read_write_lock_1a2e65c6f41978100c1b7a5b9cf421f70fa0dc87e4b3703a163d42b8beaa9829e55">
+						<apiName>EReadWriteLockClientCategoryLimit</apiName>
+						<cxxEnumeratorScopedName>RReadWriteLock</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EReadWriteLockClientCategoryLimit = KMaxTUint16</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RReadWriteLock::EReadWriteLockClientCategoryLimit</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="KMaxTUint16"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="2527"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Maximum number of clients in each category: read locked, read lock pending, write lock pending </p>
+						</apiDesc>
+					</cxxEnumerator>
+				</cxxEnumerators>
+				<cxxEnumerationAPIItemLocation>
+					<cxxEnumerationDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxEnumerationDeclarationFileLine name="lineNumber" value="2524"/>
+					<cxxEnumerationDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxEnumerationDefinitionFileLineStart name="lineNumber" value="2523"/>
+					<cxxEnumerationDefinitionFileLineEnd name="lineNumber" value="2527"/>
+				</cxxEnumerationAPIItemLocation>
+			</cxxEnumerationDefinition>
+			<apiDesc/>
+		</cxxEnumerationDetail>
+	</cxxEnumeration>
+	<cxxFunction id="class_r_read_write_lock_1af71844ad63b5e1b02e62463e077efd4c">
+		<apiName>RReadWriteLock</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>RReadWriteLock</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline RReadWriteLock()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RReadWriteLock::RReadWriteLock()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2530"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="3227"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="3229"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Default constructor. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_read_write_lock_1aff14b6059042a927e50ccbdb613069b5">
+		<apiName>CreateLocal</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RReadWriteLock</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt CreateLocal(TReadWriteLockPriority aPriority=EWriterPriority)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RReadWriteLock::CreateLocal(TReadWriteLockPriority)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_read_write_lock.xml#_1af413991a11e284df3d7c07dba3da781c">TReadWriteLockPriority</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPriority</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>EWriterPriority</cxxFunctionParameterDefaultValue>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2531"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_read_write_lock_1a207de71314a4fe0c68f01e78d9836c09">
+		<apiName>Close</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RReadWriteLock</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Close()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RReadWriteLock::Close()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2532"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_read_write_lock_1a722d3aa7dc13cd14bf10b450d05e4142">
+		<apiName>ReadLock</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RReadWriteLock</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void ReadLock()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RReadWriteLock::ReadLock()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2534"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_read_write_lock_1aab79334870dfa6dda203b9b9b2b8b991">
+		<apiName>WriteLock</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RReadWriteLock</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void WriteLock()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RReadWriteLock::WriteLock()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2535"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_read_write_lock_1aced4c4a07ff50d9ceb6a3efd2ef0928b">
+		<apiName>TryReadLock</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RReadWriteLock</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TBool TryReadLock()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RReadWriteLock::TryReadLock()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2536"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_read_write_lock_1a9dd4436be5c4f270c503ccaaaf4f053b">
+		<apiName>TryWriteLock</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RReadWriteLock</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TBool TryWriteLock()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RReadWriteLock::TryWriteLock()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2537"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_read_write_lock_1a24acb9bbf0ea813f75434c75c507a283">
+		<apiName>TryUpgradeReadLock</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RReadWriteLock</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TBool TryUpgradeReadLock()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RReadWriteLock::TryUpgradeReadLock()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2538"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_read_write_lock_1a6667c945d7f8838da92b147f82830395">
+		<apiName>DowngradeWriteLock</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RReadWriteLock</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void DowngradeWriteLock()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RReadWriteLock::DowngradeWriteLock()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2539"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_read_write_lock_1aacdf717f857efdc145ced4b67501c955">
+		<apiName>Unlock</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RReadWriteLock</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Unlock()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RReadWriteLock::Unlock()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2540"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_read_write_lock_1a18ce8c3a0337a412016e97aeb782da5a">
+		<apiName>RReadWriteLock</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>RReadWriteLock</cxxFunctionScopedName>
+				<cxxFunctionPrototype>RReadWriteLock(const RReadWriteLock &amp;aLock)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RReadWriteLock::RReadWriteLock(const RReadWriteLock &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_r_read_write_lock.xml#class_r_read_write_lock">RReadWriteLock</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLock</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2543"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_read_write_lock_1af5bdcc95d7a236bfcbe9eee668f8a737">
+		<apiName>operator=</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="class_r_read_write_lock.xml#class_r_read_write_lock">RReadWriteLock</apiRelation> &amp;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RReadWriteLock</cxxFunctionScopedName>
+				<cxxFunctionPrototype>RReadWriteLock &amp; operator=(const RReadWriteLock &amp;aLock)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RReadWriteLock::operator=(const RReadWriteLock &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_r_read_write_lock.xml#class_r_read_write_lock">RReadWriteLock</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLock</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2544"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_read_write_lock_1a3f8162fbb83d99c01dc4f53391767cf1">
+		<apiName>UnlockWriter</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RReadWriteLock</cxxFunctionScopedName>
+				<cxxFunctionPrototype>TInt UnlockWriter()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RReadWriteLock::UnlockWriter()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2546"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_read_write_lock_1a5caeaca341ed68e302613c2d75b2010a">
+		<apiName>UnlockAlternate</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RReadWriteLock</cxxFunctionScopedName>
+				<cxxFunctionPrototype>TInt UnlockAlternate()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RReadWriteLock::UnlockAlternate()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2547"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_read_write_lock_1ace37444e42c3a6c18b07ebb0ee829b76">
+		<apiName>UnlockReader</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RReadWriteLock</cxxFunctionScopedName>
+				<cxxFunctionPrototype>TInt UnlockReader()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RReadWriteLock::UnlockReader()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2548"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxVariable id="class_r_read_write_lock_1a0ed7db0dbecd1c258ea92c9af230e6fc">
+		<apiName>iValues</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1ab392502765df1d3a9263b05a43f882da">TUint64</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>RReadWriteLock</cxxVariableScopedName>
+				<cxxVariablePrototype>volatile TUint64 iValues</cxxVariablePrototype>
+				<cxxVariableNameLookup>RReadWriteLock::iValues</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="2551"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_r_read_write_lock_1acc0d2f2c4508806c6c5c5179e9fca2a7">
+		<apiName>iPriority</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="class_r_read_write_lock.xml#_1af413991a11e284df3d7c07dba3da781c">TReadWriteLockPriority</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>RReadWriteLock</cxxVariableScopedName>
+				<cxxVariablePrototype>TReadWriteLockPriority iPriority</cxxVariablePrototype>
+				<cxxVariableNameLookup>RReadWriteLock::iPriority</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="2552"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_r_read_write_lock_1a981ae9ba7c097a2bb3d0d40a8af25d7f">
+		<apiName>iReaderSem</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="class_r_semaphore.xml#class_r_semaphore">RSemaphore</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>RReadWriteLock</cxxVariableScopedName>
+				<cxxVariablePrototype>RSemaphore iReaderSem</cxxVariablePrototype>
+				<cxxVariableNameLookup>RReadWriteLock::iReaderSem</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="2553"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_r_read_write_lock_1a3e8fe8470433407870fd87fa4474f5d1">
+		<apiName>iWriterSem</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="class_r_semaphore.xml#class_r_semaphore">RSemaphore</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>RReadWriteLock</cxxVariableScopedName>
+				<cxxVariablePrototype>RSemaphore iWriterSem</cxxVariablePrototype>
+				<cxxVariableNameLookup>RReadWriteLock::iWriterSem</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="2554"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_r_read_write_lock_1a095f4d1a1dd3e14a2cd9cbb273babc21">
+		<apiName>iSpare</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a8240e11f17c80b6b222fc2af50234da4">TUint32</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>RReadWriteLock</cxxVariableScopedName>
+				<cxxVariablePrototype>TUint32 iSpare[4]</cxxVariablePrototype>
+				<cxxVariableNameLookup>RReadWriteLock::iSpare</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="2555"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+</cxxClass>

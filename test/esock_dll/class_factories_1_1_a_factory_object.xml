@@ -1,0 +1,153 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_factories_1_1_a_factory_object">
+	<apiName>Factories::AFactoryObject</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/elements/factoryobject.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="154"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/elements/factoryobject.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="149"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="189"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>Factory Object Base class providing basic managed objects functionality in conjunction with <xref href="class_factories_1_1_c_factory_base.xml#class_factories_1_1_c_factory_base">CFactoryBase</xref>. </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_factories_1_1_a_factory_object_1a6f08abbc31943674137e31013bff613b">
+		<apiName>DeleteMeNow</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Factories::AFactoryObject</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void DeleteMeNow()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Factories::AFactoryObject::DeleteMeNow()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/factoryobject.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="162"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Delete the factory object. Should only be called by <xref href="class_factories_1_1_c_factory_base.xml#class_factories_1_1_c_factory_base">CFactoryBase</xref>. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_factories_1_1_a_factory_object_1aa069fb9f5199921db169bd47bed056e0">
+		<apiName>MarkMeForDeletion</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Factories::AFactoryObject</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void MarkMeForDeletion()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Factories::AFactoryObject::MarkMeForDeletion()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/factoryobject.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="168"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Mark this factory object for deletion. Once marked for deletion, it will not be given to clients as a result of a find or create factory object request. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_factories_1_1_a_factory_object_1a032ee54aaa902d2760de06acc5b3a2d9">
+		<apiName>Factory</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="class_factories_1_1_c_factory_base.xml#class_factories_1_1_c_factory_base">CFactoryBase</apiRelation> &amp;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Factories::AFactoryObject</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline CFactoryBase &amp; Factory() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Factories::AFactoryObject::Factory()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/factoryobject.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="174"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="191"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="194"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Get the factory which owns this factory object The factory which owns this factory object </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_factories_1_1_a_factory_object_1a3c130ccc1d00cdee9060d74a11d9b606">
+		<apiName>AFactoryObject</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType>IMPORT_C</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Factories::AFactoryObject</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C AFactoryObject(CFactoryBase &amp;aFactory)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Factories::AFactoryObject::AFactoryObject(CFactoryBase &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_factories_1_1_c_factory_base.xml#class_factories_1_1_c_factory_base">CFactoryBase</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFactory</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The factory which owns this factory object </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/factoryobject.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="180"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Constructor for <xref href="class_factories_1_1_a_factory_object.xml#class_factories_1_1_a_factory_object">AFactoryObject</xref> <xref href="class_factories_1_1_c_factory_base.xml#class_factories_1_1_c_factory_base">CFactoryBase</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_factories_1_1_a_factory_object_1a587b4a342a3e51e399a44ece15c9c94a">
+		<apiName>~AFactoryObject</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionVirtual/>
+				<cxxFunctionDestructor/>
+				<cxxFunctionDeclaredType>IMPORT_C</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Factories::AFactoryObject</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual IMPORT_C ~AFactoryObject()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Factories::AFactoryObject::~AFactoryObject()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/factoryobject.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="185"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxVariable id="class_factories_1_1_a_factory_object_1a712c606e9f50156cacc11df86246db2d">
+		<apiName>iFactory</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableStorageClassSpecifierMutable/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="class_factories_1_1_c_factory_base.xml#class_factories_1_1_c_factory_base">CFactoryBase</apiRelation> &amp;</cxxVariableDeclaredType>
+				<cxxVariableScopedName>Factories::AFactoryObject</cxxVariableScopedName>
+				<cxxVariablePrototype>CFactoryBase &amp; iFactory</cxxVariablePrototype>
+				<cxxVariableNameLookup>Factories::AFactoryObject::iFactory</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/elements/factoryobject.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="188"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+</cxxClass>

@@ -1,0 +1,279 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_t_volume_info">
+	<apiName>TVolumeInfo</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="1524"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="1505"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="1592"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>Contains information about a volume mounted on a drive. Use <xref href="class_r_fs.xml#class_r_fs_1ae26e10655957c9b15f27009f6ade311b">RFs::Drive()</xref> if only the drive information is required.</p>
+			<p>If a drive supports removable media it may contain different volumes over time.</p>
+			<p>Volume information is made up of information concerning the drive on which it is mounted, which can also be accessed through <xref href="class_r_fs.xml#class_r_fs_1ae26e10655957c9b15f27009f6ade311b">RFs::Drive()</xref>, and the volume information, this is made up of the size of the volume, the free space, its unique identifying number and a name.</p>
+			<p>
+				<xref href="class_t_volume_info.xml#class_t_volume_info">TVolumeInfo</xref> is initialised by <xref href="class_r_fs.xml#class_r_fs_1a70021d2fed4ffa2599a3d72ffc204009">RFs::Volume()</xref>.</p>
+			<p>
+				<xref href="class_r_fs.xml#class_r_fs_1a70021d2fed4ffa2599a3d72ffc204009">RFs::Volume()</xref> </p>
+			<p>
+				<xref href="class_r_fs.xml#class_r_fs_1ae26e10655957c9b15f27009f6ade311b">RFs::Drive()</xref> </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_t_volume_info_1a6f59d546ec2f0b29a0b28c6c53803306">
+		<apiName>TVolumeInfo</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType>IMPORT_C</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TVolumeInfo</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TVolumeInfo()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TVolumeInfo::TVolumeInfo()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1526"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxVariable id="class_t_volume_info_1a818c3fe6141d488c39309d41fbb4779a">
+		<apiName>iDrive</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="class_t_drive_info.xml#class_t_drive_info">TDriveInfo</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TVolumeInfo</cxxVariableScopedName>
+				<cxxVariablePrototype>TDriveInfo iDrive</cxxVariablePrototype>
+				<cxxVariableNameLookup>TVolumeInfo::iDrive</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1533"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Information about the drive on which the volume is mounted.</p>
+				<p>
+					<xref href="class_t_drive_info.xml#class_t_drive_info">TDriveInfo</xref> </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_t_volume_info_1abdcc8e239b2d86c2b20a175d7702c892">
+		<apiName>iUniqueID</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TVolumeInfo</cxxVariableScopedName>
+				<cxxVariablePrototype>TUint iUniqueID</cxxVariablePrototype>
+				<cxxVariableNameLookup>TVolumeInfo::iUniqueID</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1539"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>The volume s unique identifying number. </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_t_volume_info_1ae183a9d1073ea6f68393c3e0f26cf8db">
+		<apiName>iSize</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a05bf37b696038fef93385278ebf8ee16">TInt64</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TVolumeInfo</cxxVariableScopedName>
+				<cxxVariablePrototype>TInt64 iSize</cxxVariablePrototype>
+				<cxxVariableNameLookup>TVolumeInfo::iSize</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1546"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>The maximum size of the volume in bytes. The current amount of memory in use plus the amount of free memory. </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_t_volume_info_1abde8dea3e085783e5ec49a42970ac408">
+		<apiName>iFree</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a05bf37b696038fef93385278ebf8ee16">TInt64</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TVolumeInfo</cxxVariableScopedName>
+				<cxxVariablePrototype>TInt64 iFree</cxxVariablePrototype>
+				<cxxVariableNameLookup>TVolumeInfo::iFree</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1552"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>The amount of free space on the volume in bytes. </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_t_volume_info_1a83f88d697bb617432a566a16697443d3">
+		<apiName>iName</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="class_t_buf_c.xml#class_t_buf_c">TBufC</apiRelation>&lt; <apiRelation href="e32const_8h.xml#_1abaa62eff69a94f1ede111b6883c14133">KMaxFileName</apiRelation> &gt;</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TVolumeInfo</cxxVariableScopedName>
+				<cxxVariablePrototype>TBufC&lt; KMaxFileName &gt; iName</cxxVariablePrototype>
+				<cxxVariableNameLookup>TVolumeInfo::iName</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1562"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Name of the volume, with a maximum of KMaxFileName characters.</p>
+				<p>This field is optional.</p>
+				<p>
+					<xref href="e32const_8h.xml#e32const_8h_1abaa62eff69a94f1ede111b6883c14133">KMaxFileName</xref> </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_t_volume_info_1aa4b214e1132399e08318630d1919ee73">
+		<apiName>iFileCacheFlags</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="cs__subconn_8cpp.xml#_1aff4ed7c70ced90ea9b5ae5ecaf9f2a34">TFileCacheFlags</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TVolumeInfo</cxxVariableScopedName>
+				<cxxVariablePrototype>TFileCacheFlags iFileCacheFlags</cxxVariablePrototype>
+				<cxxVariableNameLookup>TVolumeInfo::iFileCacheFlags</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1569"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Flags which define the default file-caching behaviour for this volume</p>
+				<p>
+					<xref href="cs__subconn_8cpp.xml#cs__subconn_8cpp_1aff4ed7c70ced90ea9b5ae5ecaf9f2a34">TFileCacheFlags</xref> </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_t_volume_info_1a8cf35b25c7a112aa6b1e9416ef37a166">
+		<apiName>iVolSizeAsync</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1aae4399ce3f10d6c2b5ec96a13bbb5881">TUint8</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TVolumeInfo</cxxVariableScopedName>
+				<cxxVariablePrototype>TUint8 iVolSizeAsync</cxxVariablePrototype>
+				<cxxVariableNameLookup>TVolumeInfo::iVolSizeAsync</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1582"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Internal flag, used in the case of non-blocking getting volume information. RFs::Volume(TVolumeInfo&amp; aVol,TInt aDrive, TRequestStatus&amp; aStat)</p>
+				<p>If this flag is set, it means that the volume information will be obtained asynchronously. More specific, on return iFree will reflect the _current_ amount of free space on volume at the moment of <xref href="class_r_fs.xml#class_r_fs_1a70021d2fed4ffa2599a3d72ffc204009">RFs::Volume()</xref> call, not the exact final value. This is because in this case getting volume information will be asynchronous, and the client will not be suspended until the mount finish calculating free space. At present appicable to FAT32 file system only. </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_t_volume_info_1ae2ec13c120f456dfb098f33927ca4328">
+		<apiName>i8Reserved1</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1aae4399ce3f10d6c2b5ec96a13bbb5881">TUint8</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TVolumeInfo</cxxVariableScopedName>
+				<cxxVariablePrototype>TUint8 i8Reserved1</cxxVariablePrototype>
+				<cxxVariableNameLookup>TVolumeInfo::i8Reserved1</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1588"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Reserved for future expansion </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_t_volume_info_1a9045686ceb4dc3cf38b092f04c6196a4">
+		<apiName>i16Reserved1</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a7c545c7b28f2e5d128d132d2ea1cdb2b">TUint16</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TVolumeInfo</cxxVariableScopedName>
+				<cxxVariablePrototype>TUint16 i16Reserved1</cxxVariablePrototype>
+				<cxxVariableNameLookup>TVolumeInfo::i16Reserved1</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1589"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_t_volume_info_1af3dfe0a4a3809771b9b5f67460b58043">
+		<apiName>i32Reserved1</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a8240e11f17c80b6b222fc2af50234da4">TUint32</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TVolumeInfo</cxxVariableScopedName>
+				<cxxVariablePrototype>TUint32 i32Reserved1</cxxVariablePrototype>
+				<cxxVariableNameLookup>TVolumeInfo::i32Reserved1</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1590"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_t_volume_info_1af666a3e42d1b196b849a67a88590f0fe">
+		<apiName>i32Reserved2</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a8240e11f17c80b6b222fc2af50234da4">TUint32</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TVolumeInfo</cxxVariableScopedName>
+				<cxxVariablePrototype>TUint32 i32Reserved2</cxxVariablePrototype>
+				<cxxVariableNameLookup>TVolumeInfo::i32Reserved2</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1591"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+</cxxClass>

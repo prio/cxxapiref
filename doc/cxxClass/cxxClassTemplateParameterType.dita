@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (c) 2011 Nokia Corporation and/or its subsidiary(-ies).
+All rights reserved.        
+        -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<reference id="cxxClassTemplateParameterType" outputclass="element"
+xml:lang="en-us">
+<title>cxxClassTemplateParameterType</title>
+<shortdesc>The &lt;cxxClassTemplateParameterType> allows you to provide
+information about the purpose of a template parameter.</shortdesc>
+<refbody>
+<section>             <title>Description</title>             <p>When
+instantiating a class template a developer needs to know the role
+of the template parameter and any constraints on the type used. <?Pub
+Caret?>The &lt;cxxClassTemplateParameterType> element is defined within
+the &lt;cxxClassTemplateParameter> element. Use it together with the
+&lt;apiDefNote> sibling element to document how a class template should
+be used.</p>         </section>
+<example>             <title>Example</title>             <codeblock
+>&lt;cxxClassTemplateParameters>
+  &lt;cxxClassTemplateParameter>
+    &lt;cxxClassTemplateParameterType>typename T&lt;/cxxClassTemplateParameterType>
+    &lt;apiDefNote>The type of the first function object. &lt;/apiDefNote>
+  &lt;/cxxClassTemplateParameter>
+  &lt;cxxClassTemplateParameter>
+    &lt;cxxClassTemplateParameterType>typename U&lt;/cxxClassTemplateParameterType>
+    &lt;apiDefNote>The type of the second function object. &lt;/apiDefNote>
+  &lt;/cxxClassTemplateParameter>
+&lt;/cxxClassTemplateParameters></codeblock>         </example>
+<section
+conref="../packagedef.dita#cxxClassTemplateParameterType-reference/cxxClassTemplateParameterType-containedBy-section"
+></section>
+<section
+conref="../packagedef.dita#cxxClassTemplateParameterType-reference/cxxClassTemplateParameterType-contains-section"
+></section>
+<section
+conref="../packagedef.dita#cxxClassTemplateParameterType-reference/cxxClassTemplateParameterType-contentModel-section"
+></section>
+<section
+conref="../packagedef.dita#cxxClassTemplateParameterType-reference/cxxClassTemplateParameterType-attList-section"
+></section>
+<section
+conref="../packagedef.dita#cxxClassTemplateParameterType-reference/cxxClassTemplateParameterType-classValue-section"
+></section>
+</refbody>
+</reference>
+<?Pub *0000002241?>

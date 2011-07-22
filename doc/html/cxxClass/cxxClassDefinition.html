@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="cxxClassDefinition"/>
+<meta name="abstract" content="Used to introduce a new class definition. Child elements describe the details of the class."/>
+<meta name="description" content="Used to introduce a new class definition. Child elements describe the details of the class."/>
+<meta name="DC.Relation" scheme="URI" content="../cxxClass/cxxClass_module.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="cxxClassDefinition"/>
+<meta name="DC.Language" content="en-us"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>cxxClassDefinition</title>
+<link rel="stylesheet" type="text/css" href="../nokiacxxref.css"/></head>
+<body class="element" id="cxxClassDefinition"><a name="cxxClassDefinition"><!-- --></a>
+
+
+<h1 class="topictitle1">cxxClassDefinition</h1>
+
+
+<div><p>Used to introduce a new class definition.
+Child elements describe the details of the class.</p>
+
+<div class="section"><h2 class="sectiontitle">Description</h2>             <p>The &lt;cxxClassDefinition&gt;
+element describes a new named type.  The child element &lt;cxxClassAPIItemLocation&gt;
+is mandatory.</p>
+</div>
+
+<div class="example"><h2 class="sectiontitle">Example</h2>         <pre class="codeblock">&lt;cxxClassDefinition&gt;
+			&lt;cxxClassAccessSpecifier value="public"/&gt;
+			&lt;cxxClassDerivations&gt;
+				&lt;cxxClassDerivation&gt;
+					&lt;cxxClassDerivationAccessSpecifier value="public"/&gt;
+					&lt;cxxClassBaseClass href="class_c_base.xml#class_c_base"&gt;CBase&lt;/cxxClassBaseClass&gt;
+				&lt;/cxxClassDerivation&gt;
+			&lt;/cxxClassDerivations&gt;
+			&lt;cxxClassAPIItemLocation&gt;
+				&lt;cxxClassDeclarationFile name="filePath" value="C:/src/include/e32base.h"/&gt;
+				&lt;cxxClassDeclarationFileLine name="lineNumber" value="2812"/&gt;
+				&lt;cxxClassDefinitionFile name="filePath" value="C:/src/include/e32base.h"/&gt;
+				&lt;cxxClassDefinitionFileLineStart name="lineNumber" value="2784"/&gt;
+				&lt;cxxClassDefinitionFileLineEnd name="lineNumber" value="2854"/&gt;
+			&lt;/cxxClassAPIItemLocation&gt;
+		&lt;/cxxClassDefinition&gt;</pre>
+         </div>
+
+<div class="elementContainedBy"><h2 class="sectiontitle">Contained by</h2>
+
+<p id="cxxClassDefinition__d1945e870"><a name="cxxClassDefinition__d1945e870"><!-- --></a>
+<a href="cxxClassDetail.html" title="The &lt;cxxClassDetail&gt; element provides detailed information about the behavior and implementation of a C++ class.">cxxClassDetail</a> 
+</p>
+
+</div>
+
+<div class="elementContains"><h2 class="sectiontitle">Contains</h2>
+
+<p id="cxxClassDefinition__d1945e882"><a name="cxxClassDefinition__d1945e882"><!-- --></a>
+<a href="cxxClassAPIItemLocation.html" title="Contains child elements that specify the location of the declaration and definition of the members of a class.">cxxClassAPIItemLocation</a> 
+<a href="cxxClassAbstract.html" title="Can optionally be used to mark a class as abstract.">cxxClassAbstract</a> 
+<a href="cxxClassAccessSpecifier.html" title="Describes the level of access allowed to the member variables or functions of the class.">cxxClassAccessSpecifier</a> 
+<a href="cxxClassDerivations.html" title="Specifies the base class or base classes from which the class derives. Use a separate child &lt;cxxClassDerivation&gt; element to represent each base class.">cxxClassDerivations</a> 
+<a href="cxxClassTemplateParameters.html" title="Use &lt;cxxClassTemplateParameters&gt; to indicate the template type or types used by a C++ class template. &lt;cxxClassTemplateParameters&gt; is declared within &lt;cxxClassDefinition&gt;.">cxxClassTemplateParameters</a> 
+</p>
+
+</div>
+
+<div class="elementContentModel"><h2 class="sectiontitle">Content Model</h2>
+
+<p id="cxxClassDefinition__d1945e906"><a name="cxxClassDefinition__d1945e906"><!-- --></a>
+(<a href="cxxClassAccessSpecifier.html" title="Describes the level of access allowed to the member variables or functions of the class.">cxxClassAccessSpecifier</a> 
+(<em>optional</em>)
+  then  
+<a href="cxxClassAbstract.html" title="Can optionally be used to mark a class as abstract.">cxxClassAbstract</a> 
+(<em>optional</em>)
+  then  
+<a href="cxxClassDerivations.html" title="Specifies the base class or base classes from which the class derives. Use a separate child &lt;cxxClassDerivation&gt; element to represent each base class.">cxxClassDerivations</a> 
+(<em>optional</em>)
+  then  
+<a href="cxxClassTemplateParameters.html" title="Use &lt;cxxClassTemplateParameters&gt; to indicate the template type or types used by a C++ class template. &lt;cxxClassTemplateParameters&gt; is declared within &lt;cxxClassDefinition&gt;.">cxxClassTemplateParameters</a> 
+(<em>optional</em>)
+  then  
+<a href="cxxClassAPIItemLocation.html" title="Contains child elements that specify the location of the declaration and definition of the members of a class.">cxxClassAPIItemLocation</a> 
+)</p>
+
+</div>
+
+<div class="elementAttList"/>
+
+<div class="elementClassValue"><h2 class="sectiontitle">Inheritance</h2>
+
+<p id="cxxClassDefinition__d1945e945"><a name="cxxClassDefinition__d1945e945"><!-- --></a>
+ topic/<span class="keyword">section</span> reference/<span class="keyword">section</span> apiRef/<span class="keyword">apiDef</span> apiClassifier/<span class="keyword">apiClassifierDef</span> cxxClass/<span class="keyword">cxxClassDefinition</span></p>
+
+</div>
+
+</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../cxxClass/cxxClass_module.html" title="Defines a top-level container for all the elements necessary to describe an C++ API class.">cxxClass module</a></div>
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,2029 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_t_time">
+	<apiName>TTime</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="1783"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="1782"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="1864"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>Stores and manipulates the date and time.</p>
+			<p>It represents a date and time as a number of microseconds since midnight, January 1st, 1 AD nominal Gregorian. BC dates are represented by negative <xref href="class_t_time.xml#class_t_time">TTime</xref> values. A <xref href="class_t_time.xml#class_t_time">TTime</xref> object may be constructed from a TInt64, a <xref href="class_t_date_time.xml#class_t_date_time">TDateTime</xref> a string literal, or by default, which initialises the time to an arbitrary value. To access human-readable time information, the <xref href="class_t_time.xml#class_t_time">TTime</xref> may be converted from a TInt64 into a <xref href="class_t_date_time.xml#class_t_date_time">TDateTime</xref>, which represents the date and time as seven numeric fields and provides functions to extract these fields. Alternatively, to display the time as text, the time may be formatted and placed into a descriptor using a variety of formatting commands and which may or may not honour the system&apos;s locale settings. The conversion between time and text may be performed the other way around, so that a descriptor can be parsed and converted into a <xref href="class_t_time.xml#class_t_time">TTime</xref> value.</p>
+			<p>In addition to setting and getting the date and time and converting between text and time, <xref href="class_t_time.xml#class_t_time">TTime</xref> provides functions to get intervals between times and standard comparison and arithmetic operators which enable time intervals to be added or subtracted to or from the time.</p>
+			<p>
+				<xref href="e32def_8h.xml#e32def_8h_1a05bf37b696038fef93385278ebf8ee16">TInt64</xref> </p>
+			<p>
+				<xref href="class_t_date_time.xml#class_t_date_time">TDateTime</xref> </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_t_time_1ab216407e31d5ae77e037312bf4b6b525">
+		<apiName>TTime</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TTime()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::TTime()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1785"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1831"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1837"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Default constructor.</p>
+				<p>The object is initialised to an arbitrary value. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1a6cab523660099fa6c91092cfe4c6b1e7">
+		<apiName>TTime</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TTime(const TInt64 &amp;aTime)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::TTime(const TInt64 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="e32def_8h.xml#_1a05bf37b696038fef93385278ebf8ee16">TInt64</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aTime</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Microsecond value to which to initialise the TTime object. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1786"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1842"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1849"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Constructs the object from a 64-bit microsecond value.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1ad794fd1d58ccdcb467d1a6101de16c48">
+		<apiName>TTime</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType>IMPORT_C</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TTime(const TDesC &amp;aString)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::TTime(const TDesC &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aString</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1787"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1a66f1ed5d4516f519470ea4356ed88804">
+		<apiName>TTime</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType>IMPORT_C</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TTime(const TDateTime &amp;aDateTime)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::TTime(const TDateTime &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_date_time.xml#class_t_date_time">TDateTime</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDateTime</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1788"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1ad8faecdf8cce07987977952fb532acc2">
+		<apiName>operator=</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="class_t_time.xml#class_t_time">TTime</apiRelation> &amp;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TTime &amp; operator=(const TInt64 &amp;aTime)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::operator=(const TInt64 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="e32def_8h.xml#_1a05bf37b696038fef93385278ebf8ee16">TInt64</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aTime</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Microsecond value which to assign to the TTime object.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1789"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1854"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1862"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Assigns a value contained in a 64-bit integer to this <xref href="class_t_time.xml#class_t_time">TTime</xref> object.</p>
+				<p>This <xref href="class_t_time.xml#class_t_time">TTime</xref> object. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1a3b90d21fbee00db752df942e4457d4d7">
+		<apiName>operator=</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_time.xml#class_t_time">TTime</apiRelation> &amp;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TTime &amp; operator=(const TDateTime &amp;aDateTime)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::operator=(const TDateTime &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_date_time.xml#class_t_date_time">TDateTime</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDateTime</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1790"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1a182f0712fd09a2d4baaffed4fda6c96f">
+		<apiName>HomeTime</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void HomeTime()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::HomeTime()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1791"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1a9cd76365924e9919ea4ee2c97d6c6ce5">
+		<apiName>UniversalTime</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void UniversalTime()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::UniversalTime()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1792"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1a2535a7178b05aba94f0adf64302a6e53">
+		<apiName>Set</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Set(const TDesC &amp;aString)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::Set(const TDesC &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aString</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1793"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1aefb679a655f9e09e3f1ca9f79802dcf7">
+		<apiName>HomeTimeSecure</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt HomeTimeSecure()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::HomeTimeSecure()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1794"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1af4111eeabc2b0802efd8113217c1785e">
+		<apiName>UniversalTimeSecure</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt UniversalTimeSecure()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::UniversalTimeSecure()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1795"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1a8477109a11e9ab1d20edcb8f9ea459b9">
+		<apiName>DateTime</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_date_time.xml#class_t_date_time">TDateTime</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TDateTime DateTime() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::DateTime()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1797"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1a031f62f99aa5ef5e17e12d03c73d2572">
+		<apiName>MicroSecondsFrom</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_time_interval_micro_seconds.xml#class_t_time_interval_micro_seconds">TTimeIntervalMicroSeconds</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TTimeIntervalMicroSeconds MicroSecondsFrom(TTime aTime) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::MicroSecondsFrom(TTime)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_time.xml#class_t_time">TTime</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aTime</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1798"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1a2af73714b7a810f91d41f4e1bcb4afc7">
+		<apiName>SecondsFrom</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt SecondsFrom(TTime aTime, TTimeIntervalSeconds &amp;aInterval) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::SecondsFrom(TTime,TTimeIntervalSeconds &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_time.xml#class_t_time">TTime</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aTime</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_time_interval_seconds.xml#class_t_time_interval_seconds">TTimeIntervalSeconds</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aInterval</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1799"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1afde31ac8547092f0d879be3b74ac128b">
+		<apiName>MinutesFrom</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt MinutesFrom(TTime aTime, TTimeIntervalMinutes &amp;aInterval) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::MinutesFrom(TTime,TTimeIntervalMinutes &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_time.xml#class_t_time">TTime</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aTime</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_time_interval_minutes.xml#class_t_time_interval_minutes">TTimeIntervalMinutes</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aInterval</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1800"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1a7446fced68e389f7666fb836db7e60cb">
+		<apiName>HoursFrom</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt HoursFrom(TTime aTime, TTimeIntervalHours &amp;aInterval) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::HoursFrom(TTime,TTimeIntervalHours &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_time.xml#class_t_time">TTime</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aTime</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_time_interval_hours.xml#class_t_time_interval_hours">TTimeIntervalHours</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aInterval</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1801"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1a718019259f7026d5a48522bbd208c910">
+		<apiName>DaysFrom</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_time_interval_days.xml#class_t_time_interval_days">TTimeIntervalDays</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TTimeIntervalDays DaysFrom(TTime aTime) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::DaysFrom(TTime)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_time.xml#class_t_time">TTime</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aTime</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1802"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1a251a6de8f0de75bbb37357f0fdd06b15">
+		<apiName>MonthsFrom</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_time_interval_months.xml#class_t_time_interval_months">TTimeIntervalMonths</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TTimeIntervalMonths MonthsFrom(TTime aTime) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::MonthsFrom(TTime)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_time.xml#class_t_time">TTime</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aTime</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1803"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1a004ecde699fe05524e960f1c6b4118a6">
+		<apiName>YearsFrom</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_time_interval_years.xml#class_t_time_interval_years">TTimeIntervalYears</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TTimeIntervalYears YearsFrom(TTime aTime) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::YearsFrom(TTime)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_time.xml#class_t_time">TTime</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aTime</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1804"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1a307cf1870bccf36a3c58dcdea8a891db">
+		<apiName>DaysInMonth</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt DaysInMonth() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::DaysInMonth()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1806"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1ad4f0428dec73c816c95e10414b15633a">
+		<apiName>DayNoInWeek</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1a1c37187a417bb13dee025c0b9b3a1a08">TDay</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TDay DayNoInWeek() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::DayNoInWeek()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1807"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1a99fda2fa4055ca8b431f4050ceaf93ea">
+		<apiName>DayNoInMonth</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt DayNoInMonth() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::DayNoInMonth()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1808"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1a6dd92ef4fe9ef7f56acb7002d77390e1">
+		<apiName>DayNoInYear</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt DayNoInYear() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::DayNoInYear()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1809"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1aa02c2ebd8476a4f39757eb731ab7cbcf">
+		<apiName>DayNoInYear</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt DayNoInYear(TTime aStartDate) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::DayNoInYear(TTime)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_time.xml#class_t_time">TTime</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStartDate</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1810"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1a89dd3a1895d499541a269f0ff54e230f">
+		<apiName>WeekNoInYear</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt WeekNoInYear() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::WeekNoInYear()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1811"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1a8022430aab7c9cae2a7a480ecb222fac">
+		<apiName>WeekNoInYear</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt WeekNoInYear(TTime aStartDate) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::WeekNoInYear(TTime)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_time.xml#class_t_time">TTime</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStartDate</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1812"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1a10f083ca5926eaf7f1be7c8a644cd463">
+		<apiName>WeekNoInYear</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt WeekNoInYear(TFirstWeekRule aRule) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::WeekNoInYear(TFirstWeekRule)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1af06214288b293043eacf04068b7d139c">TFirstWeekRule</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aRule</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1813"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1a38e3328a5a0e09f10cdd7664bee68709">
+		<apiName>WeekNoInYear</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt WeekNoInYear(TTime aStartDate, TFirstWeekRule aRule) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::WeekNoInYear(TTime,TFirstWeekRule)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_time.xml#class_t_time">TTime</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStartDate</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1af06214288b293043eacf04068b7d139c">TFirstWeekRule</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aRule</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1814"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1a2b6c680c5ad3e697d0284c0ddff1b493">
+		<apiName>FormatL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void FormatL(TDes &amp;aDes, const TDesC &amp;aFormat) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::FormatL(TDes &amp;,const TDesC &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des16.xml#class_t_des16">TDes</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFormat</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1815"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1ab323e9fad6ec1afd02cfe7a6d6ddb879">
+		<apiName>FormatL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void FormatL(TDes &amp;aDes, const TDesC &amp;aFormat, const TLocale &amp;aLocale) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::FormatL(TDes &amp;,const TDesC &amp;,const TLocale &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des16.xml#class_t_des16">TDes</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFormat</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_locale.xml#class_t_locale">TLocale</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLocale</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1816"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1a8bbd27163a3bef694b3ec9aadd18f3aa">
+		<apiName>RoundUpToNextMinute</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void RoundUpToNextMinute()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::RoundUpToNextMinute()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1817"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1a39d58730983dbec9629191a3dda4aba3">
+		<apiName>Parse</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Parse(const TDesC &amp;aDes, TInt aCenturyOffset=0)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::Parse(const TDesC &amp;,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCenturyOffset</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>0</cxxFunctionParameterDefaultValue>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1818"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1ae4be0bebee78fcf06282a3024fe3bac8">
+		<apiName>operator+</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_time.xml#class_t_time">TTime</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TTime operator+(TTimeIntervalYears aYear) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::operator+(TTimeIntervalYears)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_time_interval_years.xml#class_t_time_interval_years">TTimeIntervalYears</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aYear</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1820"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1ac53eb4ba6cfaee89c00ff637bafbe93d">
+		<apiName>operator+</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_time.xml#class_t_time">TTime</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TTime operator+(TTimeIntervalMonths aMonth) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::operator+(TTimeIntervalMonths)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_time_interval_months.xml#class_t_time_interval_months">TTimeIntervalMonths</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMonth</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1821"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1a92bae519033c5b868fa59e319800e992">
+		<apiName>operator+</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_time.xml#class_t_time">TTime</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TTime operator+(TTimeIntervalDays aDay) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::operator+(TTimeIntervalDays)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_time_interval_days.xml#class_t_time_interval_days">TTimeIntervalDays</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDay</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1822"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1a0f297980f3ef94a97b986a79430b554a">
+		<apiName>operator+</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_time.xml#class_t_time">TTime</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TTime operator+(TTimeIntervalHours aHour) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::operator+(TTimeIntervalHours)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_time_interval_hours.xml#class_t_time_interval_hours">TTimeIntervalHours</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aHour</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1823"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1add6441396d0dcb8c61167d0462934ff6">
+		<apiName>operator+</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_time.xml#class_t_time">TTime</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TTime operator+(TTimeIntervalMinutes aMinute) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::operator+(TTimeIntervalMinutes)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_time_interval_minutes.xml#class_t_time_interval_minutes">TTimeIntervalMinutes</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMinute</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1824"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1ad7b00b7081d6981f703904ec2872721c">
+		<apiName>operator+</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_time.xml#class_t_time">TTime</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TTime operator+(TTimeIntervalSeconds aSecond) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::operator+(TTimeIntervalSeconds)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_time_interval_seconds.xml#class_t_time_interval_seconds">TTimeIntervalSeconds</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSecond</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1825"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1a585d8351de84a3315f55c7821ba104e6">
+		<apiName>operator+</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_time.xml#class_t_time">TTime</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TTime operator+(TTimeIntervalMicroSeconds aMicroSecond) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::operator+(TTimeIntervalMicroSeconds)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_time_interval_micro_seconds.xml#class_t_time_interval_micro_seconds">TTimeIntervalMicroSeconds</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMicroSecond</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1826"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1ac8ba66599b5f51325c2f43b6eaf109fd">
+		<apiName>operator+</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_time.xml#class_t_time">TTime</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TTime operator+(TTimeIntervalMicroSeconds32 aMicroSecond) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::operator+(TTimeIntervalMicroSeconds32)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_time_interval_micro_seconds32.xml#class_t_time_interval_micro_seconds32">TTimeIntervalMicroSeconds32</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMicroSecond</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1827"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1aa845cc3d3963d8ec883752d0164e8541">
+		<apiName>operator-</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_time.xml#class_t_time">TTime</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TTime operator-(TTimeIntervalYears aYear) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::operator-(TTimeIntervalYears)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_time_interval_years.xml#class_t_time_interval_years">TTimeIntervalYears</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aYear</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1828"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1a15d13c77c4d2b23c840500eda60f3918">
+		<apiName>operator-</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_time.xml#class_t_time">TTime</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TTime operator-(TTimeIntervalMonths aMonth) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::operator-(TTimeIntervalMonths)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_time_interval_months.xml#class_t_time_interval_months">TTimeIntervalMonths</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMonth</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1829"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1a2dea5cda58d107bf103d7ed2f7ebff5a">
+		<apiName>operator-</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_time.xml#class_t_time">TTime</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TTime operator-(TTimeIntervalDays aDay) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::operator-(TTimeIntervalDays)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_time_interval_days.xml#class_t_time_interval_days">TTimeIntervalDays</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDay</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1830"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1afb98ccf4569f8c5c9adb82f3362083e8">
+		<apiName>operator-</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_time.xml#class_t_time">TTime</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TTime operator-(TTimeIntervalHours aHour) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::operator-(TTimeIntervalHours)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_time_interval_hours.xml#class_t_time_interval_hours">TTimeIntervalHours</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aHour</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1831"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1ad2a6b54713e1924d97727d6bc5ff55ea">
+		<apiName>operator-</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_time.xml#class_t_time">TTime</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TTime operator-(TTimeIntervalMinutes aMinute) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::operator-(TTimeIntervalMinutes)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_time_interval_minutes.xml#class_t_time_interval_minutes">TTimeIntervalMinutes</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMinute</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1832"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1a43678dd9c64c16eccda7c3617eeef862">
+		<apiName>operator-</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_time.xml#class_t_time">TTime</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TTime operator-(TTimeIntervalSeconds aSecond) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::operator-(TTimeIntervalSeconds)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_time_interval_seconds.xml#class_t_time_interval_seconds">TTimeIntervalSeconds</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSecond</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1833"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1ab4863124035d79e21e287dc354e95f90">
+		<apiName>operator-</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_time.xml#class_t_time">TTime</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TTime operator-(TTimeIntervalMicroSeconds aMicroSecond) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::operator-(TTimeIntervalMicroSeconds)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_time_interval_micro_seconds.xml#class_t_time_interval_micro_seconds">TTimeIntervalMicroSeconds</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMicroSecond</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1834"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1a8700a399ac52bec0a5926d911ec2e40d">
+		<apiName>operator-</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_time.xml#class_t_time">TTime</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TTime operator-(TTimeIntervalMicroSeconds32 aMicroSecond) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::operator-(TTimeIntervalMicroSeconds32)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_time_interval_micro_seconds32.xml#class_t_time_interval_micro_seconds32">TTimeIntervalMicroSeconds32</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMicroSecond</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1835"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1a0b062ecc3a8473e1048711b39fa542c8">
+		<apiName>operator+=</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_time.xml#class_t_time">TTime</apiRelation> &amp;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TTime &amp; operator+=(TTimeIntervalYears aYear)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::operator+=(TTimeIntervalYears)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_time_interval_years.xml#class_t_time_interval_years">TTimeIntervalYears</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aYear</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1836"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1a55760bf9989662cd19f0ff67ec2d9e2c">
+		<apiName>operator+=</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_time.xml#class_t_time">TTime</apiRelation> &amp;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TTime &amp; operator+=(TTimeIntervalMonths aMonth)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::operator+=(TTimeIntervalMonths)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_time_interval_months.xml#class_t_time_interval_months">TTimeIntervalMonths</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMonth</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1837"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1a5e39a770a06c902905775548177fe951">
+		<apiName>operator+=</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_time.xml#class_t_time">TTime</apiRelation> &amp;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TTime &amp; operator+=(TTimeIntervalDays aDay)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::operator+=(TTimeIntervalDays)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_time_interval_days.xml#class_t_time_interval_days">TTimeIntervalDays</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDay</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1838"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1aa7e8d4f0403ace3eee2e3cd82548a97e">
+		<apiName>operator+=</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_time.xml#class_t_time">TTime</apiRelation> &amp;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TTime &amp; operator+=(TTimeIntervalHours aHour)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::operator+=(TTimeIntervalHours)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_time_interval_hours.xml#class_t_time_interval_hours">TTimeIntervalHours</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aHour</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1839"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1a4a70768f297a1a98f5d3ee35f9e50634">
+		<apiName>operator+=</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_time.xml#class_t_time">TTime</apiRelation> &amp;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TTime &amp; operator+=(TTimeIntervalMinutes aMinute)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::operator+=(TTimeIntervalMinutes)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_time_interval_minutes.xml#class_t_time_interval_minutes">TTimeIntervalMinutes</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMinute</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1840"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1a1f60ab45464763eb8dc553dec26db7b1">
+		<apiName>operator+=</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_time.xml#class_t_time">TTime</apiRelation> &amp;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TTime &amp; operator+=(TTimeIntervalSeconds aSecond)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::operator+=(TTimeIntervalSeconds)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_time_interval_seconds.xml#class_t_time_interval_seconds">TTimeIntervalSeconds</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSecond</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1841"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1ab7a24f051778b583465636c69d74fb81">
+		<apiName>operator+=</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_time.xml#class_t_time">TTime</apiRelation> &amp;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TTime &amp; operator+=(TTimeIntervalMicroSeconds aMicroSecond)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::operator+=(TTimeIntervalMicroSeconds)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_time_interval_micro_seconds.xml#class_t_time_interval_micro_seconds">TTimeIntervalMicroSeconds</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMicroSecond</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1842"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1a1a642281315208f9b92818c69f4e5b71">
+		<apiName>operator+=</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_time.xml#class_t_time">TTime</apiRelation> &amp;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TTime &amp; operator+=(TTimeIntervalMicroSeconds32 aMicroSecond)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::operator+=(TTimeIntervalMicroSeconds32)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_time_interval_micro_seconds32.xml#class_t_time_interval_micro_seconds32">TTimeIntervalMicroSeconds32</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMicroSecond</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1843"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1acf19cbcfec35d49c09ea146ebea1bced">
+		<apiName>operator-=</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_time.xml#class_t_time">TTime</apiRelation> &amp;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TTime &amp; operator-=(TTimeIntervalYears aYear)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::operator-=(TTimeIntervalYears)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_time_interval_years.xml#class_t_time_interval_years">TTimeIntervalYears</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aYear</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1844"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1a16204a3399a33231d5e6375e6f6788fd">
+		<apiName>operator-=</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_time.xml#class_t_time">TTime</apiRelation> &amp;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TTime &amp; operator-=(TTimeIntervalMonths aMonth)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::operator-=(TTimeIntervalMonths)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_time_interval_months.xml#class_t_time_interval_months">TTimeIntervalMonths</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMonth</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1845"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1ac1503854b556712b554202147f3d0eb9">
+		<apiName>operator-=</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_time.xml#class_t_time">TTime</apiRelation> &amp;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TTime &amp; operator-=(TTimeIntervalDays aDay)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::operator-=(TTimeIntervalDays)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_time_interval_days.xml#class_t_time_interval_days">TTimeIntervalDays</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDay</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1846"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1aa23a84d139d079a2eb394b2908a54241">
+		<apiName>operator-=</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_time.xml#class_t_time">TTime</apiRelation> &amp;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TTime &amp; operator-=(TTimeIntervalHours aHour)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::operator-=(TTimeIntervalHours)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_time_interval_hours.xml#class_t_time_interval_hours">TTimeIntervalHours</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aHour</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1847"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1a5eb7c3dd93e3ee4caaa1ca08e8cc8b02">
+		<apiName>operator-=</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_time.xml#class_t_time">TTime</apiRelation> &amp;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TTime &amp; operator-=(TTimeIntervalMinutes aMinute)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::operator-=(TTimeIntervalMinutes)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_time_interval_minutes.xml#class_t_time_interval_minutes">TTimeIntervalMinutes</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMinute</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1848"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1af6c4cad0438673c523f5c05386dc16ec">
+		<apiName>operator-=</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_time.xml#class_t_time">TTime</apiRelation> &amp;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TTime &amp; operator-=(TTimeIntervalSeconds aSecond)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::operator-=(TTimeIntervalSeconds)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_time_interval_seconds.xml#class_t_time_interval_seconds">TTimeIntervalSeconds</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSecond</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1849"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1a623aaee2dfd22a78dff6e705523de1ad">
+		<apiName>operator-=</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_time.xml#class_t_time">TTime</apiRelation> &amp;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TTime &amp; operator-=(TTimeIntervalMicroSeconds aMicroSecond)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::operator-=(TTimeIntervalMicroSeconds)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_time_interval_micro_seconds.xml#class_t_time_interval_micro_seconds">TTimeIntervalMicroSeconds</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMicroSecond</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1850"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1ad411455e0de23056a62e0572e40643b9">
+		<apiName>operator-=</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_time.xml#class_t_time">TTime</apiRelation> &amp;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TTime &amp; operator-=(TTimeIntervalMicroSeconds32 aMicroSecond)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::operator-=(TTimeIntervalMicroSeconds32)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_time_interval_micro_seconds32.xml#class_t_time_interval_micro_seconds32">TTimeIntervalMicroSeconds32</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMicroSecond</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1851"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1aee51cab999c5c9ea1ecaed2e51093b50">
+		<apiName>operator==</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool operator==(TTime aTime) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::operator==(TTime)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_time.xml#class_t_time">TTime</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aTime</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The time to be compared with this TTime.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1852"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1867"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1875"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Tests whether two date/times are equal.</p>
+				<p>True if the two TTimes are equal. False if not. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1a635658655b52806433608863356516f6">
+		<apiName>operator!=</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool operator!=(TTime aTime) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::operator!=(TTime)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_time.xml#class_t_time">TTime</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aTime</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The date/time to be compared with this TTime.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1853"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1880"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1888"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Tests whether two date/times are not equal.</p>
+				<p>True if the two TTimes are different. False if the same. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1ae76d2a4b0b8b0403bd7cc4d80a427478">
+		<apiName>operator&gt;=</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool operator&gt;=(TTime aTime) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::operator&gt;=(TTime)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_time.xml#class_t_time">TTime</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aTime</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The date/time to be compared with this date/time.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1854"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1893"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1903"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Tests whether this date/time is later than or the same as the specified date/time.</p>
+				<p>True if this date/time is later than or the same as the specified date/time. False otherwise. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1a1d771617008881e05f2919b5966bc1b7">
+		<apiName>operator&lt;=</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool operator&lt;=(TTime aTime) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::operator&lt;=(TTime)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_time.xml#class_t_time">TTime</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aTime</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The date/time to be compared with this date/time.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1855"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1908"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1918"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Tests whether this date/time is earlier than or the same as the specified date/time.</p>
+				<p>True if this date/time is earlier than or the same as the specified date/time. False otherwise. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1a002e32c00bcdfb73973c396a2740af97">
+		<apiName>operator&gt;</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool operator&gt;(TTime aTime) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::operator&gt;(TTime)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_time.xml#class_t_time">TTime</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aTime</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The date/time to be compared with this date/time.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1856"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1923"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1932"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Tests whether this date/time is later than the specified date/time.</p>
+				<p>True if this date/time is later than the specified date/time. False otherwise. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1af6792f8d409912ccbb6e621ea0acc026">
+		<apiName>operator&lt;</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool operator&lt;(TTime aTime) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::operator&lt;(TTime)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_time.xml#class_t_time">TTime</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aTime</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The date/time to be compared with this date/time.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1857"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1937"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1946"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Tests whether this date/time is earlier than the specified date/time.</p>
+				<p>True if this date/time is earlier than the specified date/time. False otherwise. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1a3583e3cb8da1410ec4e92171b75f098d">
+		<apiName>Int64</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>const <apiRelation href="e32def_8h.xml#_1a05bf37b696038fef93385278ebf8ee16">TInt64</apiRelation> &amp;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline const TInt64 &amp; Int64() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::Int64()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1858"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1951"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1957"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets the 64 bit integer representation of this <xref href="class_t_time.xml#class_t_time">TTime</xref> obect.</p>
+				<p>The 64 bit integer representation. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_time_1a8f135beeda8b97e727589ab246752c17">
+		<apiName>Convert</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="class_t_time.xml#class_t_time">TTime</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTime</cxxFunctionScopedName>
+				<cxxFunctionPrototype>static TTime Convert(const TDateTime &amp;aDateTime)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTime::Convert(const TDateTime &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_date_time.xml#class_t_date_time">TDateTime</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDateTime</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1860"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxVariable id="class_t_time_1ae512dd1e9f4b53a94ff607f423baa406">
+		<apiName>iTime</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a05bf37b696038fef93385278ebf8ee16">TInt64</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TTime</cxxVariableScopedName>
+				<cxxVariablePrototype>TInt64 iTime</cxxVariablePrototype>
+				<cxxVariableNameLookup>TTime::iTime</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1862"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_t_time_1a445d81936909010a87fa9865902c5622">
+		<apiName>__DECLARE_TEST</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType/>
+				<cxxVariableScopedName>TTime</cxxVariableScopedName>
+				<cxxVariablePrototype>__DECLARE_TEST</cxxVariablePrototype>
+				<cxxVariableNameLookup>TTime::__DECLARE_TEST</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1863"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+</cxxClass>

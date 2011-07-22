@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_m_internalizer">
+	<apiName>MInternalizer</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassAbstract/>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="295"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="294"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="306"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>A family of classes defining an interface that can be implemented by classes that need to perform internalisation on behalf of others.</p>
+			<p>
+				<xref href="class_c_store_map.xml#class_c_store_map">CStoreMap</xref> </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_m_internalizer_1a96e948bbd4d196298c21395c6add2824">
+		<apiName>operator()</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>MInternalizer</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void operator()(T &amp;anObject, RReadStream &amp;aStream) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MInternalizer::operator()(T &amp;,RReadStream &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>T &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anObject</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_read_stream.xml#class_r_read_stream">RReadStream</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStream</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="297"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="212"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="213"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_m_internalizer_1aedfe3d5a578358c0a0e6dff1288afbf6">
+		<apiName>InternalizeL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionConst/>
+				<cxxFunctionPureVirtual/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>MInternalizer</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual void InternalizeL(T &amp;anObject, RReadStream &amp;aStream) const =0</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MInternalizer::InternalizeL(T &amp;,RReadStream &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>T &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anObject</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The object to be the target of the internalisation process. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_read_stream.xml#class_r_read_stream">RReadStream</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStream</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The read stream. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32strm.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="305"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Performs internalisation.</p>
+				<p>The function is called by operator().</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+</cxxClass>

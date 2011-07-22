@@ -1,0 +1,302 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_t_pri_que">
+	<apiName>TPriQue</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassDerivations>
+				<cxxClassDerivation>
+					<cxxClassDerivationAccessSpecifier value="public"/>
+					<cxxClassBaseClass href="class_t_dbl_que_base.xml#class_t_dbl_que_base">TDblQueBase</cxxClassBaseClass>
+				</cxxClassDerivation>
+			</cxxClassDerivations>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="455"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="454"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="465"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>A templated class that provides the behaviour for managing a doubly linked list in which the elements are added in descending priority order.</p>
+			<p>Priority is defined by the value of the <xref href="class_t_pri_que_link.xml#class_t_pri_que_link_1a284e0b82dbb50fd47155eaace58d2b5d">TPriQueLink::iPriority</xref> member of the link element.</p>
+			<p>The template parameter defines the type of element that forms the doubly linked list and is the class that acts as host to the link object.</p>
+			<p>
+				<xref href="class_t_pri_que_link.xml#class_t_pri_que_link">TPriQueLink</xref> </p>
+			<p>
+				<xref href="class_t_pri_que_link.xml#class_t_pri_que_link_1a284e0b82dbb50fd47155eaace58d2b5d">TPriQueLink::iPriority</xref> </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_t_pri_que_1af0a9364682033edd63598c5fbbd80c4a">
+		<apiName>TPriQue</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TPriQue</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TPriQue()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TPriQue::TPriQue()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="457"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="640"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="656"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Default constructor.</p>
+				<p>Constructs an empty list header and sets the offset value of the link object to zero.</p>
+				<p>In practice, never assume that the offset of the link object from the start of a list element is zero, even if the link object is declared as the first data member in the list element class.</p>
+				<p>If this default constructor is used, then call the <xref href="class_t_dbl_que_base.xml#class_t_dbl_que_base_1a6a2030cf5105b8c1acfaed4e1139c70b">SetOffset()</xref> function of the base class to ensure that the offset value is set correctly.</p>
+				<p>
+					<xref href="class_t_dbl_que_base.xml#class_t_dbl_que_base_1a6a2030cf5105b8c1acfaed4e1139c70b">TDblQueBase::SetOffset</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_pri_que_1a7c8896fd4a490f1ae7c9429f1ef4078f">
+		<apiName>TPriQue</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionExplicit/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TPriQue</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TPriQue(TInt aOffset)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TPriQue::TPriQue(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aOffset</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The offset of the link object from the start of a list element. The macro _FOFF can be used to calculate this value.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="458"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="662"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="673"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Constructs an empty list header and sets the offset of the link object to the specified value.</p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>USER 78 if aOffset is not divisible by four. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_pri_que_1af236adde850bb34c6446caf0cbb3c4a1">
+		<apiName>Add</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TPriQue</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void Add(T &amp;aRef)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TPriQue::Add(T &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>T &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aRef</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The list element to be inserted. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="459"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="679"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="688"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Inserts the specified list element in descending priority order.</p>
+				<p>If there is an existing list element with the same priority, then the new element is added after the existing element.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_pri_que_1a43564f50142e3383a7d7ec78f675b56a">
+		<apiName>IsHead</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TPriQue</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool IsHead(const T *aPtr) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TPriQue::IsHead(const T *)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const T *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPtr</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The pointer value to be checked.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="460"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="694"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="708"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Tests whether the end of a list has been reached.</p>
+				<p>A doubly linked list is circular; in following the chain of elements in a list (e.g. using the iterator operator++ or operator--), the chain eventually reaches the end of the list and aPtr corresponds to the header (although it will not point to a valid T object).</p>
+				<p>True, if the end of the list has been reached. False, if the end of the list has not been reached; aPtr points to an element in the list. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_pri_que_1a556f73dbd33b553380bdf6618772f093">
+		<apiName>IsFirst</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TPriQue</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool IsFirst(const T *aPtr) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TPriQue::IsFirst(const T *)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const T *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPtr</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A pointer to the element whose position in the list is to be checked.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="461"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="714"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="723"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Tests whether the specified element is the first in the linked list.</p>
+				<p>True, if the element is the first in the list; false, otherwise. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_pri_que_1aceea0656c8f9dfd4c15180924a648172">
+		<apiName>IsLast</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TPriQue</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool IsLast(const T *aPtr) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TPriQue::IsLast(const T *)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const T *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPtr</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A pointer to the element whose position in the list is to be checked.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="462"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="729"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="738"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Tests whether the specified element is the last in the linked list.</p>
+				<p>True, if the element is the last in the list; false, otherwise. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_pri_que_1a4346a77fb4ee28776fc820f2609aa904">
+		<apiName>First</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>T *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TPriQue</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline T * First() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TPriQue::First()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="463"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="744"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="752"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets a pointer to the first list element in the linked list.</p>
+				<p>A pointer to the first list element in the linked list. If the list is empty, this pointer is not necessarily NULL and must not be assumed to point to a valid object. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_pri_que_1a3bd1f39016a737aba93a2fe4a4494737">
+		<apiName>Last</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>T *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TPriQue</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline T * Last() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TPriQue::Last()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="464"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="758"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="766"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets a pointer to the last list element in the linked list.</p>
+				<p>A pointer to the last list element in the linked list. If the list is empty, this pointer is not necessarily NULL and must not be assumed to point to a valid object. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxClassInherits>
+		<cxxClassInheritsDetail>
+			<cxxClassFunctionInherited href="class_t_pri_que.xml#class_t_dbl_que_base_1a4db652b975278b6076ec3d27e5b3d411">TDblQueBase::DoAddFirst(TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_pri_que.xml#class_t_dbl_que_base_1a203ae452b202032c16c85ea3be231868">TDblQueBase::DoAddLast(TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_pri_que.xml#class_t_dbl_que_base_1adca3e228a71ea46eb7ae55d14e5a0792">TDblQueBase::DoAddPriority(TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_pri_que.xml#class_t_dbl_que_base_1a33729057dcec76b79cfdde81771095b2">TDblQueBase::IsEmpty()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_pri_que.xml#class_t_dbl_que_base_1a11b4ce5a5d8f394fea2f180bc1b500bb">TDblQueBase::Reset()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_pri_que.xml#class_t_dbl_que_base_1a6a2030cf5105b8c1acfaed4e1139c70b">TDblQueBase::SetOffset(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_pri_que.xml#class_t_dbl_que_base_1afdd5a889b8597e4991377529833bf136">TDblQueBase::TDblQueBase()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_pri_que.xml#class_t_dbl_que_base_1a024af749e9dc0f578df4338d1d6ed16f">TDblQueBase::TDblQueBase(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_pri_que.xml#class_t_dbl_que_base_1a42a2b0c3820b7561b574d907c973fb7b">TDblQueBase::__DbgTestEmpty()const</cxxClassFunctionInherited>
+			<cxxClassVariableInherited href="class_t_pri_que.xml#class_t_dbl_que_base_1aa9710635336a9fc3e250bffee651f701">TDblQueBase::iHead</cxxClassVariableInherited>
+			<cxxClassVariableInherited href="class_t_pri_que.xml#class_t_dbl_que_base_1ab8369fc5cbf06da0cc8f4542f6cbe518">TDblQueBase::iOffset</cxxClassVariableInherited>
+		</cxxClassInheritsDetail>
+	</cxxClassInherits>
+</cxxClass>

@@ -1,0 +1,1836 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_r_local_drive">
+	<apiName>RLocalDrive</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassDerivations>
+				<cxxClassDerivation>
+					<cxxClassDerivationAccessSpecifier value="public"/>
+					<cxxClassBaseClass href="class_r_bus_logical_channel.xml#class_r_bus_logical_channel">RBusLogicalChannel</cxxClassBaseClass>
+				</cxxClassDerivation>
+			</cxxClassDerivations>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="515"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="509"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="605"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>Interface class to local media</p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxEnumeration id="class_r_local_drive_1a9a1b85313c126c358b61007daefe1ee3">
+		<apiName>TControl</apiName>
+		<cxxEnumerationDetail>
+			<cxxEnumerationDefinition>
+				<cxxEnumerationAccessSpecifier value="public"/>
+				<cxxEnumerationScopedName>RLocalDrive</cxxEnumerationScopedName>
+				<cxxEnumerationPrototype>TControl</cxxEnumerationPrototype>
+				<cxxEnumerationNameLookup>RLocalDrive:TControl</cxxEnumerationNameLookup>
+				<cxxEnumerators>
+					<cxxEnumerator id="class_r_local_drive_1a9a1b85313c126c358b61007daefe1ee3aa4638e5e9b0b8931a99076ef5165257e">
+						<apiName>EControlRead</apiName>
+						<cxxEnumeratorScopedName>RLocalDrive</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EControlRead = 0</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RLocalDrive::EControlRead</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="0"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="519"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Read request </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_r_local_drive_1a9a1b85313c126c358b61007daefe1ee3a7d3c22854c7b90a86a45223a362944d9">
+						<apiName>EControlWrite</apiName>
+						<cxxEnumeratorScopedName>RLocalDrive</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EControlWrite = 1</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RLocalDrive::EControlWrite</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="1"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="520"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Write request </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_r_local_drive_1a9a1b85313c126c358b61007daefe1ee3afaac98d86336a00ecb2b748b42335c18">
+						<apiName>EControlCaps</apiName>
+						<cxxEnumeratorScopedName>RLocalDrive</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EControlCaps = 2</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RLocalDrive::EControlCaps</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="2"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="521"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Caps request </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_r_local_drive_1a9a1b85313c126c358b61007daefe1ee3af66ea572cc925005aee4d5dec130f59d">
+						<apiName>EControlFormat</apiName>
+						<cxxEnumeratorScopedName>RLocalDrive</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EControlFormat = 3</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RLocalDrive::EControlFormat</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="3"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="522"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Format request </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_r_local_drive_1a9a1b85313c126c358b61007daefe1ee3aadf45b14a65cc126e806116a7e2584a3">
+						<apiName>EControlEnlarge</apiName>
+						<cxxEnumeratorScopedName>RLocalDrive</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EControlEnlarge = 4</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RLocalDrive::EControlEnlarge</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="4"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="523"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Enlarge drive request </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_r_local_drive_1a9a1b85313c126c358b61007daefe1ee3a3bf4d706245b348b13a18e50d6b8f6d4">
+						<apiName>EControlReduce</apiName>
+						<cxxEnumeratorScopedName>RLocalDrive</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EControlReduce = 5</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RLocalDrive::EControlReduce</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="5"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="524"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Reduce Drive request </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_r_local_drive_1a9a1b85313c126c358b61007daefe1ee3aa41fbbfa4dd3d3c4b6429bdfcc6b3d7c">
+						<apiName>EControlForceMediaChange</apiName>
+						<cxxEnumeratorScopedName>RLocalDrive</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EControlForceMediaChange = 6</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RLocalDrive::EControlForceMediaChange</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="6"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="525"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Force media change request </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_r_local_drive_1a9a1b85313c126c358b61007daefe1ee3a413ad3b04945321a79d974ba767b6048">
+						<apiName>EControlMediaDevice</apiName>
+						<cxxEnumeratorScopedName>RLocalDrive</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EControlMediaDevice = 7</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RLocalDrive::EControlMediaDevice</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="7"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="526"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Return the media device request </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_r_local_drive_1a9a1b85313c126c358b61007daefe1ee3a26b0f9ac8494061813c8543c17b842df">
+						<apiName>EControlPasswordLock</apiName>
+						<cxxEnumeratorScopedName>RLocalDrive</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EControlPasswordLock = 8</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RLocalDrive::EControlPasswordLock</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="8"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="527"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Password lock media request </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_r_local_drive_1a9a1b85313c126c358b61007daefe1ee3a1db70b562c1a6deb457c15a3e33ba18f">
+						<apiName>EControlPasswordUnlock</apiName>
+						<cxxEnumeratorScopedName>RLocalDrive</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EControlPasswordUnlock = 9</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RLocalDrive::EControlPasswordUnlock</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="9"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="528"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Password unlock media request </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_r_local_drive_1a9a1b85313c126c358b61007daefe1ee3a226f0763fa3fcc58cdf7e8f0ee0f9286">
+						<apiName>EControlPasswordClear</apiName>
+						<cxxEnumeratorScopedName>RLocalDrive</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EControlPasswordClear = 10</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RLocalDrive::EControlPasswordClear</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="10"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="529"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Password clear request </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_r_local_drive_1a9a1b85313c126c358b61007daefe1ee3a5e7e7bd39dd40739a15b048ed74b6141">
+						<apiName>EControlNotifyChange</apiName>
+						<cxxEnumeratorScopedName>RLocalDrive</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EControlNotifyChange = 11</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RLocalDrive::EControlNotifyChange</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="11"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="530"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Notify change request </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_r_local_drive_1a9a1b85313c126c358b61007daefe1ee3a24f1139a7f5ff719faf4f9f3f246f0f0">
+						<apiName>EControlNotifyChangeCancel</apiName>
+						<cxxEnumeratorScopedName>RLocalDrive</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EControlNotifyChangeCancel = 12</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RLocalDrive::EControlNotifyChangeCancel</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="12"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="531"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Notify change cancel request </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_r_local_drive_1a9a1b85313c126c358b61007daefe1ee3a4ca54026ac01a08c603d768c11718cbc">
+						<apiName>EControlReadPasswordStore</apiName>
+						<cxxEnumeratorScopedName>RLocalDrive</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EControlReadPasswordStore = 13</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RLocalDrive::EControlReadPasswordStore</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="13"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="532"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Read password request </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_r_local_drive_1a9a1b85313c126c358b61007daefe1ee3a102962c9c2f93af53538fd4fc066736e">
+						<apiName>EControlWritePasswordStore</apiName>
+						<cxxEnumeratorScopedName>RLocalDrive</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EControlWritePasswordStore = 14</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RLocalDrive::EControlWritePasswordStore</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="14"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="533"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Write password request </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_r_local_drive_1a9a1b85313c126c358b61007daefe1ee3ab9f504685fa6206031a90b248cadb3e9">
+						<apiName>EControlPasswordStoreLengthInBytes</apiName>
+						<cxxEnumeratorScopedName>RLocalDrive</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EControlPasswordStoreLengthInBytes = 15</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RLocalDrive::EControlPasswordStoreLengthInBytes</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="15"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="534"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Password request </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_r_local_drive_1a9a1b85313c126c358b61007daefe1ee3a0948cc9642b5493de78351701b0abebf">
+						<apiName>EControlIsRemovable</apiName>
+						<cxxEnumeratorScopedName>RLocalDrive</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EControlIsRemovable = 16</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RLocalDrive::EControlIsRemovable</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="16"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="535"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Query removable request </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_r_local_drive_1a9a1b85313c126c358b61007daefe1ee3adba0b18f029185af451c2d4eeafb3316">
+						<apiName>EControlSetMountInfo</apiName>
+						<cxxEnumeratorScopedName>RLocalDrive</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EControlSetMountInfo = 17</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RLocalDrive::EControlSetMountInfo</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="17"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="536"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Set mount info request </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_r_local_drive_1a9a1b85313c126c358b61007daefe1ee3a42345fe85e02714abaf4270c7a7e9e15">
+						<apiName>EControlControlIO</apiName>
+						<cxxEnumeratorScopedName>RLocalDrive</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EControlControlIO = 18</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RLocalDrive::EControlControlIO</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="18"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="537"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Control IO request </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_r_local_drive_1a9a1b85313c126c358b61007daefe1ee3aca6bd7147eb01c6dda159d6da7163a94">
+						<apiName>EControlPasswordErase</apiName>
+						<cxxEnumeratorScopedName>RLocalDrive</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EControlPasswordErase = 19</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RLocalDrive::EControlPasswordErase</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="19"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="538"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Password erase media request </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_r_local_drive_1a9a1b85313c126c358b61007daefe1ee3a83c391849aa2923d57f7fd0bc78df833">
+						<apiName>EControlDeleteNotify</apiName>
+						<cxxEnumeratorScopedName>RLocalDrive</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EControlDeleteNotify = 20</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RLocalDrive::EControlDeleteNotify</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="20"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="539"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Delete notification </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_r_local_drive_1a9a1b85313c126c358b61007daefe1ee3ab2635fa8c944c7a83680dacfb30fd9ef">
+						<apiName>EControlGetLastErrorInfo</apiName>
+						<cxxEnumeratorScopedName>RLocalDrive</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EControlGetLastErrorInfo = 21</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RLocalDrive::EControlGetLastErrorInfo</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="21"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="540"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Get last error info request </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_r_local_drive_1a9a1b85313c126c358b61007daefe1ee3a8c6e2f260080aef34c472a32f35af0fb">
+						<apiName>EControlQueryDevice</apiName>
+						<cxxEnumeratorScopedName>RLocalDrive</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EControlQueryDevice = 22</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RLocalDrive::EControlQueryDevice</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="22"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="541"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Query device request </p>
+						</apiDesc>
+					</cxxEnumerator>
+				</cxxEnumerators>
+				<cxxEnumerationAPIItemLocation>
+					<cxxEnumerationDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+					<cxxEnumerationDeclarationFileLine name="lineNumber" value="518"/>
+					<cxxEnumerationDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxEnumerationDefinitionFileLineStart name="lineNumber" value="517"/>
+					<cxxEnumerationDefinitionFileLineEnd name="lineNumber" value="542"/>
+				</cxxEnumerationAPIItemLocation>
+			</cxxEnumerationDefinition>
+			<apiDesc/>
+		</cxxEnumerationDetail>
+	</cxxEnumeration>
+	<cxxEnumeration id="class_r_local_drive_1a73186bc539747a8638e6639ff7154c3a">
+		<apiName>TRemountFlags</apiName>
+		<cxxEnumerationDetail>
+			<cxxEnumerationDefinition>
+				<cxxEnumerationAccessSpecifier value="public"/>
+				<cxxEnumerationScopedName>RLocalDrive</cxxEnumerationScopedName>
+				<cxxEnumerationPrototype>TRemountFlags</cxxEnumerationPrototype>
+				<cxxEnumerationNameLookup>RLocalDrive:TRemountFlags</cxxEnumerationNameLookup>
+				<cxxEnumerators>
+					<cxxEnumerator id="class_r_local_drive_1a73186bc539747a8638e6639ff7154c3aad3a5769f604c68b9c9122eeee33a2f78">
+						<apiName>ELocDrvRemountNotifyChange</apiName>
+						<cxxEnumeratorScopedName>RLocalDrive</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ELocDrvRemountNotifyChange = 0</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RLocalDrive::ELocDrvRemountNotifyChange</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="0"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="546"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Notify clients of media change but don&apos;t remount </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_r_local_drive_1a73186bc539747a8638e6639ff7154c3aa099d3d2adde5c90b1632f147e16f8534">
+						<apiName>ELocDrvRemountForceMediaChange</apiName>
+						<cxxEnumeratorScopedName>RLocalDrive</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ELocDrvRemountForceMediaChange = 1</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RLocalDrive::ELocDrvRemountForceMediaChange</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="1"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="547"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Notify clients of media change and remount </p>
+						</apiDesc>
+					</cxxEnumerator>
+				</cxxEnumerators>
+				<cxxEnumerationAPIItemLocation>
+					<cxxEnumerationDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+					<cxxEnumerationDeclarationFileLine name="lineNumber" value="545"/>
+					<cxxEnumerationDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxEnumerationDefinitionFileLineStart name="lineNumber" value="544"/>
+					<cxxEnumerationDefinitionFileLineEnd name="lineNumber" value="548"/>
+				</cxxEnumerationAPIItemLocation>
+			</cxxEnumerationDefinition>
+			<apiDesc/>
+		</cxxEnumerationDetail>
+	</cxxEnumeration>
+	<cxxEnumeration id="class_r_local_drive_1aa57d69f2d2ced50aae4e9da1019bff43">
+		<apiName>TReadWriteFlags</apiName>
+		<cxxEnumerationDetail>
+			<cxxEnumerationDefinition>
+				<cxxEnumerationAccessSpecifier value="public"/>
+				<cxxEnumerationScopedName>RLocalDrive</cxxEnumerationScopedName>
+				<cxxEnumerationPrototype>TReadWriteFlags</cxxEnumerationPrototype>
+				<cxxEnumerationNameLookup>RLocalDrive:TReadWriteFlags</cxxEnumerationNameLookup>
+				<cxxEnumerators>
+					<cxxEnumerator id="class_r_local_drive_1aa57d69f2d2ced50aae4e9da1019bff43a90b1f0fcbc08005822bf6786ac5bf363">
+						<apiName>ELocDrvMetaData</apiName>
+						<cxxEnumeratorScopedName>RLocalDrive</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ELocDrvMetaData = 0x80000000</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RLocalDrive::ELocDrvMetaData</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="0x80000000"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="552"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Set if read/write request is for metadata </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_r_local_drive_1aa57d69f2d2ced50aae4e9da1019bff43aacd654a556ac6e6244fb3f73950e9794">
+						<apiName>ELocDrvWholeMedia</apiName>
+						<cxxEnumeratorScopedName>RLocalDrive</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ELocDrvWholeMedia = 0x40000000</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RLocalDrive::ELocDrvWholeMedia</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="0x40000000"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="554"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Set to access whole media, rather than partition </p>
+						</apiDesc>
+					</cxxEnumerator>
+				</cxxEnumerators>
+				<cxxEnumerationAPIItemLocation>
+					<cxxEnumerationDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+					<cxxEnumerationDeclarationFileLine name="lineNumber" value="551"/>
+					<cxxEnumerationDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxEnumerationDefinitionFileLineStart name="lineNumber" value="550"/>
+					<cxxEnumerationDefinitionFileLineEnd name="lineNumber" value="554"/>
+				</cxxEnumerationAPIItemLocation>
+			</cxxEnumerationDefinition>
+			<apiDesc/>
+		</cxxEnumerationDetail>
+	</cxxEnumeration>
+	<cxxEnumeration id="class_r_local_drive_1a9bad558d6b3c81685768ec1a5e76ff69">
+		<apiName>TQueryDevice</apiName>
+		<cxxEnumerationDetail>
+			<cxxEnumerationDefinition>
+				<cxxEnumerationAccessSpecifier value="public"/>
+				<cxxEnumerationScopedName>RLocalDrive</cxxEnumerationScopedName>
+				<cxxEnumerationPrototype>TQueryDevice</cxxEnumerationPrototype>
+				<cxxEnumerationNameLookup>RLocalDrive:TQueryDevice</cxxEnumerationNameLookup>
+				<cxxEnumerators>
+					<cxxEnumerator id="class_r_local_drive_1a9bad558d6b3c81685768ec1a5e76ff69a40df7fbbf5cb6cb04f349f6570b57276">
+						<apiName>EQuerySymbianPublishedPartnerFirst</apiName>
+						<cxxEnumeratorScopedName>RLocalDrive</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EQuerySymbianPublishedPartnerFirst = 0x0000</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RLocalDrive::EQuerySymbianPublishedPartnerFirst</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="0x0000"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="559"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc/>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_r_local_drive_1a9bad558d6b3c81685768ec1a5e76ff69a58f44ed55bb11d67520af45f9cbaf58f">
+						<apiName>EQuerySymbianPublishedPartnerLast</apiName>
+						<cxxEnumeratorScopedName>RLocalDrive</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EQuerySymbianPublishedPartnerLast = 0x3FFF</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RLocalDrive::EQuerySymbianPublishedPartnerLast</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="0x3FFF"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="560"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc/>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_r_local_drive_1a9bad558d6b3c81685768ec1a5e76ff69a3160c1c96f302f142053acbecfb08895">
+						<apiName>EQuerySymbianTestFirst</apiName>
+						<cxxEnumeratorScopedName>RLocalDrive</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EQuerySymbianTestFirst = 0x4000</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RLocalDrive::EQuerySymbianTestFirst</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="0x4000"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="563"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc/>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_r_local_drive_1a9bad558d6b3c81685768ec1a5e76ff69a11a9316b1d269332dde667439d939bb1">
+						<apiName>EQuerySymbianTestLast</apiName>
+						<cxxEnumeratorScopedName>RLocalDrive</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EQuerySymbianTestLast = 0x7FFF</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RLocalDrive::EQuerySymbianTestLast</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="0x7FFF"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="564"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc/>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_r_local_drive_1a9bad558d6b3c81685768ec1a5e76ff69a13997aab617555721033d6d176e07a68">
+						<apiName>EQueryLicenseeFirst</apiName>
+						<cxxEnumeratorScopedName>RLocalDrive</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EQueryLicenseeFirst = 0x8000</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RLocalDrive::EQueryLicenseeFirst</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="0x8000"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="567"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc/>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_r_local_drive_1a9bad558d6b3c81685768ec1a5e76ff69a0ead016d31ee5045746bde1e9d0514ca">
+						<apiName>EQueryLicenseeLast</apiName>
+						<cxxEnumeratorScopedName>RLocalDrive</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EQueryLicenseeLast = 0xBFFF</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RLocalDrive::EQueryLicenseeLast</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="0xBFFF"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="568"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc/>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_r_local_drive_1a9bad558d6b3c81685768ec1a5e76ff69acc2d8b6bcaf45c8b0ecc401619db3fec">
+						<apiName>EQueryPageDeviceInfo</apiName>
+						<cxxEnumeratorScopedName>RLocalDrive</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EQueryPageDeviceInfo = EQuerySymbianTestFirst</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>RLocalDrive::EQueryPageDeviceInfo</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="EQuerySymbianTestFirst"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="570"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>
+								<xref href="class_t_page_device_info.xml#class_t_page_device_info">TPageDeviceInfo</xref> </p>
+						</apiDesc>
+					</cxxEnumerator>
+				</cxxEnumerators>
+				<cxxEnumerationAPIItemLocation>
+					<cxxEnumerationDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+					<cxxEnumerationDeclarationFileLine name="lineNumber" value="557"/>
+					<cxxEnumerationDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxEnumerationDefinitionFileLineStart name="lineNumber" value="556"/>
+					<cxxEnumerationDefinitionFileLineEnd name="lineNumber" value="571"/>
+				</cxxEnumerationAPIItemLocation>
+			</cxxEnumerationDefinition>
+			<apiDesc/>
+		</cxxEnumerationDetail>
+	</cxxEnumeration>
+	<cxxFunction id="class_r_local_drive_1ac1056356daf142d0dbfd3d662f5537af">
+		<apiName>VersionRequired</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="class_t_version.xml#class_t_version">TVersion</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RLocalDrive</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TVersion VersionRequired() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RLocalDrive::VersionRequired()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="573"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="23"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="24"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_local_drive_1a77acdce4a6bff274d935116957ba5a34">
+		<apiName>Connect</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RLocalDrive</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt Connect(TInt aDriveNumber, TBool &amp;aChangedFlag)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RLocalDrive::Connect(TInt,TBool &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDriveNumber</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aChangedFlag</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="574"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="28"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="29"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>
+					<b>capability</b>
+				</p>
+				<p>TCB </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_local_drive_1a4f26b23c9a6acf84194fbd0810de697b">
+		<apiName>Enlarge</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RLocalDrive</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt Enlarge(TInt aLength)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RLocalDrive::Enlarge(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="575"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="30"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="31"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_local_drive_1a4c250234b99eecf24da495977c44a957">
+		<apiName>Reduce</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RLocalDrive</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt Reduce(TInt aPos, TInt aLength)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RLocalDrive::Reduce(TInt,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPos</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="576"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="32"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="33"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_local_drive_1aa805229267537d7533c0eb1bd5c72c19">
+		<apiName>Read</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RLocalDrive</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt Read(TInt64 aPos, TInt aLength, const TAny *aTrg, TInt aMessageHandle, TInt aOffset, TInt aFlags)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RLocalDrive::Read(TInt64,TInt,const TAny *,TInt,TInt,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a05bf37b696038fef93385278ebf8ee16">TInt64</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPos</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aTrg</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMessageHandle</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aOffset</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFlags</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="577"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="34"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="35"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_local_drive_1a46860f5aa13678ca34c74c5edd057f24">
+		<apiName>Read</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RLocalDrive</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt Read(TInt64 aPos, TInt aLength, const TAny *aTrg, TInt aMessageHandle, TInt anOffset)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RLocalDrive::Read(TInt64,TInt,const TAny *,TInt,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a05bf37b696038fef93385278ebf8ee16">TInt64</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPos</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aTrg</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMessageHandle</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anOffset</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="578"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="36"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="37"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_local_drive_1a564103f558320595bbec84574a6859fb">
+		<apiName>Read</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RLocalDrive</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt Read(TInt64 aPos, TInt aLength, TDes8 &amp;aTrg)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RLocalDrive::Read(TInt64,TInt,TDes8 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a05bf37b696038fef93385278ebf8ee16">TInt64</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPos</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aTrg</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="579"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="38"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="39"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_local_drive_1a9a3f0c49c5ced939acd64e964f47bfad">
+		<apiName>Write</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RLocalDrive</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt Write(TInt64 aPos, TInt aLength, const TAny *aSrc, TInt aMessageHandle, TInt aOffset, TInt aFlags)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RLocalDrive::Write(TInt64,TInt,const TAny *,TInt,TInt,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a05bf37b696038fef93385278ebf8ee16">TInt64</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPos</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSrc</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMessageHandle</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aOffset</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFlags</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="580"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="40"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="41"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_local_drive_1a05a4d88b82d3a138e9c36cb08c965fad">
+		<apiName>Write</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RLocalDrive</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt Write(TInt64 aPos, TInt aLength, const TAny *aSrc, TInt aMessageHandle, TInt anOffset)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RLocalDrive::Write(TInt64,TInt,const TAny *,TInt,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a05bf37b696038fef93385278ebf8ee16">TInt64</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPos</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSrc</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMessageHandle</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anOffset</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="581"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="42"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="43"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_local_drive_1a68ddb4f83de59fbaa99971e6e114d9da">
+		<apiName>Write</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RLocalDrive</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt Write(TInt64 aPos, const TDesC8 &amp;aSrc)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RLocalDrive::Write(TInt64,const TDesC8 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a05bf37b696038fef93385278ebf8ee16">TInt64</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPos</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSrc</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="582"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="44"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="45"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_local_drive_1abab9efae14b0c6c2bb9fc9fcc930b975">
+		<apiName>Caps</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RLocalDrive</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt Caps(TDes8 &amp;anInfo)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RLocalDrive::Caps(TDes8 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anInfo</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="583"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="46"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="47"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_local_drive_1a2ec6bdaf7ad2aa0904a6a80476b9b35e">
+		<apiName>Format</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RLocalDrive</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt Format(TInt64 aPos, TInt aLength)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RLocalDrive::Format(TInt64,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a05bf37b696038fef93385278ebf8ee16">TInt64</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPos</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="584"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="48"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="49"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_local_drive_1aba67644c4660c6ae32ce41b69163a4f9">
+		<apiName>ForceMediaChange</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RLocalDrive</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt ForceMediaChange(TInt aMode=0)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RLocalDrive::ForceMediaChange(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMode</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>0</cxxFunctionParameterDefaultValue>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="585"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="50"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="51"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_local_drive_1afc2a909b2b692af0b64b95fca36dfa7e">
+		<apiName>NotifyChange</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RLocalDrive</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void NotifyChange(TRequestStatus *aStatus)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RLocalDrive::NotifyChange(TRequestStatus *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="586"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="52"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="53"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_local_drive_1a8984073b20c01f72d428d2367d0f48f2">
+		<apiName>NotifyChangeCancel</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RLocalDrive</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void NotifyChangeCancel()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RLocalDrive::NotifyChangeCancel()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="587"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="54"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="55"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_local_drive_1ab7a1be91ee1ebfbb13051590cabc0fb4">
+		<apiName>SetMountInfo</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RLocalDrive</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt SetMountInfo(const TDesC8 *aInfo, TInt aMessageHandle)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RLocalDrive::SetMountInfo(const TDesC8 *,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aInfo</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMessageHandle</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="588"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="58"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="59"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_local_drive_1ab3b3444e8376173f273e1b66814171d6">
+		<apiName>MediaDevice</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="cs__subconn_8cpp.xml#_1aaa656bc8a41a0b8c0864fc06b34ab0d5">TMediaDevice</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RLocalDrive</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TMediaDevice MediaDevice()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RLocalDrive::MediaDevice()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="589"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="56"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="57"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_local_drive_1a5a79af279ddc17eb7a1cef6650242e32">
+		<apiName>IsRemovable</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RLocalDrive</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt IsRemovable(TInt &amp;aSocketNum)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RLocalDrive::IsRemovable(TInt &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSocketNum</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="590"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="60"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="61"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_local_drive_1a5951d9034d6712b3f950ef30fea41754">
+		<apiName>ControlIO</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RLocalDrive</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt ControlIO(TInt aCommand, TAny *aParam1, TAny *aParam2)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RLocalDrive::ControlIO(TInt,TAny *,TAny *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCommand</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aParam1</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aParam2</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="591"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="62"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="63"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_local_drive_1a3682d3ae85c2a204c4ade71dd246a9f9">
+		<apiName>ControlIO</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RLocalDrive</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt ControlIO(TInt aCommand, TDes8 &amp;aBuf, TInt aParam)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RLocalDrive::ControlIO(TInt,TDes8 &amp;,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCommand</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aBuf</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aParam</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="592"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="64"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="65"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_local_drive_1af76625900ddda21e82fb75ab18d8d9cb">
+		<apiName>ControlIO</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RLocalDrive</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt ControlIO(TInt aCommand, TDesC8 &amp;aBuf, TInt aParam)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RLocalDrive::ControlIO(TInt,TDesC8 &amp;,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCommand</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aBuf</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aParam</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="593"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="66"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="67"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_local_drive_1a474b358f434e8ea1b072fd1bfad0383a">
+		<apiName>ControlIO</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RLocalDrive</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt ControlIO(TInt aCommand, TInt aParam1, TInt aParam2)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RLocalDrive::ControlIO(TInt,TInt,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCommand</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aParam1</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aParam2</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="594"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="68"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="69"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_local_drive_1ad31fb7f51c2894f8a0985c58629f3e05">
+		<apiName>Unlock</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RLocalDrive</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt Unlock(const TDesC8 &amp;aPassword, TBool aStorePassword)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RLocalDrive::Unlock(const TDesC8 &amp;,TBool)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPassword</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStorePassword</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="595"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="73"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="74"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_local_drive_1a38eb49b1a5ec7f5d898246f6b8b20cb4">
+		<apiName>SetPassword</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RLocalDrive</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt SetPassword(const TDesC8 &amp;aOldPassword, const TDesC8 &amp;aNewPassword, TBool aStorePassword)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RLocalDrive::SetPassword(const TDesC8 &amp;,const TDesC8 &amp;,TBool)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aOldPassword</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aNewPassword</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStorePassword</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="596"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="75"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="76"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_local_drive_1a950da8daef072e1f2568a19682f280b2">
+		<apiName>Clear</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RLocalDrive</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt Clear(const TDesC8 &amp;aPassword)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RLocalDrive::Clear(const TDesC8 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPassword</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="597"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="77"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="78"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_local_drive_1afc591a272c8bfe5038a1b3569d432141">
+		<apiName>ErasePassword</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RLocalDrive</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt ErasePassword()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RLocalDrive::ErasePassword()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="598"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="79"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="80"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_local_drive_1a7bc037dc7177389a28c23089adcc8a82">
+		<apiName>ReadPasswordData</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RLocalDrive</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt ReadPasswordData(TDesC8 &amp;aStoreData)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RLocalDrive::ReadPasswordData(TDesC8 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStoreData</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="599"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="83"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="84"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_local_drive_1a33cdb98dcaea24efc85b0cd11f20ca22">
+		<apiName>WritePasswordData</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RLocalDrive</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt WritePasswordData(const TDesC8 &amp;aStoreData)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RLocalDrive::WritePasswordData(const TDesC8 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStoreData</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="600"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="85"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="86"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_local_drive_1a3b04768e7fbc28481b175551fc379a04">
+		<apiName>PasswordStoreLengthInBytes</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RLocalDrive</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt PasswordStoreLengthInBytes()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RLocalDrive::PasswordStoreLengthInBytes()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="601"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="87"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="88"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_local_drive_1a4364144cdbf667b029822a5cefcb0d77">
+		<apiName>DeleteNotify</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RLocalDrive</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt DeleteNotify(TInt64 aPos, TInt aLength)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RLocalDrive::DeleteNotify(TInt64,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a05bf37b696038fef93385278ebf8ee16">TInt64</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPos</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="602"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="90"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="91"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_local_drive_1a3001ab23195563577bee58e445859dca">
+		<apiName>GetLastErrorInfo</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RLocalDrive</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt GetLastErrorInfo(TDesC8 &amp;aErrorInfo)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RLocalDrive::GetLastErrorInfo(TDesC8 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aErrorInfo</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="603"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="94"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="95"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_local_drive_1a18ff26d93598488508f0ad72a1a0e702">
+		<apiName>QueryDevice</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RLocalDrive</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt QueryDevice(TQueryDevice aQueryDevice, TDes8 &amp;aBuf)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RLocalDrive::QueryDevice(TQueryDevice,TDes8 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_local_drive.xml#_1a9bad558d6b3c81685768ec1a5e76ff69">TQueryDevice</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aQueryDevice</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aBuf</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/d32locd.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="604"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="98"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="99"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxClassInherits>
+		<cxxClassInheritsDetail>
+			<cxxClassFunctionInherited href="class_r_local_drive.xml#class_r_bus_logical_channel_1aee785ae3609066d67944f97f4bb03076">RBusLogicalChannel::DoCancel(TUint)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_local_drive.xml#class_r_bus_logical_channel_1acc220617ddb66c7bd505e8a7388d05b3">RBusLogicalChannel::DoControl(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_local_drive.xml#class_r_bus_logical_channel_1a951cf2ee94080505d851b8d7a66d987b">RBusLogicalChannel::DoControl(TInt,TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_local_drive.xml#class_r_bus_logical_channel_1a75d2abd12a32a727eea2591e5ee69161">RBusLogicalChannel::DoControl(TInt,TAny *,TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_local_drive.xml#class_r_bus_logical_channel_1a90be34a82569b99eeca0a8ba5947edbd">RBusLogicalChannel::DoCreate(const TDesC &amp;,const TVersion &amp;,TInt,const TDesC *,const TDesC8 *,TOwnerType,TBool)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_local_drive.xml#class_r_bus_logical_channel_1a66c910a54e705d4bf666f49ff34fe97d">RBusLogicalChannel::DoRequest(TInt,TRequestStatus &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_local_drive.xml#class_r_bus_logical_channel_1a7d2824f805752126cf7487fe3243030f">RBusLogicalChannel::DoRequest(TInt,TRequestStatus &amp;,TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_local_drive.xml#class_r_bus_logical_channel_1a2ede87f6e4f8ccf4732248921c7d5625">RBusLogicalChannel::DoRequest(TInt,TRequestStatus &amp;,TAny *,TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_local_drive.xml#class_r_bus_logical_channel_1aa4fa0d9b8b1a86ad2e06154e6c9b3744">RBusLogicalChannel::DoSvControl(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_local_drive.xml#class_r_bus_logical_channel_1ab4950965fc1db306723174b24f666c6d">RBusLogicalChannel::DoSvControl(TInt,TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_local_drive.xml#class_r_bus_logical_channel_1a52269955bdc9e1342b6b81ad6d68a5e7">RBusLogicalChannel::DoSvControl(TInt,TAny *,TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_local_drive.xml#class_r_bus_logical_channel_1ace5821d5a3152c9d9be609fcda9dd625">RBusLogicalChannel::Open(RMessagePtr2,TInt,TOwnerType)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_local_drive.xml#class_r_bus_logical_channel_1a19a96152701fa172dda97b1f7f6073e3">RBusLogicalChannel::Open(TInt,TOwnerType)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_local_drive.xml#class_r_handle_base_1a5acffa0d0548854c050e087b53e9036a">RHandleBase::Attributes()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_local_drive.xml#class_r_handle_base_1a728f019e766bb5928a76f834107f28b3">RHandleBase::BTraceId()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_local_drive.xml#class_r_handle_base_1ad79a6f0c004c694d4eecbea1696cbcc8">RHandleBase::Close()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_local_drive.xml#class_r_handle_base_1ad1a439467a218ac000b1b1d6901e5a8a">RHandleBase::DoExtendedClose()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_local_drive.xml#class_r_handle_base_1a8428cab2039187ea1b5206d26c72b4e3">RHandleBase::Duplicate(const RThread &amp;,TOwnerType)</cxxClassFunctionInherited>
+			<cxxClassEnumeratorInherited href="class_r_local_drive.xml#class_r_handle_base_1ae1e84a8b8292c5a91e9f67f5834f84eba4a88c7aaa037ffebbd6d07e96e50deea">RHandleBase::EDirectReadAccess</cxxClassEnumeratorInherited>
+			<cxxClassEnumeratorInherited href="class_r_local_drive.xml#class_r_handle_base_1ae1e84a8b8292c5a91e9f67f5834f84eba16b9c662c1433cd95304b5f94b092342">RHandleBase::EDirectWriteAccess</cxxClassEnumeratorInherited>
+			<cxxClassEnumeratorInherited href="class_r_local_drive.xml#class_r_handle_base_1ae1e84a8b8292c5a91e9f67f5834f84eba7777915ffc30609e5659c341a1c2392c">RHandleBase::EReadAccess</cxxClassEnumeratorInherited>
+			<cxxClassEnumeratorInherited href="class_r_local_drive.xml#class_r_handle_base_1ae1e84a8b8292c5a91e9f67f5834f84ebacf44af0b945bad7aea199fab102472a2">RHandleBase::EWriteAccess</cxxClassEnumeratorInherited>
+			<cxxClassFunctionInherited href="class_r_local_drive.xml#class_r_handle_base_1a73491dd5bd728ba4ce1199b65e2e5f59">RHandleBase::FullName()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_local_drive.xml#class_r_handle_base_1ad8eef16c4499e3fb2a69a4206a4bb48e">RHandleBase::FullName(TDes &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_local_drive.xml#class_r_handle_base_1a10a02b67da6e5350b87729c062331c02">RHandleBase::Handle()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_local_drive.xml#class_r_handle_base_1a2695b04020246384d6af8480101d167a">RHandleBase::HandleInfo(THandleInfo *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_local_drive.xml#class_r_handle_base_1aa937149e5311d8ba4f95b05a1163bd86">RHandleBase::Name()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_local_drive.xml#class_r_handle_base_1a2ba493226719395d33452916cf2c7b5b">RHandleBase::NotifyDestruction(TRequestStatus &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_local_drive.xml#class_r_handle_base_1a0f31804c3362e9c4e878f33688d19fef">RHandleBase::Open(const TFindHandleBase &amp;,TOwnerType)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_local_drive.xml#class_r_handle_base_1a72abaf23694869e23eed8601bac08602">RHandleBase::OpenByName(const TDesC &amp;,TOwnerType,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_local_drive.xml#class_r_handle_base_1aa4706b89afddb4d82a9d0e7b45e3f920">RHandleBase::RHandleBase()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_local_drive.xml#class_r_handle_base_1aa1197a55c876356e33ec6bf5248ee33d">RHandleBase::RHandleBase(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_local_drive.xml#class_r_handle_base_1a03c76caf06fd87df38da54b8b0c39660">RHandleBase::SetHandle(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_local_drive.xml#class_r_handle_base_1aa3ccd98b5c883151329937098d98d3d2">RHandleBase::SetHandleNC(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_local_drive.xml#class_r_handle_base_1a856c39af65967538e388a65fac4c5b0c">RHandleBase::SetReturnedHandle(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_local_drive.xml#class_r_handle_base_1a022806379a6fb6b94bd807286a77c839">RHandleBase::SetReturnedHandle(TInt,RHandleBase &amp;)</cxxClassFunctionInherited>
+			<cxxClassVariableInherited href="class_r_local_drive.xml#class_r_handle_base_1aeab89dcc0c851c282effbbc9edea54f3">RHandleBase::iHandle</cxxClassVariableInherited>
+			<cxxClassEnumerationInherited href="class_r_local_drive.xml#class_r_handle_base_1ae1e84a8b8292c5a91e9f67f5834f84eb">RHandleBase:TAttributes</cxxClassEnumerationInherited>
+		</cxxClassInheritsDetail>
+	</cxxClassInherits>
+</cxxClass>

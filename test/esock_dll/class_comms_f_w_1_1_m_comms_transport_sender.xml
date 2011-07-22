@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_comms_f_w_1_1_m_comms_transport_sender">
+	<apiName>CommsFW::MCommsTransportSender</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassAbstract/>
+			<cxxClassDerivations>
+				<cxxClassDerivation>
+					<cxxClassDerivationAccessSpecifier value="public"/>
+					<cxxClassBaseClass href="class_messages_1_1_m_transport_sender.xml#class_messages_1_1_m_transport_sender">Messages::MTransportSender</cxxClassBaseClass>
+				</cxxClassDerivation>
+			</cxxClassDerivations>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/elements/cftransport.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="215"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/elements/cftransport.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="214"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="233"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc/>
+	</cxxClassDetail>
+	<cxxFunction id="class_comms_f_w_1_1_m_comms_transport_sender_1af2b2f64aa7ba9488a4b1eb43f8745b38">
+		<apiName>PostMessage</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionVirtual/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CommsFW::MCommsTransportSender</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual void PostMessage(const Messages::TRuntimeCtxId &amp;aPostFrom, const Messages::TRuntimeCtxId &amp;aPostTo, const Meta::SMetaData &amp;aMessage)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CommsFW::MCommsTransportSender::PostMessage(const Messages::TRuntimeCtxId &amp;,const Messages::TRuntimeCtxId &amp;,const Meta::SMetaData &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_messages_1_1_m_transport_sender.xml#class_messages_1_1_m_transport_sender_1af416816578c5c6302f18403da28181bc">Messages::MTransportSender::PostMessage(const TRuntimeCtxId &amp;,const TRuntimeCtxId &amp;,const Meta::SMetaData &amp;)</cxxFunctionReimplemented>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_messages_1_1_t_runtime_ctx_id.xml#class_messages_1_1_t_runtime_ctx_id">Messages::TRuntimeCtxId</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPostFrom</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_messages_1_1_t_runtime_ctx_id.xml#class_messages_1_1_t_runtime_ctx_id">Messages::TRuntimeCtxId</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPostTo</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="struct_meta_1_1_s_meta_data.xml#struct_meta_1_1_s_meta_data">Meta::SMetaData</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMessage</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/cftransport.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="217"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Blocking send functions. If no outbound queue space is available they block until either space becomes available or a GENEROUS time limit is exceeded, in which case it panics diagnostically. This relieves the caller of the burden of supporting an error case which will only be seen in a grossly malfunctioning system and so will be hard to test and difficult to recover from. To avoid deadlock due to the peer being in the same state the inbound queue is drained while waiting for space. The receipt order is always preserved. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_comms_f_w_1_1_m_comms_transport_sender_1a5ff3a7ba089d7fdda7c70319f7f55f7c">
+		<apiName>PostMessage</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionPureVirtual/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CommsFW::MCommsTransportSender</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual void PostMessage(const TCFMessage &amp;aMessage)=0</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CommsFW::MCommsTransportSender::PostMessage(const TCFMessage &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const TCFMessage &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMessage</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/cftransport.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="220"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_comms_f_w_1_1_m_comms_transport_sender_1a27f494f361fcdead73ab3074864d50bb">
+		<apiName>PostMessage</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionPureVirtual/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CommsFW::MCommsTransportSender</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual void PostMessage(const Messages::TRuntimeCtxId &amp;aPostFrom, const Messages::TRuntimeCtxId &amp;aPostTo, const TDesC8 &amp;aMessage)=0</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CommsFW::MCommsTransportSender::PostMessage(const Messages::TRuntimeCtxId &amp;,const Messages::TRuntimeCtxId &amp;,const TDesC8 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_messages_1_1_t_runtime_ctx_id.xml#class_messages_1_1_t_runtime_ctx_id">Messages::TRuntimeCtxId</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPostFrom</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_messages_1_1_t_runtime_ctx_id.xml#class_messages_1_1_t_runtime_ctx_id">Messages::TRuntimeCtxId</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPostTo</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMessage</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/cftransport.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="221"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_comms_f_w_1_1_m_comms_transport_sender_1a076ec3ca6b8226c919d89168a6d0eeb0">
+		<apiName>SendMessageSync</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionPureVirtual/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CommsFW::MCommsTransportSender</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual void SendMessageSync(const TCFMessage &amp;aMessage)=0</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CommsFW::MCommsTransportSender::SendMessageSync(const TCFMessage &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const TCFMessage &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMessage</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/cftransport.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="231"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>The caller intends to block for some out-of-band synchronisation mechanism (eg a semaphore) and so dispatch must be done immediately as part of this sending call if the peer object is running in the same worker thread, so that the recipient can signal the caller if appropriate. Such synchronisation mechanisms are strongly discouraged but exist in some legacy code.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+</cxxClass>

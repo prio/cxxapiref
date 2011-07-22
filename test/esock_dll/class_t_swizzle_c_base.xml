@@ -1,0 +1,557 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_t_swizzle_c_base">
+	<apiName>TSwizzleCBase</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/s32std.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="127"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/s32std.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="126"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="153"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>Base class for swizzles.</p>
+			<p>A swizzle maintains a dual representation for an object:</p>
+			<p>by stream id, if the object is not in memory (the stream contains the external representation of that object).</p>
+			<p>by pointer, if the object is in memory.</p>
+			<p>The class is not intended for instantiation. </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_t_swizzle_c_base_1a81377bc7d35f0fdc61202ade49dc32d5">
+		<apiName>operator==</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TSwizzleCBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool operator==(const TSwizzleCBase &amp;aSwizzle) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSwizzleCBase::operator==(const TSwizzleCBase &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_swizzle_c_base.xml#class_t_swizzle_c_base">TSwizzleCBase</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSwizzle</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A reference to the swizzle to be compared with this swizzle. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="129"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="93"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="108"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Compares for equality with another swizzle.</p>
+				<p>Use this operator to determine whether this swizzle represents the same object as that represented by the specified swizzle.</p>
+				<p>Both this swizzle and the specified swizzle must maintain the representation of their respective objects as either pointers or stream ids.</p>
+				<p>If one swizzle maintains the representation of its object as a pointer while the other swizzle maintains the representation of its object as a stream id, the comparison is meaningless and always returns false.</p>
+				<p>True, if the represented objects are the same; False, otherwise. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_swizzle_c_base_1aaa91f934775e37ba1d5f7b99dcf83ca8">
+		<apiName>operator==</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TSwizzleCBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool operator==(const TAny *aPtr) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSwizzleCBase::operator==(const TAny *)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPtr</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A pointer to the object to be compared with this swizzle. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="130"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="109"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="121"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Compares for equality with an in-memory object.</p>
+				<p>Use this operator to determine whether this swizzle represents the same in-memory object as that represented by the specified pointer.</p>
+				<p>This swizzle must maintain the representation of its object as a pointer. If it maintains the representation of its object as a swizzle, the comparison is meaningless and always returns false.</p>
+				<p>True, if the represented objects are the same; False, otherwise. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_swizzle_c_base_1aa76480541cb158ba36860dd2b1538ac6">
+		<apiName>operator!=</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TSwizzleCBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool operator!=(const TSwizzleCBase &amp;aSwizzle) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSwizzleCBase::operator!=(const TSwizzleCBase &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_swizzle_c_base.xml#class_t_swizzle_c_base">TSwizzleCBase</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSwizzle</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A reference to the swizzle to be compared with this swizzle. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="131"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="122"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="137"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Compares for inequality with another swizzle.</p>
+				<p>Use this operator to determine whether this swizzle represents a different object to that represented by the specified swizzle.</p>
+				<p>Both this swizzle and the specified swizzle must maintain the representation of their respective objects as either pointers or stream ids.</p>
+				<p>If one swizzle maintains the representation of its object as a pointer while the other swizzle maintains the representation of its object as a stream id, the comparison is meaningless and always returns true.</p>
+				<p>True, if the represented objects are not the same; False, otherwise </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_swizzle_c_base_1afdf2ce90434891680e5cbfe310b58c2a">
+		<apiName>operator!=</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TSwizzleCBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool operator!=(const TAny *aPtr) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSwizzleCBase::operator!=(const TAny *)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPtr</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A pointer to the object to be compared with this swizzle. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="132"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="138"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="150"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Compares for inequality with an in-memory object.</p>
+				<p>Use this operator to determine whether this swizzle represents a different in-memory object to that represented by the specified pointer.</p>
+				<p>This swizzle must maintain the representation of its object as a pointer. If it maintains the representation of its object as a swizzle, the comparison is meaningless and always returns true.</p>
+				<p>True, if the represented objects are not the same; False, otherwise </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_swizzle_c_base_1a673a697ba9c8f16571043579b637f80f">
+		<apiName>IsPtr</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TSwizzleCBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool IsPtr() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSwizzleCBase::IsPtr()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="134"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="151"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="157"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Tests whether this swizzle currently represents an object as a pointer.</p>
+				<p>True, if this swizzle currently maintains the object representation as a pointer; False, otherwise. Note that if the swizzle is uninitialised, the value returned by this function is not defined. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_swizzle_c_base_1a79b547e68e51ba4b577dd568bf7c1057">
+		<apiName>IsId</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TSwizzleCBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool IsId() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSwizzleCBase::IsId()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="135"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="158"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="164"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Tests whether this swizzle currently represents an object as a stream id.</p>
+				<p>True, if this swizzle currently maintains the representation of the object as a stream id; False, otherwise. Note that if the swizzle is uninitialised, the value returned by this function is not defined. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_swizzle_c_base_1afa3a9236915d34271fdc0f313dc9d2ef">
+		<apiName>AsId</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_stream_id.xml#class_t_stream_id">TStreamId</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TSwizzleCBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TStreamId AsId() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSwizzleCBase::AsId()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="136"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_swizzle_c_base_1a106adcbdbf5855c08f8c278ab5055482">
+		<apiName>InternalizeL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TSwizzleCBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void InternalizeL(RReadStream &amp;aStream)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSwizzleCBase::InternalizeL(RReadStream &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_read_stream.xml#class_r_read_stream">RReadStream</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStream</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="137"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_swizzle_c_base_1ab7245142b98b7ec728501325ff8c527d">
+		<apiName>TSwizzleCBase</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TSwizzleCBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TSwizzleCBase()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSwizzleCBase::TSwizzleCBase()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="139"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="139"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="139"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_swizzle_c_base_1afe8107a416e54f86902e6ea649b94235">
+		<apiName>TSwizzleCBase</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TSwizzleCBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TSwizzleCBase(const TAny *aPtr)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSwizzleCBase::TSwizzleCBase(const TAny *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPtr</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="140"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="165"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="171"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_swizzle_c_base_1a3fcf01a36edd3f2200414a2125563fc3">
+		<apiName>TSwizzleCBase</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType>IMPORT_C</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TSwizzleCBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TSwizzleCBase(TStreamId anId)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSwizzleCBase::TSwizzleCBase(TStreamId)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_stream_id.xml#class_t_stream_id">TStreamId</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anId</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="141"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_swizzle_c_base_1a6a3e8c9df8146d08afb3fa9ad91f9f3b">
+		<apiName>TSwizzleCBase</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TSwizzleCBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TSwizzleCBase(TStreamRef aRef)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSwizzleCBase::TSwizzleCBase(TStreamRef)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_stream_ref.xml#class_t_stream_ref">TStreamRef</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aRef</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="142"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="86"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="92"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_swizzle_c_base_1aeb30dc1475711332a2f32338c3814ac0">
+		<apiName>Ptr</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>const <apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TSwizzleCBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline const TAny * Ptr() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSwizzleCBase::Ptr()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="143"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="172"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="178"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_swizzle_c_base_1aaa9ab51002565fdfcaab36d7a80ea5b1">
+		<apiName>DoExternalizeL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TSwizzleCBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void DoExternalizeL(RWriteStream &amp;aStream, TExternalizer&lt; TAny &gt; anExter) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSwizzleCBase::DoExternalizeL(RWriteStream &amp;,TExternalizer&lt; TAny &gt;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_write_stream.xml#class_r_write_stream">RWriteStream</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStream</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_externalizer.xml#class_t_externalizer">TExternalizer</apiRelation>&lt; <apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> &gt;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anExter</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="144"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_swizzle_c_base_1ad92de7ab26fa6fdb258be5710f376a79">
+		<apiName>IsPtrRep</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TSwizzleCBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>static IMPORT_C TBool IsPtrRep(const TAny *aPtr)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSwizzleCBase::IsPtrRep(const TAny *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPtr</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="146"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_swizzle_c_base_1a2eb2e09832ccdf9bd1210e963a27a58f">
+		<apiName>IsIdRep</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TSwizzleCBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>static IMPORT_C TBool IsIdRep(const TAny *aPtr)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSwizzleCBase::IsIdRep(const TAny *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPtr</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="147"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxVariable id="class_t_swizzle_c_base_1af644bbd3029d82701cf23d15d097e44c">
+		<apiName>iPtr</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TSwizzleCBase</cxxVariableScopedName>
+				<cxxVariablePrototype>const TAny * iPtr</cxxVariablePrototype>
+				<cxxVariableNameLookup>TSwizzleCBase::iPtr</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/s32std.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="149"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxFunction id="class_t_swizzle_c_base_1a3819c434c7ed75af7c0994e4e84a3f16">
+		<apiName>__DbgChkPtr</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TSwizzleCBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>static IMPORT_C void __DbgChkPtr(const TAny *aPtr)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSwizzleCBase::__DbgChkPtr(const TAny *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPtr</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="151"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_swizzle_c_base_1a5ab934def69dadfc00b14ff4bb2559ec">
+		<apiName>__DbgChkRef</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TSwizzleCBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>static IMPORT_C void __DbgChkRef(TStreamRef aRef)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSwizzleCBase::__DbgChkRef(TStreamRef)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_stream_ref.xml#class_t_stream_ref">TStreamRef</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aRef</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="152"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+</cxxClass>

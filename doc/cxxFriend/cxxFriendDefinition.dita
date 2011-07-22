@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (c) 2011 Nokia Corporation and/or its subsidiary(-ies).
+All rights reserved.        
+        -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<reference id="cxxFriendDefinition" outputclass="element"
+xml:lang="en-us">
+<title>cxxFriendDefinition</title>
+<shortdesc>Describes all of the details of a C++ friend function<?Pub
+Caret?>.     </shortdesc>
+<refbody>
+<section id="section_D08C628A44AB4AEBADA1E0CFA39335BE">          
+  <title>Description</title><p>The <tt>&lt;cxxFriendDefinition></tt
+> element contains child elements describing the constituent parts
+of a friend function and any C++ qualifiers applied to the function.</p
+>                     </section>
+<example id="example_52643806102441D59C5D94E4FEFEA8B4">          
+  <title>Example</title><p>Given this code:</p><codeblock>/** This class allows, by means of friendship,
+the function friend_set(FriendExample*, int) to
+access my private members e.g. member a. */
+class FriendExample
+{
+private:
+	int a;
+public:
+	/** friend reference. */
+	friend void friend_set(FriendExample*, int);
+	void member_set(int);
+};
+
+void friend_set(FriendExample* p, int i);
+</codeblock><p>The DITA XML could be:</p>             <codeblock>&lt;cxxFriendDefinition>
+    &lt;cxxFriendDeclaredType>void&lt;/cxxFriendDeclaredType>
+    &lt;cxxFriendScopedName>FriendExample&lt;/cxxFriendScopedName>
+    &lt;cxxFriendPrototype>friend void friend_set(FriendExample *, int)&lt;/cxxFriendPrototype>
+    &lt;cxxFriendNameLookup>friend_set(FriendExample *,int)&lt;/cxxFriendNameLookup>
+    &lt;cxxFriendParameters>
+        &lt;cxxFriendParameter>
+            &lt;cxxFriendParameterDeclaredType>
+                &lt;apiRelation href="class_class__13969__00.xml#class_class__13969__00">FriendExample&lt;/apiRelation> *&lt;/cxxFriendParameterDeclaredType>
+            &lt;cxxFriendParameterDefinitionName>p&lt;/cxxFriendParameterDefinitionName>
+            &lt;apiDefNote />
+        &lt;/cxxFriendParameter>
+        &lt;cxxFriendParameter>
+            &lt;cxxFriendParameterDeclaredType>int&lt;/cxxFriendParameterDeclaredType>
+            &lt;cxxFriendParameterDefinitionName>i&lt;/cxxFriendParameterDefinitionName>
+            &lt;apiDefNote />
+        &lt;/cxxFriendParameter>
+    &lt;/cxxFriendParameters>
+    &lt;cxxFriendReturnDesc />
+    &lt;cxxFriendAPIItemLocation>
+        &lt;cxxFriendDeclarationFile name="filePath" value="T:/epoc32/include/defect/file_13969.h" />
+        &lt;cxxFriendDeclarationFileLine name="lineNumber" value="14" />
+        &lt;cxxFriendDefinitionFile name="filePath" value="T:/sf/defect/13969/src/file_13969.cpp" />
+        &lt;cxxFriendDefinitionFileLineStart name="lineNumber" value="4" />
+        &lt;cxxFriendDefinitionFileLineEnd name="lineNumber" value="7" />
+    &lt;/cxxFriendAPIItemLocation>
+&lt;/cxxFriendDefinition>
+</codeblock>         </example>
+<section
+conref="../packagedef.dita#cxxFriendDefinition-reference/cxxFriendDefinition-containedBy-section"
+></section>
+<section
+conref="../packagedef.dita#cxxFriendDefinition-reference/cxxFriendDefinition-contains-section"
+></section>
+<section
+conref="../packagedef.dita#cxxFriendDefinition-reference/cxxFriendDefinition-contentModel-section"
+></section>
+<section
+conref="../packagedef.dita#cxxFriendDefinition-reference/cxxFriendDefinition-attList-section"
+></section>
+<section
+conref="../packagedef.dita#cxxFriendDefinition-reference/cxxFriendDefinition-classValue-section"
+></section>
+</refbody>
+</reference>
+<?Pub *0000003530?>

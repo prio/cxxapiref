@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (c) 2011 Nokia Corporation and/or its subsidiary(-ies).
+All rights reserved.        
+        -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<reference id="cxxAPIMap" outputclass="element" xml:lang="en-us">
+<title>cxxAPIMap</title>
+<shortdesc>The &lt;cxxAPIMap> element provides the name of the C++
+API Reference and all the elements necessary to describe the package,
+or set of packages, and its components.</shortdesc>
+<refbody>
+<section>             <title>Description</title>             <p>The
+containing element for a map is the &lt;cxxAPIMap> element.   &lt;cxxAPIMap>
+requires the title and id attributes. </p>              <p>&lt;cxxAPIMap>
+can also contain any number of the elements &lt;cxxFileRef>,  &lt;cxxClassRef>,
+&lt;cxxStructRef> and &lt;cxxUnionRef> to add references <?Pub Caret?>to
+topics.</p>         </section>
+<example>             <title>Example</title>             <codeblock
+>&lt;cxxAPIMap id="amap" title="AMap">
+	&lt;cxxFileRef href="afile.xml" navtitle="afile.h" />
+	&lt;cxxClassRef href="aclass.xml" navtitle="AClass" />
+	&lt;cxxStructRef href="astruct.xml" navtitle="AClass::AStruct" />
+	&lt;cxxUnionRef href="aunion.xml" navtitle="AClass::AUnion" />
+	&lt;cxxNamespaceRef href="anamespace.xml" navtitle="AClass::ANamespace" />
+&lt;/cxxAPIMap></codeblock>         </example>
+<section
+conref="../packagedef.dita#cxxAPIMap-reference/cxxAPIMap-containedBy-section"
+></section>
+<section
+conref="../packagedef.dita#cxxAPIMap-reference/cxxAPIMap-contains-section"
+></section>
+<section
+conref="../packagedef.dita#cxxAPIMap-reference/cxxAPIMap-contentModel-section"
+></section>
+<section
+conref="../packagedef.dita#cxxAPIMap-reference/cxxAPIMap-attList-section"
+></section>
+<section
+conref="../packagedef.dita#cxxAPIMap-reference/cxxAPIMap-classValue-section"
+></section>
+</refbody>
+</reference>
+<?Pub *0000001858?>

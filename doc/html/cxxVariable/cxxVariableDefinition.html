@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="cxxVariableDefinition"/>
+<meta name="abstract" content="A container for child elements giving further information about a member variable. All elements within &lt;cxxVariableDefinition&gt; are optional."/>
+<meta name="description" content="A container for child elements giving further information about a member variable. All elements within &lt;cxxVariableDefinition&gt; are optional."/>
+<meta name="DC.Relation" scheme="URI" content="../cxxVariable/cxxVariable_module.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="cxxVariableDefinition"/>
+<meta name="DC.Language" content="en-us"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>cxxVariableDefinition</title>
+<link rel="stylesheet" type="text/css" href="../nokiacxxref.css"/></head>
+<body class="element" id="cxxVariableDefinition"><a name="cxxVariableDefinition"><!-- --></a>
+
+
+<h1 class="topictitle1">cxxVariableDefinition</h1>
+
+
+<div><p>A container for child elements giving further information
+about a member variable.  All elements within &lt;cxxVariableDefinition&gt;
+are optional.</p>
+
+<div class="section"><h2 class="sectiontitle">Description</h2>                          <p> The
+&lt;cxxVariableDefinition&gt; element is a container for many optional
+elements that describe a C++ variable.  </p>
+                    </div>
+
+<div class="example"><h2 class="sectiontitle">Example</h2>                          <pre class="codeblock">&lt;cxxVariableDefinition&gt;
+    &lt;cxxVariableAccessSpecifier value="public"/&gt;
+    &lt;cxxVariableDeclaredType&gt;
+        &lt;apiRelation href="class_t_request_status.xml#class_t_request_status"&gt;TRequestStatus&lt;/apiRelation&gt;
+    &lt;/cxxVariableDeclaredType&gt;
+    &lt;cxxVariableScopedName&gt;CActive&lt;/cxxVariableScopedName&gt;
+    &lt;cxxVariablePrototype&gt;TRequestStatus iStatus&lt;/cxxVariablePrototype&gt;
+    &lt;cxxVariableNameLookup&gt;CActive::iStatus&lt;/cxxVariableNameLookup&gt;
+    &lt;cxxVariableAPIItemLocation&gt;
+        &lt;cxxVariableDeclarationFile name="filePath" value="C:/src/include/e32base.h"/&gt;
+        &lt;cxxVariableDeclarationFileLine name="lineNumber" value="1664"/&gt;
+    &lt;/cxxVariableAPIItemLocation&gt;
+&lt;/cxxVariableDefinition&gt;</pre>
+         </div>
+
+<div class="elementContainedBy"><h2 class="sectiontitle">Contained by</h2>
+
+<p id="cxxVariableDefinition__d14990e17332"><a name="cxxVariableDefinition__d14990e17332"><!-- --></a>
+<a href="cxxVariableDetail.html" title="A container for child elements giving detailed information about a member variable.">cxxVariableDetail</a> 
+</p>
+
+</div>
+
+<div class="elementContains"><h2 class="sectiontitle">Contains</h2>
+
+<p id="cxxVariableDefinition__d14990e17344"><a name="cxxVariableDefinition__d14990e17344"><!-- --></a>
+<a href="cxxVariableAPIItemLocation.html" title="Contains child elements to specify the location of a member variable.">cxxVariableAPIItemLocation</a> 
+<a href="cxxVariableAccessSpecifier.html" title="Specifies the access modifier applied to a variable.">cxxVariableAccessSpecifier</a> 
+<a href="cxxVariableConst.html" title="The &lt;cxxVariableConst&gt; element is optional. It is used to indicate that a member variable is qualified with the keyword const.">cxxVariableConst</a> 
+<a href="cxxVariableDeclaredType.html" title="Specifies the data type of a member variable.">cxxVariableDeclaredType</a> 
+<a href="cxxVariableNameLookup.html" title="An optional element to specify the lookup name of a variable.">cxxVariableNameLookup</a> 
+<a href="cxxVariablePrototype.html" title="An optional element providing a representation of the variable declaration.">cxxVariablePrototype</a> 
+<a href="cxxVariableReimplemented.html" title="Identifies a variable that has been re-implemented in a derived class.">cxxVariableReimplemented</a> 
+<a href="cxxVariableScopedName.html" title="Indicates the name of the immediately enclosing scope where a variable is declared.">cxxVariableScopedName</a> 
+<a href="cxxVariableStorageClassSpecifierExtern.html" title="Indicates that a variable is marked as storage class extern. This is so that a variable can be used in a separate source file (or “translation unit”) to the one where it is originally defined.">cxxVariableStorageClassSpecifierExtern</a> 
+<a href="cxxVariableStorageClassSpecifierMutable.html" title="Marks a variable as qualified with the C++ keyword mutable.">cxxVariableStorageClassSpecifierMutable</a> 
+<a href="cxxVariableStorageClassSpecifierStatic.html" title="Marks a variable as qualified with the C++ keyword static.">cxxVariableStorageClassSpecifierStatic</a> 
+<a href="cxxVariableVolatile.html" title="Marks a variable as qualified with the C++ keyword volatile.">cxxVariableVolatile</a> 
+</p>
+
+</div>
+
+<div class="elementContentModel"><h2 class="sectiontitle">Content Model</h2>
+
+<p id="cxxVariableDefinition__d14990e17391"><a name="cxxVariableDefinition__d14990e17391"><!-- --></a>
+(<a href="cxxVariableAccessSpecifier.html" title="Specifies the access modifier applied to a variable.">cxxVariableAccessSpecifier</a> 
+(<em>optional</em>)
+  then  
+<a href="cxxVariableStorageClassSpecifierExtern.html" title="Indicates that a variable is marked as storage class extern. This is so that a variable can be used in a separate source file (or “translation unit”) to the one where it is originally defined.">cxxVariableStorageClassSpecifierExtern</a> 
+(<em>optional</em>)
+  then  
+<a href="cxxVariableStorageClassSpecifierStatic.html" title="Marks a variable as qualified with the C++ keyword static.">cxxVariableStorageClassSpecifierStatic</a> 
+(<em>optional</em>)
+  then  
+<a href="cxxVariableStorageClassSpecifierMutable.html" title="Marks a variable as qualified with the C++ keyword mutable.">cxxVariableStorageClassSpecifierMutable</a> 
+(<em>optional</em>)
+  then  
+<a href="cxxVariableConst.html" title="The &lt;cxxVariableConst&gt; element is optional. It is used to indicate that a member variable is qualified with the keyword const.">cxxVariableConst</a> 
+(<em>optional</em>)
+  then  
+<a href="cxxVariableVolatile.html" title="Marks a variable as qualified with the C++ keyword volatile.">cxxVariableVolatile</a> 
+(<em>optional</em>)
+  then  
+<a href="cxxVariableDeclaredType.html" title="Specifies the data type of a member variable.">cxxVariableDeclaredType</a> 
+(<em>optional</em>)
+  then  
+<a href="cxxVariableScopedName.html" title="Indicates the name of the immediately enclosing scope where a variable is declared.">cxxVariableScopedName</a> 
+(<em>optional</em>)
+  then  
+<a href="cxxVariablePrototype.html" title="An optional element providing a representation of the variable declaration.">cxxVariablePrototype</a> 
+(<em>optional</em>)
+  then  
+<a href="cxxVariableNameLookup.html" title="An optional element to specify the lookup name of a variable.">cxxVariableNameLookup</a> 
+(<em>optional</em>)
+  then  
+<a href="cxxVariableReimplemented.html" title="Identifies a variable that has been re-implemented in a derived class.">cxxVariableReimplemented</a> 
+(<em>optional</em>)
+  then  
+<a href="cxxVariableAPIItemLocation.html" title="Contains child elements to specify the location of a member variable.">cxxVariableAPIItemLocation</a> 
+(<em>optional</em>)
+)</p>
+
+</div>
+
+<div class="elementAttList"/>
+
+<div class="elementClassValue"><h2 class="sectiontitle">Inheritance</h2>
+
+<p id="cxxVariableDefinition__d14990e17478"><a name="cxxVariableDefinition__d14990e17478"><!-- --></a>
+ topic/<span class="keyword">section</span> reference/<span class="keyword">section</span> apiRef/<span class="keyword">apiDef</span> apiValue/<span class="keyword">apiValueDef</span> cxxVariable/<span class="keyword">cxxVariableDefinition</span></p>
+
+</div>
+
+</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../cxxVariable/cxxVariable_module.html" title="Defines a top-level container for all the elements to describe a member variable.">cxxVariable module</a></div>
+</div>
+</div>
+
+</body>
+</html>

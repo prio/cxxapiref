@@ -1,0 +1,661 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_e_sock_1_1_t_selection_prefs">
+	<apiName>ESock::TSelectionPrefs</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassDerivations>
+				<cxxStructDerivation>
+					<cxxStructDerivationAccessSpecifier value="public"/>
+					<cxxStructBaseClass href="struct_meta_1_1_s_meta_data.xml#struct_meta_1_1_s_meta_data">Meta::SMetaData</cxxStructBaseClass>
+				</cxxStructDerivation>
+			</cxxClassDerivations>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_nodemessages_selector.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="71"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/comms-infras/ss_nodemessages_selector.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="70"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="195"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>Selection preferences object used internally by the 3 plane comms implementation.</p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxEnumeration id="class_e_sock_1_1_t_selection_prefs_1a1f51f016f11561843d0df7afa936a744">
+		<apiName>TSelectionScope</apiName>
+		<cxxEnumerationDetail>
+			<cxxEnumerationDefinition>
+				<cxxEnumerationAccessSpecifier value="public"/>
+				<cxxEnumerationScopedName>ESock::TSelectionPrefs</cxxEnumerationScopedName>
+				<cxxEnumerationPrototype>TSelectionScope</cxxEnumerationPrototype>
+				<cxxEnumerationNameLookup>ESock::TSelectionPrefs:TSelectionScope</cxxEnumerationNameLookup>
+				<cxxEnumerators>
+					<cxxEnumerator id="class_e_sock_1_1_t_selection_prefs_1a1f51f016f11561843d0df7afa936a744af75d4e1853daa1574e5a7fda9c4df041">
+						<apiName>ENone</apiName>
+						<cxxEnumeratorScopedName>ESock::TSelectionPrefs</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ENone = 0x00</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>ESock::TSelectionPrefs::ENone</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="0x00"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_nodemessages_selector.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="88"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>For initialisation only </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_e_sock_1_1_t_selection_prefs_1a1f51f016f11561843d0df7afa936a744ab1e36b8b57ab422eb619befcf2e7d19d">
+						<apiName>ESelectFromExisting</apiName>
+						<cxxEnumeratorScopedName>ESock::TSelectionPrefs</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ESelectFromExisting = 0x01</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>ESock::TSelectionPrefs::ESelectFromExisting</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="0x01"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_nodemessages_selector.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="92"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Select only from preexisting providers. Do not create new ones. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_e_sock_1_1_t_selection_prefs_1a1f51f016f11561843d0df7afa936a744a45f7565b22549b68c6503c81a0efc7df">
+						<apiName>EExplicitConnection</apiName>
+						<cxxEnumeratorScopedName>ESock::TSelectionPrefs</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EExplicitConnection = 0x02</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>ESock::TSelectionPrefs::EExplicitConnection</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="0x02"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_nodemessages_selector.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="96"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Select only the top provider. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_e_sock_1_1_t_selection_prefs_1a1f51f016f11561843d0df7afa936a744ae8523b77c8a35adc03f9f196b894f2a2">
+						<apiName>ERequestCommsBinder</apiName>
+						<cxxEnumeratorScopedName>ESock::TSelectionPrefs</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ERequestCommsBinder = 0x04</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>ESock::TSelectionPrefs::ERequestCommsBinder</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="0x04"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_nodemessages_selector.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="101"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Do not request a comms binder. </p>
+						</apiDesc>
+					</cxxEnumerator>
+				</cxxEnumerators>
+				<cxxEnumerationAPIItemLocation>
+					<cxxEnumerationDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_nodemessages_selector.h"/>
+					<cxxEnumerationDeclarationFileLine name="lineNumber" value="84"/>
+					<cxxEnumerationDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxEnumerationDefinitionFileLineStart name="lineNumber" value="83"/>
+					<cxxEnumerationDefinitionFileLineEnd name="lineNumber" value="101"/>
+				</cxxEnumerationAPIItemLocation>
+			</cxxEnumerationDefinition>
+			<apiDesc>
+				<p>Scopes for which the selection can take place.</p>
+				<p>Each of the flags may be set, alone, all or in any combinations </p>
+			</apiDesc>
+		</cxxEnumerationDetail>
+	</cxxEnumeration>
+	<cxxEnumeration id="class_e_sock_1_1_t_selection_prefs_1a217b462c207a6c532a0e381ffb3e2404">
+		<apiName>TSelectionFlags</apiName>
+		<cxxEnumerationDetail>
+			<cxxEnumerationDefinition>
+				<cxxEnumerationAccessSpecifier value="public"/>
+				<cxxEnumerationScopedName>ESock::TSelectionPrefs</cxxEnumerationScopedName>
+				<cxxEnumerationPrototype>TSelectionFlags</cxxEnumerationPrototype>
+				<cxxEnumerationNameLookup>ESock::TSelectionPrefs:TSelectionFlags</cxxEnumerationNameLookup>
+				<cxxEnumerators>
+					<cxxEnumerator id="class_e_sock_1_1_t_selection_prefs_1a217b462c207a6c532a0e381ffb3e2404a6ffb79245d6dc6f9ec07ec5969ba7984">
+						<apiName>EMonitor</apiName>
+						<cxxEnumeratorScopedName>ESock::TSelectionPrefs</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EMonitor = 0x01</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>ESock::TSelectionPrefs::EMonitor</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="0x01"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_nodemessages_selector.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="112"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Selecting for a monitor access point. This access point does not affect the idleness of a node. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_e_sock_1_1_t_selection_prefs_1a217b462c207a6c532a0e381ffb3e2404a104b9834462c6f9fd43cf5e6b021809a">
+						<apiName>EAttach</apiName>
+						<cxxEnumeratorScopedName>ESock::TSelectionPrefs</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EAttach = 0x02</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>ESock::TSelectionPrefs::EAttach</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="0x02"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_nodemessages_selector.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="118"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Selecting for an access point wishing to attach to a specified access point which already exists </p>
+						</apiDesc>
+					</cxxEnumerator>
+				</cxxEnumerators>
+				<cxxEnumerationAPIItemLocation>
+					<cxxEnumerationDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_nodemessages_selector.h"/>
+					<cxxEnumerationDeclarationFileLine name="lineNumber" value="107"/>
+					<cxxEnumerationDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxEnumerationDefinitionFileLineStart name="lineNumber" value="106"/>
+					<cxxEnumerationDefinitionFileLineEnd name="lineNumber" value="118"/>
+				</cxxEnumerationAPIItemLocation>
+			</cxxEnumerationDefinition>
+			<apiDesc>
+				<p>Flags to indicate what type of selection is taking place. </p>
+			</apiDesc>
+		</cxxEnumerationDetail>
+	</cxxEnumeration>
+	<cxxFunction id="class_e_sock_1_1_t_selection_prefs_1a5df32daef90fb0c69b60aab3c8c3d3bd">
+		<apiName>TSelectionPrefs</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType>IMPORT_C</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>ESock::TSelectionPrefs</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TSelectionPrefs()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>ESock::TSelectionPrefs::TSelectionPrefs()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_nodemessages_selector.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="121"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_e_sock_1_1_t_selection_prefs_1a98a09fdf0f75d9dd8751ed8779720098">
+		<apiName>TSelectionPrefs</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType>IMPORT_C</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>ESock::TSelectionPrefs</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TSelectionPrefs(TSelectionScope aSelectionScope)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>ESock::TSelectionPrefs::TSelectionPrefs(TSelectionScope)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_e_sock_1_1_t_selection_prefs.xml#_1a1f51f016f11561843d0df7afa936a744">TSelectionScope</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSelectionScope</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Scope for which the selection will take place </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_nodemessages_selector.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="125"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_e_sock_1_1_t_selection_prefs_1a070146a0fc924e8b804656752e693ed5">
+		<apiName>TSelectionPrefs</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType>IMPORT_C</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>ESock::TSelectionPrefs</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TSelectionPrefs(const TConnPref &amp;aPref)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>ESock::TSelectionPrefs::TSelectionPrefs(const TConnPref &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_conn_pref.xml#class_t_conn_pref">TConnPref</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPref</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Preferences used to decide which access point to select </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_nodemessages_selector.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="129"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_e_sock_1_1_t_selection_prefs_1a229dbaae89c97f6c766157b9ebb89e95">
+		<apiName>SetPrefs</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>ESock::TSelectionPrefs</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void SetPrefs(const TConnPref &amp;aPref)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>ESock::TSelectionPrefs::SetPrefs(const TConnPref &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_conn_pref.xml#class_t_conn_pref">TConnPref</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPref</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Preferences used to decide which access point to select </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_nodemessages_selector.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="134"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="197"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="200"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_e_sock_1_1_t_selection_prefs_1afc806e32f003b4642fd2eff881e560f5">
+		<apiName>Prefs</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="class_t_conn_pref.xml#class_t_conn_pref">TConnPref</apiRelation> &amp;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>ESock::TSelectionPrefs</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TConnPref &amp; Prefs()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>ESock::TSelectionPrefs::Prefs()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_nodemessages_selector.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="139"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="202"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="205"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Mutable connection preferences of this selection preference. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_e_sock_1_1_t_selection_prefs_1a475128f95204d7d0f2cb509676173598">
+		<apiName>Prefs</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>const <apiRelation href="class_t_conn_pref.xml#class_t_conn_pref">TConnPref</apiRelation> &amp;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>ESock::TSelectionPrefs</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline const TConnPref &amp; Prefs() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>ESock::TSelectionPrefs::Prefs()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_nodemessages_selector.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="144"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="207"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="210"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Immutable connection preferences of this selection preference. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_e_sock_1_1_t_selection_prefs_1ad09c12fe6245d7ca5882dee2f63b5b8f">
+		<apiName>IsEmpty</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>ESock::TSelectionPrefs</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool IsEmpty() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>ESock::TSelectionPrefs::IsEmpty()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_nodemessages_selector.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="149"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="212"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="215"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>ETrue if no preferences has been set in the selection preferences object </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_e_sock_1_1_t_selection_prefs_1a0e607441daf50d74bf3f71fdd92650fe">
+		<apiName>Scope</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>ESock::TSelectionPrefs</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TUint Scope() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>ESock::TSelectionPrefs::Scope()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_nodemessages_selector.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="154"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="217"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="220"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>the scope of the selection preferences </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_e_sock_1_1_t_selection_prefs_1a3c94a313f6789f264df0a32d6ad34d0a">
+		<apiName>SetScope</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>ESock::TSelectionPrefs</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void SetScope(TUint aScope)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>ESock::TSelectionPrefs::SetScope(TUint)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aScope</cxxFunctionParameterDeclarationName>
+						<apiDefNote>a new scope for the selection preferences </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_nodemessages_selector.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="159"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="222"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="225"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_e_sock_1_1_t_selection_prefs_1ae97816dbac99244e957bd9826d88c6bf">
+		<apiName>Flags</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>ESock::TSelectionPrefs</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TUint Flags() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>ESock::TSelectionPrefs::Flags()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_nodemessages_selector.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="164"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="227"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="230"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>The flags which have been set for the selection preferences </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_e_sock_1_1_t_selection_prefs_1a705993fe288209cce04a625218cc9352">
+		<apiName>SetFlags</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>ESock::TSelectionPrefs</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void SetFlags(TUint aFlags)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>ESock::TSelectionPrefs::SetFlags(TUint)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFlags</cxxFunctionParameterDeclarationName>
+						<apiDefNote>New flags for set for the selection preferences. Overwrites the old flags </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_nodemessages_selector.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="169"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="232"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="235"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_e_sock_1_1_t_selection_prefs_1a0535976ca268744bf134fac30fb42a33">
+		<apiName>SubSessionUniqueId</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="api__ext__msg_8h.xml#_1a2cfc9cbb64aa1fdab2e56a4833c78b20">TSubSessionUniqueId</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>ESock::TSelectionPrefs</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TSubSessionUniqueId SubSessionUniqueId() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>ESock::TSelectionPrefs::SubSessionUniqueId()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_nodemessages_selector.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="174"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="237"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="240"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>The subsession unique id of the subsession which initiated this selection </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_e_sock_1_1_t_selection_prefs_1a92645c76d858ce5521e3c6f89943d8ce">
+		<apiName>SetSubSessionUniqueId</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>ESock::TSelectionPrefs</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void SetSubSessionUniqueId(TSubSessionUniqueId aSubSessionUniqueId)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>ESock::TSelectionPrefs::SetSubSessionUniqueId(TSubSessionUniqueId)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="api__ext__msg_8h.xml#_1a2cfc9cbb64aa1fdab2e56a4833c78b20">TSubSessionUniqueId</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSubSessionUniqueId</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The subsession unique id of the subsession initiated this selection </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_nodemessages_selector.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="179"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="242"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="245"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxVariable id="class_e_sock_1_1_t_selection_prefs_1aa8de5b05fbb138014c1a6fc68ca2e3e7">
+		<apiName>iPrefs</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="class_t_conn_pref.xml#class_t_conn_pref">TConnPref</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>ESock::TSelectionPrefs</cxxVariableScopedName>
+				<cxxVariablePrototype>TConnPref iPrefs</cxxVariablePrototype>
+				<cxxVariableNameLookup>ESock::TSelectionPrefs::iPrefs</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_nodemessages_selector.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="184"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_e_sock_1_1_t_selection_prefs_1aa84adba39c1ea605a7c5846562621337">
+		<apiName>iSelectionParams</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>ESock::TSelectionPrefs</cxxVariableScopedName>
+				<cxxVariablePrototype>TUint iSelectionParams</cxxVariablePrototype>
+				<cxxVariableNameLookup>ESock::TSelectionPrefs::iSelectionParams</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_nodemessages_selector.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="187"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_e_sock_1_1_t_selection_prefs_1a693f9ca088e2a65e5a099bcf1d62addc">
+		<apiName>iScope</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>ESock::TSelectionPrefs</cxxVariableScopedName>
+				<cxxVariablePrototype>TUint iScope</cxxVariablePrototype>
+				<cxxVariableNameLookup>ESock::TSelectionPrefs::iScope</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_nodemessages_selector.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="190"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_e_sock_1_1_t_selection_prefs_1adc6edd313f23b6ce85b70d874644e5a9">
+		<apiName>iFlags</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>ESock::TSelectionPrefs</cxxVariableScopedName>
+				<cxxVariablePrototype>TUint iFlags</cxxVariablePrototype>
+				<cxxVariableNameLookup>ESock::TSelectionPrefs::iFlags</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_nodemessages_selector.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="191"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_e_sock_1_1_t_selection_prefs_1a07080c5afb1ddd70bada9fa8ca48ce26">
+		<apiName>iS</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>struct ESock::TSelectionPrefs::@85::@86</cxxVariableDeclaredType>
+				<cxxVariableScopedName>ESock::TSelectionPrefs</cxxVariableScopedName>
+				<cxxVariablePrototype>struct ESock::TSelectionPrefs::@85::@86 iS</cxxVariablePrototype>
+				<cxxVariableNameLookup>ESock::TSelectionPrefs::iS</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_nodemessages_selector.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="192"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_e_sock_1_1_t_selection_prefs_1abbf80aede816bcac4e8fc7f3c61eab4c">
+		<apiName>iU</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>union ESock::TSelectionPrefs::@85</cxxVariableDeclaredType>
+				<cxxVariableScopedName>ESock::TSelectionPrefs</cxxVariableScopedName>
+				<cxxVariablePrototype>union ESock::TSelectionPrefs::@85 iU</cxxVariablePrototype>
+				<cxxVariableNameLookup>ESock::TSelectionPrefs::iU</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_nodemessages_selector.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="193"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_e_sock_1_1_t_selection_prefs_1a2e35a5aac6ec99005b975e4b3d43f6b9">
+		<apiName>iSubSessionUniqueId</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="api__ext__msg_8h.xml#_1a2cfc9cbb64aa1fdab2e56a4833c78b20">TSubSessionUniqueId</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>ESock::TSelectionPrefs</cxxVariableScopedName>
+				<cxxVariablePrototype>TSubSessionUniqueId iSubSessionUniqueId</cxxVariablePrototype>
+				<cxxVariableNameLookup>ESock::TSelectionPrefs::iSubSessionUniqueId</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/ss_nodemessages_selector.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="194"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxClassInherits>
+		<cxxClassInheritsDetail>
+			<cxxClassFunctionInherited href="class_e_sock_1_1_t_selection_prefs.xml#class_meta_1_1_m_meta_data_1a09e6daad7b43e0288fcd033702991dd9">Meta::MMetaData::GetAttribPtr(const TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_e_sock_1_1_t_selection_prefs.xml#class_meta_1_1_m_meta_data_1a60edb1ccdf03129b7af1bcd9a297d456">Meta::MMetaData::GetVDataTable()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_e_sock_1_1_t_selection_prefs.xml#struct_meta_1_1_s_meta_data_1a80fa6d3672bc5aa2187ec04a3a1743a0">Meta::SMetaData::Check(TPtrC8 &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_e_sock_1_1_t_selection_prefs.xml#struct_meta_1_1_s_meta_data_1a603c6fa3e46a3de80de4091240ffa485">Meta::SMetaData::CheckTypeOf(TPtrC8 &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_e_sock_1_1_t_selection_prefs.xml#struct_meta_1_1_s_meta_data_1a9a8bea4b5a6069e86abaabceb314d254">Meta::SMetaData::Copy(const SMetaData &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_e_sock_1_1_t_selection_prefs.xml#struct_meta_1_1_s_meta_data_1a7da9e8c04d63707dc93f6dc21cb57389">Meta::SMetaData::GetTypeId()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_e_sock_1_1_t_selection_prefs.xml#struct_meta_1_1_s_meta_data_1a0ca2bb0dce010fdbe56eb03a41dbc3ac">Meta::SMetaData::IsTypeOf(const STypeId &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_e_sock_1_1_t_selection_prefs.xml#struct_meta_1_1_s_meta_data_1a43786a968494243167f11f116ad6b8b3">Meta::SMetaData::Length()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_e_sock_1_1_t_selection_prefs.xml#struct_meta_1_1_s_meta_data_1a101e5580b1a0df7220daf747ec761257">Meta::SMetaData::Load(TPtrC8 &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_e_sock_1_1_t_selection_prefs.xml#struct_meta_1_1_s_meta_data_1aa8777745426eb505890cc8147b7029f1">Meta::SMetaData::SMetaData()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_e_sock_1_1_t_selection_prefs.xml#struct_meta_1_1_s_meta_data_1a68997efcd068e284db4646b52969520f">Meta::SMetaData::Store(TDes8 &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_e_sock_1_1_t_selection_prefs.xml#struct_meta_1_1_s_meta_data_1aa491df867ecdad76f3e5455da5bd4bdf">Meta::SMetaData::~SMetaData()</cxxClassFunctionInherited>
+		</cxxClassInheritsDetail>
+	</cxxClassInherits>
+</cxxClass>

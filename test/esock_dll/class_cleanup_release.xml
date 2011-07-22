@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_cleanup_release">
+	<apiName>CleanupRelease</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="3136"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="3135"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="3141"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>A utility class used by the templated function <xref href="_c_s___c_l_i_8_c_p_p.xml#_c_s___c_l_i_8_c_p_p_1a23906a1d3a21d6bdfe39d1e27d5dd890">CleanupReleasePushL()</xref> to create a <xref href="class_t_cleanup_item.xml#class_t_cleanup_item">TCleanupItem</xref> item that will perform a release type operation on the class T type object.</p>
+			<p>
+				<xref href="_c_s___c_l_i_8_c_p_p.xml#_c_s___c_l_i_8_c_p_p_1a23906a1d3a21d6bdfe39d1e27d5dd890">CleanupReleasePushL()</xref> </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_cleanup_release_1af9ee6c520f2da7d6f4a3a97a52d094e1">
+		<apiName>PushL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CleanupRelease</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline static void PushL(T &amp;aRef)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CleanupRelease::PushL(T &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>T &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aRef</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The object for which a TCleanupItem is to be constructed. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3138"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="3168"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="3176"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Creates a <xref href="class_t_cleanup_item.xml#class_t_cleanup_item">TCleanupItem</xref> for the specified object.</p>
+				<p>The cleanup operation is the private static function <xref href="class_cleanup_release.xml#class_cleanup_release_1a014a7c3251a4cbfb3522cf8fae25c67f">Release()</xref> of this class.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_cleanup_release_1a014a7c3251a4cbfb3522cf8fae25c67f">
+		<apiName>Release</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CleanupRelease</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline static void Release(TAny *aPtr)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CleanupRelease::Release(TAny *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPtr</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A pointer to the object for which clean up is to be performed. The implementation calls Release() on this object. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="3140"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="3182"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="3189"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>The cleanup operation to be performed.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+</cxxClass>

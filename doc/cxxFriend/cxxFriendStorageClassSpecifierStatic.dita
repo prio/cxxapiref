@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (c) 2011 Nokia Corporation and/or its subsidiary(-ies).
+All rights reserved.        
+        -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<reference id="cxxFriendStorageClassSpecifierStatic"
+outputclass="element" xml:lang="en-us">
+<title>cxxFriendStorageClassSpecifierStatic</title>
+<shortdesc>Marks a friend function as having static linkage.</shortdesc>
+<refbody>
+<section id="section_1DF536E3C50F48C999179427B73E7FFC">          
+  <title>Description</title><p>The &lt;cxxFriendStorageClassSpecifierStatic>
+element is present when the friend  function has static linkage. The
+&lt;cxxFriendStorageClassSpecifierStatic> element has two mandatory
+attributes: <i>name</i> and <i>value</i> <?Pub Caret?>Both of these
+attributes have the default value “static”.</p><p>See ISO/IEC 14882:2003(E)
+7.1.1 Storage class specifiers [dcl.stc] and 3.5 Program and linkage
+[basic.link]</p>         </section>
+<example id="example_877A24BA9ADC42B4A1C079AEBF511A85">          
+  <title>Example</title><p>Given this code:</p>             <codeblock
+>static friend char* f();</codeblock><p>Then friend  function <tt
+>f</tt> would have the element:</p>             <codeblock>&lt;cxxFriendStorageClassSpecifierStatic/></codeblock
+><p>If the mandatory attributes are present they must be set thus:</p
+>             <codeblock>&lt;cxxFriendStorageClassSpecifierStatic name="static" value="static"/></codeblock
+>         </example>
+<section
+conref="../packagedef.dita#cxxFriendStorageClassSpecifierStatic-reference/cxxFriendStorageClassSpecifierStatic-containedBy-section"
+></section>
+<section
+conref="../packagedef.dita#cxxFriendStorageClassSpecifierStatic-reference/cxxFriendStorageClassSpecifierStatic-contains-section"
+></section>
+<section
+conref="../packagedef.dita#cxxFriendStorageClassSpecifierStatic-reference/cxxFriendStorageClassSpecifierStatic-contentModel-section"
+></section>
+<section
+conref="../packagedef.dita#cxxFriendStorageClassSpecifierStatic-reference/cxxFriendStorageClassSpecifierStatic-attList-section"
+></section>
+<section
+conref="../packagedef.dita#cxxFriendStorageClassSpecifierStatic-reference/cxxFriendStorageClassSpecifierStatic-classValue-section"
+></section>
+</refbody>
+</reference>
+<?Pub *0000002235?>

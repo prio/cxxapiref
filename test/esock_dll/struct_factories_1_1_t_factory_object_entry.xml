@@ -1,0 +1,164 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxStruct PUBLIC "-//NOKIA//DTD DITA C++ API Struct Reference Type v0.5.0//EN" "dtd/cxxStruct.dtd" >
+<cxxStruct id="struct_factories_1_1_t_factory_object_entry">
+	<apiName>Factories::TFactoryObjectEntry</apiName>
+	<cxxStructDetail>
+		<cxxStructDefinition>
+			<cxxStructAccessSpecifier value="public"/>
+			<cxxStructAPIItemLocation>
+				<cxxStructDeclarationFile name="filePath" value="K:/epoc32/include/elements/factoryobject.h"/>
+				<cxxStructDeclarationFileLine name="lineNumber" value="36"/>
+				<cxxStructDefinitionFile name="filePath" value="K:/epoc32/include/elements/factoryobject.h"/>
+				<cxxStructDefinitionFileLineStart name="lineNumber" value="32"/>
+				<cxxStructDefinitionFileLineEnd name="lineNumber" value="78"/>
+			</cxxStructAPIItemLocation>
+		</cxxStructDefinition>
+		<apiDesc>
+			<p>Structure for entry in a factory&apos;s object list. </p>
+		</apiDesc>
+	</cxxStructDetail>
+	<cxxEnumeration id="struct_factories_1_1_t_factory_object_entry_1aa34f918b3ee50e0a12012d25b48ebaec">
+		<apiName>TFlags</apiName>
+		<cxxEnumerationDetail>
+			<cxxEnumerationDefinition>
+				<cxxEnumerationAccessSpecifier value="public"/>
+				<cxxEnumerationScopedName>Factories::TFactoryObjectEntry</cxxEnumerationScopedName>
+				<cxxEnumerationPrototype>TFlags</cxxEnumerationPrototype>
+				<cxxEnumerationNameLookup>Factories::TFactoryObjectEntry:TFlags</cxxEnumerationNameLookup>
+				<cxxEnumerators>
+					<cxxEnumerator id="struct_factories_1_1_t_factory_object_entry_1aa34f918b3ee50e0a12012d25b48ebaeca8fe3fa1a0362781e35e222842db68c7d">
+						<apiName>ECustomStart</apiName>
+						<cxxEnumeratorScopedName>Factories::TFactoryObjectEntry</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ECustomStart = 0</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>Factories::TFactoryObjectEntry::ECustomStart</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="0"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/elements/factoryobject.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="47"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>User-specific flag range start. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="struct_factories_1_1_t_factory_object_entry_1aa34f918b3ee50e0a12012d25b48ebaecacc2f100165a4a07f30643ad682908d67">
+						<apiName>ECustomEnd</apiName>
+						<cxxEnumeratorScopedName>Factories::TFactoryObjectEntry</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ECustomEnd = 0x00FF</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>Factories::TFactoryObjectEntry::ECustomEnd</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="0x00FF"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/elements/factoryobject.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="51"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>User-specific flag range end. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="struct_factories_1_1_t_factory_object_entry_1aa34f918b3ee50e0a12012d25b48ebaecae858c9387cab47dcaf89fb04bd3d7fa3">
+						<apiName>EBeingDeleted</apiName>
+						<cxxEnumeratorScopedName>Factories::TFactoryObjectEntry</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EBeingDeleted</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>Factories::TFactoryObjectEntry::EBeingDeleted</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/elements/factoryobject.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="55"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>The factory is being deleted and is not available for new requests. </p>
+						</apiDesc>
+					</cxxEnumerator>
+				</cxxEnumerators>
+				<cxxEnumerationAPIItemLocation>
+					<cxxEnumerationDeclarationFile name="filePath" value="K:/epoc32/include/elements/factoryobject.h"/>
+					<cxxEnumerationDeclarationFileLine name="lineNumber" value="43"/>
+					<cxxEnumerationDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxEnumerationDefinitionFileLineStart name="lineNumber" value="42"/>
+					<cxxEnumerationDefinitionFileLineEnd name="lineNumber" value="56"/>
+				</cxxEnumerationAPIItemLocation>
+			</cxxEnumerationDefinition>
+			<apiDesc>
+				<p>Possible flags for factory object. Only <tt>EBeingDeleted</tt> is recognised by the base factory. If a factory object has <tt>EBeingDeleted</tt> set, it won&apos;t be given as a response to a create factory object request. </p>
+			</apiDesc>
+		</cxxEnumerationDetail>
+	</cxxEnumeration>
+	<cxxFunction id="struct_factories_1_1_t_factory_object_entry_1a4695980213b141553d0770303d972db2">
+		<apiName>TFactoryObjectEntry</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>Factories::TFactoryObjectEntry</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TFactoryObjectEntry(AFactoryObject *aFactoryObject, TUint aFlag)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Factories::TFactoryObjectEntry::TFactoryObjectEntry(AFactoryObject *,TUint)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_factories_1_1_a_factory_object.xml#class_factories_1_1_a_factory_object">AFactoryObject</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFactoryObject</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Pointer to the factory object for this entry </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFlag</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Flags for this entry </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/factoryobject.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="66"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="63"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="67"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Constructor </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxVariable id="struct_factories_1_1_t_factory_object_entry_1a10765e1be82d5d5211396a9ad394a938">
+		<apiName>iFactoryObject</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="class_factories_1_1_a_factory_object.xml#class_factories_1_1_a_factory_object">AFactoryObject</apiRelation> *</cxxVariableDeclaredType>
+				<cxxVariableScopedName>Factories::TFactoryObjectEntry</cxxVariableScopedName>
+				<cxxVariablePrototype>AFactoryObject * iFactoryObject</cxxVariablePrototype>
+				<cxxVariableNameLookup>Factories::TFactoryObjectEntry::iFactoryObject</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/elements/factoryobject.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="72"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Pointer to the actual factory object </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="struct_factories_1_1_t_factory_object_entry_1a88ee92b01829dabbd878055e357c3557">
+		<apiName>iFlag</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>Factories::TFactoryObjectEntry</cxxVariableScopedName>
+				<cxxVariablePrototype>TUint iFlag</cxxVariablePrototype>
+				<cxxVariableNameLookup>Factories::TFactoryObjectEntry::iFlag</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/elements/factoryobject.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="77"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Flags for the factory object. These flags are generally factory specific, though <tt>EBeingDeleted</tt> applies to all factories. </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+</cxxStruct>

@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_t_tick_count_que">
+	<apiName>TTickCountQue</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassDerivations>
+				<cxxClassDerivation>
+					<cxxClassDerivationAccessSpecifier value="public"/>
+					<cxxClassBaseClass href="class_t_dbl_que_base.xml#class_t_dbl_que_base">TDblQueBase</cxxClassBaseClass>
+				</cxxClassDerivation>
+			</cxxClassDerivations>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="533"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="532"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="540"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>A class that provides the behaviour for managing a doubly linked list in which elements are added in order of the time until their tick count.</p>
+			<p>A common use for a list of this type is as a queue of timed events, where the tick counts are the expiry times of the events.</p>
+			<p>The tick count is defined by the value of the <xref href="class_t_tick_count_que_link.xml#class_t_tick_count_que_link_1ab005998eae02607c43193a168efc0edd">TTickCountQueLink::iTickCount</xref> member of the link element.</p>
+			<p>
+				<xref href="class_t_tick_count_que_link.xml#class_t_tick_count_que_link">TTickCountQueLink</xref> </p>
+			<p>
+				<xref href="class_t_tick_count_que_link.xml#class_t_tick_count_que_link_1ab005998eae02607c43193a168efc0edd">TTickCountQueLink::iTickCount</xref> </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_t_tick_count_que_1ae7642b21482a787a0340e61985d3d577">
+		<apiName>TTickCountQue</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TTickCountQue</cxxFunctionScopedName>
+				<cxxFunctionPrototype>TTickCountQue()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTickCountQue::TTickCountQue()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="535"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_tick_count_que_1a6b6027931772665b1bc1499f712a78cd">
+		<apiName>Add</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTickCountQue</cxxFunctionScopedName>
+				<cxxFunctionPrototype>void Add(TTickCountQueLink &amp;aRef)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTickCountQue::Add(TTickCountQueLink &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_tick_count_que_link.xml#class_t_tick_count_que_link">TTickCountQueLink</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aRef</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="536"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_tick_count_que_1a1b0692970e7f7f56c74ff3d796004c90">
+		<apiName>First</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="class_t_tick_count_que_link.xml#class_t_tick_count_que_link">TTickCountQueLink</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTickCountQue</cxxFunctionScopedName>
+				<cxxFunctionPrototype>TTickCountQueLink * First() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTickCountQue::First()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="537"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_tick_count_que_1a8ef3a5c9fba0948e5ad8d971933cc432">
+		<apiName>RemoveFirst</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="class_t_tick_count_que_link.xml#class_t_tick_count_que_link">TTickCountQueLink</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTickCountQue</cxxFunctionScopedName>
+				<cxxFunctionPrototype>TTickCountQueLink * RemoveFirst()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTickCountQue::RemoveFirst()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="538"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_tick_count_que_1a89790ccae2a97869806f8dcbf20ec797">
+		<apiName>RemoveFirst</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="class_t_tick_count_que_link.xml#class_t_tick_count_que_link">TTickCountQueLink</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TTickCountQue</cxxFunctionScopedName>
+				<cxxFunctionPrototype>TTickCountQueLink * RemoveFirst(TUint aTickCount)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TTickCountQue::RemoveFirst(TUint)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aTickCount</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="539"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxClassInherits>
+		<cxxClassInheritsDetail>
+			<cxxClassFunctionInherited href="class_t_tick_count_que.xml#class_t_dbl_que_base_1a4db652b975278b6076ec3d27e5b3d411">TDblQueBase::DoAddFirst(TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_tick_count_que.xml#class_t_dbl_que_base_1a203ae452b202032c16c85ea3be231868">TDblQueBase::DoAddLast(TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_tick_count_que.xml#class_t_dbl_que_base_1adca3e228a71ea46eb7ae55d14e5a0792">TDblQueBase::DoAddPriority(TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_tick_count_que.xml#class_t_dbl_que_base_1a33729057dcec76b79cfdde81771095b2">TDblQueBase::IsEmpty()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_tick_count_que.xml#class_t_dbl_que_base_1a11b4ce5a5d8f394fea2f180bc1b500bb">TDblQueBase::Reset()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_tick_count_que.xml#class_t_dbl_que_base_1a6a2030cf5105b8c1acfaed4e1139c70b">TDblQueBase::SetOffset(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_tick_count_que.xml#class_t_dbl_que_base_1afdd5a889b8597e4991377529833bf136">TDblQueBase::TDblQueBase()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_tick_count_que.xml#class_t_dbl_que_base_1a024af749e9dc0f578df4338d1d6ed16f">TDblQueBase::TDblQueBase(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_tick_count_que.xml#class_t_dbl_que_base_1a42a2b0c3820b7561b574d907c973fb7b">TDblQueBase::__DbgTestEmpty()const</cxxClassFunctionInherited>
+			<cxxClassVariableInherited href="class_t_tick_count_que.xml#class_t_dbl_que_base_1aa9710635336a9fc3e250bffee651f701">TDblQueBase::iHead</cxxClassVariableInherited>
+			<cxxClassVariableInherited href="class_t_tick_count_que.xml#class_t_dbl_que_base_1ab8369fc5cbf06da0cc8f4542f6cbe518">TDblQueBase::iOffset</cxxClassVariableInherited>
+		</cxxClassInheritsDetail>
+	</cxxClassInherits>
+</cxxClass>

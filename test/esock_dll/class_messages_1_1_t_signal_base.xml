@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_messages_1_1_t_signal_base">
+	<apiName>Messages::TSignalBase</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassAbstract/>
+			<cxxClassDerivations>
+				<cxxClassDerivation>
+					<cxxClassDerivationAccessSpecifier value="public"/>
+					<cxxClassBaseClass href="class_meta_1_1_s_meta_data_net_ctor.xml#class_meta_1_1_s_meta_data_net_ctor">Meta::SMetaDataNetCtor</cxxClassBaseClass>
+				</cxxClassDerivation>
+			</cxxClassDerivations>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/elements/nm_signals.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="35"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/elements/nm_signals.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="34"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="56"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc/>
+	</cxxClassDetail>
+	<cxxFunction id="class_messages_1_1_t_signal_base_1a2878c052a067ac939676634298c56129">
+		<apiName>DispatchL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionPureVirtual/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Messages::TSignalBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual void DispatchL(const TRuntimeCtxId &amp;aSender, const TRuntimeCtxId &amp;aRecipient)=0</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Messages::TSignalBase::DispatchL(const TRuntimeCtxId &amp;,const TRuntimeCtxId &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_messages_1_1_t_runtime_ctx_id.xml#class_messages_1_1_t_runtime_ctx_id">TRuntimeCtxId</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSender</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_messages_1_1_t_runtime_ctx_id.xml#class_messages_1_1_t_runtime_ctx_id">TRuntimeCtxId</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aRecipient</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/nm_signals.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="51"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_messages_1_1_t_signal_base_1ad101c4b19e33a3f911c37d48540122c3">
+		<apiName>Error</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionPureVirtual/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Messages::TSignalBase</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual void Error(const TRuntimeCtxId &amp;aSender, const TRuntimeCtxId &amp;aRecipient, TInt aError)=0</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Messages::TSignalBase::Error(const TRuntimeCtxId &amp;,const TRuntimeCtxId &amp;,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_messages_1_1_t_runtime_ctx_id.xml#class_messages_1_1_t_runtime_ctx_id">TRuntimeCtxId</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSender</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_messages_1_1_t_runtime_ctx_id.xml#class_messages_1_1_t_runtime_ctx_id">TRuntimeCtxId</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aRecipient</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aError</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/nm_signals.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="52"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxClassInherits>
+		<cxxClassInheritsDetail>
+			<cxxClassFunctionInherited href="class_messages_1_1_t_signal_base.xml#class_meta_1_1_m_meta_data_1a09e6daad7b43e0288fcd033702991dd9">Meta::MMetaData::GetAttribPtr(const TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_messages_1_1_t_signal_base.xml#class_meta_1_1_m_meta_data_1a60edb1ccdf03129b7af1bcd9a297d456">Meta::MMetaData::GetVDataTable()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_messages_1_1_t_signal_base.xml#struct_meta_1_1_s_meta_data_1a80fa6d3672bc5aa2187ec04a3a1743a0">Meta::SMetaData::Check(TPtrC8 &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_messages_1_1_t_signal_base.xml#struct_meta_1_1_s_meta_data_1a603c6fa3e46a3de80de4091240ffa485">Meta::SMetaData::CheckTypeOf(TPtrC8 &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_messages_1_1_t_signal_base.xml#struct_meta_1_1_s_meta_data_1a9a8bea4b5a6069e86abaabceb314d254">Meta::SMetaData::Copy(const SMetaData &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_messages_1_1_t_signal_base.xml#struct_meta_1_1_s_meta_data_1a7da9e8c04d63707dc93f6dc21cb57389">Meta::SMetaData::GetTypeId()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_messages_1_1_t_signal_base.xml#struct_meta_1_1_s_meta_data_1a0ca2bb0dce010fdbe56eb03a41dbc3ac">Meta::SMetaData::IsTypeOf(const STypeId &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_messages_1_1_t_signal_base.xml#struct_meta_1_1_s_meta_data_1a43786a968494243167f11f116ad6b8b3">Meta::SMetaData::Length()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_messages_1_1_t_signal_base.xml#struct_meta_1_1_s_meta_data_1a101e5580b1a0df7220daf747ec761257">Meta::SMetaData::Load(TPtrC8 &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_messages_1_1_t_signal_base.xml#struct_meta_1_1_s_meta_data_1aa8777745426eb505890cc8147b7029f1">Meta::SMetaData::SMetaData()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_messages_1_1_t_signal_base.xml#struct_meta_1_1_s_meta_data_1a68997efcd068e284db4646b52969520f">Meta::SMetaData::Store(TDes8 &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_messages_1_1_t_signal_base.xml#struct_meta_1_1_s_meta_data_1aa491df867ecdad76f3e5455da5bd4bdf">Meta::SMetaData::~SMetaData()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_messages_1_1_t_signal_base.xml#class_meta_1_1_s_meta_data_net_ctor_1a98544396de55db976adace5ff6678c51">Meta::SMetaDataNetCtor::operator new(TUint,TDes8 &amp;)</cxxClassFunctionInherited>
+		</cxxClassInheritsDetail>
+	</cxxClassInherits>
+</cxxClass>

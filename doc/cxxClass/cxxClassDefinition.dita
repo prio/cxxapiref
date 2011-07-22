@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (c) 2011 Nokia Corporation and/or its subsidiary(-ies).
+All rights reserved.        
+        -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<reference id="cxxClassDefinition" outputclass="element" xml:lang="en-us">
+<title>cxxClassDefinition</title>
+<shortdesc>Used to introduce a new class definition<?Pub Caret?>.
+Child elements describe the details of the class.</shortdesc>
+<refbody>
+<section>             <title>Description</title><p>The &lt;cxxClassDefinition>
+element describes a new named type.  The child element &lt;cxxClassAPIItemLocation>
+is mandatory.</p></section>
+<example><title>Example</title>         <codeblock>&lt;cxxClassDefinition>
+			&lt;cxxClassAccessSpecifier value="public"/>
+			&lt;cxxClassDerivations>
+				&lt;cxxClassDerivation>
+					&lt;cxxClassDerivationAccessSpecifier value="public"/>
+					&lt;cxxClassBaseClass href="class_c_base.xml#class_c_base">CBase&lt;/cxxClassBaseClass>
+				&lt;/cxxClassDerivation>
+			&lt;/cxxClassDerivations>
+			&lt;cxxClassAPIItemLocation>
+				&lt;cxxClassDeclarationFile name="filePath" value="C:/src/include/e32base.h"/>
+				&lt;cxxClassDeclarationFileLine name="lineNumber" value="2812"/>
+				&lt;cxxClassDefinitionFile name="filePath" value="C:/src/include/e32base.h"/>
+				&lt;cxxClassDefinitionFileLineStart name="lineNumber" value="2784"/>
+				&lt;cxxClassDefinitionFileLineEnd name="lineNumber" value="2854"/>
+			&lt;/cxxClassAPIItemLocation>
+		&lt;/cxxClassDefinition></codeblock>         </example>
+<section
+conref="../packagedef.dita#cxxClassDefinition-reference/cxxClassDefinition-containedBy-section"
+></section>
+<section
+conref="../packagedef.dita#cxxClassDefinition-reference/cxxClassDefinition-contains-section"
+></section>
+<section
+conref="../packagedef.dita#cxxClassDefinition-reference/cxxClassDefinition-contentModel-section"
+></section>
+<section
+conref="../packagedef.dita#cxxClassDefinition-reference/cxxClassDefinition-attList-section"
+></section>
+<section
+conref="../packagedef.dita#cxxClassDefinition-reference/cxxClassDefinition-classValue-section"
+></section>
+</refbody>
+</reference>
+<?Pub *0000002112?>

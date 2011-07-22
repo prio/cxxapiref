@@ -1,0 +1,2129 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxFile PUBLIC "-//NOKIA//DTD DITA C++ API File Reference Type v0.5.0//EN" "dtd/cxxFile.dtd" >
+<cxxFile id="es__sock_8h">
+	<apiName>es_sock.h</apiName>
+	<cxxVariable id="es__sock_8h_1ab876b378301c5d74759b1820f3567102">
+		<apiName>KConnectionUp</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KConnectionUp</cxxVariablePrototype>
+				<cxxVariableNameLookup>KConnectionUp</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="69"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Progress Notification to inform clients Connection is up This event has the same numerical values as KLinkLayerOpen which is deprecated   </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1afe7c10583af448adfd8168a1f51a9aff">
+		<apiName>KConnectionDown</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KConnectionDown</cxxVariablePrototype>
+				<cxxVariableNameLookup>KConnectionDown</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="79"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Progress Notification to inform clients Connection is up This event has the same numerical values as KLinkLayerClosed which is deprecated</p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1a99b1367ad1bfc50dcadb9e6d46616049">
+		<apiName>KESockDefaultMessageSlots</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KESockDefaultMessageSlots</cxxVariablePrototype>
+				<cxxVariableNameLookup>KESockDefaultMessageSlots</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="88"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Default number of message slots.   </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1a47a45c55edd8be92be887bc1624f6d7c">
+		<apiName>KMaxSubConnectionEventSize</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KMaxSubConnectionEventSize</cxxVariablePrototype>
+				<cxxVariableNameLookup>KMaxSubConnectionEventSize</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="99"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Size of Maximum SubConnection event</p>
+				<p>
+					<note type="note">
+						<p>If you allocate this on the heap, remember to delete through the pointer to the buffer and not any pointers to the events held inside it if you change this value, you will alter the function signature and break the .def file </p>
+					</note>
+				</p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxTypedef id="es__sock_8h_1a8f81fd2534e8e8cb970bb2c347d60222">
+		<apiName>TSubConnectionUniqueId</apiName>
+		<cxxTypedefDetail>
+			<cxxTypedefDefinition>
+				<cxxTypedefAccessSpecifier value="public"/>
+				<cxxTypedefDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxTypedefDeclaredType>
+				<cxxTypedefScopedName/>
+				<cxxTypedefPrototype>TUint TSubConnectionUniqueId</cxxTypedefPrototype>
+				<cxxTypedefNameLookup>TSubConnectionUniqueId</cxxTypedefNameLookup>
+				<cxxTypedefAPIItemLocation>
+					<cxxTypedefDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxTypedefDeclarationFileLine name="lineNumber" value="109"/>
+				</cxxTypedefAPIItemLocation>
+			</cxxTypedefDefinition>
+			<apiDesc>
+				<p>SubConnection Unique Id</p>
+				<p>THIS API IS TO BE DEPRECATED</p>
+			</apiDesc>
+		</cxxTypedefDetail>
+	</cxxTypedef>
+	<cxxTypedef id="es__sock_8h_1aab18b129d480634bc5f30864960fa662">
+		<apiName>TSubConnectionNotificationBuf</apiName>
+		<cxxTypedefDetail>
+			<cxxTypedefDefinition>
+				<cxxTypedefAccessSpecifier value="public"/>
+				<cxxTypedefDeclaredType>
+					<apiRelation href="class_t_buf8.xml#class_t_buf8">TBuf8</apiRelation>&lt; <apiRelation href="es__sock_8h.xml#_1a47a45c55edd8be92be887bc1624f6d7c">KMaxSubConnectionEventSize</apiRelation> &gt;</cxxTypedefDeclaredType>
+				<cxxTypedefScopedName/>
+				<cxxTypedefPrototype>TBuf8&lt; KMaxSubConnectionEventSize &gt; TSubConnectionNotificationBuf</cxxTypedefPrototype>
+				<cxxTypedefNameLookup>TSubConnectionNotificationBuf</cxxTypedefNameLookup>
+				<cxxTypedefAPIItemLocation>
+					<cxxTypedefDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxTypedefDeclarationFileLine name="lineNumber" value="119"/>
+				</cxxTypedefAPIItemLocation>
+			</cxxTypedefDefinition>
+			<apiDesc>
+				<p>Buffer for notification of any change in the state of SubConnection.</p>
+				<p>THIS API IS TO BE DEPRECATED</p>
+			</apiDesc>
+		</cxxTypedefDetail>
+	</cxxTypedef>
+	<cxxVariable id="es__sock_8h_1af3e78e24c01aa4a7351e20040a61ce9a">
+		<apiName>KUseEmbeddedUniqueId</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KUseEmbeddedUniqueId</cxxVariablePrototype>
+				<cxxVariableNameLookup>KUseEmbeddedUniqueId</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="121"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1a1e7af182bc0eaec6a17aa2dd96570fec">
+		<apiName>KConnProgressDefault</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KConnProgressDefault</cxxVariablePrototype>
+				<cxxVariableNameLookup>KConnProgressDefault</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="123"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxTypedef id="es__sock_8h_1ae72a4969b75b213a5e69938497e1ffe4">
+		<apiName>TNifProgressBuf</apiName>
+		<cxxTypedefDetail>
+			<cxxTypedefDefinition>
+				<cxxTypedefAccessSpecifier value="public"/>
+				<cxxTypedefDeclaredType>
+					<apiRelation href="class_t_pckg_buf.xml#class_t_pckg_buf">TPckgBuf</apiRelation>&lt; <apiRelation href="class_t_nif_progress.xml#class_t_nif_progress">TNifProgress</apiRelation> &gt;</cxxTypedefDeclaredType>
+				<cxxTypedefScopedName/>
+				<cxxTypedefPrototype>TPckgBuf&lt; TNifProgress &gt; TNifProgressBuf</cxxTypedefPrototype>
+				<cxxTypedefNameLookup>TNifProgressBuf</cxxTypedefNameLookup>
+				<cxxTypedefAPIItemLocation>
+					<cxxTypedefDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxTypedefDeclarationFileLine name="lineNumber" value="191"/>
+				</cxxTypedefAPIItemLocation>
+			</cxxTypedefDefinition>
+			<apiDesc>
+				<p>Buffer for Network Interface Progress</p>
+			</apiDesc>
+		</cxxTypedefDetail>
+	</cxxTypedef>
+	<cxxVariable id="es__sock_8h_1a2c92ac94c3e4df6538bf3e615b7d766c">
+		<apiName>KMaxSockAddrSize</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KMaxSockAddrSize</cxxVariablePrototype>
+				<cxxVariableNameLookup>KMaxSockAddrSize</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="216"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Maximum sockets address size.   </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1a8d21419879fc3f752fb538839dfd6b81">
+		<apiName>KAFUnspec</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KAFUnspec</cxxVariablePrototype>
+				<cxxVariableNameLookup>KAFUnspec</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="258"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Default (unspecified) protocol module.   </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1aee6c896f40b6c3e9577f80c00511f1a0">
+		<apiName>KSockStream</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KSockStream</cxxVariablePrototype>
+				<cxxVariableNameLookup>KSockStream</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="264"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Stream socket.   </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1af894887fca78cd9407bfe0f12ce5cb0c">
+		<apiName>KSockDatagram</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KSockDatagram</cxxVariablePrototype>
+				<cxxVariableNameLookup>KSockDatagram</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="266"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Datagram socket. </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1a7b6dc5031e190c6aebb706441d14d301">
+		<apiName>KSockSeqPacket</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KSockSeqPacket</cxxVariablePrototype>
+				<cxxVariableNameLookup>KSockSeqPacket</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="268"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Datagrams with sequence numbers. </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1aed48c6d3896f887d1a4bc664ff5081ef">
+		<apiName>KSockRaw</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KSockRaw</cxxVariablePrototype>
+				<cxxVariableNameLookup>KSockRaw</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="270"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Raw socket. </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1ad86c511d3da2e9a3cd504ce4f3759636">
+		<apiName>KSOLSocket</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TInt KSOLSocket</cxxVariablePrototype>
+				<cxxVariableNameLookup>KSOLSocket</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="278"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Generic socket options/commands.   </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1a59e6f55baa1bf0405b13bddffea52897">
+		<apiName>KLevelUnspecified</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TInt KLevelUnspecified</cxxVariablePrototype>
+				<cxxVariableNameLookup>KLevelUnspecified</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="280"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Unspecified level. </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1afbf3e4d2140ee52b4613288c59e756e1">
+		<apiName>KSODebug</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KSODebug</cxxVariablePrototype>
+				<cxxVariableNameLookup>KSODebug</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="304"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Debugging enabled or disabled . Values are:</p>
+				<p>(TInt)0. Disabled</p>
+				<p>(TInt)1. Enabled   </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1a93f7836d1af6f7b010cd32d82e08e9c4">
+		<apiName>KSORecvBuf</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KSORecvBuf</cxxVariablePrototype>
+				<cxxVariableNameLookup>KSORecvBuf</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="310"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Socket receive buffer size. Values are:</p>
+				<p>KSocketBufSizeUndefined</p>
+				<p>1 to KMaxTUint: explicit buffer size, supplied as a TPckgBuf&lt;TUint&gt; </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1a21ccf9f11211d474c6bbe70546d3dcc1">
+		<apiName>KSOSendBuf</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KSOSendBuf</cxxVariablePrototype>
+				<cxxVariableNameLookup>KSOSendBuf</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="316"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Socket send buffer size. Values are:</p>
+				<p>KSocketBufSizeUndefined</p>
+				<p>1 to KMaxTUint: explicit buffer size, supplied as a TPckgBuf&lt;TUint&gt; </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1a17203a1931430c8c80a6e48f29cd917d">
+		<apiName>KSONonBlockingIO</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KSONonBlockingIO</cxxVariablePrototype>
+				<cxxVariableNameLookup>KSONonBlockingIO</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="323"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Socket nonblocking mode. To set, no option values are required. For getting, values are:</p>
+				<p>(TInt)0. Disabled</p>
+				<p>(TInt)1. Enabled </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1aa88eea2494e81230e804665d5250bd9d">
+		<apiName>KSOBlockingIO</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KSOBlockingIO</cxxVariablePrototype>
+				<cxxVariableNameLookup>KSOBlockingIO</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="329"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Socket blocking mode. To set, no values are required. For getting, values are:</p>
+				<p>(TInt)0. Disabled</p>
+				<p>(TInt)1. Enabled </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1a121061a71a139db5542b6ff2f57c8858">
+		<apiName>KSOSelectPoll</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KSOSelectPoll</cxxVariablePrototype>
+				<cxxVariableNameLookup>KSOSelectPoll</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="333"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Getting only: gets a bitmask of flags describing the read/write/exception status of the socket. Value is a TInt containing a bitmask of socket status (KSockSelectExcept etc.) constants. </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1acccec235f43560b83d21f64eeea45328">
+		<apiName>KSOReadBytesPending</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KSOReadBytesPending</cxxVariablePrototype>
+				<cxxVariableNameLookup>KSOReadBytesPending</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="336"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Getting only: retrieve the number of bytes currently available for reading. Value is a TInt. </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1a0f34eaa85543c720b0c84267b8e3b14e">
+		<apiName>KSOUrgentDataOffset</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KSOUrgentDataOffset</cxxVariablePrototype>
+				<cxxVariableNameLookup>KSOUrgentDataOffset</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="340"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Getting only: retrieve the urgent data offset (only for stream protocols that support urgent data). Value is a TInt. </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1aab9d59aeaf5813b399dae905feef1eb4">
+		<apiName>KSOSelectLastError</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KSOSelectLastError</cxxVariablePrototype>
+				<cxxVariableNameLookup>KSOSelectLastError</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="346"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Getting only: retrieves the last error. Errors are normally reported by the called method and behaviour is protocol dependent. KSOSelectLastError does not return such errors. Value is a TInt. </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1aef9a4a27a757828b063abddf9e700730">
+		<apiName>KSOEnableTransfer</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KSOEnableTransfer</cxxVariablePrototype>
+				<cxxVariableNameLookup>KSOEnableTransfer</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="355"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Setting only. Enables socket to be transferred to the process with given capabilities. The capabilities set should be supplied as TPckgBuf&lt;TSecurityPolicy&gt;. Each <xref href="class_r_socket.xml#class_r_socket_1ac8da07a8f9737530d3544e6cc782396d">RSocket::Transfer()</xref> call must be enabled by setting this option.   </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1a47448d3e95b1c06ac46c7cfac1cabcd7">
+		<apiName>KSODisableTransfer</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KSODisableTransfer</cxxVariablePrototype>
+				<cxxVariableNameLookup>KSODisableTransfer</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="361"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Setting only. Disables a socket&apos;s possibility to be transferred. No option required.   </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1a36bbfeaa1ec7b5c349439689bf5fbf51">
+		<apiName>KSocketBufSizeUndefined</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TInt KSocketBufSizeUndefined</cxxVariablePrototype>
+				<cxxVariableNameLookup>KSocketBufSizeUndefined</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="366"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Use default buffer size. </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1a8a2f4ddde636ce59cbfb7bf54fd3e553">
+		<apiName>KSocketDefaultBufferSize</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TInt KSocketDefaultBufferSize</cxxVariablePrototype>
+				<cxxVariableNameLookup>KSocketDefaultBufferSize</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="368"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Default buffer size. </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1a27086debb6202606312779d78813268e">
+		<apiName>KSocketInternalOptionBit</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KSocketInternalOptionBit</cxxVariablePrototype>
+				<cxxVariableNameLookup>KSocketInternalOptionBit</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="371"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1a15edf719f85b3341562b4fc5765c179c">
+		<apiName>KIOctlSelect</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KIOctlSelect</cxxVariablePrototype>
+				<cxxVariableNameLookup>KIOctlSelect</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="383"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>The aDesc parameter of <xref href="class_r_socket.xml#class_r_socket_1aa2710325eacac589ec5ae8408a7eded7">RSocket::Ioctl()</xref> specifies a TUint containing a bitmask of Socket status constants. The completion status will be the subset of those conditions which is now true for the socket.</p>
+				<p>Used through <xref href="class_r_socket.xml#class_r_socket_1aa2710325eacac589ec5ae8408a7eded7">RSocket::Ioctl()</xref>, with aLevel set to KSOLSocket.</p>
+				<p>
+					<xref href="es__sock_8h.xml#es__sock_8h_1a121061a71a139db5542b6ff2f57c8858">KSOSelectPoll</xref> parameter to <xref href="class_r_socket.xml#class_r_socket_1a7dd6976792f21847d61028a8492d2cc5">RSocket::GetOpt()</xref>, which allows the current select state of the socket to be read synchronously, and <xref href="es__sock_8h.xml#es__sock_8h_1aab9d59aeaf5813b399dae905feef1eb4">KSOSelectLastError</xref>, which returns the error code. </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1ad0b318a8e102f740dc4073adbbc36050">
+		<apiName>KSockSelectRead</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KSockSelectRead</cxxVariablePrototype>
+				<cxxVariableNameLookup>KSockSelectRead</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="390"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Data is available to be read; for listening sockets, a connect is pending.   </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1a1cece69013506ebe3ceae689684fd9c7">
+		<apiName>KSockSelectWrite</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KSockSelectWrite</cxxVariablePrototype>
+				<cxxVariableNameLookup>KSockSelectWrite</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="392"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Writing to the socket is not currently blocked by flow-control. </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1acd6a4e8dcff81d3896e153302a581125">
+		<apiName>KSockSelectExcept</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KSockSelectExcept</cxxVariablePrototype>
+				<cxxVariableNameLookup>KSockSelectExcept</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="394"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>An error has occurred. </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1a1d7a20a929dfa1126d2e63f60f431e66">
+		<apiName>KSockSelectReadContinuation</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KSockSelectReadContinuation</cxxVariablePrototype>
+				<cxxVariableNameLookup>KSockSelectReadContinuation</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="396"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Include tail of prior read datagram as available data (ie indicates next read will be with read continuation) </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1ac342a0580afbb63121830d2a4613dc5d">
+		<apiName>KSockWriteUrgent</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KSockWriteUrgent</cxxVariablePrototype>
+				<cxxVariableNameLookup>KSockWriteUrgent</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="404"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>The data to be sent is urgent and is given a higher priority than ordinary data in the send queue. KSockWriteUrgent may only be provided as a flag to Send() if the protocol&apos;s information flag is marked with KSIUrgentData, otherwise Send() will return with KErrNotSupported. AKA: Out of band or unit data.   </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1ad76970aaaaf0ed6352f9f1de461329cb">
+		<apiName>KSocketInternalWriteBit</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KSocketInternalWriteBit</cxxVariablePrototype>
+				<cxxVariableNameLookup>KSocketInternalWriteBit</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="406"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Must not be set for client requests. </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1aa25aa9e2d00afe0e186b02bfcd979a53">
+		<apiName>KSockWriteSystemMask</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KSockWriteSystemMask</cxxVariablePrototype>
+				<cxxVariableNameLookup>KSockWriteSystemMask</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="408"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>The top 8 bits are reserved for system purposes; protocols must not define these bits. </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1a886027883332b22c196c1b188bcbd613">
+		<apiName>KSockReadPeek</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KSockReadPeek</cxxVariablePrototype>
+				<cxxVariableNameLookup>KSockReadPeek</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="417"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Read data without consuming it, data remains in the receive queue. KSockReadPeek may only be provided as a flag to Recv() if the protocol&apos;s information flag is marked with KSIPeekData, otherwise Recv() will return with KErrNotSupported.   </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1a7793e5ec51141f2339d0abf309b58a5e">
+		<apiName>KSocketInternalReadBit</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KSocketInternalReadBit</cxxVariablePrototype>
+				<cxxVariableNameLookup>KSocketInternalReadBit</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="419"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Must not be set for client requests. </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1aeb4f2db6abb343befff2a9216a106d20">
+		<apiName>KSockReadContinuation</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KSockReadContinuation</cxxVariablePrototype>
+				<cxxVariableNameLookup>KSockReadContinuation</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="421"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Read from datagram in a stream-like fashion (not discarding tails). </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1af1047beb83c9240d7855cfabf1f4ca99">
+		<apiName>KSIConnectionLess</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KSIConnectionLess</cxxVariablePrototype>
+				<cxxVariableNameLookup>KSIConnectionLess</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="445"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>The protocol is connectionless.   </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1a33f069f07c037ad4d8249a1fd902cae7">
+		<apiName>KSIReliable</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KSIReliable</cxxVariablePrototype>
+				<cxxVariableNameLookup>KSIReliable</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="447"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>The protocol is reliable. </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1af3729947d2fe9e7dce49a574422cd089">
+		<apiName>KSIInOrder</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KSIInOrder</cxxVariablePrototype>
+				<cxxVariableNameLookup>KSIInOrder</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="449"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>The protocol guarantees in-order delivery. </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1a1974c316bf53ae0f2ef1a3b96b006bc9">
+		<apiName>KSIMessageBased</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KSIMessageBased</cxxVariablePrototype>
+				<cxxVariableNameLookup>KSIMessageBased</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="451"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>The protocol is message based. </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1a0d961f60b7495942933a9111fe028f52">
+		<apiName>KSIDatagram</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KSIDatagram</cxxVariablePrototype>
+				<cxxVariableNameLookup>KSIDatagram</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="453"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>The same as message based. </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1a508b8b130b5e8e300a9f6c9b8e38c70e">
+		<apiName>KSIStreamBased</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KSIStreamBased</cxxVariablePrototype>
+				<cxxVariableNameLookup>KSIStreamBased</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="455"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>The protocol is stream based. </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1a252c7d470c8351c943a53ad596c41c02">
+		<apiName>KSIPseudoStream</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KSIPseudoStream</cxxVariablePrototype>
+				<cxxVariableNameLookup>KSIPseudoStream</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="457"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>The protocol supports a stream like interface but maintains datagram boundaries. </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1ab882d4fe39edf8f0837ffbd9bdd0ff2e">
+		<apiName>KSIUrgentData</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KSIUrgentData</cxxVariablePrototype>
+				<cxxVariableNameLookup>KSIUrgentData</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="459"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>The protocol offers an expedited data service. </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1aed4f4ac6bbe393cd4df96cc7741dbe3c">
+		<apiName>KSIConnectData</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KSIConnectData</cxxVariablePrototype>
+				<cxxVariableNameLookup>KSIConnectData</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="461"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>The protocol can send user data on a connection request. </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1a1c739356102d91ea3f302ec695236e68">
+		<apiName>KSIDisconnectData</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KSIDisconnectData</cxxVariablePrototype>
+				<cxxVariableNameLookup>KSIDisconnectData</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="463"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>The protocol can send user data on a disconnect request. </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1ac32dd7e1202ed71e753fcc2c1ff0e016">
+		<apiName>KSIBroadcast</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KSIBroadcast</cxxVariablePrototype>
+				<cxxVariableNameLookup>KSIBroadcast</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="465"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>The protocol supports broadcast addresses. </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1a1ca0217e3343654a831158c5a7dc4c46">
+		<apiName>KSIMultiPoint</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KSIMultiPoint</cxxVariablePrototype>
+				<cxxVariableNameLookup>KSIMultiPoint</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="467"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>The protocol supports point to multi-point connections. </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1a2a9d4a16d5e7080cc023f2f8f0b27f32">
+		<apiName>KSIQOS</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KSIQOS</cxxVariablePrototype>
+				<cxxVariableNameLookup>KSIQOS</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="469"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>The protocol supports a quality of service metric. </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1ae3971d7447eb36d44c98062e543046f3">
+		<apiName>KSIWriteOnly</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KSIWriteOnly</cxxVariablePrototype>
+				<cxxVariableNameLookup>KSIWriteOnly</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="471"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>The protocol is write only. </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1a722a03e31713cc3f928ad9d509a1649a">
+		<apiName>KSIReadOnly</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KSIReadOnly</cxxVariablePrototype>
+				<cxxVariableNameLookup>KSIReadOnly</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="473"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>The protocol is read only. </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1a19d90fd69901243cccf61eb108eefe0c">
+		<apiName>KSIGracefulClose</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KSIGracefulClose</cxxVariablePrototype>
+				<cxxVariableNameLookup>KSIGracefulClose</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="475"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>The protocol supports graceful close. </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1adc9ce1114d989082c9a0487272357a29">
+		<apiName>KSICanReconnect</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KSICanReconnect</cxxVariablePrototype>
+				<cxxVariableNameLookup>KSICanReconnect</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="477"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>The same socket can be reconnected if it disconnects (for whatever reason). </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1a173e31a31a6fe2a448994f492510f3d0">
+		<apiName>KSIPeekData</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KSIPeekData</cxxVariablePrototype>
+				<cxxVariableNameLookup>KSIPeekData</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="480"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Protocol supports peeking (looking at the data without removing it from the protocol). </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1a42592ee261db226107e9694a1fef625b">
+		<apiName>KSIRequiresOwnerInfo</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KSIRequiresOwnerInfo</cxxVariablePrototype>
+				<cxxVariableNameLookup>KSIRequiresOwnerInfo</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="485"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Protocol is to be informed of the identity of the client (i.e. process ID, thread ID and UID) of each SAP (i.e. Socket Service Provider) created. Note that this value has no meaningful interpretation on the client side. KSoOwnerInfo and TSoOwnerInfo </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1a767bcdc83cb4fe06db4d2d1e89b823cd">
+		<apiName>KSIReserved</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KSIReserved</cxxVariablePrototype>
+				<cxxVariableNameLookup>KSIReserved</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="487"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1a5d49df6edb0351e404c3a070d657c59d">
+		<apiName>KNSNameResolution</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KNSNameResolution</cxxVariablePrototype>
+				<cxxVariableNameLookup>KNSNameResolution</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="498"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Protocol supports resolving human readable entity names into network addresses (like DNS).   </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1a52bece4fecc846aafb049a5e0d7fdf65">
+		<apiName>KNSHierarchicalNaming</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KNSHierarchicalNaming</cxxVariablePrototype>
+				<cxxVariableNameLookup>KNSHierarchicalNaming</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="500"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Network naming is hierarchical. </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1acc49d9752a7f545418918b81d56b8f63">
+		<apiName>KNSHeirarchicalNaming</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KNSHeirarchicalNaming</cxxVariablePrototype>
+				<cxxVariableNameLookup>KNSHeirarchicalNaming</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="502"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Use KNSHierarchicalNaming instead. </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1a5b63d436014989f091bc4ae4e5876321">
+		<apiName>KNSRemoteDiscovery</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KNSRemoteDiscovery</cxxVariablePrototype>
+				<cxxVariableNameLookup>KNSRemoteDiscovery</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="505"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Addressing is dynamic and should be attempted every time before connecting (like IrDA). </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1adf14ac9f51eca36d5bd59aff4f1b9cd6">
+		<apiName>KNSServiceResolution</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KNSServiceResolution</cxxVariablePrototype>
+				<cxxVariableNameLookup>KNSServiceResolution</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="508"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Protocol supports service name to port number resolution. (For example, you can look up TCP to get port 48.) </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1a432e886ec6ed1fd7b558de0bb1f1a00c">
+		<apiName>KNSNameRegistration</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KNSNameRegistration</cxxVariablePrototype>
+				<cxxVariableNameLookup>KNSNameRegistration</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="510"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Protocol supports additions to the name database. </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1af395dee283796bde61f32c67b9630b0a">
+		<apiName>KNSServiceRegistration</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KNSServiceRegistration</cxxVariablePrototype>
+				<cxxVariableNameLookup>KNSServiceRegistration</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="512"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Protocol supports additions to the service database. </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1a106eb923282f165939d1fa3cf2c913c3">
+		<apiName>KNSDynamicAddressing</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KNSDynamicAddressing</cxxVariablePrototype>
+				<cxxVariableNameLookup>KNSDynamicAddressing</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="515"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Addressing is dynamic - i.e. name to address mapping may change (like IrDA which randomly chooses machine addresses.) </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1a4dc33a45c6a75e999d18031ed3240176">
+		<apiName>KNSInfoDatabase</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KNSInfoDatabase</cxxVariablePrototype>
+				<cxxVariableNameLookup>KNSInfoDatabase</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="517"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Protocol has another database which is defined by the protocol. </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1ac306a1f144be6390715830e8be780e42">
+		<apiName>KNSRequiresConnectionStartup</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KNSRequiresConnectionStartup</cxxVariablePrototype>
+				<cxxVariableNameLookup>KNSRequiresConnectionStartup</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="522"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Protocol may request Socket Server to startup a connection on its behalf (via the KErrCompletion error code) Note that this value has no meaningful interpretation on the client side. </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1a17994d09213cb94a9938669b90d9b980">
+		<apiName>KNSReserved</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KNSReserved</cxxVariablePrototype>
+				<cxxVariableNameLookup>KNSReserved</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="524"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1a29058f4b28a9936df29cfe0f6b38f300">
+		<apiName>KSocketNoSecurity</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KSocketNoSecurity</cxxVariablePrototype>
+				<cxxVariableNameLookup>KSocketNoSecurity</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="532"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>No security   </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1aa66e1d1e6742c56b4d811a77b09225ca">
+		<apiName>KSecureSockets</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KSecureSockets</cxxVariablePrototype>
+				<cxxVariableNameLookup>KSecureSockets</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="536"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Secure Sockets Layer.</p>
+				<p>CSecureSocket </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1a532313ffba6d296a8c7c556f27c63f82">
+		<apiName>KSocketMessageSizeIsStream</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TInt KSocketMessageSizeIsStream</cxxVariablePrototype>
+				<cxxVariableNameLookup>KSocketMessageSizeIsStream</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="544"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Reads and writes can be of any size: the data is treated as a stream.   </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1a36c9c3906a70499e4fdd9324e5296256">
+		<apiName>KSocketMessageSizeUndefined</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TInt KSocketMessageSizeUndefined</cxxVariablePrototype>
+				<cxxVariableNameLookup>KSocketMessageSizeUndefined</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="546"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Depends on lower layer or is dynamic. </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1afae7a346de3b16d535d9e9c685c62a24">
+		<apiName>KSocketMessageSizeNoLimit</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TInt KSocketMessageSizeNoLimit</cxxVariablePrototype>
+				<cxxVariableNameLookup>KSocketMessageSizeNoLimit</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="550"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Data is packet-oriented but packets can be of any size (i.e. the remote end must specify a Read of the same size as your Write, but there is no limit on this size.) </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1a4f780c36d95c733a853a8b6e71dcf1dc">
+		<apiName>KUndefinedSockType</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KUndefinedSockType</cxxVariablePrototype>
+				<cxxVariableNameLookup>KUndefinedSockType</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="556"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Undefined socket type.   </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1a2c5085df92c299d8d4cd63dc3794b34b">
+		<apiName>KUndefinedProtocol</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KUndefinedProtocol</cxxVariablePrototype>
+				<cxxVariableNameLookup>KUndefinedProtocol</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="562"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Undefined socket type. Undefined Protocol  </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1aebfd5b99a798f88b1ddb8a98b6ed7020">
+		<apiName>KUndefinedAddressFamily</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KUndefinedAddressFamily</cxxVariablePrototype>
+				<cxxVariableNameLookup>KUndefinedAddressFamily</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="568"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Undefined address family   </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxTypedef id="es__sock_8h_1ae18cfa5789319ed14f849e3c1f498735">
+		<apiName>TProtocolName</apiName>
+		<cxxTypedefDetail>
+			<cxxTypedefDefinition>
+				<cxxTypedefAccessSpecifier value="public"/>
+				<cxxTypedefDeclaredType>
+					<apiRelation href="class_t_buf.xml#class_t_buf">TBuf</apiRelation>&lt; 0x20 &gt;</cxxTypedefDeclaredType>
+				<cxxTypedefScopedName/>
+				<cxxTypedefPrototype>TBuf&lt; 0x20 &gt; TProtocolName</cxxTypedefPrototype>
+				<cxxTypedefNameLookup>TProtocolName</cxxTypedefNameLookup>
+				<cxxTypedefAPIItemLocation>
+					<cxxTypedefDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxTypedefDeclarationFileLine name="lineNumber" value="573"/>
+				</cxxTypedefAPIItemLocation>
+			</cxxTypedefDefinition>
+			<apiDesc>
+				<p>Contains the name of a protocol in structure <xref href="struct_t_protocol_desc.xml#struct_t_protocol_desc">TProtocolDesc</xref>.   </p>
+			</apiDesc>
+		</cxxTypedefDetail>
+	</cxxTypedef>
+	<cxxTypedef id="es__sock_8h_1a5a49a0e9f5751cded91506d6ad957835">
+		<apiName>TServiceName</apiName>
+		<cxxTypedefDetail>
+			<cxxTypedefDefinition>
+				<cxxTypedefAccessSpecifier value="public"/>
+				<cxxTypedefDeclaredType>
+					<apiRelation href="class_t_buf.xml#class_t_buf">TBuf</apiRelation>&lt; 0x20 &gt;</cxxTypedefDeclaredType>
+				<cxxTypedefScopedName/>
+				<cxxTypedefPrototype>TBuf&lt; 0x20 &gt; TServiceName</cxxTypedefPrototype>
+				<cxxTypedefNameLookup>TServiceName</cxxTypedefNameLookup>
+				<cxxTypedefAPIItemLocation>
+					<cxxTypedefDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxTypedefDeclarationFileLine name="lineNumber" value="575"/>
+				</cxxTypedefAPIItemLocation>
+			</cxxTypedefDefinition>
+			<apiDesc>
+				<p>Defines a descriptor to hold a service name string. </p>
+			</apiDesc>
+		</cxxTypedefDetail>
+	</cxxTypedef>
+	<cxxTypedef id="es__sock_8h_1a4021150e935d58ed5a5d2fc5db4c13eb">
+		<apiName>THostName</apiName>
+		<cxxTypedefDetail>
+			<cxxTypedefDefinition>
+				<cxxTypedefAccessSpecifier value="public"/>
+				<cxxTypedefDeclaredType>
+					<apiRelation href="class_t_buf.xml#class_t_buf">TBuf</apiRelation>&lt; 0x100 &gt;</cxxTypedefDeclaredType>
+				<cxxTypedefScopedName/>
+				<cxxTypedefPrototype>TBuf&lt; 0x100 &gt; THostName</cxxTypedefPrototype>
+				<cxxTypedefNameLookup>THostName</cxxTypedefNameLookup>
+				<cxxTypedefAPIItemLocation>
+					<cxxTypedefDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxTypedefDeclarationFileLine name="lineNumber" value="577"/>
+				</cxxTypedefAPIItemLocation>
+			</cxxTypedefDefinition>
+			<apiDesc>
+				<p>Defines a descriptor to hold a host name string. </p>
+			</apiDesc>
+		</cxxTypedefDetail>
+	</cxxTypedef>
+	<cxxVariable id="es__sock_8h_1a6a878f603865fe270dad6111d6d7eb94">
+		<apiName>KErrWouldBlock</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TInt KErrWouldBlock</cxxVariablePrototype>
+				<cxxVariableNameLookup>KErrWouldBlock</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="633"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>This error is returned from operations on non-blocking sockets that cannot be completed immediately, for example receive when no data is queued for reading. It is a non-fatal error, and the operation should be retried later.   </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1a663ab322cd0d4654d2c437baa034362c">
+		<apiName>KErrConnectionTerminated</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TInt KErrConnectionTerminated</cxxVariablePrototype>
+				<cxxVariableNameLookup>KErrConnectionTerminated</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="644"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>socket errors</p>
+				<p>The value -17210 is taken from the range allocated for Esock (beginning at -17200) A gap has been left between the currently existing vals and this one.</p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1a5d8ee2a80fbea235c81cc1b34d898d60">
+		<apiName>KErrCannotFindProtocol</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TInt KErrCannotFindProtocol</cxxVariablePrototype>
+				<cxxVariableNameLookup>KErrCannotFindProtocol</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="646"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1aa2c2c9472ceeb8606335495878a83b33">
+		<apiName>KErrTierNotFound</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TInt KErrTierNotFound</cxxVariablePrototype>
+				<cxxVariableNameLookup>KErrTierNotFound</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="647"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1aea497af35e128185f6544c4c52d98426">
+		<apiName>KErrConnectionContention</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TInt KErrConnectionContention</cxxVariablePrototype>
+				<cxxVariableNameLookup>KErrConnectionContention</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="648"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1ae6dfe9b345f322d2aa22a8a8df82e11c">
+		<apiName>KErrProtocolNotReady</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TInt KErrProtocolNotReady</cxxVariablePrototype>
+				<cxxVariableNameLookup>KErrProtocolNotReady</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="658"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>The protocol requested for the socket was recognised but was not able to be used. This can happen with protocols that require specific settings to have been prepared prior to the socket being opened.</p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxTypedef id="es__sock_8h_1a11ca7ee7dea3430e0406d5b50ec5730e">
+		<apiName>TSockXfrLength</apiName>
+		<cxxTypedefDetail>
+			<cxxTypedefDefinition>
+				<cxxTypedefAccessSpecifier value="public"/>
+				<cxxTypedefDeclaredType>
+					<apiRelation href="class_t_pckg_buf.xml#class_t_pckg_buf">TPckgBuf</apiRelation>&lt; <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation> &gt;</cxxTypedefDeclaredType>
+				<cxxTypedefScopedName/>
+				<cxxTypedefPrototype>TPckgBuf&lt; TInt &gt; TSockXfrLength</cxxTypedefPrototype>
+				<cxxTypedefNameLookup>TSockXfrLength</cxxTypedefNameLookup>
+				<cxxTypedefAPIItemLocation>
+					<cxxTypedefDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxTypedefDeclarationFileLine name="lineNumber" value="664"/>
+				</cxxTypedefAPIItemLocation>
+			</cxxTypedefDefinition>
+			<apiDesc>
+				<p>Used in <xref href="class_r_socket.xml#class_r_socket">RSocket</xref> read and write calls to pass the length of data read and written.   </p>
+			</apiDesc>
+		</cxxTypedefDetail>
+	</cxxTypedef>
+	<cxxTypedef id="es__sock_8h_1a85082362ed0d492e19a7ac7a4f1b7b07">
+		<apiName>TNameEntry</apiName>
+		<cxxTypedefDetail>
+			<cxxTypedefDefinition>
+				<cxxTypedefAccessSpecifier value="public"/>
+				<cxxTypedefDeclaredType>
+					<apiRelation href="class_t_pckg_buf.xml#class_t_pckg_buf">TPckgBuf</apiRelation>&lt; <apiRelation href="class_t_name_record.xml#class_t_name_record">TNameRecord</apiRelation> &gt;</cxxTypedefDeclaredType>
+				<cxxTypedefScopedName/>
+				<cxxTypedefPrototype>TPckgBuf&lt; TNameRecord &gt; TNameEntry</cxxTypedefPrototype>
+				<cxxTypedefNameLookup>TNameEntry</cxxTypedefNameLookup>
+				<cxxTypedefAPIItemLocation>
+					<cxxTypedefDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxTypedefDeclarationFileLine name="lineNumber" value="866"/>
+				</cxxTypedefAPIItemLocation>
+			</cxxTypedefDefinition>
+			<apiDesc>
+				<p>Packages the <xref href="class_t_name_record.xml#class_t_name_record">TNameRecord</xref> class so that it can be passed between a client and the socket server.   </p>
+			</apiDesc>
+		</cxxTypedefDetail>
+	</cxxTypedef>
+	<cxxTypedef id="es__sock_8h_1a80cdfd79bcab332a5cce1db9dffe3307">
+		<apiName>TPortNum</apiName>
+		<cxxTypedefDetail>
+			<cxxTypedefDefinition>
+				<cxxTypedefAccessSpecifier value="public"/>
+				<cxxTypedefDeclaredType>
+					<apiRelation href="class_t_pckg_buf.xml#class_t_pckg_buf">TPckgBuf</apiRelation>&lt; <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation> &gt;</cxxTypedefDeclaredType>
+				<cxxTypedefScopedName/>
+				<cxxTypedefPrototype>TPckgBuf&lt; TInt &gt; TPortNum</cxxTypedefPrototype>
+				<cxxTypedefNameLookup>TPortNum</cxxTypedefNameLookup>
+				<cxxTypedefAPIItemLocation>
+					<cxxTypedefDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxTypedefDeclarationFileLine name="lineNumber" value="926"/>
+				</cxxTypedefAPIItemLocation>
+			</cxxTypedefDefinition>
+			<apiDesc>
+				<p>Port number on service</p>
+			</apiDesc>
+		</cxxTypedefDetail>
+	</cxxTypedef>
+	<cxxVariable id="es__sock_8h_1af3ebf690cbf646acf583aed29e4ee34a">
+		<apiName>KConnectionTypeDefault</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint KConnectionTypeDefault</cxxVariablePrototype>
+				<cxxVariableNameLookup>KConnectionTypeDefault</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="984"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Default connection type   </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1acbd2b603089aff1a3aa1cb56c35e2459">
+		<apiName>KSubConnParamsInterfaceUid</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1a08ea5ecd72297daaa3a4f3c41ce9e103">TInt32</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TInt32 KSubConnParamsInterfaceUid</cxxVariablePrototype>
+				<cxxVariableNameLookup>KSubConnParamsInterfaceUid</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1232"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1af318020b3c57bd439ff3b2dea6392e2e">
+		<apiName>KSubConnEventInterfaceUid</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1a08ea5ecd72297daaa3a4f3c41ce9e103">TInt32</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TInt32 KSubConnEventInterfaceUid</cxxVariablePrototype>
+				<cxxVariableNameLookup>KSubConnEventInterfaceUid</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1233"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1aaf31e31ced9ccad1d87c11fcbd81af53">
+		<apiName>KSubConnGenericParamsImplUid</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1a08ea5ecd72297daaa3a4f3c41ce9e103">TInt32</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TInt32 KSubConnGenericParamsImplUid</cxxVariablePrototype>
+				<cxxVariableNameLookup>KSubConnGenericParamsImplUid</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1235"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1aa125dc14c2fc4e4bf4e88ca3fc336045">
+		<apiName>KSubConnGenericEventsImplUid</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1a08ea5ecd72297daaa3a4f3c41ce9e103">TInt32</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TInt32 KSubConnGenericEventsImplUid</cxxVariablePrototype>
+				<cxxVariableNameLookup>KSubConnGenericEventsImplUid</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1236"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1a4986b286f039df99781d3c3f1169b21b">
+		<apiName>KSubConGlobalFamily</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1a8240e11f17c80b6b222fc2af50234da4">TUint32</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint32 KSubConGlobalFamily</cxxVariablePrototype>
+				<cxxVariableNameLookup>KSubConGlobalFamily</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1238"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1a5fb0fdd8b8b43822d75aa4b1b2b55b4b">
+		<apiName>KSubConQoSFamily</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1a8240e11f17c80b6b222fc2af50234da4">TUint32</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint32 KSubConQoSFamily</cxxVariablePrototype>
+				<cxxVariableNameLookup>KSubConQoSFamily</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1239"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1ac487d010b00d3a88e2106b9240428cf1">
+		<apiName>KSubConAuthorisationFamily</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1a8240e11f17c80b6b222fc2af50234da4">TUint32</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint32 KSubConAuthorisationFamily</cxxVariablePrototype>
+				<cxxVariableNameLookup>KSubConAuthorisationFamily</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1240"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1af0b108fce4bd75458288a38cf67336e4">
+		<apiName>KSubConnCallDescrParamsFamily</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1a8240e11f17c80b6b222fc2af50234da4">TUint32</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint32 KSubConnCallDescrParamsFamily</cxxVariablePrototype>
+				<cxxVariableNameLookup>KSubConnCallDescrParamsFamily</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1241"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1af5f06cebc8c2230f8cddf70ab3fd950d">
+		<apiName>KSubConnContextDescrParamsFamily</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1a8240e11f17c80b6b222fc2af50234da4">TUint32</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint32 KSubConnContextDescrParamsFamily</cxxVariablePrototype>
+				<cxxVariableNameLookup>KSubConnContextDescrParamsFamily</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1242"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1a6d5dff837fac18f8dadf17132587a4bd">
+		<apiName>KSubConIPAddressInfoFamily</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1a8240e11f17c80b6b222fc2af50234da4">TUint32</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TUint32 KSubConIPAddressInfoFamily</cxxVariablePrototype>
+				<cxxVariableNameLookup>KSubConIPAddressInfoFamily</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1244"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1a8aa7231e4936a5d4400b85b18639eb31">
+		<apiName>KProtocolExtensionFamily</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1a08ea5ecd72297daaa3a4f3c41ce9e103">TInt32</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TInt32 KProtocolExtensionFamily</cxxVariablePrototype>
+				<cxxVariableNameLookup>KProtocolExtensionFamily</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1246"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1add0dc89ce770a815a9af8fdf0fcf95b8">
+		<apiName>KFlowParametersFamily</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1a08ea5ecd72297daaa3a4f3c41ce9e103">TInt32</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TInt32 KFlowParametersFamily</cxxVariablePrototype>
+				<cxxVariableNameLookup>KFlowParametersFamily</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1247"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="es__sock_8h_1acf9fa76cafdd43bfdd76bfc69e49565c">
+		<apiName>KNotificationEventMaxSize</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName/>
+				<cxxVariablePrototype>const TInt KNotificationEventMaxSize</cxxVariablePrototype>
+				<cxxVariableNameLookup>KNotificationEventMaxSize</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1375"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxFileAPIItemLocation>
+		<cxxFileDeclarationFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/inc/es_sock.h"/>
+	</cxxFileAPIItemLocation>
+</cxxFile>

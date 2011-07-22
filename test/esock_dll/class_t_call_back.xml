@@ -1,0 +1,199 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_t_call_back">
+	<apiName>TCallBack</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="66"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="65"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="85"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>Encapsulates a general call-back function.</p>
+			<p>The class encapsulates:</p>
+			<p>1. a pointer to a function which takes an argument of type TAny* and returns a TInt.</p>
+			<p>2. a pointer which is passed to the function every time it is called. The pointer can point to any object. It can also be NULL.</p>
+			<p>The callback function can be a static function of a class, e.g. TInt X::Foo(TAny *) or it can be a function which is not a member of any class, e.g. TInt Foo(TAny *).</p>
+			<p>When used with the <xref href="class_c_idle.xml#class_c_idle">CIdle</xref> and the <xref href="class_c_periodic.xml#class_c_periodic">CPeriodic</xref> classes, the callback function is intended to be called repeatedly; the encapsulated pointer is passed on each call. Typically, the pointer refers to an object which records the state of the task across each call. When used with <xref href="class_c_idle.xml#class_c_idle">CIdle</xref>, the callback function should also return a true (non-zero) value if it is intended to be called again, otherwise it should return a false (zero) value.</p>
+			<p>
+				<xref href="class_c_idle.xml#class_c_idle">CIdle</xref> </p>
+			<p>
+				<xref href="class_c_periodic.xml#class_c_periodic">CPeriodic</xref> </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_t_call_back_1a347ae3209812bb0f2ba99968ee8c4550">
+		<apiName>TCallBack</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TCallBack</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TCallBack()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TCallBack::TCallBack()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="68"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="269"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="275"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Default constructor.</p>
+				<p>Sets the function pointer to Null. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_call_back_1ab373e66ddeb9863a5fd2d5a3f1fa20cb">
+		<apiName>TCallBack</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TCallBack</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TCallBack(TInt(*aFunction)(TAny *aPtr))</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TCallBack::TCallBack(TInt(*)(TAny *aPtr))</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>(*)(<apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *aPtr)</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFunction</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A pointer to the callback function. It takes an argument of type TAny* and returns a TInt. It must be either a static member of a class or a function which is not a member of any class. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="69"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="280"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="290"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Constructs the callback object with the specified callback function.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_call_back_1a70859e38169de1eb7d9e231359071164">
+		<apiName>TCallBack</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TCallBack</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TCallBack(TInt(*aFunction)(TAny *aPtr), TAny *aPtr)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TCallBack::TCallBack(TInt(*)(TAny *aPtr),TAny *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>(*)(<apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *aPtr)</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFunction</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A pointer to the callback function. It takes an argument of type TAny* and returns a TInt. It must be either a static member of a class or a function which is not a member of any class. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPtr</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A pointer which is always passed to the callback function. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="70"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="295"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="307"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Constructs the callback object with the specified callback function and a pointer to any object.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_call_back_1a75cb3cf464444427b177fab3c5680b85">
+		<apiName>CallBack</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TCallBack</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt CallBack() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TCallBack::CallBack()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="71"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="326"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="327"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Calls the callback function.</p>
+				<p>The value returned by the callback function. The meaning of this value depends entirely on the context in which the callback function is called. For example, when used with the <xref href="class_c_idle.xml#class_c_idle">CIdle</xref> class, a false (zero) value indicates that the callback function should not be called again. As another example, when used with the <xref href="class_c_periodic.xml#class_c_periodic">CPeriodic</xref> class, the return value is ignored and is irrelevant in that context.</p>
+				<p>
+					<xref href="class_c_idle.xml#class_c_idle">CIdle</xref> </p>
+				<p>
+					<xref href="class_c_periodic.xml#class_c_periodic">CPeriodic</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxVariable id="class_t_call_back_1aa0ddf1ec9c586328bc3ece829f31df9c">
+		<apiName>iFunction</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>(*</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TCallBack</cxxVariableScopedName>
+				<cxxVariablePrototype>TInt(* iFunction)(TAny *aPtr)</cxxVariablePrototype>
+				<cxxVariableNameLookup>TCallBack::iFunction</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="77"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>A pointer to the callback function. </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_t_call_back_1a8be8dceca75fc9fa3ecd860fcefc103a">
+		<apiName>iPtr</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TCallBack</cxxVariableScopedName>
+				<cxxVariablePrototype>TAny * iPtr</cxxVariablePrototype>
+				<cxxVariableNameLookup>TCallBack::iPtr</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="84"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>A pointer that is passed to the callback function when the function is called. </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+</cxxClass>

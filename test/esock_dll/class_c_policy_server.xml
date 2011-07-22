@@ -1,0 +1,794 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_c_policy_server">
+	<apiName>CPolicyServer</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassDerivations>
+				<cxxClassDerivation>
+					<cxxClassDerivationAccessSpecifier value="public"/>
+					<cxxClassBaseClass href="class_c_server2.xml#class_c_server2">CServer2</cxxClassBaseClass>
+				</cxxClassDerivation>
+			</cxxClassDerivations>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="2364"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="2363"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="2779"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>A security policy framework built on top of the normal <xref href="class_c_server2.xml#class_c_server2">CServer2</xref> class.</p>
+			<p>The two major functions of the Policy Server framework are to check a received message against a security policy and then to perform an action depending on the result of this check. The exact behaviour is defined by the contents of the <xref href="class_c_policy_server_1_1_t_policy.xml#class_c_policy_server_1_1_t_policy">TPolicy</xref> structure given in the constructor for <xref href="class_c_policy_server.xml#class_c_policy_server">CPolicyServer</xref>.</p>
+			<p>The processing performed when a server receives a message are describe below. This should aid understanding of the interaction of the <xref href="class_c_policy_server_1_1_t_policy.xml#class_c_policy_server_1_1_t_policy">TPolicy</xref> structure and virtual member functions which may be implemented by classes derived from <xref href="class_c_policy_server.xml#class_c_policy_server">CPolicyServer</xref>.</p>
+			<p>Checking the Security Policy</p>
+			<p>On receipt of a message, the message function number is used to search the list of ranges pointed to by <xref href="class_c_policy_server_1_1_t_policy.xml#class_c_policy_server_1_1_t_policy_1a25b4cffecca32c102423cceae77ebac7">TPolicy::iRanges</xref>. This yields a range number R, which is between 0 and <xref href="class_c_policy_server_1_1_t_policy.xml#class_c_policy_server_1_1_t_policy_1a255df35e337ad131a38ce9f9f19d056f">TPolicy::iRangeCount</xref>-1. The policy index, X, for this range is then fetched from <xref href="class_c_policy_server_1_1_t_policy.xml#class_c_policy_server_1_1_t_policy_1a06ce36f9af448cc23989ec77b66e7c88">TPolicy::iElementsIndex</xref>[R]. If the message is a Connect message, then X is fetched directly from <xref href="class_c_policy_server_1_1_t_policy.xml#class_c_policy_server_1_1_t_policy_1a3e43bb1a450e33647e5dd92bc7543eba">TPolicy::iOnConnect</xref> instead.</p>
+			<p>The further action taken is determined by the value of X.<ul>
+					<li>
+						<p>If X==TSpecialCaseEAlwaysPass, the message is processed as normal; either by passing it to the ServiceL() method of a session, or, in the case of a connection message, a new session is created.</p>
+					</li>
+					<li>
+						<p>If X==TSpecialCaseENotSupported, the message is completed with KErrNotSupported.</p>
+					</li>
+					<li>
+						<p>If X==TSpecialCaseECustomCheck, a call to the virtual function <xref href="class_c_policy_server.xml#class_c_policy_server_1aebb244bfe601a25b269cad10b6212d5f">CustomSecurityCheckL()</xref> is made. The implementation of this method must return one of the TCustomResult enumerations which determine what further action is to be taken:<ul>
+								<li>
+									<p>TCustomResult::EPass The message is processed as normal; either by passing it to the ServiceL() method of a session, or, in the case of a connection message, a new session is created.</p>
+								</li>
+								<li>
+									<p>TCustomResult::EFail This causes <xref href="class_c_policy_server.xml#class_c_policy_server_1abcc52092390b1e78611991229d02e5d3">CheckFailedL()</xref> to be called with the action specified by the aAction reference given to <xref href="class_c_policy_server.xml#class_c_policy_server_1aebb244bfe601a25b269cad10b6212d5f">CustomSecurityCheckL()</xref> (This defaults to TFailureAction::EFailClient.)</p>
+								</li>
+								<li>
+									<p>TCustomResult::EAsync The derived class is responsible for further processing of the message, the Policy Server framework will do nothing more with it.</p>
+								</li>
+							</ul>
+						</p>
+					</li>
+					<li>
+						<p>If X &lt; TSpecialCase::ESpecialCaseHardLimit, X is taken as an index into the array of <xref href="class_c_policy_server_1_1_t_policy_element.xml#class_c_policy_server_1_1_t_policy_element">TPolicyElement</xref> objects pointed to by <xref href="class_c_policy_server_1_1_t_policy.xml#class_c_policy_server_1_1_t_policy_1ad8a53c5e5c995a959d74e844f1701ebc">TPolicy::iElements</xref>. The platform security attributes of the process which sent the message being processed are checked against the security policy specified in this <xref href="class_c_policy_server_1_1_t_policy_element.xml#class_c_policy_server_1_1_t_policy_element">TPolicyElement</xref>. If the process possesses all of the attributes specified then the message processed as normal. Otherwise, <xref href="class_c_policy_server.xml#class_c_policy_server_1abcc52092390b1e78611991229d02e5d3">CheckFailedL()</xref> is called with the action value specified in the <xref href="class_c_policy_server_1_1_t_policy_element.xml#class_c_policy_server_1_1_t_policy_element">TPolicyElement</xref> .</p>
+					</li>
+				</ul>
+			</p>
+			<p>Handling Policy Check Failure</p>
+			<p>The <xref href="class_c_policy_server.xml#class_c_policy_server_1abcc52092390b1e78611991229d02e5d3">CheckFailedL()</xref> method is called when a security check has failed. It performs an action according to the aAction value given to it:</p>
+			<p>
+				<ul>
+					<li>
+						<p>If aAction==TFailureActionEFailClient, the message is completed with KErrPermissionDenied.</p>
+					</li>
+					<li>
+						<p>If aAction==TFailureActionEPanicClient, the client thread is panicked.</p>
+					</li>
+					<li>
+						<p>If aAction &lt; 0 a call to the virtual function <xref href="class_c_policy_server.xml#class_c_policy_server_1a461aabe6b726788562cf592bda72ea8e">CustomFailureActionL()</xref> is made. The implementation of this method must return one of the TCustomResult enumerations which determine what further action is to be taken:<ul>
+								<li>
+									<p>TCustomResult::EPass The message is processed as normal; either by passing it to the ServiceL() method of a session, or, in the case of a connection message, a new session is created.</p>
+								</li>
+								<li>
+									<p>TCustomResult::EFail The message is completed with KErrPermissionDenied.</p>
+								</li>
+								<li>
+									<p>TCustomResult::EAsync The derived class is responsible for further processing of the message, the Policy Server framework will do nothing more with it.</p>
+								</li>
+							</ul>
+						</p>
+					</li>
+				</ul>
+			</p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxClassNested>
+		<cxxClassNestedDetail>
+			<cxxClassNestedClass href="class_c_policy_server_1_1_t_policy.xml#class_c_policy_server_1_1_t_policy">CPolicyServer::TPolicy</cxxClassNestedClass>
+			<cxxClassNestedClass href="class_c_policy_server_1_1_t_policy_element.xml#class_c_policy_server_1_1_t_policy_element">CPolicyServer::TPolicyElement</cxxClassNestedClass>
+		</cxxClassNestedDetail>
+	</cxxClassNested>
+	<cxxEnumeration id="class_c_policy_server_1ab33cacbf3d29e0eb9b40ec1e8c96caf6">
+		<apiName>TFailureAction</apiName>
+		<cxxEnumerationDetail>
+			<cxxEnumerationDefinition>
+				<cxxEnumerationAccessSpecifier value="public"/>
+				<cxxEnumerationScopedName>CPolicyServer</cxxEnumerationScopedName>
+				<cxxEnumerationPrototype>TFailureAction</cxxEnumerationPrototype>
+				<cxxEnumerationNameLookup>CPolicyServer:TFailureAction</cxxEnumerationNameLookup>
+				<cxxEnumerators>
+					<cxxEnumerator id="class_c_policy_server_1ab33cacbf3d29e0eb9b40ec1e8c96caf6aac2bf4363bc4c7df5f9310c589e667c3">
+						<apiName>EFailClient</apiName>
+						<cxxEnumeratorScopedName>CPolicyServer</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EFailClient = 0</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>CPolicyServer::EFailClient</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="0"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="2374"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Complete message with KErrPermissionDenied </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_c_policy_server_1ab33cacbf3d29e0eb9b40ec1e8c96caf6a0c6d41aa6da260fe779792659b3b183f">
+						<apiName>EPanicClient</apiName>
+						<cxxEnumeratorScopedName>CPolicyServer</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EPanicClient = 1</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>CPolicyServer::EPanicClient</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="1"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="2375"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Panic client </p>
+						</apiDesc>
+					</cxxEnumerator>
+				</cxxEnumerators>
+				<cxxEnumerationAPIItemLocation>
+					<cxxEnumerationDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxEnumerationDeclarationFileLine name="lineNumber" value="2373"/>
+					<cxxEnumerationDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxEnumerationDefinitionFileLineStart name="lineNumber" value="2372"/>
+					<cxxEnumerationDefinitionFileLineEnd name="lineNumber" value="2376"/>
+				</cxxEnumerationAPIItemLocation>
+			</cxxEnumerationDefinition>
+			<apiDesc>
+				<p>Enumeration specifying action to take if a security check fails. Values &gt;= 0 are handled by <xref href="class_c_policy_server.xml#class_c_policy_server_1abcc52092390b1e78611991229d02e5d3">CheckFailedL()</xref>. Values &lt; 0 are specific to the derived implementation of the policy server and will result in a call to <xref href="class_c_policy_server.xml#class_c_policy_server_1a461aabe6b726788562cf592bda72ea8e">CustomFailureActionL()</xref> if a security check fails. Attempts to use undefined values &gt;= 0 will result in a panic in <xref href="class_c_policy_server.xml#class_c_policy_server_1abcc52092390b1e78611991229d02e5d3">CheckFailedL()</xref>. </p>
+			</apiDesc>
+		</cxxEnumerationDetail>
+	</cxxEnumeration>
+	<cxxEnumeration id="class_c_policy_server_1a5bafdc6d2c6bc774b272af063895b306">
+		<apiName>TCustomResult</apiName>
+		<cxxEnumerationDetail>
+			<cxxEnumerationDefinition>
+				<cxxEnumerationAccessSpecifier value="public"/>
+				<cxxEnumerationScopedName>CPolicyServer</cxxEnumerationScopedName>
+				<cxxEnumerationPrototype>TCustomResult</cxxEnumerationPrototype>
+				<cxxEnumerationNameLookup>CPolicyServer:TCustomResult</cxxEnumerationNameLookup>
+				<cxxEnumerators>
+					<cxxEnumerator id="class_c_policy_server_1a5bafdc6d2c6bc774b272af063895b306abde72ca7adc780a31c4a43222e6f23da">
+						<apiName>EPass</apiName>
+						<cxxEnumeratorScopedName>CPolicyServer</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EPass = 0</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>CPolicyServer::EPass</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="0"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="2388"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Security check passed. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_c_policy_server_1a5bafdc6d2c6bc774b272af063895b306a990e3e9c8050a309f7f9f191fa7b9cb0">
+						<apiName>EFail</apiName>
+						<cxxEnumeratorScopedName>CPolicyServer</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EFail = 1</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>CPolicyServer::EFail</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="1"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="2389"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Security check failed. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_c_policy_server_1a5bafdc6d2c6bc774b272af063895b306a259487736c30a295f2fd6a3971e47657">
+						<apiName>EAsync</apiName>
+						<cxxEnumeratorScopedName>CPolicyServer</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EAsync = 2</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>CPolicyServer::EAsync</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="2"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="2390"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Security checking will be performed asynchronously. </p>
+						</apiDesc>
+					</cxxEnumerator>
+				</cxxEnumerators>
+				<cxxEnumerationAPIItemLocation>
+					<cxxEnumerationDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxEnumerationDeclarationFileLine name="lineNumber" value="2387"/>
+					<cxxEnumerationDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxEnumerationDefinitionFileLineStart name="lineNumber" value="2386"/>
+					<cxxEnumerationDefinitionFileLineEnd name="lineNumber" value="2391"/>
+				</cxxEnumerationAPIItemLocation>
+			</cxxEnumerationDefinition>
+			<apiDesc>
+				<p>Enumeration of acceptable return codes from both of <xref href="class_c_policy_server.xml#class_c_policy_server_1aebb244bfe601a25b269cad10b6212d5f">CustomSecurityCheckL()</xref> and <xref href="class_c_policy_server.xml#class_c_policy_server_1a461aabe6b726788562cf592bda72ea8e">CustomFailureActionL()</xref>. Results of EPass or EFail are handled by the <xref href="class_c_policy_server.xml#class_c_policy_server">CPolicyServer</xref> framework. No other action is required on the part of the derived implementation. However, results of EAsync imply that the derived implementation will call the appropriate function once the result is known. See <xref href="class_c_policy_server.xml#class_c_policy_server_1aebb244bfe601a25b269cad10b6212d5f">CustomSecurityCheckL()</xref> and CustomFailureActionL for more information. </p>
+			</apiDesc>
+		</cxxEnumerationDetail>
+	</cxxEnumeration>
+	<cxxEnumeration id="class_c_policy_server_1a5fff35105fcd72f5a90f3947426c781d">
+		<apiName>TSpecialCase</apiName>
+		<cxxEnumerationDetail>
+			<cxxEnumerationDefinition>
+				<cxxEnumerationAccessSpecifier value="public"/>
+				<cxxEnumerationScopedName>CPolicyServer</cxxEnumerationScopedName>
+				<cxxEnumerationPrototype>TSpecialCase</cxxEnumerationPrototype>
+				<cxxEnumerationNameLookup>CPolicyServer:TSpecialCase</cxxEnumerationNameLookup>
+				<cxxEnumerators>
+					<cxxEnumerator id="class_c_policy_server_1a5fff35105fcd72f5a90f3947426c781da89f6d4d2387cf07a56e55812b4267668">
+						<apiName>ECustomCheck</apiName>
+						<cxxEnumeratorScopedName>CPolicyServer</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ECustomCheck = 255u</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>CPolicyServer::ECustomCheck</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="255u"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="2448"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Indicates a custom check should be made by calling <xref href="class_c_policy_server.xml#class_c_policy_server_1aebb244bfe601a25b269cad10b6212d5f">CustomSecurityCheckL()</xref> </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_c_policy_server_1a5fff35105fcd72f5a90f3947426c781da28388d46a8be16cdef6084e1f62800ae">
+						<apiName>ENotSupported</apiName>
+						<cxxEnumeratorScopedName>CPolicyServer</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ENotSupported = 254u</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>CPolicyServer::ENotSupported</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="254u"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="2452"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Indicates that message is requesting an unsupported function. The message is completed with KErrNotSupported. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_c_policy_server_1a5fff35105fcd72f5a90f3947426c781da97b469bb685ba619eaa77c88fa0fa6dc">
+						<apiName>EAlwaysPass</apiName>
+						<cxxEnumeratorScopedName>CPolicyServer</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EAlwaysPass = 253u</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>CPolicyServer::EAlwaysPass</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="253u"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="2456"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Indicates that the message is requesting an unrestricted function and therefore should be processed without any further checks. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_c_policy_server_1a5fff35105fcd72f5a90f3947426c781da307ab9b3b747c3774c4cf22845e2d384">
+						<apiName>ESpecialCaseLimit</apiName>
+						<cxxEnumeratorScopedName>CPolicyServer</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ESpecialCaseLimit = 252u</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>CPolicyServer::ESpecialCaseLimit</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="252u"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="2458"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc/>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_c_policy_server_1a5fff35105fcd72f5a90f3947426c781dab63c97f4b6613dc816b92509b5b56a83">
+						<apiName>ESpecialCaseHardLimit</apiName>
+						<cxxEnumeratorScopedName>CPolicyServer</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ESpecialCaseHardLimit = 250u</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>CPolicyServer::ESpecialCaseHardLimit</cxxEnumeratorNameLookup>
+						<cxxEnumeratorInitialiser value="250u"/>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="2460"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc/>
+					</cxxEnumerator>
+				</cxxEnumerators>
+				<cxxEnumerationAPIItemLocation>
+					<cxxEnumerationDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxEnumerationDeclarationFileLine name="lineNumber" value="2446"/>
+					<cxxEnumerationDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxEnumerationDefinitionFileLineStart name="lineNumber" value="2445"/>
+					<cxxEnumerationDefinitionFileLineEnd name="lineNumber" value="2460"/>
+				</cxxEnumerationAPIItemLocation>
+			</cxxEnumerationDefinition>
+			<apiDesc>
+				<p>Special case values which can be used instead of a policy element index contained in the array <xref href="class_c_policy_server_1_1_t_policy.xml#class_c_policy_server_1_1_t_policy_1a06ce36f9af448cc23989ec77b66e7c88">TPolicy::iElementsIndex</xref> </p>
+			</apiDesc>
+		</cxxEnumerationDetail>
+	</cxxEnumeration>
+	<cxxFunction id="class_c_policy_server_1af534b024f4ad7e27aa005fff9c1f990c">
+		<apiName>ProcessL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CPolicyServer</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void ProcessL(const RMessage2 &amp;aMsg)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CPolicyServer::ProcessL(const RMessage2 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_r_message2.xml#class_r_message2">RMessage2</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMsg</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2621"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Process an accepted message which has passed its policy check.</p>
+				<p>The message is either passed to the ServiceL() method of a session, or, in the case of a connection message, a new session is created.</p>
+				<p>This is called by <xref href="class_c_policy_server.xml#class_c_policy_server_1a180765d0cba5de556b5ca089f49ecd52">RunL()</xref> to process a message which has passed its security check. If the server implementation returns EAsync from either <xref href="class_c_policy_server.xml#class_c_policy_server_1aebb244bfe601a25b269cad10b6212d5f">CustomSecurityCheckL()</xref> or <xref href="class_c_policy_server.xml#class_c_policy_server_1a461aabe6b726788562cf592bda72ea8e">CustomFailureActionL()</xref>, then it is the responsibility of the derived server implementation to call ProcessL at a later point if the messages passes the asynchronous check.</p>
+				<p>This function should only ever be called by derived implementations if asynchronous security checks are in use. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_policy_server_1abcc52092390b1e78611991229d02e5d3">
+		<apiName>CheckFailedL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CPolicyServer</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void CheckFailedL(const RMessage2 &amp;aMsg, TInt aAction, const TSecurityInfo &amp;aMissing)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CPolicyServer::CheckFailedL(const RMessage2 &amp;,TInt,const TSecurityInfo &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_r_message2.xml#class_r_message2">RMessage2</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMsg</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The message which failed its check. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aAction</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The action to take. (See description.) </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_security_info.xml#class_t_security_info">TSecurityInfo</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMissing</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A list of the security attributes that were missing from the checked process. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2639"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Called when a security check has failed.</p>
+				<p>The aAction parameter determines the action taken:<ul>
+						<li>
+							<p>If aAction==TFailureActionEFailClient, the message is completed with KErrPermissionDenied.</p>
+						</li>
+						<li>
+							<p>If aAction==TFailureActionEPanicClient, the client thread is panicked.</p>
+						</li>
+						<li>
+							<p>If aAction &lt; 0 a call to the virtual function <xref href="class_c_policy_server.xml#class_c_policy_server_1a461aabe6b726788562cf592bda72ea8e">CustomFailureActionL()</xref> is made.</p>
+						</li>
+					</ul>
+				</p>
+				<p>This function should only ever be called by derived implementations if asynchronous security checks are in use.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_policy_server_1a54eca760f806b5f198ba5b55f1abc8ba">
+		<apiName>ProcessError</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CPolicyServer</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void ProcessError(const RMessage2 &amp;aMsg, TInt aError)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CPolicyServer::ProcessError(const RMessage2 &amp;,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_r_message2.xml#class_r_message2">RMessage2</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMsg</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The message being processed when the leave occurred. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aError</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The leave code. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2654"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Called if a leave occurs during processing of a message. The underlying framework ensures that leaves which occur during <xref href="class_c_session2.xml#class_c_session2_1ad2e81d827d45c3c836dff934777061fa">CSession2::ServiceL</xref> are passed to <xref href="class_c_session2.xml#class_c_session2_1a1dcc73b258c83e42ff812c91c5834039">CSession2::ServiceError</xref>. Leaves occuring prior to this (ie. during <xref href="class_c_policy_server.xml#class_c_policy_server_1aebb244bfe601a25b269cad10b6212d5f">CustomSecurityCheckL()</xref> or <xref href="class_c_policy_server.xml#class_c_policy_server_1a461aabe6b726788562cf592bda72ea8e">CustomFailureActionL()</xref> ) are completed with the leave code.</p>
+				<p>This function should only ever be called by derived implementations if asynchronous security checks are in use. In this case the <xref href="class_c_policy_server.xml#class_c_policy_server_1ab0f918b8c5611ea950b224c529939e39">RunError()</xref> of that other active object must call <xref href="class_c_policy_server.xml#class_c_policy_server_1a54eca760f806b5f198ba5b55f1abc8ba">ProcessError()</xref>.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_policy_server_1a9a1f87ddc1849ba35e46d16e27d5d31e">
+		<apiName>CPolicyServer</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType>IMPORT_C</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CPolicyServer</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C CPolicyServer(TInt aPriority, const TPolicy &amp;aPolicy, TServerType aType=EUnsharableSessions)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CPolicyServer::CPolicyServer(TInt,const TPolicy &amp;,TServerType)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPriority</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Active object priority for this server </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_c_policy_server_1_1_t_policy.xml#class_c_policy_server_1_1_t_policy">TPolicy</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPolicy</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Reference to a policy object describing the security checks required for each message type. The server does not make a copy of policy, and therefore this object must exist for the lifetime of the server. It is recommended that aPolicy is in const static data. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_c_server2.xml#_1ad2da849def777140039e97fa8427a8ad">TServerType</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aType</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>EUnsharableSessions</cxxFunctionParameterDefaultValue>
+						<apiDefNote>Type of session sharing supported by this server </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2667"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Construct a policy server</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_policy_server_1aebb244bfe601a25b269cad10b6212d5f">
+		<apiName>CustomSecurityCheckL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionVirtual/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_c_policy_server.xml#_1a5bafdc6d2c6bc774b272af063895b306">TCustomResult</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CPolicyServer</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual IMPORT_C TCustomResult CustomSecurityCheckL(const RMessage2 &amp;aMsg, TInt &amp;aAction, TSecurityInfo &amp;aMissing)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CPolicyServer::CustomSecurityCheckL(const RMessage2 &amp;,TInt &amp;,TSecurityInfo &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_r_message2.xml#class_r_message2">RMessage2</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMsg</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The message to check. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aAction</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A reference to the action to take if the security check fails. This is either a value from TFailureAction or a negative value which has meaning to the CustomFailureActionL() method of a derived class. The policy server framework gives this value a default of EFailClient. If a derived implementation wishes a different value, then it should change this. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_security_info.xml#class_t_security_info">TSecurityInfo</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMissing</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A reference to the list of security attributes missing from the checked process. The policy server initialises this object to zero (that is a sid of 0, a vid of 0, and no capabilities). If derived implementations wish to take advantage of a list of missing attributes in their implementation of CustomFailureActionL(), then they should set those missing attributes here in CustomSecurityCheckL(). </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2717"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Performs a custom security check. Derived server classes must implement this function if any element in iElementsIndex has the value <xref href="class_c_policy_server.xml#class_c_policy_server_1a5fff35105fcd72f5a90f3947426c781da89f6d4d2387cf07a56e55812b4267668">CPolicyServer::ECustomCheck</xref>. Similarly, if <xref href="class_c_policy_server.xml#class_c_policy_server_1a5fff35105fcd72f5a90f3947426c781da89f6d4d2387cf07a56e55812b4267668">CPolicyServer::ECustomCheck</xref> is not used, then this function can be safely ignored.</p>
+				<p>If <xref href="class_c_policy_server.xml#class_c_policy_server_1a5fff35105fcd72f5a90f3947426c781da89f6d4d2387cf07a56e55812b4267668">CPolicyServer::ECustomCheck</xref> is used, there are two further cases to consider:<ol>
+						<li>
+							<p>The custom security check can synchronously decide if the message should pass. In this case, the derived implementation must simply return either EPass or EFail depending on the result of the security check.</p>
+						</li>
+						<li>
+							<p>The custom security check needs to use asynchronous methods in order to determine whether the message should procceed. In this case, these asysnchronous methods should be started and then the EAsync value returned. Furthermore, implmentations returning EAsync commit to the following:<ul>
+									<li>
+										<p>If the security check eventually passes, <xref href="class_c_policy_server.xml#class_c_policy_server_1af534b024f4ad7e27aa005fff9c1f990c">ProcessL()</xref> must be called with the appropriate message.</p>
+									</li>
+									<li>
+										<p>If the security check eventually fails, <xref href="class_c_policy_server.xml#class_c_policy_server_1abcc52092390b1e78611991229d02e5d3">CheckFailedL()</xref> must be called with that message.</p>
+									</li>
+									<li>
+										<p>Pending messages on a given session need to be completed and discarded if the session is closed.</p>
+									</li>
+								</ul>
+							</p>
+						</li>
+					</ol>
+				</p>
+				<p>IMPORTANT NOTE. When processing a message asynchronously, a copy must be made of the <xref href="class_r_message2.xml#class_r_message2">RMessage2</xref> object. Saving a refernece or pointer to the original message will produce unpredictable defects. This is because the object will be reused for the next message that the server receives.</p>
+				<p>In both cases, synchronous and asynchronous, the derived implementation has the option of updating the aAction and/or aMissing parameters if that is appropriate.</p>
+				<p>A value from TCustomResult. </p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>
+					<xref href="class_c_base.xml#class_c_base">CBase</xref> 95 If the default implementation is called. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_policy_server_1a461aabe6b726788562cf592bda72ea8e">
+		<apiName>CustomFailureActionL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionVirtual/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_c_policy_server.xml#_1a5bafdc6d2c6bc774b272af063895b306">TCustomResult</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CPolicyServer</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual IMPORT_C TCustomResult CustomFailureActionL(const RMessage2 &amp;aMsg, TInt aAction, const TSecurityInfo &amp;aMissing)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CPolicyServer::CustomFailureActionL(const RMessage2 &amp;,TInt,const TSecurityInfo &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_r_message2.xml#class_r_message2">RMessage2</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMsg</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The message to check </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aAction</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The custom failure action requested. This is either a value from TFailureAction or a negative value which has meaning to the CustomFailureActionL() method of a derived class. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_security_info.xml#class_t_security_info">TSecurityInfo</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMissing</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A const reference to the list of security attributes missing from the checked process. There are two cases to consider: (a) If this message was checked (and failed) by a static policy applied by the policy server framework, aMissing will contain a list of the security attributes that caused the policy to fail. An completely zeroed aMissing implies that an always fail policy was encountered. (b) If this message was failed by a custom security check, then aMissing will be zeroed unless the CustomSecurityCheckL() method filled it in. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2768"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Performs a custom action after the failure of a security check. Derived server classes must implement this function if the aAction value passed to <xref href="class_c_policy_server.xml#class_c_policy_server_1abcc52092390b1e78611991229d02e5d3">CheckFailedL()</xref> is less than zero. This can happened if the policy specified a negative number in the iAction member of any of the TPolicyElements, or, if the derived <xref href="class_c_policy_server.xml#class_c_policy_server_1aebb244bfe601a25b269cad10b6212d5f">CustomSecurityCheckL()</xref> modified the value of aAction prior to returning.</p>
+				<p>If negative aAction values are used, there are two further cases to consider:<ol>
+						<li>
+							<p>The custom security check can synchronously decide if the message should pass. In this case, the derived implementation must simply return either EPass or EFail depending on the result of the security check.</p>
+						</li>
+						<li>
+							<p>The custom security check needs to use asynchronous methods in order to determine whether the message should still proceed. In this case, these asysnchronous methods should be started and then the EAsync value returned. Furthermore, implmentations returning EAsync commit to the following:<ul>
+									<li>
+										<p>If the security check eventually passes, <xref href="class_c_policy_server.xml#class_c_policy_server_1af534b024f4ad7e27aa005fff9c1f990c">ProcessL()</xref> must be called with the appropriate message.</p>
+									</li>
+									<li>
+										<p>If the security check eventually fails, or if a fatal error condition occurs, including if the previously mentioned call to <xref href="class_c_policy_server.xml#class_c_policy_server_1af534b024f4ad7e27aa005fff9c1f990c">ProcessL()</xref> leaves; then <xref href="class_c_policy_server.xml#class_c_policy_server_1a54eca760f806b5f198ba5b55f1abc8ba">CPolicyServer::ProcessError()</xref> should be called passing the message and relevant error code.</p>
+									</li>
+									<li>
+										<p>Pending messages on a given session need to be completed and discarded if the session is closed.</p>
+									</li>
+								</ul>
+							</p>
+						</li>
+					</ol>
+				</p>
+				<p>IMPORTANT NOTE. When processing a message asynchronously, a copy must be made of the <xref href="class_r_message2.xml#class_r_message2">RMessage2</xref> object. Saving a refernece or pointer to the original message will produce unpredictable defects. This is because the object will be reused for the next message that the server receives.</p>
+				<p>The default implementation of this function panics the server.</p>
+				<p>A value from TCustomResult. </p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>
+					<xref href="class_c_base.xml#class_c_base">CBase</xref> 95 If the default implementation is called. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_policy_server_1ac81a8d281bb67a3c849764f86e104c00">
+		<apiName>Extension_</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionVirtual/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CPolicyServer</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual IMPORT_C TInt Extension_(TUint aExtensionId, TAny *&amp;a0, TAny *a1)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CPolicyServer::Extension_(TUint,TAny *&amp;,TAny *)</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_c_server2.xml#class_c_server2_1a78a886d15e40f5151f754877e9137e8e">CServer2::Extension_(TUint,TAny *&amp;,TAny *)</cxxFunctionReimplemented>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aExtensionId</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *&amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>a0</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>a1</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2771"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_policy_server_1a180765d0cba5de556b5ca089f49ecd52">
+		<apiName>RunL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionVirtual/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CPolicyServer</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual IMPORT_C void RunL()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CPolicyServer::RunL()</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_c_server2.xml#class_c_server2_1a845ad63a92b6eb0067e3d30ae2751522">CServer2::RunL()</cxxFunctionReimplemented>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2773"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Handles an active object&apos;s request completion event.</p>
+				<p>A derived class must provide an implementation to handle the completed request. If appropriate, it may issue another request.</p>
+				<p>The function is called by the active scheduler when a request completion event occurs, i.e. after the active scheduler&apos;s WaitForAnyRequest() function completes.</p>
+				<p>Before calling this active object&apos;s <xref href="class_c_policy_server.xml#class_c_policy_server_1a180765d0cba5de556b5ca089f49ecd52">RunL()</xref> function, the active scheduler has:</p>
+				<p>1. decided that this is the highest priority active object with a completed request</p>
+				<p>2. marked this active object&apos;s request as complete (i.e. the request is no longer outstanding)</p>
+				<p>
+					<xref href="class_c_policy_server.xml#class_c_policy_server_1a180765d0cba5de556b5ca089f49ecd52">RunL()</xref> runs under a trap harness in the active scheduler. If it leaves, then the active scheduler calls <xref href="class_c_policy_server.xml#class_c_policy_server_1ab0f918b8c5611ea950b224c529939e39">RunError()</xref> to handle the leave.</p>
+				<p>Note that once the active scheduler&apos;s <xref href="class_c_server2.xml#class_c_server2_1a24edc88681e0dd9561545e3db9c20c09">Start()</xref> function has been called, all user code is run under one of the program&apos;s active object&apos;s <xref href="class_c_policy_server.xml#class_c_policy_server_1a180765d0cba5de556b5ca089f49ecd52">RunL()</xref> or <xref href="class_c_policy_server.xml#class_c_policy_server_1ab0f918b8c5611ea950b224c529939e39">RunError()</xref> functions.</p>
+				<p>
+					<xref href="class_c_active_scheduler.xml#class_c_active_scheduler_1a71f4452eae5e178915987c6d1a428972">CActiveScheduler::Start</xref> </p>
+				<p>
+					<xref href="class_c_active_scheduler.xml#class_c_active_scheduler_1a6d3f55a0772c98d0cd2845a7c074b941">CActiveScheduler::Error</xref> </p>
+				<p>
+					<xref href="class_c_active_scheduler.xml#class_c_active_scheduler_1af43f6899a3a1a6b6cb040a4f2bbb40f9">CActiveScheduler::WaitForAnyRequest</xref> </p>
+				<p>TRAPD </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_policy_server_1ab0f918b8c5611ea950b224c529939e39">
+		<apiName>RunError</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionVirtual/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CPolicyServer</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual IMPORT_C TInt RunError(TInt aError)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CPolicyServer::RunError(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_c_server2.xml#class_c_server2_1a57ea3513e01ddfa35940b4427f2f4741">CServer2::RunError(TInt)</cxxFunctionReimplemented>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aError</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2774"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_policy_server_1ae2bf68b378b2569a7b22e2b264ca077c">
+		<apiName>FindPolicyElement</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>const <apiRelation href="class_c_policy_server_1_1_t_policy_element.xml#class_c_policy_server_1_1_t_policy_element">CPolicyServer::TPolicyElement</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CPolicyServer</cxxFunctionScopedName>
+				<cxxFunctionPrototype>const CPolicyServer::TPolicyElement * FindPolicyElement(TInt aFn, TUint &amp;aSpecialCase) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CPolicyServer::FindPolicyElement(TInt,TUint &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFn</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSpecialCase</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2775"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxVariable id="class_c_policy_server_1a1fda2eed51a5889162359091121e1279">
+		<apiName>iPolicy</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>const <apiRelation href="class_c_policy_server_1_1_t_policy.xml#class_c_policy_server_1_1_t_policy">TPolicy</apiRelation> &amp;</cxxVariableDeclaredType>
+				<cxxVariableScopedName>CPolicyServer</cxxVariableScopedName>
+				<cxxVariablePrototype>const TPolicy &amp; iPolicy</cxxVariablePrototype>
+				<cxxVariableNameLookup>CPolicyServer::iPolicy</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="2777"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxClassInherits>
+		<cxxClassInheritsDetail>
+			<cxxClassFunctionInherited href="class_c_policy_server.xml#class_c_active_1acfaa5bb1a4cda9d586f0ffaf2b0a0eb7">CActive::CActive(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_policy_server.xml#class_c_active_1a97781da8872ba6e86b5b83ad7170eb90">CActive::Cancel()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_policy_server.xml#class_c_active_1a44f0f5a2867d153feab11ee669d33b8d">CActive::Deque()</cxxClassFunctionInherited>
+			<cxxClassEnumeratorInherited href="class_c_policy_server.xml#class_c_active_1a378cd39842666e0a9b5f2fc089375f35ac59ba0db48385ddf49262e21f2a599b3">CActive::EPriorityHigh</cxxClassEnumeratorInherited>
+			<cxxClassEnumeratorInherited href="class_c_policy_server.xml#class_c_active_1a378cd39842666e0a9b5f2fc089375f35a5faa05021b83e97f1a5b00917aa34733">CActive::EPriorityIdle</cxxClassEnumeratorInherited>
+			<cxxClassEnumeratorInherited href="class_c_policy_server.xml#class_c_active_1a378cd39842666e0a9b5f2fc089375f35ac074efb2a15cd04c06d354fb1fd13f27">CActive::EPriorityLow</cxxClassEnumeratorInherited>
+			<cxxClassEnumeratorInherited href="class_c_policy_server.xml#class_c_active_1a378cd39842666e0a9b5f2fc089375f35ad19560103adbae4fa3eeca42c703e00b">CActive::EPriorityStandard</cxxClassEnumeratorInherited>
+			<cxxClassEnumeratorInherited href="class_c_policy_server.xml#class_c_active_1a378cd39842666e0a9b5f2fc089375f35ac4fc6edcb2aea0b20ab823f1017d788a">CActive::EPriorityUserInput</cxxClassEnumeratorInherited>
+			<cxxClassFunctionInherited href="class_c_policy_server.xml#class_c_active_1a6d1d16020878d00c3af277ad2b0866f5">CActive::IsActive()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_policy_server.xml#class_c_active_1a97d8e693eb6f85ca883dbb385650ca28">CActive::IsAdded()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_policy_server.xml#class_c_active_1acb9ff1d90fbcb96058e2947c3f05c8e8">CActive::Priority()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_policy_server.xml#class_c_active_1a511d5a8dc1d43eca953eb5c69b0e022d">CActive::SetActive()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_policy_server.xml#class_c_active_1a0d7c2ce1a5364daadef07b1020c9714f">CActive::SetPriority(TInt)</cxxClassFunctionInherited>
+			<cxxClassVariableInherited href="class_c_policy_server.xml#class_c_active_1a38314f150856c0f369555b0ef17c3140">CActive::iStatus</cxxClassVariableInherited>
+			<cxxClassFunctionInherited href="class_c_policy_server.xml#class_c_active_1a81e8cc3a48d5d6f56c502690f9969ef8">CActive::~CActive()</cxxClassFunctionInherited>
+			<cxxClassEnumerationInherited href="class_c_policy_server.xml#class_c_active_1a378cd39842666e0a9b5f2fc089375f35">CActive:TPriority</cxxClassEnumerationInherited>
+			<cxxClassFunctionInherited href="class_c_policy_server.xml#class_c_base_1a240de7932690a4e987d75690b0b6f82b">CBase::CBase()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_policy_server.xml#class_c_base_1ac0a06aeab68b3e01be81f9dd79e011c6">CBase::Delete(CBase *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_policy_server.xml#class_c_base_1af4c4965092a763b0856ccbfa3cf99eaf">CBase::operator new(TUint)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_policy_server.xml#class_c_base_1ab9e5f557dea4db22886189926687ddc1">CBase::operator new(TUint,TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_policy_server.xml#class_c_base_1aa464dd21494443ac109084ed03b81f28">CBase::operator new(TUint,TLeave)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_policy_server.xml#class_c_base_1af8429815362d4df6fecd47179e0c5dfe">CBase::operator new(TUint,TLeave,TUint)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_policy_server.xml#class_c_base_1a80505bdf8b1b20a2ed102307a78eeeeb">CBase::operator new(TUint,TUint)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_policy_server.xml#class_c_base_1a1390361b94424be22bb2b1020eb400ea">CBase::~CBase()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_policy_server.xml#class_c_server2_1a1e5f52a8fe31c123718f0ac224be5c96">CServer2::CServer2(TInt,TServerType)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_policy_server.xml#class_c_server2_1af262f5b7eb5b09cbdb765c70ae2dbf93">CServer2::DoCancel()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_policy_server.xml#class_c_server2_1a179425d9bdd7cc0fccf363c25eb70d96">CServer2::DoConnect(const RMessage2 &amp;)</cxxClassFunctionInherited>
+			<cxxClassEnumeratorInherited href="class_c_policy_server.xml#class_c_server2_1a7d6b5a9c5175bc2d770f94739e3aec72ae61d5cce3ebe70d60d9976a6b146bfba">CServer2::EBadMessageNumber</cxxClassEnumeratorInherited>
+			<cxxClassEnumeratorInherited href="class_c_policy_server.xml#class_c_server2_1a7d6b5a9c5175bc2d770f94739e3aec72a01c1cda19d8ddb14c176b35c419a7479">CServer2::EClientDoesntHaveRequiredCaps</cxxClassEnumeratorInherited>
+			<cxxClassEnumeratorInherited href="class_c_policy_server.xml#class_c_server2_1ad2da849def777140039e97fa8427a8adad20a5b23e945988611e2c23aed154332">CServer2::EGlobalSharableSessions</cxxClassEnumeratorInherited>
+			<cxxClassEnumeratorInherited href="class_c_policy_server.xml#class_c_server2_1a7d6b5a9c5175bc2d770f94739e3aec72a23bd0d8975f72315fb450f566bd927cc">CServer2::ESessionAlreadyConnected</cxxClassEnumeratorInherited>
+			<cxxClassEnumeratorInherited href="class_c_policy_server.xml#class_c_server2_1a7d6b5a9c5175bc2d770f94739e3aec72a0fedb99dfcd4911403fb4ebfce7c2a1b">CServer2::ESessionNotConnected</cxxClassEnumeratorInherited>
+			<cxxClassEnumeratorInherited href="class_c_policy_server.xml#class_c_server2_1ad2da849def777140039e97fa8427a8ada728882f219d51f6ea3fa946f6d798835">CServer2::ESharableSessions</cxxClassEnumeratorInherited>
+			<cxxClassEnumeratorInherited href="class_c_policy_server.xml#class_c_server2_1ad2da849def777140039e97fa8427a8adafba620c56363e8f3958341edf2e13e2b">CServer2::EUnsharableSessions</cxxClassEnumeratorInherited>
+			<cxxClassFunctionInherited href="class_c_policy_server.xml#class_c_server2_1a041f9d9de0b6f86537fe86bcdc308ac6">CServer2::Message()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_policy_server.xml#class_c_server2_1a6cb81054edc65d05e562054b443432dc">CServer2::ReStart()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_policy_server.xml#class_c_server2_1a0df4f69503bdd7422764be53952bca40">CServer2::Server()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_policy_server.xml#class_c_server2_1a0bdca4e3eeae68e4ca808dc3e69e497f">CServer2::SetMaster(const CServer2 *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_policy_server.xml#class_c_server2_1a5143755d992a70b3d93fdebaf53409ad">CServer2::SetPinClientDescriptors(TBool)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_policy_server.xml#class_c_server2_1a24edc88681e0dd9561545e3db9c20c09">CServer2::Start(const TDesC &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_policy_server.xml#class_c_server2_1abf3c3ef35618226189d9117af15e3b4f">CServer2::StartL(const TDesC &amp;)</cxxClassFunctionInherited>
+			<cxxClassVariableInherited href="class_c_policy_server.xml#class_c_server2_1a6b920ca25f02accf546a5d0539e53be5">CServer2::iSessionIter</cxxClassVariableInherited>
+			<cxxClassFunctionInherited href="class_c_policy_server.xml#class_c_server2_1a8abb2fa5a546381df2bec7f54dd42d1c">CServer2::~CServer2()</cxxClassFunctionInherited>
+			<cxxClassEnumerationInherited href="class_c_policy_server.xml#class_c_server2_1a7d6b5a9c5175bc2d770f94739e3aec72">CServer2:TPanic</cxxClassEnumerationInherited>
+			<cxxClassEnumerationInherited href="class_c_policy_server.xml#class_c_server2_1ad2da849def777140039e97fa8427a8ad">CServer2:TServerType</cxxClassEnumerationInherited>
+		</cxxClassInheritsDetail>
+	</cxxClassInherits>
+</cxxClass>

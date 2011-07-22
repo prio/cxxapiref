@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="cxxFriendVolatile"/>
+<meta name="abstract" content="Used to indicate that a friend function has thevolatile cv-qualifier."/>
+<meta name="description" content="Used to indicate that a friend function has thevolatile cv-qualifier."/>
+<meta name="DC.Relation" scheme="URI" content="../cxxFriend/cxxFriend_module.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="cxxFriendVolatile"/>
+<meta name="DC.Language" content="en-us"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>cxxFriendVolatile</title>
+<link rel="stylesheet" type="text/css" href="../nokiacxxref.css"/></head>
+<body class="element" id="cxxFriendVolatile"><a name="cxxFriendVolatile"><!-- --></a>
+
+
+<h1 class="topictitle1">cxxFriendVolatile</h1>
+
+
+<div><p>Used to indicate that a friend  function has the<tt>volatile</tt> <em>cv-qualifier</em>.     </p>
+
+<div class="section" id="cxxFriendVolatile__section_B63FF10B2B1042BA83D4D0A8EFBA42D6"><a name="cxxFriendVolatile__section_B63FF10B2B1042BA83D4D0A8EFBA42D6"><!-- --></a><h2 class="sectiontitle">Description</h2>          
+  <p>The &lt;cxxFriendVolatile&gt; element
+is present when the friend function has a <tt>volatile</tt>      
+          <em>cv-qualifier</em> . The two mandatory attributes <em>name</em> and <em>value</em> both have the value “volatile”.</p>
+<p>See ISO/IEC
+14882:2003(E) 7.1.5.1 The cv-qualifiers [dcl.type.cv]</p>
+         </div>
+
+<div class="example" id="cxxFriendVolatile__example_3360D444B3304F9E9E519513D9221AE0"><a name="cxxFriendVolatile__example_3360D444B3304F9E9E519513D9221AE0"><!-- --></a><h2 class="sectiontitle">Example</h2>          
+  <p>Given this code:</p>
+             <pre class="codeblock">struct X {
+    friend void g() volatile;
+};</pre>
+<p>Function <tt>g()</tt> would have the <tt>cxxFriendVolatile</tt> element:</p>
+             <pre class="codeblock">&lt;cxxFriendVolatile /&gt;</pre>
+<p>If the mandatory attributes are present they must be set thus:</p>
+             <pre class="codeblock">&lt;cxxFriendVolatile name="volatile" value="volatile" /&gt;</pre>
+         </div>
+
+<div class="elementContainedBy"><h2 class="sectiontitle">Contained by</h2>
+
+<p id="cxxFriendVolatile__d7657e8171"><a name="cxxFriendVolatile__d7657e8171"><!-- --></a>
+</p>
+
+</div>
+
+<div class="elementContains"><h2 class="sectiontitle">Contains</h2>
+
+<p id="cxxFriendVolatile__d7657e8180"><a name="cxxFriendVolatile__d7657e8180"><!-- --></a>
+</p>
+
+</div>
+
+<div class="elementContentModel"><h2 class="sectiontitle">Content Model</h2>
+
+<p id="cxxFriendVolatile__d7657e8189"><a name="cxxFriendVolatile__d7657e8189"><!-- --></a>
+No content.
+</p>
+
+</div>
+
+<div class="elementAttList"/>
+
+<div class="elementClassValue"><h2 class="sectiontitle">Inheritance</h2>
+
+<p id="cxxFriendVolatile__d7657e8200"><a name="cxxFriendVolatile__d7657e8200"><!-- --></a>
+ topic/<span class="keyword">state</span> reference/<span class="keyword">state</span> apiRef/<span class="keyword">apiQualifier</span> apiOperation/<span class="keyword">apiQualifier</span> cxxFriend/<span class="keyword">cxxFriendVolatile</span></p>
+
+</div>
+
+</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../cxxFriend/cxxFriend_module.html" title="Defines a top-level container for all the elements necessary to describe an C++ API friend.">cxxFriend module</a></div>
+</div>
+</div>
+
+</body>
+</html>

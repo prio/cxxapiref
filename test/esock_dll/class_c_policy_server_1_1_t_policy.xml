@@ -1,0 +1,220 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_c_policy_server_1_1_t_policy">
+	<apiName>CPolicyServer::TPolicy</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="2507"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="2506"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="2604"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>Object specifying which security checks to perform on each request number and what action to take if the check fails.</p>
+			<p>Explanations of each of the members of this class are detailed below.</p>
+			<p>As explained in <xref href="class_c_policy_server.xml#class_c_policy_server_1a9a1f87ddc1849ba35e46d16e27d5d31e">CPolicyServer::CPolicyServer</xref>, it is important that the instance of this class (<xref href="class_c_policy_server_1_1_t_policy.xml#class_c_policy_server_1_1_t_policy">CPolicyServer::TPolicy</xref>) given to the policy server constructor, exists for the lifetime of the server. For this reason, as well as code size considerations, it is recommended that the <xref href="class_c_policy_server_1_1_t_policy.xml#class_c_policy_server_1_1_t_policy">TPolicy</xref> instance is const static data. The following code segment shows the recommended way of doing this. Further detail on what each of these statements means is given below.</p>
+			<p>
+				<codeblock>	const TUint myRangeCount = 4;
+	const TInt myRanges[myRangeCount] = 
+		{
+		0, //range is 0-2 inclusive
+		3, //range is 3-6 inclusive
+		7, //range is 7
+		8, //range is 8-KMaxTInt inclusive
+		};
+	const TUint8 myElementsIndex[myRangeCount] = 
+		{
+		1, 								//applies to 0th range (req num: 0-2)
+		CPolicyServer::ECustomCheck, 	//applies to 1st range (req num: 3-6)
+		0, 								//applies to 2nd range (req num: 7)
+		CPolicyServer::ENotSupported,	//applies to 3rd range (req num: 8-KMaxTInt)
+		};
+	const CPolicyServer::TPolicyElement myElements[] = 
+		{
+		{_INIT_SECURITY_POLICY_C1(ECapabilityDiskAdmin), CPolicyServer::EFailClient},
+		{_INIT_SECURITY_POLICY_C1(ECapabilityLocation), CMyPolicyServer::EQueryUser},
+		}
+	const CPolicySErver::TPolicy myPolicy =
+		{
+		CPolicyServer::EAlwaysPass, //specifies all connect attempts should pass
+		myRangeCount,					
+		myRanges,
+		myElementsIndex,
+		myElements,
+		}</codeblock> </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxVariable id="class_c_policy_server_1_1_t_policy_1a3e43bb1a450e33647e5dd92bc7543eba">
+		<apiName>iOnConnect</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1aae4399ce3f10d6c2b5ec96a13bbb5881">TUint8</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>CPolicyServer::TPolicy</cxxVariableScopedName>
+				<cxxVariablePrototype>TUint8 iOnConnect</cxxVariablePrototype>
+				<cxxVariableNameLookup>CPolicyServer::TPolicy::iOnConnect</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="2511"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>The index into iElements, or an allowed value of TSpecialCase, that is used to check a connection attempt . </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_c_policy_server_1_1_t_policy_1a255df35e337ad131a38ce9f9f19d056f">
+		<apiName>iRangeCount</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a7c545c7b28f2e5d128d132d2ea1cdb2b">TUint16</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>CPolicyServer::TPolicy</cxxVariableScopedName>
+				<cxxVariablePrototype>TUint16 iRangeCount</cxxVariablePrototype>
+				<cxxVariableNameLookup>CPolicyServer::TPolicy::iRangeCount</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="2514"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Number of ranges in the iRanges array. </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_c_policy_server_1_1_t_policy_1a25b4cffecca32c102423cceae77ebac7">
+		<apiName>iRanges</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation> *</cxxVariableDeclaredType>
+				<cxxVariableScopedName>CPolicyServer::TPolicy</cxxVariableScopedName>
+				<cxxVariablePrototype>const TInt * iRanges</cxxVariablePrototype>
+				<cxxVariableNameLookup>CPolicyServer::TPolicy::iRanges</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="2536"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>A pointer to an array of ordered ranges of request numbers. Each element in this array refers to the starting request number of a range. The range of the previous element is up to and including the current element minus 1. Thus an array like: <codeblock>		const TInt myRanges[4] = {0, 3, 7, 8};</codeblock> means that:<ul>
+						<li>
+							<p>the 0th range is 0-2 (inclusive).</p>
+						</li>
+						<li>
+							<p>the 1st range is 3-6 (inclusive).</p>
+						</li>
+						<li>
+							<p>the 2nd range is solely request number 7.</p>
+						</li>
+						<li>
+							<p>the 3rd range is 8-KMaxTInt (inclusive).</p>
+						</li>
+					</ul>
+				</p>
+				<p>Note that the all possible request numbers must be accounted for. This implies that the first element must be 0. It also implies that the last range goes from the that element to KMaxTint. Finally, each element must be strictly greater than the previous element. As the first element is 0, this clearly implies that iRanges must not contain negative elements. </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_c_policy_server_1_1_t_policy_1a06ce36f9af448cc23989ec77b66e7c88">
+		<apiName>iElementsIndex</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1aae4399ce3f10d6c2b5ec96a13bbb5881">TUint8</apiRelation> *</cxxVariableDeclaredType>
+				<cxxVariableScopedName>CPolicyServer::TPolicy</cxxVariableScopedName>
+				<cxxVariablePrototype>const TUint8 * iElementsIndex</cxxVariablePrototype>
+				<cxxVariableNameLookup>CPolicyServer::TPolicy::iElementsIndex</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="2574"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>A pointer to an array of TUint8 values specifying the appropriate action to take for each range in iRanges. For example, the 0th element of iElementsIndex specifies the appropriate action to take for the 0th range in iRanges. As such, iElementsIndex must have precisely the same number of elements as iRanges.</p>
+				<p>The following rules apply to the value of each element in iElementsIndex:<ol>
+						<li>
+							<p>Each value must be a valid index into iElements (that is, less than the number of elements in iElements) OR a valid value from TSpecialCase.</p>
+						</li>
+						<li>
+							<p>Elements&apos; values need not follow any special ordering.</p>
+						</li>
+						<li>
+							<p>Elements may repeat values.</p>
+						</li>
+					</ol>
+				</p>
+				<p>Continuing the example from iRanges: <codeblock>		const TInt myRanges[4] = {0, 3, 7, 8};
+		const TUInt8 myElementsIndex[4] = {
+			1, 
+			CPolicyServer::ECustomCheck, 
+			0, 
+			CPolicyServer::ENotSupported
+			};</codeblock> This means that:<ol>
+						<li>
+							<p>Requests within the first range of myRanges (request numbers 0-2) will be checked against the policy specified by the 1st element of iElements.</p>
+						</li>
+						<li>
+							<p>Requests with the the second range of myRanges (request numbers 3-6) require a custom check to determine if they are allowed. This requires derived server implementations to implement <xref href="class_c_policy_server.xml#class_c_policy_server_1aebb244bfe601a25b269cad10b6212d5f">CustomSecurityCheckL()</xref>
+							</p>
+						</li>
+						<li>
+							<p>Requests within the third range of myRanges (request number 7) will be checked against the policy specified by the 0th element of iElements.</p>
+						</li>
+						<li>
+							<p>Requests within the fourth range of myRanges (request numbers 8-KMaxTInt) will automatically be completed with KErrNotSupported by the policy server framework. </p>
+						</li>
+					</ol>
+				</p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_c_policy_server_1_1_t_policy_1ad8a53c5e5c995a959d74e844f1701ebc">
+		<apiName>iElements</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="class_c_policy_server_1_1_t_policy_element.xml#class_c_policy_server_1_1_t_policy_element">TPolicyElement</apiRelation> *</cxxVariableDeclaredType>
+				<cxxVariableScopedName>CPolicyServer::TPolicy</cxxVariableScopedName>
+				<cxxVariablePrototype>const TPolicyElement * iElements</cxxVariablePrototype>
+				<cxxVariableNameLookup>CPolicyServer::TPolicy::iElements</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="2603"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>A pointer to an array of distinct policy elements.</p>
+				<p>Continuing with the previous examples: <codeblock>		const TInt myRanges[4] = {0, 3, 7, 8};
+		const TUInt8 myElementsIndex[4] = {
+			1, 
+			CPolicyServer::ECustomCheck, 
+			0, 
+			CPolicyServer::ENotSupported
+			};
+		const TPolicyElement iElements[] = {
+			{_INIT_SECURITY_POLICY_C1(ECapabilityDiskAdmin), CPolicyServer::EFailClient},
+			{_INIT_SECURITY_POLICY_C1(ECapabilityLocation), CMyPolicyServer::EQueryUser}
+			}</codeblock>
+				</p>
+				<p>The instantiation of iElements specifies that:<ol>
+						<li>
+							<p>Request numbers 0-2 require the Location capability. As the iAction member of the 1st element specifies a custom action (represented by the negative number, CMyPolicyServer::EQueryUser), requests without Location will passed to the reimplementation of CustomFailureActionL.</p>
+						</li>
+						<li>
+							<p>Request number 7 requires the DiskAdmin capability. Requestors without DiskAdmin will have their request completed with KErrPermissionDenied. </p>
+						</li>
+					</ol>
+				</p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+</cxxClass>

@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_factories_1_1_m_factory_query">
+	<apiName>Factories::MFactoryQuery</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassAbstract/>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/elements/factoryobject.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="116"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/elements/factoryobject.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="108"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="145"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>Abstract class used as a parameter for <xref href="class_factories_1_1_c_factory_base.xml#class_factories_1_1_c_factory_base_1ad8f1f217f0546fdf40b0ab47ee090e22">CFactoryBase::FindObject</xref>. Implements the <tt>Match</tt> method that derivees must override to implement their own <tt>Match</tt> method to compare <tt>AFactoryObjects</tt> </p>
+			<p>
+				<xref href="class_factories_1_1_c_factory_base.xml#class_factories_1_1_c_factory_base_1ad8f1f217f0546fdf40b0ab47ee090e22">CFactoryBase::FindObject</xref> </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxEnumeration id="class_factories_1_1_m_factory_query_1a7e8a793e1284cfebb46a5d6e3efeec34">
+		<apiName>TMatchResult</apiName>
+		<cxxEnumerationDetail>
+			<cxxEnumerationDefinition>
+				<cxxEnumerationAccessSpecifier value="public"/>
+				<cxxEnumerationScopedName>Factories::MFactoryQuery</cxxEnumerationScopedName>
+				<cxxEnumerationPrototype>TMatchResult</cxxEnumerationPrototype>
+				<cxxEnumerationNameLookup>Factories::MFactoryQuery:TMatchResult</cxxEnumerationNameLookup>
+				<cxxEnumerators>
+					<cxxEnumerator id="class_factories_1_1_m_factory_query_1a7e8a793e1284cfebb46a5d6e3efeec34a8d8e3c7754cde5b7b50a1a14b1be9d7c">
+						<apiName>EMatch</apiName>
+						<cxxEnumeratorScopedName>Factories::MFactoryQuery</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EMatch</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>Factories::MFactoryQuery::EMatch</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/elements/factoryobject.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="126"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Match found, stop searching </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_factories_1_1_m_factory_query_1a7e8a793e1284cfebb46a5d6e3efeec34a2e5ffd1c6140cba7ec2f3e6a35aaf8a6">
+						<apiName>EContinue</apiName>
+						<cxxEnumeratorScopedName>Factories::MFactoryQuery</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EContinue</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>Factories::MFactoryQuery::EContinue</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/elements/factoryobject.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="130"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>No match found, continue searching </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_factories_1_1_m_factory_query_1a7e8a793e1284cfebb46a5d6e3efeec34a438d9a1e9380973da3fcb074acd4d2b1">
+						<apiName>ECancel</apiName>
+						<cxxEnumeratorScopedName>Factories::MFactoryQuery</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ECancel</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>Factories::MFactoryQuery::ECancel</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/elements/factoryobject.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="135"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>No match found, stop searching </p>
+						</apiDesc>
+					</cxxEnumerator>
+				</cxxEnumerators>
+				<cxxEnumerationAPIItemLocation>
+					<cxxEnumerationDeclarationFile name="filePath" value="K:/epoc32/include/elements/factoryobject.h"/>
+					<cxxEnumerationDeclarationFileLine name="lineNumber" value="122"/>
+					<cxxEnumerationDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxEnumerationDefinitionFileLineStart name="lineNumber" value="121"/>
+					<cxxEnumerationDefinitionFileLineEnd name="lineNumber" value="135"/>
+				</cxxEnumerationAPIItemLocation>
+			</cxxEnumerationDefinition>
+			<apiDesc>
+				<p>Possible return to the match function. They specify what the object doing the search should do next. </p>
+			</apiDesc>
+		</cxxEnumerationDetail>
+	</cxxEnumeration>
+	<cxxFunction id="class_factories_1_1_m_factory_query_1aa7e8c2a4692775d3ce2b3156f5e38bf3">
+		<apiName>Match</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionPureVirtual/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="class_factories_1_1_m_factory_query.xml#_1a7e8a793e1284cfebb46a5d6e3efeec34">TMatchResult</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Factories::MFactoryQuery</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual TMatchResult Match(TFactoryObjectInfo &amp;aObjectInfo)=0</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Factories::MFactoryQuery::Match(TFactoryObjectInfo &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="struct_factories_1_1_t_factory_object_info.xml#struct_factories_1_1_t_factory_object_info">TFactoryObjectInfo</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aObjectInfo</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Object to compare parameters against. Criteria for comparison is implementation specific. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/factoryobject.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="144"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Compare this factory object with another factory object. Result of the match </p>
+				<p>
+					<xref href="class_factories_1_1_m_factory_query.xml#class_factories_1_1_m_factory_query_1a7e8a793e1284cfebb46a5d6e3efeec34">TMatchResult</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+</cxxClass>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (c) 2011 Nokia Corporation and/or its subsidiary(-ies).
+All rights reserved.        
+        -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<reference id="cxxEnumeration" outputclass="element" xml:lang="en-us">
+<title>cxxEnumeration</title>
+<shortdesc>The &lt;cxxEnumeration> element contains all the elements
+needed to describe a C++ enumeration.</shortdesc>
+<refbody>
+<section>             <title>Description</title>             <p>The
+&lt;cxxEnumeration> element requires an <i>id</i> attribute.</p><p><?Pub
+Caret?>The elements &lt;apiName>  and &lt;cxxEnumerationDetail> are
+required for this topic. </p>         </section>
+<example>             <title>Example</title>             <codeblock
+>&lt;cxxEnumeration id="class_b_trace_1a289a8c50777f50be7f2d0535670c1e8d">
+    &lt;apiName>THeaderStructure&lt;/apiName>
+    &lt;cxxEnumerationDetail>
+        &lt;cxxEnumerationDefinition>
+            &lt;cxxEnumerationAccessSpecifier value="public"/>
+            &lt;cxxEnumerationScopedName>BTrace&lt;/cxxEnumerationScopedName>
+            &lt;cxxEnumerationPrototype>THeaderStructure&lt;/cxxEnumerationPrototype>
+            &lt;cxxEnumerationNameLookup>BTrace:THeaderStructure&lt;/cxxEnumerationNameLookup>
+            &lt;cxxEnumerators>
+                &lt;cxxEnumerator id="class_b_trace_1a289a8c50777f50be7f2d0535670c1e8daacb3d2fc73e5d51e0cfe218fe61a4a64">
+                    &lt;apiName>ESizeIndex&lt;/apiName>
+                    &lt;cxxEnumeratorScopedName>BTrace&lt;/cxxEnumeratorScopedName>
+                    &lt;cxxEnumeratorPrototype>ESizeIndex = 0&lt;/cxxEnumeratorPrototype>
+                    &lt;cxxEnumeratorNameLookup>BTrace::ESizeIndex&lt;/cxxEnumeratorNameLookup>
+                    &lt;cxxEnumeratorInitialiser value="0"/>
+                    &lt;cxxEnumeratorAPIItemLocation>
+                        &lt;cxxEnumeratorDeclarationFile name="filePath" value="C:/src/include/e32btrace.h"/>
+                        &lt;cxxEnumeratorDeclarationFileLine name="lineNumber" value="177"/>
+                    &lt;/cxxEnumeratorAPIItemLocation>
+                    &lt;apiDesc>
+                        &lt;p>Size of record in bytes. &lt;/p>
+                    &lt;/apiDesc>
+                &lt;/cxxEnumerator>
+                &lt;cxxEnumerator id="class_b_trace_1a289a8c50777f50be7f2d0535670c1e8da88aa2174423cbfd0a14b6bc857e06745">
+                    &lt;apiName>EFlagsIndex&lt;/apiName>
+                    &lt;cxxEnumeratorScopedName>BTrace&lt;/cxxEnumeratorScopedName>
+                    &lt;cxxEnumeratorPrototype>EFlagsIndex = 1&lt;/cxxEnumeratorPrototype>
+                    &lt;cxxEnumeratorNameLookup>BTrace::EFlagsIndex&lt;/cxxEnumeratorNameLookup>
+                    &lt;cxxEnumeratorInitialiser value="1"/>
+                    &lt;cxxEnumeratorAPIItemLocation>
+                        &lt;cxxEnumeratorDeclarationFile name="filePath" value="C:/src/include/e32btrace.h"/>
+                        &lt;cxxEnumeratorDeclarationFileLine name="lineNumber" value="190"/>
+                    &lt;/cxxEnumeratorAPIItemLocation>
+                    &lt;apiDesc>
+                        &lt;p>Bitfield of flags from enum TFlags. E.g. to detect if a timestamp is present in the record, code like this could be used. &lt;codeblock>			TUint8* record; // pointer to trace record
+        if(record[BTrace::EFlagsIndex]&amp;BTrace::ETimestampPresent)
+            TimestampPresent();
+        else
+            TimestampNotPresent();&lt;/codeblock> &lt;/p>
+                    &lt;/apiDesc>
+                &lt;/cxxEnumerator>
+            &lt;/cxxEnumerators>
+            &lt;cxxEnumerationAPIItemLocation>
+                &lt;cxxEnumerationDeclarationFile name="filePath" value="C:/src/include/e32btrace.h"/>
+                &lt;cxxEnumerationDeclarationFileLineStart name="lineNumber" value="172"/>
+                &lt;cxxEnumerationDeclarationFileLineEnd name="lineNumber" value="201"/>
+            &lt;/cxxEnumerationAPIItemLocation>
+        &lt;/cxxEnumerationDefinition>
+        &lt;apiDesc>
+            &lt;p>Byte indices into the trace header for specific fields. &lt;/p>
+        &lt;/apiDesc>
+    &lt;/cxxEnumerationDetail>
+&lt;/cxxEnumeration></codeblock>         </example>
+<section
+conref="../packagedef.dita#cxxEnumeration-reference/cxxEnumeration-containedBy-section"
+></section>
+<section
+conref="../packagedef.dita#cxxEnumeration-reference/cxxEnumeration-contains-section"
+></section>
+<section
+conref="../packagedef.dita#cxxEnumeration-reference/cxxEnumeration-contentModel-section"
+></section>
+<section
+conref="../packagedef.dita#cxxEnumeration-reference/cxxEnumeration-attList-section"
+></section>
+<section
+conref="../packagedef.dita#cxxEnumeration-reference/cxxEnumeration-classValue-section"
+></section>
+</refbody>
+</reference>
+<?Pub *0000005252?>

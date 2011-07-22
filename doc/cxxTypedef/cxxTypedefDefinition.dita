@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (c) 2011 Nokia Corporation and/or its subsidiary(-ies).
+All rights reserved.        
+        -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<reference id="cxxTypedefDefinition" outputclass="element"
+xml:lang="en-us">
+<title>cxxTypedefDefinition</title>
+<shortdesc>     Contains child elements providing details of an alias
+introduced by the C++ keyword typedef.</shortdesc>
+<refbody>
+<section>             <title>Description</title><p>The &lt;cxxTypedefDefinition>
+element is defined within &lt;cxxTypedefDetail>.      The child element
+&lt;cxxTypedefAPIItemLocation> is mandatory.</p><?Pub Caret?></section>
+<example><title>Example</title>         <codeblock>&lt;cxxTypedefDefinition>
+			&lt;cxxTypedefAccessSpecifier value="public"/>
+			&lt;cxxTypedefDerivations>
+				&lt;cxxTypedefDerivation>
+					&lt;cxxTypedefDerivationAccessSpecifier value="public"/>
+					&lt;cxxTypedefBaseTypedef href="typedef_c_base.xml#typedef_c_base">CBase&lt;/cxxTypedefBaseTypedef>
+				&lt;/cxxTypedefDerivation>
+			&lt;/cxxTypedefDerivations>
+			&lt;cxxTypedefAPIItemLocation>
+				&lt;cxxTypedefDeclarationFile name="filePath" value="C:/src/include/e32base.h"/>
+				&lt;cxxTypedefDeclarationFileLine name="lineNumber" value="2812"/>
+				&lt;cxxTypedefDefinitionFile name="filePath" value="C:/src/include/e32base.h"/>
+				&lt;cxxTypedefDefinitionFileLineStart name="lineNumber" value="2784"/>
+				&lt;cxxTypedefDefinitionFileLineEnd name="lineNumber" value="2854"/>
+			&lt;/cxxTypedefAPIItemLocation>
+		&lt;/cxxTypedefDefinition></codeblock>         </example>
+<section
+conref="../packagedef.dita#cxxTypedefDefinition-reference/cxxTypedefDefinition-containedBy-section"
+></section>
+<section
+conref="../packagedef.dita#cxxTypedefDefinition-reference/cxxTypedefDefinition-contains-section"
+></section>
+<section
+conref="../packagedef.dita#cxxTypedefDefinition-reference/cxxTypedefDefinition-contentModel-section"
+></section>
+<section
+conref="../packagedef.dita#cxxTypedefDefinition-reference/cxxTypedefDefinition-attList-section"
+></section>
+<section
+conref="../packagedef.dita#cxxTypedefDefinition-reference/cxxTypedefDefinition-classValue-section"
+></section>
+</refbody>
+</reference>
+<?Pub *0000002205?>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (c) 2011 Nokia Corporation and/or its subsidiary(-ies).
+All rights reserved.        
+        -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference xml:lang="en-us" outputclass="element" id="cxxNamespaceRef">
+    <title>cxxNamespaceRef</title>
+    <shortdesc>Provides a C++ namespace topic type as a link in a DITA map.</shortdesc>
+    <refbody>
+        <section>
+            <title>Description</title>
+            <p>A
+&lt;cxxNamespaceRef> element can contain other &lt;cxxNamespaceRef> elements; allowing you to express navigation or table-of-contents hierarchies.</p>
+        </section>
+        <example>
+            <title>Example</title>
+            <codeblock>
+&lt;cxxAPIMap id="amap" title="AMap">
+	&lt;cxxFileRef href="afile.xml" navtitle="afile.h" />
+	&lt;cxxClassRef href="aclass.xml" navtitle="AClass" />
+	&lt;cxxStructRef href="astruct.xml" navtitle="AClass::AStruct" />
+	&lt;cxxUnionRef href="aunion.xml" navtitle="AClass::AUnion" />
+	&lt;cxxNamespaceRef href="anamespace.xml" navtitle="AClass::ANamespace" />
+&lt;/cxxAPIMap></codeblock>
+        </example>
+        <section conref="../packagedef.dita#cxxNamespaceRef-reference/cxxNamespaceRef-containedBy-section"/>
+        <section conref="../packagedef.dita#cxxNamespaceRef-reference/cxxNamespaceRef-contains-section"/>
+        <section conref="../packagedef.dita#cxxNamespaceRef-reference/cxxNamespaceRef-contentModel-section"/>
+        <section conref="../packagedef.dita#cxxNamespaceRef-reference/cxxNamespaceRef-attList-section"/>
+        <section conref="../packagedef.dita#cxxNamespaceRef-reference/cxxNamespaceRef-classValue-section"/>
+    </refbody>
+</reference>

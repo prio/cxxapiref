@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_t_thread_stack_info">
+	<apiName>TThreadStackInfo</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="6606"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="6605"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="6625"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>Stores information about a thread&apos;s stack.</p>
+			<p>Note, on the emulator, the memory between iLimit and the thread&apos;s current stack pointer may not actually be committed.</p>
+			<p>
+				<xref href="class_r_thread.xml#class_r_thread_1a3a3796d8e854ab5d40193f9c7876e294">RThread::StackInfo()</xref> </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxVariable id="class_t_thread_stack_info_1acb8eb255a460e72bed47ce9da309882d">
+		<apiName>iBase</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1ae44f4629ab3c5854b597e55ffced57ca">TLinAddr</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TThreadStackInfo</cxxVariableScopedName>
+				<cxxVariablePrototype>TLinAddr iBase</cxxVariablePrototype>
+				<cxxVariableNameLookup>TThreadStackInfo::iBase</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="6611"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>The address which the stack pointer would contain if the stack were empty. </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_t_thread_stack_info_1a86ca9e17c4996328a94ba369116adc16">
+		<apiName>iLimit</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1ae44f4629ab3c5854b597e55ffced57ca">TLinAddr</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TThreadStackInfo</cxxVariableScopedName>
+				<cxxVariablePrototype>TLinAddr iLimit</cxxVariablePrototype>
+				<cxxVariableNameLookup>TThreadStackInfo::iLimit</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="6617"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>The address which the stack pointer would contain if the stack were full, (The lowest valid address). </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_t_thread_stack_info_1ae3343a5460ddc60095a41f80cdf0abd3">
+		<apiName>iExpandLimit</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1ae44f4629ab3c5854b597e55ffced57ca">TLinAddr</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TThreadStackInfo</cxxVariableScopedName>
+				<cxxVariablePrototype>TLinAddr iExpandLimit</cxxVariablePrototype>
+				<cxxVariableNameLookup>TThreadStackInfo::iExpandLimit</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="6624"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>The limit value for the stack if it were expanded to its maximum size.</p>
+				<p>Currently expanding stacks is not supported so iExpandLimit==iLimit </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+</cxxClass>

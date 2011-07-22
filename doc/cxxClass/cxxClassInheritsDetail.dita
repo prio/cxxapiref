@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (c) 2011 Nokia Corporation and/or its subsidiary(-ies).
+All rights reserved.        
+        -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<reference id="cxxClassInheritsDetail" outputclass="element"
+xml:lang="en-us"><?Pub Caret1?><title>cxxClassInheritsDetail</title>
+<shortdesc>
+        The &lt;cxxClassInheritsDetail> element provides details about
+the inherited members of a C++ class. 
+    </shortdesc><refbody><section id="Description-025E4EDB">
+            <title>Description</title>
+            <p>
+            In the &lt;cxxClassInheritsDetail> element, the &lt;cxxClassFunctionInherited>,
+&lt;cxxClassVariableInherited>, &lt;cxxClassEnumerationInherited>
+and &lt;cxxClassEnumeratorInherited> elements are provided to indicate
+the members that are inherited by a C++ class. &lt;cxxClassInheritsDetail>
+must have at least one of these child elements and each one can occur
+multiple times.
+            </p>
+        </section><example>
+            <title>Example</title>
+            <codeblock>&lt;cxxClassInherits>
+    &lt;cxxClassInheritsDetail>
+        &lt;cxxClassFunctionInherited href="file.xml">CActive::CActive(TInt)&lt;/cxxClassFunctionInherited>
+        &lt;cxxClassEnumeratorInherited href="file.xml">CActive::EPriorityHigh&lt;/cxxClassEnumeratorInherited>
+        &lt;cxxClassVariableInherited href="file.xml">CActive::iStatus&lt;/cxxClassVariableInherited>
+        &lt;cxxClassEnumerationInherited href="file.xml">CActive:TPriority&lt;/cxxClassEnumerationInherited>        
+    &lt;/cxxClassInheritsDetail>
+&lt;/cxxClassInherits></codeblock>
+        </example><section
+conref="../packagedef.dita#cxxClassInheritsDetail-reference/cxxClassInheritsDetail-containedBy-section"
+id="Section-026426F3"></section><section
+conref="../packagedef.dita#cxxClassInheritsDetail-reference/cxxClassInheritsDetail-contains-section"
+id="Section-02670553"></section><section
+conref="../packagedef.dita#cxxClassInheritsDetail-reference/cxxClassInheritsDetail-contentModel-section"
+id="Section-02669BDB"></section><section
+conref="../packagedef.dita#cxxClassInheritsDetail-reference/cxxClassInheritsDetail-attList-section"
+></section><section
+conref="../packagedef.dita#cxxClassInheritsDetail-reference/cxxClassInheritsDetail-classValue-section"
+></section></refbody></reference>

@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_c_array_fix_seg">
+	<apiName>CArrayFixSeg</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassDerivations>
+				<cxxClassDerivation>
+					<cxxClassDerivationAccessSpecifier value="public"/>
+					<cxxClassBaseClass href="class_c_array_fix.xml#class_c_array_fix">CArrayFix</cxxClassBaseClass>
+				</cxxClassDerivation>
+			</cxxClassDerivations>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="557"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="541"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="560"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>Array of fixed length objects contained within a segmented buffer.</p>
+			<p>The elements of the array are instances of the template class T.</p>
+			<p>The segmented buffer is an instance of a <xref href="class_c_buf_seg.xml#class_c_buf_seg">CBufSeg</xref>.</p>
+			<p>The elements can be T or R type objects and must have an accessible default constructor.</p>
+			<p>
+				<xref href="class_c_buf_seg.xml#class_c_buf_seg">CBufSeg</xref> </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_c_array_fix_seg_1a47c3dda642a6f8fa45ad9ce54316cd5e">
+		<apiName>CArrayFixSeg</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionExplicit/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>CArrayFixSeg</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline CArrayFixSeg(TInt aGranularity)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CArrayFixSeg::CArrayFixSeg(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aGranularity</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The granularity of the array.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="559"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1164"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1181"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Constructs a segmented array of fixed length objects with the specified granularity.</p>
+				<p>The length of all array elements is the length of the class passed as the template parameter. The length must be non-zero.</p>
+				<p>Note that no memory is allocated to the array buffer by this constructor.</p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>E32USER-CBase 17, if the length of the class implied by the template parameter is zero. </p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>E32USER-CBase 18, if aGranularity is not positive. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxClassInherits>
+		<cxxClassInheritsDetail>
+			<cxxClassFunctionInherited href="class_c_array_fix_seg.xml#class_c_array_fix_1ab18347f8849b6dfe174c57bbdccdc3a6">CArrayFix::AppendL(const T &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_seg.xml#class_c_array_fix_1a98b10e4a4f97fd76a722e33afd3b8ee3">CArrayFix::AppendL(const T &amp;,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_seg.xml#class_c_array_fix_1a6644ece0ae06a95badd846c559a0386b">CArrayFix::AppendL(const T *,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_seg.xml#class_c_array_fix_1aaf9e8b30e66a91f34f7bfb7b107958b4">CArrayFix::Array()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_seg.xml#class_c_array_fix_1a27c9a6b6fb08a829ef48acb140e6a2c0">CArrayFix::At(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_seg.xml#class_c_array_fix_1ac66511b3e8dfc4aff19c6ef599af9805">CArrayFix::At(TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_seg.xml#class_c_array_fix_1a6263e7f9f5526d95b487f47a2526d35b">CArrayFix::Back(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_seg.xml#class_c_array_fix_1a54455114d1e3119f76d4be51014b480b">CArrayFix::Back(TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_seg.xml#class_c_array_fix_1ac697cc9cf74b9741be381c3c6aeebb5f">CArrayFix::CArrayFix(TBufRep,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_seg.xml#class_c_array_fix_1a0df627d9fae743b3d8dd8505d2c38469">CArrayFix::End(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_seg.xml#class_c_array_fix_1ac451532e75b8e6eaa52c26b1940c642c">CArrayFix::End(TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_seg.xml#class_c_array_fix_1afd55c918fee220295ab8dca0a8a8e7a5">CArrayFix::ExpandL(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_seg.xml#class_c_array_fix_1a0fd858678d8f2c1b2f6b94051b25e80c">CArrayFix::ExtendL()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_seg.xml#class_c_array_fix_1a6bfbf6c6c00a597f994c036024964bb4">CArrayFix::Find(const T &amp;,TKeyArrayFix &amp;,TInt &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_seg.xml#class_c_array_fix_1a00d98c116161dd1af220f147c0f84cd7">CArrayFix::FindIsq(const T &amp;,TKeyArrayFix &amp;,TInt &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_seg.xml#class_c_array_fix_1a8fca2c7436127b5e83efd767586844de">CArrayFix::InsertIsqAllowDuplicatesL(const T &amp;,TKeyArrayFix &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_seg.xml#class_c_array_fix_1ab2e6235f70a6e85c4f22eb9b077d9420">CArrayFix::InsertIsqL(const T &amp;,TKeyArrayFix &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_seg.xml#class_c_array_fix_1a74a29cf1dda526a89047edcfc3749ba2">CArrayFix::InsertL(TInt,const T &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_seg.xml#class_c_array_fix_1a27e572f84aae2adc1c21b70c993f7ee9">CArrayFix::InsertL(TInt,const T &amp;,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_seg.xml#class_c_array_fix_1a67a0ccf80a31291b3e5099ba8c22a7d6">CArrayFix::InsertL(TInt,const T *,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_seg.xml#class_c_array_fix_1a73d1cd19c0ba3a1dc548e07f848c1f22">CArrayFix::ResizeL(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_seg.xml#class_c_array_fix_1a1714b73b6d7921e712b80ccc36446977">CArrayFix::ResizeL(TInt,const T &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_seg.xml#class_c_array_fix_1aa0f2bac884ec6087d5ae6369b9a34e12">CArrayFix::operator[](TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_seg.xml#class_c_array_fix_1ac4dc18120857ccce2fc5729f15332b5e">CArrayFix::operator[](TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_seg.xml#class_c_array_fix_base_1aa5f4ec3cf4a6ee0720d8cef5f49571a2">CArrayFixBase::AtR(const CBase *,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_seg.xml#class_c_array_fix_base_1a9332965c85c8cd40b2aa89d30fa74780">CArrayFixBase::CArrayFixBase(TBufRep,TInt,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_seg.xml#class_c_array_fix_base_1a1096056ab5233a348e9ac23a856afcbd">CArrayFixBase::Compress()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_seg.xml#class_c_array_fix_base_1ad5bc874aceea074862134dc8e4937faa">CArrayFixBase::Count()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_seg.xml#class_c_array_fix_base_1aea4c4fa199ab6a1ce2f3273c147a15e6">CArrayFixBase::CountR(const CBase *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_seg.xml#class_c_array_fix_base_1a0a48e851ef51536e74ad8eae8a7f688f">CArrayFixBase::Delete(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_seg.xml#class_c_array_fix_base_1ac366ebf07a899be33720d79b2ee6effb">CArrayFixBase::Delete(TInt,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_seg.xml#class_c_array_fix_base_1af9b3dbe6ae3a52e52c65dc2c579e8366">CArrayFixBase::Find(const TAny *,TKeyArrayFix &amp;,TInt &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_seg.xml#class_c_array_fix_base_1a943ed3546dc8d398e5160559b68d4fea">CArrayFixBase::FindIsq(const TAny *,TKeyArrayFix &amp;,TInt &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_seg.xml#class_c_array_fix_base_1a74ca35541c4ce37e6ef846fac8cecdfc">CArrayFixBase::InsertIsqAllowDuplicatesL(const TAny *,TKeyArrayFix &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_seg.xml#class_c_array_fix_base_1a625810302f839d7528f0e6ae8597d576">CArrayFixBase::InsertIsqL(const TAny *,TKeyArrayFix &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_seg.xml#class_c_array_fix_base_1a2eed684551c181499bfcfd097cb00b58">CArrayFixBase::InsertL(TInt,const TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_seg.xml#class_c_array_fix_base_1ab9bf1169212cc6105bcbd120eb689e33">CArrayFixBase::InsertL(TInt,const TAny *,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_seg.xml#class_c_array_fix_base_1a3d64c6ad1faa7a89bb2d9c787055c9ff">CArrayFixBase::InsertRepL(TInt,const TAny *,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_seg.xml#class_c_array_fix_base_1a67029b460d062fec97d7cb3e3df1640c">CArrayFixBase::Length()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_seg.xml#class_c_array_fix_base_1a39ca2548f91bfae2dcd5d0527502c282">CArrayFixBase::Reset()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_seg.xml#class_c_array_fix_base_1accaf91d332f7b951cb00d3249a2e477b">CArrayFixBase::ResizeL(TInt,const TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_seg.xml#class_c_array_fix_base_1ab630d07d0518980df7e3fdd97e9fc1a3">CArrayFixBase::SetKey(TKeyArrayFix &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_seg.xml#class_c_array_fix_base_1a09720a5e362d9334e33b3331fbc5eb12">CArrayFixBase::SetReserveFlatL(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_seg.xml#class_c_array_fix_base_1adbf2852d698fe50d5971cd903e210e68">CArrayFixBase::Sort(TKeyArrayFix &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_seg.xml#class_c_array_fix_base_1a24adf1bad260868b60d50069113c57bc">CArrayFixBase::~CArrayFixBase()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_seg.xml#class_c_base_1a240de7932690a4e987d75690b0b6f82b">CBase::CBase()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_seg.xml#class_c_base_1ac0a06aeab68b3e01be81f9dd79e011c6">CBase::Delete(CBase *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_seg.xml#class_c_base_1aae681a54d9c9b10c7d42e7e32ff109d5">CBase::Extension_(TUint,TAny *&amp;,TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_seg.xml#class_c_base_1af4c4965092a763b0856ccbfa3cf99eaf">CBase::operator new(TUint)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_seg.xml#class_c_base_1ab9e5f557dea4db22886189926687ddc1">CBase::operator new(TUint,TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_seg.xml#class_c_base_1aa464dd21494443ac109084ed03b81f28">CBase::operator new(TUint,TLeave)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_seg.xml#class_c_base_1af8429815362d4df6fecd47179e0c5dfe">CBase::operator new(TUint,TLeave,TUint)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_seg.xml#class_c_base_1a80505bdf8b1b20a2ed102307a78eeeeb">CBase::operator new(TUint,TUint)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_array_fix_seg.xml#class_c_base_1a1390361b94424be22bb2b1020eb400ea">CBase::~CBase()</cxxClassFunctionInherited>
+		</cxxClassInheritsDetail>
+	</cxxClassInherits>
+</cxxClass>

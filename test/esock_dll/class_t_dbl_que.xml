@@ -1,0 +1,332 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_t_dbl_que">
+	<apiName>TDblQue</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassDerivations>
+				<cxxClassDerivation>
+					<cxxClassDerivationAccessSpecifier value="public"/>
+					<cxxClassBaseClass href="class_t_dbl_que_base.xml#class_t_dbl_que_base">TDblQueBase</cxxClassBaseClass>
+				</cxxClassDerivation>
+			</cxxClassDerivations>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="421"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="420"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="432"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>A templated class that provides the behaviour for managing a doubly linked list.</p>
+			<p>It also acts as the head of the list, maintaining the pointers into the list.</p>
+			<p>The template parameter defines the type of element that forms the doubly linked list and is the class that acts as host to the link object.</p>
+			<p>
+				<xref href="class_t_dbl_que_link.xml#class_t_dbl_que_link">TDblQueLink</xref> </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_t_dbl_que_1acaaa3d61878366eb67dde66f75812e0a">
+		<apiName>TDblQue</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TDblQue</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TDblQue()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDblQue::TDblQue()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="423"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="481"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="495"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Constructs an empty list header and sets the offset value of the link object to zero.</p>
+				<p>In practice, never assume that the offset of the link object from the start of a list element is zero, even if the link object is declared as the first data member in the list element class.</p>
+				<p>If this default constructor is used, then call the <xref href="class_t_dbl_que_base.xml#class_t_dbl_que_base_1a6a2030cf5105b8c1acfaed4e1139c70b">SetOffset()</xref> function of the base class to ensure that the offset value is set correctly.</p>
+				<p>
+					<xref href="class_t_dbl_que_base.xml#class_t_dbl_que_base_1a6a2030cf5105b8c1acfaed4e1139c70b">TDblQueBase::SetOffset()</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_dbl_que_1a5907b855235df60aecc23b3cee45d3c7">
+		<apiName>TDblQue</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionExplicit/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TDblQue</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TDblQue(TInt aOffset)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDblQue::TDblQue(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aOffset</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The offset of the link object from the start of a list element. The macro _FOFF can be used to calculate this value.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="424"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="501"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="514"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Constructs an empty list header and sets the offset of the link object to the specified value.</p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>USER 78. if aOffset is not divisble by 4.</p>
+				<p>_FOFF </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_dbl_que_1a5303b06d1a9b0f42060b603108d53dea">
+		<apiName>AddFirst</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDblQue</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void AddFirst(T &amp;aRef)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDblQue::AddFirst(T &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>T &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aRef</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The list element to be inserted at the front of the doubly linked list. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="425"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="520"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="530"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Inserts the specified list element at the front of the doubly linked list.</p>
+				<p>If the list is not empty, the specified element becomes the first in the list. What was previously the first element becomes the second in the list.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_dbl_que_1aaee443c75204474d7e925ed083e14826">
+		<apiName>AddLast</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDblQue</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void AddLast(T &amp;aRef)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDblQue::AddLast(T &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>T &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aRef</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The list element to be inserted at the back of the doubly linked list. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="426"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="536"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="547"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Inserts the specified list element at the back of the doubly linked list.</p>
+				<p>If the list is not empty, the specified element becomes the last in the list. What was previously the last element becomes the next to last element in the list.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_dbl_que_1a0ada9103bc501000d101e280ff174bad">
+		<apiName>IsHead</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDblQue</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool IsHead(const T *aPtr) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDblQue::IsHead(const T *)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const T *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPtr</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The pointer value to be checked.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="427"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="553"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="567"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Tests whether the end of a list has been reached.</p>
+				<p>A doubly linked list is circular; in following the chain of elements in a list (e.g. using the iterator operator++ or operator--), the chain eventually reaches the end of the list and aPtr corresponds to the header (although it will not point to a valid T object).</p>
+				<p>True, if the end of the list has been reached. False, if the end of the list has not been reached; aPtr points to an element in the list. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_dbl_que_1acd2444fca98a9ce7c3d9de582b0e6d48">
+		<apiName>IsFirst</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDblQue</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool IsFirst(const T *aPtr) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDblQue::IsFirst(const T *)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const T *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPtr</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A pointer to the element whose position in the list is to be checked.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="428"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="573"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="581"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Tests whether the specified element is the first in the doubly linked list.</p>
+				<p>True, if the element is the first in the list; false, otherwise. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_dbl_que_1ab233ce772195f42c48e1917eef23c5f0">
+		<apiName>IsLast</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDblQue</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool IsLast(const T *aPtr) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDblQue::IsLast(const T *)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const T *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPtr</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A pointer to the element whose position in the list is to be checked.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="429"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="587"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="595"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Tests whether the specified element is the last in the doubly linked list.</p>
+				<p>True, if the element is the last in the list; false, otherwise. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_dbl_que_1ac659dc2add8a7e83a82df8a995028fa8">
+		<apiName>First</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>T *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDblQue</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline T * First() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDblQue::First()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="430"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="601"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="614"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets a pointer to the first list element in the doubly linked list.</p>
+				<p>A pointer to the first list element in the doubly linked list. If the list is empty, this pointer is not necessarily NULL and must not be assumed to point to a valid object. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_dbl_que_1a8cac62807867d91b359abc29c834431c">
+		<apiName>Last</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>T *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDblQue</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline T * Last() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDblQue::Last()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="431"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="620"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="633"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets a pointer to the last list element in the doubly linked list.</p>
+				<p>A pointer to the last list element in the doubly linked list. If the list is empty, this pointer is not necessarily NULL and must not be assumed to point to a valid object. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxClassInherits>
+		<cxxClassInheritsDetail>
+			<cxxClassFunctionInherited href="class_t_dbl_que.xml#class_t_dbl_que_base_1a4db652b975278b6076ec3d27e5b3d411">TDblQueBase::DoAddFirst(TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_dbl_que.xml#class_t_dbl_que_base_1a203ae452b202032c16c85ea3be231868">TDblQueBase::DoAddLast(TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_dbl_que.xml#class_t_dbl_que_base_1adca3e228a71ea46eb7ae55d14e5a0792">TDblQueBase::DoAddPriority(TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_dbl_que.xml#class_t_dbl_que_base_1a33729057dcec76b79cfdde81771095b2">TDblQueBase::IsEmpty()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_dbl_que.xml#class_t_dbl_que_base_1a11b4ce5a5d8f394fea2f180bc1b500bb">TDblQueBase::Reset()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_dbl_que.xml#class_t_dbl_que_base_1a6a2030cf5105b8c1acfaed4e1139c70b">TDblQueBase::SetOffset(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_dbl_que.xml#class_t_dbl_que_base_1afdd5a889b8597e4991377529833bf136">TDblQueBase::TDblQueBase()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_dbl_que.xml#class_t_dbl_que_base_1a024af749e9dc0f578df4338d1d6ed16f">TDblQueBase::TDblQueBase(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_dbl_que.xml#class_t_dbl_que_base_1a42a2b0c3820b7561b574d907c973fb7b">TDblQueBase::__DbgTestEmpty()const</cxxClassFunctionInherited>
+			<cxxClassVariableInherited href="class_t_dbl_que.xml#class_t_dbl_que_base_1aa9710635336a9fc3e250bffee651f701">TDblQueBase::iHead</cxxClassVariableInherited>
+			<cxxClassVariableInherited href="class_t_dbl_que.xml#class_t_dbl_que_base_1ab8369fc5cbf06da0cc8f4542f6cbe518">TDblQueBase::iOffset</cxxClassVariableInherited>
+		</cxxClassInheritsDetail>
+	</cxxClassInherits>
+</cxxClass>

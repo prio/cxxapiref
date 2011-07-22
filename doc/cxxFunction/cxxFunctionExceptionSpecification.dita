@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (c) 2011 Nokia Corporation and/or its subsidiary(-ies).
+All rights reserved.        
+        -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<reference id="cxxFunctionExceptionSpecification" outputclass="element"
+xml:lang="en-us">
+<title>cxxFunctionExceptionSpecification</title>
+<shortdesc>Contains the exception specification of a C++ function.</shortdesc>
+<refbody>
+<section>             <title>Description</title>             <p>The
+&lt;cxxFunctionExceptionSpecification> element identifies the <i>exception
+specification</i> of a function. An exception specification is a list
+of  exception types that the function might throw.</p>           
+ <p>See ISO/IEC 14882:2003(E) 15.4 Exception specifications [except.spec]</p
+>         </section>
+<example>             <title>Example</title><p>Given the following
+source code<?Pub Caret?>:</p>             <codeblock>typedef int ExceptionTInt;
+typedef char* ExceptionCharP;
+
+/** Class with exception specifications. */
+class Exception16010
+{
+public:
+	void CanThrowAnything(const char*, int);
+	void WillThrowNothing() throw();
+	void CouldThrow_int() throw(int);
+	/** This can throw a couple of things
+	@return Some integer.
+	*/
+	int CouldThrow_int_char() throw(ExceptionTInt, ExceptionCharP);
+};
+</codeblock><p>The <tt>cxxFunctionExceptionSpecification</tt>  for
+the first function will be absent as it can throw anything. The <tt
+>cxxFunctionExceptionSpecification</tt>  element for the other three
+functions will be, respectively:</p>         <codeblock>&lt;cxxFunctionExceptionSpecification> throw ()&lt;/cxxFunctionExceptionSpecification>
+&lt;cxxFunctionExceptionSpecification> throw (int)&lt;/cxxFunctionExceptionSpecification>
+&lt;cxxFunctionExceptionSpecification> throw (ExceptionTInt, ExceptionCharP
+)&lt;/cxxFunctionExceptionSpecification>
+</codeblock></example>
+<section
+conref="../packagedef.dita#cxxFunctionExceptionSpecification-reference/cxxFunctionExceptionSpecification-containedBy-section"
+></section>
+<section
+conref="../packagedef.dita#cxxFunctionExceptionSpecification-reference/cxxFunctionExceptionSpecification-contains-section"
+></section>
+<section
+conref="../packagedef.dita#cxxFunctionExceptionSpecification-reference/cxxFunctionExceptionSpecification-contentModel-section"
+></section>
+<section
+conref="../packagedef.dita#cxxFunctionExceptionSpecification-reference/cxxFunctionExceptionSpecification-attList-section"
+></section>
+<section
+conref="../packagedef.dita#cxxFunctionExceptionSpecification-reference/cxxFunctionExceptionSpecification-classValue-section"
+></section>
+</refbody>
+</reference>
+<?Pub *0000002613?>

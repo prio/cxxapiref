@@ -1,0 +1,594 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_t_entry">
+	<apiName>TEntry</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="1341"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="1315"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="1408"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>Encapsulates an entry in a directory, which can be another (nested) directory, a file or a volume label.</p>
+			<p>Each directory entry has a name which is relative to its owning directory and a type, which is indicated by its unique identifier (UID).</p>
+			<p>An entry can be interrogated for the following properties:</p>
+			<p>1. the kind of entry: stored in the entry UIDs, stored in iType</p>
+			<p>2. the entry attributes, stored in iAtt</p>
+			<p>3. the size of entry</p>
+			<p>4. the time the entry was last modified.</p>
+			<p>
+				<xref href="class_r_dir.xml#class_r_dir">RDir</xref> </p>
+			<p>
+				<xref href="class_r_fs.xml#class_r_fs_1a9a71d89353f8e3ebb09cba0324779811">RFs::Entry</xref> </p>
+			<p>
+				<xref href="class_r_fs.xml#class_r_fs_1ae08b78f64f2df007bdf3d95bcd9804e7">RFs::SetEntry</xref> </p>
+			<p>CfileBase::CurrentEntry </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_t_entry_1a7116d9fd5e609f8aa16bd50233500d0f">
+		<apiName>TEntry</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType>IMPORT_C</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TEntry</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TEntry()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TEntry::TEntry()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1343"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_entry_1a2707a046ea79b05e8eda69a56ad9920c">
+		<apiName>TEntry</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType>IMPORT_C</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TEntry</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TEntry(const TEntry &amp;aEntry)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TEntry::TEntry(const TEntry &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_entry.xml#class_t_entry">TEntry</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aEntry</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1344"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_entry_1a7edeca594e86947f03f06e49dc425bc0">
+		<apiName>operator=</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_entry.xml#class_t_entry">TEntry</apiRelation> &amp;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TEntry</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TEntry &amp; operator=(const TEntry &amp;aEntry)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TEntry::operator=(const TEntry &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_entry.xml#class_t_entry">TEntry</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aEntry</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1345"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_entry_1afc59928d3b3f73ab0103bfc394803be9">
+		<apiName>IsReadOnly</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TEntry</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TBool IsReadOnly() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TEntry::IsReadOnly()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1346"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_entry_1aa2ee000850b7b6677917848bdc653e00">
+		<apiName>IsHidden</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TEntry</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TBool IsHidden() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TEntry::IsHidden()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1347"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_entry_1a3bf548b4c862f2aba0b39e7844bd14bd">
+		<apiName>IsSystem</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TEntry</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TBool IsSystem() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TEntry::IsSystem()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1348"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_entry_1a6447625d8e31f21b4045ed3f515063a9">
+		<apiName>IsDir</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TEntry</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TBool IsDir() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TEntry::IsDir()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1349"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_entry_1aa4c25f3ffd0927c2f1d7fef0dc6907d2">
+		<apiName>IsArchive</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TEntry</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TBool IsArchive() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TEntry::IsArchive()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1350"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_entry_1a26fa68a7d59c267297614aa6709d90dc">
+		<apiName>operator[]</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>const <apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation> &amp;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TEntry</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline const TUid &amp; operator[](TInt anIndex) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TEntry::operator[](TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Identifies the UID required. This can be zero, one or two. Specifiying any other value raises a panic.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1351"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="23"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="34"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets any one of the file&apos;s three UIDs.</p>
+				<p>On return, contains the requested UID.</p>
+				<p>
+					<xref href="class_t_uid_type.xml#class_t_uid_type">TUidType</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_entry_1ac97c9a65a52f17acd6873354ffc9d8b0">
+		<apiName>IsUidPresent</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TEntry</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool IsUidPresent(TUid aUid) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TEntry::IsUidPresent(TUid)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aUid</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The UID to be checked.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1352"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="39"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="50"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Tests whether the specified UID matches any of the UIDs in the UID type.</p>
+				<p>True if the specified UID is present, false otherwise.</p>
+				<p>
+					<xref href="class_t_uid_type.xml#class_t_uid_type_1afe809323f271eff0545c2da408bebb0b">TUidType::IsPresent</xref> </p>
+				<p>
+					<xref href="class_t_uid_type.xml#class_t_uid_type">TUidType</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_entry_1ae86d74554cd817df89ec613c5e60c9ed">
+		<apiName>IsTypeValid</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TEntry</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool IsTypeValid() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TEntry::IsTypeValid()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1353"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="55"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="64"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Test whether the file has a valid UID.</p>
+				<p>True if the entry has a valid UID, false otherwise.</p>
+				<p>
+					<xref href="class_t_uid_type.xml#class_t_uid_type_1a64dc8e850a001fad6ee342026853fd17">TUidType::IsValid</xref> </p>
+				<p>
+					<xref href="class_t_uid_type.xml#class_t_uid_type">TUidType</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_entry_1a070de976f8f3c3bc7ee47de11fb9c9a1">
+		<apiName>MostDerivedUid</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TEntry</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TUid MostDerivedUid() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TEntry::MostDerivedUid()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1354"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="69"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="78"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets the most derived (i.e. the most specific) UID.</p>
+				<p>The entry&apos;s most derived UID.</p>
+				<p>
+					<xref href="class_t_uid_type.xml#class_t_uid_type_1a68b23c0930b124bf9c680407e92ac6df">TUidType::MostDerived</xref> </p>
+				<p>
+					<xref href="class_t_uid_type.xml#class_t_uid_type">TUidType</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_entry_1ad59456ec63679916da41a106b5fc644c">
+		<apiName>FileSize</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a05bf37b696038fef93385278ebf8ee16">TInt64</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TEntry</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt64 FileSize() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TEntry::FileSize()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1355"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_entry_1ab465e1949b7799d9dc2b618d2c674133">
+		<apiName>SetFileSize</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TEntry</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void SetFileSize(TInt64 aFileSize)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TEntry::SetFileSize(TInt64)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a05bf37b696038fef93385278ebf8ee16">TInt64</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFileSize</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1356"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="92"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="97"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Sets 64 bit file size.</p>
+				<p>The low word is stored in iSize and high word is stored in private data member iSizeHigh. This is intended to be used by File Systsem Plugin implementations, and not recommended to be called by general clients of the File Server.</p>
+				<p>
+					<xref href="class_t_entry.xml#class_t_entry_1a8f3ba1d33dd7d53cddcd2ee75ba512dc">TEntry::iSize</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_entry_1a243b0d6572f829b3a5556687e28a7298">
+		<apiName>Copy</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TEntry</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void Copy(const TEntry &amp;aEntry)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TEntry::Copy(const TEntry &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_entry.xml#class_t_entry">TEntry</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aEntry</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1359"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_entry_1a1855af77c5d3ee497c44fa1e10d82e55">
+		<apiName>Unpack</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TEntry</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void Unpack()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TEntry::Unpack()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1360"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxVariable id="class_t_entry_1ac04a6f9eb03f2a241c95eba48310601a">
+		<apiName>iAtt</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TEntry</cxxVariableScopedName>
+				<cxxVariablePrototype>TUint iAtt</cxxVariablePrototype>
+				<cxxVariableNameLookup>TEntry::iAtt</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1372"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>The individual bits within this byte indicate which attributes have been set.</p>
+				<p>
+					<xref href="f32file_8h.xml#f32file_8h_1a58802882412d204d5c2b55fbade28562">KEntryAttNormal</xref> </p>
+				<p>
+					<xref href="f32file_8h.xml#f32file_8h_1a03074d3ef9407ecdaf9bd922c91b7ae2">KEntryAttReadOnly</xref> </p>
+				<p>
+					<xref href="f32file_8h.xml#f32file_8h_1aa2a949a24dcbe56791b12275df8423b1">KEntryAttHidden</xref> </p>
+				<p>
+					<xref href="f32file_8h.xml#f32file_8h_1a27fd5c9560dee20f21cc247c9080c52e">KEntryAttSystem</xref> </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_t_entry_1a8f3ba1d33dd7d53cddcd2ee75ba512dc">
+		<apiName>iSize</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TEntry</cxxVariableScopedName>
+				<cxxVariablePrototype>TInt iSize</cxxVariablePrototype>
+				<cxxVariableNameLookup>TEntry::iSize</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1379"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>The size of the file in bytes. For files larger that 2G it must be cast to TUint in order to avoid looking like negative signed. </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_t_entry_1a2979c0fb62621d94dcbf99e90229d7c2">
+		<apiName>iModified</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="class_t_time.xml#class_t_time">TTime</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TEntry</cxxVariableScopedName>
+				<cxxVariablePrototype>TTime iModified</cxxVariablePrototype>
+				<cxxVariableNameLookup>TEntry::iModified</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1385"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>The local time of last modification. </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_t_entry_1a08c673378a17280c135653af3e0ba488">
+		<apiName>iType</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="class_t_uid_type.xml#class_t_uid_type">TUidType</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TEntry</cxxVariableScopedName>
+				<cxxVariablePrototype>TUidType iType</cxxVariablePrototype>
+				<cxxVariableNameLookup>TEntry::iType</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1391"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>The file&apos;s UIDtype </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_t_entry_1a1e6b8cb7db6ccef98f2d59bd95193795">
+		<apiName>iName</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="class_t_buf_c.xml#class_t_buf_c">TBufC</apiRelation>&lt; <apiRelation href="e32const_8h.xml#_1abaa62eff69a94f1ede111b6883c14133">KMaxFileName</apiRelation> &gt;</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TEntry</cxxVariableScopedName>
+				<cxxVariablePrototype>TBufC&lt; KMaxFileName &gt; iName</cxxVariablePrototype>
+				<cxxVariableNameLookup>TEntry::iName</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1400"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>The name of the file relative to the owning directory, with a maximum of KMaxFileName characters.</p>
+				<p>
+					<xref href="e32const_8h.xml#e32const_8h_1abaa62eff69a94f1ede111b6883c14133">KMaxFileName</xref> </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_t_entry_1a0bd0f561a855546dfcbd3ee1686ed402">
+		<apiName>iSizeHigh</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a8240e11f17c80b6b222fc2af50234da4">TUint32</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TEntry</cxxVariableScopedName>
+				<cxxVariablePrototype>TUint32 iSizeHigh</cxxVariablePrototype>
+				<cxxVariableNameLookup>TEntry::iSizeHigh</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1403"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_t_entry_1ae45f93320f4fc4aaeb7a34950b1b5f13">
+		<apiName>iReserved</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a8240e11f17c80b6b222fc2af50234da4">TUint32</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TEntry</cxxVariableScopedName>
+				<cxxVariablePrototype>TUint32 iReserved</cxxVariablePrototype>
+				<cxxVariableNameLookup>TEntry::iReserved</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1407"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Reserved for future expansion </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+</cxxClass>

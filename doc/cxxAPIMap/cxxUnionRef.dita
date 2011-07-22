@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (c) 2011 Nokia Corporation and/or its subsidiary(-ies).
+All rights reserved.		
+		-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference xml:lang="en-us" outputclass="element" id="cxxUnionRef">
+    <title>cxxUnionRef</title>
+    <shortdesc>This element provides a C++ union topic type as a link in a DITA map. </shortdesc>
+    <refbody>
+        <section>
+            <title>Description</title>
+            <p>A &lt;cxxUnionRef&gt; can contain other &lt;cxxUnionRef&gt; elements
+            or &lt;cxxClassRef&gt; and &lt;cxxStructRef&gt; elements; allowing you 
+            to express navigation or table-of-contents hierarchies.</p>
+        </section>
+        <example>
+            <title>Example</title>
+            <codeblock>&lt;cxxAPIMap id=&quot;amap&quot; title=&quot;AMap&quot;&gt;
+	&lt;cxxFileRef href=&quot;afile.xml&quot; navtitle=&quot;afile.h&quot; /&gt;
+	&lt;cxxClassRef href=&quot;aclass.xml&quot; navtitle=&quot;AClass&quot; /&gt;
+	&lt;cxxStructRef href=&quot;astruct.xml&quot; navtitle=&quot;AClass::AStruct&quot; /&gt;
+	&lt;cxxUnionRef href=&quot;aunion.xml&quot; navtitle=&quot;AClass::AUnion&quot; /&gt;
+	&lt;cxxNamespaceRef href=&quot;anamespace.xml&quot; navtitle=&quot;AClass::ANamespace&quot; /&gt;
+&lt;/cxxAPIMap&gt;</codeblock>
+        </example>          
+        <section conref="../packagedef.dita#cxxUnionRef-reference/cxxUnionRef-containedBy-section"/>
+        <section conref="../packagedef.dita#cxxUnionRef-reference/cxxUnionRef-contains-section"/>
+        <section conref="../packagedef.dita#cxxUnionRef-reference/cxxUnionRef-contentModel-section"/>
+        <section conref="../packagedef.dita#cxxUnionRef-reference/cxxUnionRef-attList-section"/>
+        <section conref="../packagedef.dita#cxxUnionRef-reference/cxxUnionRef-classValue-section"/>
+    </refbody>
+</reference>

@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_m_file_man_observer">
+	<apiName>MFileManObserver</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="2633"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="2611"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="2667"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>Provides notification of the progress of synchronous or asynchronous file management operations.</p>
+			<p>It should be inherited by classes which implement this protocol.</p>
+			<p>The enquiry functions provided by <xref href="class_c_file_base.xml#class_c_file_base">CFileBase</xref> and CFileMan may be used by the observer to display information about the progress of the operation such as error messages, the names of the target and destination files, and the number of bytes transferred during a copy operation. Notification may take place before or after an entry has been processed, or during a file copy or move. Each notification function returns a value which can be used to enable the user to control the progress of the operation, for example to cancel a long-running multiple file copy. To use this class, pass a pointer to an instance of the class to the CFileMan constructor, or use SetObserver(), defined in <xref href="class_c_file_base.xml#class_c_file_base">CFileBase</xref>. </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxEnumeration id="class_m_file_man_observer_1a24d7d925daf2c71fea04c52be54b7db6">
+		<apiName>TControl</apiName>
+		<cxxEnumerationDetail>
+			<cxxEnumerationDefinition>
+				<cxxEnumerationAccessSpecifier value="public"/>
+				<cxxEnumerationScopedName>MFileManObserver</cxxEnumerationScopedName>
+				<cxxEnumerationPrototype>TControl</cxxEnumerationPrototype>
+				<cxxEnumerationNameLookup>MFileManObserver:TControl</cxxEnumerationNameLookup>
+				<cxxEnumerators>
+					<cxxEnumerator id="class_m_file_man_observer_1a24d7d925daf2c71fea04c52be54b7db6ada84fcf33f205036d1029e8af06f1acc">
+						<apiName>EContinue</apiName>
+						<cxxEnumeratorScopedName>MFileManObserver</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EContinue</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>MFileManObserver::EContinue</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="2643"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Proceed with the current or the next entry. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_m_file_man_observer_1a24d7d925daf2c71fea04c52be54b7db6a661de7318533e5c314273d4e9c1f5272">
+						<apiName>ERetry</apiName>
+						<cxxEnumeratorScopedName>MFileManObserver</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ERetry</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>MFileManObserver::ERetry</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="2649"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Retry processing the previous entry. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_m_file_man_observer_1a24d7d925daf2c71fea04c52be54b7db6a3a3db1e30dd733712d3f78fa91927f55">
+						<apiName>EAbort</apiName>
+						<cxxEnumeratorScopedName>MFileManObserver</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>EAbort</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>MFileManObserver::EAbort</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="2655"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Abort operation, causes function to return KErrCancel. </p>
+						</apiDesc>
+					</cxxEnumerator>
+					<cxxEnumerator id="class_m_file_man_observer_1a24d7d925daf2c71fea04c52be54b7db6ac163f80cae8fb5258458b94ba9b11f29">
+						<apiName>ECancel</apiName>
+						<cxxEnumeratorScopedName>MFileManObserver</cxxEnumeratorScopedName>
+						<cxxEnumeratorPrototype>ECancel</cxxEnumeratorPrototype>
+						<cxxEnumeratorNameLookup>MFileManObserver::ECancel</cxxEnumeratorNameLookup>
+						<cxxEnumeratorAPIItemLocation>
+							<cxxEnumeratorDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+							<cxxEnumeratorDeclarationFileLine name="lineNumber" value="2662"/>
+						</cxxEnumeratorAPIItemLocation>
+						<apiDesc>
+							<p>Cancel processing the current entry. </p>
+						</apiDesc>
+					</cxxEnumerator>
+				</cxxEnumerators>
+				<cxxEnumerationAPIItemLocation>
+					<cxxEnumerationDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxEnumerationDeclarationFileLine name="lineNumber" value="2639"/>
+					<cxxEnumerationDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxEnumerationDefinitionFileLineStart name="lineNumber" value="2638"/>
+					<cxxEnumerationDefinitionFileLineEnd name="lineNumber" value="2662"/>
+				</cxxEnumerationAPIItemLocation>
+			</cxxEnumerationDefinition>
+			<apiDesc>
+				<p>Control for the current CFileMan operation. </p>
+			</apiDesc>
+		</cxxEnumerationDetail>
+	</cxxEnumeration>
+	<cxxFunction id="class_m_file_man_observer_1ab9e29b6b9660fff07991f678c9db3a3a">
+		<apiName>NotifyFileManStarted</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionVirtual/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_m_file_man_observer.xml#_1a24d7d925daf2c71fea04c52be54b7db6">TControl</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>MFileManObserver</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual IMPORT_C TControl NotifyFileManStarted()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MFileManObserver::NotifyFileManStarted()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2664"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_m_file_man_observer_1a176cfc917c1c24a18849b35c10dc75c2">
+		<apiName>NotifyFileManOperation</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionVirtual/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_m_file_man_observer.xml#_1a24d7d925daf2c71fea04c52be54b7db6">TControl</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>MFileManObserver</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual IMPORT_C TControl NotifyFileManOperation()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MFileManObserver::NotifyFileManOperation()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2665"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_m_file_man_observer_1a720ec15c45b9d0fed7d4005165e953b9">
+		<apiName>NotifyFileManEnded</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionVirtual/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_m_file_man_observer.xml#_1a24d7d925daf2c71fea04c52be54b7db6">TControl</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>MFileManObserver</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual IMPORT_C TControl NotifyFileManEnded()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MFileManObserver::NotifyFileManEnded()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2666"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+</cxxClass>

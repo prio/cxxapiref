@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (c) 2011 Nokia Corporation and/or its subsidiary(-ies).
+All rights reserved.        
+        -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<reference id="cxxFriendScopedName" outputclass="element"
+xml:lang="en-us">
+<title>cxxFriendScopedName</title>
+<shortdesc>Identifies the enclosing scope of the friend function.
+This is<?Pub Caret?> the namespace/class/struct/union within which
+the friend declaration is located.</shortdesc>
+<refbody>
+<section id="section_25EF9205173F459E9EB36AECFCF68F4F">          
+  <title>Description</title><p>The &lt;cxxFriendScopedName> element
+describes the declaration (qualified name lookup) of the enclosing
+namespace/class/struct/union. This element is empty for friend functions
+at the global scope.</p><p>See ISO/IEC 14882:2003(E) Section 3.3 Declarative
+regions and scopes [basic.scope]</p>         </section>
+<example id="example_225ACA276BB049AE8598334E3015187B">          
+  <title>Example</title><p>For example given this code:</p>      
+      <codeblock>/** This class allows, by means of friendship,
+any member of the class Class_13969_02 to
+access my private members e.g. member a.
+It also allows the specific function
+Class_13969_03::getA(const char*)
+to access my private members.
+*/
+class Class_13969_01
+{
+private:
+	enum { a=100 };
+public:
+    /** friend reference to a complete class. */
+    friend class Class_13969_02;
+    /** friend reference to a specific member function. */
+    friend void Class_13969_03::getA(const char*);
+};
+
+/** Any member of this class can access 
+private members of Class_13969_01.
+*/
+class Class_13969_02
+{
+public:
+    int v[Class_13969_01::a]; // OK, Class_13969_02 is a friend of Class_13969_01
+};
+
+/** Only a specific member, Class_13969_03::getA(const char*),
+in this class can access private members of Class_13969_01.
+*/
+class Class_13969_03
+{
+public:
+    void getA(const char*);
+};
+</codeblock><p>The friend reference <tt>friend void Class_13969_03::getA(const
+char*);</tt> appears in the class <tt>Class_13969_01</tt> with the
+scoped name <tt>Class_13969_01</tt> but has the <tt>cxxFriendNameLookup</tt
+> as being within <tt>Class_13969_03</tt>.</p>         <codeblock
+>&lt;cxxFriendScopedName>Class_13969_01&lt;/cxxFriendScopedName>
+...
+&lt;cxxFriendNameLookup>Class_13969_03::getA(const char *)&lt;/cxxFriendNameLookup></codeblock
+></example>
+<section
+conref="../packagedef.dita#cxxFriendScopedName-reference/cxxFriendScopedName-containedBy-section"
+></section>
+<section
+conref="../packagedef.dita#cxxFriendScopedName-reference/cxxFriendScopedName-contains-section"
+></section>
+<section
+conref="../packagedef.dita#cxxFriendScopedName-reference/cxxFriendScopedName-contentModel-section"
+></section>
+<section
+conref="../packagedef.dita#cxxFriendScopedName-reference/cxxFriendScopedName-attList-section"
+></section>
+<section
+conref="../packagedef.dita#cxxFriendScopedName-reference/cxxFriendScopedName-classValue-section"
+></section>
+</refbody>
+</reference>
+<?Pub *0000002985?>

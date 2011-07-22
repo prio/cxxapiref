@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_t_find_logical_device">
+	<apiName>TFindLogicalDevice</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassDerivations>
+				<cxxClassDerivation>
+					<cxxClassDerivationAccessSpecifier value="public"/>
+					<cxxClassBaseClass href="class_t_find_handle_base.xml#class_t_find_handle_base">TFindHandleBase</cxxClassBaseClass>
+				</cxxClassDerivation>
+			</cxxClassDerivations>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="2991"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="2990"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="2996"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>Searches for LDD factory objects by pattern matching against the names of LDD factory objects.</p>
+			<p>An LDD factory object is an instance of a DLogicalDevice derived class.</p>
+			<p>The match pattern can be set into this object at construction; it can also be changed at any time after construction by using <xref href="class_t_find_handle_base.xml#class_t_find_handle_base_1ac2d0a5a9db35b1cc839f75aad9fd25a6">TFindHandleBase::Find()</xref>.</p>
+			<p>After construction, call <xref href="class_t_find_logical_device.xml#class_t_find_logical_device_1acc9184b9451f70df306435bed0aafa6b">TFindLogicalDevice::Next()</xref> repeatedly to find successive LDD factory objects whose names match the current pattern. A successful call to <xref href="class_t_find_logical_device.xml#class_t_find_logical_device_1acc9184b9451f70df306435bed0aafa6b">TFindLogicalDevice::Next()</xref> means that a matching LDD factory object has been found.</p>
+			<p>The name of an LDD factory object is set by its Install() member function as part of the construction process. </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_t_find_logical_device_1a88f8f8ba80c1c108d2b27b5e31352450">
+		<apiName>TFindLogicalDevice</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TFindLogicalDevice</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TFindLogicalDevice()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TFindLogicalDevice::TFindLogicalDevice()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2993"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="3425"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="3427"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Constructs the LDD factory object with a default match pattern.</p>
+				<p>The default match pattern, as implemented by the base class, is the single character &quot;*&quot;.</p>
+				<p>A new match pattern can be set after construction by calling the <xref href="class_t_find_handle_base.xml#class_t_find_handle_base_1ac2d0a5a9db35b1cc839f75aad9fd25a6">Find()</xref> member function of the <xref href="class_t_find_handle_base.xml#class_t_find_handle_base">TFindHandleBase</xref> base class.</p>
+				<p>
+					<xref href="class_t_find_handle_base.xml#class_t_find_handle_base_1ac2d0a5a9db35b1cc839f75aad9fd25a6">TFindHandleBase::Find</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_find_logical_device_1a82bd43e9cc17c83f87ace7b7e0130e8c">
+		<apiName>TFindLogicalDevice</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TFindLogicalDevice</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TFindLogicalDevice(const TDesC &amp;aMatch)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TFindLogicalDevice::TFindLogicalDevice(const TDesC &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMatch</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The match pattern.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2994"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="3439"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="3441"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Constructs the LDD factory object with a specified match pattern.</p>
+				<p>A new match pattern can be set after construction by calling <xref href="class_t_find_handle_base.xml#class_t_find_handle_base_1ac2d0a5a9db35b1cc839f75aad9fd25a6">TFindHandleBase::Find()</xref>.</p>
+				<p>
+					<xref href="class_t_find_handle_base.xml#class_t_find_handle_base_1ac2d0a5a9db35b1cc839f75aad9fd25a6">TFindHandleBase::Find</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_find_logical_device_1acc9184b9451f70df306435bed0aafa6b">
+		<apiName>Next</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TFindLogicalDevice</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Next(TFullName &amp;aResult)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TFindLogicalDevice::Next(TFullName &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_buf.xml#class_t_buf">TFullName</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aResult</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2995"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxClassInherits>
+		<cxxClassInheritsDetail>
+			<cxxClassFunctionInherited href="class_t_find_logical_device.xml#class_t_find_handle_1a712487e3e5a73408469ec86079ccf596">TFindHandle::Handle()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_find_logical_device.xml#class_t_find_handle_1aa79b063ec40480668224704e5a6c79fe">TFindHandle::Reset()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_find_logical_device.xml#class_t_find_handle_1a59ef1dca1c9305e1ba9f9e858a36d1ac">TFindHandle::TFindHandle()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_find_logical_device.xml#class_t_find_handle_base_1ac2d0a5a9db35b1cc839f75aad9fd25a6">TFindHandleBase::Find(const TDesC &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_find_logical_device.xml#class_t_find_handle_base_1a07e846db745afb10e95d9c24741d52f9">TFindHandleBase::NextObject(TFullName &amp;,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_find_logical_device.xml#class_t_find_handle_base_1aa6982984b9e0d2011ca81df2b541cb5c">TFindHandleBase::TFindHandleBase()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_find_logical_device.xml#class_t_find_handle_base_1a0772421601128af5af77a7e0a0a9c267">TFindHandleBase::TFindHandleBase(const TDesC &amp;)</cxxClassFunctionInherited>
+		</cxxClassInheritsDetail>
+	</cxxClassInherits>
+</cxxClass>

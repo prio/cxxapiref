@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="cxxDefineParameterDeclarationName"/>
+<meta name="abstract" content="The &lt;cxxDefineParameterDeclarationName&gt; element specifies the name of a parameter used by a preprocessor macro."/>
+<meta name="description" content="The &lt;cxxDefineParameterDeclarationName&gt; element specifies the name of a parameter used by a preprocessor macro."/>
+<meta name="DC.Relation" scheme="URI" content="../cxxDefine/cxxDefine_module.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="cxxDefineParameterDeclarationName"/>
+<meta name="DC.Language" content="en-us"/>
+<link rel="stylesheet" type="text/css" href="../commonltr.css"/>
+<title>cxxDefineParameterDeclarationName</title>
+<link rel="stylesheet" type="text/css" href="../nokiacxxref.css"/></head>
+<body class="element" id="cxxDefineParameterDeclarationName"><a name="cxxDefineParameterDeclarationName"><!-- --></a>
+
+
+<h1 class="topictitle1">cxxDefineParameterDeclarationName</h1>
+
+
+<div><p>The &lt;cxxDefineParameterDeclarationName&gt; element specifies
+the name of a parameter used by a preprocessor macro.</p>
+
+<div class="section"><h2 class="sectiontitle">Description</h2>                          <p>A
+#define can take one or more arguments (or parameters). Such a #define
+is usually known as a macro. The value of the parameters are supplied
+by the code that uses the macro. Use the &lt;cxxDefineParameterDeclarationName&gt;
+element together with the &lt;apiDefNote&gt; element to give
+information about the intended use of macro parameters.</p>
+      
+      <p>&lt;cxxDefineParameterDeclarationName&gt; has no child elements.</p>
+         </div>
+
+<div class="example"><h2 class="sectiontitle">Example</h2>                          <pre class="codeblock">&lt;cxxDefineDefinition&gt;
+    &lt;cxxDefinePrototype&gt;#define MSG_PRM(prmIndex)&lt;/cxxDefinePrototype&gt;
+    &lt;cxxDefineNameLookup&gt;MSG_PRM&lt;/cxxDefineNameLookup&gt;
+    &lt;cxxDefineParameters&gt;
+        &lt;cxxDefineParameter&gt;
+            &lt;cxxDefineParameterDeclarationName&gt;prmIndex&lt;/cxxDefineParameterDeclarationName&gt;
+            &lt;apiDefNote/&gt;
+        &lt;/cxxDefineParameter&gt;
+    &lt;/cxxDefineParameters&gt;
+    ...
+&lt;/cxxDefineDefinition&gt;</pre>
+         </div>
+
+<div class="elementContainedBy"><h2 class="sectiontitle">Contained by</h2>
+
+<p id="cxxDefineParameterDeclarationName__d3753e3184"><a name="cxxDefineParameterDeclarationName__d3753e3184"><!-- --></a>
+<a href="cxxDefineParameter.html" title="When a #define is used as preprocessor macro, the &lt;cxxDefineParameter&gt; element describes a named macro parameter.">cxxDefineParameter</a> 
+</p>
+
+</div>
+
+<div class="elementContains"><h2 class="sectiontitle">Contains</h2>
+
+<p id="cxxDefineParameterDeclarationName__d3753e3196"><a name="cxxDefineParameterDeclarationName__d3753e3196"><!-- --></a>
+</p>
+
+</div>
+
+<div class="elementContentModel"><h2 class="sectiontitle">Content Model</h2>
+
+<p id="cxxDefineParameterDeclarationName__d3753e3205"><a name="cxxDefineParameterDeclarationName__d3753e3205"><!-- --></a>
+No content.
+</p>
+
+</div>
+
+<div class="elementAttList"/>
+
+<div class="elementClassValue"><h2 class="sectiontitle">Inheritance</h2>
+
+<p id="cxxDefineParameterDeclarationName__d3753e3216"><a name="cxxDefineParameterDeclarationName__d3753e3216"><!-- --></a>
+ topic/<span class="keyword">keyword</span> reference/<span class="keyword">keyword</span> apiRef/<span class="keyword">apiItemName</span> apiOperation/<span class="keyword">apiItemName</span> cxxDefine/<span class="keyword">cxxDefineParameterDeclarationName</span></p>
+
+</div>
+
+</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../cxxDefine/cxxDefine_module.html" title="Defines a top-level container for all the elements necessary to describe a preprocessor definition.">cxxDefine module</a></div>
+</div>
+</div>
+
+</body>
+</html>

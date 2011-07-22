@@ -1,0 +1,479 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_mesh_machine_1_1_a_activity_semaphore">
+	<apiName>MeshMachine::AActivitySemaphore</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassDerivations>
+				<cxxClassDerivation>
+					<cxxClassDerivationAccessSpecifier value="public"/>
+					<cxxClassBaseClass href="class_mesh_machine_1_1_a_context_store.xml#class_mesh_machine_1_1_a_context_store">MeshMachine::AContextStore</cxxClassBaseClass>
+				</cxxClassDerivation>
+			</cxxClassDerivations>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="1006"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="1005"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="1125"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>Aggregate class for activities which wish to use mutexes.</p>
+			<p>After a serialised state or transition has been unblocked, signalled and invoked, <xref href="class_mesh_machine_1_1_a_activity_semaphore.xml#class_mesh_machine_1_1_a_activity_semaphore">AActivitySemaphore</xref> clears all of the synchronisation related information (e.g stored context), assuming that the job has been done. Sometimes however the serialised state, upon more careful inspection of the environment (context), may decide that it still does not want to be executed and it wishes to sleep again.</p>
+			<p>In such case it would call <xref href="class_mesh_machine_1_1_a_activity_semaphore.xml#class_mesh_machine_1_1_a_activity_semaphore_1ab70b0f8682de63d74ddf4f668582b191">Wait()</xref> and return <tt>EIgnore</tt> from its <tt>TransitionTag()</tt>. The same applies to a serialised transition. It may want to call <xref href="class_mesh_machine_1_1_a_activity_semaphore.xml#class_mesh_machine_1_1_a_activity_semaphore_1ab70b0f8682de63d74ddf4f668582b191">Wait()</xref> instead of, for example sending a request message.</p>
+			<p>After calling <xref href="class_mesh_machine_1_1_a_activity_semaphore.xml#class_mesh_machine_1_1_a_activity_semaphore_1ab70b0f8682de63d74ddf4f668582b191">Wait()</xref> the serialised state will be woken up when the policy matches, which allows the serialised state to finish its job. </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxVariable id="class_mesh_machine_1_1_a_activity_semaphore_1ad634cb1049714f585ee34ff8cb33204b">
+		<apiName>KInterfaceId</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableStorageClassSpecifierStatic/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>MeshMachine::AActivitySemaphore</cxxVariableScopedName>
+				<cxxVariablePrototype>static const TInt KInterfaceId</cxxVariablePrototype>
+				<cxxVariableNameLookup>MeshMachine::AActivitySemaphore::KInterfaceId</cxxVariableNameLookup>
+				<cxxVariableReimplemented href="class_mesh_machine_1_1_a_context_store.xml#class_mesh_machine_1_1_a_context_store_1ae926cb43d753589b4ac522b01a6814b2">MeshMachine::AContextStore::KInterfaceId</cxxVariableReimplemented>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1011"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>Interface id </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxFunction id="class_mesh_machine_1_1_a_activity_semaphore_1aee24d8a6f1769f37b8903eaa18779444">
+		<apiName>ParkState</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>MeshMachine::AActivitySemaphore</cxxFunctionScopedName>
+				<cxxFunctionPrototype>static IMPORT_C TInt ParkState(const TNodeContextBase &amp;aContext)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MeshMachine::AActivitySemaphore::ParkState(const TNodeContextBase &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_mesh_machine_1_1_t_node_context_base.xml#class_mesh_machine_1_1_t_node_context_base">TNodeContextBase</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aContext</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The context which the state is to run in. This will be stored</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1021"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Park a state.</p>
+				<p>
+					<tt>KErrNone</tt> if successful. System wide error code otherwise </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_mesh_machine_1_1_a_activity_semaphore_1ad2a75c5a057fe962d8a38fbc2b09b1ab">
+		<apiName>UnparkState</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>MeshMachine::AActivitySemaphore</cxxFunctionScopedName>
+				<cxxFunctionPrototype>static IMPORT_C TInt UnparkState(const TNodeContextBase &amp;aContext)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MeshMachine::AActivitySemaphore::UnparkState(const TNodeContextBase &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_mesh_machine_1_1_t_node_context_base.xml#class_mesh_machine_1_1_t_node_context_base">TNodeContextBase</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aContext</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The context which the state is to run in.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1030"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Unpark a state.</p>
+				<p>
+					<tt>KErrNone</tt> if successful. System wide error code otherwise </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_mesh_machine_1_1_a_activity_semaphore_1a1b1a0bd22738b2016cd5886f64c47675">
+		<apiName>ParkTransitionL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>MeshMachine::AActivitySemaphore</cxxFunctionScopedName>
+				<cxxFunctionPrototype>static IMPORT_C void ParkTransitionL(const TNodeContextBase &amp;aContext)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MeshMachine::AActivitySemaphore::ParkTransitionL(const TNodeContextBase &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_mesh_machine_1_1_t_node_context_base.xml#class_mesh_machine_1_1_t_node_context_base">TNodeContextBase</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aContext</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The context which the transition is to run in. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1037"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Park a transition</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_mesh_machine_1_1_a_activity_semaphore_1ae620303f5e3b6aad478d3660a589b4c5">
+		<apiName>Signal</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>MeshMachine::AActivitySemaphore</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TBool Signal(TNodeContextBase &amp;aContext)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MeshMachine::AActivitySemaphore::Signal(TNodeContextBase &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_mesh_machine_1_1_t_node_context_base.xml#class_mesh_machine_1_1_t_node_context_base">TNodeContextBase</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aContext</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Current context in the state machine.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1047"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Signals to the activity that an event has occurred. Used for waking up sleeping activities which use mutexes. The activity is expected to check if the mutex has now cleared.</p>
+				<p>
+					<tt>ETrue</tt> if the state or transition has been unparked </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_mesh_machine_1_1_a_activity_semaphore_1ab70b0f8682de63d74ddf4f668582b191">
+		<apiName>Wait</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>MeshMachine::AActivitySemaphore</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Wait()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MeshMachine::AActivitySemaphore::Wait()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1052"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Tell the activity to wait. The activity will wait until <xref href="class_mesh_machine_1_1_a_activity_semaphore.xml#class_mesh_machine_1_1_a_activity_semaphore_1ae620303f5e3b6aad478d3660a589b4c5">Signal()</xref> is called. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_mesh_machine_1_1_a_activity_semaphore_1a0261339b4c81482b973f839ea442aab8">
+		<apiName>IsWaiting</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>MeshMachine::AActivitySemaphore</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool IsWaiting() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MeshMachine::AActivitySemaphore::IsWaiting()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1059"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1058"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1063"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Check if the activity is waiting ETrue if the activity is currently waiting </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_mesh_machine_1_1_a_activity_semaphore_1aa16e6a42011e8a214de8fe7c6a2d1f0f">
+		<apiName>AActivitySemaphore</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionExplicit/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>MeshMachine::AActivitySemaphore</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline AActivitySemaphore()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MeshMachine::AActivitySemaphore::AActivitySemaphore()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1071"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1069"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1072"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Constructor for <xref href="class_mesh_machine_1_1_a_activity_semaphore.xml#class_mesh_machine_1_1_a_activity_semaphore">AActivitySemaphore</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_mesh_machine_1_1_a_activity_semaphore_1ac6e8e69df34f786db874f62017f6ed8b">
+		<apiName>~AActivitySemaphore</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDestructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>MeshMachine::AActivitySemaphore</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline ~AActivitySemaphore()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MeshMachine::AActivitySemaphore::~AActivitySemaphore()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1077"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1076"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1078"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Destructor for <xref href="class_mesh_machine_1_1_a_activity_semaphore.xml#class_mesh_machine_1_1_a_activity_semaphore">AActivitySemaphore</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_mesh_machine_1_1_a_activity_semaphore_1aae34d2efa285e4d8fa7205e04539c31f">
+		<apiName>SetIsWaiting</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>MeshMachine::AActivitySemaphore</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void SetIsWaiting()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MeshMachine::AActivitySemaphore::SetIsWaiting()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1084"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1084"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1084"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Set the <tt>isWaiting</tt> flag </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_mesh_machine_1_1_a_activity_semaphore_1a55e331044138faf5dad614a134a990e7">
+		<apiName>ClearIsWaiting</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>MeshMachine::AActivitySemaphore</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void ClearIsWaiting()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MeshMachine::AActivitySemaphore::ClearIsWaiting()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1088"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1088"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1088"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Clear the <tt>isWaiting</tt> flag </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_mesh_machine_1_1_a_activity_semaphore_1aefd36c894335fb0db591a3ec438e8b2b">
+		<apiName>WillWait</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>MeshMachine::AActivitySemaphore</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool WillWait() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MeshMachine::AActivitySemaphore::WillWait()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1097"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1097"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1097"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Check if the WillWait flag is set. The WillWait flag indicates whether the activity will be in a waiting state at the end of the signal function. This is distinct from &quot;is waiting&quot; which indicates whether the activity was waiting on entry to the <xref href="class_mesh_machine_1_1_a_activity_semaphore.xml#class_mesh_machine_1_1_a_activity_semaphore_1ae620303f5e3b6aad478d3660a589b4c5">Signal()</xref> function.</p>
+				<p>ETrue if the WillWait flag is set </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_mesh_machine_1_1_a_activity_semaphore_1a08a974ba1cdcd8cd45ecde1a62a21304">
+		<apiName>SetWillWait</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>MeshMachine::AActivitySemaphore</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void SetWillWait()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MeshMachine::AActivitySemaphore::SetWillWait()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1101"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1101"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1101"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Set the willWait flag </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_mesh_machine_1_1_a_activity_semaphore_1a71a6b916501ebc65061926ee36a2fd3e">
+		<apiName>ClearWillWait</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>MeshMachine::AActivitySemaphore</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void ClearWillWait()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MeshMachine::AActivitySemaphore::ClearWillWait()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1105"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1105"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1105"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Clear the willWait flag </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_mesh_machine_1_1_a_activity_semaphore_1a7fc1b7705f08402091553c93ad282670">
+		<apiName>IsTransition</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>MeshMachine::AActivitySemaphore</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool IsTransition() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MeshMachine::AActivitySemaphore::IsTransition()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1118"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1118"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1118"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_mesh_machine_1_1_a_activity_semaphore_1aac28a7028b52ef0f23d048bcaaa73690">
+		<apiName>SetIsTransition</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>MeshMachine::AActivitySemaphore</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void SetIsTransition()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MeshMachine::AActivitySemaphore::SetIsTransition()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1119"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1119"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1119"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_mesh_machine_1_1_a_activity_semaphore_1aa19f08cfc8a8c09261c3f44cf7928a59">
+		<apiName>ClearIsTransition</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>MeshMachine::AActivitySemaphore</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void ClearIsTransition()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MeshMachine::AActivitySemaphore::ClearIsTransition()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1120"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1120"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1120"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxVariable id="class_mesh_machine_1_1_a_activity_semaphore_1ae4247d0207434a6cad51171c58357872">
+		<apiName>iFlags</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1aae4399ce3f10d6c2b5ec96a13bbb5881">TUint8</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>MeshMachine::AActivitySemaphore</cxxVariableScopedName>
+				<cxxVariablePrototype>TUint8 iFlags</cxxVariablePrototype>
+				<cxxVariableNameLookup>MeshMachine::AActivitySemaphore::iFlags</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1124"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+</cxxClass>

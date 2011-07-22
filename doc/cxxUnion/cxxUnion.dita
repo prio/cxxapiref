@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (c) 2011 Nokia Corporation and/or its subsidiary(-ies).
+All rights reserved.        
+        -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<reference id="cxxUnion" outputclass="element" xml:lang="en-us">
+<title>cxxUnion</title>
+<shortdesc>The &lt;cxxUnion> element provides the name of the C++
+union and all the elements necessary to describe the members that are
+introduced by the union declaration.</shortdesc>
+<refbody>
+<section>             <title>Description</title>             <p>The
+&lt;cxxUnion> element requires an ID attribute. The child <?Pub Caret?>elements
+&lt;apiName>  and &lt;cxxUnionDetail> are required for this topic. </p>         </section>
+<example><title>Example</title>         <codeblock>&lt;cxxUnion id="union_comms_packer_1_1_t_union">
+	&lt;apiName>CommsFW::TCFLegacyMessagePacker::TUnion&lt;/apiName>
+	&lt;cxxUnionDetail>
+		&lt;cxxUnionDefinition>
+			&lt;cxxUnionAccessSpecifier value="private"/>
+			&lt;cxxUnionAPIItemLocation>
+				&lt;cxxUnionDeclarationFile name="filePath" value="C:/src/include/elements/cftransportmsg.h"/>
+				&lt;cxxUnionDeclarationFileLineStart name="lineNumber" value="58"/>
+				&lt;cxxUnionDeclarationFileLineEnd name="lineNumber" value="70"/>
+			&lt;/cxxUnionAPIItemLocation>
+		&lt;/cxxUnionDefinition>
+		&lt;apiDesc/>
+	&lt;/cxxUnionDetail>
+	&lt;cxxUnionNested>
+		&lt;cxxUnionNestedDetail>
+			&lt;cxxUnionNestedStruct href="struct_comms_package.xml#struct_package">CommsFW::TCFLegacyMessagePacker::TUnion::TLegacyPackage&lt;/cxxUnionNestedStruct>
+			&lt;cxxUnionNestedStruct href="struct_comms_package.xml#struct_package">CommsFW::TCFLegacyMessagePacker::TUnion::TPackage&lt;/cxxUnionNestedStruct>
+		&lt;/cxxUnionNestedDetail>
+	&lt;/cxxUnionNested>
+&lt;/cxxUnion></codeblock>         </example>
+<section
+conref="../packagedef.dita#cxxUnion-reference/cxxUnion-containedBy-section"
+></section>
+<section
+conref="../packagedef.dita#cxxUnion-reference/cxxUnion-contains-section"
+></section>
+<section
+conref="../packagedef.dita#cxxUnion-reference/cxxUnion-contentModel-section"
+></section>
+<section
+conref="../packagedef.dita#cxxUnion-reference/cxxUnion-attList-section"
+></section>
+<section
+conref="../packagedef.dita#cxxUnion-reference/cxxUnion-classValue-section"
+></section>
+</refbody>
+</reference>
+<?Pub *0000002659?>

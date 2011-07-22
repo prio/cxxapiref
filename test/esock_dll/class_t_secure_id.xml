@@ -1,0 +1,184 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_t_secure_id">
+	<apiName>TSecureId</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="1907"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="1906"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="1916"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>A class used to represent the Secure ID of a process or executable image.</p>
+			<p>Constructors and conversion operators are provided to enable conversion of this class to and from both TUint32 and <xref href="class_t_uid.xml#class_t_uid">TUid</xref> objects.</p>
+			<p>Because this class has non-default constructors, compilers will not initialise this objects at compile time, instead code will be generated to construct the object at run-time. This is wastefull, and Symbian OS DLLs are not permitted to have such uninitialised data. To overcome these problems a macro is provided to construct a const object which behaves like a <xref href="class_t_secure_id.xml#class_t_secure_id">TSecureId</xref>. This is _LIT_SECURE_ID. This macro should be used where it is desirable to define const <xref href="class_t_secure_id.xml#class_t_secure_id">TSecureId</xref> objects, like in header files. E.g. Instead of writing: <codeblock>	const TSecureId MyId=0x1234567</codeblock> use <codeblock>	_LIT_SECURE_ID(MyId,0x1234567)</codeblock>
+			</p>
+			<p>_LIT_SECURE_ID </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_t_secure_id_1afa6c73fd131d77f278102ec0e4cffd90">
+		<apiName>TSecureId</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TSecureId</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TSecureId()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSecureId::TSecureId()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1909"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="7066"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="7067"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Default constructor. This leaves the object in an undefined state </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_secure_id_1a760e44dd9adebd181ac63eb6376480f0">
+		<apiName>TSecureId</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TSecureId</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TSecureId(TUint32 aId)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSecureId::TSecureId(TUint32)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a8240e11f17c80b6b222fc2af50234da4">TUint32</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aId</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The value for the ID </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1910"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="7071"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="7072"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Construct &apos;this&apos; using a TUint32 </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_secure_id_1aeaf8467180b4c7b3fdfd2a15733e4c49">
+		<apiName>operator TUint32</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TSecureId</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline operator TUint32() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSecureId::operator TUint32()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1911"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="7076"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="7077"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Convert &apos;this&apos; into a TUint32 </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_secure_id_1a422a0e3716a52d1b50645b0d70180f0e">
+		<apiName>TSecureId</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TSecureId</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TSecureId(TUid aId)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSecureId::TSecureId(TUid)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_uid.xml#class_t_uid">TUid</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aId</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The value for the ID </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1912"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="7081"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="7082"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Construct &apos;this&apos; using a <xref href="class_t_uid.xml#class_t_uid">TUid</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_secure_id_1aacf55ffe9b242d31a58e6e37e19c7f28">
+		<apiName>operator TUid</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TSecureId</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline operator TUid() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSecureId::operator TUid()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1913"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="7086"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="7087"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Convert &apos;this&apos; into a <xref href="class_t_uid.xml#class_t_uid">TUid</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxVariable id="class_t_secure_id_1a501433cf039510d528fa578a3a38aa2f">
+		<apiName>iId</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a8240e11f17c80b6b222fc2af50234da4">TUint32</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TSecureId</cxxVariableScopedName>
+				<cxxVariablePrototype>TUint32 iId</cxxVariablePrototype>
+				<cxxVariableNameLookup>TSecureId::iId</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1915"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+</cxxClass>

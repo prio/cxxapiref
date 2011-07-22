@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_m_beating">
+	<apiName>MBeating</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassAbstract/>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="2026"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="2011"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="2044"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>Heartbeat timer call-back handling interface.</p>
+			<p>The interface provides a pair of functions to handle the beating and synchronisation of heartbeat timers.</p>
+			<p>The <xref href="class_c_heartbeat.xml#class_c_heartbeat">CHeartbeat</xref> active object class uses an object implementing the <xref href="class_m_beating.xml#class_m_beating">MBeating</xref> interface.</p>
+			<p>
+				<xref href="class_c_heartbeat.xml#class_c_heartbeat_1a3e4b0b6dd388edcbe90d4a02d493fc16">CHeartbeat::Start</xref> </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_m_beating_1a441af67290dcb9de592a8831c1a7f7f5">
+		<apiName>Beat</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionPureVirtual/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>MBeating</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual void Beat()=0</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MBeating::Beat()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2034"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Handles a regular heartbeat timer event.</p>
+				<p>This type of event is one where the timer completes in synchronisation with the system clock. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_m_beating_1a7655610cad46142d3d4acb8c814d3cd1">
+		<apiName>Synchronize</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionPureVirtual/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>MBeating</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual void Synchronize()=0</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MBeating::Synchronize()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2043"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Synchronises the heartbeat timer with system clock.</p>
+				<p>This function handles a heartbeat timer event where the timer completes out of synchronisation with the system clock, (i.e. one or more heartbeats have been missed). </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+</cxxClass>

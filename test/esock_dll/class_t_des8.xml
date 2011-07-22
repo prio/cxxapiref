@@ -1,0 +1,2443 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_t_des8">
+	<apiName>TDes8</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassDerivations>
+				<cxxClassDerivation>
+					<cxxClassDerivationAccessSpecifier value="public"/>
+					<cxxClassBaseClass href="class_t_des_c8.xml#class_t_des_c8">TDesC8</cxxClassBaseClass>
+				</cxxClassDerivation>
+			</cxxClassDerivations>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="225"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="203"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="316"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>Abstract base class for 8-bit modifiable descriptors.</p>
+			<p>The class encapsulates the data member containing the maximum length of data represented by an 8-bit descriptor. It also provides member functions through which the data can be modified.</p>
+			<p>The class adds to the behaviour provided by <xref href="class_t_des_c8.xml#class_t_des_c8">TDesC8</xref>.</p>
+			<p>This class cannot be instantiated as it is intended to form part of a class hierarchy; it provides a well defined part of descriptor behaviour. It can, however, be passed as an argument type for functions which need to both modify and access descriptor data.</p>
+			<p>
+				<xref href="e32cmn_8h.xml#e32cmn_8h_1a202e8b5f6472069ccf687335fd049ebb">TDes</xref> </p>
+			<p>
+				<xref href="class_t_des_c8.xml#class_t_des_c8">TDesC8</xref> </p>
+			<p>
+				<xref href="class_t_des_c16.xml#class_t_des_c16">TDesC16</xref> </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_t_des8_1a85dc141f2d766eec81b5d54d7592aade">
+		<apiName>operator=</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TDes8 &amp; operator=(const TUint8 *aString)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::operator=(const TUint8 *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="e32def_8h.xml#_1aae4399ce3f10d6c2b5ec96a13bbb5881">TUint8</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aString</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A pointer to a zero-terminated string.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="227"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="802"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="815"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Copies data into this descriptor replacing any existing data.</p>
+				<p>The length of this descriptor is set to reflect the new data.</p>
+				<p>A reference to this, the target descriptor.</p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>USER 23, if the length of the string, excluding the zero terminator, is greater than the maximum length of this (target) descriptor. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1a5f57f96430e6927871b2914814d354c3">
+		<apiName>operator=</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TDes8 &amp; operator=(const TDesC8 &amp;aDes)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::operator=(const TDesC8 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote>An 8-bit non-modifiable descriptor.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="228"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="820"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="833"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Copies data into this descriptor replacing any existing data.</p>
+				<p>The length of this descriptor is set to reflect the new data.</p>
+				<p>A reference to this, the target descriptor.</p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>USER 23, if the length of the descriptor aDes is greater than the maximum length of this (target) descriptor. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1a2e767ce5ee054739e9666231791f0bfc">
+		<apiName>operator=</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TDes8 &amp; operator=(const TDes8 &amp;aDes)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::operator=(const TDes8 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote>An 8-bit modifiable descriptor.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="229"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="838"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="851"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Copies data into this descriptor replacing any existing data.</p>
+				<p>The length of this descriptor is set to reflect the new data.</p>
+				<p>A reference to this, the target descriptor.</p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>USER 23, if the length of the descriptor aDes is greater than the maximum length of this (target) descriptor. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1a4885d7588375c1775a26e09c64cb76a0">
+		<apiName>MaxLength</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt MaxLength() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::MaxLength()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="230"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="912"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="921"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets the maximum length of the descriptor.</p>
+				<p>This is the upper limit for the number of 8-bit values or data items that the descriptor can represent.</p>
+				<p>The maximum length of data that the descriptor can represent. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1ab1609cb4a777d1cf5d2cc33b7a7c0bf6">
+		<apiName>MaxSize</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt MaxSize() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::MaxSize()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="231"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="926"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="935"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets the maximum size of the descriptor.</p>
+				<p>This is the upper limit for the number of bytes which the data represented by the descriptor can occupy.</p>
+				<p>The maximum size of the descriptor data. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1a353d7f76f79a585dda2a819bd985b6b6">
+		<apiName>operator[]</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>const <apiRelation href="e32def_8h.xml#_1aae4399ce3f10d6c2b5ec96a13bbb5881">TUint8</apiRelation> &amp;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline const TUint8 &amp; operator[](TInt anIndex) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::operator[](TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_t_des_c8.xml#class_t_des_c8_1a1680866065b25aa3e33a765aeb973305">TDesC8::operator[](TInt)const</cxxFunctionReimplemented>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The position of the data item within this descriptor&apos;s data. This is an offset value; a zero value refers to the leftmost data position.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="232"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="875"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="888"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets a const reference to a single data item within this descriptor&apos;s data.</p>
+				<p>A const reference to the data item at the specified position.</p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>USER 21, if anIndex is negative or is greater than or equal to the current length of this descriptor. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1a5463c61ea311741e30fdce694d9068a3">
+		<apiName>operator[]</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1aae4399ce3f10d6c2b5ec96a13bbb5881">TUint8</apiRelation> &amp;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TUint8 &amp; operator[](TInt anIndex)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::operator[](TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The position of the data item within this descriptor&apos;s data. This is an offset value; a zero value refers to the leftmost data position.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="233"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="893"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="907"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets a non-const reference to a single data item within this descriptor&apos;s data.</p>
+				<p>A non-const reference to the data item at the specified position.</p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>USER 21, if anIndex is negative or is greater than or equal to the current length of this descriptor. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1a8c622a6d58a81a34ac550c14a4ac7c79">
+		<apiName>operator+=</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TDes8 &amp; operator+=(const TDesC8 &amp;aDes)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::operator+=(const TDesC8 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote>An-8 bit non-modifiable descriptor whose data is to be appended.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="234"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="856"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="870"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Appends data onto the end of this descriptor&apos;s data and returns a reference to this descriptor.</p>
+				<p>The length of this descriptor is incremented to reflect the new content.</p>
+				<p>A reference to this descriptor.</p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>USER 23, if the resulting length of this descriptor is greater than its maximum length. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1a3caba3d3661d18e843646737844112fe">
+		<apiName>Zero</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Zero()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::Zero()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="235"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1a604db7875a96d7fef31e52df60043b69">
+		<apiName>SetLength</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void SetLength(TInt aLength)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::SetLength(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="236"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1ab07f26737e250615b03e8e31888a6442">
+		<apiName>SetMax</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void SetMax()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::SetMax()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="237"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1ad3db4c4881f00062c7c0472196649e05">
+		<apiName>Copy</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Copy(const TDesC8 &amp;aDes)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::Copy(const TDesC8 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="238"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1aacad850143033a8d012b777524d4edc2">
+		<apiName>Copy</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Copy(const TUint8 *aBuf, TInt aLength)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::Copy(const TUint8 *,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="e32def_8h.xml#_1aae4399ce3f10d6c2b5ec96a13bbb5881">TUint8</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aBuf</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="239"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1a7a79a0d6e27e493c303894a2adbcb84d">
+		<apiName>Copy</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Copy(const TUint8 *aString)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::Copy(const TUint8 *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="e32def_8h.xml#_1aae4399ce3f10d6c2b5ec96a13bbb5881">TUint8</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aString</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="240"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1aba423c3404b37bdbabf83a964d8f652a">
+		<apiName>Copy</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Copy(const TDesC16 &amp;aDes)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::Copy(const TDesC16 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC16</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="241"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1ab36b3c6363c5e68e876546d2b91bf388">
+		<apiName>Append</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Append(TChar aChar)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::Append(TChar)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_char.xml#class_t_char">TChar</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aChar</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="242"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1a9d32a093af2cff81573aca215f97a5e6">
+		<apiName>Append</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Append(const TDesC8 &amp;aDes)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::Append(const TDesC8 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="243"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1abdf1c1ddb790de64de7e7047255bfc34">
+		<apiName>Append</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Append(const TDesC16 &amp;aDes)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::Append(const TDesC16 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC16</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="244"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1a6abdd144796dbedd9037d5aab1ca710c">
+		<apiName>Append</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Append(const TUint8 *aBuf, TInt aLength)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::Append(const TUint8 *,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="e32def_8h.xml#_1aae4399ce3f10d6c2b5ec96a13bbb5881">TUint8</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aBuf</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="245"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1a7f2d0b8c9afd8caec5d2e30a43de6b22">
+		<apiName>Fill</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Fill(TChar aChar)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::Fill(TChar)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_char.xml#class_t_char">TChar</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aChar</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="246"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1a740e139465b33239bca05cb7c1f013b8">
+		<apiName>Fill</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Fill(TChar aChar, TInt aLength)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::Fill(TChar,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_char.xml#class_t_char">TChar</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aChar</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="247"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1a45bbe72aef5c763ed7590e578827b6a9">
+		<apiName>FillZ</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void FillZ()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::FillZ()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="248"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1a16651a43b72baedceb2000af1c27d3d9">
+		<apiName>FillZ</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void FillZ(TInt aLength)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::FillZ(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="249"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1a972d517bd14934468cd3813d614d37f4">
+		<apiName>Num</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Num(TInt64 aVal)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::Num(TInt64)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a05bf37b696038fef93385278ebf8ee16">TInt64</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aVal</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="250"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1a2a674e1a7843b49c2c67d94ac11b4837">
+		<apiName>Num</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Num(TUint64 aVal, TRadix aRadix)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::Num(TUint64,TRadix)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1ab392502765df1d3a9263b05a43f882da">TUint64</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aVal</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1a3c5aafcc61c225e207223c289446de1e">TRadix</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aRadix</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="251"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1a7781ce3c7fb0ef9d04ecbe3897e1d647">
+		<apiName>NumFixedWidth</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void NumFixedWidth(TUint aVal, TRadix aRadix, TInt aWidth)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::NumFixedWidth(TUint,TRadix,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aVal</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1a3c5aafcc61c225e207223c289446de1e">TRadix</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aRadix</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aWidth</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="252"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1aa15f1b38d56d0538c7e1741728ba9a12">
+		<apiName>AppendNum</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void AppendNum(TInt64 aVal)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::AppendNum(TInt64)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a05bf37b696038fef93385278ebf8ee16">TInt64</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aVal</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="253"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1ae18708a8c0be205c9dbc8eebd4c14efd">
+		<apiName>AppendNum</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void AppendNum(TUint64 aVal, TRadix aRadix)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::AppendNum(TUint64,TRadix)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1ab392502765df1d3a9263b05a43f882da">TUint64</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aVal</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1a3c5aafcc61c225e207223c289446de1e">TRadix</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aRadix</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="254"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1a95f17ab394a29cbeb2d13ca0e532215a">
+		<apiName>AppendNumFixedWidth</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void AppendNumFixedWidth(TUint aVal, TRadix aRadix, TInt aWidth)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::AppendNumFixedWidth(TUint,TRadix,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aVal</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1a3c5aafcc61c225e207223c289446de1e">TRadix</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aRadix</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aWidth</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="255"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1a1cdda4cade298130cdf5c9de47585bbd">
+		<apiName>LeftTPtr</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_ptr8.xml#class_t_ptr8">TPtr8</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TPtr8 LeftTPtr(TInt aLength) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::LeftTPtr(TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="257"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1a80affdf801044b84bde19dbde7cacd45">
+		<apiName>RightTPtr</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_ptr8.xml#class_t_ptr8">TPtr8</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TPtr8 RightTPtr(TInt aLength) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::RightTPtr(TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="258"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1a3bbfa636eaa1ecfdc460ea59252303f0">
+		<apiName>MidTPtr</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_ptr8.xml#class_t_ptr8">TPtr8</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TPtr8 MidTPtr(TInt aPos) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::MidTPtr(TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPos</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="259"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1adb6130ad10b6f7e3ce4149372a6d03ac">
+		<apiName>MidTPtr</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_ptr8.xml#class_t_ptr8">TPtr8</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TPtr8 MidTPtr(TInt aPos, TInt aLength) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::MidTPtr(TInt,TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPos</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="260"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1ac50eaa133f05334702869c1c1c13feb2">
+		<apiName>PtrZ</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C const <apiRelation href="e32def_8h.xml#_1aae4399ce3f10d6c2b5ec96a13bbb5881">TUint8</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C const TUint8 * PtrZ()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::PtrZ()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="261"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1ac93e39f82c83033bdf35381898ea6bb1">
+		<apiName>CopyF</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void CopyF(const TDesC8 &amp;aDes)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::CopyF(const TDesC8 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="262"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1a1eff9bd0acae43453dd20bc0de0c8b9e">
+		<apiName>CopyC</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void CopyC(const TDesC8 &amp;aDes)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::CopyC(const TDesC8 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="263"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1aa686c20f307a930f906a01eb5e5ef41e">
+		<apiName>CopyLC</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void CopyLC(const TDesC8 &amp;aDes)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::CopyLC(const TDesC8 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="264"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1a58b7927066ee9e0f9d7ba173f0419059">
+		<apiName>CopyUC</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void CopyUC(const TDesC8 &amp;aDes)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::CopyUC(const TDesC8 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="265"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1a5b231c483ec6166e8e622c8aa327503e">
+		<apiName>CopyCP</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void CopyCP(const TDesC8 &amp;aDes)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::CopyCP(const TDesC8 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="266"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1a8be3b79eb71dfff295100f01166d4c72">
+		<apiName>Swap</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Swap(TDes8 &amp;aDes)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::Swap(TDes8 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="267"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1ae4cd8835fbc2878e35685240f423109c">
+		<apiName>AppendFill</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void AppendFill(TChar aChar, TInt aLength)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::AppendFill(TChar,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_char.xml#class_t_char">TChar</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aChar</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="268"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1a608196a08c290197ca9fdff90b3bae9a">
+		<apiName>ZeroTerminate</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void ZeroTerminate()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::ZeroTerminate()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="269"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1a47fd36fe5742a8035322cd39668d083a">
+		<apiName>Fold</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Fold()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::Fold()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="270"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1afb9fa5d1232377484dd71de6caf64d5b">
+		<apiName>Collate</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Collate()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::Collate()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="271"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1a66f7877c10554d1688c1b01458ac7b99">
+		<apiName>LowerCase</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void LowerCase()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::LowerCase()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="272"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1a42eb9eacff421abdd2cc7ea2add93cb0">
+		<apiName>UpperCase</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void UpperCase()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::UpperCase()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="273"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1a25c7bbd544b3b458bfd1216ebb52cdab">
+		<apiName>Capitalize</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Capitalize()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::Capitalize()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="274"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1aef88e2da2df5e2ca5723572bb13e4660">
+		<apiName>Repeat</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Repeat(const TUint8 *aBuf, TInt aLength)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::Repeat(const TUint8 *,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="e32def_8h.xml#_1aae4399ce3f10d6c2b5ec96a13bbb5881">TUint8</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aBuf</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="275"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1afb6c5c557233378d27362224aa75f378">
+		<apiName>Repeat</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Repeat(const TDesC8 &amp;aDes)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::Repeat(const TDesC8 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="276"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1a1e8dd328e92fe3465c5513682f9f0a53">
+		<apiName>Trim</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Trim()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::Trim()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="277"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1a06b9fd88b9c79fe01559ab341d9f62a3">
+		<apiName>TrimAll</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void TrimAll()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::TrimAll()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="278"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1a114b4dc1610dbb8a196bd9a27aef6c7f">
+		<apiName>TrimLeft</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void TrimLeft()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::TrimLeft()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="279"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1a90e4a36fcc65d6cf45e9c03cd3b4b57d">
+		<apiName>TrimRight</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void TrimRight()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::TrimRight()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="280"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1a80722ddb51d12650b09355315951093e">
+		<apiName>Insert</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Insert(TInt aPos, const TDesC8 &amp;aDes)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::Insert(TInt,const TDesC8 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPos</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="281"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1a8acad58b70427c0252e6d798ebcea266">
+		<apiName>Delete</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Delete(TInt aPos, TInt aLength)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::Delete(TInt,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPos</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="282"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1a281122aa71d1209d5eeb016b9c372198">
+		<apiName>Replace</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Replace(TInt aPos, TInt aLength, const TDesC8 &amp;aDes)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::Replace(TInt,TInt,const TDesC8 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPos</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="283"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1a5360799a5849aaa6876969f249153b8e">
+		<apiName>Justify</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Justify(const TDesC8 &amp;aDes, TInt aWidth, TAlign anAlignment, TChar aFill)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::Justify(const TDesC8 &amp;,TInt,TAlign,TChar)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aWidth</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1a403dfae6dd6508a34e8d9817523578a8">TAlign</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anAlignment</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_char.xml#class_t_char">TChar</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFill</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="284"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1a408a8762b95a3d3bf15ad6acf434cb9c">
+		<apiName>NumFixedWidthUC</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void NumFixedWidthUC(TUint aVal, TRadix aRadix, TInt aWidth)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::NumFixedWidthUC(TUint,TRadix,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aVal</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1a3c5aafcc61c225e207223c289446de1e">TRadix</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aRadix</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aWidth</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="285"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1a380df61081ab99cf49ce249a1088a82e">
+		<apiName>NumUC</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void NumUC(TUint64 aVal, TRadix aRadix=EDecimal)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::NumUC(TUint64,TRadix)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1ab392502765df1d3a9263b05a43f882da">TUint64</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aVal</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1a3c5aafcc61c225e207223c289446de1e">TRadix</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aRadix</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>EDecimal</cxxFunctionParameterDefaultValue>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="286"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1a1fe405f5e62354fe7735dfe0dc34d505">
+		<apiName>Num</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Num(TReal aVal, const TRealFormat &amp;aFormat) __SOFTFP</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::Num(TReal,const TRealFormat &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a66e591a730f9c72e5990f3541bbb67bd">TReal</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aVal</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_real_format.xml#class_t_real_format">TRealFormat</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFormat</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="287"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1a5563b538095beb9079cf83e026b8a114">
+		<apiName>AppendNumFixedWidthUC</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void AppendNumFixedWidthUC(TUint aVal, TRadix aRadix, TInt aWidth)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::AppendNumFixedWidthUC(TUint,TRadix,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aVal</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1a3c5aafcc61c225e207223c289446de1e">TRadix</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aRadix</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aWidth</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="288"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1a5d2cd4f5e3dd3fa1e3978ea67fa5e78b">
+		<apiName>AppendNum</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt AppendNum(TReal aVal, const TRealFormat &amp;aFormat) __SOFTFP</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::AppendNum(TReal,const TRealFormat &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a66e591a730f9c72e5990f3541bbb67bd">TReal</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aVal</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_real_format.xml#class_t_real_format">TRealFormat</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFormat</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="289"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1a81c621e23302b43a76e232a5c5430ebf">
+		<apiName>AppendNumUC</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void AppendNumUC(TUint64 aVal, TRadix aRadix=EDecimal)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::AppendNumUC(TUint64,TRadix)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1ab392502765df1d3a9263b05a43f882da">TUint64</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aVal</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1a3c5aafcc61c225e207223c289446de1e">TRadix</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aRadix</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>EDecimal</cxxFunctionParameterDefaultValue>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="290"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1abb88f856ffb7dc281aa400cce0e25ca9">
+		<apiName>Format</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Format(TRefByValue&lt; const TDesC8 &gt; aFmt,...)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::Format(TRefByValue&lt; const TDesC8 &gt;,...)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_ref_by_value.xml#class_t_ref_by_value">TRefByValue</apiRelation>&lt; const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &gt;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFmt</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>...</cxxFunctionParameterDeclaredType>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="291"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1a0005bb67bfbb654d4570e21ff79822f7">
+		<apiName>FormatList</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void FormatList(const TDesC8 &amp;aFmt, VA_LIST aList)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::FormatList(const TDesC8 &amp;,VA_LIST)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFmt</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acd7bb7f92a57f08c5904a9311a01114d">VA_LIST</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aList</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="292"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1a982c2b68d9b4c9380f8f90eed51494ce">
+		<apiName>AppendJustify</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void AppendJustify(const TDesC8 &amp;Des, TInt aWidth, TAlign anAlignment, TChar aFill)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::AppendJustify(const TDesC8 &amp;,TInt,TAlign,TChar)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>Des</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aWidth</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1a403dfae6dd6508a34e8d9817523578a8">TAlign</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anAlignment</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_char.xml#class_t_char">TChar</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFill</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="293"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1acae7807094aa201b4e5e188b6c892c13">
+		<apiName>AppendJustify</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void AppendJustify(const TDesC8 &amp;Des, TInt aLength, TInt aWidth, TAlign anAlignment, TChar aFill)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::AppendJustify(const TDesC8 &amp;,TInt,TInt,TAlign,TChar)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>Des</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aWidth</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1a403dfae6dd6508a34e8d9817523578a8">TAlign</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anAlignment</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_char.xml#class_t_char">TChar</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFill</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="294"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1af9d3bdd02eeef1bae8ac01bd701dac83">
+		<apiName>AppendJustify</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void AppendJustify(const TUint8 *aString, TInt aWidth, TAlign anAlignment, TChar aFill)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::AppendJustify(const TUint8 *,TInt,TAlign,TChar)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="e32def_8h.xml#_1aae4399ce3f10d6c2b5ec96a13bbb5881">TUint8</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aString</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aWidth</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1a403dfae6dd6508a34e8d9817523578a8">TAlign</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anAlignment</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_char.xml#class_t_char">TChar</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFill</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="295"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1a51daf4688549959f73f010dc12645920">
+		<apiName>AppendJustify</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void AppendJustify(const TUint8 *aString, TInt aLength, TInt aWidth, TAlign anAlignment, TChar aFill)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::AppendJustify(const TUint8 *,TInt,TInt,TAlign,TChar)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="e32def_8h.xml#_1aae4399ce3f10d6c2b5ec96a13bbb5881">TUint8</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aString</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aWidth</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1a403dfae6dd6508a34e8d9817523578a8">TAlign</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anAlignment</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_char.xml#class_t_char">TChar</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFill</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="296"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1a25823b67f3dfd9988e31e8e4f4f082d7">
+		<apiName>AppendFormat</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void AppendFormat(TRefByValue&lt; const TDesC8 &gt; aFmt, TDes8Overflow *aOverflowHandler,...)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::AppendFormat(TRefByValue&lt; const TDesC8 &gt;,TDes8Overflow *,...)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_ref_by_value.xml#class_t_ref_by_value">TRefByValue</apiRelation>&lt; const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &gt;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFmt</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8_overflow.xml#class_t_des8_overflow">TDes8Overflow</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aOverflowHandler</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>...</cxxFunctionParameterDeclaredType>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="297"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1aaa13d5d26670d6a124459867df0018e1">
+		<apiName>AppendFormat</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void AppendFormat(TRefByValue&lt; const TDesC8 &gt; aFmt,...)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::AppendFormat(TRefByValue&lt; const TDesC8 &gt;,...)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_ref_by_value.xml#class_t_ref_by_value">TRefByValue</apiRelation>&lt; const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &gt;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFmt</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>...</cxxFunctionParameterDeclaredType>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="298"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1a9fc292ed72c1a8563c02de56919198ef">
+		<apiName>AppendFormatList</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void AppendFormatList(const TDesC8 &amp;aFmt, VA_LIST aList, TDes8Overflow *aOverflowHandler=NULL)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::AppendFormatList(const TDesC8 &amp;,VA_LIST,TDes8Overflow *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c8.xml#class_t_des_c8">TDesC8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFmt</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acd7bb7f92a57f08c5904a9311a01114d">VA_LIST</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aList</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8_overflow.xml#class_t_des8_overflow">TDes8Overflow</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aOverflowHandler</cxxFunctionParameterDeclarationName>
+						<cxxFunctionParameterDefaultValue>NULL</cxxFunctionParameterDefaultValue>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="299"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1a023ecc0355e07935b0ea2536ff3b6161">
+		<apiName>Expand</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_ptr16.xml#class_t_ptr16">TPtr16</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TPtr16 Expand()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::Expand()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="300"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1aabd33add299e33ad0054aa13b13a18be">
+		<apiName>Collapse</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Collapse()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::Collapse()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="301"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1a92772706d9f38959ee09762621c114ce">
+		<apiName>TDes8</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TDes8(TInt aType, TInt aLength, TInt aMaxLength)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::TDes8(TInt,TInt,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aType</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMaxLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="304"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1a0eac23e3a3a1ce118156c7f69e20b784">
+		<apiName>WPtr</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1aae4399ce3f10d6c2b5ec96a13bbb5881">TUint8</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TUint8 * WPtr() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::WPtr()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="305"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="940"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="941"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1a041a61bd81821b144dcb7ed76c934f0f">
+		<apiName>TDes8</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TDes8()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::TDes8()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="306"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="306"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="306"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1a7f3574c8fe46dd2db67f433819a79382">
+		<apiName>DoAppendNum</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>void DoAppendNum(TUint64 aVal, TRadix aRadix, TUint aA, TInt aW)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::DoAppendNum(TUint64,TRadix,TUint,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1ab392502765df1d3a9263b05a43f882da">TUint64</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aVal</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="_c_s___c_l_i_8_c_p_p.xml#_1a3c5aafcc61c225e207223c289446de1e">TRadix</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aRadix</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aA</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aW</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="311"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_des8_1ada9c883c2af1d93f60882ee4d967c0dc">
+		<apiName>DoPadAppendNum</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes8</cxxFunctionScopedName>
+				<cxxFunctionPrototype>void DoPadAppendNum(TInt aLength, TInt aW, const TUint8 *aBuf)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes8::DoPadAppendNum(TInt,TInt,const TUint8 *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aW</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="e32def_8h.xml#_1aae4399ce3f10d6c2b5ec96a13bbb5881">TUint8</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aBuf</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="312"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxVariable id="class_t_des8_1ade4b347878e57a9c7e6b8d9fb787a2c5">
+		<apiName>iMaxLength</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="protected"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TDes8</cxxVariableScopedName>
+				<cxxVariablePrototype>TInt iMaxLength</cxxVariablePrototype>
+				<cxxVariableNameLookup>TDes8::iMaxLength</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="314"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_t_des8_1a7317b575ff8f4d0e77add42ffafa0464">
+		<apiName>__DECLARE_TEST</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="protected"/>
+				<cxxVariableDeclaredType/>
+				<cxxVariableScopedName>TDes8</cxxVariableScopedName>
+				<cxxVariablePrototype>__DECLARE_TEST</cxxVariablePrototype>
+				<cxxVariableNameLookup>TDes8::__DECLARE_TEST</cxxVariableNameLookup>
+				<cxxVariableReimplemented href="class_t_des_c8.xml#class_t_des_c8_1a013229cafab8b6bb75e7f382ed348623">TDesC8::__DECLARE_TEST</cxxVariableReimplemented>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32des8.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="315"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxClassInherits>
+		<cxxClassInheritsDetail>
+			<cxxClassFunctionInherited href="class_t_des8.xml#class_t_des_c8_1ae12913a18e1f53ffe32008e363040bb7">TDesC8::Alloc()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_des8.xml#class_t_des_c8_1acb9377a3daa8007540a971c45226b07d">TDesC8::AllocL()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_des8.xml#class_t_des_c8_1a30b7f032063db3b4542d46c3841afa78">TDesC8::AllocLC()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_des8.xml#class_t_des_c8_1acc5086e9e39151f226053c6b2333865a">TDesC8::AtC(TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_des8.xml#class_t_des_c8_1aa11013768a16980f98da4868fff4b027">TDesC8::Compare(const TDesC8 &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_des8.xml#class_t_des_c8_1acdb8a024b2e0d38aa7edd513a2061fdd">TDesC8::CompareC(const TDesC8 &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_des8.xml#class_t_des_c8_1a17a6d8c18c87623e927513db81fbb8e4">TDesC8::CompareF(const TDesC8 &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_des8.xml#class_t_des_c8_1ab865b94b246b8937af396edb0f11b315">TDesC8::DoSetLength(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_des8.xml#class_t_des_c8_1a4e45eae201e3631a2717540dfc08e0d4">TDesC8::Find(const TDesC8 &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_des8.xml#class_t_des_c8_1a86474526c8fa3ae05df159d69a478d70">TDesC8::Find(const TUint8 *,TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_des8.xml#class_t_des_c8_1aaba87de7a4cd86d300c1d16eac26092a">TDesC8::FindC(const TDesC8 &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_des8.xml#class_t_des_c8_1ae6c7758bc62eede7e077eb4f888a9d84">TDesC8::FindC(const TUint8 *,TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_des8.xml#class_t_des_c8_1a2fdef2be0f7f3d5deddfebd38ad57de9">TDesC8::FindF(const TDesC8 &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_des8.xml#class_t_des_c8_1a8882caf3bcea2faa87ff444fd3258e25">TDesC8::FindF(const TUint8 *,TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_des8.xml#class_t_des_c8_1a5d6a54a323fcd3530ea507bd1382bf34">TDesC8::Left(TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_des8.xml#class_t_des_c8_1a9790499cbe5ab4425c744530ef139d0c">TDesC8::Length()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_des8.xml#class_t_des_c8_1aef3e8cccdb3320822b33c783645302c1">TDesC8::Locate(TChar)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_des8.xml#class_t_des_c8_1a5d83bc70f8d942f9469a0c548acb4f7d">TDesC8::LocateF(TChar)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_des8.xml#class_t_des_c8_1a2cda493bafd84cc21d8e57e8df6f529d">TDesC8::LocateReverse(TChar)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_des8.xml#class_t_des_c8_1a74bbbfbda06aea8aa657e7d54c90a2af">TDesC8::LocateReverseF(TChar)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_des8.xml#class_t_des_c8_1a4eaea8ec34e303e2d26ea58ac55ef446">TDesC8::Match(const TDesC8 &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_des8.xml#class_t_des_c8_1adbfe3236b60a49aafee78f335bd37784">TDesC8::MatchC(const TDesC8 &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_des8.xml#class_t_des_c8_1a7c062d7f65e25939a84092ee1ac85938">TDesC8::MatchF(const TDesC8 &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_des8.xml#class_t_des_c8_1a20192ee422ae4dd2e219e181cdbb7d04">TDesC8::Mid(TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_des8.xml#class_t_des_c8_1a04f74ea7ca876212965a6a13b1871ae0">TDesC8::Mid(TInt,TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_des8.xml#class_t_des_c8_1a58f6fdadc505cc3cc47234d269256ac5">TDesC8::Ptr()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_des8.xml#class_t_des_c8_1a4762d15e4bda1fb58eb6204f5fbe06a1">TDesC8::Right(TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_des8.xml#class_t_des_c8_1a5ac9b8da8957c53f5e2c6367d846fb91">TDesC8::Size()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_des8.xml#class_t_des_c8_1af3c13c6c2540d1f6ef322b72a9b90588">TDesC8::TDesC8()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_des8.xml#class_t_des_c8_1ab545269513682dd7202c3dbfe699c186">TDesC8::TDesC8(TInt,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_des8.xml#class_t_des_c8_1a9f3e1ab20d4fb8656c01004da3952006">TDesC8::Type()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_des8.xml#class_t_des_c8_1a79f00085c845f9859d08287f7ee46817">TDesC8::operator!=(const TDesC8 &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_des8.xml#class_t_des_c8_1a627d1d8aea5e180c8572e766ae428137">TDesC8::operator&lt;(const TDesC8 &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_des8.xml#class_t_des_c8_1a9cc68dbf549e0f6363872eaf4f44d60d">TDesC8::operator&lt;=(const TDesC8 &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_des8.xml#class_t_des_c8_1a330f3b1519445df03b5a47536730056a">TDesC8::operator==(const TDesC8 &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_des8.xml#class_t_des_c8_1a8adcb79832fab99c383d395377b71e11">TDesC8::operator&gt;(const TDesC8 &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_des8.xml#class_t_des_c8_1a33883a685b25ec649fe4d3c3270b23df">TDesC8::operator&gt;=(const TDesC8 &amp;)const</cxxClassFunctionInherited>
+		</cxxClassInheritsDetail>
+	</cxxClassInherits>
+</cxxClass>

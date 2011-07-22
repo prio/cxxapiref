@@ -1,0 +1,357 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_t_swizzle_c">
+	<apiName>TSwizzleC</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassDerivations>
+				<cxxClassDerivation>
+					<cxxClassDerivationAccessSpecifier value="public"/>
+					<cxxClassBaseClass href="class_t_swizzle_c_base.xml#class_t_swizzle_c_base">TSwizzleCBase</cxxClassBaseClass>
+				</cxxClassDerivation>
+			</cxxClassDerivations>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/s32std.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="255"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/s32std.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="254"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="269"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>Maintains a dual representation for a constant object. The representation is:</p>
+			<p>by stream id, if the object is not in memory (the stream contains the external representation of that object).</p>
+			<p>by pointer, if the object is in memory.</p>
+			<p>The template class defines the type of object for which the swizzle is a representation. Access to the to the represented object is available through the swizzle, but is limited. The represented object cannot be changed.</p>
+			<p>Maintaining a dual representation for an object allows the loading of objects into memory from a store to be deferred; this is particularly important in complex applications. </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_t_swizzle_c_1ae2f5773e9df7d265be72c38e9009c457">
+		<apiName>TSwizzleC</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TSwizzleC</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TSwizzleC()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSwizzleC::TSwizzleC()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="259"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="259"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="259"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Constructs an uninitialised swizzle. It is necessary because there are also non-default constructors in this class. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_swizzle_c_1a888ce9da09888e9c25d7b4ce2bf096bf">
+		<apiName>TSwizzleC</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TSwizzleC</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TSwizzleC(const T *aPtr)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSwizzleC::TSwizzleC(const T *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const T *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPtr</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A pointer to a class T type object. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="260"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="310"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="316"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Constructs a swizzle for a class T type object and represents the object by pointer.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_swizzle_c_1aded7b8a6f165a3543d5cf1676e7453ec">
+		<apiName>TSwizzleC</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TSwizzleC</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TSwizzleC(TStreamId anId)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSwizzleC::TSwizzleC(TStreamId)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_stream_id.xml#class_t_stream_id">TStreamId</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anId</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The stream id of a stream containing the external representation of an object of type class T. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="261"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="318"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="325"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Constructs a swizzle for a class T type object and represents the object as a stream id.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_swizzle_c_1afe95e18a2478ef497093fb1a2f678350">
+		<apiName>TSwizzleC</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TSwizzleC</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TSwizzleC(TSwizzle&lt; T &gt; aSwizzle)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSwizzleC::TSwizzleC(TSwizzle&lt; T &gt;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_swizzle.xml#class_t_swizzle">TSwizzle</apiRelation>&lt; T &gt;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSwizzle</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The swizzle whose representation of the class T type object is to be copied to this swizzle. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="262"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="327"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="339"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Constructs a swizzle for a class T type object that is currently represented by another swizzle.</p>
+				<p>The representation of the class T type object is the same as its representation by the specified swizzle, i.e. if the specified swizzle represents the object as a pointer, then this newly constructed swizzle also represents the object as a pointer.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_swizzle_c_1aebbb3a3eb1d0c6809877b6ffd9efb873">
+		<apiName>operator=</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="class_t_swizzle_c.xml#class_t_swizzle_c">TSwizzleC</apiRelation>&lt; T &gt; &amp;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TSwizzleC</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TSwizzleC&lt; T &gt; &amp; operator=(const T *aPtr)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSwizzleC::operator=(const T *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const T *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPtr</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A pointer to an object of type T which the swizzle is to represent. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="263"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="341"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="348"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Sets this swizzle to represent the in-memory type T object, pointed to by the specified T* pointer.</p>
+				<p>A reference to this swizzle representing the object of type T. </p>
+				<p>
+					<xref href="class_t_swizzle.xml#class_t_swizzle_1ac74c1fa04aaac1c887a017260aab9e30">TSwizzle::operator=()</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_swizzle_c_1a410615f60f8798fbe12ca13675821d41">
+		<apiName>AsPtr</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>const T *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TSwizzleC</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline const T * AsPtr() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSwizzleC::AsPtr()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="264"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="350"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="361"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Returns a constant pointer to the object which this swizzle represents.</p>
+				<p>Note:</p>
+				<p>The in memory object cannot be changed through this swizzle.</p>
+				<p>To access members of the object, the indirect component selector <xref href="class_t_swizzle_c.xml#class_t_swizzle_c_1acee25b119173e8f43c6c9523979869b4">operator-&gt;()</xref> can be used.</p>
+				<p>A const pointer to the class T type object represented by this swizzle. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_swizzle_c_1a7a8b98f4a9c59d8327131d07d8a39f63">
+		<apiName>operator const T *</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TSwizzleC</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline operator const T *() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSwizzleC::operator const T *()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="265"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="363"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="364"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_swizzle_c_1ab984cdcf31a43a7325373c50cca403bf">
+		<apiName>operator*</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>const T &amp;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TSwizzleC</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline const T &amp; operator*() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSwizzleC::operator*()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="266"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="366"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="371"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Returns a const reference to the type T object which this swizzle represents.</p>
+				<p>A const reference to the type T object represented by this swizzle. </p>
+				<p>
+					<xref href="class_t_swizzle.xml#class_t_swizzle_1ad017f0db3e53afe4dd3ea8a925571019">TSwizzle::operator*()</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_swizzle_c_1acee25b119173e8f43c6c9523979869b4">
+		<apiName>operator-&gt;</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>const T *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TSwizzleC</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline const T * operator-&gt;() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSwizzleC::operator-&gt;()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="267"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="373"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="384"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gives access to members of the type T object which this swizzle represents.</p>
+				<p>Note:</p>
+				<p>use the <xref href="class_t_swizzle_c.xml#class_t_swizzle_c_1a410615f60f8798fbe12ca13675821d41">AsPtr()</xref> member function to return a pointer to the object itself.</p>
+				<p>the type T object cannot be changed through this operator.</p>
+				<p>A const pointer to the T type object; not explicitly accessible. </p>
+				<p>
+					<xref href="class_t_swizzle.xml#class_t_swizzle_1a53b026389bba49e60b7911a148f42ebf">TSwizzle::operator-&gt;()</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_swizzle_c_1a68c6c5af4cc4ccb6b4ab2e08503a5861">
+		<apiName>ExternalizeL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TSwizzleC</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void ExternalizeL(RWriteStream &amp;aStream) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TSwizzleC::ExternalizeL(RWriteStream &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_write_stream.xml#class_r_write_stream">RWriteStream</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStream</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Stream to which the stream id should be externalised </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/s32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="268"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="386"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="404"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Externalises the stream id of the stream associated with this swizzle.</p>
+				<p>This function presupposes that:</p>
+				<p>a store map, i.e. an object of type <xref href="class_c_store_map.xml#class_c_store_map">CStoreMap</xref>, has been constructed</p>
+				<p>the id of the stream containing the external representation of the &lt;class  T&gt; object has been bound to this swizzle and added to the store map.</p>
+				<p>the concrete stream referenced by aStream has been constructed, specifying the store map as an externalizer.</p>
+				<p>The presence of this function means that the standard templated <xref href="cs__subconn_8cpp.xml#cs__subconn_8cpp_1aed202e99a694b96c29b80fb93177bc29">operator&lt;&lt;()</xref> can be used.</p>
+				<p>
+					<xref href="class_c_store_map.xml#class_c_store_map">CStoreMap</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxClassInherits>
+		<cxxClassInheritsDetail>
+			<cxxClassFunctionInherited href="class_t_swizzle_c.xml#class_t_swizzle_c_base_1afa3a9236915d34271fdc0f313dc9d2ef">TSwizzleCBase::AsId()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_swizzle_c.xml#class_t_swizzle_c_base_1aaa9ab51002565fdfcaab36d7a80ea5b1">TSwizzleCBase::DoExternalizeL(RWriteStream &amp;,TExternalizer&lt; TAny &gt;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_swizzle_c.xml#class_t_swizzle_c_base_1a106adcbdbf5855c08f8c278ab5055482">TSwizzleCBase::InternalizeL(RReadStream &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_swizzle_c.xml#class_t_swizzle_c_base_1a79b547e68e51ba4b577dd568bf7c1057">TSwizzleCBase::IsId()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_swizzle_c.xml#class_t_swizzle_c_base_1a673a697ba9c8f16571043579b637f80f">TSwizzleCBase::IsPtr()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_swizzle_c.xml#class_t_swizzle_c_base_1aeb30dc1475711332a2f32338c3814ac0">TSwizzleCBase::Ptr()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_swizzle_c.xml#class_t_swizzle_c_base_1ab7245142b98b7ec728501325ff8c527d">TSwizzleCBase::TSwizzleCBase()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_swizzle_c.xml#class_t_swizzle_c_base_1a3fcf01a36edd3f2200414a2125563fc3">TSwizzleCBase::TSwizzleCBase(TStreamId)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_swizzle_c.xml#class_t_swizzle_c_base_1a6a3e8c9df8146d08afb3fa9ad91f9f3b">TSwizzleCBase::TSwizzleCBase(TStreamRef)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_swizzle_c.xml#class_t_swizzle_c_base_1afe8107a416e54f86902e6ea649b94235">TSwizzleCBase::TSwizzleCBase(const TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_swizzle_c.xml#class_t_swizzle_c_base_1afdf2ce90434891680e5cbfe310b58c2a">TSwizzleCBase::operator!=(const TAny *)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_swizzle_c.xml#class_t_swizzle_c_base_1aa76480541cb158ba36860dd2b1538ac6">TSwizzleCBase::operator!=(const TSwizzleCBase &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_swizzle_c.xml#class_t_swizzle_c_base_1aaa91f934775e37ba1d5f7b99dcf83ca8">TSwizzleCBase::operator==(const TAny *)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_t_swizzle_c.xml#class_t_swizzle_c_base_1a81377bc7d35f0fdc61202ade49dc32d5">TSwizzleCBase::operator==(const TSwizzleCBase &amp;)const</cxxClassFunctionInherited>
+		</cxxClassInheritsDetail>
+	</cxxClassInherits>
+</cxxClass>

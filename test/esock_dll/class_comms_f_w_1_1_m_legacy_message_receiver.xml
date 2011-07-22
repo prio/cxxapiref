@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_comms_f_w_1_1_m_legacy_message_receiver">
+	<apiName>CommsFW::MLegacyMessageReceiver</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassAbstract/>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/elements/cftransport.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="237"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/elements/cftransport.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="236"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="246"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc/>
+	</cxxClassDetail>
+	<cxxFunction id="class_comms_f_w_1_1_m_legacy_message_receiver_1a5566c26f1a269606926918da310c3f6a">
+		<apiName>DispatchL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionPureVirtual/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CommsFW::MLegacyMessageReceiver</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual void DispatchL(const TCFMessage &amp;aMessage, TWorkerId aSenderId)=0</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CommsFW::MLegacyMessageReceiver::DispatchL(const TCFMessage &amp;,TWorkerId)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const TCFMessage &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMessage</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="namespace_comms_f_w.xml#_1a0989c80b4dbcc151a4ccf043c03f7c96">TWorkerId</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSenderId</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/cftransport.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="239"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_comms_f_w_1_1_m_legacy_message_receiver_1af81e78f71ab14f89e335c261811c852e">
+		<apiName>OnDispatchLeave</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionVirtual/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CommsFW::MLegacyMessageReceiver</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline virtual void OnDispatchLeave(const TCFMessage &amp;, TWorkerId, TInt)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CommsFW::MLegacyMessageReceiver::OnDispatchLeave(const TCFMessage &amp;,TWorkerId,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const TCFMessage &amp;</cxxFunctionParameterDeclaredType>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="namespace_comms_f_w.xml#_1a0989c80b4dbcc151a4ccf043c03f7c96">TWorkerId</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/cftransport.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="244"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="243"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="245"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>If the dispatching function Leave()s then control transfers here. This allows a carefully-written object to avoid adding its own TRAP and still provide handling for a Leave, ie an efficiency gain. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+</cxxClass>

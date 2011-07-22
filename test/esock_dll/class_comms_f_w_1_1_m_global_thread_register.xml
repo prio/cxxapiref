@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_comms_f_w_1_1_m_global_thread_register">
+	<apiName>CommsFW::MGlobalThreadRegister</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassAbstract/>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/elements/cftransport.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="136"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/elements/cftransport.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="135"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="141"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc/>
+	</cxxClassDetail>
+	<cxxFunction id="class_comms_f_w_1_1_m_global_thread_register_1a3dfebbb8012314ad318bc775393beff0">
+		<apiName>UpperBoundWorkerId</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionPureVirtual/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="namespace_comms_f_w.xml#_1a0989c80b4dbcc151a4ccf043c03f7c96">TWorkerId</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CommsFW::MGlobalThreadRegister</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual TWorkerId UpperBoundWorkerId() const =0</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CommsFW::MGlobalThreadRegister::UpperBoundWorkerId()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/cftransport.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="138"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_comms_f_w_1_1_m_global_thread_register_1ad53bccddb0d41501ef4dd027c9a23c46">
+		<apiName>WorkerHeap</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionPureVirtual/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="class_r_allocator.xml#class_r_allocator">RAllocator</apiRelation> &amp;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CommsFW::MGlobalThreadRegister</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual RAllocator &amp; WorkerHeap(TWorkerId aWorkerId) const =0</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CommsFW::MGlobalThreadRegister::WorkerHeap(TWorkerId)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="namespace_comms_f_w.xml#_1a0989c80b4dbcc151a4ccf043c03f7c96">TWorkerId</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aWorkerId</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/cftransport.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="139"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_comms_f_w_1_1_m_global_thread_register_1a9ef9cdf73dd5e5ed62b322e23ced8d9c">
+		<apiName>PanicWorker</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionPureVirtual/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CommsFW::MGlobalThreadRegister</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual void PanicWorker(TWorkerId aWorkerId, const TDesC &amp;aCategory, TInt aReason) const =0</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CommsFW::MGlobalThreadRegister::PanicWorker(TWorkerId,const TDesC &amp;,TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="namespace_comms_f_w.xml#_1a0989c80b4dbcc151a4ccf043c03f7c96">TWorkerId</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aWorkerId</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCategory</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aReason</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/cftransport.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="140"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+</cxxClass>

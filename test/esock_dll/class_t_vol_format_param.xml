@@ -1,0 +1,341 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_t_vol_format_param">
+	<apiName>TVolFormatParam</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="2132"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="2131"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="2167"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>Base class for volume formatting parameters. This class package buffer, TVolFormatParamBuf or packaged buffer of the derived class can be passed to the <xref href="class_r_format.xml#class_r_format_1ab2b2a52d749b13c1db18a26a756b33e9">RFormat::Open()</xref> in order to provide file system-specific formatting parameters. Each file system that supports such formatting parameters shall have this class specialisation (e.g. TVolFormatParam_FAT) All classes, derived from this one must have the same size as the base class. In order to use formatting parameters the format mode shall have ESpecialFormat bit flag set.</p>
+			<p>
+				<xref href="class_r_format.xml#class_r_format_1a00719d97d035b4e0dc63bea66ea046d3">RFormat::Open(RFs&amp;,const TDesC&amp;,TUint,TInt&amp; ,const TDesC8&amp; anInfo)</xref>; </p>
+			<p>
+				<xref href="f32file_8h.xml#f32file_8h_1af914678df9a6d24ed633dbd31f950829">TVolFormatParamBuf</xref>
+			</p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_t_vol_format_param_1ab2a4d70195b8a8843ef7692f2f9edef5">
+		<apiName>TVolFormatParam</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>TVolFormatParam</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TVolFormatParam()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TVolFormatParam::TVolFormatParam()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2134"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="207"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="211"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_vol_format_param_1ad5ad98abf3c0e3f231b166f4ba1457c4">
+		<apiName>Init</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TVolFormatParam</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void Init()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TVolFormatParam::Init()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2135"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="214"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="219"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>resets all data to the &quot;not set&quot; values </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_vol_format_param_1a810d1a20c630b0cf946e980da5bd5e23">
+		<apiName>SetFileSystemName</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TVolFormatParam</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void SetFileSystemName(const TDesC &amp;aFsName)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TVolFormatParam::SetFileSystemName(const TDesC &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFsName</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2137"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="246"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="249"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>sets the file system name hash corresponding to aFsName </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_vol_format_param_1a3306920bd0a1b2eb7a802ecd7385d00a">
+		<apiName>CalcFSNameHash</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a8240e11f17c80b6b222fc2af50234da4">TUint32</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TVolFormatParam</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline static TUint32 CalcFSNameHash(const TDesC &amp;aFsName)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TVolFormatParam::CalcFSNameHash(const TDesC &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_des_c16.xml#class_t_des_c16">TDesC</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFsName</cxxFunctionParameterDeclarationName>
+						<apiDefNote>given name. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2139"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="229"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="242"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Calculates the file system name hash. For use in conjunction with this class only The file system name hash is a standard CRC32 on the up-cased name.</p>
+				<p>CRC32 name hash value </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_vol_format_param_1ae83b4ae32d63bdbf955889ea1b6d7f40">
+		<apiName>FSNameHash</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a8240e11f17c80b6b222fc2af50234da4">TUint32</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TVolFormatParam</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TUint32 FSNameHash() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TVolFormatParam::FSNameHash()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2140"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="252"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="255"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>file system name hash that was wet by <xref href="class_t_vol_format_param.xml#class_t_vol_format_param_1a810d1a20c630b0cf946e980da5bd5e23">SetFileSystemName()</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_vol_format_param_1a560e59c66dc39c0d0c0e71ca6f6c5014">
+		<apiName>SomeParamsSet</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TVolFormatParam</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TBool SomeParamsSet() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TVolFormatParam::SomeParamsSet()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2142"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="258"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="261"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>ETrue if the user has set at least one parameter apart from the file sysetm name, i.e. <xref href="class_t_vol_format_param.xml#class_t_vol_format_param_1ad148791bf066e651064c6620f8ef8691">SetVal()</xref> was called </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_vol_format_param_1ad148791bf066e651064c6620f8ef8691">
+		<apiName>SetVal</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TVolFormatParam</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void SetVal(TUint aIndex, TUint32 aVal)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TVolFormatParam::SetVal(TUint,TUint32)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a8240e11f17c80b6b222fc2af50234da4">TUint32</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aVal</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2150"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="268"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="273"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>assign a data slot some integer value. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_t_vol_format_param_1acba430615fab5123a194f2fab88e1bca">
+		<apiName>GetVal</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a8240e11f17c80b6b222fc2af50234da4">TUint32</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TVolFormatParam</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TUint32 GetVal(TUint aIndex) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TVolFormatParam::GetVal(TUint)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2151"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_subconn.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="279"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="283"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>data from the specified slot </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxVariable id="class_t_vol_format_param_1a5fb43bc7b12b176cbb4289093a30d4d4">
+		<apiName>iUId</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="public"/>
+				<cxxVariableDeclaredType>const <apiRelation href="e32def_8h.xml#_1a8240e11f17c80b6b222fc2af50234da4">TUint32</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TVolFormatParam</cxxVariableScopedName>
+				<cxxVariablePrototype>const TUint32 iUId</cxxVariablePrototype>
+				<cxxVariableNameLookup>TVolFormatParam::iUId</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="2161"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc>
+				<p>This class tree UID. Used to distinguish the object of this class from <xref href="class_t_l_d_format_info.xml#class_t_l_d_format_info">TLDFormatInfo</xref> and other possible data structures. For this and derived classes this field must be KUId. This field offset in the class must be 0 </p>
+			</apiDesc>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_t_vol_format_param_1a3f58f636a59359ed11885d9ff62d3e70">
+		<apiName>iFSysNameHash</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a8240e11f17c80b6b222fc2af50234da4">TUint32</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TVolFormatParam</cxxVariableScopedName>
+				<cxxVariablePrototype>TUint32 iFSysNameHash</cxxVariablePrototype>
+				<cxxVariableNameLookup>TVolFormatParam::iFSysNameHash</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="2164"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_t_vol_format_param_1a1815d0034f621d49fd0b0147163beef0">
+		<apiName>iParamsSet</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TVolFormatParam</cxxVariableScopedName>
+				<cxxVariablePrototype>TBool iParamsSet</cxxVariablePrototype>
+				<cxxVariableNameLookup>TVolFormatParam::iParamsSet</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="2165"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_t_vol_format_param_1a7a36565d3138ce06612d426bea336d4e">
+		<apiName>iData</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a8240e11f17c80b6b222fc2af50234da4">TUint32</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>TVolFormatParam</cxxVariableScopedName>
+				<cxxVariablePrototype>TUint32 iData[KMaxDataSlots]</cxxVariablePrototype>
+				<cxxVariableNameLookup>TVolFormatParam::iData</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/f32file.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="2166"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+</cxxClass>

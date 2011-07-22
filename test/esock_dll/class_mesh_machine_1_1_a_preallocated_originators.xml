@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_mesh_machine_1_1_a_preallocated_originators">
+	<apiName>MeshMachine::APreallocatedOriginators</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="1266"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="1265"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="1297"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>Aggregate originator array template for activities that use preallocated space. This object has a fixed size array to hold the originators which will be allocated from the preallocated space when the node activity object is created. </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_mesh_machine_1_1_a_preallocated_originators_1ac756fb669bc95aaad3fb6360b8ccd1c7">
+		<apiName>APreallocatedOriginators</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionExplicit/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>MeshMachine::APreallocatedOriginators</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline APreallocatedOriginators(RArray&lt; Messages::XNodePeerId &gt; &amp;aOriginators)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MeshMachine::APreallocatedOriginators::APreallocatedOriginators(RArray&lt; Messages::XNodePeerId &gt; &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_r_array.xml#class_r_array">RArray</apiRelation>&lt; <apiRelation href="class_messages_1_1_x_node_peer_id.xml#class_messages_1_1_x_node_peer_id">Messages::XNodePeerId</apiRelation> &gt; &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aOriginators</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Array of originators for which to preallocate space </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1277"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1275"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1283"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Initialise the array and ensure it is empty as it should be on creation. Generally, iOriginators from the activity will be passed into this as a reference. A new <xref href="class_r_array.xml#class_r_array">RArray</xref> will then be created using the preallocated space.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_mesh_machine_1_1_a_preallocated_originators_1af174d6f038dd747fa98a34aab50a1dc5">
+		<apiName>~APreallocatedOriginators</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDestructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>MeshMachine::APreallocatedOriginators</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline ~APreallocatedOriginators()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>MeshMachine::APreallocatedOriginators::~APreallocatedOriginators()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="1288"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="1287"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="1290"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Destructor for <xref href="class_mesh_machine_1_1_a_preallocated_originators.xml#class_mesh_machine_1_1_a_preallocated_originators">APreallocatedOriginators</xref>. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxVariable id="class_mesh_machine_1_1_a_preallocated_originators_1a7eda23793c3e1958a48246b7a2926de4">
+		<apiName>iOriginatorsRef</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="class_r_array.xml#class_r_array">RArray</apiRelation>&lt; <apiRelation href="class_messages_1_1_x_node_peer_id.xml#class_messages_1_1_x_node_peer_id">Messages::XNodePeerId</apiRelation> &gt; &amp;</cxxVariableDeclaredType>
+				<cxxVariableScopedName>MeshMachine::APreallocatedOriginators</cxxVariableScopedName>
+				<cxxVariablePrototype>RArray&lt; Messages::XNodePeerId &gt; &amp; iOriginatorsRef</cxxVariablePrototype>
+				<cxxVariableNameLookup>MeshMachine::APreallocatedOriginators::iOriginatorsRef</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1294"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_mesh_machine_1_1_a_preallocated_originators_1ab5600056738718d6609deddf4f1c6354">
+		<apiName>iOriginatorBuf</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1aae4399ce3f10d6c2b5ec96a13bbb5881">TUint8</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>MeshMachine::APreallocatedOriginators</cxxVariableScopedName>
+				<cxxVariablePrototype>TUint8 iOriginatorBuf[__Align8(sizeof(Messages::XNodePeerId)*ORIGINATORSCOUNT)]</cxxVariablePrototype>
+				<cxxVariableNameLookup>MeshMachine::APreallocatedOriginators::iOriginatorBuf</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/elements/mm_activities.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="1296"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+</cxxClass>

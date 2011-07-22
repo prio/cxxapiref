@@ -1,0 +1,244 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_r_comms_mobility_api_ext">
+	<apiName>RCommsMobilityApiExt</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassDerivations>
+				<cxxClassDerivation>
+					<cxxClassDerivationAccessSpecifier value="public"/>
+					<cxxClassBaseClass href="class_r_comms_api_extension.xml#class_r_comms_api_extension">RCommsApiExtension&lt; EMobilityApiExt &gt;</cxxClassBaseClass>
+				</cxxClassDerivation>
+			</cxxClassDerivations>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_mobility_apiext.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="44"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/comms-infras/es_mobility_apiext.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="31"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="56"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>Comms Mobility API extension for client not running an Active Scheduler.</p>
+			<p>This class can actually be used by any client, one running an Active Scheduler and one that is not. However, if the Active Scheduler is present, it is recommended to use <xref href="class_c_active_comms_mobility_api_ext.xml#class_c_active_comms_mobility_api_ext">CActiveCommsMobilityApiExt</xref> which is much simpler.</p>
+			<p>
+				<xref href="class_c_active_comms_mobility_api_ext.xml#class_c_active_comms_mobility_api_ext">CActiveCommsMobilityApiExt</xref>
+			</p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_r_comms_mobility_api_ext_1a074ea2fa4a19d0dfc25ffb734131a7f1">
+		<apiName>RCommsMobilityApiExt</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionExplicit/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType>IMPORT_C</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RCommsMobilityApiExt</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C RCommsMobilityApiExt()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RCommsMobilityApiExt::RCommsMobilityApiExt()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_mobility_apiext.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="46"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_mobility_apiext.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="38"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="40"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Default empty constructor, and is present only to support virtual function table export.</p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_comms_mobility_api_ext_1ae0691a65a363855699a3520a5848e61b">
+		<apiName>Close</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RCommsMobilityApiExt</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Close()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RCommsMobilityApiExt::Close()</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_r_comms_api_extension_base.xml#class_r_comms_api_extension_base_1a676c93a78fcccc9514a1b9c6fad2c613">RCommsApiExtensionBase::Close()</cxxFunctionReimplemented>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_mobility_apiext.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="47"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_mobility_apiext.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="49"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="52"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Closes the extension after it has been used. It is not possible to use an extension after it has been closed.</p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_comms_mobility_api_ext_1a101f3adc4616fb86c5e40f07b2cd48f4">
+		<apiName>RegisterForMobilityNotification</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RCommsMobilityApiExt</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void RegisterForMobilityNotification(TDes8 &amp;aResponseEventBuf, TRequestStatus &amp;aStatus)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RCommsMobilityApiExt::RegisterForMobilityNotification(TDes8 &amp;,TRequestStatus &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des8.xml#class_t_des8">TDes8</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aResponseEventBuf</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Will be filled with a corresponding response message before aStatus is completed. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_request_status.xml#class_t_request_status">TRequestStatus</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aStatus</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_mobility_apiext.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="49"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_mobility_apiext.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="63"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="67"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>This API is used to register (subscribe) for Mobility notifications from the Implementation.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_comms_mobility_api_ext_1a74e1c1ae0ff530b723e6261035399d4d">
+		<apiName>CancelMobilityNotification</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RCommsMobilityApiExt</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void CancelMobilityNotification()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RCommsMobilityApiExt::CancelMobilityNotification()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_mobility_apiext.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="50"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_mobility_apiext.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="75"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="79"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Cancels previously requested subscription for Mobility notifications.</p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_comms_mobility_api_ext_1a7fd7d188a31449d3f542440a9e3f583f">
+		<apiName>MigrateToPreferredCarrier</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RCommsMobilityApiExt</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void MigrateToPreferredCarrier()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RCommsMobilityApiExt::MigrateToPreferredCarrier()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_mobility_apiext.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="52"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_mobility_apiext.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="89"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="93"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Instructs the Implementation that it should migrate the Client to the newly available preferred carrier (or, in case of the current carrier becoming unavailable, to the less preferred but available carrier).</p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_comms_mobility_api_ext_1a54df3627075de5ae73164dccdd266bae">
+		<apiName>IgnorePreferredCarrier</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RCommsMobilityApiExt</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void IgnorePreferredCarrier()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RCommsMobilityApiExt::IgnorePreferredCarrier()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_mobility_apiext.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="53"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_mobility_apiext.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="102"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="106"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Instructs the Implementation that it should not migrate the Client to the newly available preferred carrier and that the Client wishes to continue using the current carrier.</p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_comms_mobility_api_ext_1a84a9c1ef0008ba0cf7dd6ccb920f68e2">
+		<apiName>NewCarrierAccepted</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RCommsMobilityApiExt</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void NewCarrierAccepted()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RCommsMobilityApiExt::NewCarrierAccepted()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_mobility_apiext.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="54"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_mobility_apiext.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="114"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="118"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Instructs the Implementation that the Client wishes to use the new carrier it has been migrated to.</p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_comms_mobility_api_ext_1a1e31b9b6dd113eb84fa955d66d97b964">
+		<apiName>NewCarrierRejected</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RCommsMobilityApiExt</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void NewCarrierRejected()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RCommsMobilityApiExt::NewCarrierRejected()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/comms-infras/es_mobility_apiext.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="55"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_mobility_apiext.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="128"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="132"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Instructs the Implementation that the Client wishes to reject the new carrier it has been migrated to and be offered another preferred carrier unless nothing else is available. In case nothing else is available the request completes with an error.</p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxClassInherits>
+		<cxxClassInheritsDetail>
+			<cxxClassFunctionInherited href="class_r_comms_mobility_api_ext.xml#class_r_comms_api_extension_1ae0cc3ec37e19eb9a3aed5d7366b4feae">RCommsApiExtension&lt; EMobilityApiExt &gt;::Open(RCommsSession &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_comms_mobility_api_ext.xml#class_r_comms_api_extension_1a67319ae7d7cf25e3bc713380e1610ca3">RCommsApiExtension&lt; EMobilityApiExt &gt;::Open(RCommsSubSession &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_comms_mobility_api_ext.xml#class_r_comms_api_extension_base_1a763a8ed1e73e1d3cb0eeb2fdccfb9a56">RCommsApiExtensionBase::Open(RCommsSession &amp;,TSupportedCommsApiExt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_comms_mobility_api_ext.xml#class_r_comms_api_extension_base_1ae49d7a6603ce255b5ebda0f1a190f861">RCommsApiExtensionBase::Open(RCommsSubSession &amp;,TSupportedCommsApiExt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_comms_mobility_api_ext.xml#class_r_comms_api_extension_base_1abd78dbc8ae0887ab7dbaa7e3fc33a13d">RCommsApiExtensionBase::RCommsApiExtensionBase()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_comms_mobility_api_ext.xml#class_r_comms_api_extension_base_1a047f3ab7153c217217c096c8e0f8aa5f">RCommsApiExtensionBase::SendMessage(TCommsApiExtReqMsg &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_comms_mobility_api_ext.xml#class_r_comms_api_extension_base_1a491b1c7e1fae54de660193a3b19e6f27">RCommsApiExtensionBase::SendRequest(TCommsApiExtReqMsg &amp;,TDes8 &amp;,TRequestStatus &amp;)</cxxClassFunctionInherited>
+			<cxxClassVariableInherited href="class_r_comms_mobility_api_ext.xml#class_r_comms_api_extension_base_1a626e15ec155b4429eb6ce948fcac3a4a">RCommsApiExtensionBase::iInterfaceId</cxxClassVariableInherited>
+			<cxxClassVariableInherited href="class_r_comms_mobility_api_ext.xml#class_r_comms_api_extension_base_1a1f031bc618bf9d91de6d137a2420bde3">RCommsApiExtensionBase::iProvider</cxxClassVariableInherited>
+		</cxxClassInheritsDetail>
+	</cxxClassInherits>
+</cxxClass>

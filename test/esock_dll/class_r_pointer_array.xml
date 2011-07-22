@@ -1,0 +1,2339 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_r_pointer_array">
+	<apiName>RPointerArray</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassDerivations>
+				<cxxClassDerivation>
+					<cxxClassDerivationAccessSpecifier value="private"/>
+					<cxxClassBaseClass href="class_r_pointer_array_base.xml#class_r_pointer_array_base">RPointerArrayBase</cxxClassBaseClass>
+				</cxxClassDerivation>
+			</cxxClassDerivations>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="5241"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="5240"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="5356"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>A simple and efficient array of pointers to objects.</p>
+			<p>The elements of the array are pointers to instances of a class; this class is specified as the template parameter T.</p>
+			<p>The class offers standard array behaviour which includes insertion, appending and sorting of pointers.</p>
+			<p>Derivation from <xref href="class_r_pointer_array_base.xml#class_r_pointer_array_base">RPointerArrayBase</xref> is private. </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_r_pointer_array_1aa81d0f6f4a445ebea5c7f6d1b93e4044">
+		<apiName>RPointerArray</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>RPointerArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline RPointerArray()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RPointerArray::RPointerArray()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5243"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="3613"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="3615"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Default C++ constructor.</p>
+				<p>This constructs an array object for an array of pointers with default granularity, which is 8. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_pointer_array_1ad6b421226e9c90137c8a827a1e6d487e">
+		<apiName>RPointerArray</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionExplicit/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>RPointerArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline RPointerArray(TInt aGranularity)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RPointerArray::RPointerArray(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aGranularity</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The granularity of the array.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5244"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="3632"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="3634"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>C++ constructor with granularity.</p>
+				<p>This constructs an array object for an array of pointers with the specified granularity.</p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>USER 127, if aGranularity is not positive, or greater than or equal to 0x10000000. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_pointer_array_1aad1a042eccf0e7e7cd90a20e65d5f88d">
+		<apiName>RPointerArray</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>RPointerArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline RPointerArray(TInt aMinGrowBy, TInt aFactor)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RPointerArray::RPointerArray(TInt,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMinGrowBy</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The minimum growth step of the array. Must be between 1 and 65535 inclusive. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFactor</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The factor by which the array grows, multiplied by 256. For example 512 specifies a factor of 2. Must be between 257 and 32767 inclusive.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5245"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="3655"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="3657"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>C++ constructor with minimum growth step and exponential growth factor.</p>
+				<p>This constructs an array object for an array of pointers with the specified minimum growth step and exponential growth factor.</p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>USER 192, if aMinGrowBy&lt;=0 or aMinGrowBy&gt;65535. </p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>USER 193, if aFactor&lt;=257 or aFactor&gt;32767. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_pointer_array_1a2359323a115094655c13297afe344ee4">
+		<apiName>Close</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RPointerArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void Close()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RPointerArray::Close()</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_r_pointer_array_base.xml#class_r_pointer_array_base_1a1cdb00d97003b41eac9fe3c965cf7e23">RPointerArrayBase::Close()</cxxFunctionReimplemented>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5246"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="3663"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="3672"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Closes the array and frees all memory allocated to it.</p>
+				<p>The function must be called before this array object goes out of scope.</p>
+				<p>Note that the function does not delete the objects whose pointers are contained in the array. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_pointer_array_1ab299df958734e09cd66bca1edbdb4628">
+		<apiName>Count</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RPointerArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt Count() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RPointerArray::Count()const</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_r_pointer_array_base.xml#class_r_pointer_array_base_1ae4f9e843a7af7ddf0c81e2ee4bf1c50e">RPointerArrayBase::Count()const</cxxFunctionReimplemented>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5247"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="3678"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="3684"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets the number of object pointers in the array.</p>
+				<p>The number of object pointers in the array. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_pointer_array_1a8c5ef81f1e96f92e3988d0c653fa8d70">
+		<apiName>operator[]</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>T *const &amp;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RPointerArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline T *const &amp; operator[](TInt anIndex) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RPointerArray::operator[](TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The position of the object pointer within the array. The position is relative to zero, i.e. zero implies the object pointer at the beginning of the array.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5248"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="3690"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="3708"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets a reference to the object pointer located at the specified position within the array.</p>
+				<p>The compiler chooses this option if the returned reference is used in an expression where the reference cannot be modified.</p>
+				<p>A const reference to the object pointer at position anIndex within the array.</p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>USER 130, if anIndex is negative, or is greater than the number of objects currently in the array. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_pointer_array_1a023ae7752fdcb28e4becdc8752e60a16">
+		<apiName>operator[]</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>T *&amp;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RPointerArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline T *&amp; operator[](TInt anIndex)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RPointerArray::operator[](TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The position of the object pointer within the array. The position is relative to zero, i.e. zero implies the object pointer at the beginning of the array.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5249"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="3714"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="3732"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets a reference to the object pointer located at the specified position within the array.</p>
+				<p>The compiler chooses this option if the returned reference is used in an expression where the reference can be modified.</p>
+				<p>A non-const reference to the object pointer at position anIndex within the array.</p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>USER 130, if anIndex is negative, or is greater than the number of objects currently in the array. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_pointer_array_1ad5702edec08091c176326027533c7b0d">
+		<apiName>Append</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RPointerArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt Append(const T *anEntry)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RPointerArray::Append(const T *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const T *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anEntry</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The object pointer to be appended.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5250"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="3738"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="3747"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Appends an object pointer onto the array.</p>
+				<p>KErrNone, if the insertion is successful, otherwise one of the system wide error codes. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_pointer_array_1adfb7c4bdfe16702de843be16799649ae">
+		<apiName>Insert</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RPointerArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt Insert(const T *anEntry, TInt aPos)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RPointerArray::Insert(const T *,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const T *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anEntry</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The object pointer to be inserted. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPos</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The position within the array where the object pointer is to be inserted. The position is relative to zero, i.e. zero implies that a pointer is inserted at the beginning of the array.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5251"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="3753"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="3768"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Inserts an object pointer into the array at the specified position.</p>
+				<p>KErrNone, if the insertion is successful, otherwise one of the system wide error codes.</p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>USER 131, if aPos is negative, or is greater than the number of object pointers currently in the array. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_pointer_array_1a8644e818c79e65a3384f67578a921850">
+		<apiName>Remove</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RPointerArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void Remove(TInt anIndex)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RPointerArray::Remove(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_r_pointer_array_base.xml#class_r_pointer_array_base_1a0169db42ef92af3a782f407fc4e65fb3">RPointerArrayBase::Remove(TInt)</cxxFunctionReimplemented>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The position within the array from where the object pointer is to be removed. The position is relative to zero, i.e. zero implies that a pointer at the beginning of the array is to be removed.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5252"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="3774"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="3788"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Removes the object pointer at the specified position from the array.</p>
+				<p>Note that the function does not delete the object whose pointer is removed.</p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>USER 130, if anIndex is negative, or is greater than the number of objects currently in the array. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_pointer_array_1a51fc31a565c546c076fc245b9b08c0ae">
+		<apiName>Compress</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RPointerArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void Compress()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RPointerArray::Compress()</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_r_pointer_array_base.xml#class_r_pointer_array_base_1aef58cd64caef3caba363658e1e31fb57">RPointerArrayBase::Compress()</cxxFunctionReimplemented>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5253"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="3794"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="3803"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Compresses the array down to a minimum.</p>
+				<p>After a call to this function, the memory allocated to the array is just sufficient for its contained object pointers. Subsequently adding a new object pointer to the array always results in a re-allocation of memory. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_pointer_array_1acfa837e6c1ff6a41e7dd87197303db66">
+		<apiName>Reset</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RPointerArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void Reset()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RPointerArray::Reset()</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_r_pointer_array_base.xml#class_r_pointer_array_base_1aa491818ec3ba6fed26131145d929e8b4">RPointerArrayBase::Reset()</cxxFunctionReimplemented>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5254"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="3809"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="3822"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Empties the array.</p>
+				<p>It frees all memory allocated to the array and resets the internal state so that it is ready to be reused.</p>
+				<p>This array object can be allowed to go out of scope after a call to this function.</p>
+				<p>Note that the function does not delete the objects whose pointers are contained in the array. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_pointer_array_1ae7bde3613fccdd0cd6d28cd6932dd081">
+		<apiName>ResetAndDestroy</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RPointerArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void ResetAndDestroy()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RPointerArray::ResetAndDestroy()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5255"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="4363"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="4384"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Empties the array and deletes the referenced objects.</p>
+				<p>It frees all memory allocated to the array and resets the internal state so that it is ready to be reused. The function also deletes all of the objects whose pointers are contained by the array.</p>
+				<p>This array object can be allowed to go out of scope after a call to this function. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_pointer_array_1ab31defd247b25d1ae694d170c4d35779">
+		<apiName>Find</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RPointerArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt Find(const T *anEntry) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RPointerArray::Find(const T *)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const T *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anEntry</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The object pointer to be found. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5256"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="3828"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="3842"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Finds the first object pointer in the array which matches the specified object pointer, using a sequential search.</p>
+				<p>Matching is based on the comparison of pointers.</p>
+				<p>The find operation always starts at the low index end of the array. There is no assumption about the order of objects in the array.</p>
+				<p>The index of the first matching object pointer within the array. KErrNotFound, if no matching object pointer can be found. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_pointer_array_1a43281ead61ddbe5c74ad26772c75d566">
+		<apiName>Find</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RPointerArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt Find(const T *anEntry, TIdentityRelation&lt; T &gt; anIdentity) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RPointerArray::Find(const T *,TIdentityRelation&lt; T &gt;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const T *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anEntry</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The object pointer to be found. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_identity_relation.xml#class_t_identity_relation">TIdentityRelation</apiRelation>&lt; T &gt;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anIdentity</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A package encapsulating the function which determines whether two class T objects match.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5257"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="3848"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="3866"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Finds the first object pointer in the array whose object matches the specified object, using a sequential search and a matching algorithm.</p>
+				<p>The algorithm for determining whether two class T objects match is provided by a function supplied by the caller.</p>
+				<p>The find operation always starts at the low index end of the array. There is no assumption about the order of objects in the array.</p>
+				<p>The index of the first matching object pointer within the array. KErrNotFound, if no suitable object pointer can be found. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_pointer_array_1a275900885e1f3f7dc285b265a4eae190">
+		<apiName>Find</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RPointerArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt Find(const K &amp;aKey, TBool(*apfnCompare)(const K *k, const T &amp;t)) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RPointerArray::Find(const K &amp;,TBool(*)(const K *k, const T &amp;t))const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const K &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aKey</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The key of type K to be compared with the elements of the array using apfnCompare. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1a20c972998428c427c873ed496231115c">TBool</apiRelation>(*)(const K *k, const T &amp;t)</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>apfnCompare</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A function defining the identity relation between the object pointers in the array, and their keys of type K. The function returns true if k and t match based on this relationship.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5275"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="5259"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="5275"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Finds the first object pointer in the array which matches aKey using the comparison algorithm provided by apfnCompare.</p>
+				<p>The find operation always starts at the low index end of the array. There is no assumption about the order of objects in the array.</p>
+				<p>The index of the first matching object pointer within the array. KErrNotFound, if no suitable object pointer can be found. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_pointer_array_1adf3a6cef003915938fc97b862d790d14">
+		<apiName>FindReverse</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RPointerArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt FindReverse(const T *anEntry) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RPointerArray::FindReverse(const T *)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const T *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anEntry</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The object pointer to be found. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5276"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="3872"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="3886"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Finds the last object pointer in the array which matches the specified object pointer, using a sequential search.</p>
+				<p>Matching is based on the comparison of pointers.</p>
+				<p>The find operation always starts at the high index end of the array. There is no assumption about the order of objects in the array.</p>
+				<p>The index of the last matching object pointer within the array. KErrNotFound, if no matching object pointer can be found. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_pointer_array_1a9247a0688da4321571f447741a9fcc21">
+		<apiName>FindReverse</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RPointerArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt FindReverse(const T *anEntry, TIdentityRelation&lt; T &gt; anIdentity) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RPointerArray::FindReverse(const T *,TIdentityRelation&lt; T &gt;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const T *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anEntry</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The object pointer to be found. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_identity_relation.xml#class_t_identity_relation">TIdentityRelation</apiRelation>&lt; T &gt;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anIdentity</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A package encapsulating the function which determines whether two class T objects match.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5277"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="3892"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="3910"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Finds the last object pointer in the array whose object matches the specified object, using a sequential search and a matching algorithm.</p>
+				<p>The algorithm for determining whether two class T objects match is provided by a function supplied by the caller.</p>
+				<p>The find operation always starts at the high index end of the array. There is no assumption about the order of objects in the array.</p>
+				<p>The index of the last matching object pointer within the array. KErrNotFound, if no suitable object pointer can be found. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_pointer_array_1a731d823715025aa5fce9fea9771b5596">
+		<apiName>FindReverse</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RPointerArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt FindReverse(const K &amp;aKey, TInt(*apfnMatch)(const K *k, const T &amp;t)) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RPointerArray::FindReverse(const K &amp;,TInt(*)(const K *k, const T &amp;t))const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const K &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aKey</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The key of type K to be compared with the elements of the array using apfnMatch. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>(*)(const K *k, const T &amp;t)</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>apfnMatch</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A function defining the identity relation between the object pointers in the array, and their keys of type K. The function returns true if k and t match based on this relationship.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5296"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="5279"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="5296"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Finds the first object pointer in the array which matches aKey using the comparison algorithm provided by apfnCompare.</p>
+				<p>The find operation always starts at the high index end of the array. There is no assumption about the order of objects in the array.</p>
+				<p>The index of the first matching object pointer within the array. KErrNotFound, if no suitable object pointer can be found. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_pointer_array_1a9d1e96c316cd4129bb8e0f74dc00025b">
+		<apiName>FindInAddressOrder</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RPointerArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt FindInAddressOrder(const T *anEntry) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RPointerArray::FindInAddressOrder(const T *)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const T *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anEntry</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The object pointer to be found.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5297"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="3916"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="3928"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Finds the object pointer in the array that matches the specified object pointer, using a binary search technique.</p>
+				<p>The function assumes that object pointers in the array are in address order.</p>
+				<p>The index of the matching object pointer within the array or KErrNotFound if no suitable object pointer can be found. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_pointer_array_1a8220fc796203de00a8c6462c656a72ca">
+		<apiName>FindInOrder</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RPointerArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt FindInOrder(const T *anEntry, TLinearOrder&lt; T &gt; anOrder) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RPointerArray::FindInOrder(const T *,TLinearOrder&lt; T &gt;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const T *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anEntry</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The object pointer to be found. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_linear_order.xml#class_t_linear_order">TLinearOrder</apiRelation>&lt; T &gt;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anOrder</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A package encapsulating the function which determines the order of two class T objects.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5298"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="3934"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="3950"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Finds the object pointer in the array whose object matches the specified object, using a binary search technique and an ordering algorithm.</p>
+				<p>The function assumes that existing object pointers in the array are ordered so that the objects themselves are in object order as determined by an algorithm supplied by the caller and packaged as a TLinearOrder&lt;T&gt;.</p>
+				<p>The index of the matching object pointer within the array or KErrNotFound, if no suitable object pointer can be found. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_pointer_array_1a3c86eb22085e49bf8e0413055f1113e9">
+		<apiName>FindInAddressOrder</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RPointerArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt FindInAddressOrder(const T *anEntry, TInt &amp;anIndex) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RPointerArray::FindInAddressOrder(const T *,TInt &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const T *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anEntry</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The object pointer to be found. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A TInt supplied by the caller. On return, contains an index value: If the function returns KErrNone, this is the index of the matching object pointer within the array. If the function returns KErrNotFound, this is the index of the first object pointer within the array which logically follows after anEntry.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5299"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="3956"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="3975"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Finds the object pointer in the array that matches the specified object pointer, using a binary search technique.</p>
+				<p>The function assumes that object pointers in the array are in address order.</p>
+				<p>KErrNone, if a matching object pointer is found. KErrNotFound, if no suitable object pointer can be found. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_pointer_array_1a084b859b9c3562dd749153d8748c28fc">
+		<apiName>FindInOrder</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RPointerArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt FindInOrder(const T *anEntry, TInt &amp;anIndex, TLinearOrder&lt; T &gt; anOrder) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RPointerArray::FindInOrder(const T *,TInt &amp;,TLinearOrder&lt; T &gt;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const T *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anEntry</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The object pointer to be found. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A TInt supplied by the caller. On return, contains an index value: If the function returns KErrNone, this is the index of the matching object pointer within the array. If the function returns KErrNotFound, this is the index of the first object pointer in the array whose object is larger than the entry being searched for - if no objects pointed to in the array are larger, then the index value is the same as the total number of object pointers in the array.</apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_linear_order.xml#class_t_linear_order">TLinearOrder</apiRelation>&lt; T &gt;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anOrder</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A package encapsulating the function which determines the order of two class T objects.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5300"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="3981"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="4007"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Finds the object pointer in the array whose object matches the specified object, using a binary search technique and an ordering algorithm.</p>
+				<p>The function assumes that existing object pointers in the array are ordered so that the objects themselves are in object order as determined by an algorithm supplied by the caller and packaged as a TLinearOrder&lt;T&gt;.</p>
+				<p>KErrNone, if a matching object pointer is found. KErrNotFound, if no suitable object pointer can be found. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_pointer_array_1a00ad70ce80999a1f2bbdd0c675559349">
+		<apiName>FindInOrder</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RPointerArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt FindInOrder(const K &amp;aKey, TInt(*apfnCompare)(const K *k, const T &amp;t)) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RPointerArray::FindInOrder(const K &amp;,TInt(*)(const K *k, const T &amp;t))const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const K &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aKey</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The key of type K to be compared with the elements of the array using apfnCompare. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>(*)(const K *k, const T &amp;t)</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>apfnCompare</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A function which defines the order that the array was sorted, where in it aKey (via the defined relationship) should fit, and if the key is present.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5319"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="5302"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="5319"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Finds the object pointer in the array whose object matches the specified key, (Using the relationship defined within apfnCompare) using a binary search technique and an ordering algorithm.</p>
+				<p>The function assumes that existing object pointers in the array are ordered so that the objects themselves are in object order as determined by an algorithm supplied by the caller and packaged as a TLinearOrder&lt;T&gt;.</p>
+				<p>The index of the matching object pointer within the array. KErrNotFound, if no suitable object pointer can be found. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_pointer_array_1ad94d1071c6b80881f74b3d9f2584137c">
+		<apiName>SpecificFindInAddressOrder</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RPointerArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt SpecificFindInAddressOrder(const T *anEntry, TInt aMode) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RPointerArray::SpecificFindInAddressOrder(const T *,TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const T *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anEntry</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The object pointer to be found. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMode</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Specifies whether to find the first match, the last match or any match, as defined by one of the TArrayFindMode enum values.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5320"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="4013"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="4038"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Finds the object pointer in the array that matches the specified object pointer, using a binary search technique.</p>
+				<p>Where there is more than one matching element, it finds the first, the last or any matching element as specified by the value of aMode.</p>
+				<p>The function assumes that object pointers in the array are in address order.</p>
+				<p>KErrNotFound, if there is no matching element, otherwise the array index of a matching element - what the index refers to depends on the value of aMode: if this is EArrayFindMode_First, then the index refers to the first matching element; if this is EArrayFindMode_Any, then the index can refer to any of the matching elements; if this is EArrayFindMode_Last, then the index refers to first element that follows the last matching element - if the last matching element is also the last element of the array, then the index value is the same as the total number of elements in the array.</p>
+				<p>
+					<xref href="_c_s___c_l_i_8_c_p_p.xml#_c_s___c_l_i_8_c_p_p_1a807f1e3df383a955bab6454161302449">TArrayFindMode</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_pointer_array_1af6df65014472460724f87ad452c1767a">
+		<apiName>SpecificFindInOrder</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RPointerArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt SpecificFindInOrder(const T *anEntry, TLinearOrder&lt; T &gt; anOrder, TInt aMode) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RPointerArray::SpecificFindInOrder(const T *,TLinearOrder&lt; T &gt;,TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const T *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anEntry</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The object pointer to be found. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_linear_order.xml#class_t_linear_order">TLinearOrder</apiRelation>&lt; T &gt;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anOrder</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A package encapsulating the function which determines the order of two class T objects. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMode</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Specifies whether to find the first match, the last match or any match, as defined by one of the TArrayFindMode enum values.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5321"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="4044"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="4073"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Finds the object pointer in the array whose object matches the specified object, using a binary search technique and an ordering algorithm.</p>
+				<p>Where there is more than one matching element, it finds the first, the last or any matching element as specified by the value of aMode.</p>
+				<p>The function assumes that existing object pointers in the array are ordered so that the objects themselves are in object order as determined by an algorithm supplied by the caller and packaged as a TLinearOrder&lt;T&gt; type.</p>
+				<p>KErrNotFound, if there is no matching element, otherwise the array index of a matching element - what the index refers to depends on the value of aMode: if this is EArrayFindMode_First, then the index refers to the first matching element; if this is EArrayFindMode_Any, then the index can refer to any of the matching elements; if this is EArrayFindMode_Last, then the index refers to first element that follows the last matching element - if the last matching element is also the last element of the array, then the index value is the same as the total number of elements in the array.</p>
+				<p>
+					<xref href="_c_s___c_l_i_8_c_p_p.xml#_c_s___c_l_i_8_c_p_p_1a807f1e3df383a955bab6454161302449">TArrayFindMode</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_pointer_array_1ad60cae501bfa03eed8345efab4345a4c">
+		<apiName>SpecificFindInAddressOrder</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RPointerArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt SpecificFindInAddressOrder(const T *anEntry, TInt &amp;anIndex, TInt aMode) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RPointerArray::SpecificFindInAddressOrder(const T *,TInt &amp;,TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const T *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anEntry</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The object pointer to be found. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A TInt type supplied by the caller. On return, it contains an index value depending on whether a match is found and on the value of aMode. If there is no matching element in the array, then this is the index of the first element in the array that is bigger than the element being searched for - if no elements in the array are bigger, then the index value is the same as the total number of elements in the array. If there is a matching element, then what the index refers to depends on the value of aMode: if this is EArrayFindMode_First, then the index refers to the first matching element; if this is EArrayFindMode_Any, then the index can refer to any of the matching elements; if this is EArrayFindMode_Last, then the index refers to first element that follows the last matching element - if the last matching element is also the last element of the array, then the index value is the same as the total number of elements in the array.</apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMode</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Specifies whether to find the first match, the last match or any match, as defined by one of the TArrayFindMode enum values.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5322"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="4079"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="4113"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Finds the object pointer in the array that matches the specified object pointer, using a binary search technique.</p>
+				<p>Where there is more than one matching element, it finds the first, the last or any matching element as specified by the value of aMode.</p>
+				<p>The function assumes that object pointers in the array are in address order.</p>
+				<p>KErrNone, if a matching object pointer is found. KErrNotFound, if no suitable object pointer can be found.</p>
+				<p>
+					<xref href="_c_s___c_l_i_8_c_p_p.xml#_c_s___c_l_i_8_c_p_p_1a807f1e3df383a955bab6454161302449">TArrayFindMode</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_pointer_array_1aad18c5b36728d9f907bad17b0da5c64c">
+		<apiName>SpecificFindInOrder</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RPointerArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt SpecificFindInOrder(const T *anEntry, TInt &amp;anIndex, TLinearOrder&lt; T &gt; anOrder, TInt aMode) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RPointerArray::SpecificFindInOrder(const T *,TInt &amp;,TLinearOrder&lt; T &gt;,TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const T *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anEntry</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The object pointer to be found. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A TInt type supplied by the caller. On return, it contains an index value depending on whether a match is found and on the value of aMode. If there is no matching element in the array, then this is the index of the first element in the array that is bigger than the element being searched for - if no elements in the array are bigger, then the index value is the same as the total number of elements in the array. If there is a matching element, then what the index refers to depends on the value of aMode: if this is EArrayFindMode_First, then the index refers to the first matching element; if this is EArrayFindMode_Any, then the index can refer to any of the matching elements; if this is EArrayFindMode_Last, then the index refers to first element that follows the last matching element - if the last matching element is also the last element of the array, then the index value is the same as the total number of elements in the array.</apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_linear_order.xml#class_t_linear_order">TLinearOrder</apiRelation>&lt; T &gt;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anOrder</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A package encapsulating the function which determines the order of two class T objects. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMode</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Specifies whether to find the first match, the last match or any match, as defined by one of the TArrayFindMode enum values.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5323"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="4119"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="4157"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Finds the object pointer in the array whose object matches the specified object, using a binary search technique and an ordering algorithm.</p>
+				<p>Where there is more than one matching element, it finds the first, the last or any matching element as specified by the value of aMode.</p>
+				<p>The function assumes that existing object pointers in the array are ordered so that the objects themselves are in object order as determined by an algorithm supplied by the caller and packaged as a TLinearOrder&lt;T&gt; type.</p>
+				<p>KErrNone, if a matching object pointer is found. KErrNotFound, if no suitable object pointer can be found.</p>
+				<p>
+					<xref href="_c_s___c_l_i_8_c_p_p.xml#_c_s___c_l_i_8_c_p_p_1a807f1e3df383a955bab6454161302449">TArrayFindMode</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_pointer_array_1a1cfa38b6773669498e8eba3d307610f5">
+		<apiName>InsertInAddressOrder</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RPointerArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt InsertInAddressOrder(const T *anEntry)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RPointerArray::InsertInAddressOrder(const T *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const T *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anEntry</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The object pointer to be inserted.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5324"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="4163"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="4180"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Inserts an object pointer into the array in address order.</p>
+				<p>No duplicate entries are permitted. The array remains unchanged following an attempt to insert a duplicate entry.</p>
+				<p>The function assumes that existing object pointers within the array are in address order.</p>
+				<p>KErrNone, if the insertion is successful; KErrAlreadyExists, if an attempt is being made to insert a duplicate entry; otherwise one of the other system wide error codes. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_pointer_array_1ab8eadec42ffff541c90378fdbce73a36">
+		<apiName>InsertInOrder</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RPointerArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt InsertInOrder(const T *anEntry, TLinearOrder&lt; T &gt; anOrder)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RPointerArray::InsertInOrder(const T *,TLinearOrder&lt; T &gt;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const T *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anEntry</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The object pointer to be inserted. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_linear_order.xml#class_t_linear_order">TLinearOrder</apiRelation>&lt; T &gt;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anOrder</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A package encapsulating the function which determines the order of two class T objects.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5325"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="4186"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="4209"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Inserts an object pointer into the array so that the object itself is in object order.</p>
+				<p>The algorithm for determining the order of two class T objects is provided by a function supplied by the caller.</p>
+				<p>No duplicate entries are permitted. The array remains unchanged following an attempt to insert a duplicate entry.</p>
+				<p>The function assumes that the array is ordered so that the referenced objects are in object order.</p>
+				<p>KErrNone, if the insertion is successful; KErrAlreadyExists, if an attempt is being made to insert a duplicate entry; otherwise one of the other system wide error codes. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_pointer_array_1a14ce627f9a8b32fea85c69b9d9ea668e">
+		<apiName>InsertInAddressOrderAllowRepeats</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RPointerArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt InsertInAddressOrderAllowRepeats(const T *anEntry)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RPointerArray::InsertInAddressOrderAllowRepeats(const T *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const T *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anEntry</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The object pointer to be inserted.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5326"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="4215"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="4232"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Inserts an object pointer into the array in address order, allowing duplicates.</p>
+				<p>If the new object pointer is a duplicate of an existing object pointer in the array, then the new pointer is inserted after the existing one. If more than one duplicate object pointer already exists in the array, then any new duplicate pointer is inserted after the last one.</p>
+				<p>The function assumes that existing object pointers within the array are in address order.</p>
+				<p>KErrNone, if the insertion is successful, otherwise one of the system wide error codes. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_pointer_array_1ad2a4702b699ad5651eb7a6008903d608">
+		<apiName>InsertInOrderAllowRepeats</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RPointerArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt InsertInOrderAllowRepeats(const T *anEntry, TLinearOrder&lt; T &gt; anOrder)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RPointerArray::InsertInOrderAllowRepeats(const T *,TLinearOrder&lt; T &gt;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const T *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anEntry</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The object pointer to be inserted. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_linear_order.xml#class_t_linear_order">TLinearOrder</apiRelation>&lt; T &gt;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anOrder</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A package encapsulating the function which determines the order of two class T objects.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5327"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="4238"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="4258"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Inserts an object pointer into the array so that the object itself is in object order, allowing duplicates</p>
+				<p>The algorithm for determining the order of two class T objects is provided by a function supplied by the caller.</p>
+				<p>If the specified object is a duplicate of an existing object, then the new pointer is inserted after the pointer to the existing object. If more than one duplicate object already exists, then the new pointer is inserted after the pointer to the last one.</p>
+				<p>KErrNone, if the insertion is successful, otherwise one of the system wide error codes. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_pointer_array_1acd40c022b03d4a5ad47f38c30b871de0">
+		<apiName>AppendL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RPointerArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void AppendL(const T *anEntry)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RPointerArray::AppendL(const T *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const T *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anEntry</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The object pointer to be appended. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5329"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="5448"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="5449"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Appends an object pointer onto the array.</p>
+				<p>The function leaves with one of the system wide error codes, if the operation fails.</p>
+				<p>NOTE: This function is NOT AVAILABLE to code running on the kernel side.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_pointer_array_1ae9f7b97320ce83b1c6fcdf00f917c20f">
+		<apiName>InsertL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RPointerArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void InsertL(const T *anEntry, TInt aPos)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RPointerArray::InsertL(const T *,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const T *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anEntry</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The object pointer to be inserted. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPos</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The position within the array where the object pointer is to be inserted. The position is relative to zero, i.e. zero implies that a pointer is inserted at the beginning of the array.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5330"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="5469"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="5470"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Inserts an object pointer into the array at the specified position.</p>
+				<p>The function leaves with one of the system wide error codes, if the operation fails.</p>
+				<p>NOTE: This function is NOT AVAILABLE to code running on the kernel side.</p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>USER 131, if aPos is negative, or is greater than the number of object pointers currently in the array. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_pointer_array_1a6cc714c1b3dcda9809487ad5a01b5fd5">
+		<apiName>FindL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RPointerArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt FindL(const T *anEntry) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RPointerArray::FindL(const T *)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const T *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anEntry</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The object pointer to be found. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5331"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="5489"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="5490"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Finds the first object pointer in the array which matches the specified object pointer, using a sequential search.</p>
+				<p>Matching is based on the comparison of pointers.</p>
+				<p>The find operation always starts at the low index end of the array. There is no assumption about the order of objects in the array.</p>
+				<p>NOTE: This function is NOT AVAILABLE to code running on the kernel side.</p>
+				<p>The index of the first matching object pointer within the array. </p>
+				<p>
+					<b>leave</b>
+				</p>
+				<p>KErrNotFound, if no matching object pointer can be found. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_pointer_array_1a2c8512c1906c61df6f4d3b0f2598be0e">
+		<apiName>FindL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RPointerArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt FindL(const T *anEntry, TIdentityRelation&lt; T &gt; anIdentity) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RPointerArray::FindL(const T *,TIdentityRelation&lt; T &gt;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const T *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anEntry</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The object pointer to be found. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_identity_relation.xml#class_t_identity_relation">TIdentityRelation</apiRelation>&lt; T &gt;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anIdentity</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A package encapsulating the function which determines whether two class T objects match.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5332"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="5513"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="5514"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Finds the first object pointer in the array whose object matches the specified object, using a sequential search and a matching algorithm.</p>
+				<p>The algorithm for determining whether two class T objects match is provided by a function supplied by the caller.</p>
+				<p>The find operation always starts at the low index end of the array. There is no assumption about the order of objects in the array.</p>
+				<p>NOTE: This function is NOT AVAILABLE to code running on the kernel side.</p>
+				<p>The index of the first matching object pointer within the array. </p>
+				<p>
+					<b>leave</b>
+				</p>
+				<p>KErrNotFound, if no suitable object pointer can be found. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_pointer_array_1a7690b1c691195c577c968812104e169b">
+		<apiName>FindReverseL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RPointerArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt FindReverseL(const T *anEntry) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RPointerArray::FindReverseL(const T *)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const T *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anEntry</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The object pointer to be found. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5333"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="5533"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="5534"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Finds the last object pointer in the array which matches the specified object pointer, using a sequential search.</p>
+				<p>Matching is based on the comparison of pointers.</p>
+				<p>The find operation always starts at the high index end of the array. There is no assumption about the order of objects in the array.</p>
+				<p>NOTE: This function is NOT AVAILABLE to code running on the kernel side.</p>
+				<p>The index of the last matching object pointer within the array. </p>
+				<p>
+					<b>leave</b>
+				</p>
+				<p>KErrNotFound, if no matching object pointer can be found. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_pointer_array_1a487f1a8716980f6a781561265ce57e94">
+		<apiName>FindReverseL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RPointerArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt FindReverseL(const T *anEntry, TIdentityRelation&lt; T &gt; anIdentity) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RPointerArray::FindReverseL(const T *,TIdentityRelation&lt; T &gt;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const T *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anEntry</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The object pointer to be found. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_identity_relation.xml#class_t_identity_relation">TIdentityRelation</apiRelation>&lt; T &gt;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anIdentity</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A package encapsulating the function which determines whether two class T objects match.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5334"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="5557"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="5558"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Finds the last object pointer in the array whose object matches the specified object, using a sequential search and a matching algorithm.</p>
+				<p>The algorithm for determining whether two class T objects match is provided by a function supplied by the caller.</p>
+				<p>The find operation always starts at the high index end of the array. There is no assumption about the order of objects in the array.</p>
+				<p>NOTE: This function is NOT AVAILABLE to code running on the kernel side.</p>
+				<p>The index of the last matching object pointer within the array. </p>
+				<p>
+					<b>leave</b>
+				</p>
+				<p>KErrNotFound, if no suitable object pointer can be found. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_pointer_array_1a593b58e10af5f009429b50afaed6958f">
+		<apiName>FindInAddressOrderL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RPointerArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt FindInAddressOrderL(const T *anEntry) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RPointerArray::FindInAddressOrderL(const T *)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const T *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anEntry</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The object pointer to be found.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5335"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="5575"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="5576"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Finds the object pointer in the array that matches the specified object pointer, using a binary search technique.</p>
+				<p>The function assumes that object pointers in the array are in address order.</p>
+				<p>NOTE: This function is NOT AVAILABLE to code running on the kernel side.</p>
+				<p>The index of the matching object pointer within the array </p>
+				<p>
+					<b>leave</b>
+				</p>
+				<p>KErrNotFound, if no suitable object pointer can be found. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_pointer_array_1ab421919107b81491809fcc1b925aac25">
+		<apiName>FindInOrderL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RPointerArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt FindInOrderL(const T *anEntry, TLinearOrder&lt; T &gt; anOrder) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RPointerArray::FindInOrderL(const T *,TLinearOrder&lt; T &gt;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const T *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anEntry</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The object pointer to be found. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_linear_order.xml#class_t_linear_order">TLinearOrder</apiRelation>&lt; T &gt;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anOrder</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A package encapsulating the function which determines the order of two class T objects.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5336"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="5598"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="5599"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Finds the object pointer in the array whose object matches the specified object, using a binary search technique and an ordering algorithm.</p>
+				<p>The function assumes that existing object pointers in the array are ordered so that the objects themselves are in object order as determined by an algorithm supplied by the caller and packaged as a TLinearOrder&lt;T&gt;.</p>
+				<p>NOTE: This function is NOT AVAILABLE to code running on the kernel side.</p>
+				<p>The index of the matching object pointer within the array.</p>
+				<p>
+					<b>leave</b>
+				</p>
+				<p>KErrNotFound, if no suitable object pointer can be found. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_pointer_array_1a05b501a84f6a8ad4b72a4f7920065a75">
+		<apiName>FindInAddressOrderL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RPointerArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void FindInAddressOrderL(const T *anEntry, TInt &amp;anIndex) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RPointerArray::FindInAddressOrderL(const T *,TInt &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const T *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anEntry</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The object pointer to be found. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A reference to a TInt into which the function puts an index value: If the function does not leave, this is the index of the matching object pointer within the array. If the function leaves with KErrNotFound, this is the index of the first object pointer within the array which logically follows after anEntry.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5337"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="5621"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="5622"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Finds the object pointer in the array that matches the specified object pointer, using a binary search technique.</p>
+				<p>The function assumes that object pointers in the array are in address order.</p>
+				<p>NOTE: This function is NOT AVAILABLE to code running on the kernel side.</p>
+				<p>
+					<b>leave</b>
+				</p>
+				<p>KErrNotFound, if no suitable object pointer can be found. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_pointer_array_1a7732455cdff33e7c88a1009de6623659">
+		<apiName>FindInOrderL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RPointerArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void FindInOrderL(const T *anEntry, TInt &amp;anIndex, TLinearOrder&lt; T &gt; anOrder) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RPointerArray::FindInOrderL(const T *,TInt &amp;,TLinearOrder&lt; T &gt;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const T *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anEntry</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The object pointer to be found. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A TInt supplied by the caller. On return, contains an index value: If the function does not leave, this is the index of the matching object pointer within the array. If the function leaves with KErrNotFound, this is the index of the first object pointer in the array whose object is bigger than the entry being searched for - if no objects pointed to in the array are bigger, then the index value is the same as the total number of object pointers in the array.</apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_linear_order.xml#class_t_linear_order">TLinearOrder</apiRelation>&lt; T &gt;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anOrder</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A package encapsulating the function which determines the order of two class T objects.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5338"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="5652"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="5653"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Finds the object pointer in the array whose object matches the specified object, using a binary search technique and an ordering algorithm.</p>
+				<p>The function assumes that existing object pointers in the array are ordered so that the objects themselves are in object order as determined by an algorithm supplied by the caller and packaged as a TLinearOrder&lt;T&gt;.</p>
+				<p>NOTE: This function is NOT AVAILABLE to code running on the kernel side.</p>
+				<p>
+					<b>leave</b>
+				</p>
+				<p>KErrNotFound, if no suitable object pointer can be found. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_pointer_array_1a6cd6a439a03bfc4742de2f6e9414e8ae">
+		<apiName>SpecificFindInAddressOrderL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RPointerArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt SpecificFindInAddressOrderL(const T *anEntry, TInt aMode) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RPointerArray::SpecificFindInAddressOrderL(const T *,TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const T *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anEntry</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The object pointer to be found. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMode</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Specifies whether to find the first match, the last match or any match, as defined by one of the TArrayFindMode enum values.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5339"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="5684"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="5685"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Finds the object pointer in the array that matches the specified object pointer, using a binary search technique.</p>
+				<p>Where there is more than one matching element, it finds the first, the last or any matching element as specified by the value of aMode.</p>
+				<p>The function assumes that object pointers in the array are in address order.</p>
+				<p>NOTE: This function is NOT AVAILABLE to code running on the kernel side.</p>
+				<p>If there is a matching element, the array index of a matching element - what the index refers to depends on the value of aMode: if this is EArrayFindMode_First, then the index refers to the first matching element; if this is EArrayFindMode_Any, then the index can refer to any of the matching elements; if this is EArrayFindMode_Last, then the index refers to first element that follows the last matching element - if the last matching element is also the last element of the array, then the index value is the same as the total number of elements in the array.</p>
+				<p>
+					<b>leave</b>
+				</p>
+				<p>KErrNotFound if no matching entry exists.</p>
+				<p>
+					<xref href="_c_s___c_l_i_8_c_p_p.xml#_c_s___c_l_i_8_c_p_p_1a807f1e3df383a955bab6454161302449">TArrayFindMode</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_pointer_array_1a83856412f9e7167accd4062e2acd148e">
+		<apiName>SpecificFindInOrderL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RPointerArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt SpecificFindInOrderL(const T *anEntry, TLinearOrder&lt; T &gt; anOrder, TInt aMode) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RPointerArray::SpecificFindInOrderL(const T *,TLinearOrder&lt; T &gt;,TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const T *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anEntry</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The object pointer to be found. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_linear_order.xml#class_t_linear_order">TLinearOrder</apiRelation>&lt; T &gt;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anOrder</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A package encapsulating the function which determines the order of two class T objects. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMode</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Specifies whether to find the first match, the last match or any match, as defined by one of the TArrayFindMode enum values.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5340"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="5720"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="5721"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Finds the object pointer in the array whose object matches the specified object, using a binary search technique and an ordering algorithm.</p>
+				<p>In the case that there is more than one matching element finds the first, last or any match as specified by the value of aMode.</p>
+				<p>The function assumes that existing object pointers in the array are ordered so that the objects themselves are in object order as determined by an algorithm supplied by the caller and packaged as a TLinearOrder&lt;T&gt; type.</p>
+				<p>NOTE: This function is NOT AVAILABLE to code running on the kernel side.</p>
+				<p>If there is a matching element, the array index of a matching element - what the index refers to depends on the value of aMode: if this is EArrayFindMode_First, then the index refers to the first matching element; if this is EArrayFindMode_Any, then the index can refer to any of the matching elements; if this is EArrayFindMode_Last, then the index refers to first element that follows the last matching element - if the last matching element is also the last element of the array, then the index value is the same as the total number of elements in the array.</p>
+				<p>
+					<b>leave</b>
+				</p>
+				<p>KErrNotFound if no matching entry exists.</p>
+				<p>
+					<xref href="_c_s___c_l_i_8_c_p_p.xml#_c_s___c_l_i_8_c_p_p_1a807f1e3df383a955bab6454161302449">TArrayFindMode</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_pointer_array_1af29a58f5f2f5575c487745d97d2951f7">
+		<apiName>SpecificFindInAddressOrderL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RPointerArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void SpecificFindInAddressOrderL(const T *anEntry, TInt &amp;anIndex, TInt aMode) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RPointerArray::SpecificFindInAddressOrderL(const T *,TInt &amp;,TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const T *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anEntry</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The object pointer to be found. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A TInt type supplied by the caller. On return, it contains an index value depending on whether a match is found and on the value of aMode. If there is no matching element in the array, then this is the index of the first element in the array that is bigger than the element being searched for - if no elements in the array are bigger, then the index value is the same as the total number of elements in the array. If there is a matching element, then what the index refers to depends on the value of aMode: if this is EArrayFindMode_First, then the index refers to the first matching element; if this is EArrayFindMode_Any, then the index can refer to any of the matching elements; if this is EArrayFindMode_Last, then the index refers to first element that follows the last matching element - if the last matching element is also the last element of the array, then the index value is the same as the total number of elements in the array.</apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMode</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Specifies whether to find the first match, the last match or any match, as defined by one of the TArrayFindMode enum values.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5341"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="5758"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="5759"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Finds the object pointer in the array that matches the specified object pointer, using a binary search technique.</p>
+				<p>Where there is more than one matching element, it finds the first, the last or any matching element as specified by the value of aMode.</p>
+				<p>The function assumes that object pointers in the array are in address order.</p>
+				<p>NOTE: This function is NOT AVAILABLE to code running on the kernel side.</p>
+				<p>
+					<b>leave</b>
+				</p>
+				<p>KErrNotFound, if no suitable object pointer can be found.</p>
+				<p>
+					<xref href="_c_s___c_l_i_8_c_p_p.xml#_c_s___c_l_i_8_c_p_p_1a807f1e3df383a955bab6454161302449">TArrayFindMode</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_pointer_array_1a57ba4a5a2197a7535eadfa294ea2cf1c">
+		<apiName>SpecificFindInOrderL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RPointerArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void SpecificFindInOrderL(const T *anEntry, TInt &amp;anIndex, TLinearOrder&lt; T &gt; anOrder, TInt aMode) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RPointerArray::SpecificFindInOrderL(const T *,TInt &amp;,TLinearOrder&lt; T &gt;,TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const T *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anEntry</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The object pointer to be found. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A TInt type supplied by the caller. On return, it contains an index value depending on whether a match is found and on the value of aMode. If there is no matching element in the array, then this is the index of the first element in the array that is bigger than the element being searched for - if no elements in the array are bigger, then the index value is the same as the total number of elements in the array. If there is a matching element, then what the index refers to depends on the value of aMode: if this is EArrayFindMode_First, then the index refers to the first matching element; if this is EArrayFindMode_Any, then the index can refer to any of the matching elements; if this is EArrayFindMode_Last, then the index refers to first element that follows the last matching element - if the last matching element is also the last element of the array, then the index value is the same as the total number of elements in the array.</apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_linear_order.xml#class_t_linear_order">TLinearOrder</apiRelation>&lt; T &gt;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anOrder</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A package encapsulating the function which determines the order of two class T objects. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMode</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Specifies whether to find the first match, the last match or any match, as defined by one of the TArrayFindModeenum values.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5342"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="5800"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="5801"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Finds the object pointer in the array whose object matches the specified object, using a binary search technique and an ordering algorithm.</p>
+				<p>Where there is more than one matching element, it finds the first, the last or any matching element as specified by the value of aMode.</p>
+				<p>The function assumes that existing object pointers in the array are ordered so that the objects themselves are in object order as determined by an algorithm supplied by the caller and packaged as a TLinearOrder&lt;T&gt;.</p>
+				<p>NOTE: This function is NOT AVAILABLE to code running on the kernel side.</p>
+				<p>
+					<b>leave</b>
+				</p>
+				<p>KErrNotFound, if no suitable object pointer can be found.</p>
+				<p>
+					<xref href="_c_s___c_l_i_8_c_p_p.xml#_c_s___c_l_i_8_c_p_p_1a807f1e3df383a955bab6454161302449">TArrayFindMode</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_pointer_array_1a7bdcd15bae467bf9f55adf7b0cc31c55">
+		<apiName>InsertInAddressOrderL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RPointerArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void InsertInAddressOrderL(const T *anEntry)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RPointerArray::InsertInAddressOrderL(const T *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const T *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anEntry</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The object pointer to be inserted. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5343"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="5818"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="5819"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Inserts an object pointer into the array in address order.</p>
+				<p>No duplicate entries are permitted. The function assumes that existing object pointers within the array are in address order.</p>
+				<p>The function leaves with one of the system wide error codes, if the operation fails.</p>
+				<p>NOTE: This function is NOT AVAILABLE to code running on the kernel side.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_pointer_array_1a3c45d0cb4cc25c72d634ad2947f2fb42">
+		<apiName>InsertInOrderL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RPointerArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void InsertInOrderL(const T *anEntry, TLinearOrder&lt; T &gt; anOrder)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RPointerArray::InsertInOrderL(const T *,TLinearOrder&lt; T &gt;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const T *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anEntry</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The object pointer to be inserted. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_linear_order.xml#class_t_linear_order">TLinearOrder</apiRelation>&lt; T &gt;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anOrder</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A package encapsulating the function which determines the order of two class T objects. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5344"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="5846"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="5847"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Inserts an object pointer into the array so that the object itself is in object order.</p>
+				<p>The algorithm for determining the order of two class T objects is provided by a function supplied by the caller.</p>
+				<p>No duplicate entries are permitted.</p>
+				<p>The function assumes that the array is ordered so that the referenced objects are in object order.</p>
+				<p>The function leaves with one of the system wide error codes, if the operation fails.</p>
+				<p>Note that the array remains unchanged following an attempt to insert a duplicate entry.</p>
+				<p>NOTE: This function is NOT AVAILABLE to code running on the kernel side.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_pointer_array_1a56d53a5c0e4227c08532b8aff35c6ef4">
+		<apiName>InsertInAddressOrderAllowRepeatsL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RPointerArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void InsertInAddressOrderAllowRepeatsL(const T *anEntry)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RPointerArray::InsertInAddressOrderAllowRepeatsL(const T *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const T *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anEntry</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The object pointer to be inserted. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5345"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="5868"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="5869"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Inserts an object pointer into the array in address order, allowing duplicates.</p>
+				<p>If the new object pointer is a duplicate of an existing object pointer in the array, then the new pointer is inserted after the existing one. If more than one duplicate object pointer already exists in the array, then any new duplicate pointer is inserted after the last one.</p>
+				<p>The function assumes that existing object pointers within the array are in address order.</p>
+				<p>The function leaves with one of the system wide error codes, if the operation fails.</p>
+				<p>NOTE: This function is NOT AVAILABLE to code running on the kernel side.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_pointer_array_1a080fc7291215c637a9b5406d4e48f3d2">
+		<apiName>InsertInOrderAllowRepeatsL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RPointerArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void InsertInOrderAllowRepeatsL(const T *anEntry, TLinearOrder&lt; T &gt; anOrder)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RPointerArray::InsertInOrderAllowRepeatsL(const T *,TLinearOrder&lt; T &gt;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const T *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anEntry</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The object pointer to be inserted. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_linear_order.xml#class_t_linear_order">TLinearOrder</apiRelation>&lt; T &gt;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anOrder</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A package encapsulating the function which determines the order of two class T objects. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5346"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="5893"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="5894"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Inserts an object pointer into the array so that the object itself is in object order, allowing duplicates</p>
+				<p>The algorithm for determining the order of two class T objects is provided by a function supplied by the caller.</p>
+				<p>If the specified object is a duplicate of an existing object, then the new pointer is inserted after the pointer to the existing object. If more than one duplicate object already exists, then the new pointer is inserted after the pointer to the last one.</p>
+				<p>The function leaves with one of the system wide error codes, if the operation fails.</p>
+				<p>NOTE: This function is NOT AVAILABLE to code running on the kernel side.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_pointer_array_1a8dc3c804d858c1a5c867e1a1c1a2b394">
+		<apiName>RPointerArray</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>RPointerArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline RPointerArray(T **aEntries, TInt aCount)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RPointerArray::RPointerArray(T **,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>T **</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aEntries</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A pointer to the first entry of type pointer to class T in the set of entries belonging to the existing array. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCount</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The number of entries in the existing array. The granularity of this array is set to this value.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5348"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="4265"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="4282"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>C++ constructor with a pointer to the first array entry in a pre-existing array, and the number of entries in that array.</p>
+				<p>This constructor takes a pointer to a pre-existing set of entries of type pointer to class T, which is owned by another <xref href="class_r_pointer_array.xml#class_r_pointer_array">RPointerArray</xref> object. Ownership of the set of entries still resides with the original <xref href="class_r_pointer_array.xml#class_r_pointer_array">RPointerArray</xref> object.</p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>USER 156, if aCount is not positive. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_pointer_array_1aeacdb8243192734acded1b011291b65e">
+		<apiName>GranularCompress</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RPointerArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void GranularCompress()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RPointerArray::GranularCompress()</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_r_pointer_array_base.xml#class_r_pointer_array_base_1aa26ed4dfcd02116baae4cfc9c3820617">RPointerArrayBase::GranularCompress()</cxxFunctionReimplemented>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5349"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="4288"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="4297"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Compresses the array down to a granular boundary.</p>
+				<p>After a call to this function, the memory allocated to the array is sufficient for its contained object pointers. Adding new object pointers to the array does not result in a re-allocation of memory until the the total number of pointers reaches a multiple of the granularity. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_pointer_array_1a8fa1992f820a6b9762c37a4b58d4f0a9">
+		<apiName>Reserve</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RPointerArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt Reserve(TInt aCount)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RPointerArray::Reserve(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCount</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The number of object pointers for which space should be reserved </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5350"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="4303"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="4316"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Reserves space for the specified number of elements.</p>
+				<p>After a call to this function, the memory allocated to the array is sufficient to hold the number of object pointers specified. Adding new object pointers to the array does not result in a re-allocation of memory until the the total number of pointers exceeds the specified count.</p>
+				<p>KErrNone If the operation completed successfully </p>
+				<p>KErrNoMemory If the requested amount of memory could not be allocated </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_pointer_array_1aa9aac9a19a317e236e17e6314766276e">
+		<apiName>ReserveL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RPointerArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void ReserveL(TInt aCount)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RPointerArray::ReserveL(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCount</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The number of object pointers for which space should be reserved </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5351"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="5910"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="5911"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Reserves space for the specified number of elements.</p>
+				<p>After a call to this function, the memory allocated to the array is sufficient to hold the number of object pointers specified. Adding new object pointers to the array does not result in a re-allocation of memory until the the total number of pointers exceeds the specified count.</p>
+				<p>
+					<b>leave</b>
+				</p>
+				<p>KErrNoMemory If the requested amount of memory could not be allocated </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_pointer_array_1a8b394469a15750cabd84a6fd2b2bb132">
+		<apiName>SortIntoAddressOrder</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RPointerArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void SortIntoAddressOrder()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RPointerArray::SortIntoAddressOrder()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5352"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="4322"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="4326"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Sorts the object pointers within the array into address order. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_pointer_array_1a5bac84c7d0d28b2fafd86355c0ab1ed0">
+		<apiName>Sort</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RPointerArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void Sort(TLinearOrder&lt; T &gt; anOrder)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RPointerArray::Sort(TLinearOrder&lt; T &gt;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_linear_order.xml#class_t_linear_order">TLinearOrder</apiRelation>&lt; T &gt;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anOrder</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A package encapsulating the function which determines the order of two class T objects. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5353"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="4332"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="4343"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Sorts the object pointers within the array.</p>
+				<p>The sort order of the pointers is based on the order of the referenced objects. The referenced object order is determined by an algorithm supplied by the caller and packaged as a TLinerOrder&lt;T&gt;.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_pointer_array_1a8b68c7c569ec6dec147893ba43fef717">
+		<apiName>Array</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="class_t_array.xml#class_t_array">TArray</apiRelation>&lt; T * &gt;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RPointerArray</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TArray&lt; T * &gt; Array() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RPointerArray::Array()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5354"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="4349"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="4357"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Constructs and returns a generic array.</p>
+				<p>A generic array representing this array.</p>
+				<p>
+					<xref href="class_t_array.xml#class_t_array">TArray</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxClassInherits>
+		<cxxClassInheritsDetail>
+			<cxxClassFunctionInherited href="class_r_pointer_array.xml#class_r_pointer_array_base_1a5df6f249040ad3dac33e383d189cb1f7">RPointerArrayBase::Append(const TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_pointer_array.xml#class_r_pointer_array_base_1a74bc66045c344f1c154cf1478f35e9ec">RPointerArrayBase::At(TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_pointer_array.xml#class_r_pointer_array_base_1ae8af66d845ee628305c98c7ece887bbc">RPointerArrayBase::BinarySearch(const TAny *,TInt &amp;,TGeneralLinearOrder)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_pointer_array.xml#class_r_pointer_array_base_1ad5ee5b35bfd5df9f5833fe7aa0059f95">RPointerArrayBase::BinarySearch(const TAny *,TInt &amp;,TGeneralLinearOrder,TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_pointer_array.xml#class_r_pointer_array_base_1a648e7ed0c5bfc8580a22c64d3b543f63">RPointerArrayBase::BinarySearchSigned(TInt,TInt &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_pointer_array.xml#class_r_pointer_array_base_1af8683c0bba4a0384c0837b1086b9e282">RPointerArrayBase::BinarySearchSigned(TInt,TInt &amp;,TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_pointer_array.xml#class_r_pointer_array_base_1a487455ad08e0d40c52ed9a5d3c2afd6c">RPointerArrayBase::BinarySearchUnsigned(TUint,TInt &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_pointer_array.xml#class_r_pointer_array_base_1a1ebe93e601bd19aaef222acf245ba532">RPointerArrayBase::BinarySearchUnsigned(TUint,TInt &amp;,TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_pointer_array.xml#class_r_pointer_array_base_1a32f3e2266b2acbddf67de7b3017ecc41">RPointerArrayBase::DoReserve(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_pointer_array.xml#class_r_pointer_array_base_1aad219a1812797e20a4e2b828ed3b8b04">RPointerArrayBase::Entries()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_pointer_array.xml#class_r_pointer_array_base_1acb5dc8fd62fe2d903d82ab394c651536">RPointerArrayBase::Find(const TAny *)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_pointer_array.xml#class_r_pointer_array_base_1a76cd2866027ea0595890dc483392daa5">RPointerArrayBase::Find(const TAny *,TGeneralIdentityRelation)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_pointer_array.xml#class_r_pointer_array_base_1a87af4bc5cad3d94b922865dc35f0d802">RPointerArrayBase::FindIsq(const TAny *,TGeneralLinearOrder)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_pointer_array.xml#class_r_pointer_array_base_1ae63903abe132559f7a4764fd8e0f76ea">RPointerArrayBase::FindIsq(const TAny *,TGeneralLinearOrder,TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_pointer_array.xml#class_r_pointer_array_base_1a63eab650054dc4fe67eb2218f919893b">RPointerArrayBase::FindIsqSigned(TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_pointer_array.xml#class_r_pointer_array_base_1a0ec6f9e106208599d00f1b2c04f67448">RPointerArrayBase::FindIsqSigned(TInt,TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_pointer_array.xml#class_r_pointer_array_base_1a4054f41d4f121f65b01aaf3e82623f7e">RPointerArrayBase::FindIsqUnsigned(TUint)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_pointer_array.xml#class_r_pointer_array_base_1a9ad52f0d9e6f582db3cd9f5f1e2a03e0">RPointerArrayBase::FindIsqUnsigned(TUint,TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_pointer_array.xml#class_r_pointer_array_base_1af94a410664b7a701a0c0c0b65cf53240">RPointerArrayBase::FindReverse(const TAny *)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_pointer_array.xml#class_r_pointer_array_base_1aed95a8e3fdd8756eacde344ee0f53018">RPointerArrayBase::FindReverse(const TAny *,TGeneralIdentityRelation)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_pointer_array.xml#class_r_pointer_array_base_1adbe8e72d31eb2040a32357689ce30e52">RPointerArrayBase::GetCount(const CBase *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_pointer_array.xml#class_r_pointer_array_base_1a026e72d9985dc81814d7ccdc501f8354">RPointerArrayBase::GetElementPtr(const CBase *,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_pointer_array.xml#class_r_pointer_array_base_1ab375a722cef408d4ccda9cb0440e38b6">RPointerArrayBase::HeapSort(TGeneralLinearOrder)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_pointer_array.xml#class_r_pointer_array_base_1afba8fcf5774262e610455297265792b3">RPointerArrayBase::HeapSortSigned()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_pointer_array.xml#class_r_pointer_array_base_1a71ecd4fa85752ffdb85a04d8dbb9e7ff">RPointerArrayBase::HeapSortUnsigned()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_pointer_array.xml#class_r_pointer_array_base_1aaa66ec294f465e39073a2c31e02537f1">RPointerArrayBase::Insert(const TAny *,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_pointer_array.xml#class_r_pointer_array_base_1a40a137ec1730549329aed9f6dd04099a">RPointerArrayBase::InsertIsq(const TAny *,TGeneralLinearOrder,TBool)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_pointer_array.xml#class_r_pointer_array_base_1a33331649f6a6845c55e42909e227a2b3">RPointerArrayBase::InsertIsqSigned(TInt,TBool)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_pointer_array.xml#class_r_pointer_array_base_1a395db1996f6177e61b08c476f62ef733">RPointerArrayBase::InsertIsqUnsigned(TUint,TBool)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_pointer_array.xml#class_r_pointer_array_base_1a3e44daa4aee4a785d93b80ee5e5cb7bc">RPointerArrayBase::RPointerArrayBase()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_pointer_array.xml#class_r_pointer_array_base_1a907e8b6107090e7901b4798aba1d63a4">RPointerArrayBase::RPointerArrayBase(TAny **,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_pointer_array.xml#class_r_pointer_array_base_1a2d6000c7edbfb86181880faad3790237">RPointerArrayBase::RPointerArrayBase(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_pointer_array.xml#class_r_pointer_array_base_1a93d73b96ae66428b8f4fceb7f1ffd032">RPointerArrayBase::RPointerArrayBase(TInt,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_pointer_array.xml#class_r_pointer_array_base_1a9520541dcf3f441f605a19786a565ac6">RPointerArrayBase::ZeroCount()</cxxClassFunctionInherited>
+		</cxxClassInheritsDetail>
+	</cxxClassInherits>
+</cxxClass>

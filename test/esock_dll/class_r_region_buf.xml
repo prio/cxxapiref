@@ -1,0 +1,223 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_r_region_buf">
+	<apiName>RRegionBuf</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassDerivations>
+				<cxxClassDerivation>
+					<cxxClassDerivationAccessSpecifier value="public"/>
+					<cxxClassBaseClass href="class_r_region.xml#class_r_region">RRegion</cxxClassBaseClass>
+				</cxxClassDerivation>
+			</cxxClassDerivations>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="2735"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="2734"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="2743"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>Region with pre-allocated buffer.</p>
+			<p>This class provides the functionality of an <xref href="class_r_region.xml#class_r_region">RRegion</xref>, but in addition, for optimisation purposes, uses a buffer containing pre-allocated space for as many rectangles as are specified in the granularity.</p>
+			<p>When this buffer is full, cell allocation takes place as for an <xref href="class_r_region.xml#class_r_region">RRegion</xref>, and the <xref href="class_r_region_buf.xml#class_r_region_buf">RRegionBuf</xref> effectively becomes an <xref href="class_r_region.xml#class_r_region">RRegion</xref>. In this case, the region does not revert to using the buffer, even if the region were to shrink so that the buffer could, once again, contain the region. When the region is no longer required, call <xref href="class_r_region.xml#class_r_region_1a35f40857667f724ea6557a4073139137">Close()</xref>, defined in the base class <xref href="class_r_region.xml#class_r_region">RRegion</xref>, to free up all memory. </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_r_region_buf_1a8d792d338193da6ab74c18911b02f770">
+		<apiName>RRegionBuf</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>RRegionBuf</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline RRegionBuf()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RRegionBuf::RRegionBuf()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2737"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="4580"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="4586"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Constructs a default object.</p>
+				<p>The granularity is the value of the template parameter. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_region_buf_1aef52002df90d02f5e80cc116c0e3a8b4">
+		<apiName>RRegionBuf</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>RRegionBuf</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline RRegionBuf(const RRegion &amp;aRegion)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RRegionBuf::RRegionBuf(const RRegion &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_r_region.xml#class_r_region">RRegion</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aRegion</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The region to assign to this RRegionBuf. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2738"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="4591"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="4597"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Constructs this object from the specified <xref href="class_r_region.xml#class_r_region">RRegion</xref>.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_region_buf_1a802f4bf8e11444e307d713edf59fc2ef">
+		<apiName>RRegionBuf</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>RRegionBuf</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline RRegionBuf(const RRegionBuf&lt; S &gt; &amp;aRegion)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RRegionBuf::RRegionBuf(const RRegionBuf&lt; S &gt; &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_r_region_buf.xml#class_r_region_buf">RRegionBuf</apiRelation>&lt; S &gt; &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aRegion</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The RRegionBuf to be copied. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2739"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="4618"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="4624"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Copy constructs from an existing <xref href="class_r_region_buf.xml#class_r_region_buf">RRegionBuf</xref> object.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_region_buf_1a087c96f548b02a3d01a6c11ee8f391c9">
+		<apiName>RRegionBuf</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>RRegionBuf</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline RRegionBuf(const TRect &amp;aRect)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RRegionBuf::RRegionBuf(const TRect &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="class_t_rect.xml#class_t_rect">TRect</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aRect</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The single rectangle with which to initialise the region. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="2740"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="4603"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="4612"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Constructs an <xref href="class_r_region_buf.xml#class_r_region_buf">RRegionBuf</xref> with a <xref href="class_t_rect.xml#class_t_rect">TRect</xref>.</p>
+				<p>Its granularity is initialised to the value contained in the template argument. The resulting region consists of the specified single rectangle.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxVariable id="class_r_region_buf_1a9eb16d0f1eb135cbbc0ec47821e41a26">
+		<apiName>iRectangleBuf</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1a9357a8e9552b6131a89fb3de94bff80a">TInt8</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>RRegionBuf</cxxVariableScopedName>
+				<cxxVariablePrototype>TInt8 iRectangleBuf[S *sizeof(TRect)]</cxxVariablePrototype>
+				<cxxVariableNameLookup>RRegionBuf::iRectangleBuf</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32std.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="2742"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxClassInherits>
+		<cxxClassInheritsDetail>
+			<cxxClassFunctionInherited href="class_r_region_buf.xml#class_r_region_1a98b8278d294f5fae61f0d02e7dcb25f8">RRegion::CheckSpare()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_region_buf.xml#class_r_region_1a35f40857667f724ea6557a4073139137">RRegion::Close()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_region_buf.xml#class_r_region_1a0e4adfd7f4d00d8861208d3ae1a92ead">RRegion::Destroy()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_region_buf.xml#class_r_region_1a00b59450f0d0244b95fc0d0223978951">RRegion::RRegion()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_region_buf.xml#class_r_region_1ae11ce28f6416bb00b5687e4f4ae4f0b9">RRegion::RRegion(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_region_buf.xml#class_r_region_1af38c2242feccf680ed97f97617ffc0f8">RRegion::RRegion(TInt,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_region_buf.xml#class_r_region_1a528c28ceba3bcbc8680b5bdf8d5f6be8">RRegion::RRegion(TInt,TRect *,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_region_buf.xml#class_r_region_1a589a40ee0f75c099dfb25c9dc7393c37">RRegion::RRegion(const RRegion &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_region_buf.xml#class_r_region_1ac75d68bbe7c277a92744f455bacdca5c">RRegion::RRegion(const TRect &amp;,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_region_buf.xml#class_t_region_1ae54e9549e1f407ef2dda98431b8f5f17">TRegion::AddRect(const TRect &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_region_buf.xml#class_t_region_1a594db65485a19bad0466da2dd86fbd31">TRegion::AppendRect(const TRect &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_region_buf.xml#class_t_region_1a1cf4baaed735135bec6ce6e418fd8de0">TRegion::AppendRegion(TRegion &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_region_buf.xml#class_t_region_1af55a8f238dbe9b7fdfbffa76188e4195">TRegion::BoundingRect()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_region_buf.xml#class_t_region_1afb08b70d21c26e0510e6a45a1fabb999">TRegion::CheckError()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_region_buf.xml#class_t_region_1ae3e71b264e2d3098ee93a48752e6826e">TRegion::Clear()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_region_buf.xml#class_t_region_1a224db9b608a071482e2346331486d7fc">TRegion::ClipRect(const TRect &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_region_buf.xml#class_t_region_1ad0e323e52111a4e645e91922b33a4e93">TRegion::Contains(const TPoint &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_region_buf.xml#class_t_region_1a2968bdf7f72331e67e8229db4927dec2">TRegion::Copy(const TRegion &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_region_buf.xml#class_t_region_1a63cca5fb35bd64b48de5f450707415f6">TRegion::Count()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_region_buf.xml#class_t_region_1af4eda151030a88cba73606ac101b3d0f">TRegion::DeleteRect(TRect *)</cxxClassFunctionInherited>
+			<cxxClassEnumeratorInherited href="class_r_region_buf.xml#class_t_region_1a76826c96a59bb74746d2505ab794e9baa66cedd0c4512a918dfa9883d166b7401">TRegion::ERRegionBuf</cxxClassEnumeratorInherited>
+			<cxxClassFunctionInherited href="class_r_region_buf.xml#class_t_region_1ad3334ba6a0e8259063fa5f025da9c610">TRegion::ExpandRegion(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_region_buf.xml#class_t_region_1acbee4e3d8d6873f2e470a2a97d0a2a63">TRegion::ForceError()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_region_buf.xml#class_t_region_1a8ba87bcf5fa0fd4328e5fd47df704136">TRegion::Intersect(const TRegion &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_region_buf.xml#class_t_region_1afb1b449b666fdb9b6f1682cbd4f6802a">TRegion::Intersection(const TRegion &amp;,const TRegion &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_region_buf.xml#class_t_region_1a4538091cd8b1b68324e27beb0a1d8e59">TRegion::Intersects(const TRect &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_region_buf.xml#class_t_region_1af8da23f371546059e2ec31d9315d60df">TRegion::IsContainedBy(const TRect &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_region_buf.xml#class_t_region_1aa75bdd5d962f63fb0bbfcf30b811e78b">TRegion::IsEmpty()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_region_buf.xml#class_t_region_1a26b2f6f577d5cc3753a8c42e13b5f681">TRegion::MergeRect(const TRect &amp;,TBool)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_region_buf.xml#class_t_region_1a0612006396e388ccf667ef01387a4c19">TRegion::Offset(TInt,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_region_buf.xml#class_t_region_1a43fcc8a97e2613dfb911c2f64725ae89">TRegion::Offset(const TPoint &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_region_buf.xml#class_t_region_1a7c90deee7860510568e8f710cf4a7484">TRegion::RectangleList()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_region_buf.xml#class_t_region_1af1ba41af93527b7841f78816f8b755ca">TRegion::RectangleListW()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_region_buf.xml#class_t_region_1abd8f7a9da8f7e45b4de78fba78f5ecec">TRegion::SetListSize(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_region_buf.xml#class_t_region_1a99da260e6d9e6e750f602f360abf2f8c">TRegion::ShrinkRegion()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_region_buf.xml#class_t_region_1a4c4856b03658b260f3f7b1f168a7d8a8">TRegion::Sort()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_region_buf.xml#class_t_region_1a2981b02c59c36c2843ab425b3b9a857a">TRegion::Sort(const TPoint &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_region_buf.xml#class_t_region_1a0eab3ae6a45447c31b6330a58fe8e91d">TRegion::SubRect(const TRect &amp;,TRegion *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_region_buf.xml#class_t_region_1ab0b9f4ff239e8f687ff4005bd501aafa">TRegion::SubRegion(const TRegion &amp;,TRegion *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_region_buf.xml#class_t_region_1adfaca0afcb7efa90f0994bcc54f3ec1c">TRegion::SubtractRegion(const TRegion &amp;,TRegion *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_region_buf.xml#class_t_region_1a6bb8a2b244b295663fa50ada47159e1d">TRegion::TRegion()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_region_buf.xml#class_t_region_1a44d9b651f8ae90aace62680f38df40e6">TRegion::TRegion(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_region_buf.xml#class_t_region_1a0e45182d1f7faa79d7af7a3254de916c">TRegion::Tidy()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_region_buf.xml#class_t_region_1a1dabc53dee94a5f588c923208b6d96db">TRegion::Union(const TRegion &amp;)</cxxClassFunctionInherited>
+			<cxxClassVariableInherited href="class_r_region_buf.xml#class_t_region_1a3499dd44125d2f942845680181f45d58">TRegion::iAllocedRects</cxxClassVariableInherited>
+			<cxxClassVariableInherited href="class_r_region_buf.xml#class_t_region_1a12ed75d7dcc4c1b2416d6dbd21e5bb85">TRegion::iCount</cxxClassVariableInherited>
+			<cxxClassVariableInherited href="class_r_region_buf.xml#class_t_region_1a1195a35061114c9d350aa952783135d7">TRegion::iError</cxxClassVariableInherited>
+			<cxxClassFunctionInherited href="class_r_region_buf.xml#class_t_region_1af7795ae7f8e6b367a148f833bd018c17">TRegion::operator[](TInt)const</cxxClassFunctionInherited>
+			<cxxClassEnumerationInherited href="class_r_region_buf.xml#class_t_region_1a76826c96a59bb74746d2505ab794e9ba">TRegion:@20</cxxClassEnumerationInherited>
+		</cxxClassInheritsDetail>
+	</cxxClassInherits>
+</cxxClass>

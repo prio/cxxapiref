@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (c) 2011 Nokia Corporation and/or its subsidiary(-ies).
+All rights reserved.        
+        -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<reference id="cxxFriend" outputclass="element" xml:lang="en-us">
+<title>cxxFriend</title>
+<shortdesc>The cxxFriend element is the top level container for information
+about the use of the C++ keyword friend.</shortdesc>
+<refbody>
+<section id="section_D9BAD0D1BC204562AEF38EAA15B6DEF1">          
+  <title>Description</title>             <p>The &lt;cxxFriend> element
+requires an ID attribute. The elements &lt;apiName> and &lt;cxxFriendDetail>
+are required for this topic.</p>         </section>
+<example id="example_B0F4467A5A9D4DE883E528E53490416D">          
+  <title>Example</title><p>Given source code like this:</p><codeblock
+>
+/** This class allows, by means of friendship,
+the function friend_set(Class_13969_00*, int) to
+access my private members e.g. member a. */
+class Class_13969_00
+{
+private:
+	int a;
+public:
+	/** friend reference. */
+	friend void friend_set(Class_13969_00*, int);
+};
+
+void friend_set(Class_13969_00* p, int i)
+{
+    // Accessing a private member of Class_13969_00, I can do this as I am a friend
+    p->a = i;
+}
+
+</codeblock><p>The cxxFriend element would contain the following information:</p
+>             <codeblock>
+	&lt;cxxFriend id="class_class__13969__00_1a5648f605b608a5c23888a90f4dd6afc3" otherprops="friend">
+		&lt;apiName>friend_set&lt;/apiName>
+		&lt;shortdesc />
+		&lt;cxxFriendDetail>
+			&lt;cxxFriendDefinition>
+				&lt;cxxFriendDeclaredType>friend void&lt;/cxxFriendDeclaredType>
+				&lt;cxxFriendScopedName>Class_13969_00&lt;/cxxFriendScopedName>
+				&lt;cxxFriendPrototype>friend void friend_set(Class_13969_00 *, int)&lt;/cxxFriendPrototype>
+				&lt;cxxFriendNameLookup>friend_set(Class_13969_00 *,int)&lt;/cxxFriendNameLookup>
+				&lt;cxxFriendParameters>
+					&lt;cxxFriendParameter>
+						&lt;cxxFriendParameterDeclaredType>
+							&lt;apiRelation href="class_class__13969__00.xml#class_class__13969__00">Class_13969_00&lt;/apiRelation> *&lt;/cxxFriendParameterDeclaredType>
+						&lt;cxxFriendParameterDefinitionName>p&lt;/cxxFriendParameterDefinitionName>
+						&lt;apiDefNote />
+					&lt;/cxxFriendParameter>
+					&lt;cxxFriendParameter>
+						&lt;cxxFriendParameterDeclaredType>int&lt;/cxxFriendParameterDeclaredType>
+						&lt;cxxFriendParameterDefinitionName>i&lt;/cxxFriendParameterDefinitionName>
+						&lt;apiDefNote />
+					&lt;/cxxFriendParameter>
+				&lt;/cxxFriendParameters>
+				&lt;cxxFriendReturnDesc />
+				&lt;cxxFriendAPIItemLocation>
+					&lt;cxxFriendDeclarationFile name="filePath" value="T:/epoc32/include/defect/file_13969.h" />
+					&lt;cxxFriendDeclarationFileLine name="lineNumber" value="14" />
+					&lt;cxxFriendDefinitionFile name="filePath" value="T:/sf/defect/13969/src/file_13969.cpp" />
+					&lt;cxxFriendDefinitionFileLineStart name="lineNumber" value="4" />
+					&lt;cxxFriendDefinitionFileLineEnd name="lineNumber" value="7" />
+				&lt;/cxxFriendAPIItemLocation>
+			&lt;/cxxFriendDefinition>
+			&lt;apiDesc>
+				&lt;p>freind reference.&lt;/p>
+				&lt;p>This can access &lt;xref href="class_class__13969__00.xml#class_class__13969__00">Class_13969_00&lt;/xref> private members by means of friendship. &lt;/p>
+			&lt;/apiDesc>
+		&lt;/cxxFriendDetail>
+	&lt;/cxxFriend>
+</codeblock>         </example>
+<section
+conref="../packagedef.dita#cxxFriend-reference/cxxFriend-containedBy-section"
+></section>
+<section
+conref="../packagedef.dita#cxxFriend-reference/cxxFriend-contains-section"
+></section>
+<section
+conref="../packagedef.dita#cxxFriend-reference/cxxFriend-contentModel-section"
+></section>
+<section
+conref="../packagedef.dita#cxxFriend-reference/cxxFriend-attList-section"
+></section>
+<section
+conref="../packagedef.dita#cxxFriend-reference/cxxFriend-classValue-section"
+></section>
+</refbody>
+</reference>
+<?Pub *0000004152?>

@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_t_des16_overflow">
+	<apiName>TDes16Overflow</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassAbstract/>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/e32des16.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="204"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/e32des16.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="190"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="216"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>An interface that defines an overflow handler for a 16-bit descriptor.</p>
+			<p>The interface encapsulates a function that is called when an attempt to append formatted text fails because the descriptor is already at its maximum length.</p>
+			<p>A derived class must provide an implementation for the <xref href="class_t_des16_overflow.xml#class_t_des16_overflow_1a5c8bbea22dd934926bace4d7ffcca67a">Overflow()</xref> member function.</p>
+			<p>
+				<xref href="class_t_des16.xml#class_t_des16_1a4870f8bf729511b25f63da3cbb689f22">TDes16::AppendFormat</xref> </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_t_des16_overflow_1a5c8bbea22dd934926bace4d7ffcca67a">
+		<apiName>Overflow</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionPureVirtual/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>TDes16Overflow</cxxFunctionScopedName>
+				<cxxFunctionPrototype>virtual void Overflow(TDes16 &amp;aDes)=0</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>TDes16Overflow::Overflow(TDes16 &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_t_des16.xml#class_t_des16">TDes16</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aDes</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The 16-bit modifiable descriptor whose overflow results in the call to this overflow handler. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32des16.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="215"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Handles the overflow.</p>
+				<p>This function is called when the <xref href="class_t_des16.xml#class_t_des16_1a4870f8bf729511b25f63da3cbb689f22">TDes16::AppendFormat()</xref> variant that takes an overflow handler argument, fails.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+</cxxClass>

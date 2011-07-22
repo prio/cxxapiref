@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (c) 2011 Nokia Corporation and/or its subsidiary(-ies).
+All rights reserved.        
+        -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<reference id="cxxFriendParameter" outputclass="element" xml:lang="en-us">
+<title>cxxFriendParameter</title>
+<shortdesc>Describes a friend function parameter.<?Pub Caret?></shortdesc>
+<refbody>
+<section id="section_6C88CF050D7842A79A8DC78019CDFE69">          
+  <title>Description</title><p>The &lt;cxxFriendParameter> element
+describes a single friend function parameter declaration in a  parameter
+declaration clause.</p><p>See ISO/IEC 14882:2003(E) 8.3.5 Functions
+[dcl.fct] and ISO/IEC 14882:2003(E) 11.4 Friends [class.friend]</p
+>          </section>
+<example id="example_999D0BE6B0D048EB990F2807BE05B7FE">          
+  <title>Example</title><p>Given source code such as:</p>        
+    <codeblock>class Class_13969_00
+{
+private:
+	int a;
+public:
+	/** friend reference. */
+	friend void friend_set(Class_13969_00*, int);
+};
+
+/** This can access Class_13969_00 private members by means of friendship. */
+void friend_set(Class_13969_00* p, int i)
+{
+	p->a = i;
+}
+
+</codeblock><p>The DITA for the first parameter could be:</p><codeblock
+>&lt;cxxFriendParameter>
+    &lt;cxxFriendParameterDeclaredType>
+        &lt;apiRelation href="class_class__13969__00.xml#class_class__13969__00">Class_13969_00&lt;/apiRelation> *&lt;/cxxFriendParameterDeclaredType>
+    &lt;cxxFriendParameterDefinitionName>p&lt;/cxxFriendParameterDefinitionName>
+    &lt;apiDefNote />
+&lt;/cxxFriendParameter>
+</codeblock>         </example>
+<section
+conref="../packagedef.dita#cxxFriendParameter-reference/cxxFriendParameter-containedBy-section"
+></section>
+<section
+conref="../packagedef.dita#cxxFriendParameter-reference/cxxFriendParameter-contains-section"
+></section>
+<section
+conref="../packagedef.dita#cxxFriendParameter-reference/cxxFriendParameter-contentModel-section"
+></section>
+<section
+conref="../packagedef.dita#cxxFriendParameter-reference/cxxFriendParameter-attList-section"
+></section>
+<section
+conref="../packagedef.dita#cxxFriendParameter-reference/cxxFriendParameter-classValue-section"
+></section>
+</refbody>
+</reference>
+<?Pub *0000002196?>

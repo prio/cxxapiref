@@ -1,0 +1,406 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_c_buf_flat">
+	<apiName>CBufFlat</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassDerivations>
+				<cxxClassDerivation>
+					<cxxClassDerivationAccessSpecifier value="public"/>
+					<cxxClassBaseClass href="class_c_buf_base.xml#class_c_buf_base">CBufBase</cxxClassBaseClass>
+				</cxxClassDerivation>
+			</cxxClassDerivations>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="207"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="193"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="224"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>Provides a flat storage dynamic buffer.</p>
+			<p>This class should be used when high-speed pointer lookup is an important consideration, and you are reasonably confident that the insertion of data will not fail.</p>
+			<p>This class is an implementation of the abstract buffer interface provided by <xref href="class_c_buf_base.xml#class_c_buf_base">CBufBase</xref> and uses a single heap cell to contain the data. </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_c_buf_flat_1aeabc36fc647e28b5324bbbbef46d18e9">
+		<apiName>~CBufFlat</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDestructor/>
+				<cxxFunctionDeclaredType>IMPORT_C</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CBufFlat</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C ~CBufFlat()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CBufFlat::~CBufFlat()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="209"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_buf_flat_1a33f52f4b08c08dc87646e0f7fb2b0655">
+		<apiName>NewL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionStorageClassSpecifierStatic/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_c_buf_flat.xml#class_c_buf_flat">CBufFlat</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CBufFlat</cxxFunctionScopedName>
+				<cxxFunctionPrototype>static IMPORT_C CBufFlat * NewL(TInt anExpandSize)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CBufFlat::NewL(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anExpandSize</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="210"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_buf_flat_1aecfed2cb10633c1d67765bb92eb7f0ed">
+		<apiName>Capacity</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CBufFlat</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt Capacity() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CBufFlat::Capacity()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="211"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="130"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="137"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets the size to which the buffer may expand without re-allocation.</p>
+				<p>The size of the allocated cell associated with the buffer. This is the maximum size the buffer may be expanded to without re-allocation. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_buf_flat_1a57347f0c52d2ba7eda62ece3377bf102">
+		<apiName>SetReserveL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CBufFlat</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void SetReserveL(TInt aSize)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CBufFlat::SetReserveL(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSize</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="212"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_buf_flat_1a6043f698363e888f72b90d8510bcf17f">
+		<apiName>Compress</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionVirtual/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CBufFlat</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Compress()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CBufFlat::Compress()</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_c_buf_base.xml#class_c_buf_base_1a832403ac7981accc42585eb1eb2c4c75">CBufBase::Compress()</cxxFunctionReimplemented>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="213"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Compresses the buffer so as to occupy minimal space.</p>
+				<p>Normally, you would call this when a buffer has reached its final size, or when you know it will not expand again for a while, or when an out-of-memory error has occurred and your program is taking measures to save space. Compression in these circumstances releases memory for other programs to use, but has no adverse effect on performance.</p>
+				<p>Derived classes provide the implementation.</p>
+				<p>
+					<xref href="class_c_buf_flat.xml#class_c_buf_flat_1a6043f698363e888f72b90d8510bcf17f">CBufFlat::Compress</xref> </p>
+				<p>
+					<xref href="class_c_buf_seg.xml#class_c_buf_seg_1a2fccd178de9e13efa884f8c5b096d5ae">CBufSeg::Compress</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_buf_flat_1a0e51e72383c64169f369c2be3291276d">
+		<apiName>Delete</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionVirtual/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CBufFlat</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void Delete(TInt aPos, TInt aLength)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CBufFlat::Delete(TInt,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_c_buf_base.xml#class_c_buf_base_1a0eaaef785bd5b3a9f05b4b230bd05095">CBufBase::Delete(TInt,TInt)</cxxFunctionReimplemented>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPos</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Buffer position where the deletion will begin; must be in the range zero to (Size() minus the length of the data to be deleted). </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The number of bytes to be deleted; must be non-negative.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="214"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Deletes data from the buffer.</p>
+				<p>Derived classes provide the implementation.</p>
+				<p>
+					<xref href="class_c_buf_flat.xml#class_c_buf_flat_1a0e51e72383c64169f369c2be3291276d">CBufFlat::Delete</xref> </p>
+				<p>
+					<xref href="class_c_buf_seg.xml#class_c_buf_seg_1a6b2a6374edc3f825160e7be58056650c">CBufSeg::Delete</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_buf_flat_1a210577dc4b408abd9b41ac5a4826b030">
+		<apiName>Ptr</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionVirtual/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_ptr8.xml#class_t_ptr8">TPtr8</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CBufFlat</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TPtr8 Ptr(TInt aPos)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CBufFlat::Ptr(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_c_buf_base.xml#class_c_buf_base_1a3eb0850dab2d20ea5a5423ed9ce1d336">CBufBase::Ptr(TInt)</cxxFunctionReimplemented>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPos</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Buffer position: must be in range zero to Size().</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="215"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets a pointer descriptor to represent the data from the specified position to the end of the contiguous region containing that byte.</p>
+				<p>Derived classes provide the implementation.</p>
+				<p>Descriptor representing the data starting at aPos, and whose length indicates the number of contiguous bytes stored in the buffer, forward from that point. The length will be non-zero unless aPos==Size().</p>
+				<p>
+					<xref href="class_c_buf_flat.xml#class_c_buf_flat_1a210577dc4b408abd9b41ac5a4826b030">CBufFlat::Ptr</xref> </p>
+				<p>
+					<xref href="class_c_buf_seg.xml#class_c_buf_seg_1a12400915bfba9cad8489067ce8300a35">CBufSeg::Ptr</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_buf_flat_1acd8f6aa2d9496d8e8e9f6b4aa83e05b3">
+		<apiName>BackPtr</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionVirtual/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_t_ptr8.xml#class_t_ptr8">TPtr8</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CBufFlat</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TPtr8 BackPtr(TInt aPos)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CBufFlat::BackPtr(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_c_buf_base.xml#class_c_buf_base_1a3d33efc8c71eeaedb19331a704f5aa3a">CBufBase::BackPtr(TInt)</cxxFunctionReimplemented>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPos</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Buffer position: must be in range zero to Size().</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="216"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets a pointer descriptor to represent data from just before the specified data byte backward to the beginning of the contiguous region containing that byte.</p>
+				<p>Derived classes provide the implementation.</p>
+				<p>Descriptor representing the back contiguous region. The address in the descriptor is the pointer to the bytes at the buffer position, unless the buffer position was at the beginning of a non-first segment in the buffer: in this case, the address is a pointer just beyond the last data byte in the previous segment. The length is the number of contiguous bytes from the address backwards to the beginning of the segment.</p>
+				<p>
+					<xref href="class_c_buf_flat.xml#class_c_buf_flat_1acd8f6aa2d9496d8e8e9f6b4aa83e05b3">CBufFlat::BackPtr</xref> </p>
+				<p>
+					<xref href="class_c_buf_seg.xml#class_c_buf_seg_1a8aa5cf7e1a75540bc35002429c39744c">CBufSeg::BackPtr</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_buf_flat_1abd7ac8fb4b3a339984e63896f6a02965">
+		<apiName>CBufFlat</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="protected"/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType>IMPORT_C</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CBufFlat</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C CBufFlat(TInt anExpandSize)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CBufFlat::CBufFlat(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anExpandSize</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="218"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_c_buf_flat_1a1a18995132c308ef7de41bf0cccf5e48">
+		<apiName>DoInsertL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionVirtual/>
+				<cxxFunctionDeclaredType>IMPORT_C void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>CBufFlat</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C void DoInsertL(TInt aPos, const TAny *aPtr, TInt aLength)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>CBufFlat::DoInsertL(TInt,const TAny *,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_c_buf_base.xml#class_c_buf_base_1ad3178594b234e4f476d327795aeed935">CBufBase::DoInsertL(TInt,const TAny *,TInt)</cxxFunctionReimplemented>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPos</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>const <apiRelation href="e32def_8h.xml#_1af7aafba448a6eaa6ce8801f88dcb5b90">TAny</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPtr</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aLength</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="220"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxVariable id="class_c_buf_flat_1a6ec4aadf9d649db544bf0ef4173bb8dc">
+		<apiName>iMaxSize</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>CBufFlat</cxxVariableScopedName>
+				<cxxVariablePrototype>TInt iMaxSize</cxxVariablePrototype>
+				<cxxVariableNameLookup>CBufFlat::iMaxSize</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="222"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_c_buf_flat_1acd89c654d9e22fc19232cb6e96b369a0">
+		<apiName>iPtr</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1aae4399ce3f10d6c2b5ec96a13bbb5881">TUint8</apiRelation> *</cxxVariableDeclaredType>
+				<cxxVariableScopedName>CBufFlat</cxxVariableScopedName>
+				<cxxVariablePrototype>TUint8 * iPtr</cxxVariablePrototype>
+				<cxxVariableNameLookup>CBufFlat::iPtr</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/e32base.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="223"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxClassInherits>
+		<cxxClassInheritsDetail>
+			<cxxClassFunctionInherited href="class_c_buf_flat.xml#class_c_base_1a240de7932690a4e987d75690b0b6f82b">CBase::CBase()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_buf_flat.xml#class_c_base_1ac0a06aeab68b3e01be81f9dd79e011c6">CBase::Delete(CBase *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_buf_flat.xml#class_c_base_1aae681a54d9c9b10c7d42e7e32ff109d5">CBase::Extension_(TUint,TAny *&amp;,TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_buf_flat.xml#class_c_base_1af4c4965092a763b0856ccbfa3cf99eaf">CBase::operator new(TUint)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_buf_flat.xml#class_c_base_1ab9e5f557dea4db22886189926687ddc1">CBase::operator new(TUint,TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_buf_flat.xml#class_c_base_1aa464dd21494443ac109084ed03b81f28">CBase::operator new(TUint,TLeave)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_buf_flat.xml#class_c_base_1af8429815362d4df6fecd47179e0c5dfe">CBase::operator new(TUint,TLeave,TUint)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_buf_flat.xml#class_c_base_1a80505bdf8b1b20a2ed102307a78eeeeb">CBase::operator new(TUint,TUint)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_buf_flat.xml#class_c_base_1a1390361b94424be22bb2b1020eb400ea">CBase::~CBase()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_buf_flat.xml#class_c_buf_base_1a1510a7e4bd17cad1bdb99db34df1b3c6">CBufBase::CBufBase(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_buf_flat.xml#class_c_buf_base_1ab6bb5965f187e55bfffc93433be39e74">CBufBase::ExpandL(TInt,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_buf_flat.xml#class_c_buf_base_1a56e4371e31b31b0b7c0870802500bc86">CBufBase::InsertL(TInt,const TAny *,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_buf_flat.xml#class_c_buf_base_1a67ac66679ceb241ab2b4312e168b6f43">CBufBase::InsertL(TInt,const TDesC8 &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_buf_flat.xml#class_c_buf_base_1a96aca8d7c02c8b702146277820a3c5fd">CBufBase::InsertL(TInt,const TDesC8 &amp;,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_buf_flat.xml#class_c_buf_base_1a468963d99932d1175623b2118bd3e437">CBufBase::Read(TInt,TAny *,TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_buf_flat.xml#class_c_buf_base_1a6eaa287d4c84a123867bf2a6c6d804da">CBufBase::Read(TInt,TDes8 &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_buf_flat.xml#class_c_buf_base_1ae0703ded8193f91e20dd45e3ee9696b3">CBufBase::Read(TInt,TDes8 &amp;,TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_buf_flat.xml#class_c_buf_base_1a5389482efd44788584af610f8e554c4a">CBufBase::Reset()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_buf_flat.xml#class_c_buf_base_1ac29e3893f62e6f06b5d4752758502d35">CBufBase::ResizeL(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_buf_flat.xml#class_c_buf_base_1a133d9f8f59a9cea13f87602491ed908e">CBufBase::Size()const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_buf_flat.xml#class_c_buf_base_1a7abee7171a5fa05bd6adec611c8c94ea">CBufBase::Write(TInt,const TAny *,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_buf_flat.xml#class_c_buf_base_1a8a094dc68fc9116d197151853882f748">CBufBase::Write(TInt,const TDesC8 &amp;)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_c_buf_flat.xml#class_c_buf_base_1ae25afa36fdf0f53e70d801dee0d0442b">CBufBase::Write(TInt,const TDesC8 &amp;,TInt)</cxxClassFunctionInherited>
+			<cxxClassVariableInherited href="class_c_buf_flat.xml#class_c_buf_base_1ac3f6bf23422cc5008497c434ae279ac4">CBufBase::iExpandSize</cxxClassVariableInherited>
+			<cxxClassVariableInherited href="class_c_buf_flat.xml#class_c_buf_base_1a604a372ed1f4db319872113b0fde684e">CBufBase::iSize</cxxClassVariableInherited>
+			<cxxClassFunctionInherited href="class_c_buf_flat.xml#class_c_buf_base_1a336679b0267bb23c129271df617c8f01">CBufBase::~CBufBase()</cxxClassFunctionInherited>
+		</cxxClassInheritsDetail>
+	</cxxClassInherits>
+</cxxClass>

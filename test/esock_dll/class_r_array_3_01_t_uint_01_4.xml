@@ -1,0 +1,1441 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_r_array_3_01_t_uint_01_4">
+	<apiName>RArray&lt; TUint &gt;</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassDerivations>
+				<cxxClassDerivation>
+					<cxxClassDerivationAccessSpecifier value="private"/>
+					<cxxClassBaseClass href="class_r_pointer_array_base.xml#class_r_pointer_array_base">RPointerArrayBase</cxxClassBaseClass>
+				</cxxClassDerivation>
+			</cxxClassDerivations>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="5724"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="5723"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="5765"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>Array of unsigned integers.</p>
+			<p>The array is a simple and efficient specialized array of unsigned integers offering standard array behaviour.</p>
+			<p>The derivation from <xref href="class_r_pointer_array_base.xml#class_r_pointer_array_base">RPointerArrayBase</xref> is private. </p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxFunction id="class_r_array_3_01_t_uint_01_4_1a3365c7935132458396d4d68fd1732316">
+		<apiName>RArray</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>RArray&lt; TUint &gt;</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline RArray()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RArray&lt; TUint &gt;::RArray()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5726"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="6300"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="6310"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Default C++ constructor.</p>
+				<p>This constructs an array object for an array of unsigned integers with default granularity.</p>
+				<p>The default granularity of the array is 8. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_array_3_01_t_uint_01_4_1a16ab7cffa4a5da84c921d31a06bf1afd">
+		<apiName>RArray</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionExplicit/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>RArray&lt; TUint &gt;</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline RArray(TInt aGranularity)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RArray&lt; TUint &gt;::RArray(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aGranularity</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The granularity of the array.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5727"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="6315"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="6326"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Constructs an array object for an array of unsigned integers with the specified granularity.</p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>USER 127, if aGranularity is not positive or is greater than or equal to 0x10000000. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_array_3_01_t_uint_01_4_1a53c2168f60a4441e43621f96f0b91862">
+		<apiName>RArray</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>RArray&lt; TUint &gt;</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline RArray(TInt aMinGrowBy, TInt aFactor)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RArray&lt; TUint &gt;::RArray(TInt,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMinGrowBy</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The minimum growth step of the array. Must be between 1 and 65535 inclusive. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aFactor</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The factor by which the array grows, multiplied by 256. For example 512 specifies a factor of 2. Must be between 257 and 32767 inclusive.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5728"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="6346"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="6348"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>C++ constructor with minimum growth step and exponential growth factor.</p>
+				<p>This constructs an array object for an array of unsigned integers with the specified minimum growth step and exponential growth factor.</p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>USER 192, if aMinGrowBy&lt;=0 or aMinGrowBy&gt;65535. </p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>USER 193, if aFactor&lt;=257 or aFactor&gt;32767. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_array_3_01_t_uint_01_4_1ac30741897feaa98d86cf8629b68f2835">
+		<apiName>Close</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RArray&lt; TUint &gt;</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void Close()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RArray&lt; TUint &gt;::Close()</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_r_pointer_array_base.xml#class_r_pointer_array_base_1a1cdb00d97003b41eac9fe3c965cf7e23">RPointerArrayBase::Close()</cxxFunctionReimplemented>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5729"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="6353"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="6359"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Closes the array and frees all memory allocated to the array.</p>
+				<p>The function must be called before this array object goes out of scope. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_array_3_01_t_uint_01_4_1a4753c4ce2b293bc8c8292bcad465aca8">
+		<apiName>Count</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RArray&lt; TUint &gt;</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt Count() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RArray&lt; TUint &gt;::Count()const</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_r_pointer_array_base.xml#class_r_pointer_array_base_1ae4f9e843a7af7ddf0c81e2ee4bf1c50e">RPointerArrayBase::Count()const</cxxFunctionReimplemented>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5730"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="6364"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="6370"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets the number of unsigned integers in the array.</p>
+				<p>The number of unsigned integers in the array. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_array_3_01_t_uint_01_4_1aca4d63548acb84c2b14ae2b6a485dea5">
+		<apiName>operator[]</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>const <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation> &amp;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RArray&lt; TUint &gt;</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline const TUint &amp; operator[](TInt anIndex) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RArray&lt; TUint &gt;::operator[](TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The position of the unsigned integer within the array, relative to zero, i.e. zero implies the entry at the beginning of the array.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5731"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="6375"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="6393"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets a reference to the unsigned integer located at the specified position within the array.</p>
+				<p>The compiler uses this variant if the returned reference is used in an expression where the reference cannot be modified.</p>
+				<p>A reference to the const unsigned integer at position anIndex within the array.</p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>USER 130, if anIndex is negative, or is greater than the number of entries currently in the array. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_array_3_01_t_uint_01_4_1aa0b86ff609d17c535d464494b406bd60">
+		<apiName>operator[]</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation> &amp;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RArray&lt; TUint &gt;</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TUint &amp; operator[](TInt anIndex)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RArray&lt; TUint &gt;::operator[](TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The position of the unsigned integer within the array, relative to zero, i.e. zero implies the entry at the beginning of the array.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5732"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="6398"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="6416"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Gets a reference to the unsigned integer located at the specified position within the array.</p>
+				<p>The compiler uses this variant if the returned reference is used in an expression where the reference can be modified.</p>
+				<p>A reference to the non-const unsigned integer at position anIndex within the array.</p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>USER 130, if anIndex is negative, or is greater than the number of entries currently in the array. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_array_3_01_t_uint_01_4_1ab0cfb2333a2b7d66e976c9ef82cabb2f">
+		<apiName>Append</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RArray&lt; TUint &gt;</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt Append(TUint anEntry)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RArray&lt; TUint &gt;::Append(TUint)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anEntry</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The unsigned integer to be appended. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5733"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="6421"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="6429"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Appends an unsigned integer onto the array.</p>
+				<p>KErrNone, if the insertion is successful, otherwise one of the system wide error codes. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_array_3_01_t_uint_01_4_1af466ee95ef10e96c0c54c4af5e38d0c3">
+		<apiName>Insert</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RArray&lt; TUint &gt;</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt Insert(TUint anEntry, TInt aPos)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RArray&lt; TUint &gt;::Insert(TUint,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anEntry</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The unsigned integer to be inserted. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPos</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The position within the array where the unsigned integer is to be inserted. The position is relative to zero, i.e. zero implies that an entry is inserted at the beginning of the array.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5734"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="6434"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="6450"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Inserts an unsigned integer into the array at the specified position.</p>
+				<p>KErrNone, if the insertion is successful, otherwise one of the system wide error codes.</p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>USER 131, if aPos is negative, or is greater than the number of entries currently in the array. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_array_3_01_t_uint_01_4_1aefa08759aca7e5270f993ff337b3d8c4">
+		<apiName>Remove</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RArray&lt; TUint &gt;</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void Remove(TInt anIndex)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RArray&lt; TUint &gt;::Remove(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_r_pointer_array_base.xml#class_r_pointer_array_base_1a0169db42ef92af3a782f407fc4e65fb3">RPointerArrayBase::Remove(TInt)</cxxFunctionReimplemented>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The position within the array from where the unsigned integer is to be removed. The position is relative to zero, i.e. zero implies that an entry at the beginning of the array is to be removed.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5735"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="6455"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="6468"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Removes the unsigned integer at the specified position from the array.</p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>USER 130, if anIndex is negative, or is greater than the number of entries currently in the array. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_array_3_01_t_uint_01_4_1a46964119eda4b0833ad1bf172a6fe109">
+		<apiName>Compress</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RArray&lt; TUint &gt;</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void Compress()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RArray&lt; TUint &gt;::Compress()</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_r_pointer_array_base.xml#class_r_pointer_array_base_1aef58cd64caef3caba363658e1e31fb57">RPointerArrayBase::Compress()</cxxFunctionReimplemented>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5736"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="6473"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="6481"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Compresses the array down to a minimum.</p>
+				<p>After a call to this function, the memory allocated to the array is just sufficient for its entries. Subsequently adding a new unsigned integer to the array always results in a re-allocation of memory. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_array_3_01_t_uint_01_4_1a24aa2cc467a0cb4fdd08f799e2851d17">
+		<apiName>Reset</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RArray&lt; TUint &gt;</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void Reset()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RArray&lt; TUint &gt;::Reset()</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_r_pointer_array_base.xml#class_r_pointer_array_base_1aa491818ec3ba6fed26131145d929e8b4">RPointerArrayBase::Reset()</cxxFunctionReimplemented>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5737"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="6486"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="6496"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Empties the array.</p>
+				<p>It frees all memory allocated to the array and resets the internal state so that it is ready to be reused.</p>
+				<p>This array object can be allowed to go out of scope after a call to this function. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_array_3_01_t_uint_01_4_1af3665159911c03cacba21a18473fb848">
+		<apiName>Find</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RArray&lt; TUint &gt;</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt Find(TUint anEntry) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RArray&lt; TUint &gt;::Find(TUint)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anEntry</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The unsigned integer to be found.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5738"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="6501"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="6514"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Finds the first unsigned integer in the array which matches the specified value, using a sequential search.</p>
+				<p>The find operation always starts at the low index end of the array. There is no assumption about the order of entries in the array.</p>
+				<p>The index of the first matching unsigned integer within the array. KErrNotFound, if no matching entry can be found. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_array_3_01_t_uint_01_4_1a9375b36d5bc4bc64956d2cf8c5d28c66">
+		<apiName>FindReverse</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RArray&lt; TUint &gt;</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt FindReverse(TUint anEntry) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RArray&lt; TUint &gt;::FindReverse(TUint)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anEntry</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The unsigned integer to be found.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5739"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="6519"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="6532"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Finds the last unsigned integer in the array which matches the specified value, using a sequential search.</p>
+				<p>The find operation always starts at the high index end of the array. There is no assumption about the order of entries in the array.</p>
+				<p>The index of the last matching unsigned integer within the array. KErrNotFound, if no matching entry can be found. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_array_3_01_t_uint_01_4_1a8c878d31d858710754766eca25e679fb">
+		<apiName>FindInOrder</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RArray&lt; TUint &gt;</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt FindInOrder(TUint anEntry) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RArray&lt; TUint &gt;::FindInOrder(TUint)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anEntry</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The unsigned integer to be found.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5740"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="6537"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="6551"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Finds the unsigned integer in the array which matches the specified value, using a binary search technique.</p>
+				<p>The functions assume that existing entries within the array are in unsigned integer order.</p>
+				<p>This is either: the index of the matching unsigned integer within the array; KErrNotFound, if no suitable entry can be found. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_array_3_01_t_uint_01_4_1adfb2c254c5b4b65dae6efcec3315529b">
+		<apiName>FindInOrder</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RArray&lt; TUint &gt;</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt FindInOrder(TUint anEntry, TInt &amp;anIndex) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RArray&lt; TUint &gt;::FindInOrder(TUint,TInt &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anEntry</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The unsigned integer to be found. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A TInt supplied by the caller. On return, contains an index value. If the function returns KErrNone, this is the index of the matching unsigned integer within the array. If the function returns KErrNotFound, this is the index of the first unsigned integer within the array that is bigger than the unsigned integer being searched for - if no unsigned integers within the array are bigger, then the index value is the same as the total number of unsigned integers within the array. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5741"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="6556"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="6580"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Finds the unsigned integer in the array which matches the specified value, using a binary search technique.</p>
+				<p>If the index cannot be found, the function returns the index of the last unsigned integer within the array which logically precedes anEntry.</p>
+				<p>The functions assume that existing entries within the array are in unsigned integer order.</p>
+				<p>KErrNone, if a matching unsigned integer is found. KErrNotFound, if no suitable entry can be found. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_array_3_01_t_uint_01_4_1ac72bab5c704285b1d5bce12cbbc558a8">
+		<apiName>SpecificFindInOrder</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RArray&lt; TUint &gt;</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt SpecificFindInOrder(TUint anEntry, TInt aMode) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RArray&lt; TUint &gt;::SpecificFindInOrder(TUint,TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anEntry</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The unsigned integer to be found.. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMode</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Specifies whether to find the first match, the last match or any match, as defined by one of the TArrayFindMode enum values.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5742"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="6585"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="6610"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Finds the unsigned integer in the array that matches the specified unsigned integer using a binary search technique.</p>
+				<p>In the case that there is more than one matching element, finds the first, last or any match as specified by the value of aMode.</p>
+				<p>The function assumes that the array is in unsigned integer order.</p>
+				<p>KErrNotFound, if there is no matching element, otherwise the array index of a matching element - what the index refers to depends on the value of aMode: if this is EArrayFindMode_First, then the index refers to the first matching element; if this is EArrayFindMode_Any, then the index can refer to any of the matching elements; if this is EArrayFindMode_Last, then the index refers to first element that follows the last matching element - if the last matching element is also the last element of the array, then the index value is the same as the total number of elements in the array.</p>
+				<p>
+					<xref href="_c_s___c_l_i_8_c_p_p.xml#_c_s___c_l_i_8_c_p_p_1a807f1e3df383a955bab6454161302449">TArrayFindMode</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_array_3_01_t_uint_01_4_1ae860817139ff1f180b191e5bb7189728">
+		<apiName>SpecificFindInOrder</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RArray&lt; TUint &gt;</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt SpecificFindInOrder(TUint anEntry, TInt &amp;anIndex, TInt aMode) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RArray&lt; TUint &gt;::SpecificFindInOrder(TUint,TInt &amp;,TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anEntry</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The unsigned integer to be found. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A TInt type supplied by the caller. On return, it contains an index value depending on whether a match is found and on the value of aMode. If there is no matching element in the array, then this is the index of the first element in the array that is bigger than the element being searched for - if no elements in the array are bigger, then the index value is the same as the total number of elements in the array. If there is a matching element, then what the index refers to depends on the value of aMode: if this is EArrayFindMode_First, then the index refers to the first matching element; if this is EArrayFindMode_Any, then the index can refer to any of the matching elements; if this is EArrayFindMode_Last, then the index refers to first element that follows the last matching element - if the last matching element is also the last element of the array, then the index value is the same as the total number of elements in the array. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMode</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Specifies whether to find the first match, the last match or any match, as defined by one of the TArrayFindMode enum values.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5743"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="6615"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="6645"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Finds the unsigned integer in the array that matches the specified unsigned integer using a binary search technique.</p>
+				<p>In the case that there is more than one matching element, finds the first, last or any match as specified.</p>
+				<p>The function assumes that the array is in unsigned integer order.</p>
+				<p>KErrNone, if a matching entry is found; KErrNotFound, if no matching entry exists.</p>
+				<p>
+					<xref href="_c_s___c_l_i_8_c_p_p.xml#_c_s___c_l_i_8_c_p_p_1a807f1e3df383a955bab6454161302449">TArrayFindMode</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_array_3_01_t_uint_01_4_1a14a7d7df8ce48aa0ba09ba42be4d2fbe">
+		<apiName>InsertInOrder</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RArray&lt; TUint &gt;</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt InsertInOrder(TUint anEntry)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RArray&lt; TUint &gt;::InsertInOrder(TUint)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anEntry</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The unsigned integer to be inserted.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5744"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="6650"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="6667"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Inserts an unsigned integer into the array in unsigned integer order.</p>
+				<p>No duplicate entries are permitted. The array remains unchanged following an attempt to insert a duplicate entry.</p>
+				<p>The function assumes that existing entries within the array are in unsigned integer order.</p>
+				<p>KErrNone, if the insertion is successful; KErrAlreadyExists, if an attempt is being made to insert a duplicate entry; otherwise one of the other system wide error codes. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_array_3_01_t_uint_01_4_1ae8d37d2860989ebbbc6c7d057245cd43">
+		<apiName>InsertInOrderAllowRepeats</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RArray&lt; TUint &gt;</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt InsertInOrderAllowRepeats(TUint anEntry)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RArray&lt; TUint &gt;::InsertInOrderAllowRepeats(TUint)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anEntry</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The unsigned integer to be inserted.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5745"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="6672"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="6690"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Inserts an unsigned integer into the array in unsigned integer order, allowing duplicates.</p>
+				<p>If the new integer is a duplicate of an existing entry in the array, then the new unsigned integer is inserted after the existing one. If more than one duplicate entry already exists in the array, then any new duplicate unsigned integer is inserted after the last one.</p>
+				<p>The function assumes that existing entries within the array are in unsigned integer order.</p>
+				<p>KErrNone, if the insertion is successful, otherwise one of the system wide error codes. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_array_3_01_t_uint_01_4_1aaa1b3f10a43b0f827a64cda4b9cf3257">
+		<apiName>AppendL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RArray&lt; TUint &gt;</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void AppendL(TUint anEntry)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RArray&lt; TUint &gt;::AppendL(TUint)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anEntry</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The unsigned integer to be appended. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5747"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="7039"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="7040"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Appends an unsigned integer onto the array.</p>
+				<p>The function leaves with one of the system wide error codes, if the operation fails.</p>
+				<p>NOTE: This function is NOT AVAILABLE to code running on the kernel side.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_array_3_01_t_uint_01_4_1abbedb1eb3b703054760d174a783e2348">
+		<apiName>InsertL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RArray&lt; TUint &gt;</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void InsertL(TUint anEntry, TInt aPos)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RArray&lt; TUint &gt;::InsertL(TUint,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anEntry</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The unsigned integer to be inserted. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aPos</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The position within the array where the unsigned integer is to be inserted. The position is relative to zero, i.e. zero implies that an entry is inserted at the beginning of the array.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5748"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="7059"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="7060"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Inserts an unsigned integer into the array at the specified position.</p>
+				<p>The function leaves with one of the system wide error codes, if the operation fails.</p>
+				<p>NOTE: This function is NOT AVAILABLE to code running on the kernel side.</p>
+				<p>
+					<b>panic</b>
+				</p>
+				<p>USER 131, if aPos is negative, or is greater than the number of entries currently in the array. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_array_3_01_t_uint_01_4_1ac44f82c7045916664fe02477542467a7">
+		<apiName>FindL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RArray&lt; TUint &gt;</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt FindL(TUint anEntry) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RArray&lt; TUint &gt;::FindL(TUint)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anEntry</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The unsigned integer to be found. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5749"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="7076"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="7077"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Finds the first unsigned integer in the array which matches the specified value, using a sequential search.</p>
+				<p>The find operation always starts at the low index end of the array. There is no assumption about the order of entries in the array.</p>
+				<p>NOTE: This function is NOT AVAILABLE to code running on the kernel side.</p>
+				<p>The index of the first matching unsigned integer within the array. </p>
+				<p>
+					<b>leave</b>
+				</p>
+				<p>KErrNotFound, if no matching entry can be found. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_array_3_01_t_uint_01_4_1a60a0fa914e877b9d2276b0a2e3c036a4">
+		<apiName>FindReverseL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RArray&lt; TUint &gt;</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt FindReverseL(TUint anEntry) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RArray&lt; TUint &gt;::FindReverseL(TUint)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anEntry</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The unsigned integer to be found. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5750"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="7093"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="7094"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Finds the last unsigned integer in the array which matches the specified value, using a sequential search.</p>
+				<p>The find operation always starts at the high index end of the array. There is no assumption about the order of entries in the array.</p>
+				<p>NOTE: This function is NOT AVAILABLE to code running on the kernel side.</p>
+				<p>The index of the last matching unsigned integer within the array. </p>
+				<p>
+					<b>leave</b>
+				</p>
+				<p>KErrNotFound, if no matching entry can be found. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_array_3_01_t_uint_01_4_1a1e8c1a8ca4df9768ea4aa17941901ff0">
+		<apiName>FindInOrderL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RArray&lt; TUint &gt;</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt FindInOrderL(TUint anEntry) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RArray&lt; TUint &gt;::FindInOrderL(TUint)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anEntry</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The unsigned integer to be found.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5751"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="7111"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="7112"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Finds the unsigned integer in the array which matches the specified value, using a binary search technique.</p>
+				<p>The functions assume that existing entries within the array are in unsigned integer order.</p>
+				<p>NOTE: This function is NOT AVAILABLE to code running on the kernel side.</p>
+				<p>The index of the matching unsigned integer within the array; </p>
+				<p>
+					<b>leave</b>
+				</p>
+				<p>KErrNotFound, if no matching entry can be found. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_array_3_01_t_uint_01_4_1aa91e50a740f39784b8901cf8e02f631a">
+		<apiName>FindInOrderL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RArray&lt; TUint &gt;</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void FindInOrderL(TUint anEntry, TInt &amp;anIndex) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RArray&lt; TUint &gt;::FindInOrderL(TUint,TInt &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anEntry</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The unsigned integer to be found. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A TInt supplied by the caller. On return, contains an index value of the matching unsigned integer within the array. If the function leaves with KErrNotFound, this is the index of the first unsigned integer within the array that is bigger than the unsigned integer being searched for - if no unsigned integers within the array are bigger, then the index value is the same as the total number of unsigned integers within the array.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5752"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="7137"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="7138"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Finds the unsigned integer in the array which matches the specified value, using a binary search technique.</p>
+				<p>If the index cannot be found, the function returns the index of the last unsigned integer within the array which logically precedes anEntry. The functions assume that existing entries within the array are in unsigned integer order.</p>
+				<p>NOTE: This function is NOT AVAILABLE to code running on the kernel side.</p>
+				<p>
+					<b>leave</b>
+				</p>
+				<p>KErrNotFound, if no matching entry can be found. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_array_3_01_t_uint_01_4_1a937a8899d5d09cb407ea37078c14f8af">
+		<apiName>SpecificFindInOrderL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RArray&lt; TUint &gt;</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt SpecificFindInOrderL(TUint anEntry, TInt aMode) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RArray&lt; TUint &gt;::SpecificFindInOrderL(TUint,TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anEntry</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The unsigned integer to be found. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMode</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Specifies whether to find the first match, the last match or any match, as defined by one of the TArrayFindMode enum values.</apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5753"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="7168"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="7169"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Finds the unsigned integer in the array that matches the specified unsigned integer using a binary search technique.</p>
+				<p>In the case that there is more than one matching element, finds the first, last or any match as specified.</p>
+				<p>The function assumes that the array is in unsigned integer order.</p>
+				<p>NOTE: This function is NOT AVAILABLE to code running on the kernel side.</p>
+				<p>The array index of a matching element - what the index refers to depends on the value of aMode: if this is EArrayFindMode_First, then the index refers to the first matching element; if this is EArrayFindMode_Any, then the index can refer to any of the matching elements; if this is EArrayFindMode_Last, then the index refers to first element that follows the last matching element - if the last matching element is also the last element of the array, then the index value is the same as the total number of elements in the array.</p>
+				<p>
+					<b>leave</b>
+				</p>
+				<p>KErrNotFound if no matching entry exists.</p>
+				<p>
+					<xref href="_c_s___c_l_i_8_c_p_p.xml#_c_s___c_l_i_8_c_p_p_1a807f1e3df383a955bab6454161302449">TArrayFindMode</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_array_3_01_t_uint_01_4_1ad8003d5163f287aa54d7784a28d783c3">
+		<apiName>SpecificFindInOrderL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RArray&lt; TUint &gt;</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void SpecificFindInOrderL(TUint anEntry, TInt &amp;anIndex, TInt aMode) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RArray&lt; TUint &gt;::SpecificFindInOrderL(TUint,TInt &amp;,TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anEntry</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The unsigned integer to be found. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A TInt type supplied by the caller. On return, it contains an index value depending on whether a match is found and on the value of aMode. If there is no matching element in the array, then this is the index of the first element in the array that is bigger than the element being searched for - if no elements in the array are bigger, then the index value is the same as the total number of elements in the array. If there is a matching element, then what the index refers to depends on the value of aMode: if this is EArrayFindMode_First, then the index refers to the first matching element; if this is EArrayFindMode_Any, then the index can refer to any of the matching elements; if this is EArrayFindMode_Last, then the index refers to first element that follows the last matching element - if the last matching element is also the last element of the array, then the index value is the same as the total number of elements in the array.</apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMode</cxxFunctionParameterDeclarationName>
+						<apiDefNote>Specifies whether to find the first match, the last match or any match, as defined by one of the TArrayFindMode enum values. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5754"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="7204"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="7205"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Finds the unsigned integer in the array that matches the specified unsigned integer using a binary search technique.</p>
+				<p>Where there is more than one matching element, it finds the first, last or any matching element as specified by the value of aMode.</p>
+				<p>The function assumes that the array is in unsigned integer order.</p>
+				<p>NOTE: This function is NOT AVAILABLE to code running on the kernel side.</p>
+				<p>
+					<b>leave</b>
+				</p>
+				<p>KErrNotFound if no matching entry exists.</p>
+				<p>
+					<xref href="_c_s___c_l_i_8_c_p_p.xml#_c_s___c_l_i_8_c_p_p_1a807f1e3df383a955bab6454161302449">TArrayFindMode</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_array_3_01_t_uint_01_4_1aac398c4f264bd7f264466d197e64051c">
+		<apiName>InsertInOrderL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RArray&lt; TUint &gt;</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void InsertInOrderL(TUint anEntry)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RArray&lt; TUint &gt;::InsertInOrderL(TUint)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anEntry</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The unsigned integer to be inserted. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5755"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="7224"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="7225"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Inserts an unsigned integer into the array in unsigned integer order.</p>
+				<p>No duplicate entries are permitted.</p>
+				<p>The function assumes that existing entries within the array are in unsigned integer order.</p>
+				<p>The function leaves with one of the system wide error codes, if the operation fails.</p>
+				<p>Note that the array remains unchanged following an attempt to insert a duplicate entry.</p>
+				<p>NOTE: This function is NOT AVAILABLE to code running on the kernel side.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_array_3_01_t_uint_01_4_1a4753b3ecd1047114b6d0e4e5560d68cf">
+		<apiName>InsertInOrderAllowRepeatsL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RArray&lt; TUint &gt;</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void InsertInOrderAllowRepeatsL(TUint anEntry)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RArray&lt; TUint &gt;::InsertInOrderAllowRepeatsL(TUint)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>anEntry</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The unsigned integer to be inserted. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5756"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="7246"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="7247"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Inserts an unsigned integer into the array in unsigned integer order, allowing duplicates.</p>
+				<p>If the new integer is a duplicate of an existing entry in the array, then the new unsigned integer is inserted after the existing one. If more than one duplicate entry already exists in the array, then any new duplicate unsigned integer is inserted after the last one.</p>
+				<p>The function assumes that existing entries within the array are in unsigned integer order.</p>
+				<p>The function leaves with one of the system wide error codes, if the operation fails.</p>
+				<p>NOTE: This function is NOT AVAILABLE to code running on the kernel side.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_array_3_01_t_uint_01_4_1a44451ffda080d6927cb57c4013055160">
+		<apiName>RArray</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionConstructor/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>RArray&lt; TUint &gt;</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline RArray(TUint *aEntries, TInt aCount)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RArray&lt; TUint &gt;::RArray(TUint *,TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aEntries</cxxFunctionParameterDeclarationName>
+						<apiDefNote>A pointer to the first entry of type class TUint in the set of entries belonging to the existing array. </apiDefNote>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCount</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The number of entries in the existing array. </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5758"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="6696"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="6713"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>C++ constructor with a pointer to the first array entry in a pre-existing array, and the number of entries in that array.</p>
+				<p>This constructor takes a pointer to a pre-existing set of entries of type TUint objects. Ownership of the set of entries does not transfer to this <xref href="class_r_array.xml#class_r_array">RArray</xref> object.</p>
+				<p>The purpose of constructing an array in this way is to allow sorting and finding operations to be done without further allocation of memory.</p>
+				<p/>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_array_3_01_t_uint_01_4_1aa9d61c9c781b1031e2f1a3225ebe58d7">
+		<apiName>GranularCompress</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RArray&lt; TUint &gt;</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void GranularCompress()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RArray&lt; TUint &gt;::GranularCompress()</cxxFunctionNameLookup>
+				<cxxFunctionReimplemented href="class_r_pointer_array_base.xml#class_r_pointer_array_base_1aa26ed4dfcd02116baae4cfc9c3820617">RPointerArrayBase::GranularCompress()</cxxFunctionReimplemented>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5759"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="6717"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="6726"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Compresses the array down to a granular boundary.</p>
+				<p>After a call to this function, the memory allocated to the array is sufficient for its contained entries. Adding new unsigned integers to the array does not result in a re-allocation of memory until the total number of entries reaches a multiple of the granularity. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_array_3_01_t_uint_01_4_1afa3843e7eb2637632def319f5a6bff59">
+		<apiName>Reserve</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RArray&lt; TUint &gt;</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt Reserve(TInt aCount)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RArray&lt; TUint &gt;::Reserve(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCount</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The number of integers for which space should be reserved </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5760"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="6731"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="6744"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Reserves space for the specified number of elements.</p>
+				<p>After a call to this function, the memory allocated to the array is sufficient to hold the number of integers specified. Adding new integers to the array does not result in a re-allocation of memory until the the total number of integers exceeds the specified count.</p>
+				<p>KErrNone If the operation completed successfully </p>
+				<p>KErrNoMemory If the requested amount of memory could not be allocated </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_array_3_01_t_uint_01_4_1a923f6b9d9901a1af8da8b63e12411d49">
+		<apiName>ReserveL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RArray&lt; TUint &gt;</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void ReserveL(TInt aCount)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RArray&lt; TUint &gt;::ReserveL(TInt)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aCount</cxxFunctionParameterDeclarationName>
+						<apiDefNote>The number of integers for which space should be reserved </apiDefNote>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5761"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="7262"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="7263"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Reserves space for the specified number of elements.</p>
+				<p>After a call to this function, the memory allocated to the array is sufficient to hold the number of integers specified. Adding new integers to the array does not result in a re-allocation of memory until the the total number of integers exceeds the specified count.</p>
+				<p>
+					<b>leave</b>
+				</p>
+				<p>KErrNoMemory If the requested amount of memory could not be allocated </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_array_3_01_t_uint_01_4_1a41c7758c4111fe0fcd2a0519c488bd96">
+		<apiName>Sort</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RArray&lt; TUint &gt;</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void Sort()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RArray&lt; TUint &gt;::Sort()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5762"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="6749"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="6753"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Sorts the array entries into unsigned integer order. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_r_array_3_01_t_uint_01_4_1a372149c3a04b0126629c16608534fb10">
+		<apiName>Array</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="class_t_array.xml#class_t_array">TArray</apiRelation>&lt; <apiRelation href="e32def_8h.xml#_1acdfcd7c66db8ed1b8dfefd71c9542d42">TUint</apiRelation> &gt;</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>RArray&lt; TUint &gt;</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TArray&lt; TUint &gt; Array() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>RArray&lt; TUint &gt;::Array()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/e32cmn.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="5763"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/CS_CLI.CPP"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="6758"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="6766"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Constructs and returns a generic array.</p>
+				<p>A generic array representing this array.</p>
+				<p>
+					<xref href="class_t_array.xml#class_t_array">TArray</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxClassInherits>
+		<cxxClassInheritsDetail>
+			<cxxClassFunctionInherited href="class_r_array_3_01_t_uint_01_4.xml#class_r_pointer_array_base_1a5df6f249040ad3dac33e383d189cb1f7">RPointerArrayBase::Append(const TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_array_3_01_t_uint_01_4.xml#class_r_pointer_array_base_1a74bc66045c344f1c154cf1478f35e9ec">RPointerArrayBase::At(TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_array_3_01_t_uint_01_4.xml#class_r_pointer_array_base_1ae8af66d845ee628305c98c7ece887bbc">RPointerArrayBase::BinarySearch(const TAny *,TInt &amp;,TGeneralLinearOrder)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_array_3_01_t_uint_01_4.xml#class_r_pointer_array_base_1ad5ee5b35bfd5df9f5833fe7aa0059f95">RPointerArrayBase::BinarySearch(const TAny *,TInt &amp;,TGeneralLinearOrder,TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_array_3_01_t_uint_01_4.xml#class_r_pointer_array_base_1a648e7ed0c5bfc8580a22c64d3b543f63">RPointerArrayBase::BinarySearchSigned(TInt,TInt &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_array_3_01_t_uint_01_4.xml#class_r_pointer_array_base_1af8683c0bba4a0384c0837b1086b9e282">RPointerArrayBase::BinarySearchSigned(TInt,TInt &amp;,TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_array_3_01_t_uint_01_4.xml#class_r_pointer_array_base_1a487455ad08e0d40c52ed9a5d3c2afd6c">RPointerArrayBase::BinarySearchUnsigned(TUint,TInt &amp;)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_array_3_01_t_uint_01_4.xml#class_r_pointer_array_base_1a1ebe93e601bd19aaef222acf245ba532">RPointerArrayBase::BinarySearchUnsigned(TUint,TInt &amp;,TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_array_3_01_t_uint_01_4.xml#class_r_pointer_array_base_1a32f3e2266b2acbddf67de7b3017ecc41">RPointerArrayBase::DoReserve(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_array_3_01_t_uint_01_4.xml#class_r_pointer_array_base_1aad219a1812797e20a4e2b828ed3b8b04">RPointerArrayBase::Entries()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_array_3_01_t_uint_01_4.xml#class_r_pointer_array_base_1acb5dc8fd62fe2d903d82ab394c651536">RPointerArrayBase::Find(const TAny *)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_array_3_01_t_uint_01_4.xml#class_r_pointer_array_base_1a76cd2866027ea0595890dc483392daa5">RPointerArrayBase::Find(const TAny *,TGeneralIdentityRelation)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_array_3_01_t_uint_01_4.xml#class_r_pointer_array_base_1a87af4bc5cad3d94b922865dc35f0d802">RPointerArrayBase::FindIsq(const TAny *,TGeneralLinearOrder)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_array_3_01_t_uint_01_4.xml#class_r_pointer_array_base_1ae63903abe132559f7a4764fd8e0f76ea">RPointerArrayBase::FindIsq(const TAny *,TGeneralLinearOrder,TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_array_3_01_t_uint_01_4.xml#class_r_pointer_array_base_1a63eab650054dc4fe67eb2218f919893b">RPointerArrayBase::FindIsqSigned(TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_array_3_01_t_uint_01_4.xml#class_r_pointer_array_base_1a0ec6f9e106208599d00f1b2c04f67448">RPointerArrayBase::FindIsqSigned(TInt,TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_array_3_01_t_uint_01_4.xml#class_r_pointer_array_base_1a4054f41d4f121f65b01aaf3e82623f7e">RPointerArrayBase::FindIsqUnsigned(TUint)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_array_3_01_t_uint_01_4.xml#class_r_pointer_array_base_1a9ad52f0d9e6f582db3cd9f5f1e2a03e0">RPointerArrayBase::FindIsqUnsigned(TUint,TInt)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_array_3_01_t_uint_01_4.xml#class_r_pointer_array_base_1af94a410664b7a701a0c0c0b65cf53240">RPointerArrayBase::FindReverse(const TAny *)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_array_3_01_t_uint_01_4.xml#class_r_pointer_array_base_1aed95a8e3fdd8756eacde344ee0f53018">RPointerArrayBase::FindReverse(const TAny *,TGeneralIdentityRelation)const</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_array_3_01_t_uint_01_4.xml#class_r_pointer_array_base_1adbe8e72d31eb2040a32357689ce30e52">RPointerArrayBase::GetCount(const CBase *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_array_3_01_t_uint_01_4.xml#class_r_pointer_array_base_1a026e72d9985dc81814d7ccdc501f8354">RPointerArrayBase::GetElementPtr(const CBase *,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_array_3_01_t_uint_01_4.xml#class_r_pointer_array_base_1ab375a722cef408d4ccda9cb0440e38b6">RPointerArrayBase::HeapSort(TGeneralLinearOrder)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_array_3_01_t_uint_01_4.xml#class_r_pointer_array_base_1afba8fcf5774262e610455297265792b3">RPointerArrayBase::HeapSortSigned()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_array_3_01_t_uint_01_4.xml#class_r_pointer_array_base_1a71ecd4fa85752ffdb85a04d8dbb9e7ff">RPointerArrayBase::HeapSortUnsigned()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_array_3_01_t_uint_01_4.xml#class_r_pointer_array_base_1aaa66ec294f465e39073a2c31e02537f1">RPointerArrayBase::Insert(const TAny *,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_array_3_01_t_uint_01_4.xml#class_r_pointer_array_base_1a40a137ec1730549329aed9f6dd04099a">RPointerArrayBase::InsertIsq(const TAny *,TGeneralLinearOrder,TBool)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_array_3_01_t_uint_01_4.xml#class_r_pointer_array_base_1a33331649f6a6845c55e42909e227a2b3">RPointerArrayBase::InsertIsqSigned(TInt,TBool)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_array_3_01_t_uint_01_4.xml#class_r_pointer_array_base_1a395db1996f6177e61b08c476f62ef733">RPointerArrayBase::InsertIsqUnsigned(TUint,TBool)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_array_3_01_t_uint_01_4.xml#class_r_pointer_array_base_1a3e44daa4aee4a785d93b80ee5e5cb7bc">RPointerArrayBase::RPointerArrayBase()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_array_3_01_t_uint_01_4.xml#class_r_pointer_array_base_1a907e8b6107090e7901b4798aba1d63a4">RPointerArrayBase::RPointerArrayBase(TAny **,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_array_3_01_t_uint_01_4.xml#class_r_pointer_array_base_1a2d6000c7edbfb86181880faad3790237">RPointerArrayBase::RPointerArrayBase(TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_array_3_01_t_uint_01_4.xml#class_r_pointer_array_base_1a93d73b96ae66428b8f4fceb7f1ffd032">RPointerArrayBase::RPointerArrayBase(TInt,TInt)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_r_array_3_01_t_uint_01_4.xml#class_r_pointer_array_base_1a9520541dcf3f441f605a19786a565ac6">RPointerArrayBase::ZeroCount()</cxxClassFunctionInherited>
+		</cxxClassInheritsDetail>
+	</cxxClassInherits>
+</cxxClass>

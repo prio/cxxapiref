@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (c) 2011 Nokia Corporation and/or its subsidiary(-ies).
+All rights reserved.        
+        -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<reference id="cxxFunction" outputclass="element" xml:lang="en-us">
+<title>cxxFunction</title>
+<shortdesc>Contains all the elements to describe a C++ function or
+member function.</shortdesc>
+<refbody>
+<section id="section_B20A7D521E3842829C774491FDD670A5">          
+  <title>Description</title><p>The <tt>&lt;cxxFunction></tt> element
+requires an ID attribute. The elements <tt>&lt;apiName></tt
+>  and <tt>&lt;cxxFunctionDetail></tt> are required for this topic.              </p><p>                 
+            </p>         </section>
+<example id="example_F38D1539002D4528B2FBC2B42EB2AECA">          
+  <title>Example</title><p>The following illustrates a typical (global)
+function:</p>             <codeblock>&lt;cxxFunction id="test__class_8h_1a27a789a5aabed6e0e0d79ce0fd02b937">
+  &lt;apiName>SearchBuffer&lt;/apiName>
+  &lt;cxxFunctionDetail>
+    &lt;cxxFunctionDefinition>
+      &lt;cxxFunctionAccessSpecifier value="public"/>
+      &lt;cxxFunctionStorageClassSpecifierStatic/>
+      &lt;cxxFunctionDeclaredType>int&lt;/cxxFunctionDeclaredType>
+      &lt;cxxFunctionScopedName/>
+      &lt;cxxFunctionPrototype>static int SearchBuffer(const char *aBuffer, char c, int i)&lt;/cxxFunctionPrototype>
+      &lt;cxxFunctionNameLookup>SearchBuffer(const char *,char,int)&lt;/cxxFunctionNameLookup>
+      &lt;cxxFunctionParameters>
+        &lt;cxxFunctionParameter>
+          &lt;cxxFunctionParameterDeclaredType>const char *&lt;/cxxFunctionParameterDeclaredType>
+          &lt;cxxFunctionParameterDeclarationName>aBuffer&lt;/cxxFunctionParameterDeclarationName>
+          &lt;apiDefNote>The buffer to search. &lt;/apiDefNote>
+        &lt;/cxxFunctionParameter>
+        &lt;cxxFunctionParameter>
+          &lt;cxxFunctionParameterDeclaredType>char&lt;/cxxFunctionParameterDeclaredType>
+          &lt;cxxFunctionParameterDeclarationName>c&lt;/cxxFunctionParameterDeclarationName>
+          &lt;apiDefNote>the character to search for. &lt;/apiDefNote>
+        &lt;/cxxFunctionParameter>
+        &lt;cxxFunctionParameter>
+          &lt;cxxFunctionParameterDeclaredType>int&lt;/cxxFunctionParameterDeclaredType>
+          &lt;cxxFunctionParameterDeclarationName>i&lt;/cxxFunctionParameterDeclarationName>
+          &lt;apiDefNote>The start position. &lt;/apiDefNote>
+        &lt;/cxxFunctionParameter>
+      &lt;/cxxFunctionParameters>
+      &lt;cxxFunctionReturnDesc>The index in the buffer or -1 if not found or i is &amp;gt;= the buffer length. &lt;/cxxFunctionReturnDesc>
+      &lt;cxxFunctionAPIItemLocation>
+        &lt;cxxFunctionDeclarationFile name="filePath" value="C:/wip/sysdoc/tools/Doxygen/branches/DITA/test/PaulRo/cxxApiExamples/src/test_class.h"/>
+        &lt;cxxFunctionDeclarationFileLine name="lineNumber" value="14"/>
+      &lt;/cxxFunctionAPIItemLocation>
+    &lt;/cxxFunctionDefinition>
+    &lt;apiDesc>
+      &lt;p>Searches a buffer for a character from a start position in the buffer. &lt;/p>
+    &lt;/apiDesc>
+  &lt;/cxxFunctionDetail>
+&lt;/cxxFunction>
+            </codeblock>         </example>
+<section
+conref="../packagedef.dita#cxxFunction-reference/cxxFunction-containedBy-section"
+></section>
+<section
+conref="../packagedef.dita#cxxFunction-reference/cxxFunction-contains-section"
+></section>
+<section
+conref="../packagedef.dita#cxxFunction-reference/cxxFunction-contentModel-section"
+></section>
+<section
+conref="../packagedef.dita#cxxFunction-reference/cxxFunction-attList-section"
+></section>
+<section
+conref="../packagedef.dita#cxxFunction-reference/cxxFunction-classValue-section"
+></section>
+</refbody>
+</reference>
+<?Pub *0000003996?>

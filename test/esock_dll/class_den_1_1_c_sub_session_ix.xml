@@ -1,0 +1,597 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cxxClass PUBLIC "-//NOKIA//DTD DITA C++ API Class Reference Type v0.5.0//EN" "dtd/cxxClass.dtd" >
+<cxxClass id="class_den_1_1_c_sub_session_ix">
+	<apiName>Den::CSubSessionIx</apiName>
+	<cxxClassDetail>
+		<cxxClassDefinition>
+			<cxxClassAccessSpecifier value="public"/>
+			<cxxClassDerivations>
+				<cxxClassDerivation>
+					<cxxClassDerivationAccessSpecifier value="public"/>
+					<cxxClassBaseClass href="class_c_base.xml#class_c_base">CBase</cxxClassBaseClass>
+				</cxxClassDerivation>
+			</cxxClassDerivations>
+			<cxxClassAPIItemLocation>
+				<cxxClassDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_std.h"/>
+				<cxxClassDeclarationFileLine name="lineNumber" value="375"/>
+				<cxxClassDefinitionFile name="filePath" value="K:/epoc32/include/elements/sd_std.h"/>
+				<cxxClassDefinitionFileLineStart name="lineNumber" value="371"/>
+				<cxxClassDefinitionFileLineEnd name="lineNumber" value="450"/>
+			</cxxClassAPIItemLocation>
+		</cxxClassDefinition>
+		<apiDesc>
+			<p>class <xref href="class_den_1_1_c_sub_session_ix.xml#class_den_1_1_c_sub_session_ix">CSubSessionIx</xref> This sub-session container will maintain its own array of <xref href="class_den_1_1_c_sub_session_ix_1_1_t_entry.xml#class_den_1_1_c_sub_session_ix_1_1_t_entry">TEntry</xref> cells in memory as arrays provide for quick access in some situations. There will be two types of cells in the array; cells carrying pointers to sub-sessions and a virtual list of free cells. This layout means that with a handle, the entry holding the sub-session can be looked up in the container directly and if needing to insert a new entry the first free cell is indicated by iFreeListHead. The array will grow with EIndexGranularity each time it runs out of free entries. However, it maintains a high watermark and will never shrink. The handles are defined by TSubSessionHandle, which in the current architectures is a 32 bit word, constructed as needed. It is simple to deduct from the context so there is no need to store it.</p>
+			<p>0 8 16 31 |--------|--------|----------------| Type Magic Index</p>
+			<p>The three components comprising the handle are:<ul>
+					<li>
+						<p>Type - 8 bit value. One of the members of CSockSubsession::TSubSessionType.</p>
+					</li>
+					<li>
+						<p>Magic - 8 bit value. Ensures that handles are not re-used immediately. Each time an entry is re-cycled this value increments, rolling around when reaching max.</p>
+					</li>
+					<li>
+						<p>Index - 16 bit value. The position in the array. CSockSubsession::TSubSessionType  </p>
+					</li>
+				</ul>
+			</p>
+		</apiDesc>
+	</cxxClassDetail>
+	<cxxClassNested>
+		<cxxClassNestedDetail>
+			<cxxClassNestedClass href="class_den_1_1_c_sub_session_ix_1_1_t_entry.xml#class_den_1_1_c_sub_session_ix_1_1_t_entry">Den::CSubSessionIx::TEntry</cxxClassNestedClass>
+		</cxxClassNestedDetail>
+	</cxxClassNested>
+	<cxxTypedef id="class_den_1_1_c_sub_session_ix_1a096dbda227b0d110b80e2451192dd22e">
+		<apiName>TSubSessionHandle</apiName>
+		<cxxTypedefDetail>
+			<cxxTypedefDefinition>
+				<cxxTypedefAccessSpecifier value="public"/>
+				<cxxTypedefDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxTypedefDeclaredType>
+				<cxxTypedefScopedName>Den::CSubSessionIx</cxxTypedefScopedName>
+				<cxxTypedefPrototype>TInt TSubSessionHandle</cxxTypedefPrototype>
+				<cxxTypedefNameLookup>Den::CSubSessionIx::TSubSessionHandle</cxxTypedefNameLookup>
+				<cxxTypedefAPIItemLocation>
+					<cxxTypedefDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_std.h"/>
+					<cxxTypedefDeclarationFileLine name="lineNumber" value="379"/>
+				</cxxTypedefAPIItemLocation>
+			</cxxTypedefDefinition>
+			<apiDesc/>
+		</cxxTypedefDetail>
+	</cxxTypedef>
+	<cxxFunction id="class_den_1_1_c_sub_session_ix_1a8d5fb3cad0dbaea76dac76ab33fa4c25">
+		<apiName>~CSubSessionIx</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDestructor/>
+				<cxxFunctionDeclaredType>IMPORT_C</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::CSubSessionIx</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C ~CSubSessionIx()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CSubSessionIx::~CSubSessionIx()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="385"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_c_sub_session_ix_1a95762bfb6245cdbe1a9c4fd4186491c3">
+		<apiName>InitialiseL</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::CSubSessionIx</cxxFunctionScopedName>
+				<cxxFunctionPrototype>void InitialiseL()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CSubSessionIx::InitialiseL()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="387"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_c_sub_session_ix_1ae82545099ff93ff04e7b87161d55c507">
+		<apiName>Lock</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::CSubSessionIx</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void Lock() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CSubSessionIx::Lock()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="388"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="155"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="158"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Optional locking. When accessing any of the public methods of this class in a multithreaded environment, locking is often necessary. This lock does not allow for lock nesting. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_c_sub_session_ix_1abc8ffbaf4a18059236015044b18e8f65">
+		<apiName>Unlock</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>void</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::CSubSessionIx</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline void Unlock() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CSubSessionIx::Unlock()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="389"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="164"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="167"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>Unlocking. <xref href="class_den_1_1_c_sub_session_ix.xml#class_den_1_1_c_sub_session_ix_1ae82545099ff93ff04e7b87161d55c507">Lock()</xref> </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_c_sub_session_ix_1a078bafd38c4e0611e42c7ab35a2fb3cc">
+		<apiName>ActiveCount</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::CSubSessionIx</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt ActiveCount() const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CSubSessionIx::ActiveCount()const</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="391"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="172"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="175"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc>
+				<p>the number of active sub-sessions in the container. </p>
+			</apiDesc>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_c_sub_session_ix_1ac4b948eb22df800694ec70842c736cdf">
+		<apiName>At</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_den_1_1_c_worker_sub_session.xml#class_den_1_1_c_worker_sub_session">CWorkerSubSession</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::CSubSessionIx</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C CWorkerSubSession * At(TInt aHandle, TSubSessInfo aType) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CSubSessionIx::At(TInt,TSubSessInfo)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aHandle</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_den_1_1_t_sub_sess_info.xml#class_den_1_1_t_sub_sess_info">TSubSessInfo</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aType</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="392"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_c_sub_session_ix_1a05e86f548191f0a627b3a79ecb89f029">
+		<apiName>Find</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::CSubSessionIx</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TInt Find(CWorkerSubSession *aSubSession, TSubSessionHandle &amp;aHandle) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CSubSessionIx::Find(CWorkerSubSession *,TSubSessionHandle &amp;)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_den_1_1_c_worker_sub_session.xml#class_den_1_1_c_worker_sub_session">CWorkerSubSession</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSubSession</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_den_1_1_c_sub_session_ix.xml#_1a096dbda227b0d110b80e2451192dd22e">TSubSessionHandle</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aHandle</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="393"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_c_sub_session_ix_1af6edf92bd57fc0a34439efddd3e55910">
+		<apiName>Add</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::CSubSessionIx</cxxFunctionScopedName>
+				<cxxFunctionPrototype>TInt Add(CWorkerSubSession *aSubSession, TSubSessionHandle &amp;aHandle)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CSubSessionIx::Add(CWorkerSubSession *,TSubSessionHandle &amp;)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_den_1_1_c_worker_sub_session.xml#class_den_1_1_c_worker_sub_session">CWorkerSubSession</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSubSession</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_den_1_1_c_sub_session_ix.xml#_1a096dbda227b0d110b80e2451192dd22e">TSubSessionHandle</apiRelation> &amp;</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aHandle</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="395"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_c_sub_session_ix_1a2c6c92ba5dff85187c7e83f917f860dd">
+		<apiName>Replace</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_den_1_1_c_worker_sub_session.xml#class_den_1_1_c_worker_sub_session">CWorkerSubSession</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::CSubSessionIx</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C CWorkerSubSession * Replace(TSubSessionHandle aHandle, CWorkerSubSession *aSubSession)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CSubSessionIx::Replace(TSubSessionHandle,CWorkerSubSession *)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_den_1_1_c_sub_session_ix.xml#_1a096dbda227b0d110b80e2451192dd22e">TSubSessionHandle</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aHandle</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_den_1_1_c_worker_sub_session.xml#class_den_1_1_c_worker_sub_session">CWorkerSubSession</apiRelation> *</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aSubSession</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="396"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_c_sub_session_ix_1a1d43e452880c40225522b522042d1125">
+		<apiName>Remove</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_den_1_1_c_worker_sub_session.xml#class_den_1_1_c_worker_sub_session">CWorkerSubSession</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::CSubSessionIx</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C CWorkerSubSession * Remove(TSubSessionHandle aHandle)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CSubSessionIx::Remove(TSubSessionHandle)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_den_1_1_c_sub_session_ix.xml#_1a096dbda227b0d110b80e2451192dd22e">TSubSessionHandle</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aHandle</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="397"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_c_sub_session_ix_1a999aae064809074e31e4cd6b5f104f4e">
+		<apiName>NONSHARABLE_CLASS</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="public"/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType/>
+				<cxxFunctionScopedName>Den::CSubSessionIx</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline NONSHARABLE_CLASS(TIter)</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CSubSessionIx::NONSHARABLE_CLASS(TIter)</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>TIter</cxxFunctionParameterDeclaredType>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="400"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="399"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="409"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_c_sub_session_ix_1aaba684ac9bb3f9a853f1de95376b2769">
+		<apiName>MakeHandle</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="class_den_1_1_c_sub_session_ix.xml#_1a096dbda227b0d110b80e2451192dd22e">TSubSessionHandle</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::CSubSessionIx</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TSubSessionHandle MakeHandle(TInt aIndex, TInt aMagic, TInt aType) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CSubSessionIx::MakeHandle(TInt,TInt,TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aIndex</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aMagic</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aType</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="434"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="433"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="436"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_c_sub_session_ix_1a719537135dbdb70feda0c279d72d97c6">
+		<apiName>IndexFromHandle</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionConst/>
+				<cxxFunctionInline/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::CSubSessionIx</cxxFunctionScopedName>
+				<cxxFunctionPrototype>inline TInt IndexFromHandle(TInt aHandle) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CSubSessionIx::IndexFromHandle(TInt)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aHandle</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="438"/>
+					<cxxFunctionDefinitionFile name="filePath" value="K:/sf/os/commsfw/datacommsserver/esockserver/csock/cs_connectionserv.cpp"/>
+					<cxxFunctionDefinitionFileLineStart name="lineNumber" value="437"/>
+					<cxxFunctionDefinitionFileLineEnd name="lineNumber" value="440"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_c_sub_session_ix_1aef2863219ba4c3427164504a645adfca">
+		<apiName>At</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionConst/>
+				<cxxFunctionDeclaredType>IMPORT_C <apiRelation href="class_den_1_1_c_sub_session_ix_1_1_t_entry.xml#class_den_1_1_c_sub_session_ix_1_1_t_entry">TEntry</apiRelation> *</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::CSubSessionIx</cxxFunctionScopedName>
+				<cxxFunctionPrototype>IMPORT_C TEntry * At(TSubSessionHandle aHandle) const </cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CSubSessionIx::At(TSubSessionHandle)const</cxxFunctionNameLookup>
+				<cxxFunctionParameters>
+					<cxxFunctionParameter>
+						<cxxFunctionParameterDeclaredType>
+							<apiRelation href="class_den_1_1_c_sub_session_ix.xml#_1a096dbda227b0d110b80e2451192dd22e">TSubSessionHandle</apiRelation>
+						</cxxFunctionParameterDeclaredType>
+						<cxxFunctionParameterDeclarationName>aHandle</cxxFunctionParameterDeclarationName>
+						<apiDefNote/>
+					</cxxFunctionParameter>
+				</cxxFunctionParameters>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="441"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxFunction id="class_den_1_1_c_sub_session_ix_1a1ed01d4a4bf348df318c139fd282875d">
+		<apiName>ExpandArray</apiName>
+		<cxxFunctionDetail>
+			<cxxFunctionDefinition>
+				<cxxFunctionAccessSpecifier value="private"/>
+				<cxxFunctionDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxFunctionDeclaredType>
+				<cxxFunctionScopedName>Den::CSubSessionIx</cxxFunctionScopedName>
+				<cxxFunctionPrototype>TInt ExpandArray()</cxxFunctionPrototype>
+				<cxxFunctionNameLookup>Den::CSubSessionIx::ExpandArray()</cxxFunctionNameLookup>
+				<cxxFunctionParameters/>
+				<cxxFunctionAPIItemLocation>
+					<cxxFunctionDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_std.h"/>
+					<cxxFunctionDeclarationFileLine name="lineNumber" value="442"/>
+				</cxxFunctionAPIItemLocation>
+			</cxxFunctionDefinition>
+			<apiDesc/>
+		</cxxFunctionDetail>
+	</cxxFunction>
+	<cxxVariable id="class_den_1_1_c_sub_session_ix_1a18d578df03f0e2bbdb56b443b0c44225">
+		<apiName>iIx</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="class_den_1_1_c_sub_session_ix_1_1_t_entry.xml#class_den_1_1_c_sub_session_ix_1_1_t_entry">TEntry</apiRelation> *</cxxVariableDeclaredType>
+				<cxxVariableScopedName>Den::CSubSessionIx</cxxVariableScopedName>
+				<cxxVariablePrototype>TEntry * iIx</cxxVariablePrototype>
+				<cxxVariableNameLookup>Den::CSubSessionIx::iIx</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_std.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="445"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_den_1_1_c_sub_session_ix_1a178919e03146b59dd4fd315ae1c1fe99">
+		<apiName>iSize</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>Den::CSubSessionIx</cxxVariableScopedName>
+				<cxxVariablePrototype>TInt iSize</cxxVariablePrototype>
+				<cxxVariableNameLookup>Den::CSubSessionIx::iSize</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_std.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="446"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_den_1_1_c_sub_session_ix_1a1956aad880b8009ae97ed6ada2c82631">
+		<apiName>iActiveCount</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>Den::CSubSessionIx</cxxVariableScopedName>
+				<cxxVariablePrototype>TInt iActiveCount</cxxVariablePrototype>
+				<cxxVariableNameLookup>Den::CSubSessionIx::iActiveCount</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_std.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="447"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_den_1_1_c_sub_session_ix_1a7840e0af0e46f76036ed1365d5c61426">
+		<apiName>iFreeListHead</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="e32def_8h.xml#_1abb88f5378e8305d934297176fe5fa298">TInt</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>Den::CSubSessionIx</cxxVariableScopedName>
+				<cxxVariablePrototype>TInt iFreeListHead</cxxVariablePrototype>
+				<cxxVariableNameLookup>Den::CSubSessionIx::iFreeListHead</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_std.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="448"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxVariable id="class_den_1_1_c_sub_session_ix_1a6f64a032b48a118b5991cea247c01a72">
+		<apiName>iLock</apiName>
+		<cxxVariableDetail>
+			<cxxVariableDefinition>
+				<cxxVariableAccessSpecifier value="private"/>
+				<cxxVariableStorageClassSpecifierMutable/>
+				<cxxVariableDeclaredType>
+					<apiRelation href="class_r_worker_lock.xml#class_r_worker_lock">RWorkerLock</apiRelation>
+				</cxxVariableDeclaredType>
+				<cxxVariableScopedName>Den::CSubSessionIx</cxxVariableScopedName>
+				<cxxVariablePrototype>RWorkerLock iLock</cxxVariablePrototype>
+				<cxxVariableNameLookup>Den::CSubSessionIx::iLock</cxxVariableNameLookup>
+				<cxxVariableAPIItemLocation>
+					<cxxVariableDeclarationFile name="filePath" value="K:/epoc32/include/elements/sd_std.h"/>
+					<cxxVariableDeclarationFileLine name="lineNumber" value="449"/>
+				</cxxVariableAPIItemLocation>
+			</cxxVariableDefinition>
+			<apiDesc/>
+		</cxxVariableDetail>
+	</cxxVariable>
+	<cxxClassInherits>
+		<cxxClassInheritsDetail>
+			<cxxClassFunctionInherited href="class_den_1_1_c_sub_session_ix.xml#class_c_base_1a240de7932690a4e987d75690b0b6f82b">CBase::CBase()</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_den_1_1_c_sub_session_ix.xml#class_c_base_1ac0a06aeab68b3e01be81f9dd79e011c6">CBase::Delete(CBase *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_den_1_1_c_sub_session_ix.xml#class_c_base_1aae681a54d9c9b10c7d42e7e32ff109d5">CBase::Extension_(TUint,TAny *&amp;,TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_den_1_1_c_sub_session_ix.xml#class_c_base_1af4c4965092a763b0856ccbfa3cf99eaf">CBase::operator new(TUint)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_den_1_1_c_sub_session_ix.xml#class_c_base_1ab9e5f557dea4db22886189926687ddc1">CBase::operator new(TUint,TAny *)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_den_1_1_c_sub_session_ix.xml#class_c_base_1aa464dd21494443ac109084ed03b81f28">CBase::operator new(TUint,TLeave)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_den_1_1_c_sub_session_ix.xml#class_c_base_1af8429815362d4df6fecd47179e0c5dfe">CBase::operator new(TUint,TLeave,TUint)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_den_1_1_c_sub_session_ix.xml#class_c_base_1a80505bdf8b1b20a2ed102307a78eeeeb">CBase::operator new(TUint,TUint)</cxxClassFunctionInherited>
+			<cxxClassFunctionInherited href="class_den_1_1_c_sub_session_ix.xml#class_c_base_1a1390361b94424be22bb2b1020eb400ea">CBase::~CBase()</cxxClassFunctionInherited>
+		</cxxClassInheritsDetail>
+	</cxxClassInherits>
+</cxxClass>
